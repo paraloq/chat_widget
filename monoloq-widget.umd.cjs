@@ -1,11 +1,11794 @@
-(function(te){typeof define=="function"&&define.amd?define(te):te()})(function(){"use strict";function te(t,e){const r=Object.create(null),o=t.split(",");for(let n=0;n<o.length;n++)r[o[n]]=!0;return e?n=>!!r[n.toLowerCase()]:n=>!!r[n]}function Vt(t){if(A(t)){const e={};for(let r=0;r<t.length;r++){const o=t[r],n=ft(o)?Ks(o):Vt(o);if(n)for(const i in n)e[i]=n[i]}return e}else{if(ft(t))return t;if(tt(t))return t}}const Ws=/;(?![^(]*\))/g,qs=/:([^]+)/,Ys=/\/\*.*?\*\//gs;function Ks(t){const e={};return t.replace(Ys,"").split(Ws).forEach(r=>{if(r){const o=r.split(qs);o.length>1&&(e[o[0].trim()]=o[1].trim())}}),e}function ee(t){let e="";if(ft(t))e=t;else if(A(t))for(let r=0;r<t.length;r++){const o=ee(t[r]);o&&(e+=o+" ")}else if(tt(t))for(const r in t)t[r]&&(e+=r+" ");return e.trim()}const Zs=te("itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly");function Yn(t){return!!t||t===""}const Wt=t=>ft(t)?t:t==null?"":A(t)||tt(t)&&(t.toString===Xn||!D(t.toString))?JSON.stringify(t,Kn,2):String(t),Kn=(t,e)=>e&&e.__v_isRef?Kn(t,e.value):Ce(e)?{[`Map(${e.size})`]:[...e.entries()].reduce((r,[o,n])=>(r[`${o} =>`]=n,r),{})}:Jn(e)?{[`Set(${e.size})`]:[...e.values()]}:tt(e)&&!A(e)&&!Qn(e)?String(e):e,ot=Object.freeze({}),Ve=Object.freeze([]),Pt=()=>{},Zn=()=>!1,Js=/^on[^a-z]/,rr=t=>Js.test(t),Sr=t=>t.startsWith("onUpdate:"),ct=Object.assign,zo=(t,e)=>{const r=t.indexOf(e);r>-1&&t.splice(r,1)},Xs=Object.prototype.hasOwnProperty,K=(t,e)=>Xs.call(t,e),A=Array.isArray,Ce=t=>Ir(t)==="[object Map]",Jn=t=>Ir(t)==="[object Set]",D=t=>typeof t=="function",ft=t=>typeof t=="string",So=t=>typeof t=="symbol",tt=t=>t!==null&&typeof t=="object",Io=t=>tt(t)&&D(t.then)&&D(t.catch),Xn=Object.prototype.toString,Ir=t=>Xn.call(t),Ao=t=>Ir(t).slice(8,-1),Qn=t=>Ir(t)==="[object Object]",jo=t=>ft(t)&&t!=="NaN"&&t[0]!=="-"&&""+parseInt(t,10)===t,Ar=te(",key,ref,ref_for,ref_key,onVnodeBeforeMount,onVnodeMounted,onVnodeBeforeUpdate,onVnodeUpdated,onVnodeBeforeUnmount,onVnodeUnmounted"),Qs=te("bind,cloak,else-if,else,for,html,if,model,on,once,pre,show,slot,text,memo"),jr=t=>{const e=Object.create(null);return r=>e[r]||(e[r]=t(r))},Gs=/-(\w)/g,St=jr(t=>t.replace(Gs,(e,r)=>r?r.toUpperCase():"")),tl=/\B([A-Z])/g,Et=jr(t=>t.replace(tl,"-$1").toLowerCase()),$e=jr(t=>t.charAt(0).toUpperCase()+t.slice(1)),de=jr(t=>t?`on${$e(t)}`:""),or=(t,e)=>!Object.is(t,e),We=(t,e)=>{for(let r=0;r<t.length;r++)t[r](e)},Lr=(t,e,r)=>{Object.defineProperty(t,e,{configurable:!0,enumerable:!1,value:r})},Oe=t=>{const e=parseFloat(t);return isNaN(e)?t:e};let Gn;const ti=()=>Gn||(Gn=typeof globalThis<"u"?globalThis:typeof self<"u"?self:typeof window<"u"?window:typeof global<"u"?global:{});function Mr(t,...e){console.warn(`[Vue warn] ${t}`,...e)}let It;class el{constructor(e=!1){this.detached=e,this.active=!0,this.effects=[],this.cleanups=[],this.parent=It,!e&&It&&(this.index=(It.scopes||(It.scopes=[])).push(this)-1)}run(e){if(this.active){const r=It;try{return It=this,e()}finally{It=r}}else Mr("cannot run an inactive effect scope.")}on(){It=this}off(){It=this.parent}stop(e){if(this.active){let r,o;for(r=0,o=this.effects.length;r<o;r++)this.effects[r].stop();for(r=0,o=this.cleanups.length;r<o;r++)this.cleanups[r]();if(this.scopes)for(r=0,o=this.scopes.length;r<o;r++)this.scopes[r].stop(!0);if(!this.detached&&this.parent&&!e){const n=this.parent.scopes.pop();n&&n!==this&&(this.parent.scopes[this.index]=n,n.index=this.index)}this.parent=void 0,this.active=!1}}}function rl(t,e=It){e&&e.active&&e.effects.push(t)}function ol(){return It}function nl(t){It?It.cleanups.push(t):Mr("onScopeDispose() is called when there is no active effect scope to be associated with.")}const Lo=t=>{const e=new Set(t);return e.w=0,e.n=0,e},ei=t=>(t.w&pe)>0,ri=t=>(t.n&pe)>0,il=({deps:t})=>{if(t.length)for(let e=0;e<t.length;e++)t[e].w|=pe},al=t=>{const{deps:e}=t;if(e.length){let r=0;for(let o=0;o<e.length;o++){const n=e[o];ei(n)&&!ri(n)?n.delete(t):e[r++]=n,n.w&=~pe,n.n&=~pe}e.length=r}},Mo=new WeakMap;let nr=0,pe=1;const Fo=30;let Ct;const Pe=Symbol("iterate"),No=Symbol("Map key iterate");class Ro{constructor(e,r=null,o){this.fn=e,this.scheduler=r,this.active=!0,this.deps=[],this.parent=void 0,rl(this,o)}run(){if(!this.active)return this.fn();let e=Ct,r=ue;for(;e;){if(e===this)return;e=e.parent}try{return this.parent=Ct,Ct=this,ue=!0,pe=1<<++nr,nr<=Fo?il(this):oi(this),this.fn()}finally{nr<=Fo&&al(this),pe=1<<--nr,Ct=this.parent,ue=r,this.parent=void 0,this.deferStop&&this.stop()}}stop(){Ct===this?this.deferStop=!0:this.active&&(oi(this),this.onStop&&this.onStop(),this.active=!1)}}function oi(t){const{deps:e}=t;if(e.length){for(let r=0;r<e.length;r++)e[r].delete(t);e.length=0}}let ue=!0;const ni=[];function Ee(){ni.push(ue),ue=!1}function Te(){const t=ni.pop();ue=t===void 0?!0:t}function At(t,e,r){if(ue&&Ct){let o=Mo.get(t);o||Mo.set(t,o=new Map);let n=o.get(r);n||o.set(r,n=Lo()),ii(n,{effect:Ct,target:t,type:e,key:r})}}function ii(t,e){let r=!1;nr<=Fo?ri(t)||(t.n|=pe,r=!ei(t)):r=!t.has(Ct),r&&(t.add(Ct),Ct.deps.push(t),Ct.onTrack&&Ct.onTrack(Object.assign({effect:Ct},e)))}function re(t,e,r,o,n,i){const a=Mo.get(t);if(!a)return;let s=[];if(e==="clear")s=[...a.values()];else if(r==="length"&&A(t)){const c=Oe(o);a.forEach((u,p)=>{(p==="length"||p>=c)&&s.push(u)})}else switch(r!==void 0&&s.push(a.get(r)),e){case"add":A(t)?jo(r)&&s.push(a.get("length")):(s.push(a.get(Pe)),Ce(t)&&s.push(a.get(No)));break;case"delete":A(t)||(s.push(a.get(Pe)),Ce(t)&&s.push(a.get(No)));break;case"set":Ce(t)&&s.push(a.get(Pe));break}const l={target:t,type:e,key:r,newValue:o,oldValue:n,oldTarget:i};if(s.length===1)s[0]&&Do(s[0],l);else{const c=[];for(const u of s)u&&c.push(...u);Do(Lo(c),l)}}function Do(t,e){const r=A(t)?t:[...t];for(const o of r)o.computed&&ai(o,e);for(const o of r)o.computed||ai(o,e)}function ai(t,e){(t!==Ct||t.allowRecurse)&&(t.onTrigger&&t.onTrigger(ct({effect:t},e)),t.scheduler?t.scheduler():t.run())}const sl=te("__proto__,__v_isRef,__isVue"),si=new Set(Object.getOwnPropertyNames(Symbol).filter(t=>t!=="arguments"&&t!=="caller").map(t=>Symbol[t]).filter(So)),ll=Fr(),cl=Fr(!1,!0),dl=Fr(!0),pl=Fr(!0,!0),li=ul();function ul(){const t={};return["includes","indexOf","lastIndexOf"].forEach(e=>{t[e]=function(...r){const o=U(this);for(let i=0,a=this.length;i<a;i++)At(o,"get",i+"");const n=o[e](...r);return n===-1||n===!1?o[e](...r.map(U)):n}}),["push","pop","shift","unshift","splice"].forEach(e=>{t[e]=function(...r){Ee();const o=U(this)[e].apply(this,r);return Te(),o}}),t}function Fr(t=!1,e=!1){return function(o,n,i){if(n==="__v_isReactive")return!t;if(n==="__v_isReadonly")return t;if(n==="__v_isShallow")return e;if(n==="__v_raw"&&i===(t?e?xi:vi:e?wi:mi).get(o))return o;const a=A(o);if(!t&&a&&K(li,n))return Reflect.get(li,n,i);const s=Reflect.get(o,n,i);return(So(n)?si.has(n):sl(n))||(t||At(o,"get",n),e)?s:ut(s)?a&&jo(n)?s:s.value:tt(s)?t?yi(s):Ho(s):s}}const fl=ci(),hl=ci(!0);function ci(t=!1){return function(r,o,n,i){let a=r[o];if(he(a)&&ut(a)&&!ut(n))return!1;if(!t&&(!qr(n)&&!he(n)&&(a=U(a),n=U(n)),!A(r)&&ut(a)&&!ut(n)))return a.value=n,!0;const s=A(r)&&jo(o)?Number(o)<r.length:K(r,o),l=Reflect.set(r,o,n,i);return r===U(i)&&(s?or(n,a)&&re(r,"set",o,n,a):re(r,"add",o,n)),l}}function bl(t,e){const r=K(t,e),o=t[e],n=Reflect.deleteProperty(t,e);return n&&r&&re(t,"delete",e,void 0,o),n}function gl(t,e){const r=Reflect.has(t,e);return(!So(e)||!si.has(e))&&At(t,"has",e),r}function ml(t){return At(t,"iterate",A(t)?"length":Pe),Reflect.ownKeys(t)}const di={get:ll,set:fl,deleteProperty:bl,has:gl,ownKeys:ml},pi={get:dl,set(t,e){return Mr(`Set operation on key "${String(e)}" failed: target is readonly.`,t),!0},deleteProperty(t,e){return Mr(`Delete operation on key "${String(e)}" failed: target is readonly.`,t),!0}},wl=ct({},di,{get:cl,set:hl}),vl=ct({},pi,{get:pl}),Bo=t=>t,Nr=t=>Reflect.getPrototypeOf(t);function Rr(t,e,r=!1,o=!1){t=t.__v_raw;const n=U(t),i=U(e);r||(e!==i&&At(n,"get",e),At(n,"get",i));const{has:a}=Nr(n),s=o?Bo:r?Uo:ir;if(a.call(n,e))return s(t.get(e));if(a.call(n,i))return s(t.get(i));t!==n&&t.get(e)}function Dr(t,e=!1){const r=this.__v_raw,o=U(r),n=U(t);return e||(t!==n&&At(o,"has",t),At(o,"has",n)),t===n?r.has(t):r.has(t)||r.has(n)}function Br(t,e=!1){return t=t.__v_raw,!e&&At(U(t),"iterate",Pe),Reflect.get(t,"size",t)}function ui(t){t=U(t);const e=U(this);return Nr(e).has.call(e,t)||(e.add(t),re(e,"add",t,t)),this}function fi(t,e){e=U(e);const r=U(this),{has:o,get:n}=Nr(r);let i=o.call(r,t);i?gi(r,o,t):(t=U(t),i=o.call(r,t));const a=n.call(r,t);return r.set(t,e),i?or(e,a)&&re(r,"set",t,e,a):re(r,"add",t,e),this}function hi(t){const e=U(this),{has:r,get:o}=Nr(e);let n=r.call(e,t);n?gi(e,r,t):(t=U(t),n=r.call(e,t));const i=o?o.call(e,t):void 0,a=e.delete(t);return n&&re(e,"delete",t,void 0,i),a}function bi(){const t=U(this),e=t.size!==0,r=Ce(t)?new Map(t):new Set(t),o=t.clear();return e&&re(t,"clear",void 0,void 0,r),o}function Hr(t,e){return function(o,n){const i=this,a=i.__v_raw,s=U(a),l=e?Bo:t?Uo:ir;return!t&&At(s,"iterate",Pe),a.forEach((c,u)=>o.call(n,l(c),l(u),i))}}function Ur(t,e,r){return function(...o){const n=this.__v_raw,i=U(n),a=Ce(i),s=t==="entries"||t===Symbol.iterator&&a,l=t==="keys"&&a,c=n[t](...o),u=r?Bo:e?Uo:ir;return!e&&At(i,"iterate",l?No:Pe),{next(){const{value:p,done:h}=c.next();return h?{value:p,done:h}:{value:s?[u(p[0]),u(p[1])]:u(p),done:h}},[Symbol.iterator](){return this}}}}function fe(t){return function(...e){{const r=e[0]?`on key "${e[0]}" `:"";console.warn(`${$e(t)} operation ${r}failed: target is readonly.`,U(this))}return t==="delete"?!1:this}}function xl(){const t={get(i){return Rr(this,i)},get size(){return Br(this)},has:Dr,add:ui,set:fi,delete:hi,clear:bi,forEach:Hr(!1,!1)},e={get(i){return Rr(this,i,!1,!0)},get size(){return Br(this)},has:Dr,add:ui,set:fi,delete:hi,clear:bi,forEach:Hr(!1,!0)},r={get(i){return Rr(this,i,!0)},get size(){return Br(this,!0)},has(i){return Dr.call(this,i,!0)},add:fe("add"),set:fe("set"),delete:fe("delete"),clear:fe("clear"),forEach:Hr(!0,!1)},o={get(i){return Rr(this,i,!0,!0)},get size(){return Br(this,!0)},has(i){return Dr.call(this,i,!0)},add:fe("add"),set:fe("set"),delete:fe("delete"),clear:fe("clear"),forEach:Hr(!0,!0)};return["keys","values","entries",Symbol.iterator].forEach(i=>{t[i]=Ur(i,!1,!1),r[i]=Ur(i,!0,!1),e[i]=Ur(i,!1,!0),o[i]=Ur(i,!0,!0)}),[t,r,e,o]}const[yl,_l,kl,Cl]=xl();function Vr(t,e){const r=e?t?Cl:kl:t?_l:yl;return(o,n,i)=>n==="__v_isReactive"?!t:n==="__v_isReadonly"?t:n==="__v_raw"?o:Reflect.get(K(r,n)&&n in o?r:o,n,i)}const $l={get:Vr(!1,!1)},Ol={get:Vr(!1,!0)},Pl={get:Vr(!0,!1)},El={get:Vr(!0,!0)};function gi(t,e,r){const o=U(r);if(o!==r&&e.call(t,o)){const n=Ao(t);console.warn(`Reactive ${n} contains both the raw and reactive versions of the same object${n==="Map"?" as keys":""}, which can lead to inconsistencies. Avoid differentiating between the raw and reactive versions of an object and only use the reactive version if possible.`)}}const mi=new WeakMap,wi=new WeakMap,vi=new WeakMap,xi=new WeakMap;function Tl(t){switch(t){case"Object":case"Array":return 1;case"Map":case"Set":case"WeakMap":case"WeakSet":return 2;default:return 0}}function zl(t){return t.__v_skip||!Object.isExtensible(t)?0:Tl(Ao(t))}function Ho(t){return he(t)?t:Wr(t,!1,di,$l,mi)}function Sl(t){return Wr(t,!1,wl,Ol,wi)}function yi(t){return Wr(t,!0,pi,Pl,vi)}function qe(t){return Wr(t,!0,vl,El,xi)}function Wr(t,e,r,o,n){if(!tt(t))return console.warn(`value cannot be made reactive: ${String(t)}`),t;if(t.__v_raw&&!(e&&t.__v_isReactive))return t;const i=n.get(t);if(i)return i;const a=zl(t);if(a===0)return t;const s=new Proxy(t,a===2?o:r);return n.set(t,s),s}function ze(t){return he(t)?ze(t.__v_raw):!!(t&&t.__v_isReactive)}function he(t){return!!(t&&t.__v_isReadonly)}function qr(t){return!!(t&&t.__v_isShallow)}function Yr(t){return ze(t)||he(t)}function U(t){const e=t&&t.__v_raw;return e?U(e):t}function _i(t){return Lr(t,"__v_skip",!0),t}const ir=t=>tt(t)?Ho(t):t,Uo=t=>tt(t)?yi(t):t;function ki(t){ue&&Ct&&(t=U(t),ii(t.dep||(t.dep=Lo()),{target:t,type:"get",key:"value"}))}function Ci(t,e){t=U(t),t.dep&&Do(t.dep,{target:t,type:"set",key:"value",newValue:e})}function ut(t){return!!(t&&t.__v_isRef===!0)}function yt(t){return $i(t,!1)}function Kr(t){return $i(t,!0)}function $i(t,e){return ut(t)?t:new Il(t,e)}class Il{constructor(e,r){this.__v_isShallow=r,this.dep=void 0,this.__v_isRef=!0,this._rawValue=r?e:U(e),this._value=r?e:ir(e)}get value(){return ki(this),this._value}set value(e){const r=this.__v_isShallow||qr(e)||he(e);e=r?e:U(e),or(e,this._rawValue)&&(this._rawValue=e,this._value=r?e:ir(e),Ci(this,e))}}function nt(t){return ut(t)?t.value:t}const Al={get:(t,e,r)=>nt(Reflect.get(t,e,r)),set:(t,e,r,o)=>{const n=t[e];return ut(n)&&!ut(r)?(n.value=r,!0):Reflect.set(t,e,r,o)}};function Oi(t){return ze(t)?t:new Proxy(t,Al)}function ar(t){Yr(t)||console.warn("toRefs() expects a reactive object but received a plain one.");const e=A(t)?new Array(t.length):{};for(const r in t)e[r]=Ll(t,r);return e}class jl{constructor(e,r,o){this._object=e,this._key=r,this._defaultValue=o,this.__v_isRef=!0}get value(){const e=this._object[this._key];return e===void 0?this._defaultValue:e}set value(e){this._object[this._key]=e}}function Ll(t,e,r){const o=t[e];return ut(o)?o:new jl(t,e,r)}var Pi;class Ml{constructor(e,r,o,n){this._setter=r,this.dep=void 0,this.__v_isRef=!0,this[Pi]=!1,this._dirty=!0,this.effect=new Ro(e,()=>{this._dirty||(this._dirty=!0,Ci(this))}),this.effect.computed=this,this.effect.active=this._cacheable=!n,this.__v_isReadonly=o}get value(){const e=U(this);return ki(e),(e._dirty||!e._cacheable)&&(e._dirty=!1,e._value=e.effect.run()),e._value}set value(e){this._setter(e)}}Pi="__v_isReadonly";function Fl(t,e,r=!1){let o,n;const i=D(t);i?(o=t,n=()=>{console.warn("Write operation failed: computed value is readonly")}):(o=t.get,n=t.set);const a=new Ml(o,n,i||!n,r);return e&&!r&&(a.effect.onTrack=e.onTrack,a.effect.onTrigger=e.onTrigger),a}const Se=[];function Zr(t){Se.push(t)}function Jr(){Se.pop()}function x(t,...e){Ee();const r=Se.length?Se[Se.length-1].component:null,o=r&&r.appContext.config.warnHandler,n=Nl();if(o)oe(o,r,11,[t+e.join(""),r&&r.proxy,n.map(({vnode:i})=>`at <${bo(r,i.type)}>`).join(`
-`),n]);else{const i=[`[Vue warn]: ${t}`,...e];n.length&&i.push(`
-`,...Rl(n)),console.warn(...i)}Te()}function Nl(){let t=Se[Se.length-1];if(!t)return[];const e=[];for(;t;){const r=e[0];r&&r.vnode===t?r.recurseCount++:e.push({vnode:t,recurseCount:0});const o=t.component&&t.component.parent;t=o&&o.vnode}return e}function Rl(t){const e=[];return t.forEach((r,o)=>{e.push(...o===0?[]:[`
-`],...Dl(r))}),e}function Dl({vnode:t,recurseCount:e}){const r=e>0?`... (${e} recursive calls)`:"",o=t.component?t.component.parent==null:!1,n=` at <${bo(t.component,t.type,o)}`,i=">"+r;return t.props?[n,...Bl(t.props),i]:[n+i]}function Bl(t){const e=[],r=Object.keys(t);return r.slice(0,3).forEach(o=>{e.push(...Ei(o,t[o]))}),r.length>3&&e.push(" ..."),e}function Ei(t,e,r){return ft(e)?(e=JSON.stringify(e),r?e:[`${t}=${e}`]):typeof e=="number"||typeof e=="boolean"||e==null?r?e:[`${t}=${e}`]:ut(e)?(e=Ei(t,U(e.value),!0),r?e:[`${t}=Ref<`,e,">"]):D(e)?[`${t}=fn${e.name?`<${e.name}>`:""}`]:(e=U(e),r?e:[`${t}=`,e])}const Vo={sp:"serverPrefetch hook",bc:"beforeCreate hook",c:"created hook",bm:"beforeMount hook",m:"mounted hook",bu:"beforeUpdate hook",u:"updated",bum:"beforeUnmount hook",um:"unmounted hook",a:"activated hook",da:"deactivated hook",ec:"errorCaptured hook",rtc:"renderTracked hook",rtg:"renderTriggered hook",[0]:"setup function",[1]:"render function",[2]:"watcher getter",[3]:"watcher callback",[4]:"watcher cleanup function",[5]:"native event handler",[6]:"component event handler",[7]:"vnode hook",[8]:"directive hook",[9]:"transition hook",[10]:"app errorHandler",[11]:"app warnHandler",[12]:"ref function",[13]:"async component loader",[14]:"scheduler flush. This is likely a Vue internals bug. Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/core"};function oe(t,e,r,o){let n;try{n=o?t(...o):t()}catch(i){Xr(i,e,r)}return n}function Lt(t,e,r,o){if(D(t)){const i=oe(t,e,r,o);return i&&Io(i)&&i.catch(a=>{Xr(a,e,r)}),i}const n=[];for(let i=0;i<t.length;i++)n.push(Lt(t[i],e,r,o));return n}function Xr(t,e,r,o=!0){const n=e?e.vnode:null;if(e){let i=e.parent;const a=e.proxy,s=Vo[r];for(;i;){const c=i.ec;if(c){for(let u=0;u<c.length;u++)if(c[u](t,a,s)===!1)return}i=i.parent}const l=e.appContext.config.errorHandler;if(l){oe(l,null,10,[t,a,s]);return}}Hl(t,r,n,o)}function Hl(t,e,r,o=!0){{const n=Vo[e];if(r&&Zr(r),x(`Unhandled error${n?` during execution of ${n}`:""}`),r&&Jr(),o)throw t;console.error(t)}}let sr=!1,Wo=!1;const kt=[];let qt=0;const Ye=[];let Yt=null,be=0;const Ti=Promise.resolve();let qo=null;const Ul=100;function Qr(t){const e=qo||Ti;return t?e.then(this?t.bind(this):t):e}function Vl(t){let e=qt+1,r=kt.length;for(;e<r;){const o=e+r>>>1;lr(kt[o])<t?e=o+1:r=o}return e}function Gr(t){(!kt.length||!kt.includes(t,sr&&t.allowRecurse?qt+1:qt))&&(t.id==null?kt.push(t):kt.splice(Vl(t.id),0,t),zi())}function zi(){!sr&&!Wo&&(Wo=!0,qo=Ti.then(ji))}function Wl(t){const e=kt.indexOf(t);e>qt&&kt.splice(e,1)}function Si(t){A(t)?Ye.push(...t):(!Yt||!Yt.includes(t,t.allowRecurse?be+1:be))&&Ye.push(t),zi()}function Ii(t,e=sr?qt+1:0){for(t=t||new Map;e<kt.length;e++){const r=kt[e];if(r&&r.pre){if(Yo(t,r))continue;kt.splice(e,1),e--,r()}}}function Ai(t){if(Ye.length){const e=[...new Set(Ye)];if(Ye.length=0,Yt){Yt.push(...e);return}for(Yt=e,t=t||new Map,Yt.sort((r,o)=>lr(r)-lr(o)),be=0;be<Yt.length;be++)Yo(t,Yt[be])||Yt[be]();Yt=null,be=0}}const lr=t=>t.id==null?1/0:t.id,ql=(t,e)=>{const r=lr(t)-lr(e);if(r===0){if(t.pre&&!e.pre)return-1;if(e.pre&&!t.pre)return 1}return r};function ji(t){Wo=!1,sr=!0,t=t||new Map,kt.sort(ql);const e=r=>Yo(t,r);try{for(qt=0;qt<kt.length;qt++){const r=kt[qt];if(r&&r.active!==!1){if(e(r))continue;oe(r,null,14)}}}finally{qt=0,kt.length=0,Ai(t),sr=!1,qo=null,(kt.length||Ye.length)&&ji(t)}}function Yo(t,e){if(!t.has(e))t.set(e,1);else{const r=t.get(e);if(r>Ul){const o=e.ownerInstance,n=o&&_n(o.type);return x(`Maximum recursive updates exceeded${n?` in component <${n}>`:""}. This means you have a reactive effect that is mutating its own dependencies and thus recursively triggering itself. Possible sources include component template, render function, updated hook or watcher source function.`),!0}else t.set(e,r+1)}}let Ie=!1;const Ke=new Set;ti().__VUE_HMR_RUNTIME__={createRecord:Ko(Li),rerender:Ko(Zl),reload:Ko(Jl)};const Ae=new Map;function Yl(t){const e=t.type.__hmrId;let r=Ae.get(e);r||(Li(e,t.type),r=Ae.get(e)),r.instances.add(t)}function Kl(t){Ae.get(t.type.__hmrId).instances.delete(t)}function Li(t,e){return Ae.has(t)?!1:(Ae.set(t,{initialDef:cr(e),instances:new Set}),!0)}function cr(t){return Pa(t)?t.__vccOpts:t}function Zl(t,e){const r=Ae.get(t);r&&(r.initialDef.render=e,[...r.instances].forEach(o=>{e&&(o.render=e,cr(o.type).render=e),o.renderCache=[],Ie=!0,o.update(),Ie=!1}))}function Jl(t,e){const r=Ae.get(t);if(!r)return;e=cr(e),Mi(r.initialDef,e);const o=[...r.instances];for(const n of o){const i=cr(n.type);Ke.has(i)||(i!==r.initialDef&&Mi(i,e),Ke.add(i)),n.appContext.optionsCache.delete(n.type),n.ceReload?(Ke.add(i),n.ceReload(e.styles),Ke.delete(i)):n.parent?Gr(n.parent.update):n.appContext.reload?n.appContext.reload():typeof window<"u"?window.location.reload():console.warn("[HMR] Root or manually mounted instance modified. Full reload required.")}Si(()=>{for(const n of o)Ke.delete(cr(n.type))})}function Mi(t,e){ct(t,e);for(const r in t)r!=="__file"&&!(r in e)&&delete t[r]}function Ko(t){return(e,r)=>{try{return t(e,r)}catch(o){console.error(o),console.warn("[HMR] Something went wrong during Vue component hot-reload. Full reload required.")}}}let Kt,dr=[],Zo=!1;function pr(t,...e){Kt?Kt.emit(t,...e):Zo||dr.push({event:t,args:e})}function Fi(t,e){var r,o;Kt=t,Kt?(Kt.enabled=!0,dr.forEach(({event:n,args:i})=>Kt.emit(n,...i)),dr=[]):typeof window<"u"&&window.HTMLElement&&!(!((o=(r=window.navigator)===null||r===void 0?void 0:r.userAgent)===null||o===void 0)&&o.includes("jsdom"))?((e.__VUE_DEVTOOLS_HOOK_REPLAY__=e.__VUE_DEVTOOLS_HOOK_REPLAY__||[]).push(i=>{Fi(i,e)}),setTimeout(()=>{Kt||(e.__VUE_DEVTOOLS_HOOK_REPLAY__=null,Zo=!0,dr=[])},3e3)):(Zo=!0,dr=[])}function Xl(t,e){pr("app:init",t,e,{Fragment:mt,Text:wr,Comment:vt,Static:vr})}function Ql(t){pr("app:unmount",t)}const Gl=Jo("component:added"),Ni=Jo("component:updated"),tc=Jo("component:removed"),ec=t=>{Kt&&typeof Kt.cleanupBuffer=="function"&&!Kt.cleanupBuffer(t)&&tc(t)};function Jo(t){return e=>{pr(t,e.appContext.app,e.uid,e.parent?e.parent.uid:void 0,e)}}const rc=Ri("perf:start"),oc=Ri("perf:end");function Ri(t){return(e,r,o)=>{pr(t,e.appContext.app,e.uid,e,r,o)}}function nc(t,e,r){pr("component:emit",t.appContext.app,t,e,r)}function ic(t,e,...r){if(t.isUnmounted)return;const o=t.vnode.props||ot;{const{emitsOptions:u,propsOptions:[p]}=t;if(u)if(!(e in u))(!p||!(de(e)in p))&&x(`Component emitted event "${e}" but it is neither declared in the emits option nor as an "${de(e)}" prop.`);else{const h=u[e];D(h)&&(h(...r)||x(`Invalid event arguments: event validation failed for event "${e}".`))}}let n=r;const i=e.startsWith("update:"),a=i&&e.slice(7);if(a&&a in o){const u=`${a==="modelValue"?"model":a}Modifiers`,{number:p,trim:h}=o[u]||ot;h&&(n=r.map(w=>ft(w)?w.trim():w)),p&&(n=r.map(Oe))}nc(t,e,n);{const u=e.toLowerCase();u!==e&&o[de(u)]&&x(`Event "${u}" is emitted in component ${bo(t,t.type)} but the handler is registered for "${e}". Note that HTML attributes are case-insensitive and you cannot use v-on to listen to camelCase events when using in-DOM templates. You should probably use "${Et(e)}" instead of "${e}".`)}let s,l=o[s=de(e)]||o[s=de(St(e))];!l&&i&&(l=o[s=de(Et(e))]),l&&Lt(l,t,6,n);const c=o[s+"Once"];if(c){if(!t.emitted)t.emitted={};else if(t.emitted[s])return;t.emitted[s]=!0,Lt(c,t,6,n)}}function Di(t,e,r=!1){const o=e.emitsCache,n=o.get(t);if(n!==void 0)return n;const i=t.emits;let a={},s=!1;if(!D(t)){const l=c=>{const u=Di(c,e,!0);u&&(s=!0,ct(a,u))};!r&&e.mixins.length&&e.mixins.forEach(l),t.extends&&l(t.extends),t.mixins&&t.mixins.forEach(l)}return!i&&!s?(tt(t)&&o.set(t,null),null):(A(i)?i.forEach(l=>a[l]=null):ct(a,i),tt(t)&&o.set(t,a),a)}function to(t,e){return!t||!rr(e)?!1:(e=e.slice(2).replace(/Once$/,""),K(t,e[0].toLowerCase()+e.slice(1))||K(t,Et(e))||K(t,e))}let gt=null,Bi=null;function eo(t){const e=gt;return gt=t,Bi=t&&t.type.__scopeId||null,e}function ne(t,e=gt,r){if(!e||t._n)return t;const o=(...n)=>{o._d&&xa(-1);const i=eo(e);let a;try{a=t(...n)}finally{eo(i),o._d&&xa(1)}return Ni(e),a};return o._n=!0,o._c=!0,o._d=!0,o}let Xo=!1;function ro(){Xo=!0}function Qo(t){const{type:e,vnode:r,proxy:o,withProxy:n,props:i,propsOptions:[a],slots:s,attrs:l,emit:c,render:u,renderCache:p,data:h,setupState:w,ctx:E,inheritAttrs:O}=t;let M,V;const Z=eo(t);Xo=!1;try{if(r.shapeFlag&4){const H=n||o;M=Rt(u.call(H,H,p,i,w,h,E)),V=l}else{const H=e;l===i&&ro(),M=Rt(H.length>1?H(i,{get attrs(){return ro(),l},slots:s,emit:c}):H(i,null)),V=e.props?l:sc(l)}}catch(H){xr.length=0,Xr(H,t,1),M=rt(vt)}let W=M,j;if(M.patchFlag>0&&M.patchFlag&2048&&([W,j]=ac(M)),V&&O!==!1){const H=Object.keys(V),{shapeFlag:lt}=W;if(H.length){if(lt&7)a&&H.some(Sr)&&(V=lc(V,a)),W=Jt(W,V);else if(!Xo&&W.type!==vt){const q=Object.keys(l),z=[],C=[];for(let F=0,N=q.length;F<N;F++){const $=q[F];rr($)?Sr($)||z.push($[2].toLowerCase()+$.slice(3)):C.push($)}C.length&&x(`Extraneous non-props attributes (${C.join(", ")}) were passed to component but could not be automatically inherited because component renders fragment or text root nodes.`),z.length&&x(`Extraneous non-emits event listeners (${z.join(", ")}) were passed to component but could not be automatically inherited because component renders fragment or text root nodes. If the listener is intended to be a component custom event listener only, declare it using the "emits" option.`)}}}return r.dirs&&(Ui(W)||x("Runtime directive used on component with non-element root node. The directives will not function as intended."),W=Jt(W),W.dirs=W.dirs?W.dirs.concat(r.dirs):r.dirs),r.transition&&(Ui(W)||x("Component inside <Transition> renders non-element root node that cannot be animated."),W.transition=r.transition),j?j(W):M=W,eo(Z),M}const ac=t=>{const e=t.children,r=t.dynamicChildren,o=Hi(e);if(!o)return[t,void 0];const n=e.indexOf(o),i=r?r.indexOf(o):-1,a=s=>{e[n]=s,r&&(i>-1?r[i]=s:s.patchFlag>0&&(t.dynamicChildren=[...r,s]))};return[Rt(o),a]};function Hi(t){let e;for(let r=0;r<t.length;r++){const o=t[r];if(Ze(o)){if(o.type!==vt||o.children==="v-if"){if(e)return;e=o}}else return}return e}const sc=t=>{let e;for(const r in t)(r==="class"||r==="style"||rr(r))&&((e||(e={}))[r]=t[r]);return e},lc=(t,e)=>{const r={};for(const o in t)(!Sr(o)||!(o.slice(9)in e))&&(r[o]=t[o]);return r},Ui=t=>t.shapeFlag&7||t.type===vt;function cc(t,e,r){const{props:o,children:n,component:i}=t,{props:a,children:s,patchFlag:l}=e,c=i.emitsOptions;if((n||s)&&Ie||e.dirs||e.transition)return!0;if(r&&l>=0){if(l&1024)return!0;if(l&16)return o?Vi(o,a,c):!!a;if(l&8){const u=e.dynamicProps;for(let p=0;p<u.length;p++){const h=u[p];if(a[h]!==o[h]&&!to(c,h))return!0}}}else return(n||s)&&(!s||!s.$stable)?!0:o===a?!1:o?a?Vi(o,a,c):!0:!!a;return!1}function Vi(t,e,r){const o=Object.keys(e);if(o.length!==Object.keys(t).length)return!0;for(let n=0;n<o.length;n++){const i=o[n];if(e[i]!==t[i]&&!to(r,i))return!0}return!1}function dc({vnode:t,parent:e},r){for(;e&&e.subTree===t;)(t=e.vnode).el=r,e=e.parent}const pc=t=>t.__isSuspense;function uc(t,e){e&&e.pendingBranch?A(t)?e.effects.push(...t):e.effects.push(t):Si(t)}function fc(t,e){if(!wt)x("provide() can only be used inside setup().");else{let r=wt.provides;const o=wt.parent&&wt.parent.provides;o===r&&(r=wt.provides=Object.create(o)),r[t]=e}}function oo(t,e,r=!1){const o=wt||gt;if(o){const n=o.parent==null?o.vnode.appContext&&o.vnode.appContext.provides:o.parent.provides;if(n&&t in n)return n[t];if(arguments.length>1)return r&&D(e)?e.call(o.proxy):e;x(`injection "${String(t)}" not found.`)}else x("inject() can only be used inside setup() or functional components.")}function hc(t,e){return Go(t,null,e)}const no={};function Mt(t,e,r){return D(e)||x("`watch(fn, options?)` signature has been moved to a separate API. Use `watchEffect(fn, options?)` instead. `watch` now only supports `watch(source, cb, options?) signature."),Go(t,e,r)}function Go(t,e,{immediate:r,deep:o,flush:n,onTrack:i,onTrigger:a}=ot){e||(r!==void 0&&x('watch() "immediate" option is only respected when using the watch(source, callback, options?) signature.'),o!==void 0&&x('watch() "deep" option is only respected when using the watch(source, callback, options?) signature.'));const s=j=>{x("Invalid watch source: ",j,"A watch source can only be a getter/effect function, a ref, a reactive object, or an array of these types.")},l=wt;let c,u=!1,p=!1;if(ut(t)?(c=()=>t.value,u=qr(t)):ze(t)?(c=()=>t,o=!0):A(t)?(p=!0,u=t.some(j=>ze(j)||qr(j)),c=()=>t.map(j=>{if(ut(j))return j.value;if(ze(j))return je(j);if(D(j))return oe(j,l,2);s(j)})):D(t)?e?c=()=>oe(t,l,2):c=()=>{if(!(l&&l.isUnmounted))return h&&h(),Lt(t,l,3,[w])}:(c=Pt,s(t)),e&&o){const j=c;c=()=>je(j())}let h,w=j=>{h=Z.onStop=()=>{oe(j,l,4)}},E;if(_r)if(w=Pt,e?r&&Lt(e,l,3,[c(),p?[]:void 0,w]):c(),n==="sync"){const j=md();E=j.__watcherHandles||(j.__watcherHandles=[])}else return Pt;let O=p?new Array(t.length).fill(no):no;const M=()=>{if(Z.active)if(e){const j=Z.run();(o||u||(p?j.some((H,lt)=>or(H,O[lt])):or(j,O)))&&(h&&h(),Lt(e,l,3,[j,O===no?void 0:p&&O[0]===no?[]:O,w]),O=j)}else Z.run()};M.allowRecurse=!!e;let V;n==="sync"?V=M:n==="post"?V=()=>Tt(M,l&&l.suspense):(M.pre=!0,l&&(M.id=l.uid),V=()=>Gr(M));const Z=new Ro(c,V);Z.onTrack=i,Z.onTrigger=a,e?r?M():O=Z.run():n==="post"?Tt(Z.run.bind(Z),l&&l.suspense):Z.run();const W=()=>{Z.stop(),l&&l.scope&&zo(l.scope.effects,Z)};return E&&E.push(W),W}function bc(t,e,r){const o=this.proxy,n=ft(t)?t.includes(".")?Wi(o,t):()=>o[t]:t.bind(o,o);let i;D(e)?i=e:(i=e.handler,r=e);const a=wt;Je(this);const s=Go(n,i.bind(o),r);return a?Je(a):Be(),s}function Wi(t,e){const r=e.split(".");return()=>{let o=t;for(let n=0;n<r.length&&o;n++)o=o[r[n]];return o}}function je(t,e){if(!tt(t)||t.__v_skip||(e=e||new Set,e.has(t)))return t;if(e.add(t),ut(t))je(t.value,e);else if(A(t))for(let r=0;r<t.length;r++)je(t[r],e);else if(Jn(t)||Ce(t))t.forEach(r=>{je(r,e)});else if(Qn(t))for(const r in t)je(t[r],e);return t}function qi(){const t={isMounted:!1,isLeaving:!1,isUnmounting:!1,leavingVNodes:new Map};return rn(()=>{t.isMounted=!0}),Qi(()=>{t.isUnmounting=!0}),t}const Ft=[Function,Array],Yi={name:"BaseTransition",props:{mode:String,appear:Boolean,persisted:Boolean,onBeforeEnter:Ft,onEnter:Ft,onAfterEnter:Ft,onEnterCancelled:Ft,onBeforeLeave:Ft,onLeave:Ft,onAfterLeave:Ft,onLeaveCancelled:Ft,onBeforeAppear:Ft,onAppear:Ft,onAfterAppear:Ft,onAppearCancelled:Ft},setup(t,{slots:e}){const r=vn(),o=qi();let n;return()=>{const i=e.default&&en(e.default(),!0);if(!i||!i.length)return;let a=i[0];if(i.length>1){let O=!1;for(const M of i)if(M.type!==vt){if(O){x("<transition> can only be used on a single element or component. Use <transition-group> for lists.");break}a=M,O=!0}}const s=U(t),{mode:l}=s;if(l&&l!=="in-out"&&l!=="out-in"&&l!=="default"&&x(`invalid <transition> mode: ${l}`),o.isLeaving)return tn(a);const c=Zi(a);if(!c)return tn(a);const u=ur(c,s,o,r);fr(c,u);const p=r.subTree,h=p&&Zi(p);let w=!1;const{getTransitionKey:E}=c.type;if(E){const O=E();n===void 0?n=O:O!==n&&(n=O,w=!0)}if(h&&h.type!==vt&&(!Re(c,h)||w)){const O=ur(h,s,o,r);if(fr(h,O),l==="out-in")return o.isLeaving=!0,O.afterLeave=()=>{o.isLeaving=!1,r.update.active!==!1&&r.update()},tn(a);l==="in-out"&&c.type!==vt&&(O.delayLeave=(M,V,Z)=>{const W=Ki(o,h);W[String(h.key)]=h,M._leaveCb=()=>{V(),M._leaveCb=void 0,delete u.delayedLeave},u.delayedLeave=Z})}return a}}};function Ki(t,e){const{leavingVNodes:r}=t;let o=r.get(e.type);return o||(o=Object.create(null),r.set(e.type,o)),o}function ur(t,e,r,o){const{appear:n,mode:i,persisted:a=!1,onBeforeEnter:s,onEnter:l,onAfterEnter:c,onEnterCancelled:u,onBeforeLeave:p,onLeave:h,onAfterLeave:w,onLeaveCancelled:E,onBeforeAppear:O,onAppear:M,onAfterAppear:V,onAppearCancelled:Z}=e,W=String(t.key),j=Ki(r,t),H=(z,C)=>{z&&Lt(z,o,9,C)},lt=(z,C)=>{const F=C[1];H(z,C),A(z)?z.every(N=>N.length<=1)&&F():z.length<=1&&F()},q={mode:i,persisted:a,beforeEnter(z){let C=s;if(!r.isMounted)if(n)C=O||s;else return;z._leaveCb&&z._leaveCb(!0);const F=j[W];F&&Re(t,F)&&F.el._leaveCb&&F.el._leaveCb(),H(C,[z])},enter(z){let C=l,F=c,N=u;if(!r.isMounted)if(n)C=M||l,F=V||c,N=Z||u;else return;let $=!1;const Q=z._enterCb=pt=>{$||($=!0,pt?H(N,[z]):H(F,[z]),q.delayedLeave&&q.delayedLeave(),z._enterCb=void 0)};C?lt(C,[z,Q]):Q()},leave(z,C){const F=String(t.key);if(z._enterCb&&z._enterCb(!0),r.isUnmounting)return C();H(p,[z]);let N=!1;const $=z._leaveCb=Q=>{N||(N=!0,C(),Q?H(E,[z]):H(w,[z]),z._leaveCb=void 0,j[F]===t&&delete j[F])};j[F]=t,h?lt(h,[z,$]):$()},clone(z){return ur(z,e,r,o)}};return q}function tn(t){if(br(t))return t=Jt(t),t.children=null,t}function Zi(t){return br(t)?t.children?t.children[0]:void 0:t}function fr(t,e){t.shapeFlag&6&&t.component?fr(t.component.subTree,e):t.shapeFlag&128?(t.ssContent.transition=e.clone(t.ssContent),t.ssFallback.transition=e.clone(t.ssFallback)):t.transition=e}function en(t,e=!1,r){let o=[],n=0;for(let i=0;i<t.length;i++){let a=t[i];const s=r==null?a.key:String(r)+String(a.key!=null?a.key:i);a.type===mt?(a.patchFlag&128&&n++,o=o.concat(en(a.children,e,s))):(e||a.type!==vt)&&o.push(s!=null?Jt(a,{key:s}):a)}if(n>1)for(let i=0;i<o.length;i++)o[i].patchFlag=-2;return o}function Zt(t){return D(t)?{setup:t,name:t.name}:t}const hr=t=>!!t.type.__asyncLoader,br=t=>t.type.__isKeepAlive;function gc(t,e){Ji(t,"a",e)}function mc(t,e){Ji(t,"da",e)}function Ji(t,e,r=wt){const o=t.__wdc||(t.__wdc=()=>{let n=r;for(;n;){if(n.isDeactivated)return;n=n.parent}return t()});if(io(e,o,r),r){let n=r.parent;for(;n&&n.parent;)br(n.parent.vnode)&&wc(o,e,r,n),n=n.parent}}function wc(t,e,r,o){const n=io(e,t,o,!0);Gi(()=>{zo(o[e],n)},r)}function io(t,e,r=wt,o=!1){if(r){const n=r[t]||(r[t]=[]),i=e.__weh||(e.__weh=(...a)=>{if(r.isUnmounted)return;Ee(),Je(r);const s=Lt(e,r,t,a);return Be(),Te(),s});return o?n.unshift(i):n.push(i),i}else{const n=de(Vo[t].replace(/ hook$/,""));x(`${n} is called when there is no active component instance to be associated with. Lifecycle injection APIs can only be used during execution of setup(). If you are using async setup(), make sure to register lifecycle hooks before the first await statement.`)}}const ie=t=>(e,r=wt)=>(!_r||t==="sp")&&io(t,(...o)=>e(...o),r),vc=ie("bm"),rn=ie("m"),xc=ie("bu"),Xi=ie("u"),Qi=ie("bum"),Gi=ie("um"),yc=ie("sp"),_c=ie("rtg"),kc=ie("rtc");function Cc(t,e=wt){io("ec",t,e)}function ta(t){Qs(t)&&x("Do not use built-in directive ids as custom directive id: "+t)}function on(t,e){const r=gt;if(r===null)return x("withDirectives can only be used inside render functions."),t;const o=ho(r)||r.proxy,n=t.dirs||(t.dirs=[]);for(let i=0;i<e.length;i++){let[a,s,l,c=ot]=e[i];a&&(D(a)&&(a={mounted:a,updated:a}),a.deep&&je(s),n.push({dir:a,instance:o,value:s,oldValue:void 0,arg:l,modifiers:c}))}return t}function Le(t,e,r,o){const n=t.dirs,i=e&&e.dirs;for(let a=0;a<n.length;a++){const s=n[a];i&&(s.oldValue=i[a].value);let l=s.dir[o];l&&(Ee(),Lt(l,r,8,[t.el,s,t,e]),Te())}}const nn="components",ea=Symbol();function ao(t){return ft(t)?$c(nn,t,!1)||t:t||ea}function $c(t,e,r=!0,o=!1){const n=gt||wt;if(n){const i=n.type;if(t===nn){const s=_n(i,!1);if(s&&(s===e||s===St(e)||s===$e(St(e))))return i}const a=ra(n[t]||i[t],e)||ra(n.appContext[t],e);if(!a&&o)return i;if(r&&!a){const s=t===nn?`
-If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement.`:"";x(`Failed to resolve ${t.slice(0,-1)}: ${e}${s}`)}return a}else x(`resolve${$e(t.slice(0,-1))} can only be used in render() or setup().`)}function ra(t,e){return t&&(t[e]||t[St(e)]||t[$e(St(e))])}function an(t,e,r,o){let n;const i=r&&r[o];if(A(t)||ft(t)){n=new Array(t.length);for(let a=0,s=t.length;a<s;a++)n[a]=e(t[a],a,void 0,i&&i[a])}else if(typeof t=="number"){Number.isInteger(t)||x(`The v-for range expect an integer value but got ${t}.`),n=new Array(t);for(let a=0;a<t;a++)n[a]=e(a+1,a,void 0,i&&i[a])}else if(tt(t))if(t[Symbol.iterator])n=Array.from(t,(a,s)=>e(a,s,void 0,i&&i[s]));else{const a=Object.keys(t);n=new Array(a.length);for(let s=0,l=a.length;s<l;s++){const c=a[s];n[s]=e(t[c],c,s,i&&i[s])}}else n=[];return r&&(r[o]=n),n}function gr(t,e,r={},o,n){if(gt.isCE||gt.parent&&hr(gt.parent)&&gt.parent.isCE)return e!=="default"&&(r.name=e),rt("slot",r,o&&o());let i=t[e];i&&i.length>1&&(x("SSR-optimized slot function detected in a non-SSR-optimized render function. You need to mark this component with $dynamic-slots in the parent template."),i=()=>[]),i&&i._c&&(i._d=!1),J();const a=i&&oa(i(r)),s=me(mt,{key:r.key||a&&a.key||`_${e}`},a||(o?o():[]),a&&t._===1?64:-2);return!n&&s.scopeId&&(s.slotScopeIds=[s.scopeId+"-s"]),i&&i._c&&(i._d=!0),s}function oa(t){return t.some(e=>Ze(e)?!(e.type===vt||e.type===mt&&!oa(e.children)):!0)?t:null}function so(t,e){const r={};if(!tt(t))return x("v-on with no argument expects an object value."),r;for(const o in t)r[e&&/[A-Z]/.test(o)?`on:${o}`:de(o)]=t[o];return r}const sn=t=>t?Ca(t)?ho(t)||t.proxy:sn(t.parent):null,Me=ct(Object.create(null),{$:t=>t,$el:t=>t.vnode.el,$data:t=>t.data,$props:t=>qe(t.props),$attrs:t=>qe(t.attrs),$slots:t=>qe(t.slots),$refs:t=>qe(t.refs),$parent:t=>sn(t.parent),$root:t=>sn(t.root),$emit:t=>t.emit,$options:t=>pn(t),$forceUpdate:t=>t.f||(t.f=()=>Gr(t.update)),$nextTick:t=>t.n||(t.n=Qr.bind(t.proxy)),$watch:t=>bc.bind(t)}),ln=t=>t==="_"||t==="$",cn=(t,e)=>t!==ot&&!t.__isScriptSetup&&K(t,e),na={get({_:t},e){const{ctx:r,setupState:o,data:n,props:i,accessCache:a,type:s,appContext:l}=t;if(e==="__isVue")return!0;let c;if(e[0]!=="$"){const w=a[e];if(w!==void 0)switch(w){case 1:return o[e];case 2:return n[e];case 4:return r[e];case 3:return i[e]}else{if(cn(o,e))return a[e]=1,o[e];if(n!==ot&&K(n,e))return a[e]=2,n[e];if((c=t.propsOptions[0])&&K(c,e))return a[e]=3,i[e];if(r!==ot&&K(r,e))return a[e]=4,r[e];dn&&(a[e]=0)}}const u=Me[e];let p,h;if(u)return e==="$attrs"&&(At(t,"get",e),ro()),u(t);if((p=s.__cssModules)&&(p=p[e]))return p;if(r!==ot&&K(r,e))return a[e]=4,r[e];if(h=l.config.globalProperties,K(h,e))return h[e];gt&&(!ft(e)||e.indexOf("__v")!==0)&&(n!==ot&&ln(e[0])&&K(n,e)?x(`Property ${JSON.stringify(e)} must be accessed via $data because it starts with a reserved character ("$" or "_") and is not proxied on the render context.`):t===gt&&x(`Property ${JSON.stringify(e)} was accessed during render but is not defined on instance.`))},set({_:t},e,r){const{data:o,setupState:n,ctx:i}=t;return cn(n,e)?(n[e]=r,!0):n.__isScriptSetup&&K(n,e)?(x(`Cannot mutate <script setup> binding "${e}" from Options API.`),!1):o!==ot&&K(o,e)?(o[e]=r,!0):K(t.props,e)?(x(`Attempting to mutate prop "${e}". Props are readonly.`),!1):e[0]==="$"&&e.slice(1)in t?(x(`Attempting to mutate public property "${e}". Properties starting with $ are reserved and readonly.`),!1):(e in t.appContext.config.globalProperties?Object.defineProperty(i,e,{enumerable:!0,configurable:!0,value:r}):i[e]=r,!0)},has({_:{data:t,setupState:e,accessCache:r,ctx:o,appContext:n,propsOptions:i}},a){let s;return!!r[a]||t!==ot&&K(t,a)||cn(e,a)||(s=i[0])&&K(s,a)||K(o,a)||K(Me,a)||K(n.config.globalProperties,a)},defineProperty(t,e,r){return r.get!=null?t._.accessCache[e]=0:K(r,"value")&&this.set(t,e,r.value,null),Reflect.defineProperty(t,e,r)}};na.ownKeys=t=>(x("Avoid app logic that relies on enumerating keys on a component instance. The keys will be empty in production mode to avoid performance overhead."),Reflect.ownKeys(t));function Oc(t){const e={};return Object.defineProperty(e,"_",{configurable:!0,enumerable:!1,get:()=>t}),Object.keys(Me).forEach(r=>{Object.defineProperty(e,r,{configurable:!0,enumerable:!1,get:()=>Me[r](t),set:Pt})}),e}function Pc(t){const{ctx:e,propsOptions:[r]}=t;r&&Object.keys(r).forEach(o=>{Object.defineProperty(e,o,{enumerable:!0,configurable:!0,get:()=>t.props[o],set:Pt})})}function Ec(t){const{ctx:e,setupState:r}=t;Object.keys(U(r)).forEach(o=>{if(!r.__isScriptSetup){if(ln(o[0])){x(`setup() return property ${JSON.stringify(o)} should not start with "$" or "_" which are reserved prefixes for Vue internals.`);return}Object.defineProperty(e,o,{enumerable:!0,configurable:!0,get:()=>r[o],set:Pt})}})}function Tc(){const t=Object.create(null);return(e,r)=>{t[r]?x(`${e} property "${r}" is already defined in ${t[r]}.`):t[r]=e}}let dn=!0;function zc(t){const e=pn(t),r=t.proxy,o=t.ctx;dn=!1,e.beforeCreate&&ia(e.beforeCreate,t,"bc");const{data:n,computed:i,methods:a,watch:s,provide:l,inject:c,created:u,beforeMount:p,mounted:h,beforeUpdate:w,updated:E,activated:O,deactivated:M,beforeDestroy:V,beforeUnmount:Z,destroyed:W,unmounted:j,render:H,renderTracked:lt,renderTriggered:q,errorCaptured:z,serverPrefetch:C,expose:F,inheritAttrs:N,components:$,directives:Q,filters:pt}=e,G=Tc();{const[R]=t.propsOptions;if(R)for(const Y in R)G("Props",Y)}if(c&&Sc(c,o,G,t.appContext.config.unwrapInjectedRef),a)for(const R in a){const Y=a[R];D(Y)?(Object.defineProperty(o,R,{value:Y.bind(r),configurable:!0,enumerable:!0,writable:!0}),G("Methods",R)):x(`Method "${R}" has type "${typeof Y}" in the component definition. Did you reference the function correctly?`)}if(n){D(n)||x("The data option must be a function. Plain object usage is no longer supported.");const R=n.call(r,r);if(Io(R)&&x("data() returned a Promise - note data() cannot be async; If you intend to perform data fetching before component renders, use async setup() + <Suspense>."),!tt(R))x("data() should return an object.");else{t.data=Ho(R);for(const Y in R)G("Data",Y),ln(Y[0])||Object.defineProperty(o,Y,{configurable:!0,enumerable:!0,get:()=>R[Y],set:Pt})}}if(dn=!0,i)for(const R in i){const Y=i[R],ht=D(Y)?Y.bind(r,r):D(Y.get)?Y.get.bind(r,r):Pt;ht===Pt&&x(`Computed property "${R}" has no getter.`);const jt=!D(Y)&&D(Y.set)?Y.set.bind(r):()=>{x(`Write operation failed: computed property "${R}" is readonly.`)},Qt=_t({get:ht,set:jt});Object.defineProperty(o,R,{enumerable:!0,configurable:!0,get:()=>Qt.value,set:Bt=>Qt.value=Bt}),G("Computed",R)}if(s)for(const R in s)aa(s[R],o,r,R);if(l){const R=D(l)?l.call(r):l;Reflect.ownKeys(R).forEach(Y=>{fc(Y,R[Y])})}u&&ia(u,t,"c");function et(R,Y){A(Y)?Y.forEach(ht=>R(ht.bind(r))):Y&&R(Y.bind(r))}if(et(vc,p),et(rn,h),et(xc,w),et(Xi,E),et(gc,O),et(mc,M),et(Cc,z),et(kc,lt),et(_c,q),et(Qi,Z),et(Gi,j),et(yc,C),A(F))if(F.length){const R=t.exposed||(t.exposed={});F.forEach(Y=>{Object.defineProperty(R,Y,{get:()=>r[Y],set:ht=>r[Y]=ht})})}else t.exposed||(t.exposed={});H&&t.render===Pt&&(t.render=H),N!=null&&(t.inheritAttrs=N),$&&(t.components=$),Q&&(t.directives=Q)}function Sc(t,e,r=Pt,o=!1){A(t)&&(t=un(t));for(const n in t){const i=t[n];let a;tt(i)?"default"in i?a=oo(i.from||n,i.default,!0):a=oo(i.from||n):a=oo(i),ut(a)?o?Object.defineProperty(e,n,{enumerable:!0,configurable:!0,get:()=>a.value,set:s=>a.value=s}):(x(`injected property "${n}" is a ref and will be auto-unwrapped and no longer needs \`.value\` in the next minor release. To opt-in to the new behavior now, set \`app.config.unwrapInjectedRef = true\` (this config is temporary and will not be needed in the future.)`),e[n]=a):e[n]=a,r("Inject",n)}}function ia(t,e,r){Lt(A(t)?t.map(o=>o.bind(e.proxy)):t.bind(e.proxy),e,r)}function aa(t,e,r,o){const n=o.includes(".")?Wi(r,o):()=>r[o];if(ft(t)){const i=e[t];D(i)?Mt(n,i):x(`Invalid watch handler specified by key "${t}"`,i)}else if(D(t))Mt(n,t.bind(r));else if(tt(t))if(A(t))t.forEach(i=>aa(i,e,r,o));else{const i=D(t.handler)?t.handler.bind(r):e[t.handler];D(i)?Mt(n,i,t):x(`Invalid watch handler specified by key "${t.handler}"`,i)}else x(`Invalid watch option: "${o}"`,t)}function pn(t){const e=t.type,{mixins:r,extends:o}=e,{mixins:n,optionsCache:i,config:{optionMergeStrategies:a}}=t.appContext,s=i.get(e);let l;return s?l=s:!n.length&&!r&&!o?l=e:(l={},n.length&&n.forEach(c=>lo(l,c,a,!0)),lo(l,e,a)),tt(e)&&i.set(e,l),l}function lo(t,e,r,o=!1){const{mixins:n,extends:i}=e;i&&lo(t,i,r,!0),n&&n.forEach(a=>lo(t,a,r,!0));for(const a in e)if(o&&a==="expose")x('"expose" option is ignored when declared in mixins or extends. It should only be declared in the base component itself.');else{const s=Ic[a]||r&&r[a];t[a]=s?s(t[a],e[a]):e[a]}return t}const Ic={data:sa,props:Fe,emits:Fe,methods:Fe,computed:Fe,beforeCreate:$t,created:$t,beforeMount:$t,mounted:$t,beforeUpdate:$t,updated:$t,beforeDestroy:$t,beforeUnmount:$t,destroyed:$t,unmounted:$t,activated:$t,deactivated:$t,errorCaptured:$t,serverPrefetch:$t,components:Fe,directives:Fe,watch:jc,provide:sa,inject:Ac};function sa(t,e){return e?t?function(){return ct(D(t)?t.call(this,this):t,D(e)?e.call(this,this):e)}:e:t}function Ac(t,e){return Fe(un(t),un(e))}function un(t){if(A(t)){const e={};for(let r=0;r<t.length;r++)e[t[r]]=t[r];return e}return t}function $t(t,e){return t?[...new Set([].concat(t,e))]:e}function Fe(t,e){return t?ct(ct(Object.create(null),t),e):e}function jc(t,e){if(!t)return e;if(!e)return t;const r=ct(Object.create(null),t);for(const o in e)r[o]=$t(t[o],e[o]);return r}function Lc(t,e,r,o=!1){const n={},i={};Lr(i,uo,1),t.propsDefaults=Object.create(null),la(t,e,n,i);for(const a in t.propsOptions[0])a in n||(n[a]=void 0);fa(e||{},n,t),r?t.props=o?n:Sl(n):t.type.props?t.props=n:t.props=i,t.attrs=i}function Mc(t){for(;t;){if(t.type.__hmrId)return!0;t=t.parent}}function Fc(t,e,r,o){const{props:n,attrs:i,vnode:{patchFlag:a}}=t,s=U(n),[l]=t.propsOptions;let c=!1;if(!Mc(t)&&(o||a>0)&&!(a&16)){if(a&8){const u=t.vnode.dynamicProps;for(let p=0;p<u.length;p++){let h=u[p];if(to(t.emitsOptions,h))continue;const w=e[h];if(l)if(K(i,h))w!==i[h]&&(i[h]=w,c=!0);else{const E=St(h);n[E]=fn(l,s,E,w,t,!1)}else w!==i[h]&&(i[h]=w,c=!0)}}}else{la(t,e,n,i)&&(c=!0);let u;for(const p in s)(!e||!K(e,p)&&((u=Et(p))===p||!K(e,u)))&&(l?r&&(r[p]!==void 0||r[u]!==void 0)&&(n[p]=fn(l,s,p,void 0,t,!0)):delete n[p]);if(i!==s)for(const p in i)(!e||!K(e,p))&&(delete i[p],c=!0)}c&&re(t,"set","$attrs"),fa(e||{},n,t)}function la(t,e,r,o){const[n,i]=t.propsOptions;let a=!1,s;if(e)for(let l in e){if(Ar(l))continue;const c=e[l];let u;n&&K(n,u=St(l))?!i||!i.includes(u)?r[u]=c:(s||(s={}))[u]=c:to(t.emitsOptions,l)||(!(l in o)||c!==o[l])&&(o[l]=c,a=!0)}if(i){const l=U(r),c=s||ot;for(let u=0;u<i.length;u++){const p=i[u];r[p]=fn(n,l,p,c[p],t,!K(c,p))}}return a}function fn(t,e,r,o,n,i){const a=t[r];if(a!=null){const s=K(a,"default");if(s&&o===void 0){const l=a.default;if(a.type!==Function&&D(l)){const{propsDefaults:c}=n;r in c?o=c[r]:(Je(n),o=c[r]=l.call(null,e),Be())}else o=l}a[0]&&(i&&!s?o=!1:a[1]&&(o===""||o===Et(r))&&(o=!0))}return o}function ca(t,e,r=!1){const o=e.propsCache,n=o.get(t);if(n)return n;const i=t.props,a={},s=[];let l=!1;if(!D(t)){const u=p=>{l=!0;const[h,w]=ca(p,e,!0);ct(a,h),w&&s.push(...w)};!r&&e.mixins.length&&e.mixins.forEach(u),t.extends&&u(t.extends),t.mixins&&t.mixins.forEach(u)}if(!i&&!l)return tt(t)&&o.set(t,Ve),Ve;if(A(i))for(let u=0;u<i.length;u++){ft(i[u])||x("props must be strings when using array syntax.",i[u]);const p=St(i[u]);da(p)&&(a[p]=ot)}else if(i){tt(i)||x("invalid props options",i);for(const u in i){const p=St(u);if(da(p)){const h=i[u],w=a[p]=A(h)||D(h)?{type:h}:Object.assign({},h);if(w){const E=ua(Boolean,w.type),O=ua(String,w.type);w[0]=E>-1,w[1]=O<0||E<O,(E>-1||K(w,"default"))&&s.push(p)}}}}const c=[a,s];return tt(t)&&o.set(t,c),c}function da(t){return t[0]!=="$"?!0:(x(`Invalid prop name: "${t}" is a reserved property.`),!1)}function hn(t){const e=t&&t.toString().match(/^\s*function (\w+)/);return e?e[1]:t===null?"null":""}function pa(t,e){return hn(t)===hn(e)}function ua(t,e){return A(e)?e.findIndex(r=>pa(r,t)):D(e)&&pa(e,t)?0:-1}function fa(t,e,r){const o=U(e),n=r.propsOptions[0];for(const i in n){let a=n[i];a!=null&&Nc(i,o[i],a,!K(t,i)&&!K(t,Et(i)))}}function Nc(t,e,r,o){const{type:n,required:i,validator:a}=r;if(i&&o){x('Missing required prop: "'+t+'"');return}if(!(e==null&&!r.required)){if(n!=null&&n!==!0){let s=!1;const l=A(n)?n:[n],c=[];for(let u=0;u<l.length&&!s;u++){const{valid:p,expectedType:h}=Dc(e,l[u]);c.push(h||""),s=p}if(!s){x(Bc(t,e,c));return}}a&&!a(e)&&x('Invalid prop: custom validator check failed for prop "'+t+'".')}}const Rc=te("String,Number,Boolean,Function,Symbol,BigInt");function Dc(t,e){let r;const o=hn(e);if(Rc(o)){const n=typeof t;r=n===o.toLowerCase(),!r&&n==="object"&&(r=t instanceof e)}else o==="Object"?r=tt(t):o==="Array"?r=A(t):o==="null"?r=t===null:r=t instanceof e;return{valid:r,expectedType:o}}function Bc(t,e,r){let o=`Invalid prop: type check failed for prop "${t}". Expected ${r.map($e).join(" | ")}`;const n=r[0],i=Ao(e),a=ha(e,n),s=ha(e,i);return r.length===1&&ba(n)&&!Hc(n,i)&&(o+=` with value ${a}`),o+=`, got ${i} `,ba(i)&&(o+=`with value ${s}.`),o}function ha(t,e){return e==="String"?`"${t}"`:e==="Number"?`${Number(t)}`:`${t}`}function ba(t){return["string","number","boolean"].some(r=>t.toLowerCase()===r)}function Hc(...t){return t.some(e=>e.toLowerCase()==="boolean")}const ga=t=>t[0]==="_"||t==="$stable",bn=t=>A(t)?t.map(Rt):[Rt(t)],Uc=(t,e,r)=>{if(e._n)return e;const o=ne((...n)=>(wt&&x(`Slot "${t}" invoked outside of the render function: this will not track dependencies used in the slot. Invoke the slot function inside the render function instead.`),bn(e(...n))),r);return o._c=!1,o},ma=(t,e,r)=>{const o=t._ctx;for(const n in t){if(ga(n))continue;const i=t[n];if(D(i))e[n]=Uc(n,i,o);else if(i!=null){x(`Non-function value encountered for slot "${n}". Prefer function slots for better performance.`);const a=bn(i);e[n]=()=>a}}},wa=(t,e)=>{br(t.vnode)||x("Non-function value encountered for default slot. Prefer function slots for better performance.");const r=bn(e);t.slots.default=()=>r},Vc=(t,e)=>{if(t.vnode.shapeFlag&32){const r=e._;r?(t.slots=U(e),Lr(e,"_",r)):ma(e,t.slots={})}else t.slots={},e&&wa(t,e);Lr(t.slots,uo,1)},Wc=(t,e,r)=>{const{vnode:o,slots:n}=t;let i=!0,a=ot;if(o.shapeFlag&32){const s=e._;s?Ie?ct(n,e):r&&s===1?i=!1:(ct(n,e),!r&&s===1&&delete n._):(i=!e.$stable,ma(e,n)),a=e}else e&&(wa(t,e),a={default:1});if(i)for(const s in n)!ga(s)&&!(s in a)&&delete n[s]};function va(){return{app:null,config:{isNativeTag:Zn,performance:!1,globalProperties:{},optionMergeStrategies:{},errorHandler:void 0,warnHandler:void 0,compilerOptions:{}},mixins:[],components:{},directives:{},provides:Object.create(null),optionsCache:new WeakMap,propsCache:new WeakMap,emitsCache:new WeakMap}}let qc=0;function Yc(t,e){return function(o,n=null){D(o)||(o=Object.assign({},o)),n!=null&&!tt(n)&&(x("root props passed to app.mount() must be an object."),n=null);const i=va(),a=new Set;let s=!1;const l=i.app={_uid:qc++,_component:o,_props:n,_container:null,_context:i,_instance:null,version:Ea,get config(){return i.config},set config(c){x("app.config cannot be replaced. Modify individual options instead.")},use(c,...u){return a.has(c)?x("Plugin has already been applied to target app."):c&&D(c.install)?(a.add(c),c.install(l,...u)):D(c)?(a.add(c),c(l,...u)):x('A plugin must either be a function or an object with an "install" function.'),l},mixin(c){return i.mixins.includes(c)?x("Mixin has already been applied to target app"+(c.name?`: ${c.name}`:"")):i.mixins.push(c),l},component(c,u){return xn(c,i.config),u?(i.components[c]&&x(`Component "${c}" has already been registered in target app.`),i.components[c]=u,l):i.components[c]},directive(c,u){return ta(c),u?(i.directives[c]&&x(`Directive "${c}" has already been registered in target app.`),i.directives[c]=u,l):i.directives[c]},mount(c,u,p){if(s)x("App has already been mounted.\nIf you want to remount the same app, move your app creation logic into a factory function and create fresh app instances for each mount - e.g. `const createMyApp = () => createApp(App)`");else{c.__vue_app__&&x("There is already an app instance mounted on the host container.\n If you want to mount another app on the same host container, you need to unmount the previous app by calling `app.unmount()` first.");const h=rt(o,n);return h.appContext=i,i.reload=()=>{t(Jt(h),c,p)},u&&e?e(h,c):t(h,c,p),s=!0,l._container=c,c.__vue_app__=l,l._instance=h.component,Xl(l,Ea),ho(h.component)||h.component.proxy}},unmount(){s?(t(null,l._container),l._instance=null,Ql(l),delete l._container.__vue_app__):x("Cannot unmount an app that is not mounted.")},provide(c,u){return c in i.provides&&x(`App already provides property with key "${String(c)}". It will be overwritten with the new value.`),i.provides[c]=u,l}};return l}}function gn(t,e,r,o,n=!1){if(A(t)){t.forEach((h,w)=>gn(h,e&&(A(e)?e[w]:e),r,o,n));return}if(hr(o)&&!n)return;const i=o.shapeFlag&4?ho(o.component)||o.component.proxy:o.el,a=n?null:i,{i:s,r:l}=t;if(!s){x("Missing ref owner context. ref cannot be used on hoisted vnodes. A vnode with ref must be created inside the render function.");return}const c=e&&e.r,u=s.refs===ot?s.refs={}:s.refs,p=s.setupState;if(c!=null&&c!==l&&(ft(c)?(u[c]=null,K(p,c)&&(p[c]=null)):ut(c)&&(c.value=null)),D(l))oe(l,s,12,[a,u]);else{const h=ft(l),w=ut(l);if(h||w){const E=()=>{if(t.f){const O=h?K(p,l)?p[l]:u[l]:l.value;n?A(O)&&zo(O,i):A(O)?O.includes(i)||O.push(i):h?(u[l]=[i],K(p,l)&&(p[l]=u[l])):(l.value=[i],t.k&&(u[t.k]=l.value))}else h?(u[l]=a,K(p,l)&&(p[l]=a)):w?(l.value=a,t.k&&(u[t.k]=a)):x("Invalid template ref type:",l,`(${typeof l})`)};a?(E.id=-1,Tt(E,r)):E()}else x("Invalid template ref type:",l,`(${typeof l})`)}}let mr,ge;function ae(t,e){t.appContext.config.performance&&co()&&ge.mark(`vue-${e}-${t.uid}`),rc(t,e,co()?ge.now():Date.now())}function se(t,e){if(t.appContext.config.performance&&co()){const r=`vue-${e}-${t.uid}`,o=r+":end";ge.mark(o),ge.measure(`<${bo(t,t.type)}> ${e}`,r,o),ge.clearMarks(r),ge.clearMarks(o)}oc(t,e,co()?ge.now():Date.now())}function co(){return mr!==void 0||(typeof window<"u"&&window.performance?(mr=!0,ge=window.performance):mr=!1),mr}function Kc(){const t=[];if(t.length){const e=t.length>1;console.warn(`Feature flag${e?"s":""} ${t.join(", ")} ${e?"are":"is"} not explicitly defined. You are running the esm-bundler build of Vue, which expects these compile-time feature flags to be globally injected via the bundler config in order to get better tree-shaking in the production bundle.
+(function (factory) {
+    typeof define === 'function' && define.amd ? define(factory) :
+    factory();
+})((function () { 'use strict';
 
-For more details, see https://link.vuejs.org/feature-flags.`)}}const Tt=uc;function Zc(t){return Jc(t)}function Jc(t,e){Kc();const r=ti();r.__VUE__=!0,Fi(r.__VUE_DEVTOOLS_GLOBAL_HOOK__,r);const{insert:o,remove:n,patchProp:i,createElement:a,createText:s,createComment:l,setText:c,setElementText:u,parentNode:p,nextSibling:h,setScopeId:w=Pt,insertStaticContent:E}=t,O=(d,f,b,m=null,g=null,_=null,P=!1,y=null,k=Ie?!1:!!f.dynamicChildren)=>{if(d===f)return;d&&!Re(d,f)&&(m=To(d),Ht(d,g,_,!0),d=null),f.patchFlag===-2&&(k=!1,f.dynamicChildren=null);const{type:v,ref:I,shapeFlag:T}=f;switch(v){case wr:M(d,f,b,m);break;case vt:V(d,f,b,m);break;case vr:d==null?Z(f,b,m,P):W(d,f,b,P);break;case mt:Q(d,f,b,m,g,_,P,y,k);break;default:T&1?lt(d,f,b,m,g,_,P,y,k):T&6?pt(d,f,b,m,g,_,P,y,k):T&64||T&128?v.process(d,f,b,m,g,_,P,y,k,tr):x("Invalid VNode type:",v,`(${typeof v})`)}I!=null&&g&&gn(I,d&&d.ref,_,f||d,!f)},M=(d,f,b,m)=>{if(d==null)o(f.el=s(f.children),b,m);else{const g=f.el=d.el;f.children!==d.children&&c(g,f.children)}},V=(d,f,b,m)=>{d==null?o(f.el=l(f.children||""),b,m):f.el=d.el},Z=(d,f,b,m)=>{[d.el,d.anchor]=E(d.children,f,b,m,d.el,d.anchor)},W=(d,f,b,m)=>{if(f.children!==d.children){const g=h(d.anchor);H(d),[f.el,f.anchor]=E(f.children,b,g,m)}else f.el=d.el,f.anchor=d.anchor},j=({el:d,anchor:f},b,m)=>{let g;for(;d&&d!==f;)g=h(d),o(d,b,m),d=g;o(f,b,m)},H=({el:d,anchor:f})=>{let b;for(;d&&d!==f;)b=h(d),n(d),d=b;n(f)},lt=(d,f,b,m,g,_,P,y,k)=>{P=P||f.type==="svg",d==null?q(f,b,m,g,_,P,y,k):F(d,f,g,_,P,y,k)},q=(d,f,b,m,g,_,P,y)=>{let k,v;const{type:I,props:T,shapeFlag:L,transition:B,dirs:X}=d;if(k=d.el=a(d.type,_,T&&T.is,T),L&8?u(k,d.children):L&16&&C(d.children,k,null,m,g,_&&I!=="foreignObject",P,y),X&&Le(d,null,m,"created"),T){for(const at in T)at!=="value"&&!Ar(at)&&i(k,at,null,T[at],_,d.children,m,g,ce);"value"in T&&i(k,"value",null,T.value),(v=T.onVnodeBeforeMount)&&Xt(v,m,d)}z(k,d,d.scopeId,P,m),Object.defineProperty(k,"__vnode",{value:d,enumerable:!1}),Object.defineProperty(k,"__vueParentComponent",{value:m,enumerable:!1}),X&&Le(d,null,m,"beforeMount");const st=(!g||g&&!g.pendingBranch)&&B&&!B.persisted;st&&B.beforeEnter(k),o(k,f,b),((v=T&&T.onVnodeMounted)||st||X)&&Tt(()=>{v&&Xt(v,m,d),st&&B.enter(k),X&&Le(d,null,m,"mounted")},g)},z=(d,f,b,m,g)=>{if(b&&w(d,b),m)for(let _=0;_<m.length;_++)w(d,m[_]);if(g){let _=g.subTree;if(_.patchFlag>0&&_.patchFlag&2048&&(_=Hi(_.children)||_),f===_){const P=g.vnode;z(d,P,P.scopeId,P.slotScopeIds,g.parent)}}},C=(d,f,b,m,g,_,P,y,k=0)=>{for(let v=k;v<d.length;v++){const I=d[v]=y?we(d[v]):Rt(d[v]);O(null,I,f,b,m,g,_,P,y)}},F=(d,f,b,m,g,_,P)=>{const y=f.el=d.el;let{patchFlag:k,dynamicChildren:v,dirs:I}=f;k|=d.patchFlag&16;const T=d.props||ot,L=f.props||ot;let B;b&&Ne(b,!1),(B=L.onVnodeBeforeUpdate)&&Xt(B,b,f,d),I&&Le(f,d,b,"beforeUpdate"),b&&Ne(b,!0),Ie&&(k=0,P=!1,v=null);const X=g&&f.type!=="foreignObject";if(v?(N(d.dynamicChildren,v,y,b,m,X,_),b&&b.type.__hmrId&&po(d,f)):P||ht(d,f,y,null,b,m,X,_,!1),k>0){if(k&16)$(y,f,T,L,b,m,g);else if(k&2&&T.class!==L.class&&i(y,"class",null,L.class,g),k&4&&i(y,"style",T.style,L.style,g),k&8){const st=f.dynamicProps;for(let at=0;at<st.length;at++){const bt=st[at],Ut=T[bt],er=L[bt];(er!==Ut||bt==="value")&&i(y,bt,Ut,er,g,d.children,b,m,ce)}}k&1&&d.children!==f.children&&u(y,f.children)}else!P&&v==null&&$(y,f,T,L,b,m,g);((B=L.onVnodeUpdated)||I)&&Tt(()=>{B&&Xt(B,b,f,d),I&&Le(f,d,b,"updated")},m)},N=(d,f,b,m,g,_,P)=>{for(let y=0;y<f.length;y++){const k=d[y],v=f[y],I=k.el&&(k.type===mt||!Re(k,v)||k.shapeFlag&70)?p(k.el):b;O(k,v,I,null,m,g,_,P,!0)}},$=(d,f,b,m,g,_,P)=>{if(b!==m){if(b!==ot)for(const y in b)!Ar(y)&&!(y in m)&&i(d,y,b[y],null,P,f.children,g,_,ce);for(const y in m){if(Ar(y))continue;const k=m[y],v=b[y];k!==v&&y!=="value"&&i(d,y,v,k,P,f.children,g,_,ce)}"value"in m&&i(d,"value",b.value,m.value)}},Q=(d,f,b,m,g,_,P,y,k)=>{const v=f.el=d?d.el:s(""),I=f.anchor=d?d.anchor:s("");let{patchFlag:T,dynamicChildren:L,slotScopeIds:B}=f;(Ie||T&2048)&&(T=0,k=!1,L=null),B&&(y=y?y.concat(B):B),d==null?(o(v,b,m),o(I,b,m),C(f.children,b,I,g,_,P,y,k)):T>0&&T&64&&L&&d.dynamicChildren?(N(d.dynamicChildren,L,b,g,_,P,y),g&&g.type.__hmrId?po(d,f):(f.key!=null||g&&f===g.subTree)&&po(d,f,!0)):ht(d,f,b,I,g,_,P,y,k)},pt=(d,f,b,m,g,_,P,y,k)=>{f.slotScopeIds=y,d==null?f.shapeFlag&512?g.ctx.activate(f,b,m,P,k):G(f,b,m,g,_,P,k):et(d,f,k)},G=(d,f,b,m,g,_,P)=>{const y=d.component=ad(d,m,g);if(y.type.__hmrId&&Yl(y),Zr(d),ae(y,"mount"),br(d)&&(y.ctx.renderer=tr),ae(y,"init"),ld(y),se(y,"init"),y.asyncDep){if(g&&g.registerDep(y,R),!d.el){const k=y.subTree=rt(vt);V(null,k,f,b)}return}R(y,d,f,b,g,_,P),Jr(),se(y,"mount")},et=(d,f,b)=>{const m=f.component=d.component;if(cc(d,f,b))if(m.asyncDep&&!m.asyncResolved){Zr(f),Y(m,f,b),Jr();return}else m.next=f,Wl(m.update),m.update();else f.el=d.el,m.vnode=f},R=(d,f,b,m,g,_,P)=>{const y=()=>{if(d.isMounted){let{next:I,bu:T,u:L,parent:B,vnode:X}=d,st=I,at;Zr(I||d.vnode),Ne(d,!1),I?(I.el=X.el,Y(d,I,P)):I=X,T&&We(T),(at=I.props&&I.props.onVnodeBeforeUpdate)&&Xt(at,B,I,X),Ne(d,!0),ae(d,"render");const bt=Qo(d);se(d,"render");const Ut=d.subTree;d.subTree=bt,ae(d,"patch"),O(Ut,bt,p(Ut.el),To(Ut),d,g,_),se(d,"patch"),I.el=bt.el,st===null&&dc(d,bt.el),L&&Tt(L,g),(at=I.props&&I.props.onVnodeUpdated)&&Tt(()=>Xt(at,B,I,X),g),Ni(d),Jr()}else{let I;const{el:T,props:L}=f,{bm:B,m:X,parent:st}=d,at=hr(f);if(Ne(d,!1),B&&We(B),!at&&(I=L&&L.onVnodeBeforeMount)&&Xt(I,st,f),Ne(d,!0),T&&qn){const bt=()=>{ae(d,"render"),d.subTree=Qo(d),se(d,"render"),ae(d,"hydrate"),qn(T,d.subTree,d,g,null),se(d,"hydrate")};at?f.type.__asyncLoader().then(()=>!d.isUnmounted&&bt()):bt()}else{ae(d,"render");const bt=d.subTree=Qo(d);se(d,"render"),ae(d,"patch"),O(null,bt,b,m,d,g,_),se(d,"patch"),f.el=bt.el}if(X&&Tt(X,g),!at&&(I=L&&L.onVnodeMounted)){const bt=f;Tt(()=>Xt(I,st,bt),g)}(f.shapeFlag&256||st&&hr(st.vnode)&&st.vnode.shapeFlag&256)&&d.a&&Tt(d.a,g),d.isMounted=!0,Gl(d),f=b=m=null}},k=d.effect=new Ro(y,()=>Gr(v),d.scope),v=d.update=()=>k.run();v.id=d.uid,Ne(d,!0),k.onTrack=d.rtc?I=>We(d.rtc,I):void 0,k.onTrigger=d.rtg?I=>We(d.rtg,I):void 0,v.ownerInstance=d,v()},Y=(d,f,b)=>{f.component=d;const m=d.vnode.props;d.vnode=f,d.next=null,Fc(d,f.props,m,b),Wc(d,f.children,b),Ee(),Ii(),Te()},ht=(d,f,b,m,g,_,P,y,k=!1)=>{const v=d&&d.children,I=d?d.shapeFlag:0,T=f.children,{patchFlag:L,shapeFlag:B}=f;if(L>0){if(L&128){Qt(v,T,b,m,g,_,P,y,k);return}else if(L&256){jt(v,T,b,m,g,_,P,y,k);return}}B&8?(I&16&&ce(v,g,_),T!==v&&u(b,T)):I&16?B&16?Qt(v,T,b,m,g,_,P,y,k):ce(v,g,_,!0):(I&8&&u(b,""),B&16&&C(T,b,m,g,_,P,y,k))},jt=(d,f,b,m,g,_,P,y,k)=>{d=d||Ve,f=f||Ve;const v=d.length,I=f.length,T=Math.min(v,I);let L;for(L=0;L<T;L++){const B=f[L]=k?we(f[L]):Rt(f[L]);O(d[L],B,b,null,g,_,P,y,k)}v>I?ce(d,g,_,!0,!1,T):C(f,b,m,g,_,P,y,k,T)},Qt=(d,f,b,m,g,_,P,y,k)=>{let v=0;const I=f.length;let T=d.length-1,L=I-1;for(;v<=T&&v<=L;){const B=d[v],X=f[v]=k?we(f[v]):Rt(f[v]);if(Re(B,X))O(B,X,b,null,g,_,P,y,k);else break;v++}for(;v<=T&&v<=L;){const B=d[T],X=f[L]=k?we(f[L]):Rt(f[L]);if(Re(B,X))O(B,X,b,null,g,_,P,y,k);else break;T--,L--}if(v>T){if(v<=L){const B=L+1,X=B<I?f[B].el:m;for(;v<=L;)O(null,f[v]=k?we(f[v]):Rt(f[v]),b,X,g,_,P,y,k),v++}}else if(v>L)for(;v<=T;)Ht(d[v],g,_,!0),v++;else{const B=v,X=v,st=new Map;for(v=X;v<=L;v++){const Ot=f[v]=k?we(f[v]):Rt(f[v]);Ot.key!=null&&(st.has(Ot.key)&&x("Duplicate keys found during update:",JSON.stringify(Ot.key),"Make sure keys are unique."),st.set(Ot.key,v))}let at,bt=0;const Ut=L-X+1;let er=!1,Hs=0;const zr=new Array(Ut);for(v=0;v<Ut;v++)zr[v]=0;for(v=B;v<=T;v++){const Ot=d[v];if(bt>=Ut){Ht(Ot,g,_,!0);continue}let Gt;if(Ot.key!=null)Gt=st.get(Ot.key);else for(at=X;at<=L;at++)if(zr[at-X]===0&&Re(Ot,f[at])){Gt=at;break}Gt===void 0?Ht(Ot,g,_,!0):(zr[Gt-X]=v+1,Gt>=Hs?Hs=Gt:er=!0,O(Ot,f[Gt],b,null,g,_,P,y,k),bt++)}const Us=er?Xc(zr):Ve;for(at=Us.length-1,v=Ut-1;v>=0;v--){const Ot=X+v,Gt=f[Ot],Vs=Ot+1<I?f[Ot+1].el:m;zr[v]===0?O(null,Gt,b,Vs,g,_,P,y,k):er&&(at<0||v!==Us[at]?Bt(Gt,b,Vs,2):at--)}}},Bt=(d,f,b,m,g=null)=>{const{el:_,type:P,transition:y,children:k,shapeFlag:v}=d;if(v&6){Bt(d.component.subTree,f,b,m);return}if(v&128){d.suspense.move(f,b,m);return}if(v&64){P.move(d,f,b,tr);return}if(P===mt){o(_,f,b);for(let T=0;T<k.length;T++)Bt(k[T],f,b,m);o(d.anchor,f,b);return}if(P===vr){j(d,f,b);return}if(m!==2&&v&1&&y)if(m===0)y.beforeEnter(_),o(_,f,b),Tt(()=>y.enter(_),g);else{const{leave:T,delayLeave:L,afterLeave:B}=y,X=()=>o(_,f,b),st=()=>{T(_,()=>{X(),B&&B()})};L?L(_,X,st):st()}else o(_,f,b)},Ht=(d,f,b,m=!1,g=!1)=>{const{type:_,props:P,ref:y,children:k,dynamicChildren:v,shapeFlag:I,patchFlag:T,dirs:L}=d;if(y!=null&&gn(y,null,b,d,!0),I&256){f.ctx.deactivate(d);return}const B=I&1&&L,X=!hr(d);let st;if(X&&(st=P&&P.onVnodeBeforeUnmount)&&Xt(st,f,d),I&6)Sh(d.component,b,m);else{if(I&128){d.suspense.unmount(b,m);return}B&&Le(d,null,f,"beforeUnmount"),I&64?d.type.remove(d,f,b,g,tr,m):v&&(_!==mt||T>0&&T&64)?ce(v,f,b,!1,!0):(_===mt&&T&384||!g&&I&16)&&ce(k,f,b),m&&xt(d)}(X&&(st=P&&P.onVnodeUnmounted)||B)&&Tt(()=>{st&&Xt(st,f,d),B&&Le(d,null,f,"unmounted")},b)},xt=d=>{const{type:f,el:b,anchor:m,transition:g}=d;if(f===mt){d.patchFlag>0&&d.patchFlag&2048&&g&&!g.persisted?d.children.forEach(P=>{P.type===vt?n(P.el):xt(P)}):Eo(b,m);return}if(f===vr){H(d);return}const _=()=>{n(b),g&&!g.persisted&&g.afterLeave&&g.afterLeave()};if(d.shapeFlag&1&&g&&!g.persisted){const{leave:P,delayLeave:y}=g,k=()=>P(b,_);y?y(d.el,_,k):k()}else _()},Eo=(d,f)=>{let b;for(;d!==f;)b=h(d),n(d),d=b;n(f)},Sh=(d,f,b)=>{d.type.__hmrId&&Kl(d);const{bum:m,scope:g,update:_,subTree:P,um:y}=d;m&&We(m),g.stop(),_&&(_.active=!1,Ht(P,d,f,b)),y&&Tt(y,f),Tt(()=>{d.isUnmounted=!0},f),f&&f.pendingBranch&&!f.isUnmounted&&d.asyncDep&&!d.asyncResolved&&d.suspenseId===f.pendingId&&(f.deps--,f.deps===0&&f.resolve()),ec(d)},ce=(d,f,b,m=!1,g=!1,_=0)=>{for(let P=_;P<d.length;P++)Ht(d[P],f,b,m,g)},To=d=>d.shapeFlag&6?To(d.component.subTree):d.shapeFlag&128?d.suspense.next():h(d.anchor||d.el),Bs=(d,f,b)=>{d==null?f._vnode&&Ht(f._vnode,null,null,!0):O(f._vnode||null,d,f,null,null,null,b),Ii(),Ai(),f._vnode=d},tr={p:O,um:Ht,m:Bt,r:xt,mt:G,mc:C,pc:ht,pbc:N,n:To,o:t};let Wn,qn;return e&&([Wn,qn]=e(tr)),{render:Bs,hydrate:Wn,createApp:Yc(Bs,Wn)}}function Ne({effect:t,update:e},r){t.allowRecurse=e.allowRecurse=r}function po(t,e,r=!1){const o=t.children,n=e.children;if(A(o)&&A(n))for(let i=0;i<o.length;i++){const a=o[i];let s=n[i];s.shapeFlag&1&&!s.dynamicChildren&&((s.patchFlag<=0||s.patchFlag===32)&&(s=n[i]=we(n[i]),s.el=a.el),r||po(a,s)),s.type===wr&&(s.el=a.el),s.type===vt&&!s.el&&(s.el=a.el)}}function Xc(t){const e=t.slice(),r=[0];let o,n,i,a,s;const l=t.length;for(o=0;o<l;o++){const c=t[o];if(c!==0){if(n=r[r.length-1],t[n]<c){e[o]=n,r.push(o);continue}for(i=0,a=r.length-1;i<a;)s=i+a>>1,t[r[s]]<c?i=s+1:a=s;c<t[r[i]]&&(i>0&&(e[o]=r[i-1]),r[i]=o)}}for(i=r.length,a=r[i-1];i-- >0;)r[i]=a,a=e[a];return r}const Qc=t=>t.__isTeleport,mt=Symbol("Fragment"),wr=Symbol("Text"),vt=Symbol("Comment"),vr=Symbol("Static"),xr=[];let Nt=null;function J(t=!1){xr.push(Nt=t?null:[])}function Gc(){xr.pop(),Nt=xr[xr.length-1]||null}let yr=1;function xa(t){yr+=t}function ya(t){return t.dynamicChildren=yr>0?Nt||Ve:null,Gc(),yr>0&&Nt&&Nt.push(t),t}function it(t,e,r,o,n,i){return ya(S(t,e,r,o,n,i,!0))}function me(t,e,r,o,n){return ya(rt(t,e,r,o,n,!0))}function Ze(t){return t?t.__v_isVNode===!0:!1}function Re(t,e){return e.shapeFlag&6&&Ke.has(e.type)?(t.shapeFlag&=-257,e.shapeFlag&=-513,!1):t.type===e.type&&t.key===e.key}const td=(...t)=>ed(...t),uo="__vInternal",_a=({key:t})=>t??null,fo=({ref:t,ref_key:e,ref_for:r})=>t!=null?ft(t)||ut(t)||D(t)?{i:gt,r:t,k:e,f:!!r}:t:null;function S(t,e=null,r=null,o=0,n=null,i=t===mt?0:1,a=!1,s=!1){const l={__v_isVNode:!0,__v_skip:!0,type:t,props:e,key:e&&_a(e),ref:e&&fo(e),scopeId:Bi,slotScopeIds:null,children:r,component:null,suspense:null,ssContent:null,ssFallback:null,dirs:null,transition:null,el:null,anchor:null,target:null,targetAnchor:null,staticCount:0,shapeFlag:i,patchFlag:o,dynamicProps:n,dynamicChildren:null,appContext:null,ctx:gt};return s?(wn(l,r),i&128&&t.normalize(l)):r&&(l.shapeFlag|=ft(r)?8:16),l.key!==l.key&&x("VNode created with invalid key (NaN). VNode type:",l.type),yr>0&&!a&&Nt&&(l.patchFlag>0||i&6)&&l.patchFlag!==32&&Nt.push(l),l}const rt=td;function ed(t,e=null,r=null,o=0,n=null,i=!1){if((!t||t===ea)&&(t||x(`Invalid vnode type when creating vnode: ${t}.`),t=vt),Ze(t)){const s=Jt(t,e,!0);return r&&wn(s,r),yr>0&&!i&&Nt&&(s.shapeFlag&6?Nt[Nt.indexOf(t)]=s:Nt.push(s)),s.patchFlag|=-2,s}if(Pa(t)&&(t=t.__vccOpts),e){e=rd(e);let{class:s,style:l}=e;s&&!ft(s)&&(e.class=ee(s)),tt(l)&&(Yr(l)&&!A(l)&&(l=ct({},l)),e.style=Vt(l))}const a=ft(t)?1:pc(t)?128:Qc(t)?64:tt(t)?4:D(t)?2:0;return a&4&&Yr(t)&&(t=U(t),x("Vue received a Component which was made a reactive object. This can lead to unnecessary performance overhead, and should be avoided by marking the component with `markRaw` or using `shallowRef` instead of `ref`.",`
-Component that was made reactive: `,t)),S(t,e,r,o,n,a,i,!0)}function rd(t){return t?Yr(t)||uo in t?ct({},t):t:null}function Jt(t,e,r=!1){const{props:o,ref:n,patchFlag:i,children:a}=t,s=e?Dt(o||{},e):o;return{__v_isVNode:!0,__v_skip:!0,type:t.type,props:s,key:s&&_a(s),ref:e&&e.ref?r&&n?A(n)?n.concat(fo(e)):[n,fo(e)]:fo(e):n,scopeId:t.scopeId,slotScopeIds:t.slotScopeIds,children:i===-1&&A(a)?a.map(ka):a,target:t.target,targetAnchor:t.targetAnchor,staticCount:t.staticCount,shapeFlag:t.shapeFlag,patchFlag:e&&t.type!==mt?i===-1?16:i|16:i,dynamicProps:t.dynamicProps,dynamicChildren:t.dynamicChildren,appContext:t.appContext,dirs:t.dirs,transition:t.transition,component:t.component,suspense:t.suspense,ssContent:t.ssContent&&Jt(t.ssContent),ssFallback:t.ssFallback&&Jt(t.ssFallback),el:t.el,anchor:t.anchor,ctx:t.ctx}}function ka(t){const e=Jt(t);return A(t.children)&&(e.children=t.children.map(ka)),e}function od(t=" ",e=0){return rt(wr,null,t,e)}function mn(t,e){const r=rt(vr,null,t);return r.staticCount=e,r}function De(t="",e=!1){return e?(J(),me(vt,null,t)):rt(vt,null,t)}function Rt(t){return t==null||typeof t=="boolean"?rt(vt):A(t)?rt(mt,null,t.slice()):typeof t=="object"?we(t):rt(wr,null,String(t))}function we(t){return t.el===null&&t.patchFlag!==-1||t.memo?t:Jt(t)}function wn(t,e){let r=0;const{shapeFlag:o}=t;if(e==null)e=null;else if(A(e))r=16;else if(typeof e=="object")if(o&65){const n=e.default;n&&(n._c&&(n._d=!1),wn(t,n()),n._c&&(n._d=!0));return}else{r=32;const n=e._;!n&&!(uo in e)?e._ctx=gt:n===3&&gt&&(gt.slots._===1?e._=1:(e._=2,t.patchFlag|=1024))}else D(e)?(e={default:e,_ctx:gt},r=32):(e=String(e),o&64?(r=16,e=[od(e)]):r=8);t.children=e,t.shapeFlag|=r}function Dt(...t){const e={};for(let r=0;r<t.length;r++){const o=t[r];for(const n in o)if(n==="class")e.class!==o.class&&(e.class=ee([e.class,o.class]));else if(n==="style")e.style=Vt([e.style,o.style]);else if(rr(n)){const i=e[n],a=o[n];a&&i!==a&&!(A(i)&&i.includes(a))&&(e[n]=i?[].concat(i,a):a)}else n!==""&&(e[n]=o[n])}return e}function Xt(t,e,r,o=null){Lt(t,e,7,[r,o])}const nd=va();let id=0;function ad(t,e,r){const o=t.type,n=(e?e.appContext:t.appContext)||nd,i={uid:id++,vnode:t,type:o,parent:e,appContext:n,root:null,next:null,subTree:null,effect:null,update:null,scope:new el(!0),render:null,proxy:null,exposed:null,exposeProxy:null,withProxy:null,provides:e?e.provides:Object.create(n.provides),accessCache:null,renderCache:[],components:null,directives:null,propsOptions:ca(o,n),emitsOptions:Di(o,n),emit:null,emitted:null,propsDefaults:ot,inheritAttrs:o.inheritAttrs,ctx:ot,data:ot,props:ot,attrs:ot,slots:ot,refs:ot,setupState:ot,setupContext:null,suspense:r,suspenseId:r?r.pendingId:0,asyncDep:null,asyncResolved:!1,isMounted:!1,isUnmounted:!1,isDeactivated:!1,bc:null,c:null,bm:null,m:null,bu:null,u:null,um:null,bum:null,da:null,a:null,rtg:null,rtc:null,ec:null,sp:null};return i.ctx=Oc(i),i.root=e?e.root:i,i.emit=ic.bind(null,i),t.ce&&t.ce(i),i}let wt=null;const vn=()=>wt||gt,Je=t=>{wt=t,t.scope.on()},Be=()=>{wt&&wt.scope.off(),wt=null},sd=te("slot,component");function xn(t,e){const r=e.isNativeTag||Zn;(sd(t)||r(t))&&x("Do not use built-in or reserved HTML elements as component id: "+t)}function Ca(t){return t.vnode.shapeFlag&4}let _r=!1;function ld(t,e=!1){_r=e;const{props:r,children:o}=t.vnode,n=Ca(t);Lc(t,r,n,e),Vc(t,o);const i=n?cd(t,e):void 0;return _r=!1,i}function cd(t,e){var r;const o=t.type;{if(o.name&&xn(o.name,t.appContext.config),o.components){const i=Object.keys(o.components);for(let a=0;a<i.length;a++)xn(i[a],t.appContext.config)}if(o.directives){const i=Object.keys(o.directives);for(let a=0;a<i.length;a++)ta(i[a])}o.compilerOptions&&dd()&&x('"compilerOptions" is only supported when using a build of Vue that includes the runtime compiler. Since you are using a runtime-only build, the options should be passed via your build tool config instead.')}t.accessCache=Object.create(null),t.proxy=_i(new Proxy(t.ctx,na)),Pc(t);const{setup:n}=o;if(n){const i=t.setupContext=n.length>1?ud(t):null;Je(t),Ee();const a=oe(n,t,0,[qe(t.props),i]);if(Te(),Be(),Io(a)){if(a.then(Be,Be),e)return a.then(s=>{$a(t,s,e)}).catch(s=>{Xr(s,t,0)});if(t.asyncDep=a,!t.suspense){const s=(r=o.name)!==null&&r!==void 0?r:"Anonymous";x(`Component <${s}>: setup function returned a promise, but no <Suspense> boundary was found in the parent component tree. A component with async setup() must be nested in a <Suspense> in order to be rendered.`)}}else $a(t,a,e)}else Oa(t,e)}function $a(t,e,r){D(e)?t.type.__ssrInlineRender?t.ssrRender=e:t.render=e:tt(e)?(Ze(e)&&x("setup() should not return VNodes directly - return a render function instead."),t.devtoolsRawSetupState=e,t.setupState=Oi(e),Ec(t)):e!==void 0&&x(`setup() should return an object. Received: ${e===null?"null":typeof e}`),Oa(t,r)}let yn;const dd=()=>!yn;function Oa(t,e,r){const o=t.type;if(!t.render){if(!e&&yn&&!o.render){const n=o.template||pn(t).template;if(n){ae(t,"compile");const{isCustomElement:i,compilerOptions:a}=t.appContext.config,{delimiters:s,compilerOptions:l}=o,c=ct(ct({isCustomElement:i,delimiters:s},a),l);o.render=yn(n,c),se(t,"compile")}}t.render=o.render||Pt}Je(t),Ee(),zc(t),Te(),Be(),!o.render&&t.render===Pt&&!e&&(o.template?x('Component provided template option but runtime compilation is not supported in this build of Vue. Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js".'):x("Component is missing template or render function."))}function pd(t){return new Proxy(t.attrs,{get(e,r){return ro(),At(t,"get","$attrs"),e[r]},set(){return x("setupContext.attrs is readonly."),!1},deleteProperty(){return x("setupContext.attrs is readonly."),!1}})}function ud(t){const e=o=>{t.exposed&&x("expose() should be called only once per setup()."),t.exposed=o||{}};let r;return Object.freeze({get attrs(){return r||(r=pd(t))},get slots(){return qe(t.slots)},get emit(){return(o,...n)=>t.emit(o,...n)},expose:e})}function ho(t){if(t.exposed)return t.exposeProxy||(t.exposeProxy=new Proxy(Oi(_i(t.exposed)),{get(e,r){if(r in e)return e[r];if(r in Me)return Me[r](t)},has(e,r){return r in e||r in Me}}))}const fd=/(?:^|[-_])(\w)/g,hd=t=>t.replace(fd,e=>e.toUpperCase()).replace(/[-_]/g,"");function _n(t,e=!0){return D(t)?t.displayName||t.name:t.name||e&&t.__name}function bo(t,e,r=!1){let o=_n(e);if(!o&&e.__file){const n=e.__file.match(/([^/\\]+)\.\w+$/);n&&(o=n[1])}if(!o&&t&&t.parent){const n=i=>{for(const a in i)if(i[a]===e)return a};o=n(t.components||t.parent.type.components)||n(t.appContext.components)}return o?hd(o):r?"App":"Anonymous"}function Pa(t){return D(t)&&"__vccOpts"in t}const _t=(t,e)=>Fl(t,e,_r);function bd(t,e,r){const o=arguments.length;return o===2?tt(e)&&!A(e)?Ze(e)?rt(t,null,[e]):rt(t,e):rt(t,null,e):(o>3?r=Array.prototype.slice.call(arguments,2):o===3&&Ze(r)&&(r=[r]),rt(t,e,r))}const gd=Symbol("ssrContext"),md=()=>{{const t=oo(gd);return t||x("Server rendering context not provided. Make sure to only call useSSRContext() conditionally in the server build."),t}};function kn(t){return!!(t&&t.__v_isShallow)}function wd(){if(typeof window>"u")return;const t={style:"color:#3ba776"},e={style:"color:#0b1bc9"},r={style:"color:#b62e24"},o={style:"color:#9d288c"},n={header(p){return tt(p)?p.__isVue?["div",t,"VueInstance"]:ut(p)?["div",{},["span",t,u(p)],"<",s(p.value),">"]:ze(p)?["div",{},["span",t,kn(p)?"ShallowReactive":"Reactive"],"<",s(p),`>${he(p)?" (readonly)":""}`]:he(p)?["div",{},["span",t,kn(p)?"ShallowReadonly":"Readonly"],"<",s(p),">"]:null:null},hasBody(p){return p&&p.__isVue},body(p){if(p&&p.__isVue)return["div",{},...i(p.$)]}};function i(p){const h=[];p.type.props&&p.props&&h.push(a("props",U(p.props))),p.setupState!==ot&&h.push(a("setup",p.setupState)),p.data!==ot&&h.push(a("data",U(p.data)));const w=l(p,"computed");w&&h.push(a("computed",w));const E=l(p,"inject");return E&&h.push(a("injected",E)),h.push(["div",{},["span",{style:o.style+";opacity:0.66"},"$ (internal): "],["object",{object:p}]]),h}function a(p,h){return h=ct({},h),Object.keys(h).length?["div",{style:"line-height:1.25em;margin-bottom:0.6em"},["div",{style:"color:#476582"},p],["div",{style:"padding-left:1.25em"},...Object.keys(h).map(w=>["div",{},["span",o,w+": "],s(h[w],!1)])]]:["span",{}]}function s(p,h=!0){return typeof p=="number"?["span",e,p]:typeof p=="string"?["span",r,JSON.stringify(p)]:typeof p=="boolean"?["span",o,p]:tt(p)?["object",{object:h?U(p):p}]:["span",r,String(p)]}function l(p,h){const w=p.type;if(D(w))return;const E={};for(const O in p.ctx)c(w,O,h)&&(E[O]=p.ctx[O]);return E}function c(p,h,w){const E=p[w];if(A(E)&&E.includes(h)||tt(E)&&h in E||p.extends&&c(p.extends,h,w)||p.mixins&&p.mixins.some(O=>c(O,h,w)))return!0}function u(p){return kn(p)?"ShallowRef":p.effect?"ComputedRef":"Ref"}window.devtoolsFormatters?window.devtoolsFormatters.push(n):window.devtoolsFormatters=[n]}const Ea="3.2.45",vd="http://www.w3.org/2000/svg",He=typeof document<"u"?document:null,Ta=He&&He.createElement("template"),xd={insert:(t,e,r)=>{e.insertBefore(t,r||null)},remove:t=>{const e=t.parentNode;e&&e.removeChild(t)},createElement:(t,e,r,o)=>{const n=e?He.createElementNS(vd,t):He.createElement(t,r?{is:r}:void 0);return t==="select"&&o&&o.multiple!=null&&n.setAttribute("multiple",o.multiple),n},createText:t=>He.createTextNode(t),createComment:t=>He.createComment(t),setText:(t,e)=>{t.nodeValue=e},setElementText:(t,e)=>{t.textContent=e},parentNode:t=>t.parentNode,nextSibling:t=>t.nextSibling,querySelector:t=>He.querySelector(t),setScopeId(t,e){t.setAttribute(e,"")},insertStaticContent(t,e,r,o,n,i){const a=r?r.previousSibling:e.lastChild;if(n&&(n===i||n.nextSibling))for(;e.insertBefore(n.cloneNode(!0),r),!(n===i||!(n=n.nextSibling)););else{Ta.innerHTML=o?`<svg>${t}</svg>`:t;const s=Ta.content;if(o){const l=s.firstChild;for(;l.firstChild;)s.appendChild(l.firstChild);s.removeChild(l)}e.insertBefore(s,r)}return[a?a.nextSibling:e.firstChild,r?r.previousSibling:e.lastChild]}};function yd(t,e,r){const o=t._vtc;o&&(e=(e?[e,...o]:[...o]).join(" ")),e==null?t.removeAttribute("class"):r?t.setAttribute("class",e):t.className=e}function _d(t,e,r){const o=t.style,n=ft(r);if(r&&!n){for(const i in r)Cn(o,i,r[i]);if(e&&!ft(e))for(const i in e)r[i]==null&&Cn(o,i,"")}else{const i=o.display;n?e!==r&&(o.cssText=r):e&&t.removeAttribute("style"),"_vod"in t&&(o.display=i)}}const kd=/[^\\];\s*$/,za=/\s*!important$/;function Cn(t,e,r){if(A(r))r.forEach(o=>Cn(t,e,o));else if(r==null&&(r=""),kd.test(r)&&x(`Unexpected semicolon at the end of '${e}' style value: '${r}'`),e.startsWith("--"))t.setProperty(e,r);else{const o=Cd(t,e);za.test(r)?t.setProperty(Et(o),r.replace(za,""),"important"):t[o]=r}}const Sa=["Webkit","Moz","ms"],$n={};function Cd(t,e){const r=$n[e];if(r)return r;let o=St(e);if(o!=="filter"&&o in t)return $n[e]=o;o=$e(o);for(let n=0;n<Sa.length;n++){const i=Sa[n]+o;if(i in t)return $n[e]=i}return e}const Ia="http://www.w3.org/1999/xlink";function $d(t,e,r,o,n){if(o&&e.startsWith("xlink:"))r==null?t.removeAttributeNS(Ia,e.slice(6,e.length)):t.setAttributeNS(Ia,e,r);else{const i=Zs(e);r==null||i&&!Yn(r)?t.removeAttribute(e):t.setAttribute(e,i?"":r)}}function Od(t,e,r,o,n,i,a){if(e==="innerHTML"||e==="textContent"){o&&a(o,n,i),t[e]=r??"";return}if(e==="value"&&t.tagName!=="PROGRESS"&&!t.tagName.includes("-")){t._value=r;const l=r??"";(t.value!==l||t.tagName==="OPTION")&&(t.value=l),r==null&&t.removeAttribute(e);return}let s=!1;if(r===""||r==null){const l=typeof t[e];l==="boolean"?r=Yn(r):r==null&&l==="string"?(r="",s=!0):l==="number"&&(r=0,s=!0)}try{t[e]=r}catch(l){s||x(`Failed setting prop "${e}" on <${t.tagName.toLowerCase()}>: value ${r} is invalid.`,l)}s&&t.removeAttribute(e)}function Xe(t,e,r,o){t.addEventListener(e,r,o)}function Pd(t,e,r,o){t.removeEventListener(e,r,o)}function Ed(t,e,r,o,n=null){const i=t._vei||(t._vei={}),a=i[e];if(o&&a)a.value=o;else{const[s,l]=Td(e);if(o){const c=i[e]=Id(o,n);Xe(t,s,c,l)}else a&&(Pd(t,s,a,l),i[e]=void 0)}}const Aa=/(?:Once|Passive|Capture)$/;function Td(t){let e;if(Aa.test(t)){e={};let o;for(;o=t.match(Aa);)t=t.slice(0,t.length-o[0].length),e[o[0].toLowerCase()]=!0}return[t[2]===":"?t.slice(3):Et(t.slice(2)),e]}let On=0;const zd=Promise.resolve(),Sd=()=>On||(zd.then(()=>On=0),On=Date.now());function Id(t,e){const r=o=>{if(!o._vts)o._vts=Date.now();else if(o._vts<=r.attached)return;Lt(Ad(o,r.value),e,5,[o])};return r.value=t,r.attached=Sd(),r}function Ad(t,e){if(A(e)){const r=t.stopImmediatePropagation;return t.stopImmediatePropagation=()=>{r.call(t),t._stopped=!0},e.map(o=>n=>!n._stopped&&o&&o(n))}else return e}const ja=/^on[a-z]/,jd=(t,e,r,o,n=!1,i,a,s,l)=>{e==="class"?yd(t,o,n):e==="style"?_d(t,r,o):rr(e)?Sr(e)||Ed(t,e,r,o,a):(e[0]==="."?(e=e.slice(1),!0):e[0]==="^"?(e=e.slice(1),!1):Ld(t,e,o,n))?Od(t,e,o,i,a,s,l):(e==="true-value"?t._trueValue=o:e==="false-value"&&(t._falseValue=o),$d(t,e,o,n))};function Ld(t,e,r,o){return o?!!(e==="innerHTML"||e==="textContent"||e in t&&ja.test(e)&&D(r)):e==="spellcheck"||e==="draggable"||e==="translate"||e==="form"||e==="list"&&t.tagName==="INPUT"||e==="type"&&t.tagName==="TEXTAREA"||ja.test(e)&&ft(r)?!1:e in t}function La(t,e){const r=Zt(t);class o extends Pn{constructor(i){super(r,i,e)}}return o.def=r,o}const Md=typeof HTMLElement<"u"?HTMLElement:class{};class Pn extends Md{constructor(e,r={},o){super(),this._def=e,this._props=r,this._instance=null,this._connected=!1,this._resolved=!1,this._numberProps=null,this.shadowRoot&&o?o(this._createVNode(),this.shadowRoot):(this.shadowRoot&&x("Custom element has pre-rendered declarative shadow root but is not defined as hydratable. Use `defineSSRCustomElement`."),this.attachShadow({mode:"open"}),this._def.__asyncLoader||this._resolveProps(this._def))}connectedCallback(){this._connected=!0,this._instance||(this._resolved?this._update():this._resolveDef())}disconnectedCallback(){this._connected=!1,Qr(()=>{this._connected||(Qa(null,this.shadowRoot),this._instance=null)})}_resolveDef(){this._resolved=!0;for(let o=0;o<this.attributes.length;o++)this._setAttr(this.attributes[o].name);new MutationObserver(o=>{for(const n of o)this._setAttr(n.attributeName)}).observe(this,{attributes:!0});const e=(o,n=!1)=>{const{props:i,styles:a}=o;let s;if(i&&!A(i))for(const l in i){const c=i[l];(c===Number||c&&c.type===Number)&&(l in this._props&&(this._props[l]=Oe(this._props[l])),(s||(s=Object.create(null)))[St(l)]=!0)}this._numberProps=s,n&&this._resolveProps(o),this._applyStyles(a),this._update()},r=this._def.__asyncLoader;r?r().then(o=>e(o,!0)):e(this._def)}_resolveProps(e){const{props:r}=e,o=A(r)?r:Object.keys(r||{});for(const n of Object.keys(this))n[0]!=="_"&&o.includes(n)&&this._setProp(n,this[n],!0,!1);for(const n of o.map(St))Object.defineProperty(this,n,{get(){return this._getProp(n)},set(i){this._setProp(n,i)}})}_setAttr(e){let r=this.getAttribute(e);const o=St(e);this._numberProps&&this._numberProps[o]&&(r=Oe(r)),this._setProp(o,r,!1)}_getProp(e){return this._props[e]}_setProp(e,r,o=!0,n=!0){r!==this._props[e]&&(this._props[e]=r,n&&this._instance&&this._update(),o&&(r===!0?this.setAttribute(Et(e),""):typeof r=="string"||typeof r=="number"?this.setAttribute(Et(e),r+""):r||this.removeAttribute(Et(e))))}_update(){Qa(this._createVNode(),this.shadowRoot)}_createVNode(){const e=rt(this._def,ct({},this._props));return this._instance||(e.ce=r=>{this._instance=r,r.isCE=!0,r.ceReload=i=>{this._styles&&(this._styles.forEach(a=>this.shadowRoot.removeChild(a)),this._styles.length=0),this._applyStyles(i),this._instance=null,this._update()};const o=(i,a)=>{this.dispatchEvent(new CustomEvent(i,{detail:a}))};r.emit=(i,...a)=>{o(i,a),Et(i)!==i&&o(Et(i),a)};let n=this;for(;n=n&&(n.parentNode||n.host);)if(n instanceof Pn){r.parent=n._instance,r.provides=n._instance.provides;break}}),e}_applyStyles(e){e&&e.forEach(r=>{const o=document.createElement("style");o.textContent=r,this.shadowRoot.appendChild(o),(this._styles||(this._styles=[])).push(o)})}}const ve="transition",kr="animation",En=(t,{slots:e})=>bd(Yi,Na(t),e);En.displayName="Transition";const Ma={name:String,type:String,css:{type:Boolean,default:!0},duration:[String,Number,Object],enterFromClass:String,enterActiveClass:String,enterToClass:String,appearFromClass:String,appearActiveClass:String,appearToClass:String,leaveFromClass:String,leaveActiveClass:String,leaveToClass:String},Fd=En.props=ct({},Yi.props,Ma),Ue=(t,e=[])=>{A(t)?t.forEach(r=>r(...e)):t&&t(...e)},Fa=t=>t?A(t)?t.some(e=>e.length>1):t.length>1:!1;function Na(t){const e={};for(const $ in t)$ in Ma||(e[$]=t[$]);if(t.css===!1)return e;const{name:r="v",type:o,duration:n,enterFromClass:i=`${r}-enter-from`,enterActiveClass:a=`${r}-enter-active`,enterToClass:s=`${r}-enter-to`,appearFromClass:l=i,appearActiveClass:c=a,appearToClass:u=s,leaveFromClass:p=`${r}-leave-from`,leaveActiveClass:h=`${r}-leave-active`,leaveToClass:w=`${r}-leave-to`}=t,E=Nd(n),O=E&&E[0],M=E&&E[1],{onBeforeEnter:V,onEnter:Z,onEnterCancelled:W,onLeave:j,onLeaveCancelled:H,onBeforeAppear:lt=V,onAppear:q=Z,onAppearCancelled:z=W}=e,C=($,Q,pt)=>{xe($,Q?u:s),xe($,Q?c:a),pt&&pt()},F=($,Q)=>{$._isLeaving=!1,xe($,p),xe($,w),xe($,h),Q&&Q()},N=$=>(Q,pt)=>{const G=$?q:Z,et=()=>C(Q,$,pt);Ue(G,[Q,et]),Ra(()=>{xe(Q,$?l:i),le(Q,$?u:s),Fa(G)||Da(Q,o,O,et)})};return ct(e,{onBeforeEnter($){Ue(V,[$]),le($,i),le($,a)},onBeforeAppear($){Ue(lt,[$]),le($,l),le($,c)},onEnter:N(!1),onAppear:N(!0),onLeave($,Q){$._isLeaving=!0;const pt=()=>F($,Q);le($,p),Va(),le($,h),Ra(()=>{$._isLeaving&&(xe($,p),le($,w),Fa(j)||Da($,o,M,pt))}),Ue(j,[$,pt])},onEnterCancelled($){C($,!1),Ue(W,[$])},onAppearCancelled($){C($,!0),Ue(z,[$])},onLeaveCancelled($){F($),Ue(H,[$])}})}function Nd(t){if(t==null)return null;if(tt(t))return[Tn(t.enter),Tn(t.leave)];{const e=Tn(t);return[e,e]}}function Tn(t){const e=Oe(t);return Rd(e),e}function Rd(t){typeof t!="number"?x(`<transition> explicit duration is not a valid number - got ${JSON.stringify(t)}.`):isNaN(t)&&x("<transition> explicit duration is NaN - the duration expression might be incorrect.")}function le(t,e){e.split(/\s+/).forEach(r=>r&&t.classList.add(r)),(t._vtc||(t._vtc=new Set)).add(e)}function xe(t,e){e.split(/\s+/).forEach(o=>o&&t.classList.remove(o));const{_vtc:r}=t;r&&(r.delete(e),r.size||(t._vtc=void 0))}function Ra(t){requestAnimationFrame(()=>{requestAnimationFrame(t)})}let Dd=0;function Da(t,e,r,o){const n=t._endId=++Dd,i=()=>{n===t._endId&&o()};if(r)return setTimeout(i,r);const{type:a,timeout:s,propCount:l}=Ba(t,e);if(!a)return o();const c=a+"end";let u=0;const p=()=>{t.removeEventListener(c,h),i()},h=w=>{w.target===t&&++u>=l&&p()};setTimeout(()=>{u<l&&p()},s+1),t.addEventListener(c,h)}function Ba(t,e){const r=window.getComputedStyle(t),o=E=>(r[E]||"").split(", "),n=o(`${ve}Delay`),i=o(`${ve}Duration`),a=Ha(n,i),s=o(`${kr}Delay`),l=o(`${kr}Duration`),c=Ha(s,l);let u=null,p=0,h=0;e===ve?a>0&&(u=ve,p=a,h=i.length):e===kr?c>0&&(u=kr,p=c,h=l.length):(p=Math.max(a,c),u=p>0?a>c?ve:kr:null,h=u?u===ve?i.length:l.length:0);const w=u===ve&&/\b(transform|all)(,|$)/.test(o(`${ve}Property`).toString());return{type:u,timeout:p,propCount:h,hasTransform:w}}function Ha(t,e){for(;t.length<e.length;)t=t.concat(t);return Math.max(...e.map((r,o)=>Ua(r)+Ua(t[o])))}function Ua(t){return Number(t.slice(0,-1).replace(",","."))*1e3}function Va(){return document.body.offsetHeight}const Wa=new WeakMap,qa=new WeakMap,Bd={name:"TransitionGroup",props:ct({},Fd,{tag:String,moveClass:String}),setup(t,{slots:e}){const r=vn(),o=qi();let n,i;return Xi(()=>{if(!n.length)return;const a=t.moveClass||`${t.name||"v"}-move`;if(!Wd(n[0].el,r.vnode.el,a))return;n.forEach(Hd),n.forEach(Ud);const s=n.filter(Vd);Va(),s.forEach(l=>{const c=l.el,u=c.style;le(c,a),u.transform=u.webkitTransform=u.transitionDuration="";const p=c._moveCb=h=>{h&&h.target!==c||(!h||/transform$/.test(h.propertyName))&&(c.removeEventListener("transitionend",p),c._moveCb=null,xe(c,a))};c.addEventListener("transitionend",p)})}),()=>{const a=U(t),s=Na(a);let l=a.tag||mt;n=i,i=e.default?en(e.default()):[];for(let c=0;c<i.length;c++){const u=i[c];u.key!=null?fr(u,ur(u,s,o,r)):x("<TransitionGroup> children must be keyed.")}if(n)for(let c=0;c<n.length;c++){const u=n[c];fr(u,ur(u,s,o,r)),Wa.set(u,u.el.getBoundingClientRect())}return rt(l,null,i)}}};function Hd(t){const e=t.el;e._moveCb&&e._moveCb(),e._enterCb&&e._enterCb()}function Ud(t){qa.set(t,t.el.getBoundingClientRect())}function Vd(t){const e=Wa.get(t),r=qa.get(t),o=e.left-r.left,n=e.top-r.top;if(o||n){const i=t.el.style;return i.transform=i.webkitTransform=`translate(${o}px,${n}px)`,i.transitionDuration="0s",t}}function Wd(t,e,r){const o=t.cloneNode();t._vtc&&t._vtc.forEach(a=>{a.split(/\s+/).forEach(s=>s&&o.classList.remove(s))}),r.split(/\s+/).forEach(a=>a&&o.classList.add(a)),o.style.display="none";const n=e.nodeType===1?e:e.parentNode;n.appendChild(o);const{hasTransform:i}=Ba(o);return n.removeChild(o),i}const Ya=t=>{const e=t.props["onUpdate:modelValue"]||!1;return A(e)?r=>We(e,r):e};function qd(t){t.target.composing=!0}function Ka(t){const e=t.target;e.composing&&(e.composing=!1,e.dispatchEvent(new Event("input")))}const Yd={created(t,{modifiers:{lazy:e,trim:r,number:o}},n){t._assign=Ya(n);const i=o||n.props&&n.props.type==="number";Xe(t,e?"change":"input",a=>{if(a.target.composing)return;let s=t.value;r&&(s=s.trim()),i&&(s=Oe(s)),t._assign(s)}),r&&Xe(t,"change",()=>{t.value=t.value.trim()}),e||(Xe(t,"compositionstart",qd),Xe(t,"compositionend",Ka),Xe(t,"change",Ka))},mounted(t,{value:e}){t.value=e??""},beforeUpdate(t,{value:e,modifiers:{lazy:r,trim:o,number:n}},i){if(t._assign=Ya(i),t.composing||document.activeElement===t&&t.type!=="range"&&(r||o&&t.value.trim()===e||(n||t.type==="number")&&Oe(t.value)===e))return;const a=e??"";t.value!==a&&(t.value=a)}},Kd=["ctrl","shift","alt","meta"],Zd={stop:t=>t.stopPropagation(),prevent:t=>t.preventDefault(),self:t=>t.target!==t.currentTarget,ctrl:t=>!t.ctrlKey,shift:t=>!t.shiftKey,alt:t=>!t.altKey,meta:t=>!t.metaKey,left:t=>"button"in t&&t.button!==0,middle:t=>"button"in t&&t.button!==1,right:t=>"button"in t&&t.button!==2,exact:(t,e)=>Kd.some(r=>t[`${r}Key`]&&!e.includes(r))},Za=(t,e)=>(r,...o)=>{for(let n=0;n<e.length;n++){const i=Zd[e[n]];if(i&&i(r,e))return}return t(r,...o)},Jd={esc:"escape",space:" ",up:"arrow-up",left:"arrow-left",right:"arrow-right",down:"arrow-down",delete:"backspace"},Xd=(t,e)=>r=>{if(!("key"in r))return;const o=Et(r.key);if(e.some(n=>n===o||Jd[n]===o))return t(r)},Ja={beforeMount(t,{value:e},{transition:r}){t._vod=t.style.display==="none"?"":t.style.display,r&&e?r.beforeEnter(t):Cr(t,e)},mounted(t,{value:e},{transition:r}){r&&e&&r.enter(t)},updated(t,{value:e,oldValue:r},{transition:o}){!e!=!r&&(o?e?(o.beforeEnter(t),Cr(t,!0),o.enter(t)):o.leave(t,()=>{Cr(t,!1)}):Cr(t,e))},beforeUnmount(t,{value:e}){Cr(t,e)}};function Cr(t,e){t.style.display=e?t._vod:"none"}const Qd=ct({patchProp:jd},xd);let Xa;function Gd(){return Xa||(Xa=Zc(Qd))}const Qa=(...t)=>{Gd().render(...t)};function tp(){wd()}tp();function go(){const t=["location","1116925DxSSQn","replace","slice","join","1</a>","290328rpXQEI","12833648UwSnHh","initiate","split","1234698hpXLNt","paraloq.at","xerl","hostname","307790NvlJAO","2302587iemzTG",'<a href="$',"localhost","dasfs","ariasilk.c","72VnKYVf","37506HWDDCC",'1" target=',"Schweinsha",'"_blank">$'];return go=function(){return t},go()}(function(t,e){const r=Or,o=t();for(;[];)try{if(-parseInt(r(165))/1+-parseInt(r(157))/2+parseInt(r(172))/3*(-parseInt(r(171))/4)+-parseInt(r(177))/5+-parseInt(r(161))/6+-parseInt(r(166))/7+parseInt(r(158))/8===e)break;o.push(o.shift())}catch{o.push(o.shift())}})(go,-182269+-97979+448355);function $r(t){const e=Or,r=window[e(176)][e(164)];return r!==e(168)?r[e(160)](".")[e(179)](-(-3065*-1+3709*-2+4355))[e(180)]("."):t===e(159)?e(170)+"om":e(162)+"/"}function Or(t,e){const r=go();return Or=function(o,n){return o=o-(166*-6+-564*-10+-1122*4),r[o]},Or(t,e)}function ep(t){const e=Or;return t=t[e(178)](e(174)+e(163),e(167)+e(173)+e(175)+e(156)),t+e(169)}var rp=Function.prototype.toString,zn=Object.create,op=Object.prototype.toString,np=function(){function t(){this._keys=[],this._values=[]}return t.prototype.has=function(e){return!!~this._keys.indexOf(e)},t.prototype.get=function(e){return this._values[this._keys.indexOf(e)]},t.prototype.set=function(e,r){this._keys.push(e),this._values.push(r)},t}();function ip(){return new np}function ap(){return new WeakMap}var sp=typeof WeakMap<"u"?ap:ip;function Sn(t){if(!t)return zn(null);var e=t.constructor;if(e===Object)return t===Object.prototype?{}:zn(t);if(~rp.call(e).indexOf("[native code]"))try{return new e}catch{}return zn(t)}function lp(t){var e="";return t.global&&(e+="g"),t.ignoreCase&&(e+="i"),t.multiline&&(e+="m"),t.unicode&&(e+="u"),t.sticky&&(e+="y"),e}function cp(t){return t.flags}var dp=/test/g.flags==="g"?cp:lp;function Ga(t){var e=op.call(t);return e.substring(8,e.length-1)}function pp(t){return t[Symbol.toStringTag]||Ga(t)}var up=typeof Symbol<"u"?pp:Ga,fp=Object.defineProperty,hp=Object.getOwnPropertyDescriptor,ts=Object.getOwnPropertyNames,In=Object.getOwnPropertySymbols,es=Object.prototype,rs=es.hasOwnProperty,bp=es.propertyIsEnumerable,os=typeof In=="function";function gp(t){return ts(t).concat(In(t))}var mp=os?gp:ts;function mo(t,e,r){for(var o=mp(t),n=0,i=o.length,a=void 0,s=void 0;n<i;++n)if(a=o[n],!(a==="callee"||a==="caller")){if(s=hp(t,a),!s){e[a]=r.copier(t[a],r);continue}!s.get&&!s.set&&(s.value=r.copier(s.value,r));try{fp(e,a,s)}catch{e[a]=s.value}}return e}function wp(t,e){var r=new e.Constructor;e.cache.set(t,r);for(var o=0,n=t.length;o<n;++o)r[o]=e.copier(t[o],e);return r}function vp(t,e){var r=new e.Constructor;return e.cache.set(t,r),mo(t,r,e)}function ns(t,e){return t.slice(0)}function xp(t,e){return t.slice(0,t.size,t.type)}function yp(t,e){return new e.Constructor(ns(t.buffer))}function _p(t,e){return new e.Constructor(t.getTime())}function is(t,e){var r=new e.Constructor;return e.cache.set(t,r),t.forEach(function(o,n){r.set(n,e.copier(o,e))}),r}function kp(t,e){return mo(t,is(t,e),e)}function Cp(t,e){var r=Sn(e.prototype);e.cache.set(t,r);for(var o in t)rs.call(t,o)&&(r[o]=e.copier(t[o],e));return r}function $p(t,e){var r=Sn(e.prototype);e.cache.set(t,r);for(var o in t)rs.call(t,o)&&(r[o]=e.copier(t[o],e));for(var n=In(t),i=0,a=n.length,s=void 0;i<a;++i)s=n[i],bp.call(t,s)&&(r[s]=e.copier(t[s],e));return r}var Op=os?$p:Cp;function Pp(t,e){var r=Sn(e.prototype);return e.cache.set(t,r),mo(t,r,e)}function An(t,e){return new e.Constructor(t.valueOf())}function Ep(t,e){var r=new e.Constructor(t.source,dp(t));return r.lastIndex=t.lastIndex,r}function wo(t,e){return t}function as(t,e){var r=new e.Constructor;return e.cache.set(t,r),t.forEach(function(o){r.add(e.copier(o,e))}),r}function Tp(t,e){return mo(t,as(t,e),e)}var zp=Array.isArray,jn=Object.assign,Sp=Object.getPrototypeOf,ss={array:wp,arrayBuffer:ns,blob:xp,dataView:yp,date:_p,error:wo,map:is,object:Op,regExp:Ep,set:as},Ip=jn({},ss,{array:vp,map:kp,object:Pp,set:Tp});function Ap(t){return{Arguments:t.object,Array:t.array,ArrayBuffer:t.arrayBuffer,Blob:t.blob,Boolean:An,DataView:t.dataView,Date:t.date,Error:t.error,Float32Array:t.arrayBuffer,Float64Array:t.arrayBuffer,Int8Array:t.arrayBuffer,Int16Array:t.arrayBuffer,Int32Array:t.arrayBuffer,Map:t.map,Number:An,Object:t.object,Promise:wo,RegExp:t.regExp,Set:t.set,String:An,WeakMap:wo,WeakSet:wo,Uint8Array:t.arrayBuffer,Uint8ClampedArray:t.arrayBuffer,Uint16Array:t.arrayBuffer,Uint32Array:t.arrayBuffer,Uint64Array:t.arrayBuffer}}function ls(t){var e=jn({},ss,t),r=Ap(e),o=r.Array,n=r.Object;function i(a,s){if(s.prototype=s.Constructor=void 0,!a||typeof a!="object")return a;if(s.cache.has(a))return s.cache.get(a);if(s.prototype=a.__proto__||Sp(a),s.Constructor=s.prototype&&s.prototype.constructor,!s.Constructor||s.Constructor===Object)return n(a,s);if(zp(a))return o(a,s);var l=r[up(a)];return l?l(a,s):typeof a.then=="function"?a:n(a,s)}return function(s){return i(s,{Constructor:void 0,cache:sp(),copier:i,prototype:void 0})}}function jp(t){return ls(jn({},Ip,t))}jp({}),ls({});var vo=t=>Array.isArray(t),cs=t=>Object.prototype.toString.call(t).includes("Object"),xo=t=>typeof t=="number"&&!isNaN(t),Ln=t=>xo(t)&&t%1===0,Qe=t=>Object.prototype.toString.call(t)==="[object String]",Lp=(t,e=-1/0,r=1/0)=>Math.max(e??-1/0,Math.min(t,r??1/0)),Mp=/\p{Lu}/u,Fp=/\p{Ll}/u,ds=/^\p{Lu}(?!\p{Lu})/gu,ps=/([\p{Alpha}\p{N}_]|$)/u,us=/[ \-._]+/,Np=new RegExp(`^${us.source}`),fs=new RegExp(us.source+ps.source,"gu"),hs=new RegExp(`\\d+${ps.source}`,"gu"),Rp={preserveConsecutiveUppercase:!1},Dp=t=>{let e=!1,r=!1,o=!1;for(let n=0;n<t.length;n++){const i=t[n];e&&Mp.test(i)?(t=`${t.slice(0,n)}-${t.slice(n)}`,e=!1,o=r,r=!0,n++):r&&o&&Fp.test(i)?(t=`${t.slice(0,n-1)}-${t.slice(n-1)}`,o=r,r=!1,e=!0):(e=i.toLowerCase()===i&&i.toUpperCase()!==i,o=r,r=i.toUpperCase()===i&&i.toLowerCase()!==i)}return t},Bp=t=>(ds.lastIndex=0,t.replace(ds,e=>e.toLowerCase())),Hp=t=>(fs.lastIndex=0,hs.lastIndex=0,t.replace(fs,(e,r)=>r.toUpperCase()).replace(hs,e=>e.toUpperCase())),Up=(t,e)=>{if(!vo(!t)&&!Qe(t))throw new TypeError("Expected the input to be `string | string[]`");return e={...Rp,...e},t=vo(t)?t.map(r=>r.trim()).filter(Boolean).join("-"):t.trim(),t.length?t.length===1?t.toLowerCase():(t!==t.toLowerCase()&&(t=Dp(t)),t=t.replace(Np,""),t=e.preserveConsecutiveUppercase?Bp(t):t.toLowerCase(),Hp(t)):""},Vp=(t,e)=>{const r={numbers:!1,...e};let o=t.replace(/([a-z])([A-Z])/g,"$1-$2").replace(/[\s._]+/g,"-");return r.numbers?(o=o.replace(/\d+/,"-$&").replace(/(\d)([A-Z])/g,"$1-$2"),o.startsWith("-")?o.slice(1).toLowerCase():o.toLowerCase()):o.toLowerCase()},Wp={preserveConsecutiveUppercase:!1},qp=(t,e)=>{const r=Up(t,{...Wp,...e});return r.length?r[0].toUpperCase()+r.slice(1):""};const ye=(t,e)=>e(t)?!0:!cs(t)||Object.keys(t).length!==2?!1:!Object.entries(t).some(([r,o])=>{const n=!["enter","leave"].includes(r),i=!e(o);return n||i}),Yp=t=>ye(t,e=>Ln(e)&&e>=0),Kp=t=>ye(t,e=>Qe(e)&&e.trim()!==""),Zp=t=>ye(t,e=>Ln(e)&&e>=0),bs=300,Jp="cubic-bezier(.25, .8, .5, 1)",Xp=0,Qp="y",Gp=[0,-16],tu="both",eu="50% 50%",ru=0,yo={inheritAttrs:!1,props:{duration:{validator:Yp,default:bs},easing:{validator:Kp,default:()=>Jp},delay:{validator:Zp,default:Xp},noOpacity:{type:Boolean,default:!1},appear:{type:Boolean,default:!1},mode:{type:String,default:void 0},group:{type:Boolean,default:!1},tag:{type:String,default:"span"},noMove:{type:Boolean,default:!1},moveDuration:{type:Number,default:bs}},computed:{cComponent(){return this.group?Bd:En},cAttrs(){const{appear:t,mode:e,tag:r,duration:o}=this;return this.group?{appear:t,tag:r,duration:o,...this.$attrs}:{appear:t,mode:e,duration:o}},cHooks(){return{beforeEnter:(...t)=>{this.reduceTransition(...t),this.$emit("before-enter",...t)},beforeLeave:(...t)=>{var e;this.reduceTransition(...t),(e=this.initLeaving)==null||e.call(this,...t),this.$emit("before-leave",...t)},enter:(...t)=>{var e;(e=this.onEnter)==null||e.call(this,...t),this.$emit("enter",...t)},leave:(...t)=>{var e;(e=this.onLeave)==null||e.call(this,...t),this.$emit("leave",...t)},afterEnter:(...t)=>{var e;this.resetTransition(...t),(e=this.resetElement)==null||e.call(this,...t),this.$emit("after-enter",...t)},afterLeave:(...t)=>{var e;this.resetTransition(...t),(e=this.resetElement)==null||e.call(this,...t),this.$emit("after-leave",...t)}}}},methods:{setupTransition(t,e="enter"){var r,o,n,i,a,s;const l=(o=(r=this.duration)==null?void 0:r[e])!=null?o:this.duration,c=(i=(n=this.easing)==null?void 0:n[e])!=null?i:this.easing,u=(s=(a=this.delay)==null?void 0:a[e])!=null?s:this.delay;t.style.setProperty("transition-duration",`${l}ms`,"important"),t.style.setProperty("transition-timing-function",`${c}`,"important"),t.style.setProperty("transition-delay",`${u}ms`,"important")},reduceTransition(t){t.style.setProperty("transition-duration","0ms","important"),t.style.setProperty("transition-delay","0ms","important")},resetTransition(t){t.style.removeProperty("transition-duration"),t.style.removeProperty("transition-timing-function"),t.style.removeProperty("transition-delay")},initLeaving(t){if(!this.group||this.noMove)return t;const e=getComputedStyle(t),{width:r,height:o}=e,{marginLeft:n,marginTop:i}=e;return t.style.setProperty("left",`${t.offsetLeft-parseFloat(n)}px`,"important"),t.style.setProperty("top",`${t.offsetTop-parseFloat(i)}px`,"important"),t.style.setProperty("width",`${parseFloat(r)}px`,"important"),t.style.setProperty("height",`${parseFloat(o)}px`,"important"),t.style.setProperty("position","absolute","important"),t},setMoveDuration(){var t;this.group&&this.$el&&((t=this.$el.style)==null||t.setProperty("--move-duration",`${this.moveDuration}ms`))}},watch:{moveDuration(){this.setMoveDuration()},group(){this.setMoveDuration()}},mounted(){this.setMoveDuration()}},ou=t=>ye(t,e=>Qe(e)&&["x","y"].includes(e)),_o=(t,e)=>{const r=t.__vccOpts||t;for(const[o,n]of e)r[o]=n;return r},nu={name:"transition-expand",mixins:[yo],props:{axis:{validator:ou,default:Qp}},data:()=>({}),computed:{},methods:{async onEnter(t){await this.$nextTick(),await this.$nextTick(),this.getSizes(t),this.collapseElement(t,"enter"),t.offsetTop,this.setupTransition(t,"enter"),this.expandElement(t,"enter")},onLeave(t){this.getSizes(t),this.expandElement(t,"leave"),t.offsetTop,this.setupTransition(t,"leave"),this.collapseElement(t,"leave")},expandElement(t,e="enter"){var r,o;const n=(o=(r=this.axis)==null?void 0:r[e])!=null?o:this.axis,i=n==="x"?"left":"top",a=n==="x"?"right":"bottom",s=t.visual.size[n],l=t.visual.margin[n],c=t.visual.padding[n];this.noOpacity||t.style.setProperty("opacity",t.visual.opacity),delete t.visual,t.style.setProperty(n==="x"?"width":"height",`${parseFloat(s)}px`),t.style.setProperty(`padding-${i}`,`${parseFloat(c[0])}px`),t.style.setProperty(`padding-${a}`,`${parseFloat(c[1])}px`),t.style.setProperty(`margin-${i}`,`${parseFloat(l[0])}px`),t.style.setProperty(`margin-${a}`,`${parseFloat(l[1])}px`)},collapseElement(t,e="enter"){var r,o;const n=(o=(r=this.axis)==null?void 0:r[e])!=null?o:this.axis,i=n==="x"?"width":"height",a=n==="x"?"left":"top",s=n==="x"?"right":"bottom";this.noOpacity||t.style.setProperty("opacity",0),t.style.setProperty(i,"0px"),t.style.setProperty(`padding-${a}`,"0px"),t.style.setProperty(`padding-${s}`,"0px"),t.style.setProperty(`margin-${a}`,"0px"),t.style.setProperty(`margin-${s}`,"0px")},resetElement(t){t.style.removeProperty("opacity"),t.style.removeProperty("width"),t.style.removeProperty("height"),t.style.removeProperty("padding-top"),t.style.removeProperty("padding-right"),t.style.removeProperty("padding-bottom"),t.style.removeProperty("padding-left"),t.style.removeProperty("margin-top"),t.style.removeProperty("margin-right"),t.style.removeProperty("margin-bottom"),t.style.removeProperty("margin-left")},getSizes(t){const e=getComputedStyle(t),{opacity:r}=e,{width:o,height:n}=e,{paddingTop:i,paddingRight:a,paddingBottom:s,paddingLeft:l}=e,{marginTop:c,marginRight:u,marginBottom:p,marginLeft:h}=e;t.visual={opacity:r,size:{x:o,y:n},padding:{x:[l,a],y:[i,s]},margin:{x:[h,u],y:[c,p]}}}}};function iu(t,e,r,o,n,i){return J(),me(ao(t.cComponent),Dt({name:"expand"},t.cAttrs,so(t.cHooks)),{default:ne(()=>[gr(t.$slots,"default")]),_:3},16)}const Mn=_o(nu,[["render",iu]]),au={name:"transition-fade",mixins:[yo],props:{},data:()=>({}),computed:{},methods:{onEnter(t){this.fadeElement(t,"enter"),t.offsetTop,this.setupTransition(t,"enter"),this.$nextTick(()=>t.style.removeProperty("opacity"))},onLeave(t){this.setupTransition(t,"leave"),this.fadeElement(t,"leave")},fadeElement(t,e="enter"){t.style.setProperty("opacity",0)},resetElement(t){t.style.removeProperty("opacity")}}};function su(t,e,r,o,n,i){return J(),me(ao(t.cComponent),Dt({name:"fade"},t.cAttrs,so(t.cHooks)),{default:ne(()=>[gr(t.$slots,"default")]),_:3},16)}const gs=_o(au,[["render",su]]),lu=t=>ye(t,e=>Qe(e)&&["x","y","both"].includes(e)),cu=t=>ye(t,e=>Qe(e)&&e.trim()!==""),du=t=>ye(t,e=>xo(e)&&e>=0&&e<=1),ms=t=>{const e=t.startsWith("matrix3d")?"matrix3d":"matrix",r=e==="matrix3d"?t.slice(9,-1).split(",").map(Number):t.startsWith("matrix")?t.slice(7,-1).split(",").map(Number):[1,0,0,1,0,0];return[e,r]},pu={name:"transition-scale",mixins:[yo],props:{axis:{validator:lu,default:tu},origin:{validator:cu,default:eu},scale:{validator:du,default:ru}},data:()=>({}),computed:{},methods:{onEnter(t){this.scaleElement(t,"enter"),t.offsetTop,this.setupTransition(t,"enter"),this.$nextTick(()=>{t.style.removeProperty("opacity"),t.style.removeProperty("transform")})},onLeave(t){this.setupTransition(t,"leave"),this.scaleElement(t,"leave")},scaleElement(t,e="enter"){var r,o,n,i,a,s;const{transform:l}=getComputedStyle(t),c=(o=(r=this.axis)==null?void 0:r[e])!=null?o:this.axis,u=(i=(n=this.origin)==null?void 0:n[e])!=null?i:this.origin,p=Lp(1e-4,(s=(a=this.scale)==null?void 0:a[e])!=null?s:this.scale,.9999),[h,w]=ms(l);l.startsWith("matrix3d")?(c!=="y"&&(w[0]=p),c!=="x"&&(w[5]=p)):l.startsWith("matrix")?(c!=="y"&&(w[0]=p),c!=="x"&&(w[3]=p)):(w[0]=c==="y"?1:p,w[3]=c==="x"?1:p),this.noOpacity||t.style.setProperty("opacity",0),t.style.setProperty("transform",`${h}(${w})`),t.style.setProperty("transform-origin",`${u}`)},resetElement(t){t.style.removeProperty("opacity"),t.style.removeProperty("transform"),t.style.removeProperty("transform-origin")}}};function uu(t,e,r,o,n,i){return J(),me(ao(t.cComponent),Dt({name:"scale"},t.cAttrs,so(t.cHooks)),{default:ne(()=>[gr(t.$slots,"default")]),_:3},16)}const ws=_o(pu,[["render",uu]]),fu={name:"transition-slide",mixins:[yo],props:{offset:{validator:t=>ye(t,e=>!vo(e)||e.length!==2?!1:!e.some(r=>Ln(r)?!1:Qe(r)?isNaN(Number(r.endsWith("%")?r.slice(0,-1):r)):!0)),default:()=>Gp}},data:()=>({}),computed:{},methods:{onEnter(t){this.slideElement(t,"enter"),t.offsetTop,this.setupTransition(t,"enter"),t.style.removeProperty("opacity"),t.style.removeProperty("transform")},onLeave(t){this.setupTransition(t,"leave"),this.slideElement(t,"leave")},slideElement(t,e="enter"){var r,o;const{width:n,height:i,transform:a}=getComputedStyle(t),s=(o=(r=this.offset)==null?void 0:r[e])!=null?o:this.offset;let[l,c]=s;xo(l)||(l=l.endsWith("%")?parseFloat(n)*(parseFloat(l.slice(0,-1))||0)/100:parseFloat(l)),xo(c)||(c=c.endsWith("%")?parseFloat(i)*(parseFloat(c.slice(0,-1))||0)/100:parseFloat(c));const[u,p]=ms(a);a.startsWith("matrix3d")?(p[12]+=l,p[13]+=c):a.startsWith("matrix")?(p[4]+=l,p[5]+=c):(p[4]=l,p[5]=c),this.noOpacity||t.style.setProperty("opacity",0),t.style.setProperty("transform",`${u}(${p})`)},resetElement(t){t.style.removeProperty("opacity"),t.style.removeProperty("transform")}}};function hu(t,e,r,o,n,i){return J(),me(ao(t.cComponent),Dt({name:"slide"},t.cAttrs,so(t.cHooks)),{default:ne(()=>[gr(t.$slots,"default")]),_:3},16)}const ko=_o(fu,[["render",hu]]),Co={[Mn.name]:Mn,[gs.name]:gs,[ws.name]:ws,[ko.name]:ko},vs=(t,e,r)=>{var o;(o=t.props)!=null||(t.props={}),t.props[e]={default:vo(r)||cs(r)?()=>r:r}},xs=(t,e)=>{var r,o,n;const i=Vp(t),a=qp(t),s=(r=e?.defaultProps)!=null?r:{},l=(n=(o=e?.componentDefaultProps)==null?void 0:o[a])!=null?n:{};return Object.entries(s).forEach(([c,u])=>{vs(Co[i],c,u)}),Object.entries(l).forEach(([c,u])=>{vs(Co[i],c,u)}),Co[i]},bu=function(t,e={}){e?.components?Object.entries(e.components).forEach(([r,o])=>{t.component(o,xs(r,e))}):Object.keys(Co).forEach(r=>{t.component(r,xs(r,e))})};typeof window<"u"&&window.Vue&&window.Vue.use({install:bu});var ys;const Fn=typeof window<"u",gu=t=>typeof t=="function",mu=t=>typeof t=="string",Nn=()=>{};Fn&&((ys=window?.navigator)!=null&&ys.userAgent)&&/iP(ad|hone|od)/.test(window.navigator.userAgent);function zt(t){return typeof t=="function"?t():nt(t)}function _s(t,e){function r(...o){return new Promise((n,i)=>{Promise.resolve(t(()=>e.apply(this,o),{fn:e,thisArg:this,args:o})).then(n).catch(i)})}return r}const ks=t=>t();function wu(t,e=!0,r=!0,o=!1){let n=0,i,a=!0,s=Nn,l;const c=()=>{i&&(clearTimeout(i),i=void 0,s(),s=Nn)};return p=>{const h=zt(t),w=Date.now()-n,E=()=>l=p();if(c(),h<=0)return n=Date.now(),E();if(w>h&&(r||!a))n=Date.now(),E();else if(e)return new Promise((O,M)=>{s=o?M:O,i=setTimeout(()=>{n=Date.now(),a=!0,O(E()),c()},h-w)});return!r&&!i&&(i=setTimeout(()=>a=!0,h)),a=!1,l}}function vu(t=ks){const e=yt(!0);function r(){e.value=!1}function o(){e.value=!0}return{isActive:e,pause:r,resume:o,eventFilter:(...i)=>{e.value&&t(...i)}}}function Cs(t,e=!1,r="Timeout"){return new Promise((o,n)=>{setTimeout(e?()=>n(r):o,t)})}function xu(t){return t}function yu(t,...e){return e.some(r=>r in t)}function $o(t){return ol()?(nl(t),!0):!1}function Rn(){const t=[],e=n=>{const i=t.indexOf(n);i!==-1&&t.splice(i,1)};return{on:n=>{t.push(n);const i=()=>e(n);return $o(i),{off:i}},off:e,trigger:n=>{t.forEach(i=>i(n))}}}function _u(t,e=200,r=!1,o=!0,n=!1){return _s(wu(e,r,o,n),t)}function Dn(t){return typeof t=="function"?_t(t):yt(t)}function ku(t,e=!0){vn()?rn(t):e?t():Qr(t)}function Bn(t,e=!1){function r(p,{flush:h="sync",deep:w=!1,timeout:E,throwOnTimeout:O}={}){let M=null;const Z=[new Promise(W=>{M=Mt(t,j=>{p(j)!==e&&(M?.(),W(j))},{flush:h,deep:w,immediate:!0})})];return E!=null&&Z.push(Cs(E,O).then(()=>zt(t)).finally(()=>M?.())),Promise.race(Z)}function o(p,h){if(!ut(p))return r(j=>j===p,h);const{flush:w="sync",deep:E=!1,timeout:O,throwOnTimeout:M}=h??{};let V=null;const W=[new Promise(j=>{V=Mt([t,p],([H,lt])=>{e!==(H===lt)&&(V?.(),j(H))},{flush:w,deep:E,immediate:!0})})];return O!=null&&W.push(Cs(O,M).then(()=>zt(t)).finally(()=>(V?.(),zt(t)))),Promise.race(W)}function n(p){return r(h=>Boolean(h),p)}function i(p){return o(null,p)}function a(p){return o(void 0,p)}function s(p){return r(Number.isNaN,p)}function l(p,h){return r(w=>{const E=Array.from(w);return E.includes(p)||E.includes(zt(p))},h)}function c(p){return u(1,p)}function u(p=1,h){let w=-1;return r(()=>(w+=1,w>=p),h)}return Array.isArray(zt(t))?{toMatch:r,toContains:l,changed:c,changedTimes:u,get not(){return Bn(t,!e)}}:{toMatch:r,toBe:o,toBeTruthy:n,toBeNull:i,toBeNaN:s,toBeUndefined:a,changed:c,changedTimes:u,get not(){return Bn(t,!e)}}}function Cu(t){return Bn(t)}function $u(t,e,r={}){const{immediate:o=!0}=r,n=yt(!1);let i=null;function a(){i&&(clearTimeout(i),i=null)}function s(){n.value=!1,a()}function l(...c){a(),n.value=!0,i=setTimeout(()=>{n.value=!1,i=null,t(...c)},zt(e))}return o&&(n.value=!0,Fn&&l()),$o(s),{isPending:n,start:l,stop:s}}var $s=Object.getOwnPropertySymbols,Ou=Object.prototype.hasOwnProperty,Pu=Object.prototype.propertyIsEnumerable,Eu=(t,e)=>{var r={};for(var o in t)Ou.call(t,o)&&e.indexOf(o)<0&&(r[o]=t[o]);if(t!=null&&$s)for(var o of $s(t))e.indexOf(o)<0&&Pu.call(t,o)&&(r[o]=t[o]);return r};function Tu(t,e,r={}){const o=r,{eventFilter:n=ks}=o,i=Eu(o,["eventFilter"]);return Mt(t,_s(n,e),i)}var zu=Object.defineProperty,Su=Object.defineProperties,Iu=Object.getOwnPropertyDescriptors,Oo=Object.getOwnPropertySymbols,Os=Object.prototype.hasOwnProperty,Ps=Object.prototype.propertyIsEnumerable,Es=(t,e,r)=>e in t?zu(t,e,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[e]=r,Au=(t,e)=>{for(var r in e||(e={}))Os.call(e,r)&&Es(t,r,e[r]);if(Oo)for(var r of Oo(e))Ps.call(e,r)&&Es(t,r,e[r]);return t},ju=(t,e)=>Su(t,Iu(e)),Lu=(t,e)=>{var r={};for(var o in t)Os.call(t,o)&&e.indexOf(o)<0&&(r[o]=t[o]);if(t!=null&&Oo)for(var o of Oo(t))e.indexOf(o)<0&&Ps.call(t,o)&&(r[o]=t[o]);return r};function Mu(t,e,r={}){const o=r,{eventFilter:n}=o,i=Lu(o,["eventFilter"]),{eventFilter:a,pause:s,resume:l,isActive:c}=vu(n);return{stop:Tu(t,e,ju(Au({},i),{eventFilter:a})),pause:s,resume:l,isActive:c}}function Ts(t){var e;const r=zt(t);return(e=r?.$el)!=null?e:r}const Pr=Fn?window:void 0;function Fu(...t){let e,r,o,n;if(mu(t[0])||Array.isArray(t[0])?([r,o,n]=t,e=Pr):[e,r,o,n]=t,!e)return Nn;Array.isArray(r)||(r=[r]),Array.isArray(o)||(o=[o]);const i=[],a=()=>{i.forEach(u=>u()),i.length=0},s=(u,p,h)=>(u.addEventListener(p,h,n),()=>u.removeEventListener(p,h,n)),l=Mt(()=>Ts(e),u=>{a(),u&&i.push(...r.flatMap(p=>o.map(h=>s(u,p,h))))},{immediate:!0,flush:"post"}),c=()=>{l(),a()};return $o(c),c}function Nu(t,e=!1){const r=yt(),o=()=>r.value=Boolean(t());return o(),ku(o,e),r}const Hn=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},Un="__vueuse_ssr_handlers__";Hn[Un]=Hn[Un]||{};const Ru=Hn[Un];function Du(t,e){return Ru[t]||e}function Bu(t){return t==null?"any":t instanceof Set?"set":t instanceof Map?"map":t instanceof Date?"date":typeof t=="boolean"?"boolean":typeof t=="string"?"string":typeof t=="object"?"object":Number.isNaN(t)?"any":"number"}var Hu=Object.defineProperty,zs=Object.getOwnPropertySymbols,Uu=Object.prototype.hasOwnProperty,Vu=Object.prototype.propertyIsEnumerable,Ss=(t,e,r)=>e in t?Hu(t,e,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[e]=r,Is=(t,e)=>{for(var r in e||(e={}))Uu.call(e,r)&&Ss(t,r,e[r]);if(zs)for(var r of zs(e))Vu.call(e,r)&&Ss(t,r,e[r]);return t};const Wu={boolean:{read:t=>t==="true",write:t=>String(t)},object:{read:t=>JSON.parse(t),write:t=>JSON.stringify(t)},number:{read:t=>Number.parseFloat(t),write:t=>String(t)},any:{read:t=>t,write:t=>String(t)},string:{read:t=>t,write:t=>String(t)},map:{read:t=>new Map(JSON.parse(t)),write:t=>JSON.stringify(Array.from(t.entries()))},set:{read:t=>new Set(JSON.parse(t)),write:t=>JSON.stringify(Array.from(t))},date:{read:t=>new Date(t),write:t=>t.toISOString()}};function Vn(t,e,r,o={}){var n;const{flush:i="pre",deep:a=!0,listenToStorageChanges:s=!0,writeDefaults:l=!0,mergeDefaults:c=!1,shallow:u,window:p=Pr,eventFilter:h,onError:w=q=>{console.error(q)}}=o,E=(u?Kr:yt)(e);if(!r)try{r=Du("getDefaultStorage",()=>{var q;return(q=Pr)==null?void 0:q.localStorage})()}catch(q){w(q)}if(!r)return E;const O=zt(e),M=Bu(O),V=(n=o.serializer)!=null?n:Wu[M],{pause:Z,resume:W}=Mu(E,()=>j(E.value),{flush:i,deep:a,eventFilter:h});return p&&s&&Fu(p,"storage",lt),lt(),E;function j(q){try{if(q==null)r.removeItem(t);else{const z=V.write(q),C=r.getItem(t);C!==z&&(r.setItem(t,z),p&&p?.dispatchEvent(new StorageEvent("storage",{key:t,oldValue:C,newValue:z,storageArea:r})))}}catch(z){w(z)}}function H(q){const z=q?q.newValue:r.getItem(t);if(z==null)return l&&O!==null&&r.setItem(t,V.write(O)),O;if(!q&&c){const C=V.read(z);return gu(c)?c(C,O):M==="object"&&!Array.isArray(C)?Is(Is({},O),C):C}else return typeof z!="string"?z:V.read(z)}function lt(q){if(!(q&&q.storageArea!==r)){if(q&&q.key==null){E.value=O;return}if(!(q&&q.key!==t)){Z();try{E.value=H(q)}catch(z){w(z)}finally{q?Qr(W):W()}}}}}var As=Object.getOwnPropertySymbols,qu=Object.prototype.hasOwnProperty,Yu=Object.prototype.propertyIsEnumerable,Ku=(t,e)=>{var r={};for(var o in t)qu.call(t,o)&&e.indexOf(o)<0&&(r[o]=t[o]);if(t!=null&&As)for(var o of As(t))e.indexOf(o)<0&&Yu.call(t,o)&&(r[o]=t[o]);return r};function Zu(t,e,r={}){const o=r,{window:n=Pr}=o,i=Ku(o,["window"]);let a;const s=Nu(()=>n&&"ResizeObserver"in n),l=()=>{a&&(a.disconnect(),a=void 0)},c=Mt(()=>Ts(t),p=>{l(),s.value&&n&&p&&(a=new ResizeObserver(e),a.observe(p,i))},{immediate:!0,flush:"post"}),u=()=>{l(),c()};return $o(u),{isSupported:s,stop:u}}var Ju=Object.defineProperty,Xu=Object.defineProperties,Qu=Object.getOwnPropertyDescriptors,js=Object.getOwnPropertySymbols,Gu=Object.prototype.hasOwnProperty,tf=Object.prototype.propertyIsEnumerable,Ls=(t,e,r)=>e in t?Ju(t,e,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[e]=r,dt=(t,e)=>{for(var r in e||(e={}))Gu.call(e,r)&&Ls(t,r,e[r]);if(js)for(var r of js(e))tf.call(e,r)&&Ls(t,r,e[r]);return t},_e=(t,e)=>Xu(t,Qu(e));const ef={json:"application/json",text:"text/plain"};function Po(t){return yu(t,"immediate","refetch","initialData","timeout","beforeFetch","afterFetch","onFetchError","fetch")}function rf(t){return/^([a-z][a-z\d+\-.]*:)?\/\//i.test(t)}function Er(t){return typeof Headers<"u"&&t instanceof Headers?Object.fromEntries([...t.entries()]):t}function Ge(t,...e){return t==="overwrite"?async r=>{const o=e[e.length-1];return o!==void 0&&await o(r),r}:async r=>(await e.reduce((o,n)=>o.then(async()=>{n&&(r=dt(dt({},r),await n(r)))}),Promise.resolve()),r)}function of(t={}){const e=t.combination||"chain",r=t.options||{},o=t.fetchOptions||{};function n(i,...a){const s=_t(()=>{const u=zt(t.baseUrl),p=zt(i);return u&&!rf(p)?af(u,p):p});let l=r,c=o;return a.length>0&&(Po(a[0])?l=_e(dt(dt({},l),a[0]),{beforeFetch:Ge(e,r.beforeFetch,a[0].beforeFetch),afterFetch:Ge(e,r.afterFetch,a[0].afterFetch),onFetchError:Ge(e,r.onFetchError,a[0].onFetchError)}):c=_e(dt(dt({},c),a[0]),{headers:dt(dt({},Er(c.headers)||{}),Er(a[0].headers)||{})})),a.length>1&&Po(a[1])&&(l=_e(dt(dt({},l),a[1]),{beforeFetch:Ge(e,r.beforeFetch,a[1].beforeFetch),afterFetch:Ge(e,r.afterFetch,a[1].afterFetch),onFetchError:Ge(e,r.onFetchError,a[1].onFetchError)})),nf(s,c,l)}return n}function nf(t,...e){var r;const o=typeof AbortController=="function";let n={},i={immediate:!0,refetch:!1,timeout:0};const a={method:"GET",type:"text",payload:void 0};e.length>0&&(Po(e[0])?i=dt(dt({},i),e[0]):n=e[0]),e.length>1&&Po(e[1])&&(i=dt(dt({},i),e[1]));const{fetch:s=(r=Pr)==null?void 0:r.fetch,initialData:l,timeout:c}=i,u=Rn(),p=Rn(),h=Rn(),w=yt(!1),E=yt(!1),O=yt(!1),M=yt(null),V=Kr(null),Z=Kr(null),W=Kr(l),j=_t(()=>o&&E.value);let H,lt;const q=()=>{o&&H&&H.abort()},z=G=>{E.value=G,w.value=!G};c&&(lt=$u(q,c,{immediate:!1}));const C=async(G=!1)=>{var et;z(!0),Z.value=null,M.value=null,O.value=!1,H=void 0,o&&(H=new AbortController,H.signal.onabort=()=>O.value=!0,n=_e(dt({},n),{signal:H.signal}));const R={method:a.method,headers:{}};if(a.payload){const Qt=Er(R.headers);a.payloadType&&(Qt["Content-Type"]=(et=ef[a.payloadType])!=null?et:a.payloadType);const Bt=zt(a.payload);R.body=a.payloadType==="json"?JSON.stringify(Bt):Bt}let Y=!1;const ht={url:zt(t),options:dt(dt({},R),n),cancel:()=>{Y=!0}};if(i.beforeFetch&&Object.assign(ht,await i.beforeFetch(ht)),Y||!s)return z(!1),Promise.resolve(null);let jt=null;return lt&&lt.start(),new Promise((Qt,Bt)=>{var Ht;s(ht.url,_e(dt(dt({},R),ht.options),{headers:dt(dt({},Er(R.headers)),Er((Ht=ht.options)==null?void 0:Ht.headers))})).then(async xt=>{if(V.value=xt,M.value=xt.status,jt=await xt[a.type](),i.afterFetch&&M.value>=200&&M.value<300&&({data:jt}=await i.afterFetch({data:jt,response:xt})),W.value=jt,!xt.ok)throw new Error(xt.statusText);return u.trigger(xt),Qt(xt)}).catch(async xt=>{let Eo=xt.message||xt.name;return i.onFetchError&&({data:jt,error:Eo}=await i.onFetchError({data:jt,error:xt,response:V.value})),W.value=jt,Z.value=Eo,p.trigger(xt),G?Bt(xt):Qt(null)}).finally(()=>{z(!1),lt&&lt.stop(),h.trigger(null)})})},F=Dn(i.refetch);Mt([F,Dn(t)],([G])=>G&&C(),{deep:!0});const N={isFinished:w,statusCode:M,response:V,error:Z,data:W,isFetching:E,canAbort:j,aborted:O,abort:q,execute:C,onFetchResponse:u.on,onFetchError:p.on,onFetchFinally:h.on,get:$("GET"),put:$("PUT"),post:$("POST"),delete:$("DELETE"),patch:$("PATCH"),head:$("HEAD"),options:$("OPTIONS"),json:pt("json"),text:pt("text"),blob:pt("blob"),arrayBuffer:pt("arrayBuffer"),formData:pt("formData")};function $(G){return(et,R)=>{if(!E.value){a.method=G,a.payload=et,a.payloadType=R,ut(a.payload)&&Mt([F,Dn(a.payload)],([ht])=>ht&&C(),{deep:!0});const Y=zt(a.payload);return!R&&Y&&Object.getPrototypeOf(Y)===Object.prototype&&!(Y instanceof FormData)&&(a.payloadType="json"),_e(dt({},N),{then(ht,jt){return Q().then(ht,jt)}})}}}function Q(){return new Promise((G,et)=>{Cu(w).toBe(!0).then(()=>G(N)).catch(R=>et(R))})}function pt(G){return()=>{if(!E.value)return a.type=G,_e(dt({},N),{then(et,R){return Q().then(et,R)}})}}return i.immediate&&setTimeout(C,0),_e(dt({},N),{then(G,et){return Q().then(G,et)}})}function af(t,e){return!t.endsWith("/")&&!e.startsWith("/")?`${t}/${e}`:`${t}${e}`}var Ms;(function(t){t.UP="UP",t.RIGHT="RIGHT",t.DOWN="DOWN",t.LEFT="LEFT",t.NONE="NONE"})(Ms||(Ms={}));function sf(t){const e=yt(t?.element),r=yt(t?.input);function o(){var n,i;e.value&&(e.value.style.height="1px",e.value.style.height=`${(n=e.value)==null?void 0:n.scrollHeight}px`,(i=t?.onResize)==null||i.call(t))}return Mt([r,e],o,{immediate:!0}),Zu(e,()=>o()),t?.watch&&Mt(t.watch,o,{immediate:!0,deep:!0}),{textarea:e,input:r,triggerResize:o}}var lf=Object.defineProperty,Fs=Object.getOwnPropertySymbols,cf=Object.prototype.hasOwnProperty,df=Object.prototype.propertyIsEnumerable,Ns=(t,e,r)=>e in t?lf(t,e,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[e]=r,pf=(t,e)=>{for(var r in e||(e={}))cf.call(e,r)&&Ns(t,r,e[r]);if(Fs)for(var r of Fs(e))df.call(e,r)&&Ns(t,r,e[r]);return t};pf({linear:xu},{easeInSine:[.12,0,.39,0],easeOutSine:[.61,1,.88,1],easeInOutSine:[.37,0,.63,1],easeInQuad:[.11,0,.5,0],easeOutQuad:[.5,1,.89,1],easeInOutQuad:[.45,0,.55,1],easeInCubic:[.32,0,.67,0],easeOutCubic:[.33,1,.68,1],easeInOutCubic:[.65,0,.35,1],easeInQuart:[.5,0,.75,0],easeOutQuart:[.25,1,.5,1],easeInOutQuart:[.76,0,.24,1],easeInQuint:[.64,0,.78,0],easeOutQuint:[.22,1,.36,1],easeInOutQuint:[.83,0,.17,1],easeInExpo:[.7,0,.84,0],easeOutExpo:[.16,1,.3,1],easeInOutExpo:[.87,0,.13,1],easeInCirc:[.55,0,1,.45],easeOutCirc:[0,.55,.45,1],easeInOutCirc:[.85,0,.15,1],easeInBack:[.36,0,.66,-.56],easeOutBack:[.34,1.56,.64,1],easeInOutBack:[.68,-.6,.32,1.6]});const ke=(t,e)=>{const r=t.__vccOpts||t;for(const[o,n]of e)r[o]=n;return r},uf={},ff={id:"Layer_2",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 29.19 29.28"},hf=[mn('<g id="Layer_1-2"><g><path fill="#f8b1ad" d="M29.19,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06,1.34,1.38,2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M29.17,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path></g></g>',1)];function bf(t,e){return J(),it("svg",ff,hf)}const gf=ke(uf,[["render",bf]]),Tr=(t,e=160)=>{const r=yt(0),o=ut(t)?t:_t(()=>t),n=_t(()=>{if(!o.value)return"text-black";const s=o.value.replace("#",""),l=parseInt(s.substring(0,2),16),c=parseInt(s.substring(2,4),16),u=parseInt(s.substring(4,6),16);return r.value=(l*299+c*587+u*114)/1e3,r.value>e?"text-black":"text-white"}),i=_t(()=>{const s=o.value?.match("linear-gradient")?"background":"backgroundColor";return console.log(s),s}),a=_t(()=>o.value?.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/)?.[0]||o.value);return{textClass:n,brightness:r,styleType:i,mainColor:a}},mf={class:"flex items-center"},wf=[S("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 32 32"},[S("path",{fill:"currentColor",d:"M12 12h2v12h-2zm6 0h2v12h-2z"}),S("path",{fill:"currentColor",d:"M4 6v2h2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h2V6zm4 22V8h16v20zm4-26h8v2h-8z"})],-1)],vf=[S("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"currentColor"},[S("path",{d:"M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z"})],-1)],xf=Zt({__name:"ChatHeader",props:{base_color:{default:"#4fafe4"},header_text:null},emits:["clear","close"],setup(t,{emit:e}){const r=t,{base_color:o}=ar(r),{textClass:n,styleType:i}=Tr(o),a=_t(()=>({[i.value]:r.base_color}));return(s,l)=>(J(),it("div",{class:"flex justify-between rounded-t-2xl items-center px-3 h-16 min-h-16",style:Vt(nt(a))},[rt(gf,{class:"w-8 text-white"}),S("h1",{class:ee(["text-lg text-center py-3",nt(n)])},Wt(r.header_text),3),S("div",mf,[S("button",{class:"icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square",onClick:l[0]||(l[0]=c=>e("clear"))},[S("div",{class:ee(["w-5 h-5",nt(n)])},wf,2)]),S("button",{class:"icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square",onClick:l[1]||(l[1]=c=>e("close"))},[S("div",{class:ee(["w-5 h-5",nt(n)])},vf,2)])])],4))}}),yf={key:0,class:"chat chat-start"},_f={class:"chat-image avatar"},kf={class:"w-8 rounded-full"},Cf=["src"],$f={key:0,class:"chat-header"},Of={class:"text-xs opacity-50"},Pf={class:"rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5"},Ef={key:1,class:"chat chat-end"},Tf={key:0},zf={class:"text-xs opacity-50"},Sf=Zt({__name:"ChatBubble",props:{message:null,date:null,isFirst:{type:Boolean},base_color:{default:"#4fafe4"},avatar_asset_url:{default:"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}},emits:["openProducts"],setup(t,{emit:e}){const r=t,o=_t(()=>{if(r.isFirst)return!0;const c=r.date,u=Math.floor(c/1e3/60),p=Math.floor(c/1e3/60);return u!==p}),n=_t(()=>{const c=new Date(r.date);return`${c.getHours()}:${c.getMinutes()}`}),{base_color:i}=ar(r),{textClass:a,styleType:s}=Tr(i),l=_t(()=>({[s.value]:r.base_color}));return(c,u)=>(J(),it("div",null,["sender"in r.message?(J(),it("div",yf,[S("div",_f,[S("div",kf,[S("img",{src:r.avatar_asset_url},null,8,Cf)])]),nt(o)?(J(),it("div",$f,[S("time",Of,Wt(nt(n)),1)])):De("",!0),S("div",Pf,[S("p",null,Wt(r.message.user_language_text),1),r.message.recommended_products&&r.message.recommended_products.length?(J(),it("p",{key:0,class:"link link-primary",onClick:u[0]||(u[0]=p=>e("openProducts",r.message.recommended_products))}," show product ")):De("",!0)])])):De("",!0),"text"in r.message?(J(),it("div",Ef,[nt(o)?(J(),it("div",Tf,[S("time",zf,Wt(nt(n)),1)])):De("",!0),S("div",{class:ee(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5",nt(a)]),style:Vt(nt(l))},Wt(r.message.text),7)])):De("",!0)]))}}),Bh="",If=ke(Sf,[["__scopeId","data-v-90684cd9"]]),Af={class:"h-full bg-transparent w-full h-max py-2 pr-4"},jf=["placeholder"],Lf=["disabled"],Mf={class:"w-6 h-6"},Ff=["fill"],Nf=[S("path",{d:"m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z"},null,-1)],Rf=Zt({__name:"ChatInput",props:{isLoading:{type:Boolean},message_placeholder:{default:"Type your message here..."},base_color:{default:"#4fafe4"}},emits:["send"],setup(t,{emit:e}){const r=t,{textarea:o,input:n}=sf({});function i(){!n.value||n.value.trim()===""||r.isLoading||(e("send",n.value),n.value="")}const{base_color:a}=ar(r),{mainColor:s}=Tr(a);return(l,c)=>(J(),it("div",Af,[S("form",{class:"flex items-center",onSubmit:c[2]||(c[2]=Za(u=>i(),["prevent"]))},[on(S("textarea",{ref_key:"textarea",ref:o,"onUpdate:modelValue":c[0]||(c[0]=u=>ut(n)?n.value=u:null),class:"textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle",type:"text",placeholder:t.message_placeholder,onKeydown:c[1]||(c[1]=Xd(Za(u=>i(),["prevent"]),["enter"]))},null,40,jf),[[Yd,nt(n)]]),S("button",{class:"btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square",type:"submit",disabled:t.isLoading},[S("div",Mf,[(J(),it("svg",{xmlns:"http://www.w3.org/2000/svg",fill:nt(s),viewBox:"0 0 32 32"},Nf,8,Ff))])],8,Lf)],32)]))}}),Df=[S("svg",{xmlns:"http://www.w3.org/2000/svg",class:"w-8 h-8 mx-auto my-auto",viewBox:"0 0 24 24"},[S("path",{d:"M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2z",fill:"currentColor"})],-1)],Bf=ke(Zt({__name:"WidgetButton.ce",props:{isOpen:{type:Boolean,default:!0},chat_button_style:{default:"round"},chat_button_label:{type:Boolean,default:!1},chat_button_text:null,chat_button_color:null,chat_button_position:{default:"bottom_right"},base_color:{default:"#4fafe4"}},emits:["toggle"],setup(t,{emit:e}){const r=t,o=_t(()=>{const l=[];return r.chat_button_style==="round"?l.push("rounded-full"):l.push("rounded-md"),r.chat_button_position==="bottom_right"?l.push("right-0"):l.push("left-0"),l}),{base_color:n}=ar(r),{textClass:i,styleType:a}=Tr(n),s=_t(()=>({[a.value]:r.base_color}));return(l,c)=>on((J(),it("button",{class:ee(["absolute bottom-0 flex w-16 h-16 rounded-full cursor-pointer hover:scale-105 duration-200 shadow-xl transition-all z-50",[...nt(o),nt(i)]]),style:Vt(nt(s)),onClick:c[0]||(c[0]=u=>e("toggle"))},Df,6)),[[Ja,!t.isOpen]])}}),[["styles",[`@import"https://fonts.googleapis.com/css2?family=Nunito&display=swap";*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Nunito;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}:root,[data-theme]{background-color:hsla(var(--b1) / var(--tw-bg-opacity, 1));color:hsla(var(--bc) / var(--tw-text-opacity, 1))}html{-webkit-tap-highlight-color:transparent}:root{color-scheme:dark;--pf: 198 93% 48%;--sf: 234 89% 59%;--af: 329 86% 56%;--b2: 222 47% 10%;--b3: 222 47% 9%;--bc: 222 66% 82%;--pc: 198 100% 12%;--sc: 234 100% 15%;--ac: 329 100% 14%;--nc: 217 76% 83%;--inc: 198 100% 10%;--suc: 172 100% 10%;--wac: 41 100% 13%;--erc: 351 100% 14%;--rounded-box: 1rem;--rounded-btn: .5rem;--rounded-badge: 1.9rem;--animation-btn: .25s;--animation-input: .2s;--btn-text-case: uppercase;--btn-focus-scale: .95;--border-btn: 1px;--tab-border: 1px;--tab-radius: .5rem;--p: 198 93% 60%;--s: 234 89% 74%;--a: 329 86% 70%;--n: 217 33% 17%;--nf: 217 30% 22%;--b1: 222 47% 11%;--in: 198 90% 48%;--su: 172 66% 50%;--wa: 41 88% 64%;--er: 351 95% 71%}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.avatar{position:relative;display:inline-flex}.avatar>div{display:block;aspect-ratio:1 / 1;overflow:hidden}.avatar img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}.avatar.placeholder>div{display:flex;align-items:center;justify-content:center}.btn{display:inline-flex;flex-shrink:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;flex-wrap:wrap;align-items:center;justify-content:center;border-color:transparent;border-color:hsl(var(--n) / var(--tw-border-opacity));text-align:center;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);border-radius:var(--rounded-btn, .5rem);height:3rem;padding-left:1rem;padding-right:1rem;font-size:.875rem;line-height:1.25rem;line-height:1em;min-height:3rem;font-weight:600;text-transform:uppercase;text-transform:var(--btn-text-case, uppercase);text-decoration-line:none;border-width:var(--border-btn, 1px);animation:button-pop var(--animation-btn, .25s) ease-out;--tw-border-opacity: 1;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.btn-disabled,.btn[disabled]{pointer-events:none}.btn-square{height:3rem;width:3rem;padding:0}.btn-circle{height:3rem;width:3rem;border-radius:9999px;padding:0}.btn.loading,.btn.loading:hover{pointer-events:none}.btn.loading:before{margin-right:.5rem;height:1rem;width:1rem;border-radius:9999px;border-width:2px;animation:spin 2s linear infinite;content:"";border-top-color:transparent;border-left-color:transparent;border-bottom-color:currentColor;border-right-color:currentColor}@media (prefers-reduced-motion: reduce){.btn.loading:before{animation:spin 10s linear infinite}}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.btn-group>input[type=radio].btn{-webkit-appearance:none;-moz-appearance:none;appearance:none}.btn-group>input[type=radio].btn:before{content:attr(data-title)}.card{position:relative;display:flex;flex-direction:column;border-radius:var(--rounded-box, 1rem)}.card:focus{outline:2px solid transparent;outline-offset:2px}.card-body{display:flex;flex:1 1 auto;flex-direction:column;padding:var(--padding-card, 2rem);gap:.5rem}.card-body :where(p){flex-grow:1}.card-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.5rem}.card figure{display:flex;align-items:center;justify-content:center}.card.image-full{display:grid}.card.image-full:before{position:relative;content:"";z-index:10;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));opacity:.75;border-radius:var(--rounded-box, 1rem)}.card.image-full:before,.card.image-full>*{grid-column-start:1;grid-row-start:1}.card.image-full>figure img{height:100%;-o-object-fit:cover;object-fit:cover}.card.image-full>.card-body{position:relative;z-index:20;--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.carousel{display:flex;overflow-x:scroll;scroll-snap-type:x mandatory;scroll-behavior:smooth;-ms-overflow-style:none;scrollbar-width:none}.carousel-item{box-sizing:content-box;display:flex;flex:none;scroll-snap-align:start}.carousel-center .carousel-item{scroll-snap-align:center}.carousel-end .carousel-item{scroll-snap-align:end}.chat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));-moz-column-gap:.75rem;column-gap:.75rem;padding-top:.25rem;padding-bottom:.25rem}.chat-image{grid-row:span 2 / span 2;align-self:flex-end}.chat-header{grid-row-start:1;font-size:.875rem;line-height:1.25rem}.chat-bubble{position:relative;display:block;width:-moz-fit-content;width:fit-content;padding:.5rem 1rem;max-width:90%;border-radius:var(--rounded-box, 1rem);min-height:2.75rem;min-width:2.75rem;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.chat-bubble:before{position:absolute;bottom:0;height:.75rem;width:.75rem;background-color:inherit;content:"";-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}.chat-start{place-items:start;grid-template-columns:auto 1fr}.chat-start .chat-header,.chat-start .chat-footer{grid-column-start:2}.chat-start .chat-image{grid-column-start:1}.chat-start .chat-bubble{grid-column-start:2;border-bottom-left-radius:0}.chat-start .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");left:-.75rem}[dir=rtl] .chat-start .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e")}.chat-end{place-items:end;grid-template-columns:1fr auto}.chat-end .chat-header,.chat-end .chat-footer{grid-column-start:1}.chat-end .chat-image{grid-column-start:2}.chat-end .chat-bubble{grid-column-start:1;border-bottom-right-radius:0}.chat-end .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");left:100%}[dir=rtl] .chat-end .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e")}.divider{display:flex;flex-direction:row;align-items:center;align-self:stretch;margin-top:1rem;margin-bottom:1rem;height:1rem;white-space:nowrap}.divider:before,.divider:after{content:"";flex-grow:1;height:.125rem;width:100%}.input{flex-shrink:1;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);height:3rem;padding-left:1rem;padding-right:1rem;font-size:1rem;line-height:2;line-height:1.5rem;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 0;--tw-bg-opacity: 1;background-color:hsl(var(--b1) / var(--tw-bg-opacity));border-radius:var(--rounded-btn, .5rem)}.input-group>.input{isolation:isolate}.input-group>*,.input-group>.input,.input-group>.select{border-radius:0}.link{cursor:pointer;text-decoration-line:underline}.menu>:where(li.disabled > *:not(ul):focus){cursor:auto}.steps .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-columns:auto;grid-template-rows:repeat(2,minmax(0,1fr));grid-template-rows:40px 1fr;place-items:center;text-align:center;min-width:4rem}.swap{position:relative;display:inline-grid;-webkit-user-select:none;-moz-user-select:none;user-select:none;place-content:center;cursor:pointer}.swap>*{grid-column-start:1;grid-row-start:1;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-property:transform,opacity}.swap input{-webkit-appearance:none;-moz-appearance:none;appearance:none}.swap .swap-on,.swap .swap-indeterminate,.swap input:indeterminate~.swap-on{opacity:0}.swap input:checked~.swap-off,.swap.swap-active .swap-off,.swap input:indeterminate~.swap-off{opacity:0}.swap input:checked~.swap-on,.swap-active .swap-on,.swap input:indeterminate~.swap-indeterminate{opacity:1}.tab{position:relative;display:inline-flex;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;height:2rem;font-size:.875rem;line-height:1.25rem;line-height:2;--tab-padding: 1rem;--tw-text-opacity: .5;--tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));--tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));--tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));color:var(--tab-color);padding-left:var(--tab-padding, 1rem);padding-right:var(--tab-padding, 1rem)}.textarea{flex-shrink:1;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);padding:.5rem 1rem;font-size:.875rem;line-height:1.25rem;line-height:2;min-height:3rem;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 0;--tw-bg-opacity: 1;background-color:hsl(var(--b1) / var(--tw-bg-opacity));border-radius:var(--rounded-btn, .5rem)}.toggle{flex-shrink:0;--tglbg: hsl(var(--b1));--handleoffset: 1.5rem;--handleoffsetcalculator: calc(var(--handleoffset) * -1);--togglehandleborder: 0 0;height:1.5rem;width:3rem;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: .2;background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .5;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);border-radius:var(--rounded-badge, 1.9rem);transition:background,box-shadow var(--animation-input, .2s) ease-in-out;box-shadow:var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset,var(--togglehandleborder)}.avatar-group :where(.avatar){overflow:hidden;border-radius:9999px;border-width:4px;--tw-border-opacity: 1;border-color:hsl(var(--b1) / var(--tw-border-opacity))}.btm-nav>*.disabled,.btm-nav>*.disabled:hover,.btm-nav>*[disabled],.btm-nav>*[disabled]:hover{pointer-events:none;--tw-border-opacity: 0;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-bg-opacity: .1;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.btn:active:hover,.btn:active:focus{animation:none;transform:scale(var(--btn-focus-scale, .95))}.btn:hover,.btn-active{--tw-border-opacity: 1;border-color:hsl(var(--nf, var(--n)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--nf, var(--n)) / var(--tw-bg-opacity))}.btn:focus-visible{outline:2px solid hsl(var(--nf));outline-offset:2px}.btn.glass:hover,.btn.glass.btn-active{--glass-opacity: 25%;--glass-border-opacity: 15%}.btn.glass:focus-visible{outline:2px solid currentColor}.btn-ghost:hover,.btn-ghost.btn-active{--tw-border-opacity: 0;background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .2}.btn-disabled,.btn-disabled:hover,.btn[disabled],.btn[disabled]:hover{--tw-border-opacity: 0;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-bg-opacity: .2;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.btn.loading.btn-square:before,.btn.loading.btn-circle:before{margin-right:0}.btn.loading.btn-xl:before,.btn.loading.btn-lg:before{height:1.25rem;width:1.25rem}.btn.loading.btn-sm:before,.btn.loading.btn-xs:before{height:.75rem;width:.75rem}.btn-group>input[type=radio]:checked.btn,.btn-group>.btn-active{--tw-border-opacity: 1;border-color:hsl(var(--p) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--p) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--pc) / var(--tw-text-opacity))}.btn-group>input[type=radio]:checked.btn:focus-visible,.btn-group>.btn-active:focus-visible{outline:2px solid hsl(var(--p))}@keyframes button-pop{0%{transform:scale(var(--btn-focus-scale, .95))}40%{transform:scale(1.02)}to{transform:scale(1)}}.card :where(figure:first-child){overflow:hidden;border-start-start-radius:inherit;border-start-end-radius:inherit;border-end-start-radius:unset;border-end-end-radius:unset}.card :where(figure:last-child){overflow:hidden;border-start-start-radius:unset;border-start-end-radius:unset;border-end-start-radius:inherit;border-end-end-radius:inherit}.card:focus-visible{outline:2px solid currentColor;outline-offset:2px}.card.bordered{border-width:1px;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity))}.card.compact .card-body{padding:1rem;font-size:.875rem;line-height:1.25rem}.card.image-full :where(figure){overflow:hidden;border-radius:inherit}.carousel::-webkit-scrollbar{display:none}@keyframes checkmark{0%{background-position-y:5px}50%{background-position-y:-2px}to{background-position-y:0}}.divider:before{background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .1}.divider:after{background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .1}.divider:not(:empty){gap:1rem}.input[list]::-webkit-calendar-picker-indicator{line-height:1em}.input:focus{outline:2px solid hsla(var(--bc) / .2);outline-offset:2px}.input-disabled,.input[disabled]{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));--tw-text-opacity: .2}.input-disabled::-moz-placeholder,.input[disabled]::-moz-placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.input-disabled::placeholder,.input[disabled]::placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.link-primary{--tw-text-opacity: 1;color:hsl(var(--p) / var(--tw-text-opacity))}.link-primary:hover{--tw-text-opacity: 1;color:hsl(var(--pf, var(--p)) / var(--tw-text-opacity))}.link:focus{outline:2px solid transparent;outline-offset:2px}.link:focus-visible{outline:2px solid currentColor;outline-offset:2px}.menu li.disabled>*{-webkit-user-select:none;-moz-user-select:none;user-select:none;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.menu li.disabled>*:hover{background-color:transparent}.mockup-phone .display{overflow:hidden;border-radius:40px;margin-top:-25px}@keyframes progress-loading{50%{left:107%}}@keyframes radiomark{0%{box-shadow:0 0 0 12px hsl(var(--b1)) inset,0 0 0 12px hsl(var(--b1)) inset}50%{box-shadow:0 0 0 3px hsl(var(--b1)) inset,0 0 0 3px hsl(var(--b1)) inset}to{box-shadow:0 0 0 4px hsl(var(--b1)) inset,0 0 0 4px hsl(var(--b1)) inset}}@keyframes rating-pop{0%{transform:translateY(-.125em)}40%{transform:translateY(-.125em)}to{transform:translateY(0)}}.steps .step:before{top:0;grid-column-start:1;grid-row-start:1;height:.5rem;width:100%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--bc) / var(--tw-text-opacity));content:"";margin-left:-100%}.steps .step:after{content:counter(step);counter-increment:step;z-index:1;position:relative;grid-column-start:1;grid-row-start:1;display:grid;height:2rem;width:2rem;place-items:center;place-self:center;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--bc) / var(--tw-text-opacity))}.steps .step:first-child:before{content:none}.steps .step[data-content]:after{content:attr(data-content)}.tab:hover{--tw-text-opacity: 1}.tab.tab-active{border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 1;--tw-text-opacity: 1}.tab:focus{outline:2px solid transparent;outline-offset:2px}.tab:focus-visible{outline:2px solid currentColor;outline-offset:-3px}.tab:focus-visible.tab-lifted{border-bottom-right-radius:var(--tab-radius, .5rem);border-bottom-left-radius:var(--tab-radius, .5rem)}.textarea:focus{outline:2px solid hsla(var(--bc) / .2);outline-offset:2px}.textarea-disabled,.textarea[disabled]{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));--tw-text-opacity: .2}.textarea-disabled::-moz-placeholder,.textarea[disabled]::-moz-placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.textarea-disabled::placeholder,.textarea[disabled]::placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}@keyframes toast-pop{0%{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}[dir=rtl] .toggle{--handleoffsetcalculator: calc(var(--handleoffset) * 1)}.toggle:focus-visible{outline:2px solid hsl(var(--bc));outline-offset:2px}.toggle:checked,.toggle[checked=true],.toggle[aria-checked=true]{--handleoffsetcalculator: var(--handleoffset);--tw-border-opacity: 1;--tw-bg-opacity: 1}[dir=rtl] .toggle:checked,[dir=rtl] .toggle[checked=true],[dir=rtl] .toggle[aria-checked=true]{--handleoffsetcalculator: calc(var(--handleoffset) * -1)}.toggle:indeterminate{--tw-border-opacity: 1;--tw-bg-opacity: 1;box-shadow:calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset}[dir=rtl] .toggle:indeterminate{box-shadow:calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset}.toggle:disabled{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--bc) / var(--tw-border-opacity));background-color:transparent;opacity:.3;--togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset}.min-h-16{min-height:4rem}.btn-sm{height:2rem;padding-left:.75rem;padding-right:.75rem;min-height:2rem;font-size:.875rem}.btn-square:where(.btn-xs){height:1.5rem;width:1.5rem;padding:0}.btn-square:where(.btn-sm){height:2rem;width:2rem;padding:0}.btn-square:where(.btn-md){height:3rem;width:3rem;padding:0}.btn-square:where(.btn-lg){height:4rem;width:4rem;padding:0}.btn-circle:where(.btn-xs){height:1.5rem;width:1.5rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-sm){height:2rem;width:2rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-md){height:3rem;width:3rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-lg){height:4rem;width:4rem;border-radius:9999px;padding:0}.steps-horizontal .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));place-items:center;text-align:center}.steps-vertical .step{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(1,minmax(0,1fr))}.avatar.online:before{content:"";position:absolute;z-index:10;display:block;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--su) / var(--tw-bg-opacity));width:15%;height:15%;top:7%;right:7%;box-shadow:0 0 0 2px hsl(var(--b1))}.avatar.offline:before{content:"";position:absolute;z-index:10;display:block;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));width:15%;height:15%;top:7%;right:7%;box-shadow:0 0 0 2px hsl(var(--b1))}.btn-group .btn:not(:first-child):not(:last-child),.btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child){border-radius:0}.btn-group .btn:first-child:not(:last-child),.btn-group.btn-group-horizontal .btn:first-child:not(:last-child){margin-left:-1px;margin-top:-0px;border-top-left-radius:var(--rounded-btn, .5rem);border-top-right-radius:0;border-bottom-left-radius:var(--rounded-btn, .5rem);border-bottom-right-radius:0}.btn-group .btn:last-child:not(:first-child),.btn-group.btn-group-horizontal .btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:var(--rounded-btn, .5rem);border-bottom-left-radius:0;border-bottom-right-radius:var(--rounded-btn, .5rem)}.btn-group.btn-group-vertical .btn:first-child:not(:last-child){margin-left:-0px;margin-top:-1px;border-top-left-radius:var(--rounded-btn, .5rem);border-top-right-radius:var(--rounded-btn, .5rem);border-bottom-left-radius:0;border-bottom-right-radius:0}.btn-group.btn-group-vertical .btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:var(--rounded-btn, .5rem);border-bottom-right-radius:var(--rounded-btn, .5rem)}.card-compact .card-body{padding:1rem;font-size:.875rem;line-height:1.25rem}.card-compact .card-title{margin-bottom:.25rem}.card-normal .card-body{padding:var(--padding-card, 2rem);font-size:1rem;line-height:1.5rem}.steps-horizontal .step{grid-template-rows:40px 1fr;grid-template-columns:auto;min-width:4rem}.steps-horizontal .step:before{height:.5rem;width:100%;--tw-translate-y: 0px;--tw-translate-x: 0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));content:"";margin-left:-100%}.steps-vertical .step{gap:.5rem;grid-template-columns:40px 1fr;grid-template-rows:auto;min-height:4rem;justify-items:start}.steps-vertical .step:before{height:100%;width:.5rem;--tw-translate-y: -50%;--tw-translate-x: -50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));margin-left:50%}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.bottom-0{bottom:0}.right-0{right:0}.top-3{top:12px}.right-3{right:12px}.left-0{left:0}.z-50{z-index:50}.z-40{z-index:40}.m-5{margin:20px}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mr-5{margin-right:20px}.ml-5{margin-left:20px}.mt-4{margin-top:16px}.mt-2{margin-top:8px}.mr-2{margin-right:8px}.ml-9{margin-left:36px}.mt-3{margin-top:12px}.mb-2{margin-bottom:8px}.flex{display:flex}.h-full{height:100%}.h-8{height:32px}.h-max{height:-moz-max-content;height:max-content}.h-10{height:40px}.h-16{height:64px}.h-5{height:20px}.h-6{height:24px}.h-\\[100\\%\\]{height:100%}.h-\\[90\\%\\]{height:90%}.h-\\[694px\\]{height:694px}.\\!h-\\[64px\\]{height:64px!important}.h-\\[630px\\]{height:630px}.h-4{height:16px}.h-32{height:8rem}.max-h-\\[144px\\]{max-height:144px}.w-full{width:100%}.w-8{width:32px}.w-10{width:40px}.w-5{width:20px}.w-6{width:24px}.w-11\\/12{width:91.666667%}.w-\\[372px\\]{width:372px}.w-48{width:12rem}.w-16{width:64px}.flex-none{flex:none}.flex-1{flex:1 1 0%}.scale-\\[0\\.3\\]{--tw-scale-x: .3;--tw-scale-y: .3;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-50{--tw-scale-x: .5;--tw-scale-y: .5;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-none{resize:none}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse: 0;margin-right:calc(16px * var(--tw-space-x-reverse));margin-left:calc(16px * calc(1 - var(--tw-space-x-reverse)))}.self-end{align-self:flex-end}.overflow-auto{overflow:auto}.overflow-y-auto{overflow-y:auto}.rounded-full{border-radius:9999px}.rounded-2xl{border-radius:1rem}.rounded-md{border-radius:.375rem}.rounded-r-lg{border-top-right-radius:.5rem;border-bottom-right-radius:.5rem}.rounded-l-lg{border-top-left-radius:.5rem;border-bottom-left-radius:.5rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.rounded-tl-lg{border-top-left-radius:.5rem}.rounded-tr-lg{border-top-right-radius:.5rem}.border-0{border-width:0px}.border-b-2{border-bottom-width:2px}.border-none{border-style:none}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-\\[\\#DDE2EB\\]{--tw-bg-opacity: 1;background-color:rgb(221 226 235 / var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-white\\/50{background-color:#ffffff80}.bg-black\\/30{background-color:#0000004d}.bg-black\\/60{background-color:#0009}.bg-primary\\/70{background-color:hsl(var(--p) / .7)}.p-4{padding:16px}.px-5{padding-left:20px;padding-right:20px}.py-4{padding-top:16px;padding-bottom:16px}.px-3{padding-left:12px;padding-right:12px}.py-3{padding-top:12px;padding-bottom:12px}.py-2{padding-top:8px;padding-bottom:8px}.px-4{padding-left:16px;padding-right:16px}.pr-4{padding-right:16px}.pt-3{padding-top:12px}.pt-0{padding-top:0}.pb-3{padding-bottom:12px}.text-center{text-align:center}.align-middle{vertical-align:middle}.\\!font-sans{font-family:Nunito!important}.text-xs{font-size:12px;line-height:16px}.text-xl{font-size:20px;line-height:28px}.text-lg{font-size:18px;line-height:28px}.text-\\[16px\\]{font-size:16px}.text-base{font-size:16px;line-height:24px}.\\!text-base{font-size:16px!important;line-height:24px!important}.font-bold{font-weight:700}.leading-\\[24px\\]{line-height:24px}.leading-6{line-height:1.5rem}.leading-5{line-height:1.25rem}.\\!leading-\\[24px\\]{line-height:24px!important}.text-black{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-white\\/40{color:#fff6}.text-neutral{--tw-text-opacity: 1;color:hsl(var(--n) / var(--tw-text-opacity))}.text-opacity-60{--tw-text-opacity: .6}.opacity-50{opacity:.5}.shadow-xl{--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.blur{--tw-blur: blur(8px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-2xl{--tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / .15));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur: blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.line-clamp-6{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6}.lds-ellipsis{display:inline-block;position:relative;width:20px;height:20px}.lds-ellipsis div{position:absolute;top:33px;width:13px;height:13px;border-radius:50%;background:#4fafe4;animation-timing-function:cubic-bezier(0,1,1,0)}.lds-ellipsis div:nth-child(1){left:8px;animation:lds-ellipsis1 .6s infinite}.lds-ellipsis div:nth-child(2){left:8px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(3){left:32px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(4){left:56px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}to{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0)}to{transform:translate(24px)}}.btn-ghost{border-width:1px;border-color:transparent;background-color:transparent;color:currentColor}.btn-ghost:hover,.btn-ghost.btn-active{--tw-border-opacity: 0;background-color:hsl(222 66% 82% / var(--tw-bg-opacity));--tw-bg-opacity: .2;border-width:0}.btn-ghost:focus-visible{outline:2px solid currentColor}.drawer-toggle:focus-visible~.drawer-content .drawer-button.btn-ghost{outline:2px solid currentColor}.hover\\:scale-105:hover{--tw-scale-x: 1.05;--tw-scale-y: 1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\\:\\!border-none:hover{border-style:none!important}.hover\\:bg-gray-50:hover{--tw-bg-opacity: 1;background-color:rgb(249 250 251 / var(--tw-bg-opacity))}.hover\\:text-neutral:hover{--tw-text-opacity: 1;color:hsl(var(--n) / var(--tw-text-opacity))}.focus\\:\\!border-none:focus{border-style:none!important}.focus\\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\\:text-opacity-100{--tw-text-opacity: 1}
-`]]]),Hf={},Uf={id:"Layer_2",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 40.5 55.75"},Vf=[mn('<g id="Layer_1-2"><g><path fill="#fff" d="M19,16.5V6.5c0-2.75-2.25-5-5-5h0c-2.75,0-5,2.25-5,5v15c0,5.5,4.5,10,10,10h5c5.5,0,10-4.5,10-10v-5h-15Z"></path><path fill="#454b54" d="M14,8.5c-.4,0-.8-.15-1.05-.45-.3-.25-.45-.65-.45-1.05h3c0,.4-.15,.8-.45,1.05-.3,.25-.65,.45-1.05,.45Z"></path><path fill="#b9dff4" d="M6,54.25l8.95-12.4c2-2.75,6.1-2.75,8.1,0l8.95,12.4"></path><path fill="#454b54" d="M24,33c6.35,0,11.5-5.15,11.5-11.5v-5c0-.85-.65-1.5-1.5-1.5h-13.5V6.5c0-3.6-2.9-6.5-6.5-6.5S7.5,2.9,7.5,6.5v1H1.5c-.85,0-1.5,.65-1.5,1.5v.5c0,.85,.65,1.5,1.5,1.5,.45,0,.85-.2,1.1-.5H7.5v11c0,5.85,4.35,10.65,10,11.4v5.55c-1.5,.35-2.85,1.25-3.75,2.5l-8.95,12.4c-.5,.65-.35,1.6,.35,2.1,.65,.5,1.6,.35,2.1-.35l8.9-12.35c.65-.9,1.7-1.45,2.85-1.45s2.15,.55,2.85,1.45l8.95,12.4c.3,.4,.75,.6,1.2,.6,.3,0,.6-.1,.9-.3,.65-.5,.8-1.4,.35-2.1l-9-12.35c-.95-1.3-2.25-2.15-3.75-2.5v-5.5h3.5Zm-13.5-11.5V6.5c0-1.95,1.55-3.5,3.5-3.5s3.5,1.55,3.5,3.5v10c0,.85,.65,1.5,1.5,1.5h13.5v3.5c0,4.7-3.8,8.5-8.5,8.5h-5c-4.7,0-8.5-3.85-8.5-8.5Z"></path><path fill="#b9dff4" d="M29,26.5h0c-5.5,0-10-4.5-10-10h20c0,5.5-4.5,10-10,10Z"></path><path fill="#3d8199" d="M39,16h-5v5c0,1.45-.3,2.85-.9,4.1,3.45-1.55,5.9-5.05,5.9-9.1t0,0s0,.05,0,0h0"></path><path fill="#454b54" d="M29,28c-6.35,0-11.5-5.15-11.5-11.5,0-.85,.65-1.5,1.5-1.5h20c.85,0,1.5,.65,1.5,1.5,0,6.35-5.15,11.5-11.5,11.5Zm-8.4-10c.7,3.95,4.2,7,8.35,7s7.65-3.05,8.35-7H20.6Z"></path></g><path fill="#454b54" d="M14,5.5c-.4,0-.8,.15-1.05,.45-.3,.25-.45,.65-.45,1.05h3c0-.4-.15-.8-.45-1.05-.3-.25-.65-.45-1.05-.45Z"></path></g>',1)];function Wf(t,e){return J(),it("svg",Uf,Vf)}const qf=ke(Hf,[["render",Wf]]),Yf={},Kf={id:"Layer_2",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 107.37 28.44"},Zf=[mn('<g id="Layer_1-2"><g><path fill="#304a5e" d="M18.6,14.1v7.57c0,.08-.02,.19-.05,.32-.03,.13-.19,.19-.46,.19h-.41c-.08,0-.2-.02-.33-.05s-.21-.19-.21-.46v-7.61c0-.76-.13-1.48-.38-2.17-.25-.69-.68-1.2-1.28-1.55-.6-.35-1.23-.52-1.89-.52s-1.29,.15-1.84,.46c-.55,.31-.98,.78-1.28,1.41s-.46,1.43-.46,2.38v7.61c0,.19-.04,.32-.13,.4-.08,.07-.22,.11-.41,.11h-.38c-.08,0-.2-.02-.33-.05-.14-.03-.21-.19-.21-.46v-7.61c0-.76-.13-1.48-.38-2.17s-.68-1.2-1.28-1.55c-.6-.35-1.23-.52-1.89-.52-.42,0-.91,.1-1.47,.3-.56,.2-1.05,.63-1.46,1.28s-.62,1.54-.62,2.66v7.61c0,.19-.04,.32-.13,.4-.08,.07-.22,.11-.41,.11h-.38c-.08,0-.2-.02-.33-.05-.14-.03-.21-.19-.21-.46v-7.57c0-1.04,.14-1.92,.43-2.65s.67-1.31,1.16-1.74c.49-.43,1.02-.73,1.62-.9,.59-.17,1.16-.25,1.71-.25,.68,0,1.33,.12,1.95,.36,.62,.24,1.14,.61,1.54,1.09,.4,.49,.7,.98,.89,1.49,.19-.51,.49-1,.89-1.47,.4-.48,.92-.84,1.55-1.09,.63-.25,1.3-.38,2-.38,.55,0,1.11,.08,1.7,.25,.58,.17,1.11,.47,1.6,.9,.49,.43,.87,1.01,1.16,1.74s.43,1.61,.43,2.65Z"></path><path fill="#304a5e" d="M35.91,15.56c0,.74-.11,1.51-.33,2.31-.22,.8-.64,1.58-1.25,2.35s-1.41,1.33-2.38,1.71c-.97,.38-1.96,.57-2.98,.57s-1.99-.17-2.85-.51c-.87-.34-1.61-.81-2.22-1.43s-1.08-1.35-1.39-2.2c-.32-.86-.48-1.79-.48-2.8s.16-1.92,.49-2.79c.33-.87,.79-1.62,1.39-2.25,.6-.63,1.34-1.12,2.2-1.46,.87-.34,1.82-.51,2.85-.51,2.07,0,3.74,.66,5.02,1.96,1.28,1.31,1.92,2.99,1.92,5.04Zm-1.49,.03c0-1.71-.5-3.1-1.49-4.17-.99-1.07-2.31-1.6-3.96-1.6s-3.03,.53-4.01,1.6c-.98,1.07-1.47,2.46-1.47,4.17s.49,3.05,1.47,4.09,2.32,1.55,4.01,1.55c.61,0,1.24-.09,1.87-.27,.63-.18,1.21-.49,1.74-.93,.53-.44,.97-1.04,1.31-1.77,.35-.74,.52-1.63,.52-2.66Z"></path><path fill="#304a5e" d="M49.22,21.68v-6.75c0-1.63-.36-2.88-1.09-3.76-.73-.88-1.78-1.31-3.15-1.31s-2.45,.44-3.17,1.31c-.72,.88-1.08,2.13-1.08,3.76v6.75c0,.08-.02,.19-.05,.32-.03,.13-.2,.19-.49,.19h-.38c-.08,0-.2-.02-.33-.05-.14-.03-.21-.19-.21-.46v-6.69c0-2.09,.49-3.69,1.47-4.79,.98-1.1,2.39-1.65,4.23-1.65s3.25,.55,4.23,1.65c.98,1.1,1.47,2.69,1.47,4.79v6.69c0,.08-.02,.19-.05,.32-.03,.13-.19,.19-.46,.19h-.41c-.08,0-.2-.02-.33-.05s-.21-.19-.21-.46Z"></path><path fill="#304a5e" d="M67.95,15.56c0,.74-.11,1.51-.33,2.31-.22,.8-.64,1.58-1.25,2.35s-1.41,1.33-2.38,1.71c-.97,.38-1.96,.57-2.98,.57s-1.99-.17-2.85-.51c-.87-.34-1.61-.81-2.22-1.43s-1.08-1.35-1.39-2.2c-.32-.86-.48-1.79-.48-2.8s.16-1.92,.49-2.79c.33-.87,.79-1.62,1.39-2.25,.6-.63,1.34-1.12,2.2-1.46,.87-.34,1.82-.51,2.85-.51,2.07,0,3.74,.66,5.02,1.96,1.28,1.31,1.92,2.99,1.92,5.04Zm-1.49,.03c0-1.71-.5-3.1-1.49-4.17-.99-1.07-2.31-1.6-3.96-1.6s-3.03,.53-4.01,1.6c-.98,1.07-1.47,2.46-1.47,4.17s.49,3.05,1.47,4.09,2.32,1.55,4.01,1.55c.61,0,1.24-.09,1.87-.27,.63-.18,1.21-.49,1.74-.93,.53-.44,.97-1.04,1.31-1.77,.35-.74,.52-1.63,.52-2.66Z"></path><path fill="#304a5e" d="M71.4,19.3V.54c0-.08,.02-.2,.05-.33,.03-.14,.19-.21,.49-.21h.38c.08,0,.19,.02,.33,.05,.14,.03,.21,.2,.21,.49V19.17c0,.66,.08,1.15,.25,1.47,.17,.33,.46,.49,.89,.49,.25,0,.56-.05,.92-.16,.11-.02,.18-.01,.24,.03,.05,.04,.08,.14,.08,.29v.44c0,.23-.13,.4-.38,.51-.38,.11-.75,.16-1.11,.16-.89,0-1.5-.25-1.84-.74-.34-.5-.51-1.28-.51-2.36Z"></path><path fill="#304a5e" d="M90.83,15.56c0,.74-.11,1.51-.33,2.31-.22,.8-.64,1.58-1.25,2.35s-1.41,1.33-2.38,1.71c-.97,.38-1.96,.57-2.98,.57s-1.99-.17-2.85-.51c-.87-.34-1.61-.81-2.22-1.43s-1.08-1.35-1.39-2.2c-.32-.86-.48-1.79-.48-2.8s.16-1.92,.49-2.79c.33-.87,.79-1.62,1.39-2.25,.6-.63,1.34-1.12,2.2-1.46,.87-.34,1.82-.51,2.85-.51,2.07,0,3.74,.66,5.02,1.96,1.28,1.31,1.92,2.99,1.92,5.04Zm-1.49,.03c0-1.71-.5-3.1-1.49-4.17-.99-1.07-2.31-1.6-3.96-1.6s-3.03,.53-4.01,1.6c-.98,1.07-1.47,2.46-1.47,4.17s.49,3.05,1.47,4.09,2.32,1.55,4.01,1.55c.61,0,1.24-.09,1.87-.27,.63-.18,1.21-.49,1.74-.93,.53-.44,.97-1.04,1.31-1.77,.35-.74,.52-1.63,.52-2.66Z"></path><path fill="#f8b1ad" d="M107.37,15.56v12.11c0,.08-.02,.2-.06,.33-.04,.14-.2,.21-.48,.21h-.35c-.21,0-.35-.04-.43-.13-.07-.08-.11-.22-.11-.41v-8.33c-.53,.99-1.28,1.77-2.27,2.33s-2.12,.84-3.41,.84c-2.03,0-3.66-.65-4.9-1.95-1.24-1.3-1.85-2.97-1.85-5.02,0-1.01,.16-1.95,.49-2.82,.33-.87,.79-1.61,1.39-2.23,.6-.62,1.33-1.1,2.19-1.43,.86-.33,1.78-.49,2.77-.49,2.09,0,3.78,.65,5.07,1.93,1.29,1.29,1.93,2.98,1.93,5.07Zm-1.49-.03c0-.8-.11-1.51-.33-2.12-.22-.61-.51-1.16-.87-1.65-.36-.49-.9-.93-1.63-1.33-.73-.4-1.61-.6-2.65-.6-.61,0-1.24,.09-1.87,.29-.63,.19-1.21,.52-1.73,.98-.52,.46-.95,1.07-1.28,1.81-.34,.74-.51,1.62-.51,2.63,0,.59,.08,1.21,.24,1.85,.16,.64,.44,1.25,.84,1.81,.4,.56,.96,1.04,1.66,1.44s1.58,.6,2.61,.6,2-.24,2.88-.73c.89-.49,1.55-1.19,1.98-2.11,.43-.92,.65-1.87,.65-2.87Z"></path></g></g>',1)];function Jf(t,e){return J(),it("svg",Kf,Zf)}const Xf=ke(Yf,[["render",Jf]]),Qf={class:"lds-ellipsis"},Gf=Zt({__name:"Loader",props:{type:{default:"spinner"},base_color:{default:"#4fafe4"}},setup(t){const e=t,{base_color:r}=ar(e),{mainColor:o}=Tr(r);return(n,i)=>(J(),it("div",Qf,[S("div",{style:Vt({backgroundColor:nt(o)})},null,4),S("div",{style:Vt({backgroundColor:nt(o)})},null,4),S("div",{style:Vt({backgroundColor:nt(o)})},null,4),S("div",{style:Vt({backgroundColor:nt(o)})},null,4)]))}}),Kh="",th=ke(Gf,[["__scopeId","data-v-bcbeb45b"]]),eh={class:"absolute bottom-0 right-0 h-[100%] overflow-auto w-full z-50 bg-black/30 backdrop-blur-sm flex"},rh=[S("svg",{xmlns:"http://www.w3.org/2000/svg",class:"h-6 w-6",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"},[S("path",{"stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M6 18L18 6M6 6l12 12"})],-1)],oh={class:"w-full h-max carousel carousel-center p-4 space-x-4 my-auto"},nh=["onClick"],ih={class:"card w-full h-full stuff backdrop-blur-sm card-compact bg-black/60 group"},ah=["src"],sh={class:"card-body text-white text-center"},lh={class:"text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200"},ch={class:"text-base text-white/40 line-clamp-6"},dh={class:"text-lg mt-2"},ph=Zt({__name:"ChatProducts",props:{products:null,base_color:{default:"#4fafe4"},header_text:null},emits:["closeProducts","close"],setup(t,{emit:e}){const r=t,o=i=>{const a=["https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_99896357/fee_786_587_png","https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-77245323/fee_786_587_png","https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76434139/fee_786_587_png","https://marcopolo.dam.aboutyou.cloud/images/images/a56cef664899799cc4c9e18c808f57e4.jpg?width=1360","https://marcopolo.dam.aboutyou.cloud/images/images/5897d0e8acb5453420812cff4d3c485f.jpg?width=2000","https://www.bfgcdn.com/1500_1500_90/301-0312-0211/rock-empire-kanrei-kletterschuhe.jpg","https://www.bfgcdn.com/600_600_90/535-0245-0211/clif-bar-peanut-butter-banana-with-dark-chocolate-energieriegel-bf.jpg","https://www.bfgcdn.com/600_600_90/205-2457-0111/smith-ruckus-chromapop-s3-vlt-12-s1-vlt-60-fahrradbrille.jpg","https://images.squarespace-cdn.com/content/v1/5ed78ddc17b2533584cb0fa7/1595011275795-YVJ7AG3M7L6I15934IJ4/Olivia_.jpg"];return i.map(s=>{if(Array.isArray(s.images)&&s.images.length>0)return{...s};const l=Math.floor(Math.random()*a.length);return{...s,images:[{url:a.splice(l,1)[0]}]}})};function n(i,a){const s=new URL(i);history.pushState({monoloqItemId:a},"",s),window.location.assign(s)}return(i,a)=>(J(),it("div",eh,[S("button",{class:"btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60",onClick:a[0]||(a[0]=s=>e("closeProducts"))},rh),S("div",oh,[(J(!0),it(mt,null,an(o(r.products),s=>(J(),it("div",{key:s.item_id,class:"carousel-item h-max w-11/12 cursor-pointer",onClick:l=>n(s.url,s.item_id)},[S("div",ih,[S("figure",null,[S("img",{src:s.images?.[s.match_image_idx||0]?.url,alt:"shoes"},null,8,ah)]),S("div",sh,[S("p",lh,Wt(`${s.title}`),1),S("div",null,[S("p",ch,Wt(s.description),1)]),S("p",dh,Wt(`$${s.price}`),1)])])],8,nh))),128))])]))}}),Jh="",uh={class:"w-full h-max carousel carousel-center px-4 pt-0 pb-3 space-x-4 my-auto relative"},fh=["onClick"],hh={class:"card w-full h-full text-center duration-200 bg-[#DDE2EB] transition-all recommendation"},bh=["src"],gh={class:"text-xl mt-2 font-bold"},mh={class:"text-lg mt-2 mb-2"},wh=Zt({__name:"MiniPreview",props:{products:null,base_color:{default:"#4fafe4"},header_text:null},setup(t){const e=t,r=n=>{const i=["https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_99896357/fee_786_587_png","https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-77245323/fee_786_587_png","https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76434139/fee_786_587_png","https://marcopolo.dam.aboutyou.cloud/images/images/a56cef664899799cc4c9e18c808f57e4.jpg?width=1360","https://marcopolo.dam.aboutyou.cloud/images/images/5897d0e8acb5453420812cff4d3c485f.jpg?width=2000","https://www.bfgcdn.com/1500_1500_90/301-0312-0211/rock-empire-kanrei-kletterschuhe.jpg","https://www.bfgcdn.com/600_600_90/535-0245-0211/clif-bar-peanut-butter-banana-with-dark-chocolate-energieriegel-bf.jpg","https://www.bfgcdn.com/600_600_90/205-2457-0111/smith-ruckus-chromapop-s3-vlt-12-s1-vlt-60-fahrradbrille.jpg","https://images.squarespace-cdn.com/content/v1/5ed78ddc17b2533584cb0fa7/1595011275795-YVJ7AG3M7L6I15934IJ4/Olivia_.jpg"];return n.map(a=>{if(a.images||a.images?.length>0)return a;const s=Math.floor(Math.random()*i.length);return{product:a,images:{url:i.splice(s,1)[0]}}})};function o(n,i){const a=new URL(n);history.pushState({monoloqItemId:i},"",a),window.location.assign(a)}return(n,i)=>(J(),it("div",uh,[(J(!0),it(mt,null,an(r(e.products),a=>(J(),it("div",{key:a.item_id,class:"carousel-item h-max w-48 cursor-pointer",onClick:s=>o(a.url,a.item_id)},[S("div",hh,[S("figure",null,[S("img",{src:a.images[a.match_image_idx||0]?.url,alt:"shoes",class:"h-32 mt-3 rounded-md"},null,8,bh)]),S("p",gh,Wt(`${a.title}`),1),S("p",mh,Wt(`$${a.price}`),1)])],8,fh))),128))]))}}),Xh="",vh={class:"relative flex flex-col h-[630px]"},xh={key:1,class:"absolute w-full"},yh={key:0,class:"relative flex flex-col pt-3"},_h=["onClick"],kh=[S("svg",{xmlns:"http://www.w3.org/2000/svg",class:"h-5 w-5",viewBox:"0 0 24 24"},[S("path",{fill:"none",stroke:"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"1.5",d:"M8 21h12.4a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6H3.6a.6.6 0 0 0-.6.6V16m.5 4.5L12 12m0 0v4m0-4H8"})],-1)],Ch=S("div",{class:"divider"},null,-1),$h={class:"text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none"},Oh={href:"https://www.monoloq.ai/",target:"_blank",class:"flex items-center hover:text-neutral text-neutral"},Ph=S("div",{class:"mr-2"}," Powered by ",-1),Eh={key:1,class:"bottom-0 right-0 w-[372px]"},Rs=ke(Zt({__name:"ChatWindow.ce",props:{host_name:{default:"ariasilk.com"},show_button_widget:{type:Boolean,default:!1},chat_button_position:{default:"bottom_right"}},setup(t){const e=t,r=_t(()=>{const C=[];return e.chat_button_position==="bottom_right"?C.push("right-0"):C.push("left-0"),C}),o=yt(0),n=Vn("conversationId",""),i=Vn("chatBotMessages",[]),a=yt(),s=C=>a.value=C,l=()=>{a.value=void 0},c=yt(),u=yt(!0),p=yt(!1),h=Vn("isChatOpen",!1);_t(()=>window.location.hostname);const w=of({baseUrl:"https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",options:{refetch:!1,async beforeFetch({options:C,cancel:F}){const N={"x-api-key":"thqMbn962S4Sg2r4U6l6Dzx9DTYk9qP9f4RTAB9j"};return(o.value>30||!u.value)&&F(),{options:{...C,headers:{...C.headers,...N}}}},async onFetchError(C){if(C.response?.status===429)throw u.value=!1,new Error("Monoloq limit reached. Too many requests.");const F={bot_language_text:C.data,conversation_id:n.value,sender:"bot",timestamp:new Date().getTime(),user_language_text:C.data||C.error?.message||"Unknown error",recommended_products:void 0};return C.data=F,C}}});async function E(C){if(p.value=!0,!c.value||!n.value)return;const F=new Date,N={text:ep(C),timestamp:F.getTime(),conversation_id:n.value};i.value.push(N);const $=$r("initiate"),Q=new URLSearchParams({host_domain:$}),{data:pt}=await w(`/chat/handle_message?${Q}`).post(N).json();p.value=!1,i.value.push(pt.value);const G=pt.value?.recommended_products;G?.length&&(p.value=!0,await new Promise(et=>setTimeout(et,3e3)),p.value=!1,s(G))}const O=_t(()=>{if(!document.referrer)return!1;const C=new URL(document.referrer);return window.location.hostname==="localhost"?!0:C.hostname===window.location.hostname});function M(){if(!c.value)return;const C=c.value.scrollTop,N=c.value.scrollHeight-C;let $=0;const Q=100;function pt(){$+=16;const G=Math.min(1,$/Q);c.value.scrollTop=C+N*G,G<1&&requestAnimationFrame(pt)}requestAnimationFrame(pt)}async function V(){p.value=!0;const C=$r("initiate"),F=new URLSearchParams({host_domain:C,language:document.documentElement.lang.slice(0,2)||"en"}),{data:N}=await w(`/chat/initiate?${F.toString()}`).get().json();p.value=!1,i.value.push(N.value),n.value=N.value?.conversation_id}async function Z(){p.value=!0;const C=$r("initiate"),F=new URLSearchParams({host_domain:C,conversation_id:n.value}),{data:N}=await w(`/chat/resume?${F.toString()}`).get().json();p.value=!1,i.value.push(N.value)}async function W(C){p.value=!0;const F=$r("initiate"),N=new URLSearchParams({host_domain:F,product_id:C,conversation_id:n.value}),{data:$}=await w(`/chat/pitch_product?${N.toString()}`).get().json();p.value=!1,i.value.push($.value)}hc(()=>{!i.value.length||!c.value||M()});async function j(){if(console.log(window.history),!(window.location.hostname==="localhost"&&i.value.length!==0)){if(i.value.length===0)return await V();if(!n.value)return await V();if(!O.value&&i.value[i.value.length-1].timestamp<new Date().getTime()-288e5)return await Z();if(window.history.state?.monoloqItemId)return await W(window.history.state?.monoloqItemId)}}j().then();const H=_u(()=>{i.value=[],j()},5e3),lt=async()=>{await H()},q=()=>{h.value=!1},z=()=>{h.value=!0};return(C,F)=>(J(),it(mt,null,[rt(nt(ko),{offset:[0,200]},{default:ne(()=>[nt(h)&&u.value?(J(),it("div",{key:0,class:ee(["body !font-sans !text-base absolute bottom-0 right-0 text-black flex flex-col bg-white rounded-2xl my-auto mr-2 h-[694px] w-[372px] drop-shadow-2xl z-40 select-none",[...nt(r)]])},[rt(xf,Dt({class:"!h-[64px] flex-none"},{...C.$attrs,class:void 0},{onClear:F[0]||(F[0]=N=>lt()),onClose:F[1]||(F[1]=N=>q())}),null,16),S("div",vh,[rt(nt(Mn),{duration:500},{default:ne(()=>[a.value?(J(),me(ph,{key:0,products:a.value,onCloseProducts:F[2]||(F[2]=N=>l())},null,8,["products"])):(J(),it("div",xh))]),_:1}),S("div",{ref_key:"refChat",ref:c,class:"overflow-y-auto scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"},[rt(nt(ko),{group:"",offset:[0,16]},{default:ne(()=>[(J(!0),it(mt,null,an(nt(i),(N,$)=>(J(),it(mt,{key:N.timestamp},[rt(If,Dt({...C.$attrs,class:void 0},{date:new Date(N.timestamp).getTime(),message:N,"is-first":$===0,onOpenProducts:s}),null,16,["date","message","is-first"]),"sender"in N&&N.recommended_products?(J(),it("div",yh,[S("button",{class:"btn btn-square self-end btn-sm btn-ghost hover:!border-none focus:!border-none",onClick:Q=>s(N.recommended_products)},kh,8,_h),rt(wh,{products:N.recommended_products},null,8,["products"]),Ch])):De("",!0)],64))),128))]),_:1}),on(rt(th,Dt({class:"scale-50 ml-9"},{...C.$attrs,class:void 0}),null,16),[[Ja,p.value]])],512),S("div",$h,[S("a",Oh,[Ph,rt(Xf,{class:"h-4 my-auto"})])]),rt(Rf,Dt({class:"flex-none","is-loading":p.value},{...C.$attrs,class:void 0},{onSend:E}),null,16,["is-loading"])])],2)):(J(),it("div",Eh))]),_:1}),gr(C.$slots,"widgetButton",{toggle:z},()=>[e.show_button_widget&&u.value?(J(),me(Bf,Dt({key:0},{...C.$attrs,class:void 0},{chat_button_position:e.chat_button_position,"is-open":nt(h),onToggle:F[3]||(F[3]=N=>z())}),{default:ne(()=>[rt(qf,{class:"w-8 h-8 mx-auto my-auto"})]),_:1},16,["chat_button_position","is-open"])):De("",!0)])],64))}}),[["styles",[`@import"https://fonts.googleapis.com/css2?family=Nunito&display=swap";*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Nunito;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}:root,[data-theme]{background-color:hsla(var(--b1) / var(--tw-bg-opacity, 1));color:hsla(var(--bc) / var(--tw-text-opacity, 1))}html{-webkit-tap-highlight-color:transparent}:root{color-scheme:dark;--pf: 198 93% 48%;--sf: 234 89% 59%;--af: 329 86% 56%;--b2: 222 47% 10%;--b3: 222 47% 9%;--bc: 222 66% 82%;--pc: 198 100% 12%;--sc: 234 100% 15%;--ac: 329 100% 14%;--nc: 217 76% 83%;--inc: 198 100% 10%;--suc: 172 100% 10%;--wac: 41 100% 13%;--erc: 351 100% 14%;--rounded-box: 1rem;--rounded-btn: .5rem;--rounded-badge: 1.9rem;--animation-btn: .25s;--animation-input: .2s;--btn-text-case: uppercase;--btn-focus-scale: .95;--border-btn: 1px;--tab-border: 1px;--tab-radius: .5rem;--p: 198 93% 60%;--s: 234 89% 74%;--a: 329 86% 70%;--n: 217 33% 17%;--nf: 217 30% 22%;--b1: 222 47% 11%;--in: 198 90% 48%;--su: 172 66% 50%;--wa: 41 88% 64%;--er: 351 95% 71%}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.avatar{position:relative;display:inline-flex}.avatar>div{display:block;aspect-ratio:1 / 1;overflow:hidden}.avatar img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}.avatar.placeholder>div{display:flex;align-items:center;justify-content:center}.btn{display:inline-flex;flex-shrink:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;flex-wrap:wrap;align-items:center;justify-content:center;border-color:transparent;border-color:hsl(var(--n) / var(--tw-border-opacity));text-align:center;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);border-radius:var(--rounded-btn, .5rem);height:3rem;padding-left:1rem;padding-right:1rem;font-size:.875rem;line-height:1.25rem;line-height:1em;min-height:3rem;font-weight:600;text-transform:uppercase;text-transform:var(--btn-text-case, uppercase);text-decoration-line:none;border-width:var(--border-btn, 1px);animation:button-pop var(--animation-btn, .25s) ease-out;--tw-border-opacity: 1;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.btn-disabled,.btn[disabled]{pointer-events:none}.btn-square{height:3rem;width:3rem;padding:0}.btn-circle{height:3rem;width:3rem;border-radius:9999px;padding:0}.btn.loading,.btn.loading:hover{pointer-events:none}.btn.loading:before{margin-right:.5rem;height:1rem;width:1rem;border-radius:9999px;border-width:2px;animation:spin 2s linear infinite;content:"";border-top-color:transparent;border-left-color:transparent;border-bottom-color:currentColor;border-right-color:currentColor}@media (prefers-reduced-motion: reduce){.btn.loading:before{animation:spin 10s linear infinite}}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.btn-group>input[type=radio].btn{-webkit-appearance:none;-moz-appearance:none;appearance:none}.btn-group>input[type=radio].btn:before{content:attr(data-title)}.card{position:relative;display:flex;flex-direction:column;border-radius:var(--rounded-box, 1rem)}.card:focus{outline:2px solid transparent;outline-offset:2px}.card-body{display:flex;flex:1 1 auto;flex-direction:column;padding:var(--padding-card, 2rem);gap:.5rem}.card-body :where(p){flex-grow:1}.card-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.5rem}.card figure{display:flex;align-items:center;justify-content:center}.card.image-full{display:grid}.card.image-full:before{position:relative;content:"";z-index:10;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));opacity:.75;border-radius:var(--rounded-box, 1rem)}.card.image-full:before,.card.image-full>*{grid-column-start:1;grid-row-start:1}.card.image-full>figure img{height:100%;-o-object-fit:cover;object-fit:cover}.card.image-full>.card-body{position:relative;z-index:20;--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.carousel{display:flex;overflow-x:scroll;scroll-snap-type:x mandatory;scroll-behavior:smooth;-ms-overflow-style:none;scrollbar-width:none}.carousel-item{box-sizing:content-box;display:flex;flex:none;scroll-snap-align:start}.carousel-center .carousel-item{scroll-snap-align:center}.carousel-end .carousel-item{scroll-snap-align:end}.chat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));-moz-column-gap:.75rem;column-gap:.75rem;padding-top:.25rem;padding-bottom:.25rem}.chat-image{grid-row:span 2 / span 2;align-self:flex-end}.chat-header{grid-row-start:1;font-size:.875rem;line-height:1.25rem}.chat-bubble{position:relative;display:block;width:-moz-fit-content;width:fit-content;padding:.5rem 1rem;max-width:90%;border-radius:var(--rounded-box, 1rem);min-height:2.75rem;min-width:2.75rem;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.chat-bubble:before{position:absolute;bottom:0;height:.75rem;width:.75rem;background-color:inherit;content:"";-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}.chat-start{place-items:start;grid-template-columns:auto 1fr}.chat-start .chat-header,.chat-start .chat-footer{grid-column-start:2}.chat-start .chat-image{grid-column-start:1}.chat-start .chat-bubble{grid-column-start:2;border-bottom-left-radius:0}.chat-start .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");left:-.75rem}[dir=rtl] .chat-start .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e")}.chat-end{place-items:end;grid-template-columns:1fr auto}.chat-end .chat-header,.chat-end .chat-footer{grid-column-start:1}.chat-end .chat-image{grid-column-start:2}.chat-end .chat-bubble{grid-column-start:1;border-bottom-right-radius:0}.chat-end .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");left:100%}[dir=rtl] .chat-end .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e")}.divider{display:flex;flex-direction:row;align-items:center;align-self:stretch;margin-top:1rem;margin-bottom:1rem;height:1rem;white-space:nowrap}.divider:before,.divider:after{content:"";flex-grow:1;height:.125rem;width:100%}.input{flex-shrink:1;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);height:3rem;padding-left:1rem;padding-right:1rem;font-size:1rem;line-height:2;line-height:1.5rem;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 0;--tw-bg-opacity: 1;background-color:hsl(var(--b1) / var(--tw-bg-opacity));border-radius:var(--rounded-btn, .5rem)}.input-group>.input{isolation:isolate}.input-group>*,.input-group>.input,.input-group>.select{border-radius:0}.link{cursor:pointer;text-decoration-line:underline}.menu>:where(li.disabled > *:not(ul):focus){cursor:auto}.steps .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-columns:auto;grid-template-rows:repeat(2,minmax(0,1fr));grid-template-rows:40px 1fr;place-items:center;text-align:center;min-width:4rem}.swap{position:relative;display:inline-grid;-webkit-user-select:none;-moz-user-select:none;user-select:none;place-content:center;cursor:pointer}.swap>*{grid-column-start:1;grid-row-start:1;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-property:transform,opacity}.swap input{-webkit-appearance:none;-moz-appearance:none;appearance:none}.swap .swap-on,.swap .swap-indeterminate,.swap input:indeterminate~.swap-on{opacity:0}.swap input:checked~.swap-off,.swap.swap-active .swap-off,.swap input:indeterminate~.swap-off{opacity:0}.swap input:checked~.swap-on,.swap-active .swap-on,.swap input:indeterminate~.swap-indeterminate{opacity:1}.tab{position:relative;display:inline-flex;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;height:2rem;font-size:.875rem;line-height:1.25rem;line-height:2;--tab-padding: 1rem;--tw-text-opacity: .5;--tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));--tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));--tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));color:var(--tab-color);padding-left:var(--tab-padding, 1rem);padding-right:var(--tab-padding, 1rem)}.textarea{flex-shrink:1;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);padding:.5rem 1rem;font-size:.875rem;line-height:1.25rem;line-height:2;min-height:3rem;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 0;--tw-bg-opacity: 1;background-color:hsl(var(--b1) / var(--tw-bg-opacity));border-radius:var(--rounded-btn, .5rem)}.toggle{flex-shrink:0;--tglbg: hsl(var(--b1));--handleoffset: 1.5rem;--handleoffsetcalculator: calc(var(--handleoffset) * -1);--togglehandleborder: 0 0;height:1.5rem;width:3rem;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: .2;background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .5;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);border-radius:var(--rounded-badge, 1.9rem);transition:background,box-shadow var(--animation-input, .2s) ease-in-out;box-shadow:var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset,var(--togglehandleborder)}.avatar-group :where(.avatar){overflow:hidden;border-radius:9999px;border-width:4px;--tw-border-opacity: 1;border-color:hsl(var(--b1) / var(--tw-border-opacity))}.btm-nav>*.disabled,.btm-nav>*.disabled:hover,.btm-nav>*[disabled],.btm-nav>*[disabled]:hover{pointer-events:none;--tw-border-opacity: 0;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-bg-opacity: .1;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.btn:active:hover,.btn:active:focus{animation:none;transform:scale(var(--btn-focus-scale, .95))}.btn:hover,.btn-active{--tw-border-opacity: 1;border-color:hsl(var(--nf, var(--n)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--nf, var(--n)) / var(--tw-bg-opacity))}.btn:focus-visible{outline:2px solid hsl(var(--nf));outline-offset:2px}.btn.glass:hover,.btn.glass.btn-active{--glass-opacity: 25%;--glass-border-opacity: 15%}.btn.glass:focus-visible{outline:2px solid currentColor}.btn-ghost:hover,.btn-ghost.btn-active{--tw-border-opacity: 0;background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .2}.btn-disabled,.btn-disabled:hover,.btn[disabled],.btn[disabled]:hover{--tw-border-opacity: 0;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-bg-opacity: .2;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.btn.loading.btn-square:before,.btn.loading.btn-circle:before{margin-right:0}.btn.loading.btn-xl:before,.btn.loading.btn-lg:before{height:1.25rem;width:1.25rem}.btn.loading.btn-sm:before,.btn.loading.btn-xs:before{height:.75rem;width:.75rem}.btn-group>input[type=radio]:checked.btn,.btn-group>.btn-active{--tw-border-opacity: 1;border-color:hsl(var(--p) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--p) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--pc) / var(--tw-text-opacity))}.btn-group>input[type=radio]:checked.btn:focus-visible,.btn-group>.btn-active:focus-visible{outline:2px solid hsl(var(--p))}@keyframes button-pop{0%{transform:scale(var(--btn-focus-scale, .95))}40%{transform:scale(1.02)}to{transform:scale(1)}}.card :where(figure:first-child){overflow:hidden;border-start-start-radius:inherit;border-start-end-radius:inherit;border-end-start-radius:unset;border-end-end-radius:unset}.card :where(figure:last-child){overflow:hidden;border-start-start-radius:unset;border-start-end-radius:unset;border-end-start-radius:inherit;border-end-end-radius:inherit}.card:focus-visible{outline:2px solid currentColor;outline-offset:2px}.card.bordered{border-width:1px;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity))}.card.compact .card-body{padding:1rem;font-size:.875rem;line-height:1.25rem}.card.image-full :where(figure){overflow:hidden;border-radius:inherit}.carousel::-webkit-scrollbar{display:none}@keyframes checkmark{0%{background-position-y:5px}50%{background-position-y:-2px}to{background-position-y:0}}.divider:before{background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .1}.divider:after{background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .1}.divider:not(:empty){gap:1rem}.input[list]::-webkit-calendar-picker-indicator{line-height:1em}.input:focus{outline:2px solid hsla(var(--bc) / .2);outline-offset:2px}.input-disabled,.input[disabled]{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));--tw-text-opacity: .2}.input-disabled::-moz-placeholder,.input[disabled]::-moz-placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.input-disabled::placeholder,.input[disabled]::placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.link-primary{--tw-text-opacity: 1;color:hsl(var(--p) / var(--tw-text-opacity))}.link-primary:hover{--tw-text-opacity: 1;color:hsl(var(--pf, var(--p)) / var(--tw-text-opacity))}.link:focus{outline:2px solid transparent;outline-offset:2px}.link:focus-visible{outline:2px solid currentColor;outline-offset:2px}.menu li.disabled>*{-webkit-user-select:none;-moz-user-select:none;user-select:none;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.menu li.disabled>*:hover{background-color:transparent}.mockup-phone .display{overflow:hidden;border-radius:40px;margin-top:-25px}@keyframes progress-loading{50%{left:107%}}@keyframes radiomark{0%{box-shadow:0 0 0 12px hsl(var(--b1)) inset,0 0 0 12px hsl(var(--b1)) inset}50%{box-shadow:0 0 0 3px hsl(var(--b1)) inset,0 0 0 3px hsl(var(--b1)) inset}to{box-shadow:0 0 0 4px hsl(var(--b1)) inset,0 0 0 4px hsl(var(--b1)) inset}}@keyframes rating-pop{0%{transform:translateY(-.125em)}40%{transform:translateY(-.125em)}to{transform:translateY(0)}}.steps .step:before{top:0;grid-column-start:1;grid-row-start:1;height:.5rem;width:100%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--bc) / var(--tw-text-opacity));content:"";margin-left:-100%}.steps .step:after{content:counter(step);counter-increment:step;z-index:1;position:relative;grid-column-start:1;grid-row-start:1;display:grid;height:2rem;width:2rem;place-items:center;place-self:center;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--bc) / var(--tw-text-opacity))}.steps .step:first-child:before{content:none}.steps .step[data-content]:after{content:attr(data-content)}.tab:hover{--tw-text-opacity: 1}.tab.tab-active{border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 1;--tw-text-opacity: 1}.tab:focus{outline:2px solid transparent;outline-offset:2px}.tab:focus-visible{outline:2px solid currentColor;outline-offset:-3px}.tab:focus-visible.tab-lifted{border-bottom-right-radius:var(--tab-radius, .5rem);border-bottom-left-radius:var(--tab-radius, .5rem)}.textarea:focus{outline:2px solid hsla(var(--bc) / .2);outline-offset:2px}.textarea-disabled,.textarea[disabled]{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));--tw-text-opacity: .2}.textarea-disabled::-moz-placeholder,.textarea[disabled]::-moz-placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.textarea-disabled::placeholder,.textarea[disabled]::placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}@keyframes toast-pop{0%{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}[dir=rtl] .toggle{--handleoffsetcalculator: calc(var(--handleoffset) * 1)}.toggle:focus-visible{outline:2px solid hsl(var(--bc));outline-offset:2px}.toggle:checked,.toggle[checked=true],.toggle[aria-checked=true]{--handleoffsetcalculator: var(--handleoffset);--tw-border-opacity: 1;--tw-bg-opacity: 1}[dir=rtl] .toggle:checked,[dir=rtl] .toggle[checked=true],[dir=rtl] .toggle[aria-checked=true]{--handleoffsetcalculator: calc(var(--handleoffset) * -1)}.toggle:indeterminate{--tw-border-opacity: 1;--tw-bg-opacity: 1;box-shadow:calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset}[dir=rtl] .toggle:indeterminate{box-shadow:calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset}.toggle:disabled{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--bc) / var(--tw-border-opacity));background-color:transparent;opacity:.3;--togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset}.min-h-16{min-height:4rem}.btn-sm{height:2rem;padding-left:.75rem;padding-right:.75rem;min-height:2rem;font-size:.875rem}.btn-square:where(.btn-xs){height:1.5rem;width:1.5rem;padding:0}.btn-square:where(.btn-sm){height:2rem;width:2rem;padding:0}.btn-square:where(.btn-md){height:3rem;width:3rem;padding:0}.btn-square:where(.btn-lg){height:4rem;width:4rem;padding:0}.btn-circle:where(.btn-xs){height:1.5rem;width:1.5rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-sm){height:2rem;width:2rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-md){height:3rem;width:3rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-lg){height:4rem;width:4rem;border-radius:9999px;padding:0}.steps-horizontal .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));place-items:center;text-align:center}.steps-vertical .step{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(1,minmax(0,1fr))}.avatar.online:before{content:"";position:absolute;z-index:10;display:block;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--su) / var(--tw-bg-opacity));width:15%;height:15%;top:7%;right:7%;box-shadow:0 0 0 2px hsl(var(--b1))}.avatar.offline:before{content:"";position:absolute;z-index:10;display:block;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));width:15%;height:15%;top:7%;right:7%;box-shadow:0 0 0 2px hsl(var(--b1))}.btn-group .btn:not(:first-child):not(:last-child),.btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child){border-radius:0}.btn-group .btn:first-child:not(:last-child),.btn-group.btn-group-horizontal .btn:first-child:not(:last-child){margin-left:-1px;margin-top:-0px;border-top-left-radius:var(--rounded-btn, .5rem);border-top-right-radius:0;border-bottom-left-radius:var(--rounded-btn, .5rem);border-bottom-right-radius:0}.btn-group .btn:last-child:not(:first-child),.btn-group.btn-group-horizontal .btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:var(--rounded-btn, .5rem);border-bottom-left-radius:0;border-bottom-right-radius:var(--rounded-btn, .5rem)}.btn-group.btn-group-vertical .btn:first-child:not(:last-child){margin-left:-0px;margin-top:-1px;border-top-left-radius:var(--rounded-btn, .5rem);border-top-right-radius:var(--rounded-btn, .5rem);border-bottom-left-radius:0;border-bottom-right-radius:0}.btn-group.btn-group-vertical .btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:var(--rounded-btn, .5rem);border-bottom-right-radius:var(--rounded-btn, .5rem)}.card-compact .card-body{padding:1rem;font-size:.875rem;line-height:1.25rem}.card-compact .card-title{margin-bottom:.25rem}.card-normal .card-body{padding:var(--padding-card, 2rem);font-size:1rem;line-height:1.5rem}.steps-horizontal .step{grid-template-rows:40px 1fr;grid-template-columns:auto;min-width:4rem}.steps-horizontal .step:before{height:.5rem;width:100%;--tw-translate-y: 0px;--tw-translate-x: 0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));content:"";margin-left:-100%}.steps-vertical .step{gap:.5rem;grid-template-columns:40px 1fr;grid-template-rows:auto;min-height:4rem;justify-items:start}.steps-vertical .step:before{height:100%;width:.5rem;--tw-translate-y: -50%;--tw-translate-x: -50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));margin-left:50%}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.bottom-0{bottom:0}.right-0{right:0}.top-3{top:12px}.right-3{right:12px}.left-0{left:0}.z-50{z-index:50}.z-40{z-index:40}.m-5{margin:20px}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mr-5{margin-right:20px}.ml-5{margin-left:20px}.mt-4{margin-top:16px}.mt-2{margin-top:8px}.mr-2{margin-right:8px}.ml-9{margin-left:36px}.mt-3{margin-top:12px}.mb-2{margin-bottom:8px}.flex{display:flex}.h-full{height:100%}.h-8{height:32px}.h-max{height:-moz-max-content;height:max-content}.h-10{height:40px}.h-16{height:64px}.h-5{height:20px}.h-6{height:24px}.h-\\[100\\%\\]{height:100%}.h-\\[90\\%\\]{height:90%}.h-\\[694px\\]{height:694px}.\\!h-\\[64px\\]{height:64px!important}.h-\\[630px\\]{height:630px}.h-4{height:16px}.h-32{height:8rem}.max-h-\\[144px\\]{max-height:144px}.w-full{width:100%}.w-8{width:32px}.w-10{width:40px}.w-5{width:20px}.w-6{width:24px}.w-11\\/12{width:91.666667%}.w-\\[372px\\]{width:372px}.w-48{width:12rem}.w-16{width:64px}.flex-none{flex:none}.flex-1{flex:1 1 0%}.scale-\\[0\\.3\\]{--tw-scale-x: .3;--tw-scale-y: .3;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-50{--tw-scale-x: .5;--tw-scale-y: .5;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-none{resize:none}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse: 0;margin-right:calc(16px * var(--tw-space-x-reverse));margin-left:calc(16px * calc(1 - var(--tw-space-x-reverse)))}.self-end{align-self:flex-end}.overflow-auto{overflow:auto}.overflow-y-auto{overflow-y:auto}.rounded-full{border-radius:9999px}.rounded-2xl{border-radius:1rem}.rounded-md{border-radius:.375rem}.rounded-r-lg{border-top-right-radius:.5rem;border-bottom-right-radius:.5rem}.rounded-l-lg{border-top-left-radius:.5rem;border-bottom-left-radius:.5rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.rounded-tl-lg{border-top-left-radius:.5rem}.rounded-tr-lg{border-top-right-radius:.5rem}.border-0{border-width:0px}.border-b-2{border-bottom-width:2px}.border-none{border-style:none}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-\\[\\#DDE2EB\\]{--tw-bg-opacity: 1;background-color:rgb(221 226 235 / var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-white\\/50{background-color:#ffffff80}.bg-black\\/30{background-color:#0000004d}.bg-black\\/60{background-color:#0009}.bg-primary\\/70{background-color:hsl(var(--p) / .7)}.p-4{padding:16px}.px-5{padding-left:20px;padding-right:20px}.py-4{padding-top:16px;padding-bottom:16px}.px-3{padding-left:12px;padding-right:12px}.py-3{padding-top:12px;padding-bottom:12px}.py-2{padding-top:8px;padding-bottom:8px}.px-4{padding-left:16px;padding-right:16px}.pr-4{padding-right:16px}.pt-3{padding-top:12px}.pt-0{padding-top:0}.pb-3{padding-bottom:12px}.text-center{text-align:center}.align-middle{vertical-align:middle}.\\!font-sans{font-family:Nunito!important}.text-xs{font-size:12px;line-height:16px}.text-xl{font-size:20px;line-height:28px}.text-lg{font-size:18px;line-height:28px}.text-\\[16px\\]{font-size:16px}.text-base{font-size:16px;line-height:24px}.\\!text-base{font-size:16px!important;line-height:24px!important}.font-bold{font-weight:700}.leading-\\[24px\\]{line-height:24px}.leading-6{line-height:1.5rem}.leading-5{line-height:1.25rem}.\\!leading-\\[24px\\]{line-height:24px!important}.text-black{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-white\\/40{color:#fff6}.text-neutral{--tw-text-opacity: 1;color:hsl(var(--n) / var(--tw-text-opacity))}.text-opacity-60{--tw-text-opacity: .6}.opacity-50{opacity:.5}.shadow-xl{--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.blur{--tw-blur: blur(8px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-2xl{--tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / .15));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur: blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.line-clamp-6{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6}.lds-ellipsis{display:inline-block;position:relative;width:20px;height:20px}.lds-ellipsis div{position:absolute;top:33px;width:13px;height:13px;border-radius:50%;background:#4fafe4;animation-timing-function:cubic-bezier(0,1,1,0)}.lds-ellipsis div:nth-child(1){left:8px;animation:lds-ellipsis1 .6s infinite}.lds-ellipsis div:nth-child(2){left:8px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(3){left:32px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(4){left:56px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}to{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0)}to{transform:translate(24px)}}.btn-ghost{border-width:1px;border-color:transparent;background-color:transparent;color:currentColor}.btn-ghost:hover,.btn-ghost.btn-active{--tw-border-opacity: 0;background-color:hsl(222 66% 82% / var(--tw-bg-opacity));--tw-bg-opacity: .2;border-width:0}.btn-ghost:focus-visible{outline:2px solid currentColor}.drawer-toggle:focus-visible~.drawer-content .drawer-button.btn-ghost{outline:2px solid currentColor}.hover\\:scale-105:hover{--tw-scale-x: 1.05;--tw-scale-y: 1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\\:\\!border-none:hover{border-style:none!important}.hover\\:bg-gray-50:hover{--tw-bg-opacity: 1;background-color:rgb(249 250 251 / var(--tw-bg-opacity))}.hover\\:text-neutral:hover{--tw-text-opacity: 1;color:hsl(var(--n) / var(--tw-text-opacity))}.focus\\:\\!border-none:focus{border-style:none!important}.focus\\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\\:text-opacity-100{--tw-text-opacity: 1}
-`]]]),Th={class:"body fixed right-0 bottom-0 m-5 z-50 flex items-end select-none leading-1em"},Ds=La(ke(Zt({__name:"MonoloqWidget.ce",setup(t){return(e,r)=>(J(),it("div",Th,[rt(Rs,Dt({show_button_widget:!0},e.$attrs),null,16)]))}}),[["styles",[`@import"https://fonts.googleapis.com/css2?family=Nunito&display=swap";*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Nunito;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}:root,[data-theme]{background-color:hsla(var(--b1) / var(--tw-bg-opacity, 1));color:hsla(var(--bc) / var(--tw-text-opacity, 1))}html{-webkit-tap-highlight-color:transparent}:root{color-scheme:dark;--pf: 198 93% 48%;--sf: 234 89% 59%;--af: 329 86% 56%;--b2: 222 47% 10%;--b3: 222 47% 9%;--bc: 222 66% 82%;--pc: 198 100% 12%;--sc: 234 100% 15%;--ac: 329 100% 14%;--nc: 217 76% 83%;--inc: 198 100% 10%;--suc: 172 100% 10%;--wac: 41 100% 13%;--erc: 351 100% 14%;--rounded-box: 1rem;--rounded-btn: .5rem;--rounded-badge: 1.9rem;--animation-btn: .25s;--animation-input: .2s;--btn-text-case: uppercase;--btn-focus-scale: .95;--border-btn: 1px;--tab-border: 1px;--tab-radius: .5rem;--p: 198 93% 60%;--s: 234 89% 74%;--a: 329 86% 70%;--n: 217 33% 17%;--nf: 217 30% 22%;--b1: 222 47% 11%;--in: 198 90% 48%;--su: 172 66% 50%;--wa: 41 88% 64%;--er: 351 95% 71%}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.avatar{position:relative;display:inline-flex}.avatar>div{display:block;aspect-ratio:1 / 1;overflow:hidden}.avatar img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}.avatar.placeholder>div{display:flex;align-items:center;justify-content:center}.btn{display:inline-flex;flex-shrink:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;flex-wrap:wrap;align-items:center;justify-content:center;border-color:transparent;border-color:hsl(var(--n) / var(--tw-border-opacity));text-align:center;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);border-radius:var(--rounded-btn, .5rem);height:3rem;padding-left:1rem;padding-right:1rem;font-size:.875rem;line-height:1.25rem;line-height:1em;min-height:3rem;font-weight:600;text-transform:uppercase;text-transform:var(--btn-text-case, uppercase);text-decoration-line:none;border-width:var(--border-btn, 1px);animation:button-pop var(--animation-btn, .25s) ease-out;--tw-border-opacity: 1;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.btn-disabled,.btn[disabled]{pointer-events:none}.btn-square{height:3rem;width:3rem;padding:0}.btn-circle{height:3rem;width:3rem;border-radius:9999px;padding:0}.btn.loading,.btn.loading:hover{pointer-events:none}.btn.loading:before{margin-right:.5rem;height:1rem;width:1rem;border-radius:9999px;border-width:2px;animation:spin 2s linear infinite;content:"";border-top-color:transparent;border-left-color:transparent;border-bottom-color:currentColor;border-right-color:currentColor}@media (prefers-reduced-motion: reduce){.btn.loading:before{animation:spin 10s linear infinite}}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.btn-group>input[type=radio].btn{-webkit-appearance:none;-moz-appearance:none;appearance:none}.btn-group>input[type=radio].btn:before{content:attr(data-title)}.card{position:relative;display:flex;flex-direction:column;border-radius:var(--rounded-box, 1rem)}.card:focus{outline:2px solid transparent;outline-offset:2px}.card-body{display:flex;flex:1 1 auto;flex-direction:column;padding:var(--padding-card, 2rem);gap:.5rem}.card-body :where(p){flex-grow:1}.card-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.5rem}.card figure{display:flex;align-items:center;justify-content:center}.card.image-full{display:grid}.card.image-full:before{position:relative;content:"";z-index:10;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));opacity:.75;border-radius:var(--rounded-box, 1rem)}.card.image-full:before,.card.image-full>*{grid-column-start:1;grid-row-start:1}.card.image-full>figure img{height:100%;-o-object-fit:cover;object-fit:cover}.card.image-full>.card-body{position:relative;z-index:20;--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.carousel{display:flex;overflow-x:scroll;scroll-snap-type:x mandatory;scroll-behavior:smooth;-ms-overflow-style:none;scrollbar-width:none}.carousel-item{box-sizing:content-box;display:flex;flex:none;scroll-snap-align:start}.carousel-center .carousel-item{scroll-snap-align:center}.carousel-end .carousel-item{scroll-snap-align:end}.chat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));-moz-column-gap:.75rem;column-gap:.75rem;padding-top:.25rem;padding-bottom:.25rem}.chat-image{grid-row:span 2 / span 2;align-self:flex-end}.chat-header{grid-row-start:1;font-size:.875rem;line-height:1.25rem}.chat-bubble{position:relative;display:block;width:-moz-fit-content;width:fit-content;padding:.5rem 1rem;max-width:90%;border-radius:var(--rounded-box, 1rem);min-height:2.75rem;min-width:2.75rem;--tw-bg-opacity: 1;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--nc) / var(--tw-text-opacity))}.chat-bubble:before{position:absolute;bottom:0;height:.75rem;width:.75rem;background-color:inherit;content:"";-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}.chat-start{place-items:start;grid-template-columns:auto 1fr}.chat-start .chat-header,.chat-start .chat-footer{grid-column-start:2}.chat-start .chat-image{grid-column-start:1}.chat-start .chat-bubble{grid-column-start:2;border-bottom-left-radius:0}.chat-start .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");left:-.75rem}[dir=rtl] .chat-start .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e")}.chat-end{place-items:end;grid-template-columns:1fr auto}.chat-end .chat-header,.chat-end .chat-footer{grid-column-start:1}.chat-end .chat-image{grid-column-start:2}.chat-end .chat-bubble{grid-column-start:1;border-bottom-right-radius:0}.chat-end .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");left:100%}[dir=rtl] .chat-end .chat-bubble:before{-webkit-mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");mask-image:url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e")}.divider{display:flex;flex-direction:row;align-items:center;align-self:stretch;margin-top:1rem;margin-bottom:1rem;height:1rem;white-space:nowrap}.divider:before,.divider:after{content:"";flex-grow:1;height:.125rem;width:100%}.input{flex-shrink:1;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);height:3rem;padding-left:1rem;padding-right:1rem;font-size:1rem;line-height:2;line-height:1.5rem;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 0;--tw-bg-opacity: 1;background-color:hsl(var(--b1) / var(--tw-bg-opacity));border-radius:var(--rounded-btn, .5rem)}.input-group>.input{isolation:isolate}.input-group>*,.input-group>.input,.input-group>.select{border-radius:0}.link{cursor:pointer;text-decoration-line:underline}.menu>:where(li.disabled > *:not(ul):focus){cursor:auto}.steps .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-columns:auto;grid-template-rows:repeat(2,minmax(0,1fr));grid-template-rows:40px 1fr;place-items:center;text-align:center;min-width:4rem}.swap{position:relative;display:inline-grid;-webkit-user-select:none;-moz-user-select:none;user-select:none;place-content:center;cursor:pointer}.swap>*{grid-column-start:1;grid-row-start:1;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-property:transform,opacity}.swap input{-webkit-appearance:none;-moz-appearance:none;appearance:none}.swap .swap-on,.swap .swap-indeterminate,.swap input:indeterminate~.swap-on{opacity:0}.swap input:checked~.swap-off,.swap.swap-active .swap-off,.swap input:indeterminate~.swap-off{opacity:0}.swap input:checked~.swap-on,.swap-active .swap-on,.swap input:indeterminate~.swap-indeterminate{opacity:1}.tab{position:relative;display:inline-flex;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;height:2rem;font-size:.875rem;line-height:1.25rem;line-height:2;--tab-padding: 1rem;--tw-text-opacity: .5;--tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));--tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));--tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));color:var(--tab-color);padding-left:var(--tab-padding, 1rem);padding-right:var(--tab-padding, 1rem)}.textarea{flex-shrink:1;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-duration:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);padding:.5rem 1rem;font-size:.875rem;line-height:1.25rem;line-height:2;min-height:3rem;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 0;--tw-bg-opacity: 1;background-color:hsl(var(--b1) / var(--tw-bg-opacity));border-radius:var(--rounded-btn, .5rem)}.toggle{flex-shrink:0;--tglbg: hsl(var(--b1));--handleoffset: 1.5rem;--handleoffsetcalculator: calc(var(--handleoffset) * -1);--togglehandleborder: 0 0;height:1.5rem;width:3rem;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-width:1px;border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: .2;background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .5;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);border-radius:var(--rounded-badge, 1.9rem);transition:background,box-shadow var(--animation-input, .2s) ease-in-out;box-shadow:var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset,var(--togglehandleborder)}.avatar-group :where(.avatar){overflow:hidden;border-radius:9999px;border-width:4px;--tw-border-opacity: 1;border-color:hsl(var(--b1) / var(--tw-border-opacity))}.btm-nav>*.disabled,.btm-nav>*.disabled:hover,.btm-nav>*[disabled],.btm-nav>*[disabled]:hover{pointer-events:none;--tw-border-opacity: 0;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-bg-opacity: .1;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.btn:active:hover,.btn:active:focus{animation:none;transform:scale(var(--btn-focus-scale, .95))}.btn:hover,.btn-active{--tw-border-opacity: 1;border-color:hsl(var(--nf, var(--n)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--nf, var(--n)) / var(--tw-bg-opacity))}.btn:focus-visible{outline:2px solid hsl(var(--nf));outline-offset:2px}.btn.glass:hover,.btn.glass.btn-active{--glass-opacity: 25%;--glass-border-opacity: 15%}.btn.glass:focus-visible{outline:2px solid currentColor}.btn-ghost:hover,.btn-ghost.btn-active{--tw-border-opacity: 0;background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .2}.btn-disabled,.btn-disabled:hover,.btn[disabled],.btn[disabled]:hover{--tw-border-opacity: 0;background-color:hsl(var(--n) / var(--tw-bg-opacity));--tw-bg-opacity: .2;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.btn.loading.btn-square:before,.btn.loading.btn-circle:before{margin-right:0}.btn.loading.btn-xl:before,.btn.loading.btn-lg:before{height:1.25rem;width:1.25rem}.btn.loading.btn-sm:before,.btn.loading.btn-xs:before{height:.75rem;width:.75rem}.btn-group>input[type=radio]:checked.btn,.btn-group>.btn-active{--tw-border-opacity: 1;border-color:hsl(var(--p) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--p) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--pc) / var(--tw-text-opacity))}.btn-group>input[type=radio]:checked.btn:focus-visible,.btn-group>.btn-active:focus-visible{outline:2px solid hsl(var(--p))}@keyframes button-pop{0%{transform:scale(var(--btn-focus-scale, .95))}40%{transform:scale(1.02)}to{transform:scale(1)}}.card :where(figure:first-child){overflow:hidden;border-start-start-radius:inherit;border-start-end-radius:inherit;border-end-start-radius:unset;border-end-end-radius:unset}.card :where(figure:last-child){overflow:hidden;border-start-start-radius:unset;border-start-end-radius:unset;border-end-start-radius:inherit;border-end-end-radius:inherit}.card:focus-visible{outline:2px solid currentColor;outline-offset:2px}.card.bordered{border-width:1px;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity))}.card.compact .card-body{padding:1rem;font-size:.875rem;line-height:1.25rem}.card.image-full :where(figure){overflow:hidden;border-radius:inherit}.carousel::-webkit-scrollbar{display:none}@keyframes checkmark{0%{background-position-y:5px}50%{background-position-y:-2px}to{background-position-y:0}}.divider:before{background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .1}.divider:after{background-color:hsl(var(--bc) / var(--tw-bg-opacity));--tw-bg-opacity: .1}.divider:not(:empty){gap:1rem}.input[list]::-webkit-calendar-picker-indicator{line-height:1em}.input:focus{outline:2px solid hsla(var(--bc) / .2);outline-offset:2px}.input-disabled,.input[disabled]{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));--tw-text-opacity: .2}.input-disabled::-moz-placeholder,.input[disabled]::-moz-placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.input-disabled::placeholder,.input[disabled]::placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.link-primary{--tw-text-opacity: 1;color:hsl(var(--p) / var(--tw-text-opacity))}.link-primary:hover{--tw-text-opacity: 1;color:hsl(var(--pf, var(--p)) / var(--tw-text-opacity))}.link:focus{outline:2px solid transparent;outline-offset:2px}.link:focus-visible{outline:2px solid currentColor;outline-offset:2px}.menu li.disabled>*{-webkit-user-select:none;-moz-user-select:none;user-select:none;color:hsl(var(--bc) / var(--tw-text-opacity));--tw-text-opacity: .2}.menu li.disabled>*:hover{background-color:transparent}.mockup-phone .display{overflow:hidden;border-radius:40px;margin-top:-25px}@keyframes progress-loading{50%{left:107%}}@keyframes radiomark{0%{box-shadow:0 0 0 12px hsl(var(--b1)) inset,0 0 0 12px hsl(var(--b1)) inset}50%{box-shadow:0 0 0 3px hsl(var(--b1)) inset,0 0 0 3px hsl(var(--b1)) inset}to{box-shadow:0 0 0 4px hsl(var(--b1)) inset,0 0 0 4px hsl(var(--b1)) inset}}@keyframes rating-pop{0%{transform:translateY(-.125em)}40%{transform:translateY(-.125em)}to{transform:translateY(0)}}.steps .step:before{top:0;grid-column-start:1;grid-row-start:1;height:.5rem;width:100%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--bc) / var(--tw-text-opacity));content:"";margin-left:-100%}.steps .step:after{content:counter(step);counter-increment:step;z-index:1;position:relative;grid-column-start:1;grid-row-start:1;display:grid;height:2rem;width:2rem;place-items:center;place-self:center;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));--tw-text-opacity: 1;color:hsl(var(--bc) / var(--tw-text-opacity))}.steps .step:first-child:before{content:none}.steps .step[data-content]:after{content:attr(data-content)}.tab:hover{--tw-text-opacity: 1}.tab.tab-active{border-color:hsl(var(--bc) / var(--tw-border-opacity));--tw-border-opacity: 1;--tw-text-opacity: 1}.tab:focus{outline:2px solid transparent;outline-offset:2px}.tab:focus-visible{outline:2px solid currentColor;outline-offset:-3px}.tab:focus-visible.tab-lifted{border-bottom-right-radius:var(--tab-radius, .5rem);border-bottom-left-radius:var(--tab-radius, .5rem)}.textarea:focus{outline:2px solid hsla(var(--bc) / .2);outline-offset:2px}.textarea-disabled,.textarea[disabled]{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color:hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));--tw-text-opacity: .2}.textarea-disabled::-moz-placeholder,.textarea[disabled]::-moz-placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}.textarea-disabled::placeholder,.textarea[disabled]::placeholder{color:hsl(var(--bc) / var(--tw-placeholder-opacity));--tw-placeholder-opacity: .2}@keyframes toast-pop{0%{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}[dir=rtl] .toggle{--handleoffsetcalculator: calc(var(--handleoffset) * 1)}.toggle:focus-visible{outline:2px solid hsl(var(--bc));outline-offset:2px}.toggle:checked,.toggle[checked=true],.toggle[aria-checked=true]{--handleoffsetcalculator: var(--handleoffset);--tw-border-opacity: 1;--tw-bg-opacity: 1}[dir=rtl] .toggle:checked,[dir=rtl] .toggle[checked=true],[dir=rtl] .toggle[aria-checked=true]{--handleoffsetcalculator: calc(var(--handleoffset) * -1)}.toggle:indeterminate{--tw-border-opacity: 1;--tw-bg-opacity: 1;box-shadow:calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset}[dir=rtl] .toggle:indeterminate{box-shadow:calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset}.toggle:disabled{cursor:not-allowed;--tw-border-opacity: 1;border-color:hsl(var(--bc) / var(--tw-border-opacity));background-color:transparent;opacity:.3;--togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset}.min-h-16{min-height:4rem}.btn-sm{height:2rem;padding-left:.75rem;padding-right:.75rem;min-height:2rem;font-size:.875rem}.btn-square:where(.btn-xs){height:1.5rem;width:1.5rem;padding:0}.btn-square:where(.btn-sm){height:2rem;width:2rem;padding:0}.btn-square:where(.btn-md){height:3rem;width:3rem;padding:0}.btn-square:where(.btn-lg){height:4rem;width:4rem;padding:0}.btn-circle:where(.btn-xs){height:1.5rem;width:1.5rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-sm){height:2rem;width:2rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-md){height:3rem;width:3rem;border-radius:9999px;padding:0}.btn-circle:where(.btn-lg){height:4rem;width:4rem;border-radius:9999px;padding:0}.steps-horizontal .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));place-items:center;text-align:center}.steps-vertical .step{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(1,minmax(0,1fr))}.avatar.online:before{content:"";position:absolute;z-index:10;display:block;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--su) / var(--tw-bg-opacity));width:15%;height:15%;top:7%;right:7%;box-shadow:0 0 0 2px hsl(var(--b1))}.avatar.offline:before{content:"";position:absolute;z-index:10;display:block;border-radius:9999px;--tw-bg-opacity: 1;background-color:hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));width:15%;height:15%;top:7%;right:7%;box-shadow:0 0 0 2px hsl(var(--b1))}.btn-group .btn:not(:first-child):not(:last-child),.btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child){border-radius:0}.btn-group .btn:first-child:not(:last-child),.btn-group.btn-group-horizontal .btn:first-child:not(:last-child){margin-left:-1px;margin-top:-0px;border-top-left-radius:var(--rounded-btn, .5rem);border-top-right-radius:0;border-bottom-left-radius:var(--rounded-btn, .5rem);border-bottom-right-radius:0}.btn-group .btn:last-child:not(:first-child),.btn-group.btn-group-horizontal .btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:var(--rounded-btn, .5rem);border-bottom-left-radius:0;border-bottom-right-radius:var(--rounded-btn, .5rem)}.btn-group.btn-group-vertical .btn:first-child:not(:last-child){margin-left:-0px;margin-top:-1px;border-top-left-radius:var(--rounded-btn, .5rem);border-top-right-radius:var(--rounded-btn, .5rem);border-bottom-left-radius:0;border-bottom-right-radius:0}.btn-group.btn-group-vertical .btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:var(--rounded-btn, .5rem);border-bottom-right-radius:var(--rounded-btn, .5rem)}.card-compact .card-body{padding:1rem;font-size:.875rem;line-height:1.25rem}.card-compact .card-title{margin-bottom:.25rem}.card-normal .card-body{padding:var(--padding-card, 2rem);font-size:1rem;line-height:1.5rem}.steps-horizontal .step{grid-template-rows:40px 1fr;grid-template-columns:auto;min-width:4rem}.steps-horizontal .step:before{height:.5rem;width:100%;--tw-translate-y: 0px;--tw-translate-x: 0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));content:"";margin-left:-100%}.steps-vertical .step{gap:.5rem;grid-template-columns:40px 1fr;grid-template-rows:auto;min-height:4rem;justify-items:start}.steps-vertical .step:before{height:100%;width:.5rem;--tw-translate-y: -50%;--tw-translate-x: -50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));margin-left:50%}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.bottom-0{bottom:0}.right-0{right:0}.top-3{top:12px}.right-3{right:12px}.left-0{left:0}.z-50{z-index:50}.z-40{z-index:40}.m-5{margin:20px}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mr-5{margin-right:20px}.ml-5{margin-left:20px}.mt-4{margin-top:16px}.mt-2{margin-top:8px}.mr-2{margin-right:8px}.ml-9{margin-left:36px}.mt-3{margin-top:12px}.mb-2{margin-bottom:8px}.flex{display:flex}.h-full{height:100%}.h-8{height:32px}.h-max{height:-moz-max-content;height:max-content}.h-10{height:40px}.h-16{height:64px}.h-5{height:20px}.h-6{height:24px}.h-\\[100\\%\\]{height:100%}.h-\\[90\\%\\]{height:90%}.h-\\[694px\\]{height:694px}.\\!h-\\[64px\\]{height:64px!important}.h-\\[630px\\]{height:630px}.h-4{height:16px}.h-32{height:8rem}.max-h-\\[144px\\]{max-height:144px}.w-full{width:100%}.w-8{width:32px}.w-10{width:40px}.w-5{width:20px}.w-6{width:24px}.w-11\\/12{width:91.666667%}.w-\\[372px\\]{width:372px}.w-48{width:12rem}.w-16{width:64px}.flex-none{flex:none}.flex-1{flex:1 1 0%}.scale-\\[0\\.3\\]{--tw-scale-x: .3;--tw-scale-y: .3;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-50{--tw-scale-x: .5;--tw-scale-y: .5;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-none{resize:none}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse: 0;margin-right:calc(16px * var(--tw-space-x-reverse));margin-left:calc(16px * calc(1 - var(--tw-space-x-reverse)))}.self-end{align-self:flex-end}.overflow-auto{overflow:auto}.overflow-y-auto{overflow-y:auto}.rounded-full{border-radius:9999px}.rounded-2xl{border-radius:1rem}.rounded-md{border-radius:.375rem}.rounded-r-lg{border-top-right-radius:.5rem;border-bottom-right-radius:.5rem}.rounded-l-lg{border-top-left-radius:.5rem;border-bottom-left-radius:.5rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.rounded-tl-lg{border-top-left-radius:.5rem}.rounded-tr-lg{border-top-right-radius:.5rem}.border-0{border-width:0px}.border-b-2{border-bottom-width:2px}.border-none{border-style:none}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-\\[\\#DDE2EB\\]{--tw-bg-opacity: 1;background-color:rgb(221 226 235 / var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-white\\/50{background-color:#ffffff80}.bg-black\\/30{background-color:#0000004d}.bg-black\\/60{background-color:#0009}.bg-primary\\/70{background-color:hsl(var(--p) / .7)}.p-4{padding:16px}.px-5{padding-left:20px;padding-right:20px}.py-4{padding-top:16px;padding-bottom:16px}.px-3{padding-left:12px;padding-right:12px}.py-3{padding-top:12px;padding-bottom:12px}.py-2{padding-top:8px;padding-bottom:8px}.px-4{padding-left:16px;padding-right:16px}.pr-4{padding-right:16px}.pt-3{padding-top:12px}.pt-0{padding-top:0}.pb-3{padding-bottom:12px}.text-center{text-align:center}.align-middle{vertical-align:middle}.\\!font-sans{font-family:Nunito!important}.text-xs{font-size:12px;line-height:16px}.text-xl{font-size:20px;line-height:28px}.text-lg{font-size:18px;line-height:28px}.text-\\[16px\\]{font-size:16px}.text-base{font-size:16px;line-height:24px}.\\!text-base{font-size:16px!important;line-height:24px!important}.font-bold{font-weight:700}.leading-\\[24px\\]{line-height:24px}.leading-6{line-height:1.5rem}.leading-5{line-height:1.25rem}.\\!leading-\\[24px\\]{line-height:24px!important}.text-black{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-white\\/40{color:#fff6}.text-neutral{--tw-text-opacity: 1;color:hsl(var(--n) / var(--tw-text-opacity))}.text-opacity-60{--tw-text-opacity: .6}.opacity-50{opacity:.5}.shadow-xl{--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.blur{--tw-blur: blur(8px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-2xl{--tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / .15));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur: blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.line-clamp-6{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6}.lds-ellipsis{display:inline-block;position:relative;width:20px;height:20px}.lds-ellipsis div{position:absolute;top:33px;width:13px;height:13px;border-radius:50%;background:#4fafe4;animation-timing-function:cubic-bezier(0,1,1,0)}.lds-ellipsis div:nth-child(1){left:8px;animation:lds-ellipsis1 .6s infinite}.lds-ellipsis div:nth-child(2){left:8px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(3){left:32px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(4){left:56px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}to{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0)}to{transform:translate(24px)}}.btn-ghost{border-width:1px;border-color:transparent;background-color:transparent;color:currentColor}.btn-ghost:hover,.btn-ghost.btn-active{--tw-border-opacity: 0;background-color:hsl(222 66% 82% / var(--tw-bg-opacity));--tw-bg-opacity: .2;border-width:0}.btn-ghost:focus-visible{outline:2px solid currentColor}.drawer-toggle:focus-visible~.drawer-content .drawer-button.btn-ghost{outline:2px solid currentColor}.hover\\:scale-105:hover{--tw-scale-x: 1.05;--tw-scale-y: 1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\\:\\!border-none:hover{border-style:none!important}.hover\\:bg-gray-50:hover{--tw-bg-opacity: 1;background-color:rgb(249 250 251 / var(--tw-bg-opacity))}.hover\\:text-neutral:hover{--tw-text-opacity: 1;color:hsl(var(--n) / var(--tw-text-opacity))}.focus\\:\\!border-none:focus{border-style:none!important}.focus\\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\\:text-opacity-100{--tw-text-opacity: 1}
-`]]]));La(Rs);async function zh(t="monoloq-widget"){console.log("Installing widget...");const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Nunito&display=swap",e.rel="stylesheet",document.head.appendChild(e);let r={};try{r=await(await fetch(`${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings/appearance?host_domain=${$r("appearance")}`)).json()}catch(o){console.error("Failed to fetch widget config",o)}customElements.define(t,Ds),document.body.appendChild(new Ds({...r})),console.info("Monoloq widget registered.")}zh().then().catch(console.error)});
+    /**
+     * Make a map and return a function for checking if a key
+     * is in that map.
+     * IMPORTANT: all calls of this function must be prefixed with
+     * \/\*#\_\_PURE\_\_\*\/
+     * So that rollup can tree-shake them if necessary.
+     */
+    function makeMap(str, expectsLowerCase) {
+        const map = Object.create(null);
+        const list = str.split(',');
+        for (let i = 0; i < list.length; i++) {
+            map[list[i]] = true;
+        }
+        return expectsLowerCase ? val => !!map[val.toLowerCase()] : val => !!map[val];
+    }
+
+    function normalizeStyle(value) {
+        if (isArray$2(value)) {
+            const res = {};
+            for (let i = 0; i < value.length; i++) {
+                const item = value[i];
+                const normalized = isString$2(item)
+                    ? parseStringStyle(item)
+                    : normalizeStyle(item);
+                if (normalized) {
+                    for (const key in normalized) {
+                        res[key] = normalized[key];
+                    }
+                }
+            }
+            return res;
+        }
+        else if (isString$2(value)) {
+            return value;
+        }
+        else if (isObject$1(value)) {
+            return value;
+        }
+    }
+    const listDelimiterRE = /;(?![^(]*\))/g;
+    const propertyDelimiterRE = /:([^]+)/;
+    const styleCommentRE = /\/\*.*?\*\//gs;
+    function parseStringStyle(cssText) {
+        const ret = {};
+        cssText
+            .replace(styleCommentRE, '')
+            .split(listDelimiterRE)
+            .forEach(item => {
+            if (item) {
+                const tmp = item.split(propertyDelimiterRE);
+                tmp.length > 1 && (ret[tmp[0].trim()] = tmp[1].trim());
+            }
+        });
+        return ret;
+    }
+    function normalizeClass(value) {
+        let res = '';
+        if (isString$2(value)) {
+            res = value;
+        }
+        else if (isArray$2(value)) {
+            for (let i = 0; i < value.length; i++) {
+                const normalized = normalizeClass(value[i]);
+                if (normalized) {
+                    res += normalized + ' ';
+                }
+            }
+        }
+        else if (isObject$1(value)) {
+            for (const name in value) {
+                if (value[name]) {
+                    res += name + ' ';
+                }
+            }
+        }
+        return res.trim();
+    }
+
+    /**
+     * On the client we only need to offer special cases for boolean attributes that
+     * have different names from their corresponding dom properties:
+     * - itemscope -> N/A
+     * - allowfullscreen -> allowFullscreen
+     * - formnovalidate -> formNoValidate
+     * - ismap -> isMap
+     * - nomodule -> noModule
+     * - novalidate -> noValidate
+     * - readonly -> readOnly
+     */
+    const specialBooleanAttrs = `itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly`;
+    const isSpecialBooleanAttr = /*#__PURE__*/ makeMap(specialBooleanAttrs);
+    /**
+     * Boolean attributes should be included if the value is truthy or ''.
+     * e.g. `<select multiple>` compiles to `{ multiple: '' }`
+     */
+    function includeBooleanAttr(value) {
+        return !!value || value === '';
+    }
+
+    /**
+     * For converting {{ interpolation }} values to displayed strings.
+     * @private
+     */
+    const toDisplayString = (val) => {
+        return isString$2(val)
+            ? val
+            : val == null
+                ? ''
+                : isArray$2(val) ||
+                    (isObject$1(val) &&
+                        (val.toString === objectToString || !isFunction$1(val.toString)))
+                    ? JSON.stringify(val, replacer, 2)
+                    : String(val);
+    };
+    const replacer = (_key, val) => {
+        // can't use isRef here since @vue/shared has no deps
+        if (val && val.__v_isRef) {
+            return replacer(_key, val.value);
+        }
+        else if (isMap(val)) {
+            return {
+                [`Map(${val.size})`]: [...val.entries()].reduce((entries, [key, val]) => {
+                    entries[`${key} =>`] = val;
+                    return entries;
+                }, {})
+            };
+        }
+        else if (isSet(val)) {
+            return {
+                [`Set(${val.size})`]: [...val.values()]
+            };
+        }
+        else if (isObject$1(val) && !isArray$2(val) && !isPlainObject(val)) {
+            return String(val);
+        }
+        return val;
+    };
+
+    const EMPTY_OBJ = Object.freeze({})
+        ;
+    const EMPTY_ARR = Object.freeze([]) ;
+    const NOOP = () => { };
+    /**
+     * Always return false.
+     */
+    const NO = () => false;
+    const onRE = /^on[^a-z]/;
+    const isOn = (key) => onRE.test(key);
+    const isModelListener = (key) => key.startsWith('onUpdate:');
+    const extend = Object.assign;
+    const remove = (arr, el) => {
+        const i = arr.indexOf(el);
+        if (i > -1) {
+            arr.splice(i, 1);
+        }
+    };
+    const hasOwnProperty$1 = Object.prototype.hasOwnProperty;
+    const hasOwn = (val, key) => hasOwnProperty$1.call(val, key);
+    const isArray$2 = Array.isArray;
+    const isMap = (val) => toTypeString(val) === '[object Map]';
+    const isSet = (val) => toTypeString(val) === '[object Set]';
+    const isFunction$1 = (val) => typeof val === 'function';
+    const isString$2 = (val) => typeof val === 'string';
+    const isSymbol = (val) => typeof val === 'symbol';
+    const isObject$1 = (val) => val !== null && typeof val === 'object';
+    const isPromise = (val) => {
+        return isObject$1(val) && isFunction$1(val.then) && isFunction$1(val.catch);
+    };
+    const objectToString = Object.prototype.toString;
+    const toTypeString = (value) => objectToString.call(value);
+    const toRawType = (value) => {
+        // extract "RawType" from strings like "[object RawType]"
+        return toTypeString(value).slice(8, -1);
+    };
+    const isPlainObject = (val) => toTypeString(val) === '[object Object]';
+    const isIntegerKey = (key) => isString$2(key) &&
+        key !== 'NaN' &&
+        key[0] !== '-' &&
+        '' + parseInt(key, 10) === key;
+    const isReservedProp = /*#__PURE__*/ makeMap(
+    // the leading comma is intentional so empty string "" is also included
+    ',key,ref,ref_for,ref_key,' +
+        'onVnodeBeforeMount,onVnodeMounted,' +
+        'onVnodeBeforeUpdate,onVnodeUpdated,' +
+        'onVnodeBeforeUnmount,onVnodeUnmounted');
+    const isBuiltInDirective = /*#__PURE__*/ makeMap('bind,cloak,else-if,else,for,html,if,model,on,once,pre,show,slot,text,memo');
+    const cacheStringFunction = (fn) => {
+        const cache = Object.create(null);
+        return ((str) => {
+            const hit = cache[str];
+            return hit || (cache[str] = fn(str));
+        });
+    };
+    const camelizeRE = /-(\w)/g;
+    /**
+     * @private
+     */
+    const camelize = cacheStringFunction((str) => {
+        return str.replace(camelizeRE, (_, c) => (c ? c.toUpperCase() : ''));
+    });
+    const hyphenateRE = /\B([A-Z])/g;
+    /**
+     * @private
+     */
+    const hyphenate = cacheStringFunction((str) => str.replace(hyphenateRE, '-$1').toLowerCase());
+    /**
+     * @private
+     */
+    const capitalize = cacheStringFunction((str) => str.charAt(0).toUpperCase() + str.slice(1));
+    /**
+     * @private
+     */
+    const toHandlerKey = cacheStringFunction((str) => str ? `on${capitalize(str)}` : ``);
+    // compare whether a value has changed, accounting for NaN.
+    const hasChanged = (value, oldValue) => !Object.is(value, oldValue);
+    const invokeArrayFns = (fns, arg) => {
+        for (let i = 0; i < fns.length; i++) {
+            fns[i](arg);
+        }
+    };
+    const def = (obj, key, value) => {
+        Object.defineProperty(obj, key, {
+            configurable: true,
+            enumerable: false,
+            value
+        });
+    };
+    const toNumber = (val) => {
+        const n = parseFloat(val);
+        return isNaN(n) ? val : n;
+    };
+    let _globalThis;
+    const getGlobalThis = () => {
+        return (_globalThis ||
+            (_globalThis =
+                typeof globalThis !== 'undefined'
+                    ? globalThis
+                    : typeof self !== 'undefined'
+                        ? self
+                        : typeof window !== 'undefined'
+                            ? window
+                            : typeof global !== 'undefined'
+                                ? global
+                                : {}));
+    };
+
+    function warn$1(msg, ...args) {
+        console.warn(`[Vue warn] ${msg}`, ...args);
+    }
+
+    let activeEffectScope;
+    class EffectScope {
+        constructor(detached = false) {
+            this.detached = detached;
+            /**
+             * @internal
+             */
+            this.active = true;
+            /**
+             * @internal
+             */
+            this.effects = [];
+            /**
+             * @internal
+             */
+            this.cleanups = [];
+            this.parent = activeEffectScope;
+            if (!detached && activeEffectScope) {
+                this.index =
+                    (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(this) - 1;
+            }
+        }
+        run(fn) {
+            if (this.active) {
+                const currentEffectScope = activeEffectScope;
+                try {
+                    activeEffectScope = this;
+                    return fn();
+                }
+                finally {
+                    activeEffectScope = currentEffectScope;
+                }
+            }
+            else {
+                warn$1(`cannot run an inactive effect scope.`);
+            }
+        }
+        /**
+         * This should only be called on non-detached scopes
+         * @internal
+         */
+        on() {
+            activeEffectScope = this;
+        }
+        /**
+         * This should only be called on non-detached scopes
+         * @internal
+         */
+        off() {
+            activeEffectScope = this.parent;
+        }
+        stop(fromParent) {
+            if (this.active) {
+                let i, l;
+                for (i = 0, l = this.effects.length; i < l; i++) {
+                    this.effects[i].stop();
+                }
+                for (i = 0, l = this.cleanups.length; i < l; i++) {
+                    this.cleanups[i]();
+                }
+                if (this.scopes) {
+                    for (i = 0, l = this.scopes.length; i < l; i++) {
+                        this.scopes[i].stop(true);
+                    }
+                }
+                // nested scope, dereference from parent to avoid memory leaks
+                if (!this.detached && this.parent && !fromParent) {
+                    // optimized O(1) removal
+                    const last = this.parent.scopes.pop();
+                    if (last && last !== this) {
+                        this.parent.scopes[this.index] = last;
+                        last.index = this.index;
+                    }
+                }
+                this.parent = undefined;
+                this.active = false;
+            }
+        }
+    }
+    function recordEffectScope(effect, scope = activeEffectScope) {
+        if (scope && scope.active) {
+            scope.effects.push(effect);
+        }
+    }
+    function getCurrentScope() {
+        return activeEffectScope;
+    }
+    function onScopeDispose(fn) {
+        if (activeEffectScope) {
+            activeEffectScope.cleanups.push(fn);
+        }
+        else {
+            warn$1(`onScopeDispose() is called when there is no active effect scope` +
+                ` to be associated with.`);
+        }
+    }
+
+    const createDep = (effects) => {
+        const dep = new Set(effects);
+        dep.w = 0;
+        dep.n = 0;
+        return dep;
+    };
+    const wasTracked = (dep) => (dep.w & trackOpBit) > 0;
+    const newTracked = (dep) => (dep.n & trackOpBit) > 0;
+    const initDepMarkers = ({ deps }) => {
+        if (deps.length) {
+            for (let i = 0; i < deps.length; i++) {
+                deps[i].w |= trackOpBit; // set was tracked
+            }
+        }
+    };
+    const finalizeDepMarkers = (effect) => {
+        const { deps } = effect;
+        if (deps.length) {
+            let ptr = 0;
+            for (let i = 0; i < deps.length; i++) {
+                const dep = deps[i];
+                if (wasTracked(dep) && !newTracked(dep)) {
+                    dep.delete(effect);
+                }
+                else {
+                    deps[ptr++] = dep;
+                }
+                // clear bits
+                dep.w &= ~trackOpBit;
+                dep.n &= ~trackOpBit;
+            }
+            deps.length = ptr;
+        }
+    };
+
+    const targetMap = new WeakMap();
+    // The number of effects currently being tracked recursively.
+    let effectTrackDepth = 0;
+    let trackOpBit = 1;
+    /**
+     * The bitwise track markers support at most 30 levels of recursion.
+     * This value is chosen to enable modern JS engines to use a SMI on all platforms.
+     * When recursion depth is greater, fall back to using a full cleanup.
+     */
+    const maxMarkerBits = 30;
+    let activeEffect;
+    const ITERATE_KEY = Symbol('iterate' );
+    const MAP_KEY_ITERATE_KEY = Symbol('Map key iterate' );
+    class ReactiveEffect {
+        constructor(fn, scheduler = null, scope) {
+            this.fn = fn;
+            this.scheduler = scheduler;
+            this.active = true;
+            this.deps = [];
+            this.parent = undefined;
+            recordEffectScope(this, scope);
+        }
+        run() {
+            if (!this.active) {
+                return this.fn();
+            }
+            let parent = activeEffect;
+            let lastShouldTrack = shouldTrack;
+            while (parent) {
+                if (parent === this) {
+                    return;
+                }
+                parent = parent.parent;
+            }
+            try {
+                this.parent = activeEffect;
+                activeEffect = this;
+                shouldTrack = true;
+                trackOpBit = 1 << ++effectTrackDepth;
+                if (effectTrackDepth <= maxMarkerBits) {
+                    initDepMarkers(this);
+                }
+                else {
+                    cleanupEffect(this);
+                }
+                return this.fn();
+            }
+            finally {
+                if (effectTrackDepth <= maxMarkerBits) {
+                    finalizeDepMarkers(this);
+                }
+                trackOpBit = 1 << --effectTrackDepth;
+                activeEffect = this.parent;
+                shouldTrack = lastShouldTrack;
+                this.parent = undefined;
+                if (this.deferStop) {
+                    this.stop();
+                }
+            }
+        }
+        stop() {
+            // stopped while running itself - defer the cleanup
+            if (activeEffect === this) {
+                this.deferStop = true;
+            }
+            else if (this.active) {
+                cleanupEffect(this);
+                if (this.onStop) {
+                    this.onStop();
+                }
+                this.active = false;
+            }
+        }
+    }
+    function cleanupEffect(effect) {
+        const { deps } = effect;
+        if (deps.length) {
+            for (let i = 0; i < deps.length; i++) {
+                deps[i].delete(effect);
+            }
+            deps.length = 0;
+        }
+    }
+    let shouldTrack = true;
+    const trackStack = [];
+    function pauseTracking() {
+        trackStack.push(shouldTrack);
+        shouldTrack = false;
+    }
+    function resetTracking() {
+        const last = trackStack.pop();
+        shouldTrack = last === undefined ? true : last;
+    }
+    function track(target, type, key) {
+        if (shouldTrack && activeEffect) {
+            let depsMap = targetMap.get(target);
+            if (!depsMap) {
+                targetMap.set(target, (depsMap = new Map()));
+            }
+            let dep = depsMap.get(key);
+            if (!dep) {
+                depsMap.set(key, (dep = createDep()));
+            }
+            const eventInfo = { effect: activeEffect, target, type, key }
+                ;
+            trackEffects(dep, eventInfo);
+        }
+    }
+    function trackEffects(dep, debuggerEventExtraInfo) {
+        let shouldTrack = false;
+        if (effectTrackDepth <= maxMarkerBits) {
+            if (!newTracked(dep)) {
+                dep.n |= trackOpBit; // set newly tracked
+                shouldTrack = !wasTracked(dep);
+            }
+        }
+        else {
+            // Full cleanup mode.
+            shouldTrack = !dep.has(activeEffect);
+        }
+        if (shouldTrack) {
+            dep.add(activeEffect);
+            activeEffect.deps.push(dep);
+            if (activeEffect.onTrack) {
+                activeEffect.onTrack(Object.assign({ effect: activeEffect }, debuggerEventExtraInfo));
+            }
+        }
+    }
+    function trigger(target, type, key, newValue, oldValue, oldTarget) {
+        const depsMap = targetMap.get(target);
+        if (!depsMap) {
+            // never been tracked
+            return;
+        }
+        let deps = [];
+        if (type === "clear" /* TriggerOpTypes.CLEAR */) {
+            // collection being cleared
+            // trigger all effects for target
+            deps = [...depsMap.values()];
+        }
+        else if (key === 'length' && isArray$2(target)) {
+            const newLength = toNumber(newValue);
+            depsMap.forEach((dep, key) => {
+                if (key === 'length' || key >= newLength) {
+                    deps.push(dep);
+                }
+            });
+        }
+        else {
+            // schedule runs for SET | ADD | DELETE
+            if (key !== void 0) {
+                deps.push(depsMap.get(key));
+            }
+            // also run for iteration key on ADD | DELETE | Map.SET
+            switch (type) {
+                case "add" /* TriggerOpTypes.ADD */:
+                    if (!isArray$2(target)) {
+                        deps.push(depsMap.get(ITERATE_KEY));
+                        if (isMap(target)) {
+                            deps.push(depsMap.get(MAP_KEY_ITERATE_KEY));
+                        }
+                    }
+                    else if (isIntegerKey(key)) {
+                        // new index added to array -> length changes
+                        deps.push(depsMap.get('length'));
+                    }
+                    break;
+                case "delete" /* TriggerOpTypes.DELETE */:
+                    if (!isArray$2(target)) {
+                        deps.push(depsMap.get(ITERATE_KEY));
+                        if (isMap(target)) {
+                            deps.push(depsMap.get(MAP_KEY_ITERATE_KEY));
+                        }
+                    }
+                    break;
+                case "set" /* TriggerOpTypes.SET */:
+                    if (isMap(target)) {
+                        deps.push(depsMap.get(ITERATE_KEY));
+                    }
+                    break;
+            }
+        }
+        const eventInfo = { target, type, key, newValue, oldValue, oldTarget }
+            ;
+        if (deps.length === 1) {
+            if (deps[0]) {
+                {
+                    triggerEffects(deps[0], eventInfo);
+                }
+            }
+        }
+        else {
+            const effects = [];
+            for (const dep of deps) {
+                if (dep) {
+                    effects.push(...dep);
+                }
+            }
+            {
+                triggerEffects(createDep(effects), eventInfo);
+            }
+        }
+    }
+    function triggerEffects(dep, debuggerEventExtraInfo) {
+        // spread into array for stabilization
+        const effects = isArray$2(dep) ? dep : [...dep];
+        for (const effect of effects) {
+            if (effect.computed) {
+                triggerEffect(effect, debuggerEventExtraInfo);
+            }
+        }
+        for (const effect of effects) {
+            if (!effect.computed) {
+                triggerEffect(effect, debuggerEventExtraInfo);
+            }
+        }
+    }
+    function triggerEffect(effect, debuggerEventExtraInfo) {
+        if (effect !== activeEffect || effect.allowRecurse) {
+            if (effect.onTrigger) {
+                effect.onTrigger(extend({ effect }, debuggerEventExtraInfo));
+            }
+            if (effect.scheduler) {
+                effect.scheduler();
+            }
+            else {
+                effect.run();
+            }
+        }
+    }
+
+    const isNonTrackableKeys = /*#__PURE__*/ makeMap(`__proto__,__v_isRef,__isVue`);
+    const builtInSymbols = new Set(
+    /*#__PURE__*/
+    Object.getOwnPropertyNames(Symbol)
+        // ios10.x Object.getOwnPropertyNames(Symbol) can enumerate 'arguments' and 'caller'
+        // but accessing them on Symbol leads to TypeError because Symbol is a strict mode
+        // function
+        .filter(key => key !== 'arguments' && key !== 'caller')
+        .map(key => Symbol[key])
+        .filter(isSymbol));
+    const get = /*#__PURE__*/ createGetter();
+    const shallowGet = /*#__PURE__*/ createGetter(false, true);
+    const readonlyGet = /*#__PURE__*/ createGetter(true);
+    const shallowReadonlyGet = /*#__PURE__*/ createGetter(true, true);
+    const arrayInstrumentations = /*#__PURE__*/ createArrayInstrumentations();
+    function createArrayInstrumentations() {
+        const instrumentations = {};
+        ['includes', 'indexOf', 'lastIndexOf'].forEach(key => {
+            instrumentations[key] = function (...args) {
+                const arr = toRaw(this);
+                for (let i = 0, l = this.length; i < l; i++) {
+                    track(arr, "get" /* TrackOpTypes.GET */, i + '');
+                }
+                // we run the method using the original args first (which may be reactive)
+                const res = arr[key](...args);
+                if (res === -1 || res === false) {
+                    // if that didn't work, run it again using raw values.
+                    return arr[key](...args.map(toRaw));
+                }
+                else {
+                    return res;
+                }
+            };
+        });
+        ['push', 'pop', 'shift', 'unshift', 'splice'].forEach(key => {
+            instrumentations[key] = function (...args) {
+                pauseTracking();
+                const res = toRaw(this)[key].apply(this, args);
+                resetTracking();
+                return res;
+            };
+        });
+        return instrumentations;
+    }
+    function createGetter(isReadonly = false, shallow = false) {
+        return function get(target, key, receiver) {
+            if (key === "__v_isReactive" /* ReactiveFlags.IS_REACTIVE */) {
+                return !isReadonly;
+            }
+            else if (key === "__v_isReadonly" /* ReactiveFlags.IS_READONLY */) {
+                return isReadonly;
+            }
+            else if (key === "__v_isShallow" /* ReactiveFlags.IS_SHALLOW */) {
+                return shallow;
+            }
+            else if (key === "__v_raw" /* ReactiveFlags.RAW */ &&
+                receiver ===
+                    (isReadonly
+                        ? shallow
+                            ? shallowReadonlyMap
+                            : readonlyMap
+                        : shallow
+                            ? shallowReactiveMap
+                            : reactiveMap).get(target)) {
+                return target;
+            }
+            const targetIsArray = isArray$2(target);
+            if (!isReadonly && targetIsArray && hasOwn(arrayInstrumentations, key)) {
+                return Reflect.get(arrayInstrumentations, key, receiver);
+            }
+            const res = Reflect.get(target, key, receiver);
+            if (isSymbol(key) ? builtInSymbols.has(key) : isNonTrackableKeys(key)) {
+                return res;
+            }
+            if (!isReadonly) {
+                track(target, "get" /* TrackOpTypes.GET */, key);
+            }
+            if (shallow) {
+                return res;
+            }
+            if (isRef(res)) {
+                // ref unwrapping - skip unwrap for Array + integer key.
+                return targetIsArray && isIntegerKey(key) ? res : res.value;
+            }
+            if (isObject$1(res)) {
+                // Convert returned value into a proxy as well. we do the isObject check
+                // here to avoid invalid value warning. Also need to lazy access readonly
+                // and reactive here to avoid circular dependency.
+                return isReadonly ? readonly(res) : reactive(res);
+            }
+            return res;
+        };
+    }
+    const set = /*#__PURE__*/ createSetter();
+    const shallowSet = /*#__PURE__*/ createSetter(true);
+    function createSetter(shallow = false) {
+        return function set(target, key, value, receiver) {
+            let oldValue = target[key];
+            if (isReadonly(oldValue) && isRef(oldValue) && !isRef(value)) {
+                return false;
+            }
+            if (!shallow) {
+                if (!isShallow$1(value) && !isReadonly(value)) {
+                    oldValue = toRaw(oldValue);
+                    value = toRaw(value);
+                }
+                if (!isArray$2(target) && isRef(oldValue) && !isRef(value)) {
+                    oldValue.value = value;
+                    return true;
+                }
+            }
+            const hadKey = isArray$2(target) && isIntegerKey(key)
+                ? Number(key) < target.length
+                : hasOwn(target, key);
+            const result = Reflect.set(target, key, value, receiver);
+            // don't trigger if target is something up in the prototype chain of original
+            if (target === toRaw(receiver)) {
+                if (!hadKey) {
+                    trigger(target, "add" /* TriggerOpTypes.ADD */, key, value);
+                }
+                else if (hasChanged(value, oldValue)) {
+                    trigger(target, "set" /* TriggerOpTypes.SET */, key, value, oldValue);
+                }
+            }
+            return result;
+        };
+    }
+    function deleteProperty(target, key) {
+        const hadKey = hasOwn(target, key);
+        const oldValue = target[key];
+        const result = Reflect.deleteProperty(target, key);
+        if (result && hadKey) {
+            trigger(target, "delete" /* TriggerOpTypes.DELETE */, key, undefined, oldValue);
+        }
+        return result;
+    }
+    function has(target, key) {
+        const result = Reflect.has(target, key);
+        if (!isSymbol(key) || !builtInSymbols.has(key)) {
+            track(target, "has" /* TrackOpTypes.HAS */, key);
+        }
+        return result;
+    }
+    function ownKeys(target) {
+        track(target, "iterate" /* TrackOpTypes.ITERATE */, isArray$2(target) ? 'length' : ITERATE_KEY);
+        return Reflect.ownKeys(target);
+    }
+    const mutableHandlers = {
+        get,
+        set,
+        deleteProperty,
+        has,
+        ownKeys
+    };
+    const readonlyHandlers = {
+        get: readonlyGet,
+        set(target, key) {
+            {
+                warn$1(`Set operation on key "${String(key)}" failed: target is readonly.`, target);
+            }
+            return true;
+        },
+        deleteProperty(target, key) {
+            {
+                warn$1(`Delete operation on key "${String(key)}" failed: target is readonly.`, target);
+            }
+            return true;
+        }
+    };
+    const shallowReactiveHandlers = /*#__PURE__*/ extend({}, mutableHandlers, {
+        get: shallowGet,
+        set: shallowSet
+    });
+    // Props handlers are special in the sense that it should not unwrap top-level
+    // refs (in order to allow refs to be explicitly passed down), but should
+    // retain the reactivity of the normal readonly object.
+    const shallowReadonlyHandlers = /*#__PURE__*/ extend({}, readonlyHandlers, {
+        get: shallowReadonlyGet
+    });
+
+    const toShallow = (value) => value;
+    const getProto = (v) => Reflect.getPrototypeOf(v);
+    function get$1(target, key, isReadonly = false, isShallow = false) {
+        // #1772: readonly(reactive(Map)) should return readonly + reactive version
+        // of the value
+        target = target["__v_raw" /* ReactiveFlags.RAW */];
+        const rawTarget = toRaw(target);
+        const rawKey = toRaw(key);
+        if (!isReadonly) {
+            if (key !== rawKey) {
+                track(rawTarget, "get" /* TrackOpTypes.GET */, key);
+            }
+            track(rawTarget, "get" /* TrackOpTypes.GET */, rawKey);
+        }
+        const { has } = getProto(rawTarget);
+        const wrap = isShallow ? toShallow : isReadonly ? toReadonly : toReactive;
+        if (has.call(rawTarget, key)) {
+            return wrap(target.get(key));
+        }
+        else if (has.call(rawTarget, rawKey)) {
+            return wrap(target.get(rawKey));
+        }
+        else if (target !== rawTarget) {
+            // #3602 readonly(reactive(Map))
+            // ensure that the nested reactive `Map` can do tracking for itself
+            target.get(key);
+        }
+    }
+    function has$1(key, isReadonly = false) {
+        const target = this["__v_raw" /* ReactiveFlags.RAW */];
+        const rawTarget = toRaw(target);
+        const rawKey = toRaw(key);
+        if (!isReadonly) {
+            if (key !== rawKey) {
+                track(rawTarget, "has" /* TrackOpTypes.HAS */, key);
+            }
+            track(rawTarget, "has" /* TrackOpTypes.HAS */, rawKey);
+        }
+        return key === rawKey
+            ? target.has(key)
+            : target.has(key) || target.has(rawKey);
+    }
+    function size(target, isReadonly = false) {
+        target = target["__v_raw" /* ReactiveFlags.RAW */];
+        !isReadonly && track(toRaw(target), "iterate" /* TrackOpTypes.ITERATE */, ITERATE_KEY);
+        return Reflect.get(target, 'size', target);
+    }
+    function add(value) {
+        value = toRaw(value);
+        const target = toRaw(this);
+        const proto = getProto(target);
+        const hadKey = proto.has.call(target, value);
+        if (!hadKey) {
+            target.add(value);
+            trigger(target, "add" /* TriggerOpTypes.ADD */, value, value);
+        }
+        return this;
+    }
+    function set$1(key, value) {
+        value = toRaw(value);
+        const target = toRaw(this);
+        const { has, get } = getProto(target);
+        let hadKey = has.call(target, key);
+        if (!hadKey) {
+            key = toRaw(key);
+            hadKey = has.call(target, key);
+        }
+        else {
+            checkIdentityKeys(target, has, key);
+        }
+        const oldValue = get.call(target, key);
+        target.set(key, value);
+        if (!hadKey) {
+            trigger(target, "add" /* TriggerOpTypes.ADD */, key, value);
+        }
+        else if (hasChanged(value, oldValue)) {
+            trigger(target, "set" /* TriggerOpTypes.SET */, key, value, oldValue);
+        }
+        return this;
+    }
+    function deleteEntry(key) {
+        const target = toRaw(this);
+        const { has, get } = getProto(target);
+        let hadKey = has.call(target, key);
+        if (!hadKey) {
+            key = toRaw(key);
+            hadKey = has.call(target, key);
+        }
+        else {
+            checkIdentityKeys(target, has, key);
+        }
+        const oldValue = get ? get.call(target, key) : undefined;
+        // forward the operation before queueing reactions
+        const result = target.delete(key);
+        if (hadKey) {
+            trigger(target, "delete" /* TriggerOpTypes.DELETE */, key, undefined, oldValue);
+        }
+        return result;
+    }
+    function clear() {
+        const target = toRaw(this);
+        const hadItems = target.size !== 0;
+        const oldTarget = isMap(target)
+                ? new Map(target)
+                : new Set(target)
+            ;
+        // forward the operation before queueing reactions
+        const result = target.clear();
+        if (hadItems) {
+            trigger(target, "clear" /* TriggerOpTypes.CLEAR */, undefined, undefined, oldTarget);
+        }
+        return result;
+    }
+    function createForEach(isReadonly, isShallow) {
+        return function forEach(callback, thisArg) {
+            const observed = this;
+            const target = observed["__v_raw" /* ReactiveFlags.RAW */];
+            const rawTarget = toRaw(target);
+            const wrap = isShallow ? toShallow : isReadonly ? toReadonly : toReactive;
+            !isReadonly && track(rawTarget, "iterate" /* TrackOpTypes.ITERATE */, ITERATE_KEY);
+            return target.forEach((value, key) => {
+                // important: make sure the callback is
+                // 1. invoked with the reactive map as `this` and 3rd arg
+                // 2. the value received should be a corresponding reactive/readonly.
+                return callback.call(thisArg, wrap(value), wrap(key), observed);
+            });
+        };
+    }
+    function createIterableMethod(method, isReadonly, isShallow) {
+        return function (...args) {
+            const target = this["__v_raw" /* ReactiveFlags.RAW */];
+            const rawTarget = toRaw(target);
+            const targetIsMap = isMap(rawTarget);
+            const isPair = method === 'entries' || (method === Symbol.iterator && targetIsMap);
+            const isKeyOnly = method === 'keys' && targetIsMap;
+            const innerIterator = target[method](...args);
+            const wrap = isShallow ? toShallow : isReadonly ? toReadonly : toReactive;
+            !isReadonly &&
+                track(rawTarget, "iterate" /* TrackOpTypes.ITERATE */, isKeyOnly ? MAP_KEY_ITERATE_KEY : ITERATE_KEY);
+            // return a wrapped iterator which returns observed versions of the
+            // values emitted from the real iterator
+            return {
+                // iterator protocol
+                next() {
+                    const { value, done } = innerIterator.next();
+                    return done
+                        ? { value, done }
+                        : {
+                            value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
+                            done
+                        };
+                },
+                // iterable protocol
+                [Symbol.iterator]() {
+                    return this;
+                }
+            };
+        };
+    }
+    function createReadonlyMethod(type) {
+        return function (...args) {
+            {
+                const key = args[0] ? `on key "${args[0]}" ` : ``;
+                console.warn(`${capitalize(type)} operation ${key}failed: target is readonly.`, toRaw(this));
+            }
+            return type === "delete" /* TriggerOpTypes.DELETE */ ? false : this;
+        };
+    }
+    function createInstrumentations() {
+        const mutableInstrumentations = {
+            get(key) {
+                return get$1(this, key);
+            },
+            get size() {
+                return size(this);
+            },
+            has: has$1,
+            add,
+            set: set$1,
+            delete: deleteEntry,
+            clear,
+            forEach: createForEach(false, false)
+        };
+        const shallowInstrumentations = {
+            get(key) {
+                return get$1(this, key, false, true);
+            },
+            get size() {
+                return size(this);
+            },
+            has: has$1,
+            add,
+            set: set$1,
+            delete: deleteEntry,
+            clear,
+            forEach: createForEach(false, true)
+        };
+        const readonlyInstrumentations = {
+            get(key) {
+                return get$1(this, key, true);
+            },
+            get size() {
+                return size(this, true);
+            },
+            has(key) {
+                return has$1.call(this, key, true);
+            },
+            add: createReadonlyMethod("add" /* TriggerOpTypes.ADD */),
+            set: createReadonlyMethod("set" /* TriggerOpTypes.SET */),
+            delete: createReadonlyMethod("delete" /* TriggerOpTypes.DELETE */),
+            clear: createReadonlyMethod("clear" /* TriggerOpTypes.CLEAR */),
+            forEach: createForEach(true, false)
+        };
+        const shallowReadonlyInstrumentations = {
+            get(key) {
+                return get$1(this, key, true, true);
+            },
+            get size() {
+                return size(this, true);
+            },
+            has(key) {
+                return has$1.call(this, key, true);
+            },
+            add: createReadonlyMethod("add" /* TriggerOpTypes.ADD */),
+            set: createReadonlyMethod("set" /* TriggerOpTypes.SET */),
+            delete: createReadonlyMethod("delete" /* TriggerOpTypes.DELETE */),
+            clear: createReadonlyMethod("clear" /* TriggerOpTypes.CLEAR */),
+            forEach: createForEach(true, true)
+        };
+        const iteratorMethods = ['keys', 'values', 'entries', Symbol.iterator];
+        iteratorMethods.forEach(method => {
+            mutableInstrumentations[method] = createIterableMethod(method, false, false);
+            readonlyInstrumentations[method] = createIterableMethod(method, true, false);
+            shallowInstrumentations[method] = createIterableMethod(method, false, true);
+            shallowReadonlyInstrumentations[method] = createIterableMethod(method, true, true);
+        });
+        return [
+            mutableInstrumentations,
+            readonlyInstrumentations,
+            shallowInstrumentations,
+            shallowReadonlyInstrumentations
+        ];
+    }
+    const [mutableInstrumentations, readonlyInstrumentations, shallowInstrumentations, shallowReadonlyInstrumentations] = /* #__PURE__*/ createInstrumentations();
+    function createInstrumentationGetter(isReadonly, shallow) {
+        const instrumentations = shallow
+            ? isReadonly
+                ? shallowReadonlyInstrumentations
+                : shallowInstrumentations
+            : isReadonly
+                ? readonlyInstrumentations
+                : mutableInstrumentations;
+        return (target, key, receiver) => {
+            if (key === "__v_isReactive" /* ReactiveFlags.IS_REACTIVE */) {
+                return !isReadonly;
+            }
+            else if (key === "__v_isReadonly" /* ReactiveFlags.IS_READONLY */) {
+                return isReadonly;
+            }
+            else if (key === "__v_raw" /* ReactiveFlags.RAW */) {
+                return target;
+            }
+            return Reflect.get(hasOwn(instrumentations, key) && key in target
+                ? instrumentations
+                : target, key, receiver);
+        };
+    }
+    const mutableCollectionHandlers = {
+        get: /*#__PURE__*/ createInstrumentationGetter(false, false)
+    };
+    const shallowCollectionHandlers = {
+        get: /*#__PURE__*/ createInstrumentationGetter(false, true)
+    };
+    const readonlyCollectionHandlers = {
+        get: /*#__PURE__*/ createInstrumentationGetter(true, false)
+    };
+    const shallowReadonlyCollectionHandlers = {
+        get: /*#__PURE__*/ createInstrumentationGetter(true, true)
+    };
+    function checkIdentityKeys(target, has, key) {
+        const rawKey = toRaw(key);
+        if (rawKey !== key && has.call(target, rawKey)) {
+            const type = toRawType(target);
+            console.warn(`Reactive ${type} contains both the raw and reactive ` +
+                `versions of the same object${type === `Map` ? ` as keys` : ``}, ` +
+                `which can lead to inconsistencies. ` +
+                `Avoid differentiating between the raw and reactive versions ` +
+                `of an object and only use the reactive version if possible.`);
+        }
+    }
+
+    const reactiveMap = new WeakMap();
+    const shallowReactiveMap = new WeakMap();
+    const readonlyMap = new WeakMap();
+    const shallowReadonlyMap = new WeakMap();
+    function targetTypeMap(rawType) {
+        switch (rawType) {
+            case 'Object':
+            case 'Array':
+                return 1 /* TargetType.COMMON */;
+            case 'Map':
+            case 'Set':
+            case 'WeakMap':
+            case 'WeakSet':
+                return 2 /* TargetType.COLLECTION */;
+            default:
+                return 0 /* TargetType.INVALID */;
+        }
+    }
+    function getTargetType(value) {
+        return value["__v_skip" /* ReactiveFlags.SKIP */] || !Object.isExtensible(value)
+            ? 0 /* TargetType.INVALID */
+            : targetTypeMap(toRawType(value));
+    }
+    function reactive(target) {
+        // if trying to observe a readonly proxy, return the readonly version.
+        if (isReadonly(target)) {
+            return target;
+        }
+        return createReactiveObject(target, false, mutableHandlers, mutableCollectionHandlers, reactiveMap);
+    }
+    /**
+     * Return a shallowly-reactive copy of the original object, where only the root
+     * level properties are reactive. It also does not auto-unwrap refs (even at the
+     * root level).
+     */
+    function shallowReactive(target) {
+        return createReactiveObject(target, false, shallowReactiveHandlers, shallowCollectionHandlers, shallowReactiveMap);
+    }
+    /**
+     * Creates a readonly copy of the original object. Note the returned copy is not
+     * made reactive, but `readonly` can be called on an already reactive object.
+     */
+    function readonly(target) {
+        return createReactiveObject(target, true, readonlyHandlers, readonlyCollectionHandlers, readonlyMap);
+    }
+    /**
+     * Returns a reactive-copy of the original object, where only the root level
+     * properties are readonly, and does NOT unwrap refs nor recursively convert
+     * returned properties.
+     * This is used for creating the props proxy object for stateful components.
+     */
+    function shallowReadonly(target) {
+        return createReactiveObject(target, true, shallowReadonlyHandlers, shallowReadonlyCollectionHandlers, shallowReadonlyMap);
+    }
+    function createReactiveObject(target, isReadonly, baseHandlers, collectionHandlers, proxyMap) {
+        if (!isObject$1(target)) {
+            {
+                console.warn(`value cannot be made reactive: ${String(target)}`);
+            }
+            return target;
+        }
+        // target is already a Proxy, return it.
+        // exception: calling readonly() on a reactive object
+        if (target["__v_raw" /* ReactiveFlags.RAW */] &&
+            !(isReadonly && target["__v_isReactive" /* ReactiveFlags.IS_REACTIVE */])) {
+            return target;
+        }
+        // target already has corresponding Proxy
+        const existingProxy = proxyMap.get(target);
+        if (existingProxy) {
+            return existingProxy;
+        }
+        // only specific value types can be observed.
+        const targetType = getTargetType(target);
+        if (targetType === 0 /* TargetType.INVALID */) {
+            return target;
+        }
+        const proxy = new Proxy(target, targetType === 2 /* TargetType.COLLECTION */ ? collectionHandlers : baseHandlers);
+        proxyMap.set(target, proxy);
+        return proxy;
+    }
+    function isReactive(value) {
+        if (isReadonly(value)) {
+            return isReactive(value["__v_raw" /* ReactiveFlags.RAW */]);
+        }
+        return !!(value && value["__v_isReactive" /* ReactiveFlags.IS_REACTIVE */]);
+    }
+    function isReadonly(value) {
+        return !!(value && value["__v_isReadonly" /* ReactiveFlags.IS_READONLY */]);
+    }
+    function isShallow$1(value) {
+        return !!(value && value["__v_isShallow" /* ReactiveFlags.IS_SHALLOW */]);
+    }
+    function isProxy(value) {
+        return isReactive(value) || isReadonly(value);
+    }
+    function toRaw(observed) {
+        const raw = observed && observed["__v_raw" /* ReactiveFlags.RAW */];
+        return raw ? toRaw(raw) : observed;
+    }
+    function markRaw(value) {
+        def(value, "__v_skip" /* ReactiveFlags.SKIP */, true);
+        return value;
+    }
+    const toReactive = (value) => isObject$1(value) ? reactive(value) : value;
+    const toReadonly = (value) => isObject$1(value) ? readonly(value) : value;
+
+    function trackRefValue(ref) {
+        if (shouldTrack && activeEffect) {
+            ref = toRaw(ref);
+            {
+                trackEffects(ref.dep || (ref.dep = createDep()), {
+                    target: ref,
+                    type: "get" /* TrackOpTypes.GET */,
+                    key: 'value'
+                });
+            }
+        }
+    }
+    function triggerRefValue(ref, newVal) {
+        ref = toRaw(ref);
+        if (ref.dep) {
+            {
+                triggerEffects(ref.dep, {
+                    target: ref,
+                    type: "set" /* TriggerOpTypes.SET */,
+                    key: 'value',
+                    newValue: newVal
+                });
+            }
+        }
+    }
+    function isRef(r) {
+        return !!(r && r.__v_isRef === true);
+    }
+    function ref(value) {
+        return createRef(value, false);
+    }
+    function shallowRef(value) {
+        return createRef(value, true);
+    }
+    function createRef(rawValue, shallow) {
+        if (isRef(rawValue)) {
+            return rawValue;
+        }
+        return new RefImpl(rawValue, shallow);
+    }
+    class RefImpl {
+        constructor(value, __v_isShallow) {
+            this.__v_isShallow = __v_isShallow;
+            this.dep = undefined;
+            this.__v_isRef = true;
+            this._rawValue = __v_isShallow ? value : toRaw(value);
+            this._value = __v_isShallow ? value : toReactive(value);
+        }
+        get value() {
+            trackRefValue(this);
+            return this._value;
+        }
+        set value(newVal) {
+            const useDirectValue = this.__v_isShallow || isShallow$1(newVal) || isReadonly(newVal);
+            newVal = useDirectValue ? newVal : toRaw(newVal);
+            if (hasChanged(newVal, this._rawValue)) {
+                this._rawValue = newVal;
+                this._value = useDirectValue ? newVal : toReactive(newVal);
+                triggerRefValue(this, newVal);
+            }
+        }
+    }
+    function unref(ref) {
+        return isRef(ref) ? ref.value : ref;
+    }
+    const shallowUnwrapHandlers = {
+        get: (target, key, receiver) => unref(Reflect.get(target, key, receiver)),
+        set: (target, key, value, receiver) => {
+            const oldValue = target[key];
+            if (isRef(oldValue) && !isRef(value)) {
+                oldValue.value = value;
+                return true;
+            }
+            else {
+                return Reflect.set(target, key, value, receiver);
+            }
+        }
+    };
+    function proxyRefs(objectWithRefs) {
+        return isReactive(objectWithRefs)
+            ? objectWithRefs
+            : new Proxy(objectWithRefs, shallowUnwrapHandlers);
+    }
+    function toRefs(object) {
+        if (!isProxy(object)) {
+            console.warn(`toRefs() expects a reactive object but received a plain one.`);
+        }
+        const ret = isArray$2(object) ? new Array(object.length) : {};
+        for (const key in object) {
+            ret[key] = toRef(object, key);
+        }
+        return ret;
+    }
+    class ObjectRefImpl {
+        constructor(_object, _key, _defaultValue) {
+            this._object = _object;
+            this._key = _key;
+            this._defaultValue = _defaultValue;
+            this.__v_isRef = true;
+        }
+        get value() {
+            const val = this._object[this._key];
+            return val === undefined ? this._defaultValue : val;
+        }
+        set value(newVal) {
+            this._object[this._key] = newVal;
+        }
+    }
+    function toRef(object, key, defaultValue) {
+        const val = object[key];
+        return isRef(val)
+            ? val
+            : new ObjectRefImpl(object, key, defaultValue);
+    }
+
+    var _a$2;
+    class ComputedRefImpl {
+        constructor(getter, _setter, isReadonly, isSSR) {
+            this._setter = _setter;
+            this.dep = undefined;
+            this.__v_isRef = true;
+            this[_a$2] = false;
+            this._dirty = true;
+            this.effect = new ReactiveEffect(getter, () => {
+                if (!this._dirty) {
+                    this._dirty = true;
+                    triggerRefValue(this);
+                }
+            });
+            this.effect.computed = this;
+            this.effect.active = this._cacheable = !isSSR;
+            this["__v_isReadonly" /* ReactiveFlags.IS_READONLY */] = isReadonly;
+        }
+        get value() {
+            // the computed ref may get wrapped by other proxies e.g. readonly() #3376
+            const self = toRaw(this);
+            trackRefValue(self);
+            if (self._dirty || !self._cacheable) {
+                self._dirty = false;
+                self._value = self.effect.run();
+            }
+            return self._value;
+        }
+        set value(newValue) {
+            this._setter(newValue);
+        }
+    }
+    _a$2 = "__v_isReadonly" /* ReactiveFlags.IS_READONLY */;
+    function computed$1(getterOrOptions, debugOptions, isSSR = false) {
+        let getter;
+        let setter;
+        const onlyGetter = isFunction$1(getterOrOptions);
+        if (onlyGetter) {
+            getter = getterOrOptions;
+            setter = () => {
+                    console.warn('Write operation failed: computed value is readonly');
+                }
+                ;
+        }
+        else {
+            getter = getterOrOptions.get;
+            setter = getterOrOptions.set;
+        }
+        const cRef = new ComputedRefImpl(getter, setter, onlyGetter || !setter, isSSR);
+        if (debugOptions && !isSSR) {
+            cRef.effect.onTrack = debugOptions.onTrack;
+            cRef.effect.onTrigger = debugOptions.onTrigger;
+        }
+        return cRef;
+    }
+
+    const stack = [];
+    function pushWarningContext(vnode) {
+        stack.push(vnode);
+    }
+    function popWarningContext() {
+        stack.pop();
+    }
+    function warn(msg, ...args) {
+        // avoid props formatting or warn handler tracking deps that might be mutated
+        // during patch, leading to infinite recursion.
+        pauseTracking();
+        const instance = stack.length ? stack[stack.length - 1].component : null;
+        const appWarnHandler = instance && instance.appContext.config.warnHandler;
+        const trace = getComponentTrace();
+        if (appWarnHandler) {
+            callWithErrorHandling(appWarnHandler, instance, 11 /* ErrorCodes.APP_WARN_HANDLER */, [
+                msg + args.join(''),
+                instance && instance.proxy,
+                trace
+                    .map(({ vnode }) => `at <${formatComponentName(instance, vnode.type)}>`)
+                    .join('\n'),
+                trace
+            ]);
+        }
+        else {
+            const warnArgs = [`[Vue warn]: ${msg}`, ...args];
+            /* istanbul ignore if */
+            if (trace.length &&
+                // avoid spamming console during tests
+                !false) {
+                warnArgs.push(`\n`, ...formatTrace(trace));
+            }
+            console.warn(...warnArgs);
+        }
+        resetTracking();
+    }
+    function getComponentTrace() {
+        let currentVNode = stack[stack.length - 1];
+        if (!currentVNode) {
+            return [];
+        }
+        // we can't just use the stack because it will be incomplete during updates
+        // that did not start from the root. Re-construct the parent chain using
+        // instance parent pointers.
+        const normalizedStack = [];
+        while (currentVNode) {
+            const last = normalizedStack[0];
+            if (last && last.vnode === currentVNode) {
+                last.recurseCount++;
+            }
+            else {
+                normalizedStack.push({
+                    vnode: currentVNode,
+                    recurseCount: 0
+                });
+            }
+            const parentInstance = currentVNode.component && currentVNode.component.parent;
+            currentVNode = parentInstance && parentInstance.vnode;
+        }
+        return normalizedStack;
+    }
+    /* istanbul ignore next */
+    function formatTrace(trace) {
+        const logs = [];
+        trace.forEach((entry, i) => {
+            logs.push(...(i === 0 ? [] : [`\n`]), ...formatTraceEntry(entry));
+        });
+        return logs;
+    }
+    function formatTraceEntry({ vnode, recurseCount }) {
+        const postfix = recurseCount > 0 ? `... (${recurseCount} recursive calls)` : ``;
+        const isRoot = vnode.component ? vnode.component.parent == null : false;
+        const open = ` at <${formatComponentName(vnode.component, vnode.type, isRoot)}`;
+        const close = `>` + postfix;
+        return vnode.props
+            ? [open, ...formatProps(vnode.props), close]
+            : [open + close];
+    }
+    /* istanbul ignore next */
+    function formatProps(props) {
+        const res = [];
+        const keys = Object.keys(props);
+        keys.slice(0, 3).forEach(key => {
+            res.push(...formatProp(key, props[key]));
+        });
+        if (keys.length > 3) {
+            res.push(` ...`);
+        }
+        return res;
+    }
+    /* istanbul ignore next */
+    function formatProp(key, value, raw) {
+        if (isString$2(value)) {
+            value = JSON.stringify(value);
+            return raw ? value : [`${key}=${value}`];
+        }
+        else if (typeof value === 'number' ||
+            typeof value === 'boolean' ||
+            value == null) {
+            return raw ? value : [`${key}=${value}`];
+        }
+        else if (isRef(value)) {
+            value = formatProp(key, toRaw(value.value), true);
+            return raw ? value : [`${key}=Ref<`, value, `>`];
+        }
+        else if (isFunction$1(value)) {
+            return [`${key}=fn${value.name ? `<${value.name}>` : ``}`];
+        }
+        else {
+            value = toRaw(value);
+            return raw ? value : [`${key}=`, value];
+        }
+    }
+
+    const ErrorTypeStrings = {
+        ["sp" /* LifecycleHooks.SERVER_PREFETCH */]: 'serverPrefetch hook',
+        ["bc" /* LifecycleHooks.BEFORE_CREATE */]: 'beforeCreate hook',
+        ["c" /* LifecycleHooks.CREATED */]: 'created hook',
+        ["bm" /* LifecycleHooks.BEFORE_MOUNT */]: 'beforeMount hook',
+        ["m" /* LifecycleHooks.MOUNTED */]: 'mounted hook',
+        ["bu" /* LifecycleHooks.BEFORE_UPDATE */]: 'beforeUpdate hook',
+        ["u" /* LifecycleHooks.UPDATED */]: 'updated',
+        ["bum" /* LifecycleHooks.BEFORE_UNMOUNT */]: 'beforeUnmount hook',
+        ["um" /* LifecycleHooks.UNMOUNTED */]: 'unmounted hook',
+        ["a" /* LifecycleHooks.ACTIVATED */]: 'activated hook',
+        ["da" /* LifecycleHooks.DEACTIVATED */]: 'deactivated hook',
+        ["ec" /* LifecycleHooks.ERROR_CAPTURED */]: 'errorCaptured hook',
+        ["rtc" /* LifecycleHooks.RENDER_TRACKED */]: 'renderTracked hook',
+        ["rtg" /* LifecycleHooks.RENDER_TRIGGERED */]: 'renderTriggered hook',
+        [0 /* ErrorCodes.SETUP_FUNCTION */]: 'setup function',
+        [1 /* ErrorCodes.RENDER_FUNCTION */]: 'render function',
+        [2 /* ErrorCodes.WATCH_GETTER */]: 'watcher getter',
+        [3 /* ErrorCodes.WATCH_CALLBACK */]: 'watcher callback',
+        [4 /* ErrorCodes.WATCH_CLEANUP */]: 'watcher cleanup function',
+        [5 /* ErrorCodes.NATIVE_EVENT_HANDLER */]: 'native event handler',
+        [6 /* ErrorCodes.COMPONENT_EVENT_HANDLER */]: 'component event handler',
+        [7 /* ErrorCodes.VNODE_HOOK */]: 'vnode hook',
+        [8 /* ErrorCodes.DIRECTIVE_HOOK */]: 'directive hook',
+        [9 /* ErrorCodes.TRANSITION_HOOK */]: 'transition hook',
+        [10 /* ErrorCodes.APP_ERROR_HANDLER */]: 'app errorHandler',
+        [11 /* ErrorCodes.APP_WARN_HANDLER */]: 'app warnHandler',
+        [12 /* ErrorCodes.FUNCTION_REF */]: 'ref function',
+        [13 /* ErrorCodes.ASYNC_COMPONENT_LOADER */]: 'async component loader',
+        [14 /* ErrorCodes.SCHEDULER */]: 'scheduler flush. This is likely a Vue internals bug. ' +
+            'Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/core'
+    };
+    function callWithErrorHandling(fn, instance, type, args) {
+        let res;
+        try {
+            res = args ? fn(...args) : fn();
+        }
+        catch (err) {
+            handleError(err, instance, type);
+        }
+        return res;
+    }
+    function callWithAsyncErrorHandling(fn, instance, type, args) {
+        if (isFunction$1(fn)) {
+            const res = callWithErrorHandling(fn, instance, type, args);
+            if (res && isPromise(res)) {
+                res.catch(err => {
+                    handleError(err, instance, type);
+                });
+            }
+            return res;
+        }
+        const values = [];
+        for (let i = 0; i < fn.length; i++) {
+            values.push(callWithAsyncErrorHandling(fn[i], instance, type, args));
+        }
+        return values;
+    }
+    function handleError(err, instance, type, throwInDev = true) {
+        const contextVNode = instance ? instance.vnode : null;
+        if (instance) {
+            let cur = instance.parent;
+            // the exposed instance is the render proxy to keep it consistent with 2.x
+            const exposedInstance = instance.proxy;
+            // in production the hook receives only the error code
+            const errorInfo = ErrorTypeStrings[type] ;
+            while (cur) {
+                const errorCapturedHooks = cur.ec;
+                if (errorCapturedHooks) {
+                    for (let i = 0; i < errorCapturedHooks.length; i++) {
+                        if (errorCapturedHooks[i](err, exposedInstance, errorInfo) === false) {
+                            return;
+                        }
+                    }
+                }
+                cur = cur.parent;
+            }
+            // app-level handling
+            const appErrorHandler = instance.appContext.config.errorHandler;
+            if (appErrorHandler) {
+                callWithErrorHandling(appErrorHandler, null, 10 /* ErrorCodes.APP_ERROR_HANDLER */, [err, exposedInstance, errorInfo]);
+                return;
+            }
+        }
+        logError(err, type, contextVNode, throwInDev);
+    }
+    function logError(err, type, contextVNode, throwInDev = true) {
+        {
+            const info = ErrorTypeStrings[type];
+            if (contextVNode) {
+                pushWarningContext(contextVNode);
+            }
+            warn(`Unhandled error${info ? ` during execution of ${info}` : ``}`);
+            if (contextVNode) {
+                popWarningContext();
+            }
+            // crash in dev by default so it's more noticeable
+            if (throwInDev) {
+                throw err;
+            }
+            else {
+                console.error(err);
+            }
+        }
+    }
+
+    let isFlushing = false;
+    let isFlushPending = false;
+    const queue = [];
+    let flushIndex = 0;
+    const pendingPostFlushCbs = [];
+    let activePostFlushCbs = null;
+    let postFlushIndex = 0;
+    const resolvedPromise = /*#__PURE__*/ Promise.resolve();
+    let currentFlushPromise = null;
+    const RECURSION_LIMIT = 100;
+    function nextTick(fn) {
+        const p = currentFlushPromise || resolvedPromise;
+        return fn ? p.then(this ? fn.bind(this) : fn) : p;
+    }
+    // #2768
+    // Use binary-search to find a suitable position in the queue,
+    // so that the queue maintains the increasing order of job's id,
+    // which can prevent the job from being skipped and also can avoid repeated patching.
+    function findInsertionIndex(id) {
+        // the start index should be `flushIndex + 1`
+        let start = flushIndex + 1;
+        let end = queue.length;
+        while (start < end) {
+            const middle = (start + end) >>> 1;
+            const middleJobId = getId(queue[middle]);
+            middleJobId < id ? (start = middle + 1) : (end = middle);
+        }
+        return start;
+    }
+    function queueJob(job) {
+        // the dedupe search uses the startIndex argument of Array.includes()
+        // by default the search index includes the current job that is being run
+        // so it cannot recursively trigger itself again.
+        // if the job is a watch() callback, the search will start with a +1 index to
+        // allow it recursively trigger itself - it is the user's responsibility to
+        // ensure it doesn't end up in an infinite loop.
+        if (!queue.length ||
+            !queue.includes(job, isFlushing && job.allowRecurse ? flushIndex + 1 : flushIndex)) {
+            if (job.id == null) {
+                queue.push(job);
+            }
+            else {
+                queue.splice(findInsertionIndex(job.id), 0, job);
+            }
+            queueFlush();
+        }
+    }
+    function queueFlush() {
+        if (!isFlushing && !isFlushPending) {
+            isFlushPending = true;
+            currentFlushPromise = resolvedPromise.then(flushJobs);
+        }
+    }
+    function invalidateJob(job) {
+        const i = queue.indexOf(job);
+        if (i > flushIndex) {
+            queue.splice(i, 1);
+        }
+    }
+    function queuePostFlushCb(cb) {
+        if (!isArray$2(cb)) {
+            if (!activePostFlushCbs ||
+                !activePostFlushCbs.includes(cb, cb.allowRecurse ? postFlushIndex + 1 : postFlushIndex)) {
+                pendingPostFlushCbs.push(cb);
+            }
+        }
+        else {
+            // if cb is an array, it is a component lifecycle hook which can only be
+            // triggered by a job, which is already deduped in the main queue, so
+            // we can skip duplicate check here to improve perf
+            pendingPostFlushCbs.push(...cb);
+        }
+        queueFlush();
+    }
+    function flushPreFlushCbs(seen, 
+    // if currently flushing, skip the current job itself
+    i = isFlushing ? flushIndex + 1 : 0) {
+        {
+            seen = seen || new Map();
+        }
+        for (; i < queue.length; i++) {
+            const cb = queue[i];
+            if (cb && cb.pre) {
+                if (checkRecursiveUpdates(seen, cb)) {
+                    continue;
+                }
+                queue.splice(i, 1);
+                i--;
+                cb();
+            }
+        }
+    }
+    function flushPostFlushCbs(seen) {
+        if (pendingPostFlushCbs.length) {
+            const deduped = [...new Set(pendingPostFlushCbs)];
+            pendingPostFlushCbs.length = 0;
+            // #1947 already has active queue, nested flushPostFlushCbs call
+            if (activePostFlushCbs) {
+                activePostFlushCbs.push(...deduped);
+                return;
+            }
+            activePostFlushCbs = deduped;
+            {
+                seen = seen || new Map();
+            }
+            activePostFlushCbs.sort((a, b) => getId(a) - getId(b));
+            for (postFlushIndex = 0; postFlushIndex < activePostFlushCbs.length; postFlushIndex++) {
+                if (checkRecursiveUpdates(seen, activePostFlushCbs[postFlushIndex])) {
+                    continue;
+                }
+                activePostFlushCbs[postFlushIndex]();
+            }
+            activePostFlushCbs = null;
+            postFlushIndex = 0;
+        }
+    }
+    const getId = (job) => job.id == null ? Infinity : job.id;
+    const comparator = (a, b) => {
+        const diff = getId(a) - getId(b);
+        if (diff === 0) {
+            if (a.pre && !b.pre)
+                return -1;
+            if (b.pre && !a.pre)
+                return 1;
+        }
+        return diff;
+    };
+    function flushJobs(seen) {
+        isFlushPending = false;
+        isFlushing = true;
+        {
+            seen = seen || new Map();
+        }
+        // Sort queue before flush.
+        // This ensures that:
+        // 1. Components are updated from parent to child. (because parent is always
+        //    created before the child so its render effect will have smaller
+        //    priority number)
+        // 2. If a component is unmounted during a parent component's update,
+        //    its update can be skipped.
+        queue.sort(comparator);
+        // conditional usage of checkRecursiveUpdate must be determined out of
+        // try ... catch block since Rollup by default de-optimizes treeshaking
+        // inside try-catch. This can leave all warning code unshaked. Although
+        // they would get eventually shaken by a minifier like terser, some minifiers
+        // would fail to do that (e.g. https://github.com/evanw/esbuild/issues/1610)
+        const check = (job) => checkRecursiveUpdates(seen, job)
+            ;
+        try {
+            for (flushIndex = 0; flushIndex < queue.length; flushIndex++) {
+                const job = queue[flushIndex];
+                if (job && job.active !== false) {
+                    if (("development" !== 'production') && check(job)) {
+                        continue;
+                    }
+                    // console.log(`running:`, job.id)
+                    callWithErrorHandling(job, null, 14 /* ErrorCodes.SCHEDULER */);
+                }
+            }
+        }
+        finally {
+            flushIndex = 0;
+            queue.length = 0;
+            flushPostFlushCbs(seen);
+            isFlushing = false;
+            currentFlushPromise = null;
+            // some postFlushCb queued jobs!
+            // keep flushing until it drains.
+            if (queue.length || pendingPostFlushCbs.length) {
+                flushJobs(seen);
+            }
+        }
+    }
+    function checkRecursiveUpdates(seen, fn) {
+        if (!seen.has(fn)) {
+            seen.set(fn, 1);
+        }
+        else {
+            const count = seen.get(fn);
+            if (count > RECURSION_LIMIT) {
+                const instance = fn.ownerInstance;
+                const componentName = instance && getComponentName(instance.type);
+                warn(`Maximum recursive updates exceeded${componentName ? ` in component <${componentName}>` : ``}. ` +
+                    `This means you have a reactive effect that is mutating its own ` +
+                    `dependencies and thus recursively triggering itself. Possible sources ` +
+                    `include component template, render function, updated hook or ` +
+                    `watcher source function.`);
+                return true;
+            }
+            else {
+                seen.set(fn, count + 1);
+            }
+        }
+    }
+
+    /* eslint-disable no-restricted-globals */
+    let isHmrUpdating = false;
+    const hmrDirtyComponents = new Set();
+    // Expose the HMR runtime on the global object
+    // This makes it entirely tree-shakable without polluting the exports and makes
+    // it easier to be used in toolings like vue-loader
+    // Note: for a component to be eligible for HMR it also needs the __hmrId option
+    // to be set so that its instances can be registered / removed.
+    {
+        getGlobalThis().__VUE_HMR_RUNTIME__ = {
+            createRecord: tryWrap(createRecord),
+            rerender: tryWrap(rerender),
+            reload: tryWrap(reload)
+        };
+    }
+    const map = new Map();
+    function registerHMR(instance) {
+        const id = instance.type.__hmrId;
+        let record = map.get(id);
+        if (!record) {
+            createRecord(id, instance.type);
+            record = map.get(id);
+        }
+        record.instances.add(instance);
+    }
+    function unregisterHMR(instance) {
+        map.get(instance.type.__hmrId).instances.delete(instance);
+    }
+    function createRecord(id, initialDef) {
+        if (map.has(id)) {
+            return false;
+        }
+        map.set(id, {
+            initialDef: normalizeClassComponent(initialDef),
+            instances: new Set()
+        });
+        return true;
+    }
+    function normalizeClassComponent(component) {
+        return isClassComponent(component) ? component.__vccOpts : component;
+    }
+    function rerender(id, newRender) {
+        const record = map.get(id);
+        if (!record) {
+            return;
+        }
+        // update initial record (for not-yet-rendered component)
+        record.initialDef.render = newRender;
+        [...record.instances].forEach(instance => {
+            if (newRender) {
+                instance.render = newRender;
+                normalizeClassComponent(instance.type).render = newRender;
+            }
+            instance.renderCache = [];
+            // this flag forces child components with slot content to update
+            isHmrUpdating = true;
+            instance.update();
+            isHmrUpdating = false;
+        });
+    }
+    function reload(id, newComp) {
+        const record = map.get(id);
+        if (!record)
+            return;
+        newComp = normalizeClassComponent(newComp);
+        // update initial def (for not-yet-rendered components)
+        updateComponentDef(record.initialDef, newComp);
+        // create a snapshot which avoids the set being mutated during updates
+        const instances = [...record.instances];
+        for (const instance of instances) {
+            const oldComp = normalizeClassComponent(instance.type);
+            if (!hmrDirtyComponents.has(oldComp)) {
+                // 1. Update existing comp definition to match new one
+                if (oldComp !== record.initialDef) {
+                    updateComponentDef(oldComp, newComp);
+                }
+                // 2. mark definition dirty. This forces the renderer to replace the
+                // component on patch.
+                hmrDirtyComponents.add(oldComp);
+            }
+            // 3. invalidate options resolution cache
+            instance.appContext.optionsCache.delete(instance.type);
+            // 4. actually update
+            if (instance.ceReload) {
+                // custom element
+                hmrDirtyComponents.add(oldComp);
+                instance.ceReload(newComp.styles);
+                hmrDirtyComponents.delete(oldComp);
+            }
+            else if (instance.parent) {
+                // 4. Force the parent instance to re-render. This will cause all updated
+                // components to be unmounted and re-mounted. Queue the update so that we
+                // don't end up forcing the same parent to re-render multiple times.
+                queueJob(instance.parent.update);
+            }
+            else if (instance.appContext.reload) {
+                // root instance mounted via createApp() has a reload method
+                instance.appContext.reload();
+            }
+            else if (typeof window !== 'undefined') {
+                // root instance inside tree created via raw render(). Force reload.
+                window.location.reload();
+            }
+            else {
+                console.warn('[HMR] Root or manually mounted instance modified. Full reload required.');
+            }
+        }
+        // 5. make sure to cleanup dirty hmr components after update
+        queuePostFlushCb(() => {
+            for (const instance of instances) {
+                hmrDirtyComponents.delete(normalizeClassComponent(instance.type));
+            }
+        });
+    }
+    function updateComponentDef(oldComp, newComp) {
+        extend(oldComp, newComp);
+        for (const key in oldComp) {
+            if (key !== '__file' && !(key in newComp)) {
+                delete oldComp[key];
+            }
+        }
+    }
+    function tryWrap(fn) {
+        return (id, arg) => {
+            try {
+                return fn(id, arg);
+            }
+            catch (e) {
+                console.error(e);
+                console.warn(`[HMR] Something went wrong during Vue component hot-reload. ` +
+                    `Full reload required.`);
+            }
+        };
+    }
+
+    let devtools;
+    let buffer = [];
+    let devtoolsNotInstalled = false;
+    function emit(event, ...args) {
+        if (devtools) {
+            devtools.emit(event, ...args);
+        }
+        else if (!devtoolsNotInstalled) {
+            buffer.push({ event, args });
+        }
+    }
+    function setDevtoolsHook(hook, target) {
+        var _a, _b;
+        devtools = hook;
+        if (devtools) {
+            devtools.enabled = true;
+            buffer.forEach(({ event, args }) => devtools.emit(event, ...args));
+            buffer = [];
+        }
+        else if (
+        // handle late devtools injection - only do this if we are in an actual
+        // browser environment to avoid the timer handle stalling test runner exit
+        // (#4815)
+        typeof window !== 'undefined' &&
+            // some envs mock window but not fully
+            window.HTMLElement &&
+            // also exclude jsdom
+            !((_b = (_a = window.navigator) === null || _a === void 0 ? void 0 : _a.userAgent) === null || _b === void 0 ? void 0 : _b.includes('jsdom'))) {
+            const replay = (target.__VUE_DEVTOOLS_HOOK_REPLAY__ =
+                target.__VUE_DEVTOOLS_HOOK_REPLAY__ || []);
+            replay.push((newHook) => {
+                setDevtoolsHook(newHook, target);
+            });
+            // clear buffer after 3s - the user probably doesn't have devtools installed
+            // at all, and keeping the buffer will cause memory leaks (#4738)
+            setTimeout(() => {
+                if (!devtools) {
+                    target.__VUE_DEVTOOLS_HOOK_REPLAY__ = null;
+                    devtoolsNotInstalled = true;
+                    buffer = [];
+                }
+            }, 3000);
+        }
+        else {
+            // non-browser env, assume not installed
+            devtoolsNotInstalled = true;
+            buffer = [];
+        }
+    }
+    function devtoolsInitApp(app, version) {
+        emit("app:init" /* DevtoolsHooks.APP_INIT */, app, version, {
+            Fragment,
+            Text,
+            Comment,
+            Static
+        });
+    }
+    function devtoolsUnmountApp(app) {
+        emit("app:unmount" /* DevtoolsHooks.APP_UNMOUNT */, app);
+    }
+    const devtoolsComponentAdded = /*#__PURE__*/ createDevtoolsComponentHook("component:added" /* DevtoolsHooks.COMPONENT_ADDED */);
+    const devtoolsComponentUpdated = 
+    /*#__PURE__*/ createDevtoolsComponentHook("component:updated" /* DevtoolsHooks.COMPONENT_UPDATED */);
+    const _devtoolsComponentRemoved = /*#__PURE__*/ createDevtoolsComponentHook("component:removed" /* DevtoolsHooks.COMPONENT_REMOVED */);
+    const devtoolsComponentRemoved = (component) => {
+        if (devtools &&
+            typeof devtools.cleanupBuffer === 'function' &&
+            // remove the component if it wasn't buffered
+            !devtools.cleanupBuffer(component)) {
+            _devtoolsComponentRemoved(component);
+        }
+    };
+    function createDevtoolsComponentHook(hook) {
+        return (component) => {
+            emit(hook, component.appContext.app, component.uid, component.parent ? component.parent.uid : undefined, component);
+        };
+    }
+    const devtoolsPerfStart = /*#__PURE__*/ createDevtoolsPerformanceHook("perf:start" /* DevtoolsHooks.PERFORMANCE_START */);
+    const devtoolsPerfEnd = /*#__PURE__*/ createDevtoolsPerformanceHook("perf:end" /* DevtoolsHooks.PERFORMANCE_END */);
+    function createDevtoolsPerformanceHook(hook) {
+        return (component, type, time) => {
+            emit(hook, component.appContext.app, component.uid, component, type, time);
+        };
+    }
+    function devtoolsComponentEmit(component, event, params) {
+        emit("component:emit" /* DevtoolsHooks.COMPONENT_EMIT */, component.appContext.app, component, event, params);
+    }
+
+    function emit$1(instance, event, ...rawArgs) {
+        if (instance.isUnmounted)
+            return;
+        const props = instance.vnode.props || EMPTY_OBJ;
+        {
+            const { emitsOptions, propsOptions: [propsOptions] } = instance;
+            if (emitsOptions) {
+                if (!(event in emitsOptions) &&
+                    !(false )) {
+                    if (!propsOptions || !(toHandlerKey(event) in propsOptions)) {
+                        warn(`Component emitted event "${event}" but it is neither declared in ` +
+                            `the emits option nor as an "${toHandlerKey(event)}" prop.`);
+                    }
+                }
+                else {
+                    const validator = emitsOptions[event];
+                    if (isFunction$1(validator)) {
+                        const isValid = validator(...rawArgs);
+                        if (!isValid) {
+                            warn(`Invalid event arguments: event validation failed for event "${event}".`);
+                        }
+                    }
+                }
+            }
+        }
+        let args = rawArgs;
+        const isModelListener = event.startsWith('update:');
+        // for v-model update:xxx events, apply modifiers on args
+        const modelArg = isModelListener && event.slice(7);
+        if (modelArg && modelArg in props) {
+            const modifiersKey = `${modelArg === 'modelValue' ? 'model' : modelArg}Modifiers`;
+            const { number, trim } = props[modifiersKey] || EMPTY_OBJ;
+            if (trim) {
+                args = rawArgs.map(a => (isString$2(a) ? a.trim() : a));
+            }
+            if (number) {
+                args = rawArgs.map(toNumber);
+            }
+        }
+        {
+            devtoolsComponentEmit(instance, event, args);
+        }
+        {
+            const lowerCaseEvent = event.toLowerCase();
+            if (lowerCaseEvent !== event && props[toHandlerKey(lowerCaseEvent)]) {
+                warn(`Event "${lowerCaseEvent}" is emitted in component ` +
+                    `${formatComponentName(instance, instance.type)} but the handler is registered for "${event}". ` +
+                    `Note that HTML attributes are case-insensitive and you cannot use ` +
+                    `v-on to listen to camelCase events when using in-DOM templates. ` +
+                    `You should probably use "${hyphenate(event)}" instead of "${event}".`);
+            }
+        }
+        let handlerName;
+        let handler = props[(handlerName = toHandlerKey(event))] ||
+            // also try camelCase event handler (#2249)
+            props[(handlerName = toHandlerKey(camelize(event)))];
+        // for v-model update:xxx events, also trigger kebab-case equivalent
+        // for props passed via kebab-case
+        if (!handler && isModelListener) {
+            handler = props[(handlerName = toHandlerKey(hyphenate(event)))];
+        }
+        if (handler) {
+            callWithAsyncErrorHandling(handler, instance, 6 /* ErrorCodes.COMPONENT_EVENT_HANDLER */, args);
+        }
+        const onceHandler = props[handlerName + `Once`];
+        if (onceHandler) {
+            if (!instance.emitted) {
+                instance.emitted = {};
+            }
+            else if (instance.emitted[handlerName]) {
+                return;
+            }
+            instance.emitted[handlerName] = true;
+            callWithAsyncErrorHandling(onceHandler, instance, 6 /* ErrorCodes.COMPONENT_EVENT_HANDLER */, args);
+        }
+    }
+    function normalizeEmitsOptions(comp, appContext, asMixin = false) {
+        const cache = appContext.emitsCache;
+        const cached = cache.get(comp);
+        if (cached !== undefined) {
+            return cached;
+        }
+        const raw = comp.emits;
+        let normalized = {};
+        // apply mixin/extends props
+        let hasExtends = false;
+        if (!isFunction$1(comp)) {
+            const extendEmits = (raw) => {
+                const normalizedFromExtend = normalizeEmitsOptions(raw, appContext, true);
+                if (normalizedFromExtend) {
+                    hasExtends = true;
+                    extend(normalized, normalizedFromExtend);
+                }
+            };
+            if (!asMixin && appContext.mixins.length) {
+                appContext.mixins.forEach(extendEmits);
+            }
+            if (comp.extends) {
+                extendEmits(comp.extends);
+            }
+            if (comp.mixins) {
+                comp.mixins.forEach(extendEmits);
+            }
+        }
+        if (!raw && !hasExtends) {
+            if (isObject$1(comp)) {
+                cache.set(comp, null);
+            }
+            return null;
+        }
+        if (isArray$2(raw)) {
+            raw.forEach(key => (normalized[key] = null));
+        }
+        else {
+            extend(normalized, raw);
+        }
+        if (isObject$1(comp)) {
+            cache.set(comp, normalized);
+        }
+        return normalized;
+    }
+    // Check if an incoming prop key is a declared emit event listener.
+    // e.g. With `emits: { click: null }`, props named `onClick` and `onclick` are
+    // both considered matched listeners.
+    function isEmitListener(options, key) {
+        if (!options || !isOn(key)) {
+            return false;
+        }
+        key = key.slice(2).replace(/Once$/, '');
+        return (hasOwn(options, key[0].toLowerCase() + key.slice(1)) ||
+            hasOwn(options, hyphenate(key)) ||
+            hasOwn(options, key));
+    }
+
+    /**
+     * mark the current rendering instance for asset resolution (e.g.
+     * resolveComponent, resolveDirective) during render
+     */
+    let currentRenderingInstance = null;
+    let currentScopeId = null;
+    /**
+     * Note: rendering calls maybe nested. The function returns the parent rendering
+     * instance if present, which should be restored after the render is done:
+     *
+     * ```js
+     * const prev = setCurrentRenderingInstance(i)
+     * // ...render
+     * setCurrentRenderingInstance(prev)
+     * ```
+     */
+    function setCurrentRenderingInstance(instance) {
+        const prev = currentRenderingInstance;
+        currentRenderingInstance = instance;
+        currentScopeId = (instance && instance.type.__scopeId) || null;
+        return prev;
+    }
+    /**
+     * Wrap a slot function to memoize current rendering instance
+     * @private compiler helper
+     */
+    function withCtx(fn, ctx = currentRenderingInstance, isNonScopedSlot // false only
+    ) {
+        if (!ctx)
+            return fn;
+        // already normalized
+        if (fn._n) {
+            return fn;
+        }
+        const renderFnWithContext = (...args) => {
+            // If a user calls a compiled slot inside a template expression (#1745), it
+            // can mess up block tracking, so by default we disable block tracking and
+            // force bail out when invoking a compiled slot (indicated by the ._d flag).
+            // This isn't necessary if rendering a compiled `<slot>`, so we flip the
+            // ._d flag off when invoking the wrapped fn inside `renderSlot`.
+            if (renderFnWithContext._d) {
+                setBlockTracking(-1);
+            }
+            const prevInstance = setCurrentRenderingInstance(ctx);
+            let res;
+            try {
+                res = fn(...args);
+            }
+            finally {
+                setCurrentRenderingInstance(prevInstance);
+                if (renderFnWithContext._d) {
+                    setBlockTracking(1);
+                }
+            }
+            {
+                devtoolsComponentUpdated(ctx);
+            }
+            return res;
+        };
+        // mark normalized to avoid duplicated wrapping
+        renderFnWithContext._n = true;
+        // mark this as compiled by default
+        // this is used in vnode.ts -> normalizeChildren() to set the slot
+        // rendering flag.
+        renderFnWithContext._c = true;
+        // disable block tracking by default
+        renderFnWithContext._d = true;
+        return renderFnWithContext;
+    }
+
+    /**
+     * dev only flag to track whether $attrs was used during render.
+     * If $attrs was used during render then the warning for failed attrs
+     * fallthrough can be suppressed.
+     */
+    let accessedAttrs = false;
+    function markAttrsAccessed() {
+        accessedAttrs = true;
+    }
+    function renderComponentRoot(instance) {
+        const { type: Component, vnode, proxy, withProxy, props, propsOptions: [propsOptions], slots, attrs, emit, render, renderCache, data, setupState, ctx, inheritAttrs } = instance;
+        let result;
+        let fallthroughAttrs;
+        const prev = setCurrentRenderingInstance(instance);
+        {
+            accessedAttrs = false;
+        }
+        try {
+            if (vnode.shapeFlag & 4 /* ShapeFlags.STATEFUL_COMPONENT */) {
+                // withProxy is a proxy with a different `has` trap only for
+                // runtime-compiled render functions using `with` block.
+                const proxyToUse = withProxy || proxy;
+                result = normalizeVNode(render.call(proxyToUse, proxyToUse, renderCache, props, setupState, data, ctx));
+                fallthroughAttrs = attrs;
+            }
+            else {
+                // functional
+                const render = Component;
+                // in dev, mark attrs accessed if optional props (attrs === props)
+                if (("development" !== 'production') && attrs === props) {
+                    markAttrsAccessed();
+                }
+                result = normalizeVNode(render.length > 1
+                    ? render(props, ("development" !== 'production')
+                        ? {
+                            get attrs() {
+                                markAttrsAccessed();
+                                return attrs;
+                            },
+                            slots,
+                            emit
+                        }
+                        : { attrs, slots, emit })
+                    : render(props, null /* we know it doesn't need it */));
+                fallthroughAttrs = Component.props
+                    ? attrs
+                    : getFunctionalFallthrough(attrs);
+            }
+        }
+        catch (err) {
+            blockStack.length = 0;
+            handleError(err, instance, 1 /* ErrorCodes.RENDER_FUNCTION */);
+            result = createVNode(Comment);
+        }
+        // attr merging
+        // in dev mode, comments are preserved, and it's possible for a template
+        // to have comments along side the root element which makes it a fragment
+        let root = result;
+        let setRoot = undefined;
+        if (result.patchFlag > 0 &&
+            result.patchFlag & 2048 /* PatchFlags.DEV_ROOT_FRAGMENT */) {
+            [root, setRoot] = getChildRoot(result);
+        }
+        if (fallthroughAttrs && inheritAttrs !== false) {
+            const keys = Object.keys(fallthroughAttrs);
+            const { shapeFlag } = root;
+            if (keys.length) {
+                if (shapeFlag & (1 /* ShapeFlags.ELEMENT */ | 6 /* ShapeFlags.COMPONENT */)) {
+                    if (propsOptions && keys.some(isModelListener)) {
+                        // If a v-model listener (onUpdate:xxx) has a corresponding declared
+                        // prop, it indicates this component expects to handle v-model and
+                        // it should not fallthrough.
+                        // related: #1543, #1643, #1989
+                        fallthroughAttrs = filterModelListeners(fallthroughAttrs, propsOptions);
+                    }
+                    root = cloneVNode(root, fallthroughAttrs);
+                }
+                else if (!accessedAttrs && root.type !== Comment) {
+                    const allAttrs = Object.keys(attrs);
+                    const eventAttrs = [];
+                    const extraAttrs = [];
+                    for (let i = 0, l = allAttrs.length; i < l; i++) {
+                        const key = allAttrs[i];
+                        if (isOn(key)) {
+                            // ignore v-model handlers when they fail to fallthrough
+                            if (!isModelListener(key)) {
+                                // remove `on`, lowercase first letter to reflect event casing
+                                // accurately
+                                eventAttrs.push(key[2].toLowerCase() + key.slice(3));
+                            }
+                        }
+                        else {
+                            extraAttrs.push(key);
+                        }
+                    }
+                    if (extraAttrs.length) {
+                        warn(`Extraneous non-props attributes (` +
+                            `${extraAttrs.join(', ')}) ` +
+                            `were passed to component but could not be automatically inherited ` +
+                            `because component renders fragment or text root nodes.`);
+                    }
+                    if (eventAttrs.length) {
+                        warn(`Extraneous non-emits event listeners (` +
+                            `${eventAttrs.join(', ')}) ` +
+                            `were passed to component but could not be automatically inherited ` +
+                            `because component renders fragment or text root nodes. ` +
+                            `If the listener is intended to be a component custom event listener only, ` +
+                            `declare it using the "emits" option.`);
+                    }
+                }
+            }
+        }
+        // inherit directives
+        if (vnode.dirs) {
+            if (!isElementRoot(root)) {
+                warn(`Runtime directive used on component with non-element root node. ` +
+                    `The directives will not function as intended.`);
+            }
+            // clone before mutating since the root may be a hoisted vnode
+            root = cloneVNode(root);
+            root.dirs = root.dirs ? root.dirs.concat(vnode.dirs) : vnode.dirs;
+        }
+        // inherit transition data
+        if (vnode.transition) {
+            if (!isElementRoot(root)) {
+                warn(`Component inside <Transition> renders non-element root node ` +
+                    `that cannot be animated.`);
+            }
+            root.transition = vnode.transition;
+        }
+        if (setRoot) {
+            setRoot(root);
+        }
+        else {
+            result = root;
+        }
+        setCurrentRenderingInstance(prev);
+        return result;
+    }
+    /**
+     * dev only
+     * In dev mode, template root level comments are rendered, which turns the
+     * template into a fragment root, but we need to locate the single element
+     * root for attrs and scope id processing.
+     */
+    const getChildRoot = (vnode) => {
+        const rawChildren = vnode.children;
+        const dynamicChildren = vnode.dynamicChildren;
+        const childRoot = filterSingleRoot(rawChildren);
+        if (!childRoot) {
+            return [vnode, undefined];
+        }
+        const index = rawChildren.indexOf(childRoot);
+        const dynamicIndex = dynamicChildren ? dynamicChildren.indexOf(childRoot) : -1;
+        const setRoot = (updatedRoot) => {
+            rawChildren[index] = updatedRoot;
+            if (dynamicChildren) {
+                if (dynamicIndex > -1) {
+                    dynamicChildren[dynamicIndex] = updatedRoot;
+                }
+                else if (updatedRoot.patchFlag > 0) {
+                    vnode.dynamicChildren = [...dynamicChildren, updatedRoot];
+                }
+            }
+        };
+        return [normalizeVNode(childRoot), setRoot];
+    };
+    function filterSingleRoot(children) {
+        let singleRoot;
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i];
+            if (isVNode(child)) {
+                // ignore user comment
+                if (child.type !== Comment || child.children === 'v-if') {
+                    if (singleRoot) {
+                        // has more than 1 non-comment child, return now
+                        return;
+                    }
+                    else {
+                        singleRoot = child;
+                    }
+                }
+            }
+            else {
+                return;
+            }
+        }
+        return singleRoot;
+    }
+    const getFunctionalFallthrough = (attrs) => {
+        let res;
+        for (const key in attrs) {
+            if (key === 'class' || key === 'style' || isOn(key)) {
+                (res || (res = {}))[key] = attrs[key];
+            }
+        }
+        return res;
+    };
+    const filterModelListeners = (attrs, props) => {
+        const res = {};
+        for (const key in attrs) {
+            if (!isModelListener(key) || !(key.slice(9) in props)) {
+                res[key] = attrs[key];
+            }
+        }
+        return res;
+    };
+    const isElementRoot = (vnode) => {
+        return (vnode.shapeFlag & (6 /* ShapeFlags.COMPONENT */ | 1 /* ShapeFlags.ELEMENT */) ||
+            vnode.type === Comment // potential v-if branch switch
+        );
+    };
+    function shouldUpdateComponent(prevVNode, nextVNode, optimized) {
+        const { props: prevProps, children: prevChildren, component } = prevVNode;
+        const { props: nextProps, children: nextChildren, patchFlag } = nextVNode;
+        const emits = component.emitsOptions;
+        // Parent component's render function was hot-updated. Since this may have
+        // caused the child component's slots content to have changed, we need to
+        // force the child to update as well.
+        if ((prevChildren || nextChildren) && isHmrUpdating) {
+            return true;
+        }
+        // force child update for runtime directive or transition on component vnode.
+        if (nextVNode.dirs || nextVNode.transition) {
+            return true;
+        }
+        if (optimized && patchFlag >= 0) {
+            if (patchFlag & 1024 /* PatchFlags.DYNAMIC_SLOTS */) {
+                // slot content that references values that might have changed,
+                // e.g. in a v-for
+                return true;
+            }
+            if (patchFlag & 16 /* PatchFlags.FULL_PROPS */) {
+                if (!prevProps) {
+                    return !!nextProps;
+                }
+                // presence of this flag indicates props are always non-null
+                return hasPropsChanged(prevProps, nextProps, emits);
+            }
+            else if (patchFlag & 8 /* PatchFlags.PROPS */) {
+                const dynamicProps = nextVNode.dynamicProps;
+                for (let i = 0; i < dynamicProps.length; i++) {
+                    const key = dynamicProps[i];
+                    if (nextProps[key] !== prevProps[key] &&
+                        !isEmitListener(emits, key)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        else {
+            // this path is only taken by manually written render functions
+            // so presence of any children leads to a forced update
+            if (prevChildren || nextChildren) {
+                if (!nextChildren || !nextChildren.$stable) {
+                    return true;
+                }
+            }
+            if (prevProps === nextProps) {
+                return false;
+            }
+            if (!prevProps) {
+                return !!nextProps;
+            }
+            if (!nextProps) {
+                return true;
+            }
+            return hasPropsChanged(prevProps, nextProps, emits);
+        }
+        return false;
+    }
+    function hasPropsChanged(prevProps, nextProps, emitsOptions) {
+        const nextKeys = Object.keys(nextProps);
+        if (nextKeys.length !== Object.keys(prevProps).length) {
+            return true;
+        }
+        for (let i = 0; i < nextKeys.length; i++) {
+            const key = nextKeys[i];
+            if (nextProps[key] !== prevProps[key] &&
+                !isEmitListener(emitsOptions, key)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    function updateHOCHostEl({ vnode, parent }, el // HostNode
+    ) {
+        while (parent && parent.subTree === vnode) {
+            (vnode = parent.vnode).el = el;
+            parent = parent.parent;
+        }
+    }
+
+    const isSuspense = (type) => type.__isSuspense;
+    function queueEffectWithSuspense(fn, suspense) {
+        if (suspense && suspense.pendingBranch) {
+            if (isArray$2(fn)) {
+                suspense.effects.push(...fn);
+            }
+            else {
+                suspense.effects.push(fn);
+            }
+        }
+        else {
+            queuePostFlushCb(fn);
+        }
+    }
+
+    function provide(key, value) {
+        if (!currentInstance) {
+            {
+                warn(`provide() can only be used inside setup().`);
+            }
+        }
+        else {
+            let provides = currentInstance.provides;
+            // by default an instance inherits its parent's provides object
+            // but when it needs to provide values of its own, it creates its
+            // own provides object using parent provides object as prototype.
+            // this way in `inject` we can simply look up injections from direct
+            // parent and let the prototype chain do the work.
+            const parentProvides = currentInstance.parent && currentInstance.parent.provides;
+            if (parentProvides === provides) {
+                provides = currentInstance.provides = Object.create(parentProvides);
+            }
+            // TS doesn't allow symbol as index type
+            provides[key] = value;
+        }
+    }
+    function inject(key, defaultValue, treatDefaultAsFactory = false) {
+        // fallback to `currentRenderingInstance` so that this can be called in
+        // a functional component
+        const instance = currentInstance || currentRenderingInstance;
+        if (instance) {
+            // #2400
+            // to support `app.use` plugins,
+            // fallback to appContext's `provides` if the instance is at root
+            const provides = instance.parent == null
+                ? instance.vnode.appContext && instance.vnode.appContext.provides
+                : instance.parent.provides;
+            if (provides && key in provides) {
+                // TS doesn't allow symbol as index type
+                return provides[key];
+            }
+            else if (arguments.length > 1) {
+                return treatDefaultAsFactory && isFunction$1(defaultValue)
+                    ? defaultValue.call(instance.proxy)
+                    : defaultValue;
+            }
+            else {
+                warn(`injection "${String(key)}" not found.`);
+            }
+        }
+        else {
+            warn(`inject() can only be used inside setup() or functional components.`);
+        }
+    }
+
+    // Simple effect.
+    function watchEffect(effect, options) {
+        return doWatch(effect, null, options);
+    }
+    // initial value for watchers to trigger on undefined initial values
+    const INITIAL_WATCHER_VALUE = {};
+    // implementation
+    function watch(source, cb, options) {
+        if (!isFunction$1(cb)) {
+            warn(`\`watch(fn, options?)\` signature has been moved to a separate API. ` +
+                `Use \`watchEffect(fn, options?)\` instead. \`watch\` now only ` +
+                `supports \`watch(source, cb, options?) signature.`);
+        }
+        return doWatch(source, cb, options);
+    }
+    function doWatch(source, cb, { immediate, deep, flush, onTrack, onTrigger } = EMPTY_OBJ) {
+        if (!cb) {
+            if (immediate !== undefined) {
+                warn(`watch() "immediate" option is only respected when using the ` +
+                    `watch(source, callback, options?) signature.`);
+            }
+            if (deep !== undefined) {
+                warn(`watch() "deep" option is only respected when using the ` +
+                    `watch(source, callback, options?) signature.`);
+            }
+        }
+        const warnInvalidSource = (s) => {
+            warn(`Invalid watch source: `, s, `A watch source can only be a getter/effect function, a ref, ` +
+                `a reactive object, or an array of these types.`);
+        };
+        const instance = currentInstance;
+        let getter;
+        let forceTrigger = false;
+        let isMultiSource = false;
+        if (isRef(source)) {
+            getter = () => source.value;
+            forceTrigger = isShallow$1(source);
+        }
+        else if (isReactive(source)) {
+            getter = () => source;
+            deep = true;
+        }
+        else if (isArray$2(source)) {
+            isMultiSource = true;
+            forceTrigger = source.some(s => isReactive(s) || isShallow$1(s));
+            getter = () => source.map(s => {
+                if (isRef(s)) {
+                    return s.value;
+                }
+                else if (isReactive(s)) {
+                    return traverse(s);
+                }
+                else if (isFunction$1(s)) {
+                    return callWithErrorHandling(s, instance, 2 /* ErrorCodes.WATCH_GETTER */);
+                }
+                else {
+                    warnInvalidSource(s);
+                }
+            });
+        }
+        else if (isFunction$1(source)) {
+            if (cb) {
+                // getter with cb
+                getter = () => callWithErrorHandling(source, instance, 2 /* ErrorCodes.WATCH_GETTER */);
+            }
+            else {
+                // no cb -> simple effect
+                getter = () => {
+                    if (instance && instance.isUnmounted) {
+                        return;
+                    }
+                    if (cleanup) {
+                        cleanup();
+                    }
+                    return callWithAsyncErrorHandling(source, instance, 3 /* ErrorCodes.WATCH_CALLBACK */, [onCleanup]);
+                };
+            }
+        }
+        else {
+            getter = NOOP;
+            warnInvalidSource(source);
+        }
+        if (cb && deep) {
+            const baseGetter = getter;
+            getter = () => traverse(baseGetter());
+        }
+        let cleanup;
+        let onCleanup = (fn) => {
+            cleanup = effect.onStop = () => {
+                callWithErrorHandling(fn, instance, 4 /* ErrorCodes.WATCH_CLEANUP */);
+            };
+        };
+        // in SSR there is no need to setup an actual effect, and it should be noop
+        // unless it's eager or sync flush
+        let ssrCleanup;
+        if (isInSSRComponentSetup) {
+            // we will also not call the invalidate callback (+ runner is not set up)
+            onCleanup = NOOP;
+            if (!cb) {
+                getter();
+            }
+            else if (immediate) {
+                callWithAsyncErrorHandling(cb, instance, 3 /* ErrorCodes.WATCH_CALLBACK */, [
+                    getter(),
+                    isMultiSource ? [] : undefined,
+                    onCleanup
+                ]);
+            }
+            if (flush === 'sync') {
+                const ctx = useSSRContext();
+                ssrCleanup = ctx.__watcherHandles || (ctx.__watcherHandles = []);
+            }
+            else {
+                return NOOP;
+            }
+        }
+        let oldValue = isMultiSource
+            ? new Array(source.length).fill(INITIAL_WATCHER_VALUE)
+            : INITIAL_WATCHER_VALUE;
+        const job = () => {
+            if (!effect.active) {
+                return;
+            }
+            if (cb) {
+                // watch(source, cb)
+                const newValue = effect.run();
+                if (deep ||
+                    forceTrigger ||
+                    (isMultiSource
+                        ? newValue.some((v, i) => hasChanged(v, oldValue[i]))
+                        : hasChanged(newValue, oldValue)) ||
+                    (false  )) {
+                    // cleanup before running cb again
+                    if (cleanup) {
+                        cleanup();
+                    }
+                    callWithAsyncErrorHandling(cb, instance, 3 /* ErrorCodes.WATCH_CALLBACK */, [
+                        newValue,
+                        // pass undefined as the old value when it's changed for the first time
+                        oldValue === INITIAL_WATCHER_VALUE
+                            ? undefined
+                            : (isMultiSource && oldValue[0] === INITIAL_WATCHER_VALUE)
+                                ? []
+                                : oldValue,
+                        onCleanup
+                    ]);
+                    oldValue = newValue;
+                }
+            }
+            else {
+                // watchEffect
+                effect.run();
+            }
+        };
+        // important: mark the job as a watcher callback so that scheduler knows
+        // it is allowed to self-trigger (#1727)
+        job.allowRecurse = !!cb;
+        let scheduler;
+        if (flush === 'sync') {
+            scheduler = job; // the scheduler function gets called directly
+        }
+        else if (flush === 'post') {
+            scheduler = () => queuePostRenderEffect(job, instance && instance.suspense);
+        }
+        else {
+            // default: 'pre'
+            job.pre = true;
+            if (instance)
+                job.id = instance.uid;
+            scheduler = () => queueJob(job);
+        }
+        const effect = new ReactiveEffect(getter, scheduler);
+        {
+            effect.onTrack = onTrack;
+            effect.onTrigger = onTrigger;
+        }
+        // initial run
+        if (cb) {
+            if (immediate) {
+                job();
+            }
+            else {
+                oldValue = effect.run();
+            }
+        }
+        else if (flush === 'post') {
+            queuePostRenderEffect(effect.run.bind(effect), instance && instance.suspense);
+        }
+        else {
+            effect.run();
+        }
+        const unwatch = () => {
+            effect.stop();
+            if (instance && instance.scope) {
+                remove(instance.scope.effects, effect);
+            }
+        };
+        if (ssrCleanup)
+            ssrCleanup.push(unwatch);
+        return unwatch;
+    }
+    // this.$watch
+    function instanceWatch(source, value, options) {
+        const publicThis = this.proxy;
+        const getter = isString$2(source)
+            ? source.includes('.')
+                ? createPathGetter(publicThis, source)
+                : () => publicThis[source]
+            : source.bind(publicThis, publicThis);
+        let cb;
+        if (isFunction$1(value)) {
+            cb = value;
+        }
+        else {
+            cb = value.handler;
+            options = value;
+        }
+        const cur = currentInstance;
+        setCurrentInstance(this);
+        const res = doWatch(getter, cb.bind(publicThis), options);
+        if (cur) {
+            setCurrentInstance(cur);
+        }
+        else {
+            unsetCurrentInstance();
+        }
+        return res;
+    }
+    function createPathGetter(ctx, path) {
+        const segments = path.split('.');
+        return () => {
+            let cur = ctx;
+            for (let i = 0; i < segments.length && cur; i++) {
+                cur = cur[segments[i]];
+            }
+            return cur;
+        };
+    }
+    function traverse(value, seen) {
+        if (!isObject$1(value) || value["__v_skip" /* ReactiveFlags.SKIP */]) {
+            return value;
+        }
+        seen = seen || new Set();
+        if (seen.has(value)) {
+            return value;
+        }
+        seen.add(value);
+        if (isRef(value)) {
+            traverse(value.value, seen);
+        }
+        else if (isArray$2(value)) {
+            for (let i = 0; i < value.length; i++) {
+                traverse(value[i], seen);
+            }
+        }
+        else if (isSet(value) || isMap(value)) {
+            value.forEach((v) => {
+                traverse(v, seen);
+            });
+        }
+        else if (isPlainObject(value)) {
+            for (const key in value) {
+                traverse(value[key], seen);
+            }
+        }
+        return value;
+    }
+
+    function useTransitionState() {
+        const state = {
+            isMounted: false,
+            isLeaving: false,
+            isUnmounting: false,
+            leavingVNodes: new Map()
+        };
+        onMounted(() => {
+            state.isMounted = true;
+        });
+        onBeforeUnmount(() => {
+            state.isUnmounting = true;
+        });
+        return state;
+    }
+    const TransitionHookValidator = [Function, Array];
+    const BaseTransitionImpl = {
+        name: `BaseTransition`,
+        props: {
+            mode: String,
+            appear: Boolean,
+            persisted: Boolean,
+            // enter
+            onBeforeEnter: TransitionHookValidator,
+            onEnter: TransitionHookValidator,
+            onAfterEnter: TransitionHookValidator,
+            onEnterCancelled: TransitionHookValidator,
+            // leave
+            onBeforeLeave: TransitionHookValidator,
+            onLeave: TransitionHookValidator,
+            onAfterLeave: TransitionHookValidator,
+            onLeaveCancelled: TransitionHookValidator,
+            // appear
+            onBeforeAppear: TransitionHookValidator,
+            onAppear: TransitionHookValidator,
+            onAfterAppear: TransitionHookValidator,
+            onAppearCancelled: TransitionHookValidator
+        },
+        setup(props, { slots }) {
+            const instance = getCurrentInstance();
+            const state = useTransitionState();
+            let prevTransitionKey;
+            return () => {
+                const children = slots.default && getTransitionRawChildren(slots.default(), true);
+                if (!children || !children.length) {
+                    return;
+                }
+                let child = children[0];
+                if (children.length > 1) {
+                    let hasFound = false;
+                    // locate first non-comment child
+                    for (const c of children) {
+                        if (c.type !== Comment) {
+                            if (hasFound) {
+                                // warn more than one non-comment child
+                                warn('<transition> can only be used on a single element or component. ' +
+                                    'Use <transition-group> for lists.');
+                                break;
+                            }
+                            child = c;
+                            hasFound = true;
+                        }
+                    }
+                }
+                // there's no need to track reactivity for these props so use the raw
+                // props for a bit better perf
+                const rawProps = toRaw(props);
+                const { mode } = rawProps;
+                // check mode
+                if (mode &&
+                    mode !== 'in-out' &&
+                    mode !== 'out-in' &&
+                    mode !== 'default') {
+                    warn(`invalid <transition> mode: ${mode}`);
+                }
+                if (state.isLeaving) {
+                    return emptyPlaceholder(child);
+                }
+                // in the case of <transition><keep-alive/></transition>, we need to
+                // compare the type of the kept-alive children.
+                const innerChild = getKeepAliveChild(child);
+                if (!innerChild) {
+                    return emptyPlaceholder(child);
+                }
+                const enterHooks = resolveTransitionHooks(innerChild, rawProps, state, instance);
+                setTransitionHooks(innerChild, enterHooks);
+                const oldChild = instance.subTree;
+                const oldInnerChild = oldChild && getKeepAliveChild(oldChild);
+                let transitionKeyChanged = false;
+                const { getTransitionKey } = innerChild.type;
+                if (getTransitionKey) {
+                    const key = getTransitionKey();
+                    if (prevTransitionKey === undefined) {
+                        prevTransitionKey = key;
+                    }
+                    else if (key !== prevTransitionKey) {
+                        prevTransitionKey = key;
+                        transitionKeyChanged = true;
+                    }
+                }
+                // handle mode
+                if (oldInnerChild &&
+                    oldInnerChild.type !== Comment &&
+                    (!isSameVNodeType(innerChild, oldInnerChild) || transitionKeyChanged)) {
+                    const leavingHooks = resolveTransitionHooks(oldInnerChild, rawProps, state, instance);
+                    // update old tree's hooks in case of dynamic transition
+                    setTransitionHooks(oldInnerChild, leavingHooks);
+                    // switching between different views
+                    if (mode === 'out-in') {
+                        state.isLeaving = true;
+                        // return placeholder node and queue update when leave finishes
+                        leavingHooks.afterLeave = () => {
+                            state.isLeaving = false;
+                            // #6835
+                            // it also needs to be updated when active is undefined
+                            if (instance.update.active !== false) {
+                                instance.update();
+                            }
+                        };
+                        return emptyPlaceholder(child);
+                    }
+                    else if (mode === 'in-out' && innerChild.type !== Comment) {
+                        leavingHooks.delayLeave = (el, earlyRemove, delayedLeave) => {
+                            const leavingVNodesCache = getLeavingNodesForType(state, oldInnerChild);
+                            leavingVNodesCache[String(oldInnerChild.key)] = oldInnerChild;
+                            // early removal callback
+                            el._leaveCb = () => {
+                                earlyRemove();
+                                el._leaveCb = undefined;
+                                delete enterHooks.delayedLeave;
+                            };
+                            enterHooks.delayedLeave = delayedLeave;
+                        };
+                    }
+                }
+                return child;
+            };
+        }
+    };
+    // export the public type for h/tsx inference
+    // also to avoid inline import() in generated d.ts files
+    const BaseTransition = BaseTransitionImpl;
+    function getLeavingNodesForType(state, vnode) {
+        const { leavingVNodes } = state;
+        let leavingVNodesCache = leavingVNodes.get(vnode.type);
+        if (!leavingVNodesCache) {
+            leavingVNodesCache = Object.create(null);
+            leavingVNodes.set(vnode.type, leavingVNodesCache);
+        }
+        return leavingVNodesCache;
+    }
+    // The transition hooks are attached to the vnode as vnode.transition
+    // and will be called at appropriate timing in the renderer.
+    function resolveTransitionHooks(vnode, props, state, instance) {
+        const { appear, mode, persisted = false, onBeforeEnter, onEnter, onAfterEnter, onEnterCancelled, onBeforeLeave, onLeave, onAfterLeave, onLeaveCancelled, onBeforeAppear, onAppear, onAfterAppear, onAppearCancelled } = props;
+        const key = String(vnode.key);
+        const leavingVNodesCache = getLeavingNodesForType(state, vnode);
+        const callHook = (hook, args) => {
+            hook &&
+                callWithAsyncErrorHandling(hook, instance, 9 /* ErrorCodes.TRANSITION_HOOK */, args);
+        };
+        const callAsyncHook = (hook, args) => {
+            const done = args[1];
+            callHook(hook, args);
+            if (isArray$2(hook)) {
+                if (hook.every(hook => hook.length <= 1))
+                    done();
+            }
+            else if (hook.length <= 1) {
+                done();
+            }
+        };
+        const hooks = {
+            mode,
+            persisted,
+            beforeEnter(el) {
+                let hook = onBeforeEnter;
+                if (!state.isMounted) {
+                    if (appear) {
+                        hook = onBeforeAppear || onBeforeEnter;
+                    }
+                    else {
+                        return;
+                    }
+                }
+                // for same element (v-show)
+                if (el._leaveCb) {
+                    el._leaveCb(true /* cancelled */);
+                }
+                // for toggled element with same key (v-if)
+                const leavingVNode = leavingVNodesCache[key];
+                if (leavingVNode &&
+                    isSameVNodeType(vnode, leavingVNode) &&
+                    leavingVNode.el._leaveCb) {
+                    // force early removal (not cancelled)
+                    leavingVNode.el._leaveCb();
+                }
+                callHook(hook, [el]);
+            },
+            enter(el) {
+                let hook = onEnter;
+                let afterHook = onAfterEnter;
+                let cancelHook = onEnterCancelled;
+                if (!state.isMounted) {
+                    if (appear) {
+                        hook = onAppear || onEnter;
+                        afterHook = onAfterAppear || onAfterEnter;
+                        cancelHook = onAppearCancelled || onEnterCancelled;
+                    }
+                    else {
+                        return;
+                    }
+                }
+                let called = false;
+                const done = (el._enterCb = (cancelled) => {
+                    if (called)
+                        return;
+                    called = true;
+                    if (cancelled) {
+                        callHook(cancelHook, [el]);
+                    }
+                    else {
+                        callHook(afterHook, [el]);
+                    }
+                    if (hooks.delayedLeave) {
+                        hooks.delayedLeave();
+                    }
+                    el._enterCb = undefined;
+                });
+                if (hook) {
+                    callAsyncHook(hook, [el, done]);
+                }
+                else {
+                    done();
+                }
+            },
+            leave(el, remove) {
+                const key = String(vnode.key);
+                if (el._enterCb) {
+                    el._enterCb(true /* cancelled */);
+                }
+                if (state.isUnmounting) {
+                    return remove();
+                }
+                callHook(onBeforeLeave, [el]);
+                let called = false;
+                const done = (el._leaveCb = (cancelled) => {
+                    if (called)
+                        return;
+                    called = true;
+                    remove();
+                    if (cancelled) {
+                        callHook(onLeaveCancelled, [el]);
+                    }
+                    else {
+                        callHook(onAfterLeave, [el]);
+                    }
+                    el._leaveCb = undefined;
+                    if (leavingVNodesCache[key] === vnode) {
+                        delete leavingVNodesCache[key];
+                    }
+                });
+                leavingVNodesCache[key] = vnode;
+                if (onLeave) {
+                    callAsyncHook(onLeave, [el, done]);
+                }
+                else {
+                    done();
+                }
+            },
+            clone(vnode) {
+                return resolveTransitionHooks(vnode, props, state, instance);
+            }
+        };
+        return hooks;
+    }
+    // the placeholder really only handles one special case: KeepAlive
+    // in the case of a KeepAlive in a leave phase we need to return a KeepAlive
+    // placeholder with empty content to avoid the KeepAlive instance from being
+    // unmounted.
+    function emptyPlaceholder(vnode) {
+        if (isKeepAlive(vnode)) {
+            vnode = cloneVNode(vnode);
+            vnode.children = null;
+            return vnode;
+        }
+    }
+    function getKeepAliveChild(vnode) {
+        return isKeepAlive(vnode)
+            ? vnode.children
+                ? vnode.children[0]
+                : undefined
+            : vnode;
+    }
+    function setTransitionHooks(vnode, hooks) {
+        if (vnode.shapeFlag & 6 /* ShapeFlags.COMPONENT */ && vnode.component) {
+            setTransitionHooks(vnode.component.subTree, hooks);
+        }
+        else if (vnode.shapeFlag & 128 /* ShapeFlags.SUSPENSE */) {
+            vnode.ssContent.transition = hooks.clone(vnode.ssContent);
+            vnode.ssFallback.transition = hooks.clone(vnode.ssFallback);
+        }
+        else {
+            vnode.transition = hooks;
+        }
+    }
+    function getTransitionRawChildren(children, keepComment = false, parentKey) {
+        let ret = [];
+        let keyedFragmentCount = 0;
+        for (let i = 0; i < children.length; i++) {
+            let child = children[i];
+            // #5360 inherit parent key in case of <template v-for>
+            const key = parentKey == null
+                ? child.key
+                : String(parentKey) + String(child.key != null ? child.key : i);
+            // handle fragment children case, e.g. v-for
+            if (child.type === Fragment) {
+                if (child.patchFlag & 128 /* PatchFlags.KEYED_FRAGMENT */)
+                    keyedFragmentCount++;
+                ret = ret.concat(getTransitionRawChildren(child.children, keepComment, key));
+            }
+            // comment placeholders should be skipped, e.g. v-if
+            else if (keepComment || child.type !== Comment) {
+                ret.push(key != null ? cloneVNode(child, { key }) : child);
+            }
+        }
+        // #1126 if a transition children list contains multiple sub fragments, these
+        // fragments will be merged into a flat children array. Since each v-for
+        // fragment may contain different static bindings inside, we need to de-op
+        // these children to force full diffs to ensure correct behavior.
+        if (keyedFragmentCount > 1) {
+            for (let i = 0; i < ret.length; i++) {
+                ret[i].patchFlag = -2 /* PatchFlags.BAIL */;
+            }
+        }
+        return ret;
+    }
+
+    // implementation, close to no-op
+    function defineComponent(options) {
+        return isFunction$1(options) ? { setup: options, name: options.name } : options;
+    }
+
+    const isAsyncWrapper = (i) => !!i.type.__asyncLoader;
+
+    const isKeepAlive = (vnode) => vnode.type.__isKeepAlive;
+    function onActivated(hook, target) {
+        registerKeepAliveHook(hook, "a" /* LifecycleHooks.ACTIVATED */, target);
+    }
+    function onDeactivated(hook, target) {
+        registerKeepAliveHook(hook, "da" /* LifecycleHooks.DEACTIVATED */, target);
+    }
+    function registerKeepAliveHook(hook, type, target = currentInstance) {
+        // cache the deactivate branch check wrapper for injected hooks so the same
+        // hook can be properly deduped by the scheduler. "__wdc" stands for "with
+        // deactivation check".
+        const wrappedHook = hook.__wdc ||
+            (hook.__wdc = () => {
+                // only fire the hook if the target instance is NOT in a deactivated branch.
+                let current = target;
+                while (current) {
+                    if (current.isDeactivated) {
+                        return;
+                    }
+                    current = current.parent;
+                }
+                return hook();
+            });
+        injectHook(type, wrappedHook, target);
+        // In addition to registering it on the target instance, we walk up the parent
+        // chain and register it on all ancestor instances that are keep-alive roots.
+        // This avoids the need to walk the entire component tree when invoking these
+        // hooks, and more importantly, avoids the need to track child components in
+        // arrays.
+        if (target) {
+            let current = target.parent;
+            while (current && current.parent) {
+                if (isKeepAlive(current.parent.vnode)) {
+                    injectToKeepAliveRoot(wrappedHook, type, target, current);
+                }
+                current = current.parent;
+            }
+        }
+    }
+    function injectToKeepAliveRoot(hook, type, target, keepAliveRoot) {
+        // injectHook wraps the original for error handling, so make sure to remove
+        // the wrapped version.
+        const injected = injectHook(type, hook, keepAliveRoot, true /* prepend */);
+        onUnmounted(() => {
+            remove(keepAliveRoot[type], injected);
+        }, target);
+    }
+
+    function injectHook(type, hook, target = currentInstance, prepend = false) {
+        if (target) {
+            const hooks = target[type] || (target[type] = []);
+            // cache the error handling wrapper for injected hooks so the same hook
+            // can be properly deduped by the scheduler. "__weh" stands for "with error
+            // handling".
+            const wrappedHook = hook.__weh ||
+                (hook.__weh = (...args) => {
+                    if (target.isUnmounted) {
+                        return;
+                    }
+                    // disable tracking inside all lifecycle hooks
+                    // since they can potentially be called inside effects.
+                    pauseTracking();
+                    // Set currentInstance during hook invocation.
+                    // This assumes the hook does not synchronously trigger other hooks, which
+                    // can only be false when the user does something really funky.
+                    setCurrentInstance(target);
+                    const res = callWithAsyncErrorHandling(hook, target, type, args);
+                    unsetCurrentInstance();
+                    resetTracking();
+                    return res;
+                });
+            if (prepend) {
+                hooks.unshift(wrappedHook);
+            }
+            else {
+                hooks.push(wrappedHook);
+            }
+            return wrappedHook;
+        }
+        else {
+            const apiName = toHandlerKey(ErrorTypeStrings[type].replace(/ hook$/, ''));
+            warn(`${apiName} is called when there is no active component instance to be ` +
+                `associated with. ` +
+                `Lifecycle injection APIs can only be used during execution of setup().` +
+                (` If you are using async setup(), make sure to register lifecycle ` +
+                        `hooks before the first await statement.`
+                    ));
+        }
+    }
+    const createHook = (lifecycle) => (hook, target = currentInstance) => 
+    // post-create lifecycle registrations are noops during SSR (except for serverPrefetch)
+    (!isInSSRComponentSetup || lifecycle === "sp" /* LifecycleHooks.SERVER_PREFETCH */) &&
+        injectHook(lifecycle, (...args) => hook(...args), target);
+    const onBeforeMount = createHook("bm" /* LifecycleHooks.BEFORE_MOUNT */);
+    const onMounted = createHook("m" /* LifecycleHooks.MOUNTED */);
+    const onBeforeUpdate = createHook("bu" /* LifecycleHooks.BEFORE_UPDATE */);
+    const onUpdated = createHook("u" /* LifecycleHooks.UPDATED */);
+    const onBeforeUnmount = createHook("bum" /* LifecycleHooks.BEFORE_UNMOUNT */);
+    const onUnmounted = createHook("um" /* LifecycleHooks.UNMOUNTED */);
+    const onServerPrefetch = createHook("sp" /* LifecycleHooks.SERVER_PREFETCH */);
+    const onRenderTriggered = createHook("rtg" /* LifecycleHooks.RENDER_TRIGGERED */);
+    const onRenderTracked = createHook("rtc" /* LifecycleHooks.RENDER_TRACKED */);
+    function onErrorCaptured(hook, target = currentInstance) {
+        injectHook("ec" /* LifecycleHooks.ERROR_CAPTURED */, hook, target);
+    }
+
+    /**
+    Runtime helper for applying directives to a vnode. Example usage:
+
+    const comp = resolveComponent('comp')
+    const foo = resolveDirective('foo')
+    const bar = resolveDirective('bar')
+
+    return withDirectives(h(comp), [
+      [foo, this.x],
+      [bar, this.y]
+    ])
+    */
+    function validateDirectiveName(name) {
+        if (isBuiltInDirective(name)) {
+            warn('Do not use built-in directive ids as custom directive id: ' + name);
+        }
+    }
+    /**
+     * Adds directives to a VNode.
+     */
+    function withDirectives(vnode, directives) {
+        const internalInstance = currentRenderingInstance;
+        if (internalInstance === null) {
+            warn(`withDirectives can only be used inside render functions.`);
+            return vnode;
+        }
+        const instance = getExposeProxy(internalInstance) ||
+            internalInstance.proxy;
+        const bindings = vnode.dirs || (vnode.dirs = []);
+        for (let i = 0; i < directives.length; i++) {
+            let [dir, value, arg, modifiers = EMPTY_OBJ] = directives[i];
+            if (dir) {
+                if (isFunction$1(dir)) {
+                    dir = {
+                        mounted: dir,
+                        updated: dir
+                    };
+                }
+                if (dir.deep) {
+                    traverse(value);
+                }
+                bindings.push({
+                    dir,
+                    instance,
+                    value,
+                    oldValue: void 0,
+                    arg,
+                    modifiers
+                });
+            }
+        }
+        return vnode;
+    }
+    function invokeDirectiveHook(vnode, prevVNode, instance, name) {
+        const bindings = vnode.dirs;
+        const oldBindings = prevVNode && prevVNode.dirs;
+        for (let i = 0; i < bindings.length; i++) {
+            const binding = bindings[i];
+            if (oldBindings) {
+                binding.oldValue = oldBindings[i].value;
+            }
+            let hook = binding.dir[name];
+            if (hook) {
+                // disable tracking inside all lifecycle hooks
+                // since they can potentially be called inside effects.
+                pauseTracking();
+                callWithAsyncErrorHandling(hook, instance, 8 /* ErrorCodes.DIRECTIVE_HOOK */, [
+                    vnode.el,
+                    binding,
+                    vnode,
+                    prevVNode
+                ]);
+                resetTracking();
+            }
+        }
+    }
+
+    const COMPONENTS = 'components';
+    const NULL_DYNAMIC_COMPONENT = Symbol();
+    /**
+     * @private
+     */
+    function resolveDynamicComponent(component) {
+        if (isString$2(component)) {
+            return resolveAsset(COMPONENTS, component, false) || component;
+        }
+        else {
+            // invalid types will fallthrough to createVNode and raise warning
+            return (component || NULL_DYNAMIC_COMPONENT);
+        }
+    }
+    // implementation
+    function resolveAsset(type, name, warnMissing = true, maybeSelfReference = false) {
+        const instance = currentRenderingInstance || currentInstance;
+        if (instance) {
+            const Component = instance.type;
+            // explicit self name has highest priority
+            if (type === COMPONENTS) {
+                const selfName = getComponentName(Component, false /* do not include inferred name to avoid breaking existing code */);
+                if (selfName &&
+                    (selfName === name ||
+                        selfName === camelize(name) ||
+                        selfName === capitalize(camelize(name)))) {
+                    return Component;
+                }
+            }
+            const res = 
+            // local registration
+            // check instance[type] first which is resolved for options API
+            resolve(instance[type] || Component[type], name) ||
+                // global registration
+                resolve(instance.appContext[type], name);
+            if (!res && maybeSelfReference) {
+                // fallback to implicit self-reference
+                return Component;
+            }
+            if (warnMissing && !res) {
+                const extra = type === COMPONENTS
+                    ? `\nIf this is a native custom element, make sure to exclude it from ` +
+                        `component resolution via compilerOptions.isCustomElement.`
+                    : ``;
+                warn(`Failed to resolve ${type.slice(0, -1)}: ${name}${extra}`);
+            }
+            return res;
+        }
+        else {
+            warn(`resolve${capitalize(type.slice(0, -1))} ` +
+                `can only be used in render() or setup().`);
+        }
+    }
+    function resolve(registry, name) {
+        return (registry &&
+            (registry[name] ||
+                registry[camelize(name)] ||
+                registry[capitalize(camelize(name))]));
+    }
+
+    /**
+     * Actual implementation
+     */
+    function renderList(source, renderItem, cache, index) {
+        let ret;
+        const cached = (cache && cache[index]);
+        if (isArray$2(source) || isString$2(source)) {
+            ret = new Array(source.length);
+            for (let i = 0, l = source.length; i < l; i++) {
+                ret[i] = renderItem(source[i], i, undefined, cached && cached[i]);
+            }
+        }
+        else if (typeof source === 'number') {
+            if (!Number.isInteger(source)) {
+                warn(`The v-for range expect an integer value but got ${source}.`);
+            }
+            ret = new Array(source);
+            for (let i = 0; i < source; i++) {
+                ret[i] = renderItem(i + 1, i, undefined, cached && cached[i]);
+            }
+        }
+        else if (isObject$1(source)) {
+            if (source[Symbol.iterator]) {
+                ret = Array.from(source, (item, i) => renderItem(item, i, undefined, cached && cached[i]));
+            }
+            else {
+                const keys = Object.keys(source);
+                ret = new Array(keys.length);
+                for (let i = 0, l = keys.length; i < l; i++) {
+                    const key = keys[i];
+                    ret[i] = renderItem(source[key], key, i, cached && cached[i]);
+                }
+            }
+        }
+        else {
+            ret = [];
+        }
+        if (cache) {
+            cache[index] = ret;
+        }
+        return ret;
+    }
+
+    /**
+     * Compiler runtime helper for rendering `<slot/>`
+     * @private
+     */
+    function renderSlot(slots, name, props = {}, 
+    // this is not a user-facing function, so the fallback is always generated by
+    // the compiler and guaranteed to be a function returning an array
+    fallback, noSlotted) {
+        if (currentRenderingInstance.isCE ||
+            (currentRenderingInstance.parent &&
+                isAsyncWrapper(currentRenderingInstance.parent) &&
+                currentRenderingInstance.parent.isCE)) {
+            if (name !== 'default')
+                props.name = name;
+            return createVNode('slot', props, fallback && fallback());
+        }
+        let slot = slots[name];
+        if (slot && slot.length > 1) {
+            warn(`SSR-optimized slot function detected in a non-SSR-optimized render ` +
+                `function. You need to mark this component with $dynamic-slots in the ` +
+                `parent template.`);
+            slot = () => [];
+        }
+        // a compiled slot disables block tracking by default to avoid manual
+        // invocation interfering with template-based block tracking, but in
+        // `renderSlot` we can be sure that it's template-based so we can force
+        // enable it.
+        if (slot && slot._c) {
+            slot._d = false;
+        }
+        openBlock();
+        const validSlotContent = slot && ensureValidVNode(slot(props));
+        const rendered = createBlock(Fragment, {
+            key: props.key ||
+                // slot content array of a dynamic conditional slot may have a branch
+                // key attached in the `createSlots` helper, respect that
+                (validSlotContent && validSlotContent.key) ||
+                `_${name}`
+        }, validSlotContent || (fallback ? fallback() : []), validSlotContent && slots._ === 1 /* SlotFlags.STABLE */
+            ? 64 /* PatchFlags.STABLE_FRAGMENT */
+            : -2 /* PatchFlags.BAIL */);
+        if (!noSlotted && rendered.scopeId) {
+            rendered.slotScopeIds = [rendered.scopeId + '-s'];
+        }
+        if (slot && slot._c) {
+            slot._d = true;
+        }
+        return rendered;
+    }
+    function ensureValidVNode(vnodes) {
+        return vnodes.some(child => {
+            if (!isVNode(child))
+                return true;
+            if (child.type === Comment)
+                return false;
+            if (child.type === Fragment &&
+                !ensureValidVNode(child.children))
+                return false;
+            return true;
+        })
+            ? vnodes
+            : null;
+    }
+
+    /**
+     * For prefixing keys in v-on="obj" with "on"
+     * @private
+     */
+    function toHandlers(obj, preserveCaseIfNecessary) {
+        const ret = {};
+        if (!isObject$1(obj)) {
+            warn(`v-on with no argument expects an object value.`);
+            return ret;
+        }
+        for (const key in obj) {
+            ret[preserveCaseIfNecessary && /[A-Z]/.test(key)
+                ? `on:${key}`
+                : toHandlerKey(key)] = obj[key];
+        }
+        return ret;
+    }
+
+    /**
+     * #2437 In Vue 3, functional components do not have a public instance proxy but
+     * they exist in the internal parent chain. For code that relies on traversing
+     * public $parent chains, skip functional ones and go to the parent instead.
+     */
+    const getPublicInstance = (i) => {
+        if (!i)
+            return null;
+        if (isStatefulComponent(i))
+            return getExposeProxy(i) || i.proxy;
+        return getPublicInstance(i.parent);
+    };
+    const publicPropertiesMap = 
+    // Move PURE marker to new line to workaround compiler discarding it
+    // due to type annotation
+    /*#__PURE__*/ extend(Object.create(null), {
+        $: i => i,
+        $el: i => i.vnode.el,
+        $data: i => i.data,
+        $props: i => (shallowReadonly(i.props) ),
+        $attrs: i => (shallowReadonly(i.attrs) ),
+        $slots: i => (shallowReadonly(i.slots) ),
+        $refs: i => (shallowReadonly(i.refs) ),
+        $parent: i => getPublicInstance(i.parent),
+        $root: i => getPublicInstance(i.root),
+        $emit: i => i.emit,
+        $options: i => (resolveMergedOptions(i) ),
+        $forceUpdate: i => i.f || (i.f = () => queueJob(i.update)),
+        $nextTick: i => i.n || (i.n = nextTick.bind(i.proxy)),
+        $watch: i => (instanceWatch.bind(i) )
+    });
+    const isReservedPrefix = (key) => key === '_' || key === '$';
+    const hasSetupBinding = (state, key) => state !== EMPTY_OBJ && !state.__isScriptSetup && hasOwn(state, key);
+    const PublicInstanceProxyHandlers = {
+        get({ _: instance }, key) {
+            const { ctx, setupState, data, props, accessCache, type, appContext } = instance;
+            // for internal formatters to know that this is a Vue instance
+            if (key === '__isVue') {
+                return true;
+            }
+            // data / props / ctx
+            // This getter gets called for every property access on the render context
+            // during render and is a major hotspot. The most expensive part of this
+            // is the multiple hasOwn() calls. It's much faster to do a simple property
+            // access on a plain object, so we use an accessCache object (with null
+            // prototype) to memoize what access type a key corresponds to.
+            let normalizedProps;
+            if (key[0] !== '$') {
+                const n = accessCache[key];
+                if (n !== undefined) {
+                    switch (n) {
+                        case 1 /* AccessTypes.SETUP */:
+                            return setupState[key];
+                        case 2 /* AccessTypes.DATA */:
+                            return data[key];
+                        case 4 /* AccessTypes.CONTEXT */:
+                            return ctx[key];
+                        case 3 /* AccessTypes.PROPS */:
+                            return props[key];
+                        // default: just fallthrough
+                    }
+                }
+                else if (hasSetupBinding(setupState, key)) {
+                    accessCache[key] = 1 /* AccessTypes.SETUP */;
+                    return setupState[key];
+                }
+                else if (data !== EMPTY_OBJ && hasOwn(data, key)) {
+                    accessCache[key] = 2 /* AccessTypes.DATA */;
+                    return data[key];
+                }
+                else if (
+                // only cache other properties when instance has declared (thus stable)
+                // props
+                (normalizedProps = instance.propsOptions[0]) &&
+                    hasOwn(normalizedProps, key)) {
+                    accessCache[key] = 3 /* AccessTypes.PROPS */;
+                    return props[key];
+                }
+                else if (ctx !== EMPTY_OBJ && hasOwn(ctx, key)) {
+                    accessCache[key] = 4 /* AccessTypes.CONTEXT */;
+                    return ctx[key];
+                }
+                else if (shouldCacheAccess) {
+                    accessCache[key] = 0 /* AccessTypes.OTHER */;
+                }
+            }
+            const publicGetter = publicPropertiesMap[key];
+            let cssModule, globalProperties;
+            // public $xxx properties
+            if (publicGetter) {
+                if (key === '$attrs') {
+                    track(instance, "get" /* TrackOpTypes.GET */, key);
+                    markAttrsAccessed();
+                }
+                return publicGetter(instance);
+            }
+            else if (
+            // css module (injected by vue-loader)
+            (cssModule = type.__cssModules) &&
+                (cssModule = cssModule[key])) {
+                return cssModule;
+            }
+            else if (ctx !== EMPTY_OBJ && hasOwn(ctx, key)) {
+                // user may set custom properties to `this` that start with `$`
+                accessCache[key] = 4 /* AccessTypes.CONTEXT */;
+                return ctx[key];
+            }
+            else if (
+            // global properties
+            ((globalProperties = appContext.config.globalProperties),
+                hasOwn(globalProperties, key))) {
+                {
+                    return globalProperties[key];
+                }
+            }
+            else if (currentRenderingInstance &&
+                (!isString$2(key) ||
+                    // #1091 avoid internal isRef/isVNode checks on component instance leading
+                    // to infinite warning loop
+                    key.indexOf('__v') !== 0)) {
+                if (data !== EMPTY_OBJ && isReservedPrefix(key[0]) && hasOwn(data, key)) {
+                    warn(`Property ${JSON.stringify(key)} must be accessed via $data because it starts with a reserved ` +
+                        `character ("$" or "_") and is not proxied on the render context.`);
+                }
+                else if (instance === currentRenderingInstance) {
+                    warn(`Property ${JSON.stringify(key)} was accessed during render ` +
+                        `but is not defined on instance.`);
+                }
+            }
+        },
+        set({ _: instance }, key, value) {
+            const { data, setupState, ctx } = instance;
+            if (hasSetupBinding(setupState, key)) {
+                setupState[key] = value;
+                return true;
+            }
+            else if (setupState.__isScriptSetup &&
+                hasOwn(setupState, key)) {
+                warn(`Cannot mutate <script setup> binding "${key}" from Options API.`);
+                return false;
+            }
+            else if (data !== EMPTY_OBJ && hasOwn(data, key)) {
+                data[key] = value;
+                return true;
+            }
+            else if (hasOwn(instance.props, key)) {
+                warn(`Attempting to mutate prop "${key}". Props are readonly.`);
+                return false;
+            }
+            if (key[0] === '$' && key.slice(1) in instance) {
+                warn(`Attempting to mutate public property "${key}". ` +
+                        `Properties starting with $ are reserved and readonly.`);
+                return false;
+            }
+            else {
+                if (key in instance.appContext.config.globalProperties) {
+                    Object.defineProperty(ctx, key, {
+                        enumerable: true,
+                        configurable: true,
+                        value
+                    });
+                }
+                else {
+                    ctx[key] = value;
+                }
+            }
+            return true;
+        },
+        has({ _: { data, setupState, accessCache, ctx, appContext, propsOptions } }, key) {
+            let normalizedProps;
+            return (!!accessCache[key] ||
+                (data !== EMPTY_OBJ && hasOwn(data, key)) ||
+                hasSetupBinding(setupState, key) ||
+                ((normalizedProps = propsOptions[0]) && hasOwn(normalizedProps, key)) ||
+                hasOwn(ctx, key) ||
+                hasOwn(publicPropertiesMap, key) ||
+                hasOwn(appContext.config.globalProperties, key));
+        },
+        defineProperty(target, key, descriptor) {
+            if (descriptor.get != null) {
+                // invalidate key cache of a getter based property #5417
+                target._.accessCache[key] = 0;
+            }
+            else if (hasOwn(descriptor, 'value')) {
+                this.set(target, key, descriptor.value, null);
+            }
+            return Reflect.defineProperty(target, key, descriptor);
+        }
+    };
+    {
+        PublicInstanceProxyHandlers.ownKeys = (target) => {
+            warn(`Avoid app logic that relies on enumerating keys on a component instance. ` +
+                `The keys will be empty in production mode to avoid performance overhead.`);
+            return Reflect.ownKeys(target);
+        };
+    }
+    // dev only
+    // In dev mode, the proxy target exposes the same properties as seen on `this`
+    // for easier console inspection. In prod mode it will be an empty object so
+    // these properties definitions can be skipped.
+    function createDevRenderContext(instance) {
+        const target = {};
+        // expose internal instance for proxy handlers
+        Object.defineProperty(target, `_`, {
+            configurable: true,
+            enumerable: false,
+            get: () => instance
+        });
+        // expose public properties
+        Object.keys(publicPropertiesMap).forEach(key => {
+            Object.defineProperty(target, key, {
+                configurable: true,
+                enumerable: false,
+                get: () => publicPropertiesMap[key](instance),
+                // intercepted by the proxy so no need for implementation,
+                // but needed to prevent set errors
+                set: NOOP
+            });
+        });
+        return target;
+    }
+    // dev only
+    function exposePropsOnRenderContext(instance) {
+        const { ctx, propsOptions: [propsOptions] } = instance;
+        if (propsOptions) {
+            Object.keys(propsOptions).forEach(key => {
+                Object.defineProperty(ctx, key, {
+                    enumerable: true,
+                    configurable: true,
+                    get: () => instance.props[key],
+                    set: NOOP
+                });
+            });
+        }
+    }
+    // dev only
+    function exposeSetupStateOnRenderContext(instance) {
+        const { ctx, setupState } = instance;
+        Object.keys(toRaw(setupState)).forEach(key => {
+            if (!setupState.__isScriptSetup) {
+                if (isReservedPrefix(key[0])) {
+                    warn(`setup() return property ${JSON.stringify(key)} should not start with "$" or "_" ` +
+                        `which are reserved prefixes for Vue internals.`);
+                    return;
+                }
+                Object.defineProperty(ctx, key, {
+                    enumerable: true,
+                    configurable: true,
+                    get: () => setupState[key],
+                    set: NOOP
+                });
+            }
+        });
+    }
+
+    function createDuplicateChecker() {
+        const cache = Object.create(null);
+        return (type, key) => {
+            if (cache[key]) {
+                warn(`${type} property "${key}" is already defined in ${cache[key]}.`);
+            }
+            else {
+                cache[key] = type;
+            }
+        };
+    }
+    let shouldCacheAccess = true;
+    function applyOptions(instance) {
+        const options = resolveMergedOptions(instance);
+        const publicThis = instance.proxy;
+        const ctx = instance.ctx;
+        // do not cache property access on public proxy during state initialization
+        shouldCacheAccess = false;
+        // call beforeCreate first before accessing other options since
+        // the hook may mutate resolved options (#2791)
+        if (options.beforeCreate) {
+            callHook$1(options.beforeCreate, instance, "bc" /* LifecycleHooks.BEFORE_CREATE */);
+        }
+        const { 
+        // state
+        data: dataOptions, computed: computedOptions, methods, watch: watchOptions, provide: provideOptions, inject: injectOptions, 
+        // lifecycle
+        created, beforeMount, mounted, beforeUpdate, updated, activated, deactivated, beforeDestroy, beforeUnmount, destroyed, unmounted, render, renderTracked, renderTriggered, errorCaptured, serverPrefetch, 
+        // public API
+        expose, inheritAttrs, 
+        // assets
+        components, directives, filters } = options;
+        const checkDuplicateProperties = createDuplicateChecker() ;
+        {
+            const [propsOptions] = instance.propsOptions;
+            if (propsOptions) {
+                for (const key in propsOptions) {
+                    checkDuplicateProperties("Props" /* OptionTypes.PROPS */, key);
+                }
+            }
+        }
+        // options initialization order (to be consistent with Vue 2):
+        // - props (already done outside of this function)
+        // - inject
+        // - methods
+        // - data (deferred since it relies on `this` access)
+        // - computed
+        // - watch (deferred since it relies on `this` access)
+        if (injectOptions) {
+            resolveInjections(injectOptions, ctx, checkDuplicateProperties, instance.appContext.config.unwrapInjectedRef);
+        }
+        if (methods) {
+            for (const key in methods) {
+                const methodHandler = methods[key];
+                if (isFunction$1(methodHandler)) {
+                    // In dev mode, we use the `createRenderContext` function to define
+                    // methods to the proxy target, and those are read-only but
+                    // reconfigurable, so it needs to be redefined here
+                    {
+                        Object.defineProperty(ctx, key, {
+                            value: methodHandler.bind(publicThis),
+                            configurable: true,
+                            enumerable: true,
+                            writable: true
+                        });
+                    }
+                    {
+                        checkDuplicateProperties("Methods" /* OptionTypes.METHODS */, key);
+                    }
+                }
+                else {
+                    warn(`Method "${key}" has type "${typeof methodHandler}" in the component definition. ` +
+                        `Did you reference the function correctly?`);
+                }
+            }
+        }
+        if (dataOptions) {
+            if (!isFunction$1(dataOptions)) {
+                warn(`The data option must be a function. ` +
+                    `Plain object usage is no longer supported.`);
+            }
+            const data = dataOptions.call(publicThis, publicThis);
+            if (isPromise(data)) {
+                warn(`data() returned a Promise - note data() cannot be async; If you ` +
+                    `intend to perform data fetching before component renders, use ` +
+                    `async setup() + <Suspense>.`);
+            }
+            if (!isObject$1(data)) {
+                warn(`data() should return an object.`);
+            }
+            else {
+                instance.data = reactive(data);
+                {
+                    for (const key in data) {
+                        checkDuplicateProperties("Data" /* OptionTypes.DATA */, key);
+                        // expose data on ctx during dev
+                        if (!isReservedPrefix(key[0])) {
+                            Object.defineProperty(ctx, key, {
+                                configurable: true,
+                                enumerable: true,
+                                get: () => data[key],
+                                set: NOOP
+                            });
+                        }
+                    }
+                }
+            }
+        }
+        // state initialization complete at this point - start caching access
+        shouldCacheAccess = true;
+        if (computedOptions) {
+            for (const key in computedOptions) {
+                const opt = computedOptions[key];
+                const get = isFunction$1(opt)
+                    ? opt.bind(publicThis, publicThis)
+                    : isFunction$1(opt.get)
+                        ? opt.get.bind(publicThis, publicThis)
+                        : NOOP;
+                if (get === NOOP) {
+                    warn(`Computed property "${key}" has no getter.`);
+                }
+                const set = !isFunction$1(opt) && isFunction$1(opt.set)
+                    ? opt.set.bind(publicThis)
+                    : () => {
+                            warn(`Write operation failed: computed property "${key}" is readonly.`);
+                        }
+                        ;
+                const c = computed({
+                    get,
+                    set
+                });
+                Object.defineProperty(ctx, key, {
+                    enumerable: true,
+                    configurable: true,
+                    get: () => c.value,
+                    set: v => (c.value = v)
+                });
+                {
+                    checkDuplicateProperties("Computed" /* OptionTypes.COMPUTED */, key);
+                }
+            }
+        }
+        if (watchOptions) {
+            for (const key in watchOptions) {
+                createWatcher(watchOptions[key], ctx, publicThis, key);
+            }
+        }
+        if (provideOptions) {
+            const provides = isFunction$1(provideOptions)
+                ? provideOptions.call(publicThis)
+                : provideOptions;
+            Reflect.ownKeys(provides).forEach(key => {
+                provide(key, provides[key]);
+            });
+        }
+        if (created) {
+            callHook$1(created, instance, "c" /* LifecycleHooks.CREATED */);
+        }
+        function registerLifecycleHook(register, hook) {
+            if (isArray$2(hook)) {
+                hook.forEach(_hook => register(_hook.bind(publicThis)));
+            }
+            else if (hook) {
+                register(hook.bind(publicThis));
+            }
+        }
+        registerLifecycleHook(onBeforeMount, beforeMount);
+        registerLifecycleHook(onMounted, mounted);
+        registerLifecycleHook(onBeforeUpdate, beforeUpdate);
+        registerLifecycleHook(onUpdated, updated);
+        registerLifecycleHook(onActivated, activated);
+        registerLifecycleHook(onDeactivated, deactivated);
+        registerLifecycleHook(onErrorCaptured, errorCaptured);
+        registerLifecycleHook(onRenderTracked, renderTracked);
+        registerLifecycleHook(onRenderTriggered, renderTriggered);
+        registerLifecycleHook(onBeforeUnmount, beforeUnmount);
+        registerLifecycleHook(onUnmounted, unmounted);
+        registerLifecycleHook(onServerPrefetch, serverPrefetch);
+        if (isArray$2(expose)) {
+            if (expose.length) {
+                const exposed = instance.exposed || (instance.exposed = {});
+                expose.forEach(key => {
+                    Object.defineProperty(exposed, key, {
+                        get: () => publicThis[key],
+                        set: val => (publicThis[key] = val)
+                    });
+                });
+            }
+            else if (!instance.exposed) {
+                instance.exposed = {};
+            }
+        }
+        // options that are handled when creating the instance but also need to be
+        // applied from mixins
+        if (render && instance.render === NOOP) {
+            instance.render = render;
+        }
+        if (inheritAttrs != null) {
+            instance.inheritAttrs = inheritAttrs;
+        }
+        // asset options.
+        if (components)
+            instance.components = components;
+        if (directives)
+            instance.directives = directives;
+    }
+    function resolveInjections(injectOptions, ctx, checkDuplicateProperties = NOOP, unwrapRef = false) {
+        if (isArray$2(injectOptions)) {
+            injectOptions = normalizeInject(injectOptions);
+        }
+        for (const key in injectOptions) {
+            const opt = injectOptions[key];
+            let injected;
+            if (isObject$1(opt)) {
+                if ('default' in opt) {
+                    injected = inject(opt.from || key, opt.default, true /* treat default function as factory */);
+                }
+                else {
+                    injected = inject(opt.from || key);
+                }
+            }
+            else {
+                injected = inject(opt);
+            }
+            if (isRef(injected)) {
+                // TODO remove the check in 3.3
+                if (unwrapRef) {
+                    Object.defineProperty(ctx, key, {
+                        enumerable: true,
+                        configurable: true,
+                        get: () => injected.value,
+                        set: v => (injected.value = v)
+                    });
+                }
+                else {
+                    {
+                        warn(`injected property "${key}" is a ref and will be auto-unwrapped ` +
+                            `and no longer needs \`.value\` in the next minor release. ` +
+                            `To opt-in to the new behavior now, ` +
+                            `set \`app.config.unwrapInjectedRef = true\` (this config is ` +
+                            `temporary and will not be needed in the future.)`);
+                    }
+                    ctx[key] = injected;
+                }
+            }
+            else {
+                ctx[key] = injected;
+            }
+            {
+                checkDuplicateProperties("Inject" /* OptionTypes.INJECT */, key);
+            }
+        }
+    }
+    function callHook$1(hook, instance, type) {
+        callWithAsyncErrorHandling(isArray$2(hook)
+            ? hook.map(h => h.bind(instance.proxy))
+            : hook.bind(instance.proxy), instance, type);
+    }
+    function createWatcher(raw, ctx, publicThis, key) {
+        const getter = key.includes('.')
+            ? createPathGetter(publicThis, key)
+            : () => publicThis[key];
+        if (isString$2(raw)) {
+            const handler = ctx[raw];
+            if (isFunction$1(handler)) {
+                watch(getter, handler);
+            }
+            else {
+                warn(`Invalid watch handler specified by key "${raw}"`, handler);
+            }
+        }
+        else if (isFunction$1(raw)) {
+            watch(getter, raw.bind(publicThis));
+        }
+        else if (isObject$1(raw)) {
+            if (isArray$2(raw)) {
+                raw.forEach(r => createWatcher(r, ctx, publicThis, key));
+            }
+            else {
+                const handler = isFunction$1(raw.handler)
+                    ? raw.handler.bind(publicThis)
+                    : ctx[raw.handler];
+                if (isFunction$1(handler)) {
+                    watch(getter, handler, raw);
+                }
+                else {
+                    warn(`Invalid watch handler specified by key "${raw.handler}"`, handler);
+                }
+            }
+        }
+        else {
+            warn(`Invalid watch option: "${key}"`, raw);
+        }
+    }
+    /**
+     * Resolve merged options and cache it on the component.
+     * This is done only once per-component since the merging does not involve
+     * instances.
+     */
+    function resolveMergedOptions(instance) {
+        const base = instance.type;
+        const { mixins, extends: extendsOptions } = base;
+        const { mixins: globalMixins, optionsCache: cache, config: { optionMergeStrategies } } = instance.appContext;
+        const cached = cache.get(base);
+        let resolved;
+        if (cached) {
+            resolved = cached;
+        }
+        else if (!globalMixins.length && !mixins && !extendsOptions) {
+            {
+                resolved = base;
+            }
+        }
+        else {
+            resolved = {};
+            if (globalMixins.length) {
+                globalMixins.forEach(m => mergeOptions(resolved, m, optionMergeStrategies, true));
+            }
+            mergeOptions(resolved, base, optionMergeStrategies);
+        }
+        if (isObject$1(base)) {
+            cache.set(base, resolved);
+        }
+        return resolved;
+    }
+    function mergeOptions(to, from, strats, asMixin = false) {
+        const { mixins, extends: extendsOptions } = from;
+        if (extendsOptions) {
+            mergeOptions(to, extendsOptions, strats, true);
+        }
+        if (mixins) {
+            mixins.forEach((m) => mergeOptions(to, m, strats, true));
+        }
+        for (const key in from) {
+            if (asMixin && key === 'expose') {
+                warn(`"expose" option is ignored when declared in mixins or extends. ` +
+                        `It should only be declared in the base component itself.`);
+            }
+            else {
+                const strat = internalOptionMergeStrats[key] || (strats && strats[key]);
+                to[key] = strat ? strat(to[key], from[key]) : from[key];
+            }
+        }
+        return to;
+    }
+    const internalOptionMergeStrats = {
+        data: mergeDataFn,
+        props: mergeObjectOptions,
+        emits: mergeObjectOptions,
+        // objects
+        methods: mergeObjectOptions,
+        computed: mergeObjectOptions,
+        // lifecycle
+        beforeCreate: mergeAsArray,
+        created: mergeAsArray,
+        beforeMount: mergeAsArray,
+        mounted: mergeAsArray,
+        beforeUpdate: mergeAsArray,
+        updated: mergeAsArray,
+        beforeDestroy: mergeAsArray,
+        beforeUnmount: mergeAsArray,
+        destroyed: mergeAsArray,
+        unmounted: mergeAsArray,
+        activated: mergeAsArray,
+        deactivated: mergeAsArray,
+        errorCaptured: mergeAsArray,
+        serverPrefetch: mergeAsArray,
+        // assets
+        components: mergeObjectOptions,
+        directives: mergeObjectOptions,
+        // watch
+        watch: mergeWatchOptions,
+        // provide / inject
+        provide: mergeDataFn,
+        inject: mergeInject
+    };
+    function mergeDataFn(to, from) {
+        if (!from) {
+            return to;
+        }
+        if (!to) {
+            return from;
+        }
+        return function mergedDataFn() {
+            return (extend)(isFunction$1(to) ? to.call(this, this) : to, isFunction$1(from) ? from.call(this, this) : from);
+        };
+    }
+    function mergeInject(to, from) {
+        return mergeObjectOptions(normalizeInject(to), normalizeInject(from));
+    }
+    function normalizeInject(raw) {
+        if (isArray$2(raw)) {
+            const res = {};
+            for (let i = 0; i < raw.length; i++) {
+                res[raw[i]] = raw[i];
+            }
+            return res;
+        }
+        return raw;
+    }
+    function mergeAsArray(to, from) {
+        return to ? [...new Set([].concat(to, from))] : from;
+    }
+    function mergeObjectOptions(to, from) {
+        return to ? extend(extend(Object.create(null), to), from) : from;
+    }
+    function mergeWatchOptions(to, from) {
+        if (!to)
+            return from;
+        if (!from)
+            return to;
+        const merged = extend(Object.create(null), to);
+        for (const key in from) {
+            merged[key] = mergeAsArray(to[key], from[key]);
+        }
+        return merged;
+    }
+
+    function initProps(instance, rawProps, isStateful, // result of bitwise flag comparison
+    isSSR = false) {
+        const props = {};
+        const attrs = {};
+        def(attrs, InternalObjectKey, 1);
+        instance.propsDefaults = Object.create(null);
+        setFullProps(instance, rawProps, props, attrs);
+        // ensure all declared prop keys are present
+        for (const key in instance.propsOptions[0]) {
+            if (!(key in props)) {
+                props[key] = undefined;
+            }
+        }
+        // validation
+        {
+            validateProps(rawProps || {}, props, instance);
+        }
+        if (isStateful) {
+            // stateful
+            instance.props = isSSR ? props : shallowReactive(props);
+        }
+        else {
+            if (!instance.type.props) {
+                // functional w/ optional props, props === attrs
+                instance.props = attrs;
+            }
+            else {
+                // functional w/ declared props
+                instance.props = props;
+            }
+        }
+        instance.attrs = attrs;
+    }
+    function isInHmrContext(instance) {
+        while (instance) {
+            if (instance.type.__hmrId)
+                return true;
+            instance = instance.parent;
+        }
+    }
+    function updateProps(instance, rawProps, rawPrevProps, optimized) {
+        const { props, attrs, vnode: { patchFlag } } = instance;
+        const rawCurrentProps = toRaw(props);
+        const [options] = instance.propsOptions;
+        let hasAttrsChanged = false;
+        if (
+        // always force full diff in dev
+        // - #1942 if hmr is enabled with sfc component
+        // - vite#872 non-sfc component used by sfc component
+        !(isInHmrContext(instance)) &&
+            (optimized || patchFlag > 0) &&
+            !(patchFlag & 16 /* PatchFlags.FULL_PROPS */)) {
+            if (patchFlag & 8 /* PatchFlags.PROPS */) {
+                // Compiler-generated props & no keys change, just set the updated
+                // the props.
+                const propsToUpdate = instance.vnode.dynamicProps;
+                for (let i = 0; i < propsToUpdate.length; i++) {
+                    let key = propsToUpdate[i];
+                    // skip if the prop key is a declared emit event listener
+                    if (isEmitListener(instance.emitsOptions, key)) {
+                        continue;
+                    }
+                    // PROPS flag guarantees rawProps to be non-null
+                    const value = rawProps[key];
+                    if (options) {
+                        // attr / props separation was done on init and will be consistent
+                        // in this code path, so just check if attrs have it.
+                        if (hasOwn(attrs, key)) {
+                            if (value !== attrs[key]) {
+                                attrs[key] = value;
+                                hasAttrsChanged = true;
+                            }
+                        }
+                        else {
+                            const camelizedKey = camelize(key);
+                            props[camelizedKey] = resolvePropValue(options, rawCurrentProps, camelizedKey, value, instance, false /* isAbsent */);
+                        }
+                    }
+                    else {
+                        if (value !== attrs[key]) {
+                            attrs[key] = value;
+                            hasAttrsChanged = true;
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            // full props update.
+            if (setFullProps(instance, rawProps, props, attrs)) {
+                hasAttrsChanged = true;
+            }
+            // in case of dynamic props, check if we need to delete keys from
+            // the props object
+            let kebabKey;
+            for (const key in rawCurrentProps) {
+                if (!rawProps ||
+                    // for camelCase
+                    (!hasOwn(rawProps, key) &&
+                        // it's possible the original props was passed in as kebab-case
+                        // and converted to camelCase (#955)
+                        ((kebabKey = hyphenate(key)) === key || !hasOwn(rawProps, kebabKey)))) {
+                    if (options) {
+                        if (rawPrevProps &&
+                            // for camelCase
+                            (rawPrevProps[key] !== undefined ||
+                                // for kebab-case
+                                rawPrevProps[kebabKey] !== undefined)) {
+                            props[key] = resolvePropValue(options, rawCurrentProps, key, undefined, instance, true /* isAbsent */);
+                        }
+                    }
+                    else {
+                        delete props[key];
+                    }
+                }
+            }
+            // in the case of functional component w/o props declaration, props and
+            // attrs point to the same object so it should already have been updated.
+            if (attrs !== rawCurrentProps) {
+                for (const key in attrs) {
+                    if (!rawProps ||
+                        (!hasOwn(rawProps, key) &&
+                            (!false ))) {
+                        delete attrs[key];
+                        hasAttrsChanged = true;
+                    }
+                }
+            }
+        }
+        // trigger updates for $attrs in case it's used in component slots
+        if (hasAttrsChanged) {
+            trigger(instance, "set" /* TriggerOpTypes.SET */, '$attrs');
+        }
+        {
+            validateProps(rawProps || {}, props, instance);
+        }
+    }
+    function setFullProps(instance, rawProps, props, attrs) {
+        const [options, needCastKeys] = instance.propsOptions;
+        let hasAttrsChanged = false;
+        let rawCastValues;
+        if (rawProps) {
+            for (let key in rawProps) {
+                // key, ref are reserved and never passed down
+                if (isReservedProp(key)) {
+                    continue;
+                }
+                const value = rawProps[key];
+                // prop option names are camelized during normalization, so to support
+                // kebab -> camel conversion here we need to camelize the key.
+                let camelKey;
+                if (options && hasOwn(options, (camelKey = camelize(key)))) {
+                    if (!needCastKeys || !needCastKeys.includes(camelKey)) {
+                        props[camelKey] = value;
+                    }
+                    else {
+                        (rawCastValues || (rawCastValues = {}))[camelKey] = value;
+                    }
+                }
+                else if (!isEmitListener(instance.emitsOptions, key)) {
+                    if (!(key in attrs) || value !== attrs[key]) {
+                        attrs[key] = value;
+                        hasAttrsChanged = true;
+                    }
+                }
+            }
+        }
+        if (needCastKeys) {
+            const rawCurrentProps = toRaw(props);
+            const castValues = rawCastValues || EMPTY_OBJ;
+            for (let i = 0; i < needCastKeys.length; i++) {
+                const key = needCastKeys[i];
+                props[key] = resolvePropValue(options, rawCurrentProps, key, castValues[key], instance, !hasOwn(castValues, key));
+            }
+        }
+        return hasAttrsChanged;
+    }
+    function resolvePropValue(options, props, key, value, instance, isAbsent) {
+        const opt = options[key];
+        if (opt != null) {
+            const hasDefault = hasOwn(opt, 'default');
+            // default values
+            if (hasDefault && value === undefined) {
+                const defaultValue = opt.default;
+                if (opt.type !== Function && isFunction$1(defaultValue)) {
+                    const { propsDefaults } = instance;
+                    if (key in propsDefaults) {
+                        value = propsDefaults[key];
+                    }
+                    else {
+                        setCurrentInstance(instance);
+                        value = propsDefaults[key] = defaultValue.call(null, props);
+                        unsetCurrentInstance();
+                    }
+                }
+                else {
+                    value = defaultValue;
+                }
+            }
+            // boolean casting
+            if (opt[0 /* BooleanFlags.shouldCast */]) {
+                if (isAbsent && !hasDefault) {
+                    value = false;
+                }
+                else if (opt[1 /* BooleanFlags.shouldCastTrue */] &&
+                    (value === '' || value === hyphenate(key))) {
+                    value = true;
+                }
+            }
+        }
+        return value;
+    }
+    function normalizePropsOptions(comp, appContext, asMixin = false) {
+        const cache = appContext.propsCache;
+        const cached = cache.get(comp);
+        if (cached) {
+            return cached;
+        }
+        const raw = comp.props;
+        const normalized = {};
+        const needCastKeys = [];
+        // apply mixin/extends props
+        let hasExtends = false;
+        if (!isFunction$1(comp)) {
+            const extendProps = (raw) => {
+                hasExtends = true;
+                const [props, keys] = normalizePropsOptions(raw, appContext, true);
+                extend(normalized, props);
+                if (keys)
+                    needCastKeys.push(...keys);
+            };
+            if (!asMixin && appContext.mixins.length) {
+                appContext.mixins.forEach(extendProps);
+            }
+            if (comp.extends) {
+                extendProps(comp.extends);
+            }
+            if (comp.mixins) {
+                comp.mixins.forEach(extendProps);
+            }
+        }
+        if (!raw && !hasExtends) {
+            if (isObject$1(comp)) {
+                cache.set(comp, EMPTY_ARR);
+            }
+            return EMPTY_ARR;
+        }
+        if (isArray$2(raw)) {
+            for (let i = 0; i < raw.length; i++) {
+                if (!isString$2(raw[i])) {
+                    warn(`props must be strings when using array syntax.`, raw[i]);
+                }
+                const normalizedKey = camelize(raw[i]);
+                if (validatePropName(normalizedKey)) {
+                    normalized[normalizedKey] = EMPTY_OBJ;
+                }
+            }
+        }
+        else if (raw) {
+            if (!isObject$1(raw)) {
+                warn(`invalid props options`, raw);
+            }
+            for (const key in raw) {
+                const normalizedKey = camelize(key);
+                if (validatePropName(normalizedKey)) {
+                    const opt = raw[key];
+                    const prop = (normalized[normalizedKey] =
+                        isArray$2(opt) || isFunction$1(opt) ? { type: opt } : Object.assign({}, opt));
+                    if (prop) {
+                        const booleanIndex = getTypeIndex(Boolean, prop.type);
+                        const stringIndex = getTypeIndex(String, prop.type);
+                        prop[0 /* BooleanFlags.shouldCast */] = booleanIndex > -1;
+                        prop[1 /* BooleanFlags.shouldCastTrue */] =
+                            stringIndex < 0 || booleanIndex < stringIndex;
+                        // if the prop needs boolean casting or default value
+                        if (booleanIndex > -1 || hasOwn(prop, 'default')) {
+                            needCastKeys.push(normalizedKey);
+                        }
+                    }
+                }
+            }
+        }
+        const res = [normalized, needCastKeys];
+        if (isObject$1(comp)) {
+            cache.set(comp, res);
+        }
+        return res;
+    }
+    function validatePropName(key) {
+        if (key[0] !== '$') {
+            return true;
+        }
+        else {
+            warn(`Invalid prop name: "${key}" is a reserved property.`);
+        }
+        return false;
+    }
+    // use function string name to check type constructors
+    // so that it works across vms / iframes.
+    function getType(ctor) {
+        const match = ctor && ctor.toString().match(/^\s*function (\w+)/);
+        return match ? match[1] : ctor === null ? 'null' : '';
+    }
+    function isSameType(a, b) {
+        return getType(a) === getType(b);
+    }
+    function getTypeIndex(type, expectedTypes) {
+        if (isArray$2(expectedTypes)) {
+            return expectedTypes.findIndex(t => isSameType(t, type));
+        }
+        else if (isFunction$1(expectedTypes)) {
+            return isSameType(expectedTypes, type) ? 0 : -1;
+        }
+        return -1;
+    }
+    /**
+     * dev only
+     */
+    function validateProps(rawProps, props, instance) {
+        const resolvedValues = toRaw(props);
+        const options = instance.propsOptions[0];
+        for (const key in options) {
+            let opt = options[key];
+            if (opt == null)
+                continue;
+            validateProp(key, resolvedValues[key], opt, !hasOwn(rawProps, key) && !hasOwn(rawProps, hyphenate(key)));
+        }
+    }
+    /**
+     * dev only
+     */
+    function validateProp(name, value, prop, isAbsent) {
+        const { type, required, validator } = prop;
+        // required!
+        if (required && isAbsent) {
+            warn('Missing required prop: "' + name + '"');
+            return;
+        }
+        // missing but optional
+        if (value == null && !prop.required) {
+            return;
+        }
+        // type check
+        if (type != null && type !== true) {
+            let isValid = false;
+            const types = isArray$2(type) ? type : [type];
+            const expectedTypes = [];
+            // value is valid as long as one of the specified types match
+            for (let i = 0; i < types.length && !isValid; i++) {
+                const { valid, expectedType } = assertType(value, types[i]);
+                expectedTypes.push(expectedType || '');
+                isValid = valid;
+            }
+            if (!isValid) {
+                warn(getInvalidTypeMessage(name, value, expectedTypes));
+                return;
+            }
+        }
+        // custom validator
+        if (validator && !validator(value)) {
+            warn('Invalid prop: custom validator check failed for prop "' + name + '".');
+        }
+    }
+    const isSimpleType = /*#__PURE__*/ makeMap('String,Number,Boolean,Function,Symbol,BigInt');
+    /**
+     * dev only
+     */
+    function assertType(value, type) {
+        let valid;
+        const expectedType = getType(type);
+        if (isSimpleType(expectedType)) {
+            const t = typeof value;
+            valid = t === expectedType.toLowerCase();
+            // for primitive wrapper objects
+            if (!valid && t === 'object') {
+                valid = value instanceof type;
+            }
+        }
+        else if (expectedType === 'Object') {
+            valid = isObject$1(value);
+        }
+        else if (expectedType === 'Array') {
+            valid = isArray$2(value);
+        }
+        else if (expectedType === 'null') {
+            valid = value === null;
+        }
+        else {
+            valid = value instanceof type;
+        }
+        return {
+            valid,
+            expectedType
+        };
+    }
+    /**
+     * dev only
+     */
+    function getInvalidTypeMessage(name, value, expectedTypes) {
+        let message = `Invalid prop: type check failed for prop "${name}".` +
+            ` Expected ${expectedTypes.map(capitalize).join(' | ')}`;
+        const expectedType = expectedTypes[0];
+        const receivedType = toRawType(value);
+        const expectedValue = styleValue(value, expectedType);
+        const receivedValue = styleValue(value, receivedType);
+        // check if we need to specify expected value
+        if (expectedTypes.length === 1 &&
+            isExplicable(expectedType) &&
+            !isBoolean(expectedType, receivedType)) {
+            message += ` with value ${expectedValue}`;
+        }
+        message += `, got ${receivedType} `;
+        // check if we need to specify received value
+        if (isExplicable(receivedType)) {
+            message += `with value ${receivedValue}.`;
+        }
+        return message;
+    }
+    /**
+     * dev only
+     */
+    function styleValue(value, type) {
+        if (type === 'String') {
+            return `"${value}"`;
+        }
+        else if (type === 'Number') {
+            return `${Number(value)}`;
+        }
+        else {
+            return `${value}`;
+        }
+    }
+    /**
+     * dev only
+     */
+    function isExplicable(type) {
+        const explicitTypes = ['string', 'number', 'boolean'];
+        return explicitTypes.some(elem => type.toLowerCase() === elem);
+    }
+    /**
+     * dev only
+     */
+    function isBoolean(...args) {
+        return args.some(elem => elem.toLowerCase() === 'boolean');
+    }
+
+    const isInternalKey = (key) => key[0] === '_' || key === '$stable';
+    const normalizeSlotValue = (value) => isArray$2(value)
+        ? value.map(normalizeVNode)
+        : [normalizeVNode(value)];
+    const normalizeSlot = (key, rawSlot, ctx) => {
+        if (rawSlot._n) {
+            // already normalized - #5353
+            return rawSlot;
+        }
+        const normalized = withCtx((...args) => {
+            if (("development" !== 'production') && currentInstance) {
+                warn(`Slot "${key}" invoked outside of the render function: ` +
+                    `this will not track dependencies used in the slot. ` +
+                    `Invoke the slot function inside the render function instead.`);
+            }
+            return normalizeSlotValue(rawSlot(...args));
+        }, ctx);
+        normalized._c = false;
+        return normalized;
+    };
+    const normalizeObjectSlots = (rawSlots, slots, instance) => {
+        const ctx = rawSlots._ctx;
+        for (const key in rawSlots) {
+            if (isInternalKey(key))
+                continue;
+            const value = rawSlots[key];
+            if (isFunction$1(value)) {
+                slots[key] = normalizeSlot(key, value, ctx);
+            }
+            else if (value != null) {
+                {
+                    warn(`Non-function value encountered for slot "${key}". ` +
+                        `Prefer function slots for better performance.`);
+                }
+                const normalized = normalizeSlotValue(value);
+                slots[key] = () => normalized;
+            }
+        }
+    };
+    const normalizeVNodeSlots = (instance, children) => {
+        if (!isKeepAlive(instance.vnode) &&
+            !(false )) {
+            warn(`Non-function value encountered for default slot. ` +
+                `Prefer function slots for better performance.`);
+        }
+        const normalized = normalizeSlotValue(children);
+        instance.slots.default = () => normalized;
+    };
+    const initSlots = (instance, children) => {
+        if (instance.vnode.shapeFlag & 32 /* ShapeFlags.SLOTS_CHILDREN */) {
+            const type = children._;
+            if (type) {
+                // users can get the shallow readonly version of the slots object through `this.$slots`,
+                // we should avoid the proxy object polluting the slots of the internal instance
+                instance.slots = toRaw(children);
+                // make compiler marker non-enumerable
+                def(children, '_', type);
+            }
+            else {
+                normalizeObjectSlots(children, (instance.slots = {}));
+            }
+        }
+        else {
+            instance.slots = {};
+            if (children) {
+                normalizeVNodeSlots(instance, children);
+            }
+        }
+        def(instance.slots, InternalObjectKey, 1);
+    };
+    const updateSlots = (instance, children, optimized) => {
+        const { vnode, slots } = instance;
+        let needDeletionCheck = true;
+        let deletionComparisonTarget = EMPTY_OBJ;
+        if (vnode.shapeFlag & 32 /* ShapeFlags.SLOTS_CHILDREN */) {
+            const type = children._;
+            if (type) {
+                // compiled slots.
+                if (isHmrUpdating) {
+                    // Parent was HMR updated so slot content may have changed.
+                    // force update slots and mark instance for hmr as well
+                    extend(slots, children);
+                }
+                else if (optimized && type === 1 /* SlotFlags.STABLE */) {
+                    // compiled AND stable.
+                    // no need to update, and skip stale slots removal.
+                    needDeletionCheck = false;
+                }
+                else {
+                    // compiled but dynamic (v-if/v-for on slots) - update slots, but skip
+                    // normalization.
+                    extend(slots, children);
+                    // #2893
+                    // when rendering the optimized slots by manually written render function,
+                    // we need to delete the `slots._` flag if necessary to make subsequent updates reliable,
+                    // i.e. let the `renderSlot` create the bailed Fragment
+                    if (!optimized && type === 1 /* SlotFlags.STABLE */) {
+                        delete slots._;
+                    }
+                }
+            }
+            else {
+                needDeletionCheck = !children.$stable;
+                normalizeObjectSlots(children, slots);
+            }
+            deletionComparisonTarget = children;
+        }
+        else if (children) {
+            // non slot object children (direct value) passed to a component
+            normalizeVNodeSlots(instance, children);
+            deletionComparisonTarget = { default: 1 };
+        }
+        // delete stale slots
+        if (needDeletionCheck) {
+            for (const key in slots) {
+                if (!isInternalKey(key) && !(key in deletionComparisonTarget)) {
+                    delete slots[key];
+                }
+            }
+        }
+    };
+
+    function createAppContext() {
+        return {
+            app: null,
+            config: {
+                isNativeTag: NO,
+                performance: false,
+                globalProperties: {},
+                optionMergeStrategies: {},
+                errorHandler: undefined,
+                warnHandler: undefined,
+                compilerOptions: {}
+            },
+            mixins: [],
+            components: {},
+            directives: {},
+            provides: Object.create(null),
+            optionsCache: new WeakMap(),
+            propsCache: new WeakMap(),
+            emitsCache: new WeakMap()
+        };
+    }
+    let uid = 0;
+    function createAppAPI(render, hydrate) {
+        return function createApp(rootComponent, rootProps = null) {
+            if (!isFunction$1(rootComponent)) {
+                rootComponent = Object.assign({}, rootComponent);
+            }
+            if (rootProps != null && !isObject$1(rootProps)) {
+                warn(`root props passed to app.mount() must be an object.`);
+                rootProps = null;
+            }
+            const context = createAppContext();
+            const installedPlugins = new Set();
+            let isMounted = false;
+            const app = (context.app = {
+                _uid: uid++,
+                _component: rootComponent,
+                _props: rootProps,
+                _container: null,
+                _context: context,
+                _instance: null,
+                version,
+                get config() {
+                    return context.config;
+                },
+                set config(v) {
+                    {
+                        warn(`app.config cannot be replaced. Modify individual options instead.`);
+                    }
+                },
+                use(plugin, ...options) {
+                    if (installedPlugins.has(plugin)) {
+                        warn(`Plugin has already been applied to target app.`);
+                    }
+                    else if (plugin && isFunction$1(plugin.install)) {
+                        installedPlugins.add(plugin);
+                        plugin.install(app, ...options);
+                    }
+                    else if (isFunction$1(plugin)) {
+                        installedPlugins.add(plugin);
+                        plugin(app, ...options);
+                    }
+                    else {
+                        warn(`A plugin must either be a function or an object with an "install" ` +
+                            `function.`);
+                    }
+                    return app;
+                },
+                mixin(mixin) {
+                    {
+                        if (!context.mixins.includes(mixin)) {
+                            context.mixins.push(mixin);
+                        }
+                        else {
+                            warn('Mixin has already been applied to target app' +
+                                (mixin.name ? `: ${mixin.name}` : ''));
+                        }
+                    }
+                    return app;
+                },
+                component(name, component) {
+                    {
+                        validateComponentName(name, context.config);
+                    }
+                    if (!component) {
+                        return context.components[name];
+                    }
+                    if (context.components[name]) {
+                        warn(`Component "${name}" has already been registered in target app.`);
+                    }
+                    context.components[name] = component;
+                    return app;
+                },
+                directive(name, directive) {
+                    {
+                        validateDirectiveName(name);
+                    }
+                    if (!directive) {
+                        return context.directives[name];
+                    }
+                    if (context.directives[name]) {
+                        warn(`Directive "${name}" has already been registered in target app.`);
+                    }
+                    context.directives[name] = directive;
+                    return app;
+                },
+                mount(rootContainer, isHydrate, isSVG) {
+                    if (!isMounted) {
+                        // #5571
+                        if (rootContainer.__vue_app__) {
+                            warn(`There is already an app instance mounted on the host container.\n` +
+                                ` If you want to mount another app on the same host container,` +
+                                ` you need to unmount the previous app by calling \`app.unmount()\` first.`);
+                        }
+                        const vnode = createVNode(rootComponent, rootProps);
+                        // store app context on the root VNode.
+                        // this will be set on the root instance on initial mount.
+                        vnode.appContext = context;
+                        // HMR root reload
+                        {
+                            context.reload = () => {
+                                render(cloneVNode(vnode), rootContainer, isSVG);
+                            };
+                        }
+                        if (isHydrate && hydrate) {
+                            hydrate(vnode, rootContainer);
+                        }
+                        else {
+                            render(vnode, rootContainer, isSVG);
+                        }
+                        isMounted = true;
+                        app._container = rootContainer;
+                        rootContainer.__vue_app__ = app;
+                        {
+                            app._instance = vnode.component;
+                            devtoolsInitApp(app, version);
+                        }
+                        return getExposeProxy(vnode.component) || vnode.component.proxy;
+                    }
+                    else {
+                        warn(`App has already been mounted.\n` +
+                            `If you want to remount the same app, move your app creation logic ` +
+                            `into a factory function and create fresh app instances for each ` +
+                            `mount - e.g. \`const createMyApp = () => createApp(App)\``);
+                    }
+                },
+                unmount() {
+                    if (isMounted) {
+                        render(null, app._container);
+                        {
+                            app._instance = null;
+                            devtoolsUnmountApp(app);
+                        }
+                        delete app._container.__vue_app__;
+                    }
+                    else {
+                        warn(`Cannot unmount an app that is not mounted.`);
+                    }
+                },
+                provide(key, value) {
+                    if (key in context.provides) {
+                        warn(`App already provides property with key "${String(key)}". ` +
+                            `It will be overwritten with the new value.`);
+                    }
+                    context.provides[key] = value;
+                    return app;
+                }
+            });
+            return app;
+        };
+    }
+
+    /**
+     * Function for handling a template ref
+     */
+    function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
+        if (isArray$2(rawRef)) {
+            rawRef.forEach((r, i) => setRef(r, oldRawRef && (isArray$2(oldRawRef) ? oldRawRef[i] : oldRawRef), parentSuspense, vnode, isUnmount));
+            return;
+        }
+        if (isAsyncWrapper(vnode) && !isUnmount) {
+            // when mounting async components, nothing needs to be done,
+            // because the template ref is forwarded to inner component
+            return;
+        }
+        const refValue = vnode.shapeFlag & 4 /* ShapeFlags.STATEFUL_COMPONENT */
+            ? getExposeProxy(vnode.component) || vnode.component.proxy
+            : vnode.el;
+        const value = isUnmount ? null : refValue;
+        const { i: owner, r: ref } = rawRef;
+        if (!owner) {
+            warn(`Missing ref owner context. ref cannot be used on hoisted vnodes. ` +
+                `A vnode with ref must be created inside the render function.`);
+            return;
+        }
+        const oldRef = oldRawRef && oldRawRef.r;
+        const refs = owner.refs === EMPTY_OBJ ? (owner.refs = {}) : owner.refs;
+        const setupState = owner.setupState;
+        // dynamic ref changed. unset old ref
+        if (oldRef != null && oldRef !== ref) {
+            if (isString$2(oldRef)) {
+                refs[oldRef] = null;
+                if (hasOwn(setupState, oldRef)) {
+                    setupState[oldRef] = null;
+                }
+            }
+            else if (isRef(oldRef)) {
+                oldRef.value = null;
+            }
+        }
+        if (isFunction$1(ref)) {
+            callWithErrorHandling(ref, owner, 12 /* ErrorCodes.FUNCTION_REF */, [value, refs]);
+        }
+        else {
+            const _isString = isString$2(ref);
+            const _isRef = isRef(ref);
+            if (_isString || _isRef) {
+                const doSet = () => {
+                    if (rawRef.f) {
+                        const existing = _isString
+                            ? hasOwn(setupState, ref)
+                                ? setupState[ref]
+                                : refs[ref]
+                            : ref.value;
+                        if (isUnmount) {
+                            isArray$2(existing) && remove(existing, refValue);
+                        }
+                        else {
+                            if (!isArray$2(existing)) {
+                                if (_isString) {
+                                    refs[ref] = [refValue];
+                                    if (hasOwn(setupState, ref)) {
+                                        setupState[ref] = refs[ref];
+                                    }
+                                }
+                                else {
+                                    ref.value = [refValue];
+                                    if (rawRef.k)
+                                        refs[rawRef.k] = ref.value;
+                                }
+                            }
+                            else if (!existing.includes(refValue)) {
+                                existing.push(refValue);
+                            }
+                        }
+                    }
+                    else if (_isString) {
+                        refs[ref] = value;
+                        if (hasOwn(setupState, ref)) {
+                            setupState[ref] = value;
+                        }
+                    }
+                    else if (_isRef) {
+                        ref.value = value;
+                        if (rawRef.k)
+                            refs[rawRef.k] = value;
+                    }
+                    else {
+                        warn('Invalid template ref type:', ref, `(${typeof ref})`);
+                    }
+                };
+                if (value) {
+                    doSet.id = -1;
+                    queuePostRenderEffect(doSet, parentSuspense);
+                }
+                else {
+                    doSet();
+                }
+            }
+            else {
+                warn('Invalid template ref type:', ref, `(${typeof ref})`);
+            }
+        }
+    }
+
+    /* eslint-disable no-restricted-globals */
+    let supported;
+    let perf;
+    function startMeasure(instance, type) {
+        if (instance.appContext.config.performance && isSupported()) {
+            perf.mark(`vue-${type}-${instance.uid}`);
+        }
+        {
+            devtoolsPerfStart(instance, type, isSupported() ? perf.now() : Date.now());
+        }
+    }
+    function endMeasure(instance, type) {
+        if (instance.appContext.config.performance && isSupported()) {
+            const startTag = `vue-${type}-${instance.uid}`;
+            const endTag = startTag + `:end`;
+            perf.mark(endTag);
+            perf.measure(`<${formatComponentName(instance, instance.type)}> ${type}`, startTag, endTag);
+            perf.clearMarks(startTag);
+            perf.clearMarks(endTag);
+        }
+        {
+            devtoolsPerfEnd(instance, type, isSupported() ? perf.now() : Date.now());
+        }
+    }
+    function isSupported() {
+        if (supported !== undefined) {
+            return supported;
+        }
+        if (typeof window !== 'undefined' && window.performance) {
+            supported = true;
+            perf = window.performance;
+        }
+        else {
+            supported = false;
+        }
+        return supported;
+    }
+
+    /**
+     * This is only called in esm-bundler builds.
+     * It is called when a renderer is created, in `baseCreateRenderer` so that
+     * importing runtime-core is side-effects free.
+     *
+     * istanbul-ignore-next
+     */
+    function initFeatureFlags() {
+        const needWarn = [];
+        if (needWarn.length) {
+            const multi = needWarn.length > 1;
+            console.warn(`Feature flag${multi ? `s` : ``} ${needWarn.join(', ')} ${multi ? `are` : `is`} not explicitly defined. You are running the esm-bundler build of Vue, ` +
+                `which expects these compile-time feature flags to be globally injected ` +
+                `via the bundler config in order to get better tree-shaking in the ` +
+                `production bundle.\n\n` +
+                `For more details, see https://link.vuejs.org/feature-flags.`);
+        }
+    }
+
+    const queuePostRenderEffect = queueEffectWithSuspense
+        ;
+    /**
+     * The createRenderer function accepts two generic arguments:
+     * HostNode and HostElement, corresponding to Node and Element types in the
+     * host environment. For example, for runtime-dom, HostNode would be the DOM
+     * `Node` interface and HostElement would be the DOM `Element` interface.
+     *
+     * Custom renderers can pass in the platform specific types like this:
+     *
+     * ``` js
+     * const { render, createApp } = createRenderer<Node, Element>({
+     *   patchProp,
+     *   ...nodeOps
+     * })
+     * ```
+     */
+    function createRenderer(options) {
+        return baseCreateRenderer(options);
+    }
+    // implementation
+    function baseCreateRenderer(options, createHydrationFns) {
+        // compile-time feature flags check
+        {
+            initFeatureFlags();
+        }
+        const target = getGlobalThis();
+        target.__VUE__ = true;
+        {
+            setDevtoolsHook(target.__VUE_DEVTOOLS_GLOBAL_HOOK__, target);
+        }
+        const { insert: hostInsert, remove: hostRemove, patchProp: hostPatchProp, createElement: hostCreateElement, createText: hostCreateText, createComment: hostCreateComment, setText: hostSetText, setElementText: hostSetElementText, parentNode: hostParentNode, nextSibling: hostNextSibling, setScopeId: hostSetScopeId = NOOP, insertStaticContent: hostInsertStaticContent } = options;
+        // Note: functions inside this closure should use `const xxx = () => {}`
+        // style in order to prevent being inlined by minifiers.
+        const patch = (n1, n2, container, anchor = null, parentComponent = null, parentSuspense = null, isSVG = false, slotScopeIds = null, optimized = isHmrUpdating ? false : !!n2.dynamicChildren) => {
+            if (n1 === n2) {
+                return;
+            }
+            // patching & not same type, unmount old tree
+            if (n1 && !isSameVNodeType(n1, n2)) {
+                anchor = getNextHostNode(n1);
+                unmount(n1, parentComponent, parentSuspense, true);
+                n1 = null;
+            }
+            if (n2.patchFlag === -2 /* PatchFlags.BAIL */) {
+                optimized = false;
+                n2.dynamicChildren = null;
+            }
+            const { type, ref, shapeFlag } = n2;
+            switch (type) {
+                case Text:
+                    processText(n1, n2, container, anchor);
+                    break;
+                case Comment:
+                    processCommentNode(n1, n2, container, anchor);
+                    break;
+                case Static:
+                    if (n1 == null) {
+                        mountStaticNode(n2, container, anchor, isSVG);
+                    }
+                    else {
+                        patchStaticNode(n1, n2, container, isSVG);
+                    }
+                    break;
+                case Fragment:
+                    processFragment(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    break;
+                default:
+                    if (shapeFlag & 1 /* ShapeFlags.ELEMENT */) {
+                        processElement(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    }
+                    else if (shapeFlag & 6 /* ShapeFlags.COMPONENT */) {
+                        processComponent(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    }
+                    else if (shapeFlag & 64 /* ShapeFlags.TELEPORT */) {
+                        type.process(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized, internals);
+                    }
+                    else if (shapeFlag & 128 /* ShapeFlags.SUSPENSE */) {
+                        type.process(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized, internals);
+                    }
+                    else {
+                        warn('Invalid VNode type:', type, `(${typeof type})`);
+                    }
+            }
+            // set ref
+            if (ref != null && parentComponent) {
+                setRef(ref, n1 && n1.ref, parentSuspense, n2 || n1, !n2);
+            }
+        };
+        const processText = (n1, n2, container, anchor) => {
+            if (n1 == null) {
+                hostInsert((n2.el = hostCreateText(n2.children)), container, anchor);
+            }
+            else {
+                const el = (n2.el = n1.el);
+                if (n2.children !== n1.children) {
+                    hostSetText(el, n2.children);
+                }
+            }
+        };
+        const processCommentNode = (n1, n2, container, anchor) => {
+            if (n1 == null) {
+                hostInsert((n2.el = hostCreateComment(n2.children || '')), container, anchor);
+            }
+            else {
+                // there's no support for dynamic comments
+                n2.el = n1.el;
+            }
+        };
+        const mountStaticNode = (n2, container, anchor, isSVG) => {
+            [n2.el, n2.anchor] = hostInsertStaticContent(n2.children, container, anchor, isSVG, n2.el, n2.anchor);
+        };
+        /**
+         * Dev / HMR only
+         */
+        const patchStaticNode = (n1, n2, container, isSVG) => {
+            // static nodes are only patched during dev for HMR
+            if (n2.children !== n1.children) {
+                const anchor = hostNextSibling(n1.anchor);
+                // remove existing
+                removeStaticNode(n1);
+                [n2.el, n2.anchor] = hostInsertStaticContent(n2.children, container, anchor, isSVG);
+            }
+            else {
+                n2.el = n1.el;
+                n2.anchor = n1.anchor;
+            }
+        };
+        const moveStaticNode = ({ el, anchor }, container, nextSibling) => {
+            let next;
+            while (el && el !== anchor) {
+                next = hostNextSibling(el);
+                hostInsert(el, container, nextSibling);
+                el = next;
+            }
+            hostInsert(anchor, container, nextSibling);
+        };
+        const removeStaticNode = ({ el, anchor }) => {
+            let next;
+            while (el && el !== anchor) {
+                next = hostNextSibling(el);
+                hostRemove(el);
+                el = next;
+            }
+            hostRemove(anchor);
+        };
+        const processElement = (n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            isSVG = isSVG || n2.type === 'svg';
+            if (n1 == null) {
+                mountElement(n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+            }
+            else {
+                patchElement(n1, n2, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+            }
+        };
+        const mountElement = (vnode, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            let el;
+            let vnodeHook;
+            const { type, props, shapeFlag, transition, dirs } = vnode;
+            el = vnode.el = hostCreateElement(vnode.type, isSVG, props && props.is, props);
+            // mount children first, since some props may rely on child content
+            // being already rendered, e.g. `<select value>`
+            if (shapeFlag & 8 /* ShapeFlags.TEXT_CHILDREN */) {
+                hostSetElementText(el, vnode.children);
+            }
+            else if (shapeFlag & 16 /* ShapeFlags.ARRAY_CHILDREN */) {
+                mountChildren(vnode.children, el, null, parentComponent, parentSuspense, isSVG && type !== 'foreignObject', slotScopeIds, optimized);
+            }
+            if (dirs) {
+                invokeDirectiveHook(vnode, null, parentComponent, 'created');
+            }
+            // props
+            if (props) {
+                for (const key in props) {
+                    if (key !== 'value' && !isReservedProp(key)) {
+                        hostPatchProp(el, key, null, props[key], isSVG, vnode.children, parentComponent, parentSuspense, unmountChildren);
+                    }
+                }
+                /**
+                 * Special case for setting value on DOM elements:
+                 * - it can be order-sensitive (e.g. should be set *after* min/max, #2325, #4024)
+                 * - it needs to be forced (#1471)
+                 * #2353 proposes adding another renderer option to configure this, but
+                 * the properties affects are so finite it is worth special casing it
+                 * here to reduce the complexity. (Special casing it also should not
+                 * affect non-DOM renderers)
+                 */
+                if ('value' in props) {
+                    hostPatchProp(el, 'value', null, props.value);
+                }
+                if ((vnodeHook = props.onVnodeBeforeMount)) {
+                    invokeVNodeHook(vnodeHook, parentComponent, vnode);
+                }
+            }
+            // scopeId
+            setScopeId(el, vnode, vnode.scopeId, slotScopeIds, parentComponent);
+            {
+                Object.defineProperty(el, '__vnode', {
+                    value: vnode,
+                    enumerable: false
+                });
+                Object.defineProperty(el, '__vueParentComponent', {
+                    value: parentComponent,
+                    enumerable: false
+                });
+            }
+            if (dirs) {
+                invokeDirectiveHook(vnode, null, parentComponent, 'beforeMount');
+            }
+            // #1583 For inside suspense + suspense not resolved case, enter hook should call when suspense resolved
+            // #1689 For inside suspense + suspense resolved case, just call it
+            const needCallTransitionHooks = (!parentSuspense || (parentSuspense && !parentSuspense.pendingBranch)) &&
+                transition &&
+                !transition.persisted;
+            if (needCallTransitionHooks) {
+                transition.beforeEnter(el);
+            }
+            hostInsert(el, container, anchor);
+            if ((vnodeHook = props && props.onVnodeMounted) ||
+                needCallTransitionHooks ||
+                dirs) {
+                queuePostRenderEffect(() => {
+                    vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
+                    needCallTransitionHooks && transition.enter(el);
+                    dirs && invokeDirectiveHook(vnode, null, parentComponent, 'mounted');
+                }, parentSuspense);
+            }
+        };
+        const setScopeId = (el, vnode, scopeId, slotScopeIds, parentComponent) => {
+            if (scopeId) {
+                hostSetScopeId(el, scopeId);
+            }
+            if (slotScopeIds) {
+                for (let i = 0; i < slotScopeIds.length; i++) {
+                    hostSetScopeId(el, slotScopeIds[i]);
+                }
+            }
+            if (parentComponent) {
+                let subTree = parentComponent.subTree;
+                if (subTree.patchFlag > 0 &&
+                    subTree.patchFlag & 2048 /* PatchFlags.DEV_ROOT_FRAGMENT */) {
+                    subTree =
+                        filterSingleRoot(subTree.children) || subTree;
+                }
+                if (vnode === subTree) {
+                    const parentVNode = parentComponent.vnode;
+                    setScopeId(el, parentVNode, parentVNode.scopeId, parentVNode.slotScopeIds, parentComponent.parent);
+                }
+            }
+        };
+        const mountChildren = (children, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized, start = 0) => {
+            for (let i = start; i < children.length; i++) {
+                const child = (children[i] = optimized
+                    ? cloneIfMounted(children[i])
+                    : normalizeVNode(children[i]));
+                patch(null, child, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+            }
+        };
+        const patchElement = (n1, n2, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            const el = (n2.el = n1.el);
+            let { patchFlag, dynamicChildren, dirs } = n2;
+            // #1426 take the old vnode's patch flag into account since user may clone a
+            // compiler-generated vnode, which de-opts to FULL_PROPS
+            patchFlag |= n1.patchFlag & 16 /* PatchFlags.FULL_PROPS */;
+            const oldProps = n1.props || EMPTY_OBJ;
+            const newProps = n2.props || EMPTY_OBJ;
+            let vnodeHook;
+            // disable recurse in beforeUpdate hooks
+            parentComponent && toggleRecurse(parentComponent, false);
+            if ((vnodeHook = newProps.onVnodeBeforeUpdate)) {
+                invokeVNodeHook(vnodeHook, parentComponent, n2, n1);
+            }
+            if (dirs) {
+                invokeDirectiveHook(n2, n1, parentComponent, 'beforeUpdate');
+            }
+            parentComponent && toggleRecurse(parentComponent, true);
+            if (isHmrUpdating) {
+                // HMR updated, force full diff
+                patchFlag = 0;
+                optimized = false;
+                dynamicChildren = null;
+            }
+            const areChildrenSVG = isSVG && n2.type !== 'foreignObject';
+            if (dynamicChildren) {
+                patchBlockChildren(n1.dynamicChildren, dynamicChildren, el, parentComponent, parentSuspense, areChildrenSVG, slotScopeIds);
+                if (parentComponent && parentComponent.type.__hmrId) {
+                    traverseStaticChildren(n1, n2);
+                }
+            }
+            else if (!optimized) {
+                // full diff
+                patchChildren(n1, n2, el, null, parentComponent, parentSuspense, areChildrenSVG, slotScopeIds, false);
+            }
+            if (patchFlag > 0) {
+                // the presence of a patchFlag means this element's render code was
+                // generated by the compiler and can take the fast path.
+                // in this path old node and new node are guaranteed to have the same shape
+                // (i.e. at the exact same position in the source template)
+                if (patchFlag & 16 /* PatchFlags.FULL_PROPS */) {
+                    // element props contain dynamic keys, full diff needed
+                    patchProps(el, n2, oldProps, newProps, parentComponent, parentSuspense, isSVG);
+                }
+                else {
+                    // class
+                    // this flag is matched when the element has dynamic class bindings.
+                    if (patchFlag & 2 /* PatchFlags.CLASS */) {
+                        if (oldProps.class !== newProps.class) {
+                            hostPatchProp(el, 'class', null, newProps.class, isSVG);
+                        }
+                    }
+                    // style
+                    // this flag is matched when the element has dynamic style bindings
+                    if (patchFlag & 4 /* PatchFlags.STYLE */) {
+                        hostPatchProp(el, 'style', oldProps.style, newProps.style, isSVG);
+                    }
+                    // props
+                    // This flag is matched when the element has dynamic prop/attr bindings
+                    // other than class and style. The keys of dynamic prop/attrs are saved for
+                    // faster iteration.
+                    // Note dynamic keys like :[foo]="bar" will cause this optimization to
+                    // bail out and go through a full diff because we need to unset the old key
+                    if (patchFlag & 8 /* PatchFlags.PROPS */) {
+                        // if the flag is present then dynamicProps must be non-null
+                        const propsToUpdate = n2.dynamicProps;
+                        for (let i = 0; i < propsToUpdate.length; i++) {
+                            const key = propsToUpdate[i];
+                            const prev = oldProps[key];
+                            const next = newProps[key];
+                            // #1471 force patch value
+                            if (next !== prev || key === 'value') {
+                                hostPatchProp(el, key, prev, next, isSVG, n1.children, parentComponent, parentSuspense, unmountChildren);
+                            }
+                        }
+                    }
+                }
+                // text
+                // This flag is matched when the element has only dynamic text children.
+                if (patchFlag & 1 /* PatchFlags.TEXT */) {
+                    if (n1.children !== n2.children) {
+                        hostSetElementText(el, n2.children);
+                    }
+                }
+            }
+            else if (!optimized && dynamicChildren == null) {
+                // unoptimized, full diff
+                patchProps(el, n2, oldProps, newProps, parentComponent, parentSuspense, isSVG);
+            }
+            if ((vnodeHook = newProps.onVnodeUpdated) || dirs) {
+                queuePostRenderEffect(() => {
+                    vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, n2, n1);
+                    dirs && invokeDirectiveHook(n2, n1, parentComponent, 'updated');
+                }, parentSuspense);
+            }
+        };
+        // The fast path for blocks.
+        const patchBlockChildren = (oldChildren, newChildren, fallbackContainer, parentComponent, parentSuspense, isSVG, slotScopeIds) => {
+            for (let i = 0; i < newChildren.length; i++) {
+                const oldVNode = oldChildren[i];
+                const newVNode = newChildren[i];
+                // Determine the container (parent element) for the patch.
+                const container = 
+                // oldVNode may be an errored async setup() component inside Suspense
+                // which will not have a mounted element
+                oldVNode.el &&
+                    // - In the case of a Fragment, we need to provide the actual parent
+                    // of the Fragment itself so it can move its children.
+                    (oldVNode.type === Fragment ||
+                        // - In the case of different nodes, there is going to be a replacement
+                        // which also requires the correct parent container
+                        !isSameVNodeType(oldVNode, newVNode) ||
+                        // - In the case of a component, it could contain anything.
+                        oldVNode.shapeFlag & (6 /* ShapeFlags.COMPONENT */ | 64 /* ShapeFlags.TELEPORT */))
+                    ? hostParentNode(oldVNode.el)
+                    : // In other cases, the parent container is not actually used so we
+                        // just pass the block element here to avoid a DOM parentNode call.
+                        fallbackContainer;
+                patch(oldVNode, newVNode, container, null, parentComponent, parentSuspense, isSVG, slotScopeIds, true);
+            }
+        };
+        const patchProps = (el, vnode, oldProps, newProps, parentComponent, parentSuspense, isSVG) => {
+            if (oldProps !== newProps) {
+                if (oldProps !== EMPTY_OBJ) {
+                    for (const key in oldProps) {
+                        if (!isReservedProp(key) && !(key in newProps)) {
+                            hostPatchProp(el, key, oldProps[key], null, isSVG, vnode.children, parentComponent, parentSuspense, unmountChildren);
+                        }
+                    }
+                }
+                for (const key in newProps) {
+                    // empty string is not valid prop
+                    if (isReservedProp(key))
+                        continue;
+                    const next = newProps[key];
+                    const prev = oldProps[key];
+                    // defer patching value
+                    if (next !== prev && key !== 'value') {
+                        hostPatchProp(el, key, prev, next, isSVG, vnode.children, parentComponent, parentSuspense, unmountChildren);
+                    }
+                }
+                if ('value' in newProps) {
+                    hostPatchProp(el, 'value', oldProps.value, newProps.value);
+                }
+            }
+        };
+        const processFragment = (n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            const fragmentStartAnchor = (n2.el = n1 ? n1.el : hostCreateText(''));
+            const fragmentEndAnchor = (n2.anchor = n1 ? n1.anchor : hostCreateText(''));
+            let { patchFlag, dynamicChildren, slotScopeIds: fragmentSlotScopeIds } = n2;
+            if (// #5523 dev root fragment may inherit directives
+                (isHmrUpdating || patchFlag & 2048 /* PatchFlags.DEV_ROOT_FRAGMENT */)) {
+                // HMR updated / Dev root fragment (w/ comments), force full diff
+                patchFlag = 0;
+                optimized = false;
+                dynamicChildren = null;
+            }
+            // check if this is a slot fragment with :slotted scope ids
+            if (fragmentSlotScopeIds) {
+                slotScopeIds = slotScopeIds
+                    ? slotScopeIds.concat(fragmentSlotScopeIds)
+                    : fragmentSlotScopeIds;
+            }
+            if (n1 == null) {
+                hostInsert(fragmentStartAnchor, container, anchor);
+                hostInsert(fragmentEndAnchor, container, anchor);
+                // a fragment can only have array children
+                // since they are either generated by the compiler, or implicitly created
+                // from arrays.
+                mountChildren(n2.children, container, fragmentEndAnchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+            }
+            else {
+                if (patchFlag > 0 &&
+                    patchFlag & 64 /* PatchFlags.STABLE_FRAGMENT */ &&
+                    dynamicChildren &&
+                    // #2715 the previous fragment could've been a BAILed one as a result
+                    // of renderSlot() with no valid children
+                    n1.dynamicChildren) {
+                    // a stable fragment (template root or <template v-for>) doesn't need to
+                    // patch children order, but it may contain dynamicChildren.
+                    patchBlockChildren(n1.dynamicChildren, dynamicChildren, container, parentComponent, parentSuspense, isSVG, slotScopeIds);
+                    if (parentComponent && parentComponent.type.__hmrId) {
+                        traverseStaticChildren(n1, n2);
+                    }
+                    else if (
+                    // #2080 if the stable fragment has a key, it's a <template v-for> that may
+                    //  get moved around. Make sure all root level vnodes inherit el.
+                    // #2134 or if it's a component root, it may also get moved around
+                    // as the component is being moved.
+                    n2.key != null ||
+                        (parentComponent && n2 === parentComponent.subTree)) {
+                        traverseStaticChildren(n1, n2, true /* shallow */);
+                    }
+                }
+                else {
+                    // keyed / unkeyed, or manual fragments.
+                    // for keyed & unkeyed, since they are compiler generated from v-for,
+                    // each child is guaranteed to be a block so the fragment will never
+                    // have dynamicChildren.
+                    patchChildren(n1, n2, container, fragmentEndAnchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                }
+            }
+        };
+        const processComponent = (n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            n2.slotScopeIds = slotScopeIds;
+            if (n1 == null) {
+                if (n2.shapeFlag & 512 /* ShapeFlags.COMPONENT_KEPT_ALIVE */) {
+                    parentComponent.ctx.activate(n2, container, anchor, isSVG, optimized);
+                }
+                else {
+                    mountComponent(n2, container, anchor, parentComponent, parentSuspense, isSVG, optimized);
+                }
+            }
+            else {
+                updateComponent(n1, n2, optimized);
+            }
+        };
+        const mountComponent = (initialVNode, container, anchor, parentComponent, parentSuspense, isSVG, optimized) => {
+            const instance = (initialVNode.component = createComponentInstance(initialVNode, parentComponent, parentSuspense));
+            if (instance.type.__hmrId) {
+                registerHMR(instance);
+            }
+            {
+                pushWarningContext(initialVNode);
+                startMeasure(instance, `mount`);
+            }
+            // inject renderer internals for keepAlive
+            if (isKeepAlive(initialVNode)) {
+                instance.ctx.renderer = internals;
+            }
+            // resolve props and slots for setup context
+            {
+                {
+                    startMeasure(instance, `init`);
+                }
+                setupComponent(instance);
+                {
+                    endMeasure(instance, `init`);
+                }
+            }
+            // setup() is async. This component relies on async logic to be resolved
+            // before proceeding
+            if (instance.asyncDep) {
+                parentSuspense && parentSuspense.registerDep(instance, setupRenderEffect);
+                // Give it a placeholder if this is not hydration
+                // TODO handle self-defined fallback
+                if (!initialVNode.el) {
+                    const placeholder = (instance.subTree = createVNode(Comment));
+                    processCommentNode(null, placeholder, container, anchor);
+                }
+                return;
+            }
+            setupRenderEffect(instance, initialVNode, container, anchor, parentSuspense, isSVG, optimized);
+            {
+                popWarningContext();
+                endMeasure(instance, `mount`);
+            }
+        };
+        const updateComponent = (n1, n2, optimized) => {
+            const instance = (n2.component = n1.component);
+            if (shouldUpdateComponent(n1, n2, optimized)) {
+                if (instance.asyncDep &&
+                    !instance.asyncResolved) {
+                    // async & still pending - just update props and slots
+                    // since the component's reactive effect for render isn't set-up yet
+                    {
+                        pushWarningContext(n2);
+                    }
+                    updateComponentPreRender(instance, n2, optimized);
+                    {
+                        popWarningContext();
+                    }
+                    return;
+                }
+                else {
+                    // normal update
+                    instance.next = n2;
+                    // in case the child component is also queued, remove it to avoid
+                    // double updating the same child component in the same flush.
+                    invalidateJob(instance.update);
+                    // instance.update is the reactive effect.
+                    instance.update();
+                }
+            }
+            else {
+                // no update needed. just copy over properties
+                n2.el = n1.el;
+                instance.vnode = n2;
+            }
+        };
+        const setupRenderEffect = (instance, initialVNode, container, anchor, parentSuspense, isSVG, optimized) => {
+            const componentUpdateFn = () => {
+                if (!instance.isMounted) {
+                    let vnodeHook;
+                    const { el, props } = initialVNode;
+                    const { bm, m, parent } = instance;
+                    const isAsyncWrapperVNode = isAsyncWrapper(initialVNode);
+                    toggleRecurse(instance, false);
+                    // beforeMount hook
+                    if (bm) {
+                        invokeArrayFns(bm);
+                    }
+                    // onVnodeBeforeMount
+                    if (!isAsyncWrapperVNode &&
+                        (vnodeHook = props && props.onVnodeBeforeMount)) {
+                        invokeVNodeHook(vnodeHook, parent, initialVNode);
+                    }
+                    toggleRecurse(instance, true);
+                    if (el && hydrateNode) {
+                        // vnode has adopted host node - perform hydration instead of mount.
+                        const hydrateSubTree = () => {
+                            {
+                                startMeasure(instance, `render`);
+                            }
+                            instance.subTree = renderComponentRoot(instance);
+                            {
+                                endMeasure(instance, `render`);
+                            }
+                            {
+                                startMeasure(instance, `hydrate`);
+                            }
+                            hydrateNode(el, instance.subTree, instance, parentSuspense, null);
+                            {
+                                endMeasure(instance, `hydrate`);
+                            }
+                        };
+                        if (isAsyncWrapperVNode) {
+                            initialVNode.type.__asyncLoader().then(
+                            // note: we are moving the render call into an async callback,
+                            // which means it won't track dependencies - but it's ok because
+                            // a server-rendered async wrapper is already in resolved state
+                            // and it will never need to change.
+                            () => !instance.isUnmounted && hydrateSubTree());
+                        }
+                        else {
+                            hydrateSubTree();
+                        }
+                    }
+                    else {
+                        {
+                            startMeasure(instance, `render`);
+                        }
+                        const subTree = (instance.subTree = renderComponentRoot(instance));
+                        {
+                            endMeasure(instance, `render`);
+                        }
+                        {
+                            startMeasure(instance, `patch`);
+                        }
+                        patch(null, subTree, container, anchor, instance, parentSuspense, isSVG);
+                        {
+                            endMeasure(instance, `patch`);
+                        }
+                        initialVNode.el = subTree.el;
+                    }
+                    // mounted hook
+                    if (m) {
+                        queuePostRenderEffect(m, parentSuspense);
+                    }
+                    // onVnodeMounted
+                    if (!isAsyncWrapperVNode &&
+                        (vnodeHook = props && props.onVnodeMounted)) {
+                        const scopedInitialVNode = initialVNode;
+                        queuePostRenderEffect(() => invokeVNodeHook(vnodeHook, parent, scopedInitialVNode), parentSuspense);
+                    }
+                    // activated hook for keep-alive roots.
+                    // #1742 activated hook must be accessed after first render
+                    // since the hook may be injected by a child keep-alive
+                    if (initialVNode.shapeFlag & 256 /* ShapeFlags.COMPONENT_SHOULD_KEEP_ALIVE */ ||
+                        (parent &&
+                            isAsyncWrapper(parent.vnode) &&
+                            parent.vnode.shapeFlag & 256 /* ShapeFlags.COMPONENT_SHOULD_KEEP_ALIVE */)) {
+                        instance.a && queuePostRenderEffect(instance.a, parentSuspense);
+                    }
+                    instance.isMounted = true;
+                    {
+                        devtoolsComponentAdded(instance);
+                    }
+                    // #2458: deference mount-only object parameters to prevent memleaks
+                    initialVNode = container = anchor = null;
+                }
+                else {
+                    // updateComponent
+                    // This is triggered by mutation of component's own state (next: null)
+                    // OR parent calling processComponent (next: VNode)
+                    let { next, bu, u, parent, vnode } = instance;
+                    let originNext = next;
+                    let vnodeHook;
+                    {
+                        pushWarningContext(next || instance.vnode);
+                    }
+                    // Disallow component effect recursion during pre-lifecycle hooks.
+                    toggleRecurse(instance, false);
+                    if (next) {
+                        next.el = vnode.el;
+                        updateComponentPreRender(instance, next, optimized);
+                    }
+                    else {
+                        next = vnode;
+                    }
+                    // beforeUpdate hook
+                    if (bu) {
+                        invokeArrayFns(bu);
+                    }
+                    // onVnodeBeforeUpdate
+                    if ((vnodeHook = next.props && next.props.onVnodeBeforeUpdate)) {
+                        invokeVNodeHook(vnodeHook, parent, next, vnode);
+                    }
+                    toggleRecurse(instance, true);
+                    // render
+                    {
+                        startMeasure(instance, `render`);
+                    }
+                    const nextTree = renderComponentRoot(instance);
+                    {
+                        endMeasure(instance, `render`);
+                    }
+                    const prevTree = instance.subTree;
+                    instance.subTree = nextTree;
+                    {
+                        startMeasure(instance, `patch`);
+                    }
+                    patch(prevTree, nextTree, 
+                    // parent may have changed if it's in a teleport
+                    hostParentNode(prevTree.el), 
+                    // anchor may have changed if it's in a fragment
+                    getNextHostNode(prevTree), instance, parentSuspense, isSVG);
+                    {
+                        endMeasure(instance, `patch`);
+                    }
+                    next.el = nextTree.el;
+                    if (originNext === null) {
+                        // self-triggered update. In case of HOC, update parent component
+                        // vnode el. HOC is indicated by parent instance's subTree pointing
+                        // to child component's vnode
+                        updateHOCHostEl(instance, nextTree.el);
+                    }
+                    // updated hook
+                    if (u) {
+                        queuePostRenderEffect(u, parentSuspense);
+                    }
+                    // onVnodeUpdated
+                    if ((vnodeHook = next.props && next.props.onVnodeUpdated)) {
+                        queuePostRenderEffect(() => invokeVNodeHook(vnodeHook, parent, next, vnode), parentSuspense);
+                    }
+                    {
+                        devtoolsComponentUpdated(instance);
+                    }
+                    {
+                        popWarningContext();
+                    }
+                }
+            };
+            // create reactive effect for rendering
+            const effect = (instance.effect = new ReactiveEffect(componentUpdateFn, () => queueJob(update), instance.scope // track it in component's effect scope
+            ));
+            const update = (instance.update = () => effect.run());
+            update.id = instance.uid;
+            // allowRecurse
+            // #1801, #2043 component render effects should allow recursive updates
+            toggleRecurse(instance, true);
+            {
+                effect.onTrack = instance.rtc
+                    ? e => invokeArrayFns(instance.rtc, e)
+                    : void 0;
+                effect.onTrigger = instance.rtg
+                    ? e => invokeArrayFns(instance.rtg, e)
+                    : void 0;
+                update.ownerInstance = instance;
+            }
+            update();
+        };
+        const updateComponentPreRender = (instance, nextVNode, optimized) => {
+            nextVNode.component = instance;
+            const prevProps = instance.vnode.props;
+            instance.vnode = nextVNode;
+            instance.next = null;
+            updateProps(instance, nextVNode.props, prevProps, optimized);
+            updateSlots(instance, nextVNode.children, optimized);
+            pauseTracking();
+            // props update may have triggered pre-flush watchers.
+            // flush them before the render update.
+            flushPreFlushCbs();
+            resetTracking();
+        };
+        const patchChildren = (n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized = false) => {
+            const c1 = n1 && n1.children;
+            const prevShapeFlag = n1 ? n1.shapeFlag : 0;
+            const c2 = n2.children;
+            const { patchFlag, shapeFlag } = n2;
+            // fast path
+            if (patchFlag > 0) {
+                if (patchFlag & 128 /* PatchFlags.KEYED_FRAGMENT */) {
+                    // this could be either fully-keyed or mixed (some keyed some not)
+                    // presence of patchFlag means children are guaranteed to be arrays
+                    patchKeyedChildren(c1, c2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    return;
+                }
+                else if (patchFlag & 256 /* PatchFlags.UNKEYED_FRAGMENT */) {
+                    // unkeyed
+                    patchUnkeyedChildren(c1, c2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    return;
+                }
+            }
+            // children has 3 possibilities: text, array or no children.
+            if (shapeFlag & 8 /* ShapeFlags.TEXT_CHILDREN */) {
+                // text children fast path
+                if (prevShapeFlag & 16 /* ShapeFlags.ARRAY_CHILDREN */) {
+                    unmountChildren(c1, parentComponent, parentSuspense);
+                }
+                if (c2 !== c1) {
+                    hostSetElementText(container, c2);
+                }
+            }
+            else {
+                if (prevShapeFlag & 16 /* ShapeFlags.ARRAY_CHILDREN */) {
+                    // prev children was array
+                    if (shapeFlag & 16 /* ShapeFlags.ARRAY_CHILDREN */) {
+                        // two arrays, cannot assume anything, do full diff
+                        patchKeyedChildren(c1, c2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    }
+                    else {
+                        // no new children, just unmount old
+                        unmountChildren(c1, parentComponent, parentSuspense, true);
+                    }
+                }
+                else {
+                    // prev children was text OR null
+                    // new children is array OR null
+                    if (prevShapeFlag & 8 /* ShapeFlags.TEXT_CHILDREN */) {
+                        hostSetElementText(container, '');
+                    }
+                    // mount new if array
+                    if (shapeFlag & 16 /* ShapeFlags.ARRAY_CHILDREN */) {
+                        mountChildren(c2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    }
+                }
+            }
+        };
+        const patchUnkeyedChildren = (c1, c2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            c1 = c1 || EMPTY_ARR;
+            c2 = c2 || EMPTY_ARR;
+            const oldLength = c1.length;
+            const newLength = c2.length;
+            const commonLength = Math.min(oldLength, newLength);
+            let i;
+            for (i = 0; i < commonLength; i++) {
+                const nextChild = (c2[i] = optimized
+                    ? cloneIfMounted(c2[i])
+                    : normalizeVNode(c2[i]));
+                patch(c1[i], nextChild, container, null, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+            }
+            if (oldLength > newLength) {
+                // remove old
+                unmountChildren(c1, parentComponent, parentSuspense, true, false, commonLength);
+            }
+            else {
+                // mount new
+                mountChildren(c2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized, commonLength);
+            }
+        };
+        // can be all-keyed or mixed
+        const patchKeyedChildren = (c1, c2, container, parentAnchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized) => {
+            let i = 0;
+            const l2 = c2.length;
+            let e1 = c1.length - 1; // prev ending index
+            let e2 = l2 - 1; // next ending index
+            // 1. sync from start
+            // (a b) c
+            // (a b) d e
+            while (i <= e1 && i <= e2) {
+                const n1 = c1[i];
+                const n2 = (c2[i] = optimized
+                    ? cloneIfMounted(c2[i])
+                    : normalizeVNode(c2[i]));
+                if (isSameVNodeType(n1, n2)) {
+                    patch(n1, n2, container, null, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                }
+                else {
+                    break;
+                }
+                i++;
+            }
+            // 2. sync from end
+            // a (b c)
+            // d e (b c)
+            while (i <= e1 && i <= e2) {
+                const n1 = c1[e1];
+                const n2 = (c2[e2] = optimized
+                    ? cloneIfMounted(c2[e2])
+                    : normalizeVNode(c2[e2]));
+                if (isSameVNodeType(n1, n2)) {
+                    patch(n1, n2, container, null, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                }
+                else {
+                    break;
+                }
+                e1--;
+                e2--;
+            }
+            // 3. common sequence + mount
+            // (a b)
+            // (a b) c
+            // i = 2, e1 = 1, e2 = 2
+            // (a b)
+            // c (a b)
+            // i = 0, e1 = -1, e2 = 0
+            if (i > e1) {
+                if (i <= e2) {
+                    const nextPos = e2 + 1;
+                    const anchor = nextPos < l2 ? c2[nextPos].el : parentAnchor;
+                    while (i <= e2) {
+                        patch(null, (c2[i] = optimized
+                            ? cloneIfMounted(c2[i])
+                            : normalizeVNode(c2[i])), container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                        i++;
+                    }
+                }
+            }
+            // 4. common sequence + unmount
+            // (a b) c
+            // (a b)
+            // i = 2, e1 = 2, e2 = 1
+            // a (b c)
+            // (b c)
+            // i = 0, e1 = 0, e2 = -1
+            else if (i > e2) {
+                while (i <= e1) {
+                    unmount(c1[i], parentComponent, parentSuspense, true);
+                    i++;
+                }
+            }
+            // 5. unknown sequence
+            // [i ... e1 + 1]: a b [c d e] f g
+            // [i ... e2 + 1]: a b [e d c h] f g
+            // i = 2, e1 = 4, e2 = 5
+            else {
+                const s1 = i; // prev starting index
+                const s2 = i; // next starting index
+                // 5.1 build key:index map for newChildren
+                const keyToNewIndexMap = new Map();
+                for (i = s2; i <= e2; i++) {
+                    const nextChild = (c2[i] = optimized
+                        ? cloneIfMounted(c2[i])
+                        : normalizeVNode(c2[i]));
+                    if (nextChild.key != null) {
+                        if (keyToNewIndexMap.has(nextChild.key)) {
+                            warn(`Duplicate keys found during update:`, JSON.stringify(nextChild.key), `Make sure keys are unique.`);
+                        }
+                        keyToNewIndexMap.set(nextChild.key, i);
+                    }
+                }
+                // 5.2 loop through old children left to be patched and try to patch
+                // matching nodes & remove nodes that are no longer present
+                let j;
+                let patched = 0;
+                const toBePatched = e2 - s2 + 1;
+                let moved = false;
+                // used to track whether any node has moved
+                let maxNewIndexSoFar = 0;
+                // works as Map<newIndex, oldIndex>
+                // Note that oldIndex is offset by +1
+                // and oldIndex = 0 is a special value indicating the new node has
+                // no corresponding old node.
+                // used for determining longest stable subsequence
+                const newIndexToOldIndexMap = new Array(toBePatched);
+                for (i = 0; i < toBePatched; i++)
+                    newIndexToOldIndexMap[i] = 0;
+                for (i = s1; i <= e1; i++) {
+                    const prevChild = c1[i];
+                    if (patched >= toBePatched) {
+                        // all new children have been patched so this can only be a removal
+                        unmount(prevChild, parentComponent, parentSuspense, true);
+                        continue;
+                    }
+                    let newIndex;
+                    if (prevChild.key != null) {
+                        newIndex = keyToNewIndexMap.get(prevChild.key);
+                    }
+                    else {
+                        // key-less node, try to locate a key-less node of the same type
+                        for (j = s2; j <= e2; j++) {
+                            if (newIndexToOldIndexMap[j - s2] === 0 &&
+                                isSameVNodeType(prevChild, c2[j])) {
+                                newIndex = j;
+                                break;
+                            }
+                        }
+                    }
+                    if (newIndex === undefined) {
+                        unmount(prevChild, parentComponent, parentSuspense, true);
+                    }
+                    else {
+                        newIndexToOldIndexMap[newIndex - s2] = i + 1;
+                        if (newIndex >= maxNewIndexSoFar) {
+                            maxNewIndexSoFar = newIndex;
+                        }
+                        else {
+                            moved = true;
+                        }
+                        patch(prevChild, c2[newIndex], container, null, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                        patched++;
+                    }
+                }
+                // 5.3 move and mount
+                // generate longest stable subsequence only when nodes have moved
+                const increasingNewIndexSequence = moved
+                    ? getSequence(newIndexToOldIndexMap)
+                    : EMPTY_ARR;
+                j = increasingNewIndexSequence.length - 1;
+                // looping backwards so that we can use last patched node as anchor
+                for (i = toBePatched - 1; i >= 0; i--) {
+                    const nextIndex = s2 + i;
+                    const nextChild = c2[nextIndex];
+                    const anchor = nextIndex + 1 < l2 ? c2[nextIndex + 1].el : parentAnchor;
+                    if (newIndexToOldIndexMap[i] === 0) {
+                        // mount new
+                        patch(null, nextChild, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized);
+                    }
+                    else if (moved) {
+                        // move if:
+                        // There is no stable subsequence (e.g. a reverse)
+                        // OR current node is not among the stable sequence
+                        if (j < 0 || i !== increasingNewIndexSequence[j]) {
+                            move(nextChild, container, anchor, 2 /* MoveType.REORDER */);
+                        }
+                        else {
+                            j--;
+                        }
+                    }
+                }
+            }
+        };
+        const move = (vnode, container, anchor, moveType, parentSuspense = null) => {
+            const { el, type, transition, children, shapeFlag } = vnode;
+            if (shapeFlag & 6 /* ShapeFlags.COMPONENT */) {
+                move(vnode.component.subTree, container, anchor, moveType);
+                return;
+            }
+            if (shapeFlag & 128 /* ShapeFlags.SUSPENSE */) {
+                vnode.suspense.move(container, anchor, moveType);
+                return;
+            }
+            if (shapeFlag & 64 /* ShapeFlags.TELEPORT */) {
+                type.move(vnode, container, anchor, internals);
+                return;
+            }
+            if (type === Fragment) {
+                hostInsert(el, container, anchor);
+                for (let i = 0; i < children.length; i++) {
+                    move(children[i], container, anchor, moveType);
+                }
+                hostInsert(vnode.anchor, container, anchor);
+                return;
+            }
+            if (type === Static) {
+                moveStaticNode(vnode, container, anchor);
+                return;
+            }
+            // single nodes
+            const needTransition = moveType !== 2 /* MoveType.REORDER */ &&
+                shapeFlag & 1 /* ShapeFlags.ELEMENT */ &&
+                transition;
+            if (needTransition) {
+                if (moveType === 0 /* MoveType.ENTER */) {
+                    transition.beforeEnter(el);
+                    hostInsert(el, container, anchor);
+                    queuePostRenderEffect(() => transition.enter(el), parentSuspense);
+                }
+                else {
+                    const { leave, delayLeave, afterLeave } = transition;
+                    const remove = () => hostInsert(el, container, anchor);
+                    const performLeave = () => {
+                        leave(el, () => {
+                            remove();
+                            afterLeave && afterLeave();
+                        });
+                    };
+                    if (delayLeave) {
+                        delayLeave(el, remove, performLeave);
+                    }
+                    else {
+                        performLeave();
+                    }
+                }
+            }
+            else {
+                hostInsert(el, container, anchor);
+            }
+        };
+        const unmount = (vnode, parentComponent, parentSuspense, doRemove = false, optimized = false) => {
+            const { type, props, ref, children, dynamicChildren, shapeFlag, patchFlag, dirs } = vnode;
+            // unset ref
+            if (ref != null) {
+                setRef(ref, null, parentSuspense, vnode, true);
+            }
+            if (shapeFlag & 256 /* ShapeFlags.COMPONENT_SHOULD_KEEP_ALIVE */) {
+                parentComponent.ctx.deactivate(vnode);
+                return;
+            }
+            const shouldInvokeDirs = shapeFlag & 1 /* ShapeFlags.ELEMENT */ && dirs;
+            const shouldInvokeVnodeHook = !isAsyncWrapper(vnode);
+            let vnodeHook;
+            if (shouldInvokeVnodeHook &&
+                (vnodeHook = props && props.onVnodeBeforeUnmount)) {
+                invokeVNodeHook(vnodeHook, parentComponent, vnode);
+            }
+            if (shapeFlag & 6 /* ShapeFlags.COMPONENT */) {
+                unmountComponent(vnode.component, parentSuspense, doRemove);
+            }
+            else {
+                if (shapeFlag & 128 /* ShapeFlags.SUSPENSE */) {
+                    vnode.suspense.unmount(parentSuspense, doRemove);
+                    return;
+                }
+                if (shouldInvokeDirs) {
+                    invokeDirectiveHook(vnode, null, parentComponent, 'beforeUnmount');
+                }
+                if (shapeFlag & 64 /* ShapeFlags.TELEPORT */) {
+                    vnode.type.remove(vnode, parentComponent, parentSuspense, optimized, internals, doRemove);
+                }
+                else if (dynamicChildren &&
+                    // #1153: fast path should not be taken for non-stable (v-for) fragments
+                    (type !== Fragment ||
+                        (patchFlag > 0 && patchFlag & 64 /* PatchFlags.STABLE_FRAGMENT */))) {
+                    // fast path for block nodes: only need to unmount dynamic children.
+                    unmountChildren(dynamicChildren, parentComponent, parentSuspense, false, true);
+                }
+                else if ((type === Fragment &&
+                    patchFlag &
+                        (128 /* PatchFlags.KEYED_FRAGMENT */ | 256 /* PatchFlags.UNKEYED_FRAGMENT */)) ||
+                    (!optimized && shapeFlag & 16 /* ShapeFlags.ARRAY_CHILDREN */)) {
+                    unmountChildren(children, parentComponent, parentSuspense);
+                }
+                if (doRemove) {
+                    remove(vnode);
+                }
+            }
+            if ((shouldInvokeVnodeHook &&
+                (vnodeHook = props && props.onVnodeUnmounted)) ||
+                shouldInvokeDirs) {
+                queuePostRenderEffect(() => {
+                    vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
+                    shouldInvokeDirs &&
+                        invokeDirectiveHook(vnode, null, parentComponent, 'unmounted');
+                }, parentSuspense);
+            }
+        };
+        const remove = vnode => {
+            const { type, el, anchor, transition } = vnode;
+            if (type === Fragment) {
+                if (vnode.patchFlag > 0 &&
+                    vnode.patchFlag & 2048 /* PatchFlags.DEV_ROOT_FRAGMENT */ &&
+                    transition &&
+                    !transition.persisted) {
+                    vnode.children.forEach(child => {
+                        if (child.type === Comment) {
+                            hostRemove(child.el);
+                        }
+                        else {
+                            remove(child);
+                        }
+                    });
+                }
+                else {
+                    removeFragment(el, anchor);
+                }
+                return;
+            }
+            if (type === Static) {
+                removeStaticNode(vnode);
+                return;
+            }
+            const performRemove = () => {
+                hostRemove(el);
+                if (transition && !transition.persisted && transition.afterLeave) {
+                    transition.afterLeave();
+                }
+            };
+            if (vnode.shapeFlag & 1 /* ShapeFlags.ELEMENT */ &&
+                transition &&
+                !transition.persisted) {
+                const { leave, delayLeave } = transition;
+                const performLeave = () => leave(el, performRemove);
+                if (delayLeave) {
+                    delayLeave(vnode.el, performRemove, performLeave);
+                }
+                else {
+                    performLeave();
+                }
+            }
+            else {
+                performRemove();
+            }
+        };
+        const removeFragment = (cur, end) => {
+            // For fragments, directly remove all contained DOM nodes.
+            // (fragment child nodes cannot have transition)
+            let next;
+            while (cur !== end) {
+                next = hostNextSibling(cur);
+                hostRemove(cur);
+                cur = next;
+            }
+            hostRemove(end);
+        };
+        const unmountComponent = (instance, parentSuspense, doRemove) => {
+            if (instance.type.__hmrId) {
+                unregisterHMR(instance);
+            }
+            const { bum, scope, update, subTree, um } = instance;
+            // beforeUnmount hook
+            if (bum) {
+                invokeArrayFns(bum);
+            }
+            // stop effects in component scope
+            scope.stop();
+            // update may be null if a component is unmounted before its async
+            // setup has resolved.
+            if (update) {
+                // so that scheduler will no longer invoke it
+                update.active = false;
+                unmount(subTree, instance, parentSuspense, doRemove);
+            }
+            // unmounted hook
+            if (um) {
+                queuePostRenderEffect(um, parentSuspense);
+            }
+            queuePostRenderEffect(() => {
+                instance.isUnmounted = true;
+            }, parentSuspense);
+            // A component with async dep inside a pending suspense is unmounted before
+            // its async dep resolves. This should remove the dep from the suspense, and
+            // cause the suspense to resolve immediately if that was the last dep.
+            if (parentSuspense &&
+                parentSuspense.pendingBranch &&
+                !parentSuspense.isUnmounted &&
+                instance.asyncDep &&
+                !instance.asyncResolved &&
+                instance.suspenseId === parentSuspense.pendingId) {
+                parentSuspense.deps--;
+                if (parentSuspense.deps === 0) {
+                    parentSuspense.resolve();
+                }
+            }
+            {
+                devtoolsComponentRemoved(instance);
+            }
+        };
+        const unmountChildren = (children, parentComponent, parentSuspense, doRemove = false, optimized = false, start = 0) => {
+            for (let i = start; i < children.length; i++) {
+                unmount(children[i], parentComponent, parentSuspense, doRemove, optimized);
+            }
+        };
+        const getNextHostNode = vnode => {
+            if (vnode.shapeFlag & 6 /* ShapeFlags.COMPONENT */) {
+                return getNextHostNode(vnode.component.subTree);
+            }
+            if (vnode.shapeFlag & 128 /* ShapeFlags.SUSPENSE */) {
+                return vnode.suspense.next();
+            }
+            return hostNextSibling((vnode.anchor || vnode.el));
+        };
+        const render = (vnode, container, isSVG) => {
+            if (vnode == null) {
+                if (container._vnode) {
+                    unmount(container._vnode, null, null, true);
+                }
+            }
+            else {
+                patch(container._vnode || null, vnode, container, null, null, null, isSVG);
+            }
+            flushPreFlushCbs();
+            flushPostFlushCbs();
+            container._vnode = vnode;
+        };
+        const internals = {
+            p: patch,
+            um: unmount,
+            m: move,
+            r: remove,
+            mt: mountComponent,
+            mc: mountChildren,
+            pc: patchChildren,
+            pbc: patchBlockChildren,
+            n: getNextHostNode,
+            o: options
+        };
+        let hydrate;
+        let hydrateNode;
+        if (createHydrationFns) {
+            [hydrate, hydrateNode] = createHydrationFns(internals);
+        }
+        return {
+            render,
+            hydrate,
+            createApp: createAppAPI(render, hydrate)
+        };
+    }
+    function toggleRecurse({ effect, update }, allowed) {
+        effect.allowRecurse = update.allowRecurse = allowed;
+    }
+    /**
+     * #1156
+     * When a component is HMR-enabled, we need to make sure that all static nodes
+     * inside a block also inherit the DOM element from the previous tree so that
+     * HMR updates (which are full updates) can retrieve the element for patching.
+     *
+     * #2080
+     * Inside keyed `template` fragment static children, if a fragment is moved,
+     * the children will always be moved. Therefore, in order to ensure correct move
+     * position, el should be inherited from previous nodes.
+     */
+    function traverseStaticChildren(n1, n2, shallow = false) {
+        const ch1 = n1.children;
+        const ch2 = n2.children;
+        if (isArray$2(ch1) && isArray$2(ch2)) {
+            for (let i = 0; i < ch1.length; i++) {
+                // this is only called in the optimized path so array children are
+                // guaranteed to be vnodes
+                const c1 = ch1[i];
+                let c2 = ch2[i];
+                if (c2.shapeFlag & 1 /* ShapeFlags.ELEMENT */ && !c2.dynamicChildren) {
+                    if (c2.patchFlag <= 0 || c2.patchFlag === 32 /* PatchFlags.HYDRATE_EVENTS */) {
+                        c2 = ch2[i] = cloneIfMounted(ch2[i]);
+                        c2.el = c1.el;
+                    }
+                    if (!shallow)
+                        traverseStaticChildren(c1, c2);
+                }
+                // #6852 also inherit for text nodes
+                if (c2.type === Text) {
+                    c2.el = c1.el;
+                }
+                // also inherit for comment nodes, but not placeholders (e.g. v-if which
+                // would have received .el during block patch)
+                if (c2.type === Comment && !c2.el) {
+                    c2.el = c1.el;
+                }
+            }
+        }
+    }
+    // https://en.wikipedia.org/wiki/Longest_increasing_subsequence
+    function getSequence(arr) {
+        const p = arr.slice();
+        const result = [0];
+        let i, j, u, v, c;
+        const len = arr.length;
+        for (i = 0; i < len; i++) {
+            const arrI = arr[i];
+            if (arrI !== 0) {
+                j = result[result.length - 1];
+                if (arr[j] < arrI) {
+                    p[i] = j;
+                    result.push(i);
+                    continue;
+                }
+                u = 0;
+                v = result.length - 1;
+                while (u < v) {
+                    c = (u + v) >> 1;
+                    if (arr[result[c]] < arrI) {
+                        u = c + 1;
+                    }
+                    else {
+                        v = c;
+                    }
+                }
+                if (arrI < arr[result[u]]) {
+                    if (u > 0) {
+                        p[i] = result[u - 1];
+                    }
+                    result[u] = i;
+                }
+            }
+        }
+        u = result.length;
+        v = result[u - 1];
+        while (u-- > 0) {
+            result[u] = v;
+            v = p[v];
+        }
+        return result;
+    }
+
+    const isTeleport = (type) => type.__isTeleport;
+
+    const Fragment = Symbol('Fragment' );
+    const Text = Symbol('Text' );
+    const Comment = Symbol('Comment' );
+    const Static = Symbol('Static' );
+    // Since v-if and v-for are the two possible ways node structure can dynamically
+    // change, once we consider v-if branches and each v-for fragment a block, we
+    // can divide a template into nested blocks, and within each block the node
+    // structure would be stable. This allows us to skip most children diffing
+    // and only worry about the dynamic nodes (indicated by patch flags).
+    const blockStack = [];
+    let currentBlock = null;
+    /**
+     * Open a block.
+     * This must be called before `createBlock`. It cannot be part of `createBlock`
+     * because the children of the block are evaluated before `createBlock` itself
+     * is called. The generated code typically looks like this:
+     *
+     * ```js
+     * function render() {
+     *   return (openBlock(),createBlock('div', null, [...]))
+     * }
+     * ```
+     * disableTracking is true when creating a v-for fragment block, since a v-for
+     * fragment always diffs its children.
+     *
+     * @private
+     */
+    function openBlock(disableTracking = false) {
+        blockStack.push((currentBlock = disableTracking ? null : []));
+    }
+    function closeBlock() {
+        blockStack.pop();
+        currentBlock = blockStack[blockStack.length - 1] || null;
+    }
+    // Whether we should be tracking dynamic child nodes inside a block.
+    // Only tracks when this value is > 0
+    // We are not using a simple boolean because this value may need to be
+    // incremented/decremented by nested usage of v-once (see below)
+    let isBlockTreeEnabled = 1;
+    /**
+     * Block tracking sometimes needs to be disabled, for example during the
+     * creation of a tree that needs to be cached by v-once. The compiler generates
+     * code like this:
+     *
+     * ``` js
+     * _cache[1] || (
+     *   setBlockTracking(-1),
+     *   _cache[1] = createVNode(...),
+     *   setBlockTracking(1),
+     *   _cache[1]
+     * )
+     * ```
+     *
+     * @private
+     */
+    function setBlockTracking(value) {
+        isBlockTreeEnabled += value;
+    }
+    function setupBlock(vnode) {
+        // save current block children on the block vnode
+        vnode.dynamicChildren =
+            isBlockTreeEnabled > 0 ? currentBlock || EMPTY_ARR : null;
+        // close block
+        closeBlock();
+        // a block is always going to be patched, so track it as a child of its
+        // parent block
+        if (isBlockTreeEnabled > 0 && currentBlock) {
+            currentBlock.push(vnode);
+        }
+        return vnode;
+    }
+    /**
+     * @private
+     */
+    function createElementBlock(type, props, children, patchFlag, dynamicProps, shapeFlag) {
+        return setupBlock(createBaseVNode(type, props, children, patchFlag, dynamicProps, shapeFlag, true /* isBlock */));
+    }
+    /**
+     * Create a block root vnode. Takes the same exact arguments as `createVNode`.
+     * A block root keeps track of dynamic nodes within the block in the
+     * `dynamicChildren` array.
+     *
+     * @private
+     */
+    function createBlock(type, props, children, patchFlag, dynamicProps) {
+        return setupBlock(createVNode(type, props, children, patchFlag, dynamicProps, true /* isBlock: prevent a block from tracking itself */));
+    }
+    function isVNode(value) {
+        return value ? value.__v_isVNode === true : false;
+    }
+    function isSameVNodeType(n1, n2) {
+        if (n2.shapeFlag & 6 /* ShapeFlags.COMPONENT */ &&
+            hmrDirtyComponents.has(n2.type)) {
+            // #7042, ensure the vnode being unmounted during HMR
+            // bitwise operations to remove keep alive flags
+            n1.shapeFlag &= ~256 /* ShapeFlags.COMPONENT_SHOULD_KEEP_ALIVE */;
+            n2.shapeFlag &= ~512 /* ShapeFlags.COMPONENT_KEPT_ALIVE */;
+            // HMR only: if the component has been hot-updated, force a reload.
+            return false;
+        }
+        return n1.type === n2.type && n1.key === n2.key;
+    }
+    const createVNodeWithArgsTransform = (...args) => {
+        return _createVNode(...(args));
+    };
+    const InternalObjectKey = `__vInternal`;
+    const normalizeKey = ({ key }) => key != null ? key : null;
+    const normalizeRef = ({ ref, ref_key, ref_for }) => {
+        return (ref != null
+            ? isString$2(ref) || isRef(ref) || isFunction$1(ref)
+                ? { i: currentRenderingInstance, r: ref, k: ref_key, f: !!ref_for }
+                : ref
+            : null);
+    };
+    function createBaseVNode(type, props = null, children = null, patchFlag = 0, dynamicProps = null, shapeFlag = type === Fragment ? 0 : 1 /* ShapeFlags.ELEMENT */, isBlockNode = false, needFullChildrenNormalization = false) {
+        const vnode = {
+            __v_isVNode: true,
+            __v_skip: true,
+            type,
+            props,
+            key: props && normalizeKey(props),
+            ref: props && normalizeRef(props),
+            scopeId: currentScopeId,
+            slotScopeIds: null,
+            children,
+            component: null,
+            suspense: null,
+            ssContent: null,
+            ssFallback: null,
+            dirs: null,
+            transition: null,
+            el: null,
+            anchor: null,
+            target: null,
+            targetAnchor: null,
+            staticCount: 0,
+            shapeFlag,
+            patchFlag,
+            dynamicProps,
+            dynamicChildren: null,
+            appContext: null,
+            ctx: currentRenderingInstance
+        };
+        if (needFullChildrenNormalization) {
+            normalizeChildren(vnode, children);
+            // normalize suspense children
+            if (shapeFlag & 128 /* ShapeFlags.SUSPENSE */) {
+                type.normalize(vnode);
+            }
+        }
+        else if (children) {
+            // compiled element vnode - if children is passed, only possible types are
+            // string or Array.
+            vnode.shapeFlag |= isString$2(children)
+                ? 8 /* ShapeFlags.TEXT_CHILDREN */
+                : 16 /* ShapeFlags.ARRAY_CHILDREN */;
+        }
+        // validate key
+        if (vnode.key !== vnode.key) {
+            warn(`VNode created with invalid key (NaN). VNode type:`, vnode.type);
+        }
+        // track vnode for block tree
+        if (isBlockTreeEnabled > 0 &&
+            // avoid a block node from tracking itself
+            !isBlockNode &&
+            // has current parent block
+            currentBlock &&
+            // presence of a patch flag indicates this node needs patching on updates.
+            // component nodes also should always be patched, because even if the
+            // component doesn't need to update, it needs to persist the instance on to
+            // the next vnode so that it can be properly unmounted later.
+            (vnode.patchFlag > 0 || shapeFlag & 6 /* ShapeFlags.COMPONENT */) &&
+            // the EVENTS flag is only for hydration and if it is the only flag, the
+            // vnode should not be considered dynamic due to handler caching.
+            vnode.patchFlag !== 32 /* PatchFlags.HYDRATE_EVENTS */) {
+            currentBlock.push(vnode);
+        }
+        return vnode;
+    }
+    const createVNode = (createVNodeWithArgsTransform );
+    function _createVNode(type, props = null, children = null, patchFlag = 0, dynamicProps = null, isBlockNode = false) {
+        if (!type || type === NULL_DYNAMIC_COMPONENT) {
+            if (!type) {
+                warn(`Invalid vnode type when creating vnode: ${type}.`);
+            }
+            type = Comment;
+        }
+        if (isVNode(type)) {
+            // createVNode receiving an existing vnode. This happens in cases like
+            // <component :is="vnode"/>
+            // #2078 make sure to merge refs during the clone instead of overwriting it
+            const cloned = cloneVNode(type, props, true /* mergeRef: true */);
+            if (children) {
+                normalizeChildren(cloned, children);
+            }
+            if (isBlockTreeEnabled > 0 && !isBlockNode && currentBlock) {
+                if (cloned.shapeFlag & 6 /* ShapeFlags.COMPONENT */) {
+                    currentBlock[currentBlock.indexOf(type)] = cloned;
+                }
+                else {
+                    currentBlock.push(cloned);
+                }
+            }
+            cloned.patchFlag |= -2 /* PatchFlags.BAIL */;
+            return cloned;
+        }
+        // class component normalization.
+        if (isClassComponent(type)) {
+            type = type.__vccOpts;
+        }
+        // class & style normalization.
+        if (props) {
+            // for reactive or proxy objects, we need to clone it to enable mutation.
+            props = guardReactiveProps(props);
+            let { class: klass, style } = props;
+            if (klass && !isString$2(klass)) {
+                props.class = normalizeClass(klass);
+            }
+            if (isObject$1(style)) {
+                // reactive state objects need to be cloned since they are likely to be
+                // mutated
+                if (isProxy(style) && !isArray$2(style)) {
+                    style = extend({}, style);
+                }
+                props.style = normalizeStyle(style);
+            }
+        }
+        // encode the vnode type information into a bitmap
+        const shapeFlag = isString$2(type)
+            ? 1 /* ShapeFlags.ELEMENT */
+            : isSuspense(type)
+                ? 128 /* ShapeFlags.SUSPENSE */
+                : isTeleport(type)
+                    ? 64 /* ShapeFlags.TELEPORT */
+                    : isObject$1(type)
+                        ? 4 /* ShapeFlags.STATEFUL_COMPONENT */
+                        : isFunction$1(type)
+                            ? 2 /* ShapeFlags.FUNCTIONAL_COMPONENT */
+                            : 0;
+        if (shapeFlag & 4 /* ShapeFlags.STATEFUL_COMPONENT */ && isProxy(type)) {
+            type = toRaw(type);
+            warn(`Vue received a Component which was made a reactive object. This can ` +
+                `lead to unnecessary performance overhead, and should be avoided by ` +
+                `marking the component with \`markRaw\` or using \`shallowRef\` ` +
+                `instead of \`ref\`.`, `\nComponent that was made reactive: `, type);
+        }
+        return createBaseVNode(type, props, children, patchFlag, dynamicProps, shapeFlag, isBlockNode, true);
+    }
+    function guardReactiveProps(props) {
+        if (!props)
+            return null;
+        return isProxy(props) || InternalObjectKey in props
+            ? extend({}, props)
+            : props;
+    }
+    function cloneVNode(vnode, extraProps, mergeRef = false) {
+        // This is intentionally NOT using spread or extend to avoid the runtime
+        // key enumeration cost.
+        const { props, ref, patchFlag, children } = vnode;
+        const mergedProps = extraProps ? mergeProps(props || {}, extraProps) : props;
+        const cloned = {
+            __v_isVNode: true,
+            __v_skip: true,
+            type: vnode.type,
+            props: mergedProps,
+            key: mergedProps && normalizeKey(mergedProps),
+            ref: extraProps && extraProps.ref
+                ? // #2078 in the case of <component :is="vnode" ref="extra"/>
+                    // if the vnode itself already has a ref, cloneVNode will need to merge
+                    // the refs so the single vnode can be set on multiple refs
+                    mergeRef && ref
+                        ? isArray$2(ref)
+                            ? ref.concat(normalizeRef(extraProps))
+                            : [ref, normalizeRef(extraProps)]
+                        : normalizeRef(extraProps)
+                : ref,
+            scopeId: vnode.scopeId,
+            slotScopeIds: vnode.slotScopeIds,
+            children: patchFlag === -1 /* PatchFlags.HOISTED */ && isArray$2(children)
+                ? children.map(deepCloneVNode)
+                : children,
+            target: vnode.target,
+            targetAnchor: vnode.targetAnchor,
+            staticCount: vnode.staticCount,
+            shapeFlag: vnode.shapeFlag,
+            // if the vnode is cloned with extra props, we can no longer assume its
+            // existing patch flag to be reliable and need to add the FULL_PROPS flag.
+            // note: preserve flag for fragments since they use the flag for children
+            // fast paths only.
+            patchFlag: extraProps && vnode.type !== Fragment
+                ? patchFlag === -1 // hoisted node
+                    ? 16 /* PatchFlags.FULL_PROPS */
+                    : patchFlag | 16 /* PatchFlags.FULL_PROPS */
+                : patchFlag,
+            dynamicProps: vnode.dynamicProps,
+            dynamicChildren: vnode.dynamicChildren,
+            appContext: vnode.appContext,
+            dirs: vnode.dirs,
+            transition: vnode.transition,
+            // These should technically only be non-null on mounted VNodes. However,
+            // they *should* be copied for kept-alive vnodes. So we just always copy
+            // them since them being non-null during a mount doesn't affect the logic as
+            // they will simply be overwritten.
+            component: vnode.component,
+            suspense: vnode.suspense,
+            ssContent: vnode.ssContent && cloneVNode(vnode.ssContent),
+            ssFallback: vnode.ssFallback && cloneVNode(vnode.ssFallback),
+            el: vnode.el,
+            anchor: vnode.anchor,
+            ctx: vnode.ctx
+        };
+        return cloned;
+    }
+    /**
+     * Dev only, for HMR of hoisted vnodes reused in v-for
+     * https://github.com/vitejs/vite/issues/2022
+     */
+    function deepCloneVNode(vnode) {
+        const cloned = cloneVNode(vnode);
+        if (isArray$2(vnode.children)) {
+            cloned.children = vnode.children.map(deepCloneVNode);
+        }
+        return cloned;
+    }
+    /**
+     * @private
+     */
+    function createTextVNode(text = ' ', flag = 0) {
+        return createVNode(Text, null, text, flag);
+    }
+    /**
+     * @private
+     */
+    function createStaticVNode(content, numberOfNodes) {
+        // A static vnode can contain multiple stringified elements, and the number
+        // of elements is necessary for hydration.
+        const vnode = createVNode(Static, null, content);
+        vnode.staticCount = numberOfNodes;
+        return vnode;
+    }
+    /**
+     * @private
+     */
+    function createCommentVNode(text = '', 
+    // when used as the v-else branch, the comment node must be created as a
+    // block to ensure correct updates.
+    asBlock = false) {
+        return asBlock
+            ? (openBlock(), createBlock(Comment, null, text))
+            : createVNode(Comment, null, text);
+    }
+    function normalizeVNode(child) {
+        if (child == null || typeof child === 'boolean') {
+            // empty placeholder
+            return createVNode(Comment);
+        }
+        else if (isArray$2(child)) {
+            // fragment
+            return createVNode(Fragment, null, 
+            // #3666, avoid reference pollution when reusing vnode
+            child.slice());
+        }
+        else if (typeof child === 'object') {
+            // already vnode, this should be the most common since compiled templates
+            // always produce all-vnode children arrays
+            return cloneIfMounted(child);
+        }
+        else {
+            // strings and numbers
+            return createVNode(Text, null, String(child));
+        }
+    }
+    // optimized normalization for template-compiled render fns
+    function cloneIfMounted(child) {
+        return (child.el === null && child.patchFlag !== -1 /* PatchFlags.HOISTED */) ||
+            child.memo
+            ? child
+            : cloneVNode(child);
+    }
+    function normalizeChildren(vnode, children) {
+        let type = 0;
+        const { shapeFlag } = vnode;
+        if (children == null) {
+            children = null;
+        }
+        else if (isArray$2(children)) {
+            type = 16 /* ShapeFlags.ARRAY_CHILDREN */;
+        }
+        else if (typeof children === 'object') {
+            if (shapeFlag & (1 /* ShapeFlags.ELEMENT */ | 64 /* ShapeFlags.TELEPORT */)) {
+                // Normalize slot to plain children for plain element and Teleport
+                const slot = children.default;
+                if (slot) {
+                    // _c marker is added by withCtx() indicating this is a compiled slot
+                    slot._c && (slot._d = false);
+                    normalizeChildren(vnode, slot());
+                    slot._c && (slot._d = true);
+                }
+                return;
+            }
+            else {
+                type = 32 /* ShapeFlags.SLOTS_CHILDREN */;
+                const slotFlag = children._;
+                if (!slotFlag && !(InternalObjectKey in children)) {
+                    children._ctx = currentRenderingInstance;
+                }
+                else if (slotFlag === 3 /* SlotFlags.FORWARDED */ && currentRenderingInstance) {
+                    // a child component receives forwarded slots from the parent.
+                    // its slot type is determined by its parent's slot type.
+                    if (currentRenderingInstance.slots._ === 1 /* SlotFlags.STABLE */) {
+                        children._ = 1 /* SlotFlags.STABLE */;
+                    }
+                    else {
+                        children._ = 2 /* SlotFlags.DYNAMIC */;
+                        vnode.patchFlag |= 1024 /* PatchFlags.DYNAMIC_SLOTS */;
+                    }
+                }
+            }
+        }
+        else if (isFunction$1(children)) {
+            children = { default: children, _ctx: currentRenderingInstance };
+            type = 32 /* ShapeFlags.SLOTS_CHILDREN */;
+        }
+        else {
+            children = String(children);
+            // force teleport children to array so it can be moved around
+            if (shapeFlag & 64 /* ShapeFlags.TELEPORT */) {
+                type = 16 /* ShapeFlags.ARRAY_CHILDREN */;
+                children = [createTextVNode(children)];
+            }
+            else {
+                type = 8 /* ShapeFlags.TEXT_CHILDREN */;
+            }
+        }
+        vnode.children = children;
+        vnode.shapeFlag |= type;
+    }
+    function mergeProps(...args) {
+        const ret = {};
+        for (let i = 0; i < args.length; i++) {
+            const toMerge = args[i];
+            for (const key in toMerge) {
+                if (key === 'class') {
+                    if (ret.class !== toMerge.class) {
+                        ret.class = normalizeClass([ret.class, toMerge.class]);
+                    }
+                }
+                else if (key === 'style') {
+                    ret.style = normalizeStyle([ret.style, toMerge.style]);
+                }
+                else if (isOn(key)) {
+                    const existing = ret[key];
+                    const incoming = toMerge[key];
+                    if (incoming &&
+                        existing !== incoming &&
+                        !(isArray$2(existing) && existing.includes(incoming))) {
+                        ret[key] = existing
+                            ? [].concat(existing, incoming)
+                            : incoming;
+                    }
+                }
+                else if (key !== '') {
+                    ret[key] = toMerge[key];
+                }
+            }
+        }
+        return ret;
+    }
+    function invokeVNodeHook(hook, instance, vnode, prevVNode = null) {
+        callWithAsyncErrorHandling(hook, instance, 7 /* ErrorCodes.VNODE_HOOK */, [
+            vnode,
+            prevVNode
+        ]);
+    }
+
+    const emptyAppContext = createAppContext();
+    let uid$1 = 0;
+    function createComponentInstance(vnode, parent, suspense) {
+        const type = vnode.type;
+        // inherit parent app context - or - if root, adopt from root vnode
+        const appContext = (parent ? parent.appContext : vnode.appContext) || emptyAppContext;
+        const instance = {
+            uid: uid$1++,
+            vnode,
+            type,
+            parent,
+            appContext,
+            root: null,
+            next: null,
+            subTree: null,
+            effect: null,
+            update: null,
+            scope: new EffectScope(true /* detached */),
+            render: null,
+            proxy: null,
+            exposed: null,
+            exposeProxy: null,
+            withProxy: null,
+            provides: parent ? parent.provides : Object.create(appContext.provides),
+            accessCache: null,
+            renderCache: [],
+            // local resolved assets
+            components: null,
+            directives: null,
+            // resolved props and emits options
+            propsOptions: normalizePropsOptions(type, appContext),
+            emitsOptions: normalizeEmitsOptions(type, appContext),
+            // emit
+            emit: null,
+            emitted: null,
+            // props default value
+            propsDefaults: EMPTY_OBJ,
+            // inheritAttrs
+            inheritAttrs: type.inheritAttrs,
+            // state
+            ctx: EMPTY_OBJ,
+            data: EMPTY_OBJ,
+            props: EMPTY_OBJ,
+            attrs: EMPTY_OBJ,
+            slots: EMPTY_OBJ,
+            refs: EMPTY_OBJ,
+            setupState: EMPTY_OBJ,
+            setupContext: null,
+            // suspense related
+            suspense,
+            suspenseId: suspense ? suspense.pendingId : 0,
+            asyncDep: null,
+            asyncResolved: false,
+            // lifecycle hooks
+            // not using enums here because it results in computed properties
+            isMounted: false,
+            isUnmounted: false,
+            isDeactivated: false,
+            bc: null,
+            c: null,
+            bm: null,
+            m: null,
+            bu: null,
+            u: null,
+            um: null,
+            bum: null,
+            da: null,
+            a: null,
+            rtg: null,
+            rtc: null,
+            ec: null,
+            sp: null
+        };
+        {
+            instance.ctx = createDevRenderContext(instance);
+        }
+        instance.root = parent ? parent.root : instance;
+        instance.emit = emit$1.bind(null, instance);
+        // apply custom element special handling
+        if (vnode.ce) {
+            vnode.ce(instance);
+        }
+        return instance;
+    }
+    let currentInstance = null;
+    const getCurrentInstance = () => currentInstance || currentRenderingInstance;
+    const setCurrentInstance = (instance) => {
+        currentInstance = instance;
+        instance.scope.on();
+    };
+    const unsetCurrentInstance = () => {
+        currentInstance && currentInstance.scope.off();
+        currentInstance = null;
+    };
+    const isBuiltInTag = /*#__PURE__*/ makeMap('slot,component');
+    function validateComponentName(name, config) {
+        const appIsNativeTag = config.isNativeTag || NO;
+        if (isBuiltInTag(name) || appIsNativeTag(name)) {
+            warn('Do not use built-in or reserved HTML elements as component id: ' + name);
+        }
+    }
+    function isStatefulComponent(instance) {
+        return instance.vnode.shapeFlag & 4 /* ShapeFlags.STATEFUL_COMPONENT */;
+    }
+    let isInSSRComponentSetup = false;
+    function setupComponent(instance, isSSR = false) {
+        isInSSRComponentSetup = isSSR;
+        const { props, children } = instance.vnode;
+        const isStateful = isStatefulComponent(instance);
+        initProps(instance, props, isStateful, isSSR);
+        initSlots(instance, children);
+        const setupResult = isStateful
+            ? setupStatefulComponent(instance, isSSR)
+            : undefined;
+        isInSSRComponentSetup = false;
+        return setupResult;
+    }
+    function setupStatefulComponent(instance, isSSR) {
+        var _a;
+        const Component = instance.type;
+        {
+            if (Component.name) {
+                validateComponentName(Component.name, instance.appContext.config);
+            }
+            if (Component.components) {
+                const names = Object.keys(Component.components);
+                for (let i = 0; i < names.length; i++) {
+                    validateComponentName(names[i], instance.appContext.config);
+                }
+            }
+            if (Component.directives) {
+                const names = Object.keys(Component.directives);
+                for (let i = 0; i < names.length; i++) {
+                    validateDirectiveName(names[i]);
+                }
+            }
+            if (Component.compilerOptions && isRuntimeOnly()) {
+                warn(`"compilerOptions" is only supported when using a build of Vue that ` +
+                    `includes the runtime compiler. Since you are using a runtime-only ` +
+                    `build, the options should be passed via your build tool config instead.`);
+            }
+        }
+        // 0. create render proxy property access cache
+        instance.accessCache = Object.create(null);
+        // 1. create public instance / render proxy
+        // also mark it raw so it's never observed
+        instance.proxy = markRaw(new Proxy(instance.ctx, PublicInstanceProxyHandlers));
+        {
+            exposePropsOnRenderContext(instance);
+        }
+        // 2. call setup()
+        const { setup } = Component;
+        if (setup) {
+            const setupContext = (instance.setupContext =
+                setup.length > 1 ? createSetupContext(instance) : null);
+            setCurrentInstance(instance);
+            pauseTracking();
+            const setupResult = callWithErrorHandling(setup, instance, 0 /* ErrorCodes.SETUP_FUNCTION */, [shallowReadonly(instance.props) , setupContext]);
+            resetTracking();
+            unsetCurrentInstance();
+            if (isPromise(setupResult)) {
+                setupResult.then(unsetCurrentInstance, unsetCurrentInstance);
+                if (isSSR) {
+                    // return the promise so server-renderer can wait on it
+                    return setupResult
+                        .then((resolvedResult) => {
+                        handleSetupResult(instance, resolvedResult, isSSR);
+                    })
+                        .catch(e => {
+                        handleError(e, instance, 0 /* ErrorCodes.SETUP_FUNCTION */);
+                    });
+                }
+                else {
+                    // async setup returned Promise.
+                    // bail here and wait for re-entry.
+                    instance.asyncDep = setupResult;
+                    if (!instance.suspense) {
+                        const name = (_a = Component.name) !== null && _a !== void 0 ? _a : 'Anonymous';
+                        warn(`Component <${name}>: setup function returned a promise, but no ` +
+                            `<Suspense> boundary was found in the parent component tree. ` +
+                            `A component with async setup() must be nested in a <Suspense> ` +
+                            `in order to be rendered.`);
+                    }
+                }
+            }
+            else {
+                handleSetupResult(instance, setupResult, isSSR);
+            }
+        }
+        else {
+            finishComponentSetup(instance, isSSR);
+        }
+    }
+    function handleSetupResult(instance, setupResult, isSSR) {
+        if (isFunction$1(setupResult)) {
+            // setup returned an inline render function
+            if (instance.type.__ssrInlineRender) {
+                // when the function's name is `ssrRender` (compiled by SFC inline mode),
+                // set it as ssrRender instead.
+                instance.ssrRender = setupResult;
+            }
+            else {
+                instance.render = setupResult;
+            }
+        }
+        else if (isObject$1(setupResult)) {
+            if (isVNode(setupResult)) {
+                warn(`setup() should not return VNodes directly - ` +
+                    `return a render function instead.`);
+            }
+            // setup returned bindings.
+            // assuming a render function compiled from template is present.
+            {
+                instance.devtoolsRawSetupState = setupResult;
+            }
+            instance.setupState = proxyRefs(setupResult);
+            {
+                exposeSetupStateOnRenderContext(instance);
+            }
+        }
+        else if (setupResult !== undefined) {
+            warn(`setup() should return an object. Received: ${setupResult === null ? 'null' : typeof setupResult}`);
+        }
+        finishComponentSetup(instance, isSSR);
+    }
+    let compile;
+    // dev only
+    const isRuntimeOnly = () => !compile;
+    function finishComponentSetup(instance, isSSR, skipOptions) {
+        const Component = instance.type;
+        // template / render function normalization
+        // could be already set when returned from setup()
+        if (!instance.render) {
+            // only do on-the-fly compile if not in SSR - SSR on-the-fly compilation
+            // is done by server-renderer
+            if (!isSSR && compile && !Component.render) {
+                const template = Component.template ||
+                    resolveMergedOptions(instance).template;
+                if (template) {
+                    {
+                        startMeasure(instance, `compile`);
+                    }
+                    const { isCustomElement, compilerOptions } = instance.appContext.config;
+                    const { delimiters, compilerOptions: componentCompilerOptions } = Component;
+                    const finalCompilerOptions = extend(extend({
+                        isCustomElement,
+                        delimiters
+                    }, compilerOptions), componentCompilerOptions);
+                    Component.render = compile(template, finalCompilerOptions);
+                    {
+                        endMeasure(instance, `compile`);
+                    }
+                }
+            }
+            instance.render = (Component.render || NOOP);
+        }
+        // support for 2.x options
+        {
+            setCurrentInstance(instance);
+            pauseTracking();
+            applyOptions(instance);
+            resetTracking();
+            unsetCurrentInstance();
+        }
+        // warn missing template/render
+        // the runtime compilation of template in SSR is done by server-render
+        if (!Component.render && instance.render === NOOP && !isSSR) {
+            /* istanbul ignore if */
+            if (Component.template) {
+                warn(`Component provided template option but ` +
+                    `runtime compilation is not supported in this build of Vue.` +
+                    (` Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js".`
+                        ) /* should not happen */);
+            }
+            else {
+                warn(`Component is missing template or render function.`);
+            }
+        }
+    }
+    function createAttrsProxy(instance) {
+        return new Proxy(instance.attrs, {
+                get(target, key) {
+                    markAttrsAccessed();
+                    track(instance, "get" /* TrackOpTypes.GET */, '$attrs');
+                    return target[key];
+                },
+                set() {
+                    warn(`setupContext.attrs is readonly.`);
+                    return false;
+                },
+                deleteProperty() {
+                    warn(`setupContext.attrs is readonly.`);
+                    return false;
+                }
+            }
+            );
+    }
+    function createSetupContext(instance) {
+        const expose = exposed => {
+            if (instance.exposed) {
+                warn(`expose() should be called only once per setup().`);
+            }
+            instance.exposed = exposed || {};
+        };
+        let attrs;
+        {
+            // We use getters in dev in case libs like test-utils overwrite instance
+            // properties (overwrites should not be done in prod)
+            return Object.freeze({
+                get attrs() {
+                    return attrs || (attrs = createAttrsProxy(instance));
+                },
+                get slots() {
+                    return shallowReadonly(instance.slots);
+                },
+                get emit() {
+                    return (event, ...args) => instance.emit(event, ...args);
+                },
+                expose
+            });
+        }
+    }
+    function getExposeProxy(instance) {
+        if (instance.exposed) {
+            return (instance.exposeProxy ||
+                (instance.exposeProxy = new Proxy(proxyRefs(markRaw(instance.exposed)), {
+                    get(target, key) {
+                        if (key in target) {
+                            return target[key];
+                        }
+                        else if (key in publicPropertiesMap) {
+                            return publicPropertiesMap[key](instance);
+                        }
+                    },
+                    has(target, key) {
+                        return key in target || key in publicPropertiesMap;
+                    }
+                })));
+        }
+    }
+    const classifyRE = /(?:^|[-_])(\w)/g;
+    const classify = (str) => str.replace(classifyRE, c => c.toUpperCase()).replace(/[-_]/g, '');
+    function getComponentName(Component, includeInferred = true) {
+        return isFunction$1(Component)
+            ? Component.displayName || Component.name
+            : Component.name || (includeInferred && Component.__name);
+    }
+    /* istanbul ignore next */
+    function formatComponentName(instance, Component, isRoot = false) {
+        let name = getComponentName(Component);
+        if (!name && Component.__file) {
+            const match = Component.__file.match(/([^/\\]+)\.\w+$/);
+            if (match) {
+                name = match[1];
+            }
+        }
+        if (!name && instance && instance.parent) {
+            // try to infer the name based on reverse resolution
+            const inferFromRegistry = (registry) => {
+                for (const key in registry) {
+                    if (registry[key] === Component) {
+                        return key;
+                    }
+                }
+            };
+            name =
+                inferFromRegistry(instance.components ||
+                    instance.parent.type.components) || inferFromRegistry(instance.appContext.components);
+        }
+        return name ? classify(name) : isRoot ? `App` : `Anonymous`;
+    }
+    function isClassComponent(value) {
+        return isFunction$1(value) && '__vccOpts' in value;
+    }
+
+    const computed = ((getterOrOptions, debugOptions) => {
+        // @ts-ignore
+        return computed$1(getterOrOptions, debugOptions, isInSSRComponentSetup);
+    });
+
+    // Actual implementation
+    function h(type, propsOrChildren, children) {
+        const l = arguments.length;
+        if (l === 2) {
+            if (isObject$1(propsOrChildren) && !isArray$2(propsOrChildren)) {
+                // single vnode without props
+                if (isVNode(propsOrChildren)) {
+                    return createVNode(type, null, [propsOrChildren]);
+                }
+                // props without children
+                return createVNode(type, propsOrChildren);
+            }
+            else {
+                // omit props
+                return createVNode(type, null, propsOrChildren);
+            }
+        }
+        else {
+            if (l > 3) {
+                children = Array.prototype.slice.call(arguments, 2);
+            }
+            else if (l === 3 && isVNode(children)) {
+                children = [children];
+            }
+            return createVNode(type, propsOrChildren, children);
+        }
+    }
+
+    const ssrContextKey = Symbol(`ssrContext` );
+    const useSSRContext = () => {
+        {
+            const ctx = inject(ssrContextKey);
+            if (!ctx) {
+                warn(`Server rendering context not provided. Make sure to only call ` +
+                        `useSSRContext() conditionally in the server build.`);
+            }
+            return ctx;
+        }
+    };
+
+    function isShallow(value) {
+        return !!(value && value["__v_isShallow" /* ReactiveFlags.IS_SHALLOW */]);
+    }
+
+    function initCustomFormatter() {
+        /* eslint-disable no-restricted-globals */
+        if (typeof window === 'undefined') {
+            return;
+        }
+        const vueStyle = { style: 'color:#3ba776' };
+        const numberStyle = { style: 'color:#0b1bc9' };
+        const stringStyle = { style: 'color:#b62e24' };
+        const keywordStyle = { style: 'color:#9d288c' };
+        // custom formatter for Chrome
+        // https://www.mattzeunert.com/2016/02/19/custom-chrome-devtools-object-formatters.html
+        const formatter = {
+            header(obj) {
+                // TODO also format ComponentPublicInstance & ctx.slots/attrs in setup
+                if (!isObject$1(obj)) {
+                    return null;
+                }
+                if (obj.__isVue) {
+                    return ['div', vueStyle, `VueInstance`];
+                }
+                else if (isRef(obj)) {
+                    return [
+                        'div',
+                        {},
+                        ['span', vueStyle, genRefFlag(obj)],
+                        '<',
+                        formatValue(obj.value),
+                        `>`
+                    ];
+                }
+                else if (isReactive(obj)) {
+                    return [
+                        'div',
+                        {},
+                        ['span', vueStyle, isShallow(obj) ? 'ShallowReactive' : 'Reactive'],
+                        '<',
+                        formatValue(obj),
+                        `>${isReadonly(obj) ? ` (readonly)` : ``}`
+                    ];
+                }
+                else if (isReadonly(obj)) {
+                    return [
+                        'div',
+                        {},
+                        ['span', vueStyle, isShallow(obj) ? 'ShallowReadonly' : 'Readonly'],
+                        '<',
+                        formatValue(obj),
+                        '>'
+                    ];
+                }
+                return null;
+            },
+            hasBody(obj) {
+                return obj && obj.__isVue;
+            },
+            body(obj) {
+                if (obj && obj.__isVue) {
+                    return [
+                        'div',
+                        {},
+                        ...formatInstance(obj.$)
+                    ];
+                }
+            }
+        };
+        function formatInstance(instance) {
+            const blocks = [];
+            if (instance.type.props && instance.props) {
+                blocks.push(createInstanceBlock('props', toRaw(instance.props)));
+            }
+            if (instance.setupState !== EMPTY_OBJ) {
+                blocks.push(createInstanceBlock('setup', instance.setupState));
+            }
+            if (instance.data !== EMPTY_OBJ) {
+                blocks.push(createInstanceBlock('data', toRaw(instance.data)));
+            }
+            const computed = extractKeys(instance, 'computed');
+            if (computed) {
+                blocks.push(createInstanceBlock('computed', computed));
+            }
+            const injected = extractKeys(instance, 'inject');
+            if (injected) {
+                blocks.push(createInstanceBlock('injected', injected));
+            }
+            blocks.push([
+                'div',
+                {},
+                [
+                    'span',
+                    {
+                        style: keywordStyle.style + ';opacity:0.66'
+                    },
+                    '$ (internal): '
+                ],
+                ['object', { object: instance }]
+            ]);
+            return blocks;
+        }
+        function createInstanceBlock(type, target) {
+            target = extend({}, target);
+            if (!Object.keys(target).length) {
+                return ['span', {}];
+            }
+            return [
+                'div',
+                { style: 'line-height:1.25em;margin-bottom:0.6em' },
+                [
+                    'div',
+                    {
+                        style: 'color:#476582'
+                    },
+                    type
+                ],
+                [
+                    'div',
+                    {
+                        style: 'padding-left:1.25em'
+                    },
+                    ...Object.keys(target).map(key => {
+                        return [
+                            'div',
+                            {},
+                            ['span', keywordStyle, key + ': '],
+                            formatValue(target[key], false)
+                        ];
+                    })
+                ]
+            ];
+        }
+        function formatValue(v, asRaw = true) {
+            if (typeof v === 'number') {
+                return ['span', numberStyle, v];
+            }
+            else if (typeof v === 'string') {
+                return ['span', stringStyle, JSON.stringify(v)];
+            }
+            else if (typeof v === 'boolean') {
+                return ['span', keywordStyle, v];
+            }
+            else if (isObject$1(v)) {
+                return ['object', { object: asRaw ? toRaw(v) : v }];
+            }
+            else {
+                return ['span', stringStyle, String(v)];
+            }
+        }
+        function extractKeys(instance, type) {
+            const Comp = instance.type;
+            if (isFunction$1(Comp)) {
+                return;
+            }
+            const extracted = {};
+            for (const key in instance.ctx) {
+                if (isKeyOfType(Comp, key, type)) {
+                    extracted[key] = instance.ctx[key];
+                }
+            }
+            return extracted;
+        }
+        function isKeyOfType(Comp, key, type) {
+            const opts = Comp[type];
+            if ((isArray$2(opts) && opts.includes(key)) ||
+                (isObject$1(opts) && key in opts)) {
+                return true;
+            }
+            if (Comp.extends && isKeyOfType(Comp.extends, key, type)) {
+                return true;
+            }
+            if (Comp.mixins && Comp.mixins.some(m => isKeyOfType(m, key, type))) {
+                return true;
+            }
+        }
+        function genRefFlag(v) {
+            if (isShallow(v)) {
+                return `ShallowRef`;
+            }
+            if (v.effect) {
+                return `ComputedRef`;
+            }
+            return `Ref`;
+        }
+        if (window.devtoolsFormatters) {
+            window.devtoolsFormatters.push(formatter);
+        }
+        else {
+            window.devtoolsFormatters = [formatter];
+        }
+    }
+
+    // Core API ------------------------------------------------------------------
+    const version = "3.2.45";
+
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const doc = (typeof document !== 'undefined' ? document : null);
+    const templateContainer = doc && /*#__PURE__*/ doc.createElement('template');
+    const nodeOps = {
+        insert: (child, parent, anchor) => {
+            parent.insertBefore(child, anchor || null);
+        },
+        remove: child => {
+            const parent = child.parentNode;
+            if (parent) {
+                parent.removeChild(child);
+            }
+        },
+        createElement: (tag, isSVG, is, props) => {
+            const el = isSVG
+                ? doc.createElementNS(svgNS, tag)
+                : doc.createElement(tag, is ? { is } : undefined);
+            if (tag === 'select' && props && props.multiple != null) {
+                el.setAttribute('multiple', props.multiple);
+            }
+            return el;
+        },
+        createText: text => doc.createTextNode(text),
+        createComment: text => doc.createComment(text),
+        setText: (node, text) => {
+            node.nodeValue = text;
+        },
+        setElementText: (el, text) => {
+            el.textContent = text;
+        },
+        parentNode: node => node.parentNode,
+        nextSibling: node => node.nextSibling,
+        querySelector: selector => doc.querySelector(selector),
+        setScopeId(el, id) {
+            el.setAttribute(id, '');
+        },
+        // __UNSAFE__
+        // Reason: innerHTML.
+        // Static content here can only come from compiled templates.
+        // As long as the user only uses trusted templates, this is safe.
+        insertStaticContent(content, parent, anchor, isSVG, start, end) {
+            // <parent> before | first ... last | anchor </parent>
+            const before = anchor ? anchor.previousSibling : parent.lastChild;
+            // #5308 can only take cached path if:
+            // - has a single root node
+            // - nextSibling info is still available
+            if (start && (start === end || start.nextSibling)) {
+                // cached
+                while (true) {
+                    parent.insertBefore(start.cloneNode(true), anchor);
+                    if (start === end || !(start = start.nextSibling))
+                        break;
+                }
+            }
+            else {
+                // fresh insert
+                templateContainer.innerHTML = isSVG ? `<svg>${content}</svg>` : content;
+                const template = templateContainer.content;
+                if (isSVG) {
+                    // remove outer svg wrapper
+                    const wrapper = template.firstChild;
+                    while (wrapper.firstChild) {
+                        template.appendChild(wrapper.firstChild);
+                    }
+                    template.removeChild(wrapper);
+                }
+                parent.insertBefore(template, anchor);
+            }
+            return [
+                // first
+                before ? before.nextSibling : parent.firstChild,
+                // last
+                anchor ? anchor.previousSibling : parent.lastChild
+            ];
+        }
+    };
+
+    // compiler should normalize class + :class bindings on the same element
+    // into a single binding ['staticClass', dynamic]
+    function patchClass(el, value, isSVG) {
+        // directly setting className should be faster than setAttribute in theory
+        // if this is an element during a transition, take the temporary transition
+        // classes into account.
+        const transitionClasses = el._vtc;
+        if (transitionClasses) {
+            value = (value ? [value, ...transitionClasses] : [...transitionClasses]).join(' ');
+        }
+        if (value == null) {
+            el.removeAttribute('class');
+        }
+        else if (isSVG) {
+            el.setAttribute('class', value);
+        }
+        else {
+            el.className = value;
+        }
+    }
+
+    function patchStyle(el, prev, next) {
+        const style = el.style;
+        const isCssString = isString$2(next);
+        if (next && !isCssString) {
+            for (const key in next) {
+                setStyle(style, key, next[key]);
+            }
+            if (prev && !isString$2(prev)) {
+                for (const key in prev) {
+                    if (next[key] == null) {
+                        setStyle(style, key, '');
+                    }
+                }
+            }
+        }
+        else {
+            const currentDisplay = style.display;
+            if (isCssString) {
+                if (prev !== next) {
+                    style.cssText = next;
+                }
+            }
+            else if (prev) {
+                el.removeAttribute('style');
+            }
+            // indicates that the `display` of the element is controlled by `v-show`,
+            // so we always keep the current `display` value regardless of the `style`
+            // value, thus handing over control to `v-show`.
+            if ('_vod' in el) {
+                style.display = currentDisplay;
+            }
+        }
+    }
+    const semicolonRE = /[^\\];\s*$/;
+    const importantRE = /\s*!important$/;
+    function setStyle(style, name, val) {
+        if (isArray$2(val)) {
+            val.forEach(v => setStyle(style, name, v));
+        }
+        else {
+            if (val == null)
+                val = '';
+            {
+                if (semicolonRE.test(val)) {
+                    warn(`Unexpected semicolon at the end of '${name}' style value: '${val}'`);
+                }
+            }
+            if (name.startsWith('--')) {
+                // custom property definition
+                style.setProperty(name, val);
+            }
+            else {
+                const prefixed = autoPrefix(style, name);
+                if (importantRE.test(val)) {
+                    // !important
+                    style.setProperty(hyphenate(prefixed), val.replace(importantRE, ''), 'important');
+                }
+                else {
+                    style[prefixed] = val;
+                }
+            }
+        }
+    }
+    const prefixes = ['Webkit', 'Moz', 'ms'];
+    const prefixCache = {};
+    function autoPrefix(style, rawName) {
+        const cached = prefixCache[rawName];
+        if (cached) {
+            return cached;
+        }
+        let name = camelize(rawName);
+        if (name !== 'filter' && name in style) {
+            return (prefixCache[rawName] = name);
+        }
+        name = capitalize(name);
+        for (let i = 0; i < prefixes.length; i++) {
+            const prefixed = prefixes[i] + name;
+            if (prefixed in style) {
+                return (prefixCache[rawName] = prefixed);
+            }
+        }
+        return rawName;
+    }
+
+    const xlinkNS = 'http://www.w3.org/1999/xlink';
+    function patchAttr(el, key, value, isSVG, instance) {
+        if (isSVG && key.startsWith('xlink:')) {
+            if (value == null) {
+                el.removeAttributeNS(xlinkNS, key.slice(6, key.length));
+            }
+            else {
+                el.setAttributeNS(xlinkNS, key, value);
+            }
+        }
+        else {
+            // note we are only checking boolean attributes that don't have a
+            // corresponding dom prop of the same name here.
+            const isBoolean = isSpecialBooleanAttr(key);
+            if (value == null || (isBoolean && !includeBooleanAttr(value))) {
+                el.removeAttribute(key);
+            }
+            else {
+                el.setAttribute(key, isBoolean ? '' : value);
+            }
+        }
+    }
+
+    // __UNSAFE__
+    // functions. The user is responsible for using them with only trusted content.
+    function patchDOMProp(el, key, value, 
+    // the following args are passed only due to potential innerHTML/textContent
+    // overriding existing VNodes, in which case the old tree must be properly
+    // unmounted.
+    prevChildren, parentComponent, parentSuspense, unmountChildren) {
+        if (key === 'innerHTML' || key === 'textContent') {
+            if (prevChildren) {
+                unmountChildren(prevChildren, parentComponent, parentSuspense);
+            }
+            el[key] = value == null ? '' : value;
+            return;
+        }
+        if (key === 'value' &&
+            el.tagName !== 'PROGRESS' &&
+            // custom elements may use _value internally
+            !el.tagName.includes('-')) {
+            // store value as _value as well since
+            // non-string values will be stringified.
+            el._value = value;
+            const newValue = value == null ? '' : value;
+            if (el.value !== newValue ||
+                // #4956: always set for OPTION elements because its value falls back to
+                // textContent if no value attribute is present. And setting .value for
+                // OPTION has no side effect
+                el.tagName === 'OPTION') {
+                el.value = newValue;
+            }
+            if (value == null) {
+                el.removeAttribute(key);
+            }
+            return;
+        }
+        let needRemove = false;
+        if (value === '' || value == null) {
+            const type = typeof el[key];
+            if (type === 'boolean') {
+                // e.g. <select multiple> compiles to { multiple: '' }
+                value = includeBooleanAttr(value);
+            }
+            else if (value == null && type === 'string') {
+                // e.g. <div :id="null">
+                value = '';
+                needRemove = true;
+            }
+            else if (type === 'number') {
+                // e.g. <img :width="null">
+                value = 0;
+                needRemove = true;
+            }
+        }
+        // some properties perform value validation and throw,
+        // some properties has getter, no setter, will error in 'use strict'
+        // eg. <select :type="null"></select> <select :willValidate="null"></select>
+        try {
+            el[key] = value;
+        }
+        catch (e) {
+            // do not warn if value is auto-coerced from nullish values
+            if (!needRemove) {
+                warn(`Failed setting prop "${key}" on <${el.tagName.toLowerCase()}>: ` +
+                    `value ${value} is invalid.`, e);
+            }
+        }
+        needRemove && el.removeAttribute(key);
+    }
+
+    function addEventListener(el, event, handler, options) {
+        el.addEventListener(event, handler, options);
+    }
+    function removeEventListener(el, event, handler, options) {
+        el.removeEventListener(event, handler, options);
+    }
+    function patchEvent(el, rawName, prevValue, nextValue, instance = null) {
+        // vei = vue event invokers
+        const invokers = el._vei || (el._vei = {});
+        const existingInvoker = invokers[rawName];
+        if (nextValue && existingInvoker) {
+            // patch
+            existingInvoker.value = nextValue;
+        }
+        else {
+            const [name, options] = parseName(rawName);
+            if (nextValue) {
+                // add
+                const invoker = (invokers[rawName] = createInvoker(nextValue, instance));
+                addEventListener(el, name, invoker, options);
+            }
+            else if (existingInvoker) {
+                // remove
+                removeEventListener(el, name, existingInvoker, options);
+                invokers[rawName] = undefined;
+            }
+        }
+    }
+    const optionsModifierRE = /(?:Once|Passive|Capture)$/;
+    function parseName(name) {
+        let options;
+        if (optionsModifierRE.test(name)) {
+            options = {};
+            let m;
+            while ((m = name.match(optionsModifierRE))) {
+                name = name.slice(0, name.length - m[0].length);
+                options[m[0].toLowerCase()] = true;
+            }
+        }
+        const event = name[2] === ':' ? name.slice(3) : hyphenate(name.slice(2));
+        return [event, options];
+    }
+    // To avoid the overhead of repeatedly calling Date.now(), we cache
+    // and use the same timestamp for all event listeners attached in the same tick.
+    let cachedNow = 0;
+    const p = /*#__PURE__*/ Promise.resolve();
+    const getNow = () => cachedNow || (p.then(() => (cachedNow = 0)), (cachedNow = Date.now()));
+    function createInvoker(initialValue, instance) {
+        const invoker = (e) => {
+            // async edge case vuejs/vue#6566
+            // inner click event triggers patch, event handler
+            // attached to outer element during patch, and triggered again. This
+            // happens because browsers fire microtask ticks between event propagation.
+            // this no longer happens for templates in Vue 3, but could still be
+            // theoretically possible for hand-written render functions.
+            // the solution: we save the timestamp when a handler is attached,
+            // and also attach the timestamp to any event that was handled by vue
+            // for the first time (to avoid inconsistent event timestamp implementations
+            // or events fired from iframes, e.g. #2513)
+            // The handler would only fire if the event passed to it was fired
+            // AFTER it was attached.
+            if (!e._vts) {
+                e._vts = Date.now();
+            }
+            else if (e._vts <= invoker.attached) {
+                return;
+            }
+            callWithAsyncErrorHandling(patchStopImmediatePropagation(e, invoker.value), instance, 5 /* ErrorCodes.NATIVE_EVENT_HANDLER */, [e]);
+        };
+        invoker.value = initialValue;
+        invoker.attached = getNow();
+        return invoker;
+    }
+    function patchStopImmediatePropagation(e, value) {
+        if (isArray$2(value)) {
+            const originalStop = e.stopImmediatePropagation;
+            e.stopImmediatePropagation = () => {
+                originalStop.call(e);
+                e._stopped = true;
+            };
+            return value.map(fn => (e) => !e._stopped && fn && fn(e));
+        }
+        else {
+            return value;
+        }
+    }
+
+    const nativeOnRE = /^on[a-z]/;
+    const patchProp = (el, key, prevValue, nextValue, isSVG = false, prevChildren, parentComponent, parentSuspense, unmountChildren) => {
+        if (key === 'class') {
+            patchClass(el, nextValue, isSVG);
+        }
+        else if (key === 'style') {
+            patchStyle(el, prevValue, nextValue);
+        }
+        else if (isOn(key)) {
+            // ignore v-model listeners
+            if (!isModelListener(key)) {
+                patchEvent(el, key, prevValue, nextValue, parentComponent);
+            }
+        }
+        else if (key[0] === '.'
+            ? ((key = key.slice(1)), true)
+            : key[0] === '^'
+                ? ((key = key.slice(1)), false)
+                : shouldSetAsProp(el, key, nextValue, isSVG)) {
+            patchDOMProp(el, key, nextValue, prevChildren, parentComponent, parentSuspense, unmountChildren);
+        }
+        else {
+            // special case for <input v-model type="checkbox"> with
+            // :true-value & :false-value
+            // store value as dom properties since non-string values will be
+            // stringified.
+            if (key === 'true-value') {
+                el._trueValue = nextValue;
+            }
+            else if (key === 'false-value') {
+                el._falseValue = nextValue;
+            }
+            patchAttr(el, key, nextValue, isSVG);
+        }
+    };
+    function shouldSetAsProp(el, key, value, isSVG) {
+        if (isSVG) {
+            // most keys must be set as attribute on svg elements to work
+            // ...except innerHTML & textContent
+            if (key === 'innerHTML' || key === 'textContent') {
+                return true;
+            }
+            // or native onclick with function values
+            if (key in el && nativeOnRE.test(key) && isFunction$1(value)) {
+                return true;
+            }
+            return false;
+        }
+        // these are enumerated attrs, however their corresponding DOM properties
+        // are actually booleans - this leads to setting it with a string "false"
+        // value leading it to be coerced to `true`, so we need to always treat
+        // them as attributes.
+        // Note that `contentEditable` doesn't have this problem: its DOM
+        // property is also enumerated string values.
+        if (key === 'spellcheck' || key === 'draggable' || key === 'translate') {
+            return false;
+        }
+        // #1787, #2840 form property on form elements is readonly and must be set as
+        // attribute.
+        if (key === 'form') {
+            return false;
+        }
+        // #1526 <input list> must be set as attribute
+        if (key === 'list' && el.tagName === 'INPUT') {
+            return false;
+        }
+        // #2766 <textarea type> must be set as attribute
+        if (key === 'type' && el.tagName === 'TEXTAREA') {
+            return false;
+        }
+        // native onclick with string value, must be set as attribute
+        if (nativeOnRE.test(key) && isString$2(value)) {
+            return false;
+        }
+        return key in el;
+    }
+
+    function defineCustomElement(options, hydrate) {
+        const Comp = defineComponent(options);
+        class VueCustomElement extends VueElement {
+            constructor(initialProps) {
+                super(Comp, initialProps, hydrate);
+            }
+        }
+        VueCustomElement.def = Comp;
+        return VueCustomElement;
+    }
+    const BaseClass = (typeof HTMLElement !== 'undefined' ? HTMLElement : class {
+    });
+    class VueElement extends BaseClass {
+        constructor(_def, _props = {}, hydrate) {
+            super();
+            this._def = _def;
+            this._props = _props;
+            /**
+             * @internal
+             */
+            this._instance = null;
+            this._connected = false;
+            this._resolved = false;
+            this._numberProps = null;
+            if (this.shadowRoot && hydrate) {
+                hydrate(this._createVNode(), this.shadowRoot);
+            }
+            else {
+                if (this.shadowRoot) {
+                    warn(`Custom element has pre-rendered declarative shadow root but is not ` +
+                        `defined as hydratable. Use \`defineSSRCustomElement\`.`);
+                }
+                this.attachShadow({ mode: 'open' });
+                if (!this._def.__asyncLoader) {
+                    // for sync component defs we can immediately resolve props
+                    this._resolveProps(this._def);
+                }
+            }
+        }
+        connectedCallback() {
+            this._connected = true;
+            if (!this._instance) {
+                if (this._resolved) {
+                    this._update();
+                }
+                else {
+                    this._resolveDef();
+                }
+            }
+        }
+        disconnectedCallback() {
+            this._connected = false;
+            nextTick(() => {
+                if (!this._connected) {
+                    render(null, this.shadowRoot);
+                    this._instance = null;
+                }
+            });
+        }
+        /**
+         * resolve inner component definition (handle possible async component)
+         */
+        _resolveDef() {
+            this._resolved = true;
+            // set initial attrs
+            for (let i = 0; i < this.attributes.length; i++) {
+                this._setAttr(this.attributes[i].name);
+            }
+            // watch future attr changes
+            new MutationObserver(mutations => {
+                for (const m of mutations) {
+                    this._setAttr(m.attributeName);
+                }
+            }).observe(this, { attributes: true });
+            const resolve = (def, isAsync = false) => {
+                const { props, styles } = def;
+                // cast Number-type props set before resolve
+                let numberProps;
+                if (props && !isArray$2(props)) {
+                    for (const key in props) {
+                        const opt = props[key];
+                        if (opt === Number || (opt && opt.type === Number)) {
+                            if (key in this._props) {
+                                this._props[key] = toNumber(this._props[key]);
+                            }
+                            (numberProps || (numberProps = Object.create(null)))[camelize(key)] = true;
+                        }
+                    }
+                }
+                this._numberProps = numberProps;
+                if (isAsync) {
+                    // defining getter/setters on prototype
+                    // for sync defs, this already happened in the constructor
+                    this._resolveProps(def);
+                }
+                // apply CSS
+                this._applyStyles(styles);
+                // initial render
+                this._update();
+            };
+            const asyncDef = this._def.__asyncLoader;
+            if (asyncDef) {
+                asyncDef().then(def => resolve(def, true));
+            }
+            else {
+                resolve(this._def);
+            }
+        }
+        _resolveProps(def) {
+            const { props } = def;
+            const declaredPropKeys = isArray$2(props) ? props : Object.keys(props || {});
+            // check if there are props set pre-upgrade or connect
+            for (const key of Object.keys(this)) {
+                if (key[0] !== '_' && declaredPropKeys.includes(key)) {
+                    this._setProp(key, this[key], true, false);
+                }
+            }
+            // defining getter/setters on prototype
+            for (const key of declaredPropKeys.map(camelize)) {
+                Object.defineProperty(this, key, {
+                    get() {
+                        return this._getProp(key);
+                    },
+                    set(val) {
+                        this._setProp(key, val);
+                    }
+                });
+            }
+        }
+        _setAttr(key) {
+            let value = this.getAttribute(key);
+            const camelKey = camelize(key);
+            if (this._numberProps && this._numberProps[camelKey]) {
+                value = toNumber(value);
+            }
+            this._setProp(camelKey, value, false);
+        }
+        /**
+         * @internal
+         */
+        _getProp(key) {
+            return this._props[key];
+        }
+        /**
+         * @internal
+         */
+        _setProp(key, val, shouldReflect = true, shouldUpdate = true) {
+            if (val !== this._props[key]) {
+                this._props[key] = val;
+                if (shouldUpdate && this._instance) {
+                    this._update();
+                }
+                // reflect
+                if (shouldReflect) {
+                    if (val === true) {
+                        this.setAttribute(hyphenate(key), '');
+                    }
+                    else if (typeof val === 'string' || typeof val === 'number') {
+                        this.setAttribute(hyphenate(key), val + '');
+                    }
+                    else if (!val) {
+                        this.removeAttribute(hyphenate(key));
+                    }
+                }
+            }
+        }
+        _update() {
+            render(this._createVNode(), this.shadowRoot);
+        }
+        _createVNode() {
+            const vnode = createVNode(this._def, extend({}, this._props));
+            if (!this._instance) {
+                vnode.ce = instance => {
+                    this._instance = instance;
+                    instance.isCE = true;
+                    // HMR
+                    {
+                        instance.ceReload = newStyles => {
+                            // always reset styles
+                            if (this._styles) {
+                                this._styles.forEach(s => this.shadowRoot.removeChild(s));
+                                this._styles.length = 0;
+                            }
+                            this._applyStyles(newStyles);
+                            this._instance = null;
+                            this._update();
+                        };
+                    }
+                    const dispatch = (event, args) => {
+                        this.dispatchEvent(new CustomEvent(event, {
+                            detail: args
+                        }));
+                    };
+                    // intercept emit
+                    instance.emit = (event, ...args) => {
+                        // dispatch both the raw and hyphenated versions of an event
+                        // to match Vue behavior
+                        dispatch(event, args);
+                        if (hyphenate(event) !== event) {
+                            dispatch(hyphenate(event), args);
+                        }
+                    };
+                    // locate nearest Vue custom element parent for provide/inject
+                    let parent = this;
+                    while ((parent =
+                        parent && (parent.parentNode || parent.host))) {
+                        if (parent instanceof VueElement) {
+                            instance.parent = parent._instance;
+                            instance.provides = parent._instance.provides;
+                            break;
+                        }
+                    }
+                };
+            }
+            return vnode;
+        }
+        _applyStyles(styles) {
+            if (styles) {
+                styles.forEach(css => {
+                    const s = document.createElement('style');
+                    s.textContent = css;
+                    this.shadowRoot.appendChild(s);
+                    // record for HMR
+                    {
+                        (this._styles || (this._styles = [])).push(s);
+                    }
+                });
+            }
+        }
+    }
+
+    const TRANSITION = 'transition';
+    const ANIMATION = 'animation';
+    // DOM Transition is a higher-order-component based on the platform-agnostic
+    // base Transition component, with DOM-specific logic.
+    const Transition = (props, { slots }) => h(BaseTransition, resolveTransitionProps(props), slots);
+    Transition.displayName = 'Transition';
+    const DOMTransitionPropsValidators = {
+        name: String,
+        type: String,
+        css: {
+            type: Boolean,
+            default: true
+        },
+        duration: [String, Number, Object],
+        enterFromClass: String,
+        enterActiveClass: String,
+        enterToClass: String,
+        appearFromClass: String,
+        appearActiveClass: String,
+        appearToClass: String,
+        leaveFromClass: String,
+        leaveActiveClass: String,
+        leaveToClass: String
+    };
+    const TransitionPropsValidators = (Transition.props =
+        /*#__PURE__*/ extend({}, BaseTransition.props, DOMTransitionPropsValidators));
+    /**
+     * #3227 Incoming hooks may be merged into arrays when wrapping Transition
+     * with custom HOCs.
+     */
+    const callHook = (hook, args = []) => {
+        if (isArray$2(hook)) {
+            hook.forEach(h => h(...args));
+        }
+        else if (hook) {
+            hook(...args);
+        }
+    };
+    /**
+     * Check if a hook expects a callback (2nd arg), which means the user
+     * intends to explicitly control the end of the transition.
+     */
+    const hasExplicitCallback = (hook) => {
+        return hook
+            ? isArray$2(hook)
+                ? hook.some(h => h.length > 1)
+                : hook.length > 1
+            : false;
+    };
+    function resolveTransitionProps(rawProps) {
+        const baseProps = {};
+        for (const key in rawProps) {
+            if (!(key in DOMTransitionPropsValidators)) {
+                baseProps[key] = rawProps[key];
+            }
+        }
+        if (rawProps.css === false) {
+            return baseProps;
+        }
+        const { name = 'v', type, duration, enterFromClass = `${name}-enter-from`, enterActiveClass = `${name}-enter-active`, enterToClass = `${name}-enter-to`, appearFromClass = enterFromClass, appearActiveClass = enterActiveClass, appearToClass = enterToClass, leaveFromClass = `${name}-leave-from`, leaveActiveClass = `${name}-leave-active`, leaveToClass = `${name}-leave-to` } = rawProps;
+        const durations = normalizeDuration(duration);
+        const enterDuration = durations && durations[0];
+        const leaveDuration = durations && durations[1];
+        const { onBeforeEnter, onEnter, onEnterCancelled, onLeave, onLeaveCancelled, onBeforeAppear = onBeforeEnter, onAppear = onEnter, onAppearCancelled = onEnterCancelled } = baseProps;
+        const finishEnter = (el, isAppear, done) => {
+            removeTransitionClass(el, isAppear ? appearToClass : enterToClass);
+            removeTransitionClass(el, isAppear ? appearActiveClass : enterActiveClass);
+            done && done();
+        };
+        const finishLeave = (el, done) => {
+            el._isLeaving = false;
+            removeTransitionClass(el, leaveFromClass);
+            removeTransitionClass(el, leaveToClass);
+            removeTransitionClass(el, leaveActiveClass);
+            done && done();
+        };
+        const makeEnterHook = (isAppear) => {
+            return (el, done) => {
+                const hook = isAppear ? onAppear : onEnter;
+                const resolve = () => finishEnter(el, isAppear, done);
+                callHook(hook, [el, resolve]);
+                nextFrame(() => {
+                    removeTransitionClass(el, isAppear ? appearFromClass : enterFromClass);
+                    addTransitionClass(el, isAppear ? appearToClass : enterToClass);
+                    if (!hasExplicitCallback(hook)) {
+                        whenTransitionEnds(el, type, enterDuration, resolve);
+                    }
+                });
+            };
+        };
+        return extend(baseProps, {
+            onBeforeEnter(el) {
+                callHook(onBeforeEnter, [el]);
+                addTransitionClass(el, enterFromClass);
+                addTransitionClass(el, enterActiveClass);
+            },
+            onBeforeAppear(el) {
+                callHook(onBeforeAppear, [el]);
+                addTransitionClass(el, appearFromClass);
+                addTransitionClass(el, appearActiveClass);
+            },
+            onEnter: makeEnterHook(false),
+            onAppear: makeEnterHook(true),
+            onLeave(el, done) {
+                el._isLeaving = true;
+                const resolve = () => finishLeave(el, done);
+                addTransitionClass(el, leaveFromClass);
+                // force reflow so *-leave-from classes immediately take effect (#2593)
+                forceReflow();
+                addTransitionClass(el, leaveActiveClass);
+                nextFrame(() => {
+                    if (!el._isLeaving) {
+                        // cancelled
+                        return;
+                    }
+                    removeTransitionClass(el, leaveFromClass);
+                    addTransitionClass(el, leaveToClass);
+                    if (!hasExplicitCallback(onLeave)) {
+                        whenTransitionEnds(el, type, leaveDuration, resolve);
+                    }
+                });
+                callHook(onLeave, [el, resolve]);
+            },
+            onEnterCancelled(el) {
+                finishEnter(el, false);
+                callHook(onEnterCancelled, [el]);
+            },
+            onAppearCancelled(el) {
+                finishEnter(el, true);
+                callHook(onAppearCancelled, [el]);
+            },
+            onLeaveCancelled(el) {
+                finishLeave(el);
+                callHook(onLeaveCancelled, [el]);
+            }
+        });
+    }
+    function normalizeDuration(duration) {
+        if (duration == null) {
+            return null;
+        }
+        else if (isObject$1(duration)) {
+            return [NumberOf(duration.enter), NumberOf(duration.leave)];
+        }
+        else {
+            const n = NumberOf(duration);
+            return [n, n];
+        }
+    }
+    function NumberOf(val) {
+        const res = toNumber(val);
+        validateDuration$1(res);
+        return res;
+    }
+    function validateDuration$1(val) {
+        if (typeof val !== 'number') {
+            warn(`<transition> explicit duration is not a valid number - ` +
+                `got ${JSON.stringify(val)}.`);
+        }
+        else if (isNaN(val)) {
+            warn(`<transition> explicit duration is NaN - ` +
+                'the duration expression might be incorrect.');
+        }
+    }
+    function addTransitionClass(el, cls) {
+        cls.split(/\s+/).forEach(c => c && el.classList.add(c));
+        (el._vtc ||
+            (el._vtc = new Set())).add(cls);
+    }
+    function removeTransitionClass(el, cls) {
+        cls.split(/\s+/).forEach(c => c && el.classList.remove(c));
+        const { _vtc } = el;
+        if (_vtc) {
+            _vtc.delete(cls);
+            if (!_vtc.size) {
+                el._vtc = undefined;
+            }
+        }
+    }
+    function nextFrame(cb) {
+        requestAnimationFrame(() => {
+            requestAnimationFrame(cb);
+        });
+    }
+    let endId = 0;
+    function whenTransitionEnds(el, expectedType, explicitTimeout, resolve) {
+        const id = (el._endId = ++endId);
+        const resolveIfNotStale = () => {
+            if (id === el._endId) {
+                resolve();
+            }
+        };
+        if (explicitTimeout) {
+            return setTimeout(resolveIfNotStale, explicitTimeout);
+        }
+        const { type, timeout, propCount } = getTransitionInfo(el, expectedType);
+        if (!type) {
+            return resolve();
+        }
+        const endEvent = type + 'end';
+        let ended = 0;
+        const end = () => {
+            el.removeEventListener(endEvent, onEnd);
+            resolveIfNotStale();
+        };
+        const onEnd = (e) => {
+            if (e.target === el && ++ended >= propCount) {
+                end();
+            }
+        };
+        setTimeout(() => {
+            if (ended < propCount) {
+                end();
+            }
+        }, timeout + 1);
+        el.addEventListener(endEvent, onEnd);
+    }
+    function getTransitionInfo(el, expectedType) {
+        const styles = window.getComputedStyle(el);
+        // JSDOM may return undefined for transition properties
+        const getStyleProperties = (key) => (styles[key] || '').split(', ');
+        const transitionDelays = getStyleProperties(`${TRANSITION}Delay`);
+        const transitionDurations = getStyleProperties(`${TRANSITION}Duration`);
+        const transitionTimeout = getTimeout(transitionDelays, transitionDurations);
+        const animationDelays = getStyleProperties(`${ANIMATION}Delay`);
+        const animationDurations = getStyleProperties(`${ANIMATION}Duration`);
+        const animationTimeout = getTimeout(animationDelays, animationDurations);
+        let type = null;
+        let timeout = 0;
+        let propCount = 0;
+        /* istanbul ignore if */
+        if (expectedType === TRANSITION) {
+            if (transitionTimeout > 0) {
+                type = TRANSITION;
+                timeout = transitionTimeout;
+                propCount = transitionDurations.length;
+            }
+        }
+        else if (expectedType === ANIMATION) {
+            if (animationTimeout > 0) {
+                type = ANIMATION;
+                timeout = animationTimeout;
+                propCount = animationDurations.length;
+            }
+        }
+        else {
+            timeout = Math.max(transitionTimeout, animationTimeout);
+            type =
+                timeout > 0
+                    ? transitionTimeout > animationTimeout
+                        ? TRANSITION
+                        : ANIMATION
+                    : null;
+            propCount = type
+                ? type === TRANSITION
+                    ? transitionDurations.length
+                    : animationDurations.length
+                : 0;
+        }
+        const hasTransform = type === TRANSITION &&
+            /\b(transform|all)(,|$)/.test(getStyleProperties(`${TRANSITION}Property`).toString());
+        return {
+            type,
+            timeout,
+            propCount,
+            hasTransform
+        };
+    }
+    function getTimeout(delays, durations) {
+        while (delays.length < durations.length) {
+            delays = delays.concat(delays);
+        }
+        return Math.max(...durations.map((d, i) => toMs(d) + toMs(delays[i])));
+    }
+    // Old versions of Chromium (below 61.0.3163.100) formats floating pointer
+    // numbers in a locale-dependent way, using a comma instead of a dot.
+    // If comma is not replaced with a dot, the input will be rounded down
+    // (i.e. acting as a floor function) causing unexpected behaviors
+    function toMs(s) {
+        return Number(s.slice(0, -1).replace(',', '.')) * 1000;
+    }
+    // synchronously force layout to put elements into a certain state
+    function forceReflow() {
+        return document.body.offsetHeight;
+    }
+
+    const positionMap = new WeakMap();
+    const newPositionMap = new WeakMap();
+    const TransitionGroupImpl = {
+        name: 'TransitionGroup',
+        props: /*#__PURE__*/ extend({}, TransitionPropsValidators, {
+            tag: String,
+            moveClass: String
+        }),
+        setup(props, { slots }) {
+            const instance = getCurrentInstance();
+            const state = useTransitionState();
+            let prevChildren;
+            let children;
+            onUpdated(() => {
+                // children is guaranteed to exist after initial render
+                if (!prevChildren.length) {
+                    return;
+                }
+                const moveClass = props.moveClass || `${props.name || 'v'}-move`;
+                if (!hasCSSTransform(prevChildren[0].el, instance.vnode.el, moveClass)) {
+                    return;
+                }
+                // we divide the work into three loops to avoid mixing DOM reads and writes
+                // in each iteration - which helps prevent layout thrashing.
+                prevChildren.forEach(callPendingCbs);
+                prevChildren.forEach(recordPosition);
+                const movedChildren = prevChildren.filter(applyTranslation);
+                // force reflow to put everything in position
+                forceReflow();
+                movedChildren.forEach(c => {
+                    const el = c.el;
+                    const style = el.style;
+                    addTransitionClass(el, moveClass);
+                    style.transform = style.webkitTransform = style.transitionDuration = '';
+                    const cb = (el._moveCb = (e) => {
+                        if (e && e.target !== el) {
+                            return;
+                        }
+                        if (!e || /transform$/.test(e.propertyName)) {
+                            el.removeEventListener('transitionend', cb);
+                            el._moveCb = null;
+                            removeTransitionClass(el, moveClass);
+                        }
+                    });
+                    el.addEventListener('transitionend', cb);
+                });
+            });
+            return () => {
+                const rawProps = toRaw(props);
+                const cssTransitionProps = resolveTransitionProps(rawProps);
+                let tag = rawProps.tag || Fragment;
+                prevChildren = children;
+                children = slots.default ? getTransitionRawChildren(slots.default()) : [];
+                for (let i = 0; i < children.length; i++) {
+                    const child = children[i];
+                    if (child.key != null) {
+                        setTransitionHooks(child, resolveTransitionHooks(child, cssTransitionProps, state, instance));
+                    }
+                    else {
+                        warn(`<TransitionGroup> children must be keyed.`);
+                    }
+                }
+                if (prevChildren) {
+                    for (let i = 0; i < prevChildren.length; i++) {
+                        const child = prevChildren[i];
+                        setTransitionHooks(child, resolveTransitionHooks(child, cssTransitionProps, state, instance));
+                        positionMap.set(child, child.el.getBoundingClientRect());
+                    }
+                }
+                return createVNode(tag, null, children);
+            };
+        }
+    };
+    const TransitionGroup = TransitionGroupImpl;
+    function callPendingCbs(c) {
+        const el = c.el;
+        if (el._moveCb) {
+            el._moveCb();
+        }
+        if (el._enterCb) {
+            el._enterCb();
+        }
+    }
+    function recordPosition(c) {
+        newPositionMap.set(c, c.el.getBoundingClientRect());
+    }
+    function applyTranslation(c) {
+        const oldPos = positionMap.get(c);
+        const newPos = newPositionMap.get(c);
+        const dx = oldPos.left - newPos.left;
+        const dy = oldPos.top - newPos.top;
+        if (dx || dy) {
+            const s = c.el.style;
+            s.transform = s.webkitTransform = `translate(${dx}px,${dy}px)`;
+            s.transitionDuration = '0s';
+            return c;
+        }
+    }
+    function hasCSSTransform(el, root, moveClass) {
+        // Detect whether an element with the move class applied has
+        // CSS transitions. Since the element may be inside an entering
+        // transition at this very moment, we make a clone of it and remove
+        // all other transition classes applied to ensure only the move class
+        // is applied.
+        const clone = el.cloneNode();
+        if (el._vtc) {
+            el._vtc.forEach(cls => {
+                cls.split(/\s+/).forEach(c => c && clone.classList.remove(c));
+            });
+        }
+        moveClass.split(/\s+/).forEach(c => c && clone.classList.add(c));
+        clone.style.display = 'none';
+        const container = (root.nodeType === 1 ? root : root.parentNode);
+        container.appendChild(clone);
+        const { hasTransform } = getTransitionInfo(clone);
+        container.removeChild(clone);
+        return hasTransform;
+    }
+
+    const getModelAssigner = (vnode) => {
+        const fn = vnode.props['onUpdate:modelValue'] ||
+            (false );
+        return isArray$2(fn) ? value => invokeArrayFns(fn, value) : fn;
+    };
+    function onCompositionStart(e) {
+        e.target.composing = true;
+    }
+    function onCompositionEnd(e) {
+        const target = e.target;
+        if (target.composing) {
+            target.composing = false;
+            target.dispatchEvent(new Event('input'));
+        }
+    }
+    // We are exporting the v-model runtime directly as vnode hooks so that it can
+    // be tree-shaken in case v-model is never used.
+    const vModelText = {
+        created(el, { modifiers: { lazy, trim, number } }, vnode) {
+            el._assign = getModelAssigner(vnode);
+            const castToNumber = number || (vnode.props && vnode.props.type === 'number');
+            addEventListener(el, lazy ? 'change' : 'input', e => {
+                if (e.target.composing)
+                    return;
+                let domValue = el.value;
+                if (trim) {
+                    domValue = domValue.trim();
+                }
+                if (castToNumber) {
+                    domValue = toNumber(domValue);
+                }
+                el._assign(domValue);
+            });
+            if (trim) {
+                addEventListener(el, 'change', () => {
+                    el.value = el.value.trim();
+                });
+            }
+            if (!lazy) {
+                addEventListener(el, 'compositionstart', onCompositionStart);
+                addEventListener(el, 'compositionend', onCompositionEnd);
+                // Safari < 10.2 & UIWebView doesn't fire compositionend when
+                // switching focus before confirming composition choice
+                // this also fixes the issue where some browsers e.g. iOS Chrome
+                // fires "change" instead of "input" on autocomplete.
+                addEventListener(el, 'change', onCompositionEnd);
+            }
+        },
+        // set value on mounted so it's after min/max for type="range"
+        mounted(el, { value }) {
+            el.value = value == null ? '' : value;
+        },
+        beforeUpdate(el, { value, modifiers: { lazy, trim, number } }, vnode) {
+            el._assign = getModelAssigner(vnode);
+            // avoid clearing unresolved text. #2302
+            if (el.composing)
+                return;
+            if (document.activeElement === el && el.type !== 'range') {
+                if (lazy) {
+                    return;
+                }
+                if (trim && el.value.trim() === value) {
+                    return;
+                }
+                if ((number || el.type === 'number') && toNumber(el.value) === value) {
+                    return;
+                }
+            }
+            const newValue = value == null ? '' : value;
+            if (el.value !== newValue) {
+                el.value = newValue;
+            }
+        }
+    };
+
+    const systemModifiers = ['ctrl', 'shift', 'alt', 'meta'];
+    const modifierGuards = {
+        stop: e => e.stopPropagation(),
+        prevent: e => e.preventDefault(),
+        self: e => e.target !== e.currentTarget,
+        ctrl: e => !e.ctrlKey,
+        shift: e => !e.shiftKey,
+        alt: e => !e.altKey,
+        meta: e => !e.metaKey,
+        left: e => 'button' in e && e.button !== 0,
+        middle: e => 'button' in e && e.button !== 1,
+        right: e => 'button' in e && e.button !== 2,
+        exact: (e, modifiers) => systemModifiers.some(m => e[`${m}Key`] && !modifiers.includes(m))
+    };
+    /**
+     * @private
+     */
+    const withModifiers = (fn, modifiers) => {
+        return (event, ...args) => {
+            for (let i = 0; i < modifiers.length; i++) {
+                const guard = modifierGuards[modifiers[i]];
+                if (guard && guard(event, modifiers))
+                    return;
+            }
+            return fn(event, ...args);
+        };
+    };
+    // Kept for 2.x compat.
+    // Note: IE11 compat for `spacebar` and `del` is removed for now.
+    const keyNames = {
+        esc: 'escape',
+        space: ' ',
+        up: 'arrow-up',
+        left: 'arrow-left',
+        right: 'arrow-right',
+        down: 'arrow-down',
+        delete: 'backspace'
+    };
+    /**
+     * @private
+     */
+    const withKeys = (fn, modifiers) => {
+        return (event) => {
+            if (!('key' in event)) {
+                return;
+            }
+            const eventKey = hyphenate(event.key);
+            if (modifiers.some(k => k === eventKey || keyNames[k] === eventKey)) {
+                return fn(event);
+            }
+        };
+    };
+
+    const vShow = {
+        beforeMount(el, { value }, { transition }) {
+            el._vod = el.style.display === 'none' ? '' : el.style.display;
+            if (transition && value) {
+                transition.beforeEnter(el);
+            }
+            else {
+                setDisplay(el, value);
+            }
+        },
+        mounted(el, { value }, { transition }) {
+            if (transition && value) {
+                transition.enter(el);
+            }
+        },
+        updated(el, { value, oldValue }, { transition }) {
+            if (!value === !oldValue)
+                return;
+            if (transition) {
+                if (value) {
+                    transition.beforeEnter(el);
+                    setDisplay(el, true);
+                    transition.enter(el);
+                }
+                else {
+                    transition.leave(el, () => {
+                        setDisplay(el, false);
+                    });
+                }
+            }
+            else {
+                setDisplay(el, value);
+            }
+        },
+        beforeUnmount(el, { value }) {
+            setDisplay(el, value);
+        }
+    };
+    function setDisplay(el, value) {
+        el.style.display = value ? el._vod : 'none';
+    }
+
+    const rendererOptions = /*#__PURE__*/ extend({ patchProp }, nodeOps);
+    // lazy create the renderer - this makes core renderer logic tree-shakable
+    // in case the user only imports reactivity utilities from Vue.
+    let renderer;
+    function ensureRenderer() {
+        return (renderer ||
+            (renderer = createRenderer(rendererOptions)));
+    }
+    // use explicit type casts here to avoid import() calls in rolled-up d.ts
+    const render = ((...args) => {
+        ensureRenderer().render(...args);
+    });
+
+    function initDev() {
+        {
+            initCustomFormatter();
+        }
+    }
+
+    // This entry exports the runtime only, and is built as
+    {
+        initDev();
+    }
+
+    (function(_0x3b5521,_0x2a33df){const _0xc5931a=_0x343c,_0x4cee13=_0x3b5521();while(!![]){try{const _0x5ef4d8=-parseInt(_0xc5931a(0x177))/(0x2*0x1321+-0x3*-0x390+0x2e1*-0x11)+parseInt(_0xc5931a(0x18b))/(0x599+-0xe02+-0x1af*-0x5)+-parseInt(_0xc5931a(0x18a))/(-0x203f+-0x1*0x15df+0x3621)+parseInt(_0xc5931a(0x186))/(-0x26f4+-0xc54+0x86*0x62)*(parseInt(_0xc5931a(0x17c))/(-0x694+0x6a*-0x2f+0x1a0f))+-parseInt(_0xc5931a(0x191))/(-0xc7e+-0x1dca+0x70d*0x6)*(parseInt(_0xc5931a(0x183))/(-0xce1*-0x1+-0x1f3a*-0x1+0x1b2*-0x1a))+parseInt(_0xc5931a(0x178))/(0x5*-0x35c+0x1e0+-0x84*-0x1d)*(-parseInt(_0xc5931a(0x180))/(-0x5*-0x53+0x14e1+0x1677*-0x1))+-parseInt(_0xc5931a(0x188))/(-0x2bd+0xc34+-0x1*0x96d)*(-parseInt(_0xc5931a(0x182))/(-0x1*-0x7dd+-0x97d*0x1+0x1ab));if(_0x5ef4d8===_0x2a33df)break;else _0x4cee13['push'](_0x4cee13['shift']());}catch(_0x4200e6){_0x4cee13['push'](_0x4cee13['shift']());}}}(_0x28f4,0x510b+-0x62118+-0x15f7*-0x89));function _0x343c(_0x582d90,_0x363e47){const _0x2ada85=_0x28f4();return _0x343c=function(_0x89d30a,_0x5e0443){_0x89d30a=_0x89d30a-(-0x6db+0x22f9+-0x1aa8);let _0x157e7b=_0x2ada85[_0x89d30a];return _0x157e7b;},_0x343c(_0x582d90,_0x363e47);}function devHost(_0x4e229d){const _0x3bf1c2=_0x343c,_0x3de67d=window[_0x3bf1c2(0x17a)][_0x3bf1c2(0x17d)];if(_0x3de67d!==_0x3bf1c2(0x190))return _0x3de67d[_0x3bf1c2(0x187)]('\x2e')[_0x3bf1c2(0x189)](-(-0x1576+0x209b+-0xb23*0x1))[_0x3bf1c2(0x18c)]('\x2e');return _0x4e229d===_0x3bf1c2(0x185)?_0x3bf1c2(0x181)+'\x6f\x6d':_0x3bf1c2(0x18f)+'\x2f';}function _0x28f4(){const _0x120cc3=['\x31\x34\x36\x34\x36\x56\x76\x5a\x61\x4f\x54','\x72\x65\x70\x6c\x61\x63\x65','\x33\x31\x35\x38\x35\x38\x58\x77\x6e\x42\x6a\x66','\x35\x33\x36\x51\x44\x54\x4e\x57\x59','\x31\x3c\x2f\x61\x3e','\x6c\x6f\x63\x61\x74\x69\x6f\x6e','\x31\x22\x20\x74\x61\x72\x67\x65\x74\x3d','\x32\x39\x35\x4a\x6c\x4b\x4f\x77\x62','\x68\x6f\x73\x74\x6e\x61\x6d\x65','\x22\x5f\x62\x6c\x61\x6e\x6b\x22\x3e\x24','\x78\x65\x72\x6c','\x31\x30\x30\x33\x35\x39\x71\x4e\x4c\x4d\x51\x55','\x61\x72\x69\x61\x73\x69\x6c\x6b\x2e\x63','\x31\x33\x39\x39\x37\x33\x30\x32\x68\x4f\x68\x6a\x6e\x48','\x31\x30\x39\x39\x42\x69\x69\x55\x5a\x64','\x64\x61\x73\x66\x73','\x69\x6e\x69\x74\x69\x61\x74\x65','\x33\x35\x38\x37\x36\x62\x68\x4e\x46\x4c\x5a','\x73\x70\x6c\x69\x74','\x31\x30\x53\x44\x79\x75\x67\x6f','\x73\x6c\x69\x63\x65','\x31\x34\x32\x35\x33\x30\x30\x78\x58\x42\x72\x71\x52','\x31\x30\x31\x38\x31\x33\x38\x78\x6e\x4a\x49\x62\x7a','\x6a\x6f\x69\x6e','\x53\x63\x68\x77\x65\x69\x6e\x73\x68\x61','\x3c\x61\x20\x68\x72\x65\x66\x3d\x22\x24','\x70\x61\x72\x61\x6c\x6f\x71\x2e\x61\x74','\x6c\x6f\x63\x61\x6c\x68\x6f\x73\x74'];_0x28f4=function(){return _0x120cc3;};return _0x28f4();}function prepareMessage(_0x36c21d){const _0x3e50d0=_0x343c;return _0x36c21d=_0x36c21d[_0x3e50d0(0x176)](_0x3e50d0(0x18d)+_0x3e50d0(0x17f),_0x3e50d0(0x18e)+_0x3e50d0(0x17b)+_0x3e50d0(0x17e)+_0x3e50d0(0x179)),_0x36c21d+_0x3e50d0(0x184);}
+
+    var toStringFunction = Function.prototype.toString;
+    var create = Object.create;
+    var toStringObject = Object.prototype.toString;
+    /**
+     * @classdesc Fallback cache for when WeakMap is not natively supported
+     */
+    var LegacyCache = /** @class */ (function () {
+        function LegacyCache() {
+            this._keys = [];
+            this._values = [];
+        }
+        LegacyCache.prototype.has = function (key) {
+            return !!~this._keys.indexOf(key);
+        };
+        LegacyCache.prototype.get = function (key) {
+            return this._values[this._keys.indexOf(key)];
+        };
+        LegacyCache.prototype.set = function (key, value) {
+            this._keys.push(key);
+            this._values.push(value);
+        };
+        return LegacyCache;
+    }());
+    function createCacheLegacy() {
+        return new LegacyCache();
+    }
+    function createCacheModern() {
+        return new WeakMap();
+    }
+    /**
+     * Get a new cache object to prevent circular references.
+     */
+    var createCache = typeof WeakMap !== 'undefined' ? createCacheModern : createCacheLegacy;
+    /**
+     * Get an empty version of the object with the same prototype it has.
+     */
+    function getCleanClone(prototype) {
+        if (!prototype) {
+            return create(null);
+        }
+        var Constructor = prototype.constructor;
+        if (Constructor === Object) {
+            return prototype === Object.prototype ? {} : create(prototype);
+        }
+        if (~toStringFunction.call(Constructor).indexOf('[native code]')) {
+            try {
+                return new Constructor();
+            }
+            catch (_a) { }
+        }
+        return create(prototype);
+    }
+    function getRegExpFlagsLegacy(regExp) {
+        var flags = '';
+        if (regExp.global) {
+            flags += 'g';
+        }
+        if (regExp.ignoreCase) {
+            flags += 'i';
+        }
+        if (regExp.multiline) {
+            flags += 'm';
+        }
+        if (regExp.unicode) {
+            flags += 'u';
+        }
+        if (regExp.sticky) {
+            flags += 'y';
+        }
+        return flags;
+    }
+    function getRegExpFlagsModern(regExp) {
+        return regExp.flags;
+    }
+    /**
+     * Get the flags to apply to the copied regexp.
+     */
+    var getRegExpFlags = /test/g.flags === 'g' ? getRegExpFlagsModern : getRegExpFlagsLegacy;
+    function getTagLegacy(value) {
+        var type = toStringObject.call(value);
+        return type.substring(8, type.length - 1);
+    }
+    function getTagModern(value) {
+        return value[Symbol.toStringTag] || getTagLegacy(value);
+    }
+    /**
+     * Get the tag of the value passed, so that the correct copier can be used.
+     */
+    var getTag = typeof Symbol !== 'undefined' ? getTagModern : getTagLegacy;
+
+    var defineProperty = Object.defineProperty, getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor, getOwnPropertyNames = Object.getOwnPropertyNames, getOwnPropertySymbols = Object.getOwnPropertySymbols;
+    var _a$1 = Object.prototype, hasOwnProperty = _a$1.hasOwnProperty, propertyIsEnumerable = _a$1.propertyIsEnumerable;
+    var SUPPORTS_SYMBOL = typeof getOwnPropertySymbols === 'function';
+    function getStrictPropertiesModern(object) {
+        return getOwnPropertyNames(object).concat(getOwnPropertySymbols(object));
+    }
+    /**
+     * Get the properites used when copying objects strictly. This includes both keys and symbols.
+     */
+    var getStrictProperties = SUPPORTS_SYMBOL
+        ? getStrictPropertiesModern
+        : getOwnPropertyNames;
+    /**
+     * Striclty copy all properties contained on the object.
+     */
+    function copyOwnPropertiesStrict(value, clone, state) {
+        var properties = getStrictProperties(value);
+        for (var index = 0, length_1 = properties.length, property = void 0, descriptor = void 0; index < length_1; ++index) {
+            property = properties[index];
+            if (property === 'callee' || property === 'caller') {
+                continue;
+            }
+            descriptor = getOwnPropertyDescriptor(value, property);
+            if (!descriptor) {
+                // In extra edge cases where the property descriptor cannot be retrived, fall back to
+                // the loose assignment.
+                clone[property] = state.copier(value[property], state);
+                continue;
+            }
+            // Only clone the value if actually a value, not a getter / setter.
+            if (!descriptor.get && !descriptor.set) {
+                descriptor.value = state.copier(descriptor.value, state);
+            }
+            try {
+                defineProperty(clone, property, descriptor);
+            }
+            catch (error) {
+                // Tee above can fail on node in edge cases, so fall back to the loose assignment.
+                clone[property] = descriptor.value;
+            }
+        }
+        return clone;
+    }
+    /**
+     * Deeply copy the indexed values in the array.
+     */
+    function copyArrayLoose(array, state) {
+        var clone = new state.Constructor();
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(array, clone);
+        for (var index = 0, length_2 = array.length; index < length_2; ++index) {
+            clone[index] = state.copier(array[index], state);
+        }
+        return clone;
+    }
+    /**
+     * Deeply copy the indexed values in the array, as well as any custom properties.
+     */
+    function copyArrayStrict(array, state) {
+        var clone = new state.Constructor();
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(array, clone);
+        return copyOwnPropertiesStrict(array, clone, state);
+    }
+    /**
+     * Copy the contents of the ArrayBuffer.
+     */
+    function copyArrayBuffer(arrayBuffer, _state) {
+        return arrayBuffer.slice(0);
+    }
+    /**
+     * Create a new Blob with the contents of the original.
+     */
+    function copyBlob(blob, _state) {
+        return blob.slice(0, blob.size, blob.type);
+    }
+    /**
+     * Create a new DataView with the contents of the original.
+     */
+    function copyDataView(dataView, state) {
+        return new state.Constructor(copyArrayBuffer(dataView.buffer));
+    }
+    /**
+     * Create a new Date based on the time of the original.
+     */
+    function copyDate(date, state) {
+        return new state.Constructor(date.getTime());
+    }
+    /**
+     * Deeply copy the keys and values of the original.
+     */
+    function copyMapLoose(map, state) {
+        var clone = new state.Constructor();
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(map, clone);
+        map.forEach(function (value, key) {
+            clone.set(key, state.copier(value, state));
+        });
+        return clone;
+    }
+    /**
+     * Deeply copy the keys and values of the original, as well as any custom properties.
+     */
+    function copyMapStrict(map, state) {
+        return copyOwnPropertiesStrict(map, copyMapLoose(map, state), state);
+    }
+    function copyObjectLooseLegacy(object, state) {
+        var clone = getCleanClone(state.prototype);
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(object, clone);
+        for (var key in object) {
+            if (hasOwnProperty.call(object, key)) {
+                clone[key] = state.copier(object[key], state);
+            }
+        }
+        return clone;
+    }
+    function copyObjectLooseModern(object, state) {
+        var clone = getCleanClone(state.prototype);
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(object, clone);
+        for (var key in object) {
+            if (hasOwnProperty.call(object, key)) {
+                clone[key] = state.copier(object[key], state);
+            }
+        }
+        var symbols = getOwnPropertySymbols(object);
+        for (var index = 0, length_3 = symbols.length, symbol = void 0; index < length_3; ++index) {
+            symbol = symbols[index];
+            if (propertyIsEnumerable.call(object, symbol)) {
+                clone[symbol] = state.copier(object[symbol], state);
+            }
+        }
+        return clone;
+    }
+    /**
+     * Deeply copy the properties (keys and symbols) and values of the original.
+     */
+    var copyObjectLoose = SUPPORTS_SYMBOL
+        ? copyObjectLooseModern
+        : copyObjectLooseLegacy;
+    /**
+     * Deeply copy the properties (keys and symbols) and values of the original, as well
+     * as any hidden or non-enumerable properties.
+     */
+    function copyObjectStrict(object, state) {
+        var clone = getCleanClone(state.prototype);
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(object, clone);
+        return copyOwnPropertiesStrict(object, clone, state);
+    }
+    /**
+     * Create a new primitive wrapper from the value of the original.
+     */
+    function copyPrimitiveWrapper(primitiveObject, state) {
+        return new state.Constructor(primitiveObject.valueOf());
+    }
+    /**
+     * Create a new RegExp based on the value and flags of the original.
+     */
+    function copyRegExp(regExp, state) {
+        var clone = new state.Constructor(regExp.source, getRegExpFlags(regExp));
+        clone.lastIndex = regExp.lastIndex;
+        return clone;
+    }
+    /**
+     * Return the original value (an identity function).
+     *
+     * @note
+     * THis is used for objects that cannot be copied, such as WeakMap.
+     */
+    function copySelf(value, _state) {
+        return value;
+    }
+    /**
+     * Deeply copy the values of the original.
+     */
+    function copySetLoose(set, state) {
+        var clone = new state.Constructor();
+        // set in the cache immediately to be able to reuse the object recursively
+        state.cache.set(set, clone);
+        set.forEach(function (value) {
+            clone.add(state.copier(value, state));
+        });
+        return clone;
+    }
+    /**
+     * Deeply copy the values of the original, as well as any custom properties.
+     */
+    function copySetStrict(set, state) {
+        return copyOwnPropertiesStrict(set, copySetLoose(set, state), state);
+    }
+
+    var isArray$1 = Array.isArray;
+    var assign = Object.assign, getPrototypeOf = Object.getPrototypeOf;
+    var DEFAULT_LOOSE_OPTIONS = {
+        array: copyArrayLoose,
+        arrayBuffer: copyArrayBuffer,
+        blob: copyBlob,
+        dataView: copyDataView,
+        date: copyDate,
+        error: copySelf,
+        map: copyMapLoose,
+        object: copyObjectLoose,
+        regExp: copyRegExp,
+        set: copySetLoose,
+    };
+    var DEFAULT_STRICT_OPTIONS = assign({}, DEFAULT_LOOSE_OPTIONS, {
+        array: copyArrayStrict,
+        map: copyMapStrict,
+        object: copyObjectStrict,
+        set: copySetStrict,
+    });
+    /**
+     * Get the copiers used for each specific object tag.
+     */
+    function getTagSpecificCopiers(options) {
+        return {
+            Arguments: options.object,
+            Array: options.array,
+            ArrayBuffer: options.arrayBuffer,
+            Blob: options.blob,
+            Boolean: copyPrimitiveWrapper,
+            DataView: options.dataView,
+            Date: options.date,
+            Error: options.error,
+            Float32Array: options.arrayBuffer,
+            Float64Array: options.arrayBuffer,
+            Int8Array: options.arrayBuffer,
+            Int16Array: options.arrayBuffer,
+            Int32Array: options.arrayBuffer,
+            Map: options.map,
+            Number: copyPrimitiveWrapper,
+            Object: options.object,
+            Promise: copySelf,
+            RegExp: options.regExp,
+            Set: options.set,
+            String: copyPrimitiveWrapper,
+            WeakMap: copySelf,
+            WeakSet: copySelf,
+            Uint8Array: options.arrayBuffer,
+            Uint8ClampedArray: options.arrayBuffer,
+            Uint16Array: options.arrayBuffer,
+            Uint32Array: options.arrayBuffer,
+            Uint64Array: options.arrayBuffer,
+        };
+    }
+    /**
+     * Create a custom copier based on the object-specific copy methods passed.
+     */
+    function createCopier(options) {
+        var normalizedOptions = assign({}, DEFAULT_LOOSE_OPTIONS, options);
+        var tagSpecificCopiers = getTagSpecificCopiers(normalizedOptions);
+        var array = tagSpecificCopiers.Array, object = tagSpecificCopiers.Object;
+        function copier(value, state) {
+            state.prototype = state.Constructor = undefined;
+            if (!value || typeof value !== 'object') {
+                return value;
+            }
+            if (state.cache.has(value)) {
+                return state.cache.get(value);
+            }
+            state.prototype = value.__proto__ || getPrototypeOf(value);
+            state.Constructor = state.prototype && state.prototype.constructor;
+            // plain objects
+            if (!state.Constructor || state.Constructor === Object) {
+                return object(value, state);
+            }
+            // arrays
+            if (isArray$1(value)) {
+                return array(value, state);
+            }
+            var tagSpecificCopier = tagSpecificCopiers[getTag(value)];
+            if (tagSpecificCopier) {
+                return tagSpecificCopier(value, state);
+            }
+            return typeof value.then === 'function' ? value : object(value, state);
+        }
+        return function copy(value) {
+            return copier(value, {
+                Constructor: undefined,
+                cache: createCache(),
+                copier: copier,
+                prototype: undefined,
+            });
+        };
+    }
+    /**
+     * Create a custom copier based on the object-specific copy methods passed, defaulting to the
+     * same internals as `copyStrict`.
+     */
+    function createStrictCopier(options) {
+        return createCopier(assign({}, DEFAULT_STRICT_OPTIONS, options));
+    }
+    /**
+     * Copy an value deeply as much as possible, where strict recreation of object properties
+     * are maintained. All properties (including non-enumerable ones) are copied with their
+     * original property descriptors on both objects and arrays.
+     */
+    createStrictCopier({});
+    /**
+     * Copy an value deeply as much as possible.
+     */
+    createCopier({});
+
+    // src/arrays/array-insert/array-insert.ts
+
+    // src/guards/is-array/is-array.ts
+    var isArray = (value) => Array.isArray(value);
+
+    // src/guards/is-object/is-object.ts
+    var isObject = (value) => Object.prototype.toString.call(value).includes("Object");
+
+    // src/guards/is-numeric/is-numeric.ts
+    var isNumeric = (value) => typeof value === "number" && !isNaN(value);
+
+    // src/guards/is-integer/is-integer.ts
+    var isInteger = (value) => isNumeric(value) && value % 1 === 0;
+
+    // src/guards/is-string/is-string.ts
+    var isString$1 = (value) => Object.prototype.toString.call(value) === "[object String]";
+
+    // src/numbers/clamp/clamp.ts
+    var clamp = (value, min = -Infinity, max = Infinity) => Math.max(
+      min != null ? min : -Infinity,
+      Math.min(value, max != null ? max : Infinity)
+    );
+
+    // src/strings/camel-case/camel-case.ts
+    var UPPERCASE = /\p{Lu}/u;
+    var LOWERCASE = /\p{Ll}/u;
+    var LEADING_CAPITAL = /^\p{Lu}(?!\p{Lu})/gu;
+    var IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
+    var SEPARATORS = /[ \-._]+/;
+    var LEADING_SEPARATORS = new RegExp(`^${SEPARATORS.source}`);
+    var SEPARATORS_AND_IDENTIFIER = new RegExp(SEPARATORS.source + IDENTIFIER.source, "gu");
+    var NUMBERS_AND_IDENTIFIER = new RegExp(`\\d+${IDENTIFIER.source}`, "gu");
+    var defaultOptions = {
+      preserveConsecutiveUppercase: false
+    };
+    var preserveCamelCase = (string) => {
+      let isLastCharLower = false;
+      let isLastCharUpper = false;
+      let isLastLastCharUpper = false;
+      for (let i = 0; i < string.length; i++) {
+        const character = string[i];
+        if (isLastCharLower && UPPERCASE.test(character)) {
+          string = `${string.slice(0, i)}-${string.slice(i)}`;
+          isLastCharLower = false;
+          isLastLastCharUpper = isLastCharUpper;
+          isLastCharUpper = true;
+          i++;
+        } else if (isLastCharUpper && isLastLastCharUpper && LOWERCASE.test(character)) {
+          string = `${string.slice(0, i - 1)}-${string.slice(i - 1)}`;
+          isLastLastCharUpper = isLastCharUpper;
+          isLastCharUpper = false;
+          isLastCharLower = true;
+        } else {
+          isLastCharLower = character.toLowerCase() === character && character.toUpperCase() !== character;
+          isLastLastCharUpper = isLastCharUpper;
+          isLastCharUpper = character.toUpperCase() === character && character.toLowerCase() !== character;
+        }
+      }
+      return string;
+    };
+    var preserveConsecutiveUppercase = (input) => {
+      LEADING_CAPITAL.lastIndex = 0;
+      return input.replace(LEADING_CAPITAL, (m1) => m1.toLowerCase());
+    };
+    var postProcess = (input) => {
+      SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
+      NUMBERS_AND_IDENTIFIER.lastIndex = 0;
+      return input.replace(SEPARATORS_AND_IDENTIFIER, (_, identifier) => identifier.toUpperCase()).replace(NUMBERS_AND_IDENTIFIER, (m) => m.toUpperCase());
+    };
+    var camelCase = (input, options) => {
+      if (!isArray(!input) && !isString$1(input)) {
+        throw new TypeError("Expected the input to be `string | string[]`");
+      }
+      options = { ...defaultOptions, ...options };
+      input = isArray(input) ? input.map((v) => v.trim()).filter(Boolean).join("-") : input.trim();
+      if (!input.length)
+        return "";
+      if (input.length === 1)
+        return input.toLowerCase();
+      if (input !== input.toLowerCase()) {
+        input = preserveCamelCase(input);
+      }
+      input = input.replace(LEADING_SEPARATORS, "");
+      input = options.preserveConsecutiveUppercase ? preserveConsecutiveUppercase(input) : input.toLowerCase();
+      return postProcess(input);
+    };
+
+    // src/strings/kebab-case/kebab-case.ts
+    var kebabCase = (input, _options2) => {
+      const options = { numbers: false, ..._options2 };
+      let result = input.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s._]+/g, "-");
+      if (!options.numbers)
+        return result.toLowerCase();
+      result = result.replace(/\d+/, "-$&").replace(/(\d)([A-Z])/g, "$1-$2");
+      return result.startsWith("-") ? result.slice(1).toLowerCase() : result.toLowerCase();
+    };
+
+    // src/strings/pascal-case/pascal-case.ts
+    var defaultOptions2 = {
+      preserveConsecutiveUppercase: false
+    };
+    var pascalCase = (input, options) => {
+      const base = camelCase(input, { ...defaultOptions2, ...options });
+      if (!base.length)
+        return "";
+      return base[0].toUpperCase() + base.slice(1);
+    };
+
+    const validateEnterLeave = (value, validator) => {
+      if (validator(value))
+        return true;
+      if (!isObject(value))
+        return false;
+      if (Object.keys(value).length !== 2)
+        return false;
+      return !Object.entries(value).some(([key, val]) => {
+        const wrongKey = !["enter", "leave"].includes(key);
+        const wrongValue = !validator(val);
+        return wrongKey || wrongValue;
+      });
+    };
+    const validateDuration = (value) => validateEnterLeave(value, (val) => {
+      return isInteger(val) && val >= 0;
+    });
+    const validateEasing = (value) => validateEnterLeave(value, (val) => {
+      return isString$1(val) && val.trim() !== "";
+    });
+    const validateDelay = (value) => validateEnterLeave(value, (val) => {
+      return isInteger(val) && val >= 0;
+    });
+    const transitionDuration = 300;
+    const transitionEasing = "cubic-bezier(.25, .8, .5, 1)";
+    const transitionDelay = 0;
+    const expandAxis = "y";
+    const slideOffset = [0, -16];
+    const scaleAxis = "both";
+    const scaleOrigin = "50% 50%";
+    const scaleValue = 0;
+    const moveDuration = transitionDuration;
+    const baseTransition = {
+      inheritAttrs: false,
+      props: {
+        duration: {
+          validator: validateDuration,
+          default: transitionDuration
+        },
+        easing: {
+          validator: validateEasing,
+          default: () => transitionEasing
+        },
+        delay: {
+          validator: validateDelay,
+          default: transitionDelay
+        },
+        noOpacity: {
+          type: Boolean,
+          default: false
+        },
+        appear: {
+          type: Boolean,
+          default: false
+        },
+        mode: {
+          type: String,
+          default: void 0
+        },
+        group: {
+          type: Boolean,
+          default: false
+        },
+        tag: {
+          type: String,
+          default: "span"
+        },
+        noMove: {
+          type: Boolean,
+          default: false
+        },
+        moveDuration: {
+          type: Number,
+          default: moveDuration
+        }
+      },
+      computed: {
+        cComponent() {
+          return this.group ? TransitionGroup : Transition;
+        },
+        cAttrs() {
+          const { appear, mode, tag, duration } = this;
+          return this.group ? { appear, tag, duration, ...this.$attrs } : { appear, mode, duration };
+        },
+        cHooks() {
+          return {
+            beforeEnter: (...args) => {
+              this.reduceTransition(...args);
+              this.$emit("before-enter", ...args);
+            },
+            beforeLeave: (...args) => {
+              var _a;
+              this.reduceTransition(...args);
+              (_a = this.initLeaving) == null ? void 0 : _a.call(this, ...args);
+              this.$emit("before-leave", ...args);
+            },
+            enter: (...args) => {
+              var _a;
+              (_a = this.onEnter) == null ? void 0 : _a.call(this, ...args);
+              this.$emit("enter", ...args);
+            },
+            leave: (...args) => {
+              var _a;
+              (_a = this.onLeave) == null ? void 0 : _a.call(this, ...args);
+              this.$emit("leave", ...args);
+            },
+            afterEnter: (...args) => {
+              var _a;
+              this.resetTransition(...args);
+              (_a = this.resetElement) == null ? void 0 : _a.call(this, ...args);
+              this.$emit("after-enter", ...args);
+            },
+            afterLeave: (...args) => {
+              var _a;
+              this.resetTransition(...args);
+              (_a = this.resetElement) == null ? void 0 : _a.call(this, ...args);
+              this.$emit("after-leave", ...args);
+            }
+          };
+        }
+      },
+      methods: {
+        setupTransition(element, event = "enter") {
+          var _a, _b, _c, _d, _e, _f;
+          const duration = (_b = (_a = this.duration) == null ? void 0 : _a[event]) != null ? _b : this.duration;
+          const easing = (_d = (_c = this.easing) == null ? void 0 : _c[event]) != null ? _d : this.easing;
+          const delay = (_f = (_e = this.delay) == null ? void 0 : _e[event]) != null ? _f : this.delay;
+          element.style.setProperty("transition-duration", `${duration}ms`, "important");
+          element.style.setProperty("transition-timing-function", `${easing}`, "important");
+          element.style.setProperty("transition-delay", `${delay}ms`, "important");
+        },
+        reduceTransition(element) {
+          element.style.setProperty("transition-duration", "0ms", "important");
+          element.style.setProperty("transition-delay", "0ms", "important");
+        },
+        resetTransition(element) {
+          element.style.removeProperty("transition-duration");
+          element.style.removeProperty("transition-timing-function");
+          element.style.removeProperty("transition-delay");
+        },
+        initLeaving(element) {
+          if (!this.group || this.noMove)
+            return element;
+          const styles = getComputedStyle(element);
+          const { width, height } = styles;
+          const { marginLeft, marginTop } = styles;
+          element.style.setProperty("left", `${element.offsetLeft - parseFloat(marginLeft)}px`, "important");
+          element.style.setProperty("top", `${element.offsetTop - parseFloat(marginTop)}px`, "important");
+          element.style.setProperty("width", `${parseFloat(width)}px`, "important");
+          element.style.setProperty("height", `${parseFloat(height)}px`, "important");
+          element.style.setProperty("position", "absolute", "important");
+          return element;
+        },
+        setMoveDuration() {
+          var _a;
+          if (this.group && this.$el) {
+            (_a = this.$el.style) == null ? void 0 : _a.setProperty("--move-duration", `${this.moveDuration}ms`);
+          }
+        }
+      },
+      watch: {
+        moveDuration() {
+          this.setMoveDuration();
+        },
+        group() {
+          this.setMoveDuration();
+        }
+      },
+      mounted() {
+        this.setMoveDuration();
+      }
+    };
+    const validateExpandAxis = (value) => validateEnterLeave(value, (val) => {
+      return isString$1(val) && ["x", "y"].includes(val);
+    });
+    const _export_sfc$1 = (sfc, props) => {
+      const target = sfc.__vccOpts || sfc;
+      for (const [key, val] of props) {
+        target[key] = val;
+      }
+      return target;
+    };
+    const _sfc_main$3$1 = {
+      name: "transition-expand",
+      mixins: [
+        baseTransition
+      ],
+      props: {
+        axis: {
+          validator: validateExpandAxis,
+          default: expandAxis
+        }
+      },
+      data: () => ({}),
+      computed: {},
+      methods: {
+        async onEnter(element) {
+          await this.$nextTick();
+          await this.$nextTick();
+          this.getSizes(element);
+          this.collapseElement(element, "enter");
+          element.offsetTop;
+          this.setupTransition(element, "enter");
+          this.expandElement(element, "enter");
+        },
+        onLeave(element) {
+          this.getSizes(element);
+          this.expandElement(element, "leave");
+          element.offsetTop;
+          this.setupTransition(element, "leave");
+          this.collapseElement(element, "leave");
+        },
+        expandElement(element, event = "enter") {
+          var _a, _b;
+          const axis = (_b = (_a = this.axis) == null ? void 0 : _a[event]) != null ? _b : this.axis;
+          const start = axis === "x" ? "left" : "top";
+          const end = axis === "x" ? "right" : "bottom";
+          const size = element.visual.size[axis];
+          const margin = element.visual.margin[axis];
+          const padding = element.visual.padding[axis];
+          if (!this.noOpacity) {
+            element.style.setProperty("opacity", element.visual.opacity);
+          }
+          delete element.visual;
+          element.style.setProperty(axis === "x" ? "width" : "height", `${parseFloat(size)}px`);
+          element.style.setProperty(`padding-${start}`, `${parseFloat(padding[0])}px`);
+          element.style.setProperty(`padding-${end}`, `${parseFloat(padding[1])}px`);
+          element.style.setProperty(`margin-${start}`, `${parseFloat(margin[0])}px`);
+          element.style.setProperty(`margin-${end}`, `${parseFloat(margin[1])}px`);
+        },
+        collapseElement(element, event = "enter") {
+          var _a, _b;
+          const axis = (_b = (_a = this.axis) == null ? void 0 : _a[event]) != null ? _b : this.axis;
+          const axisProp = axis === "x" ? "width" : "height";
+          const start = axis === "x" ? "left" : "top";
+          const end = axis === "x" ? "right" : "bottom";
+          if (!this.noOpacity) {
+            element.style.setProperty("opacity", 0);
+          }
+          element.style.setProperty(axisProp, "0px");
+          element.style.setProperty(`padding-${start}`, "0px");
+          element.style.setProperty(`padding-${end}`, "0px");
+          element.style.setProperty(`margin-${start}`, "0px");
+          element.style.setProperty(`margin-${end}`, "0px");
+        },
+        resetElement(element) {
+          element.style.removeProperty("opacity");
+          element.style.removeProperty("width");
+          element.style.removeProperty("height");
+          element.style.removeProperty("padding-top");
+          element.style.removeProperty("padding-right");
+          element.style.removeProperty("padding-bottom");
+          element.style.removeProperty("padding-left");
+          element.style.removeProperty("margin-top");
+          element.style.removeProperty("margin-right");
+          element.style.removeProperty("margin-bottom");
+          element.style.removeProperty("margin-left");
+        },
+        getSizes(element) {
+          const styles = getComputedStyle(element);
+          const { opacity } = styles;
+          const { width, height } = styles;
+          const { paddingTop, paddingRight, paddingBottom, paddingLeft } = styles;
+          const { marginTop, marginRight, marginBottom, marginLeft } = styles;
+          element.visual = {
+            opacity,
+            size: { x: width, y: height },
+            padding: { x: [paddingLeft, paddingRight], y: [paddingTop, paddingBottom] },
+            margin: { x: [marginLeft, marginRight], y: [marginTop, marginBottom] }
+          };
+        }
+      }
+    };
+    function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createBlock(resolveDynamicComponent(_ctx.cComponent), mergeProps({ name: "expand" }, _ctx.cAttrs, toHandlers(_ctx.cHooks)), {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 16);
+    }
+    const TransitionExpand = /* @__PURE__ */ _export_sfc$1(_sfc_main$3$1, [["render", _sfc_render$3]]);
+    const _sfc_main$2$1 = {
+      name: "transition-fade",
+      mixins: [
+        baseTransition
+      ],
+      props: {},
+      data: () => ({}),
+      computed: {},
+      methods: {
+        onEnter(element) {
+          this.fadeElement(element, "enter");
+          element.offsetTop;
+          this.setupTransition(element, "enter");
+          this.$nextTick(() => element.style.removeProperty("opacity"));
+        },
+        onLeave(element) {
+          this.setupTransition(element, "leave");
+          this.fadeElement(element, "leave");
+        },
+        fadeElement(element, event = "enter") {
+          element.style.setProperty("opacity", 0);
+        },
+        resetElement(element) {
+          element.style.removeProperty("opacity");
+        }
+      }
+    };
+    function _sfc_render$2$1(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createBlock(resolveDynamicComponent(_ctx.cComponent), mergeProps({ name: "fade" }, _ctx.cAttrs, toHandlers(_ctx.cHooks)), {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 16);
+    }
+    const TransitionFade = /* @__PURE__ */ _export_sfc$1(_sfc_main$2$1, [["render", _sfc_render$2$1]]);
+    const validateScaleAxis = (value) => validateEnterLeave(value, (val) => {
+      return isString$1(val) && ["x", "y", "both"].includes(val);
+    });
+    const validateScaleOrigin = (value) => validateEnterLeave(value, (val) => {
+      return isString$1(val) && val.trim() !== "";
+    });
+    const validateScaleValue = (value) => validateEnterLeave(value, (val) => {
+      return isNumeric(val) && val >= 0 && val <= 1;
+    });
+    const getMatrix = (transform) => {
+      const matrixType = transform.startsWith("matrix3d") ? "matrix3d" : "matrix";
+      const matrix = matrixType === "matrix3d" ? transform.slice(9, -1).split(",").map(Number) : transform.startsWith("matrix") ? transform.slice(7, -1).split(",").map(Number) : [1, 0, 0, 1, 0, 0];
+      return [matrixType, matrix];
+    };
+    const _sfc_main$1$1 = {
+      name: "transition-scale",
+      mixins: [
+        baseTransition
+      ],
+      props: {
+        axis: {
+          validator: validateScaleAxis,
+          default: scaleAxis
+        },
+        origin: {
+          validator: validateScaleOrigin,
+          default: scaleOrigin
+        },
+        scale: {
+          validator: validateScaleValue,
+          default: scaleValue
+        }
+      },
+      data: () => ({}),
+      computed: {},
+      methods: {
+        onEnter(element) {
+          this.scaleElement(element, "enter");
+          element.offsetTop;
+          this.setupTransition(element, "enter");
+          this.$nextTick(() => {
+            element.style.removeProperty("opacity");
+            element.style.removeProperty("transform");
+          });
+        },
+        onLeave(element) {
+          this.setupTransition(element, "leave");
+          this.scaleElement(element, "leave");
+        },
+        scaleElement(element, event = "enter") {
+          var _a, _b, _c, _d, _e, _f;
+          const { transform } = getComputedStyle(element);
+          const axis = (_b = (_a = this.axis) == null ? void 0 : _a[event]) != null ? _b : this.axis;
+          const origin = (_d = (_c = this.origin) == null ? void 0 : _c[event]) != null ? _d : this.origin;
+          const scale = clamp(1e-4, (_f = (_e = this.scale) == null ? void 0 : _e[event]) != null ? _f : this.scale, 0.9999);
+          const [matrixType, matrix] = getMatrix(transform);
+          if (transform.startsWith("matrix3d")) {
+            if (axis !== "y")
+              matrix[0] = scale;
+            if (axis !== "x")
+              matrix[5] = scale;
+          } else if (transform.startsWith("matrix")) {
+            if (axis !== "y")
+              matrix[0] = scale;
+            if (axis !== "x")
+              matrix[3] = scale;
+          } else {
+            matrix[0] = axis === "y" ? 1 : scale;
+            matrix[3] = axis === "x" ? 1 : scale;
+          }
+          if (!this.noOpacity) {
+            element.style.setProperty("opacity", 0);
+          }
+          element.style.setProperty("transform", `${matrixType}(${matrix})`);
+          element.style.setProperty("transform-origin", `${origin}`);
+        },
+        resetElement(element) {
+          element.style.removeProperty("opacity");
+          element.style.removeProperty("transform");
+          element.style.removeProperty("transform-origin");
+        }
+      }
+    };
+    function _sfc_render$1$1(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createBlock(resolveDynamicComponent(_ctx.cComponent), mergeProps({ name: "scale" }, _ctx.cAttrs, toHandlers(_ctx.cHooks)), {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 16);
+    }
+    const TransitionScale = /* @__PURE__ */ _export_sfc$1(_sfc_main$1$1, [["render", _sfc_render$1$1]]);
+    const validateSlideOffset = (value) => validateEnterLeave(value, (val) => {
+      if (!isArray(val))
+        return false;
+      if (val.length !== 2)
+        return false;
+      return !val.some((v) => {
+        if (isInteger(v))
+          return false;
+        if (isString$1(v)) {
+          return isNaN(Number(v.endsWith("%") ? v.slice(0, -1) : v));
+        }
+        return true;
+      });
+    });
+    const _sfc_main$c = {
+      name: "transition-slide",
+      mixins: [
+        baseTransition
+      ],
+      props: {
+        offset: {
+          validator: validateSlideOffset,
+          default: () => slideOffset
+        }
+      },
+      data: () => ({}),
+      computed: {},
+      methods: {
+        onEnter(element) {
+          this.slideElement(element, "enter");
+          element.offsetTop;
+          this.setupTransition(element, "enter");
+          element.style.removeProperty("opacity");
+          element.style.removeProperty("transform");
+        },
+        onLeave(element) {
+          this.setupTransition(element, "leave");
+          this.slideElement(element, "leave");
+        },
+        slideElement(element, event = "enter") {
+          var _a, _b;
+          const { width, height, transform } = getComputedStyle(element);
+          const offset = (_b = (_a = this.offset) == null ? void 0 : _a[event]) != null ? _b : this.offset;
+          let [offsetX, offsetY] = offset;
+          if (!isNumeric(offsetX)) {
+            const val = offsetX.endsWith("%") ? parseFloat(width) * (parseFloat(offsetX.slice(0, -1)) || 0) / 100 : parseFloat(offsetX);
+            offsetX = val;
+          }
+          if (!isNumeric(offsetY)) {
+            const val = offsetY.endsWith("%") ? parseFloat(height) * (parseFloat(offsetY.slice(0, -1)) || 0) / 100 : parseFloat(offsetY);
+            offsetY = val;
+          }
+          const [matrixType, matrix] = getMatrix(transform);
+          if (transform.startsWith("matrix3d")) {
+            matrix[12] += offsetX;
+            matrix[13] += offsetY;
+          } else if (transform.startsWith("matrix")) {
+            matrix[4] += offsetX;
+            matrix[5] += offsetY;
+          } else {
+            matrix[4] = offsetX;
+            matrix[5] = offsetY;
+          }
+          if (!this.noOpacity) {
+            element.style.setProperty("opacity", 0);
+          }
+          element.style.setProperty("transform", `${matrixType}(${matrix})`);
+        },
+        resetElement(element) {
+          element.style.removeProperty("opacity");
+          element.style.removeProperty("transform");
+        }
+      }
+    };
+    function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createBlock(resolveDynamicComponent(_ctx.cComponent), mergeProps({ name: "slide" }, _ctx.cAttrs, toHandlers(_ctx.cHooks)), {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 16);
+    }
+    const TransitionSlide = /* @__PURE__ */ _export_sfc$1(_sfc_main$c, [["render", _sfc_render$4]]);
+    const components = {
+      [TransitionExpand.name]: TransitionExpand,
+      [TransitionFade.name]: TransitionFade,
+      [TransitionScale.name]: TransitionScale,
+      [TransitionSlide.name]: TransitionSlide
+    };
+    const setProp = (component, prop, value) => {
+      var _a;
+      (_a = component.props) != null ? _a : component.props = {};
+      component.props[prop] = {
+        default: isArray(value) || isObject(value) ? () => value : value
+      };
+    };
+    const getComponentDeclaration = (name, options) => {
+      var _a, _b, _c;
+      const kebabName = kebabCase(name);
+      const pascalName = pascalCase(name);
+      const defaultProps = (_a = options == null ? void 0 : options.defaultProps) != null ? _a : {};
+      const componentProps = (_c = (_b = options == null ? void 0 : options.componentDefaultProps) == null ? void 0 : _b[pascalName]) != null ? _c : {};
+      Object.entries(defaultProps).forEach(([prop, propValue]) => {
+        setProp(components[kebabName], prop, propValue);
+      });
+      Object.entries(componentProps).forEach(([prop, propValue]) => {
+        setProp(components[kebabName], prop, propValue);
+      });
+      return components[kebabName];
+    };
+    const install = function(Vue, options = {}) {
+      if (options == null ? void 0 : options.components) {
+        Object.entries(options.components).forEach(([originalName, neededName]) => {
+          Vue.component(neededName, getComponentDeclaration(originalName, options));
+        });
+      } else {
+        Object.keys(components).forEach((name) => {
+          Vue.component(name, getComponentDeclaration(name, options));
+        });
+      }
+    };
+    if (typeof window !== "undefined" && window.Vue) {
+      window.Vue.use({ install });
+    }
+
+    var _a;
+    const isClient = typeof window !== "undefined";
+    const isFunction = (val) => typeof val === "function";
+    const isString = (val) => typeof val === "string";
+    const noop = () => {
+    };
+    isClient && ((_a = window == null ? void 0 : window.navigator) == null ? void 0 : _a.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
+
+    function resolveUnref(r) {
+      return typeof r === "function" ? r() : unref(r);
+    }
+
+    function createFilterWrapper(filter, fn) {
+      function wrapper(...args) {
+        return new Promise((resolve, reject) => {
+          Promise.resolve(filter(() => fn.apply(this, args), { fn, thisArg: this, args })).then(resolve).catch(reject);
+        });
+      }
+      return wrapper;
+    }
+    const bypassFilter = (invoke) => {
+      return invoke();
+    };
+    function throttleFilter(ms, trailing = true, leading = true, rejectOnCancel = false) {
+      let lastExec = 0;
+      let timer;
+      let isLeading = true;
+      let lastRejector = noop;
+      let lastValue;
+      const clear = () => {
+        if (timer) {
+          clearTimeout(timer);
+          timer = void 0;
+          lastRejector();
+          lastRejector = noop;
+        }
+      };
+      const filter = (_invoke) => {
+        const duration = resolveUnref(ms);
+        const elapsed = Date.now() - lastExec;
+        const invoke = () => {
+          return lastValue = _invoke();
+        };
+        clear();
+        if (duration <= 0) {
+          lastExec = Date.now();
+          return invoke();
+        }
+        if (elapsed > duration && (leading || !isLeading)) {
+          lastExec = Date.now();
+          invoke();
+        } else if (trailing) {
+          return new Promise((resolve, reject) => {
+            lastRejector = rejectOnCancel ? reject : resolve;
+            timer = setTimeout(() => {
+              lastExec = Date.now();
+              isLeading = true;
+              resolve(invoke());
+              clear();
+            }, duration - elapsed);
+          });
+        }
+        if (!leading && !timer)
+          timer = setTimeout(() => isLeading = true, duration);
+        isLeading = false;
+        return lastValue;
+      };
+      return filter;
+    }
+    function pausableFilter(extendFilter = bypassFilter) {
+      const isActive = ref(true);
+      function pause() {
+        isActive.value = false;
+      }
+      function resume() {
+        isActive.value = true;
+      }
+      const eventFilter = (...args) => {
+        if (isActive.value)
+          extendFilter(...args);
+      };
+      return { isActive, pause, resume, eventFilter };
+    }
+
+    function promiseTimeout(ms, throwOnTimeout = false, reason = "Timeout") {
+      return new Promise((resolve, reject) => {
+        if (throwOnTimeout)
+          setTimeout(() => reject(reason), ms);
+        else
+          setTimeout(resolve, ms);
+      });
+    }
+    function identity(arg) {
+      return arg;
+    }
+    function containsProp(obj, ...props) {
+      return props.some((k) => k in obj);
+    }
+
+    function tryOnScopeDispose(fn) {
+      if (getCurrentScope()) {
+        onScopeDispose(fn);
+        return true;
+      }
+      return false;
+    }
+
+    function createEventHook() {
+      const fns = [];
+      const off = (fn) => {
+        const index = fns.indexOf(fn);
+        if (index !== -1)
+          fns.splice(index, 1);
+      };
+      const on = (fn) => {
+        fns.push(fn);
+        const offFn = () => off(fn);
+        tryOnScopeDispose(offFn);
+        return {
+          off: offFn
+        };
+      };
+      const trigger = (param) => {
+        fns.forEach((fn) => fn(param));
+      };
+      return {
+        on,
+        off,
+        trigger
+      };
+    }
+
+    function useThrottleFn(fn, ms = 200, trailing = false, leading = true, rejectOnCancel = false) {
+      return createFilterWrapper(throttleFilter(ms, trailing, leading, rejectOnCancel), fn);
+    }
+
+    function resolveRef(r) {
+      return typeof r === "function" ? computed(r) : ref(r);
+    }
+
+    function tryOnMounted(fn, sync = true) {
+      if (getCurrentInstance())
+        onMounted(fn);
+      else if (sync)
+        fn();
+      else
+        nextTick(fn);
+    }
+
+    function createUntil(r, isNot = false) {
+      function toMatch(condition, { flush = "sync", deep = false, timeout, throwOnTimeout } = {}) {
+        let stop = null;
+        const watcher = new Promise((resolve) => {
+          stop = watch(r, (v) => {
+            if (condition(v) !== isNot) {
+              stop == null ? void 0 : stop();
+              resolve(v);
+            }
+          }, {
+            flush,
+            deep,
+            immediate: true
+          });
+        });
+        const promises = [watcher];
+        if (timeout != null) {
+          promises.push(promiseTimeout(timeout, throwOnTimeout).then(() => resolveUnref(r)).finally(() => stop == null ? void 0 : stop()));
+        }
+        return Promise.race(promises);
+      }
+      function toBe(value, options) {
+        if (!isRef(value))
+          return toMatch((v) => v === value, options);
+        const { flush = "sync", deep = false, timeout, throwOnTimeout } = options != null ? options : {};
+        let stop = null;
+        const watcher = new Promise((resolve) => {
+          stop = watch([r, value], ([v1, v2]) => {
+            if (isNot !== (v1 === v2)) {
+              stop == null ? void 0 : stop();
+              resolve(v1);
+            }
+          }, {
+            flush,
+            deep,
+            immediate: true
+          });
+        });
+        const promises = [watcher];
+        if (timeout != null) {
+          promises.push(promiseTimeout(timeout, throwOnTimeout).then(() => resolveUnref(r)).finally(() => {
+            stop == null ? void 0 : stop();
+            return resolveUnref(r);
+          }));
+        }
+        return Promise.race(promises);
+      }
+      function toBeTruthy(options) {
+        return toMatch((v) => Boolean(v), options);
+      }
+      function toBeNull(options) {
+        return toBe(null, options);
+      }
+      function toBeUndefined(options) {
+        return toBe(void 0, options);
+      }
+      function toBeNaN(options) {
+        return toMatch(Number.isNaN, options);
+      }
+      function toContains(value, options) {
+        return toMatch((v) => {
+          const array = Array.from(v);
+          return array.includes(value) || array.includes(resolveUnref(value));
+        }, options);
+      }
+      function changed(options) {
+        return changedTimes(1, options);
+      }
+      function changedTimes(n = 1, options) {
+        let count = -1;
+        return toMatch(() => {
+          count += 1;
+          return count >= n;
+        }, options);
+      }
+      if (Array.isArray(resolveUnref(r))) {
+        const instance = {
+          toMatch,
+          toContains,
+          changed,
+          changedTimes,
+          get not() {
+            return createUntil(r, !isNot);
+          }
+        };
+        return instance;
+      } else {
+        const instance = {
+          toMatch,
+          toBe,
+          toBeTruthy,
+          toBeNull,
+          toBeNaN,
+          toBeUndefined,
+          changed,
+          changedTimes,
+          get not() {
+            return createUntil(r, !isNot);
+          }
+        };
+        return instance;
+      }
+    }
+    function until(r) {
+      return createUntil(r);
+    }
+
+    function useTimeoutFn(cb, interval, options = {}) {
+      const {
+        immediate = true
+      } = options;
+      const isPending = ref(false);
+      let timer = null;
+      function clear() {
+        if (timer) {
+          clearTimeout(timer);
+          timer = null;
+        }
+      }
+      function stop() {
+        isPending.value = false;
+        clear();
+      }
+      function start(...args) {
+        clear();
+        isPending.value = true;
+        timer = setTimeout(() => {
+          isPending.value = false;
+          timer = null;
+          cb(...args);
+        }, resolveUnref(interval));
+      }
+      if (immediate) {
+        isPending.value = true;
+        if (isClient)
+          start();
+      }
+      tryOnScopeDispose(stop);
+      return {
+        isPending,
+        start,
+        stop
+      };
+    }
+
+    var __getOwnPropSymbols$6 = Object.getOwnPropertySymbols;
+    var __hasOwnProp$6 = Object.prototype.hasOwnProperty;
+    var __propIsEnum$6 = Object.prototype.propertyIsEnumerable;
+    var __objRest$5 = (source, exclude) => {
+      var target = {};
+      for (var prop in source)
+        if (__hasOwnProp$6.call(source, prop) && exclude.indexOf(prop) < 0)
+          target[prop] = source[prop];
+      if (source != null && __getOwnPropSymbols$6)
+        for (var prop of __getOwnPropSymbols$6(source)) {
+          if (exclude.indexOf(prop) < 0 && __propIsEnum$6.call(source, prop))
+            target[prop] = source[prop];
+        }
+      return target;
+    };
+    function watchWithFilter(source, cb, options = {}) {
+      const _a = options, {
+        eventFilter = bypassFilter
+      } = _a, watchOptions = __objRest$5(_a, [
+        "eventFilter"
+      ]);
+      return watch(source, createFilterWrapper(eventFilter, cb), watchOptions);
+    }
+
+    var __defProp$2 = Object.defineProperty;
+    var __defProps$2 = Object.defineProperties;
+    var __getOwnPropDescs$2 = Object.getOwnPropertyDescriptors;
+    var __getOwnPropSymbols$2 = Object.getOwnPropertySymbols;
+    var __hasOwnProp$2 = Object.prototype.hasOwnProperty;
+    var __propIsEnum$2 = Object.prototype.propertyIsEnumerable;
+    var __defNormalProp$2 = (obj, key, value) => key in obj ? __defProp$2(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+    var __spreadValues$2 = (a, b) => {
+      for (var prop in b || (b = {}))
+        if (__hasOwnProp$2.call(b, prop))
+          __defNormalProp$2(a, prop, b[prop]);
+      if (__getOwnPropSymbols$2)
+        for (var prop of __getOwnPropSymbols$2(b)) {
+          if (__propIsEnum$2.call(b, prop))
+            __defNormalProp$2(a, prop, b[prop]);
+        }
+      return a;
+    };
+    var __spreadProps$2 = (a, b) => __defProps$2(a, __getOwnPropDescs$2(b));
+    var __objRest$1 = (source, exclude) => {
+      var target = {};
+      for (var prop in source)
+        if (__hasOwnProp$2.call(source, prop) && exclude.indexOf(prop) < 0)
+          target[prop] = source[prop];
+      if (source != null && __getOwnPropSymbols$2)
+        for (var prop of __getOwnPropSymbols$2(source)) {
+          if (exclude.indexOf(prop) < 0 && __propIsEnum$2.call(source, prop))
+            target[prop] = source[prop];
+        }
+      return target;
+    };
+    function watchPausable(source, cb, options = {}) {
+      const _a = options, {
+        eventFilter: filter
+      } = _a, watchOptions = __objRest$1(_a, [
+        "eventFilter"
+      ]);
+      const { eventFilter, pause, resume, isActive } = pausableFilter(filter);
+      const stop = watchWithFilter(source, cb, __spreadProps$2(__spreadValues$2({}, watchOptions), {
+        eventFilter
+      }));
+      return { stop, pause, resume, isActive };
+    }
+
+    function unrefElement(elRef) {
+      var _a;
+      const plain = resolveUnref(elRef);
+      return (_a = plain == null ? void 0 : plain.$el) != null ? _a : plain;
+    }
+
+    const defaultWindow = isClient ? window : void 0;
+
+    function useEventListener(...args) {
+      let target;
+      let events;
+      let listeners;
+      let options;
+      if (isString(args[0]) || Array.isArray(args[0])) {
+        [events, listeners, options] = args;
+        target = defaultWindow;
+      } else {
+        [target, events, listeners, options] = args;
+      }
+      if (!target)
+        return noop;
+      if (!Array.isArray(events))
+        events = [events];
+      if (!Array.isArray(listeners))
+        listeners = [listeners];
+      const cleanups = [];
+      const cleanup = () => {
+        cleanups.forEach((fn) => fn());
+        cleanups.length = 0;
+      };
+      const register = (el, event, listener) => {
+        el.addEventListener(event, listener, options);
+        return () => el.removeEventListener(event, listener, options);
+      };
+      const stopWatch = watch(() => unrefElement(target), (el) => {
+        cleanup();
+        if (!el)
+          return;
+        cleanups.push(...events.flatMap((event) => {
+          return listeners.map((listener) => register(el, event, listener));
+        }));
+      }, { immediate: true, flush: "post" });
+      const stop = () => {
+        stopWatch();
+        cleanup();
+      };
+      tryOnScopeDispose(stop);
+      return stop;
+    }
+
+    function useSupported(callback, sync = false) {
+      const isSupported = ref();
+      const update = () => isSupported.value = Boolean(callback());
+      update();
+      tryOnMounted(update, sync);
+      return isSupported;
+    }
+
+    const _global = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
+    const globalKey = "__vueuse_ssr_handlers__";
+    _global[globalKey] = _global[globalKey] || {};
+    const handlers = _global[globalKey];
+    function getSSRHandler(key, fallback) {
+      return handlers[key] || fallback;
+    }
+
+    function guessSerializerType(rawInit) {
+      return rawInit == null ? "any" : rawInit instanceof Set ? "set" : rawInit instanceof Map ? "map" : rawInit instanceof Date ? "date" : typeof rawInit === "boolean" ? "boolean" : typeof rawInit === "string" ? "string" : typeof rawInit === "object" ? "object" : !Number.isNaN(rawInit) ? "number" : "any";
+    }
+
+    var __defProp$j = Object.defineProperty;
+    var __getOwnPropSymbols$l = Object.getOwnPropertySymbols;
+    var __hasOwnProp$l = Object.prototype.hasOwnProperty;
+    var __propIsEnum$l = Object.prototype.propertyIsEnumerable;
+    var __defNormalProp$j = (obj, key, value) => key in obj ? __defProp$j(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+    var __spreadValues$j = (a, b) => {
+      for (var prop in b || (b = {}))
+        if (__hasOwnProp$l.call(b, prop))
+          __defNormalProp$j(a, prop, b[prop]);
+      if (__getOwnPropSymbols$l)
+        for (var prop of __getOwnPropSymbols$l(b)) {
+          if (__propIsEnum$l.call(b, prop))
+            __defNormalProp$j(a, prop, b[prop]);
+        }
+      return a;
+    };
+    const StorageSerializers = {
+      boolean: {
+        read: (v) => v === "true",
+        write: (v) => String(v)
+      },
+      object: {
+        read: (v) => JSON.parse(v),
+        write: (v) => JSON.stringify(v)
+      },
+      number: {
+        read: (v) => Number.parseFloat(v),
+        write: (v) => String(v)
+      },
+      any: {
+        read: (v) => v,
+        write: (v) => String(v)
+      },
+      string: {
+        read: (v) => v,
+        write: (v) => String(v)
+      },
+      map: {
+        read: (v) => new Map(JSON.parse(v)),
+        write: (v) => JSON.stringify(Array.from(v.entries()))
+      },
+      set: {
+        read: (v) => new Set(JSON.parse(v)),
+        write: (v) => JSON.stringify(Array.from(v))
+      },
+      date: {
+        read: (v) => new Date(v),
+        write: (v) => v.toISOString()
+      }
+    };
+    function useStorage(key, defaults, storage, options = {}) {
+      var _a;
+      const {
+        flush = "pre",
+        deep = true,
+        listenToStorageChanges = true,
+        writeDefaults = true,
+        mergeDefaults = false,
+        shallow,
+        window = defaultWindow,
+        eventFilter,
+        onError = (e) => {
+          console.error(e);
+        }
+      } = options;
+      const data = (shallow ? shallowRef : ref)(defaults);
+      if (!storage) {
+        try {
+          storage = getSSRHandler("getDefaultStorage", () => {
+            var _a2;
+            return (_a2 = defaultWindow) == null ? void 0 : _a2.localStorage;
+          })();
+        } catch (e) {
+          onError(e);
+        }
+      }
+      if (!storage)
+        return data;
+      const rawInit = resolveUnref(defaults);
+      const type = guessSerializerType(rawInit);
+      const serializer = (_a = options.serializer) != null ? _a : StorageSerializers[type];
+      const { pause: pauseWatch, resume: resumeWatch } = watchPausable(data, () => write(data.value), { flush, deep, eventFilter });
+      if (window && listenToStorageChanges)
+        useEventListener(window, "storage", update);
+      update();
+      return data;
+      function write(v) {
+        try {
+          if (v == null) {
+            storage.removeItem(key);
+          } else {
+            const serialized = serializer.write(v);
+            const oldValue = storage.getItem(key);
+            if (oldValue !== serialized) {
+              storage.setItem(key, serialized);
+              if (window) {
+                window == null ? void 0 : window.dispatchEvent(new StorageEvent("storage", {
+                  key,
+                  oldValue,
+                  newValue: serialized,
+                  storageArea: storage
+                }));
+              }
+            }
+          }
+        } catch (e) {
+          onError(e);
+        }
+      }
+      function read(event) {
+        const rawValue = event ? event.newValue : storage.getItem(key);
+        if (rawValue == null) {
+          if (writeDefaults && rawInit !== null)
+            storage.setItem(key, serializer.write(rawInit));
+          return rawInit;
+        } else if (!event && mergeDefaults) {
+          const value = serializer.read(rawValue);
+          if (isFunction(mergeDefaults))
+            return mergeDefaults(value, rawInit);
+          else if (type === "object" && !Array.isArray(value))
+            return __spreadValues$j(__spreadValues$j({}, rawInit), value);
+          return value;
+        } else if (typeof rawValue !== "string") {
+          return rawValue;
+        } else {
+          return serializer.read(rawValue);
+        }
+      }
+      function update(event) {
+        if (event && event.storageArea !== storage)
+          return;
+        if (event && event.key == null) {
+          data.value = rawInit;
+          return;
+        }
+        if (event && event.key !== key)
+          return;
+        pauseWatch();
+        try {
+          data.value = read(event);
+        } catch (e) {
+          onError(e);
+        } finally {
+          if (event)
+            nextTick(resumeWatch);
+          else
+            resumeWatch();
+        }
+      }
+    }
+
+    var __getOwnPropSymbols$f = Object.getOwnPropertySymbols;
+    var __hasOwnProp$f = Object.prototype.hasOwnProperty;
+    var __propIsEnum$f = Object.prototype.propertyIsEnumerable;
+    var __objRest$2 = (source, exclude) => {
+      var target = {};
+      for (var prop in source)
+        if (__hasOwnProp$f.call(source, prop) && exclude.indexOf(prop) < 0)
+          target[prop] = source[prop];
+      if (source != null && __getOwnPropSymbols$f)
+        for (var prop of __getOwnPropSymbols$f(source)) {
+          if (exclude.indexOf(prop) < 0 && __propIsEnum$f.call(source, prop))
+            target[prop] = source[prop];
+        }
+      return target;
+    };
+    function useResizeObserver(target, callback, options = {}) {
+      const _a = options, { window = defaultWindow } = _a, observerOptions = __objRest$2(_a, ["window"]);
+      let observer;
+      const isSupported = useSupported(() => window && "ResizeObserver" in window);
+      const cleanup = () => {
+        if (observer) {
+          observer.disconnect();
+          observer = void 0;
+        }
+      };
+      const stopWatch = watch(() => unrefElement(target), (el) => {
+        cleanup();
+        if (isSupported.value && window && el) {
+          observer = new ResizeObserver(callback);
+          observer.observe(el, observerOptions);
+        }
+      }, { immediate: true, flush: "post" });
+      const stop = () => {
+        cleanup();
+        stopWatch();
+      };
+      tryOnScopeDispose(stop);
+      return {
+        isSupported,
+        stop
+      };
+    }
+
+    var __defProp$c = Object.defineProperty;
+    var __defProps$3 = Object.defineProperties;
+    var __getOwnPropDescs$3 = Object.getOwnPropertyDescriptors;
+    var __getOwnPropSymbols$d = Object.getOwnPropertySymbols;
+    var __hasOwnProp$d = Object.prototype.hasOwnProperty;
+    var __propIsEnum$d = Object.prototype.propertyIsEnumerable;
+    var __defNormalProp$c = (obj, key, value) => key in obj ? __defProp$c(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+    var __spreadValues$c = (a, b) => {
+      for (var prop in b || (b = {}))
+        if (__hasOwnProp$d.call(b, prop))
+          __defNormalProp$c(a, prop, b[prop]);
+      if (__getOwnPropSymbols$d)
+        for (var prop of __getOwnPropSymbols$d(b)) {
+          if (__propIsEnum$d.call(b, prop))
+            __defNormalProp$c(a, prop, b[prop]);
+        }
+      return a;
+    };
+    var __spreadProps$3 = (a, b) => __defProps$3(a, __getOwnPropDescs$3(b));
+    const payloadMapping = {
+      json: "application/json",
+      text: "text/plain"
+    };
+    function isFetchOptions(obj) {
+      return containsProp(obj, "immediate", "refetch", "initialData", "timeout", "beforeFetch", "afterFetch", "onFetchError", "fetch");
+    }
+    function isAbsoluteURL(url) {
+      return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
+    }
+    function headersToObject(headers) {
+      if (typeof Headers !== "undefined" && headers instanceof Headers)
+        return Object.fromEntries([...headers.entries()]);
+      return headers;
+    }
+    function combineCallbacks(combination, ...callbacks) {
+      if (combination === "overwrite") {
+        return async (ctx) => {
+          const callback = callbacks[callbacks.length - 1];
+          if (callback !== void 0)
+            await callback(ctx);
+          return ctx;
+        };
+      } else {
+        return async (ctx) => {
+          await callbacks.reduce((prevCallback, callback) => prevCallback.then(async () => {
+            if (callback)
+              ctx = __spreadValues$c(__spreadValues$c({}, ctx), await callback(ctx));
+          }), Promise.resolve());
+          return ctx;
+        };
+      }
+    }
+    function createFetch(config = {}) {
+      const _combination = config.combination || "chain";
+      const _options = config.options || {};
+      const _fetchOptions = config.fetchOptions || {};
+      function useFactoryFetch(url, ...args) {
+        const computedUrl = computed(() => {
+          const baseUrl = resolveUnref(config.baseUrl);
+          const targetUrl = resolveUnref(url);
+          return baseUrl && !isAbsoluteURL(targetUrl) ? joinPaths(baseUrl, targetUrl) : targetUrl;
+        });
+        let options = _options;
+        let fetchOptions = _fetchOptions;
+        if (args.length > 0) {
+          if (isFetchOptions(args[0])) {
+            options = __spreadProps$3(__spreadValues$c(__spreadValues$c({}, options), args[0]), {
+              beforeFetch: combineCallbacks(_combination, _options.beforeFetch, args[0].beforeFetch),
+              afterFetch: combineCallbacks(_combination, _options.afterFetch, args[0].afterFetch),
+              onFetchError: combineCallbacks(_combination, _options.onFetchError, args[0].onFetchError)
+            });
+          } else {
+            fetchOptions = __spreadProps$3(__spreadValues$c(__spreadValues$c({}, fetchOptions), args[0]), {
+              headers: __spreadValues$c(__spreadValues$c({}, headersToObject(fetchOptions.headers) || {}), headersToObject(args[0].headers) || {})
+            });
+          }
+        }
+        if (args.length > 1 && isFetchOptions(args[1])) {
+          options = __spreadProps$3(__spreadValues$c(__spreadValues$c({}, options), args[1]), {
+            beforeFetch: combineCallbacks(_combination, _options.beforeFetch, args[1].beforeFetch),
+            afterFetch: combineCallbacks(_combination, _options.afterFetch, args[1].afterFetch),
+            onFetchError: combineCallbacks(_combination, _options.onFetchError, args[1].onFetchError)
+          });
+        }
+        return useFetch(computedUrl, fetchOptions, options);
+      }
+      return useFactoryFetch;
+    }
+    function useFetch(url, ...args) {
+      var _a;
+      const supportsAbort = typeof AbortController === "function";
+      let fetchOptions = {};
+      let options = { immediate: true, refetch: false, timeout: 0 };
+      const config = {
+        method: "GET",
+        type: "text",
+        payload: void 0
+      };
+      if (args.length > 0) {
+        if (isFetchOptions(args[0]))
+          options = __spreadValues$c(__spreadValues$c({}, options), args[0]);
+        else
+          fetchOptions = args[0];
+      }
+      if (args.length > 1) {
+        if (isFetchOptions(args[1]))
+          options = __spreadValues$c(__spreadValues$c({}, options), args[1]);
+      }
+      const {
+        fetch = (_a = defaultWindow) == null ? void 0 : _a.fetch,
+        initialData,
+        timeout
+      } = options;
+      const responseEvent = createEventHook();
+      const errorEvent = createEventHook();
+      const finallyEvent = createEventHook();
+      const isFinished = ref(false);
+      const isFetching = ref(false);
+      const aborted = ref(false);
+      const statusCode = ref(null);
+      const response = shallowRef(null);
+      const error = shallowRef(null);
+      const data = shallowRef(initialData);
+      const canAbort = computed(() => supportsAbort && isFetching.value);
+      let controller;
+      let timer;
+      const abort = () => {
+        if (supportsAbort && controller)
+          controller.abort();
+      };
+      const loading = (isLoading) => {
+        isFetching.value = isLoading;
+        isFinished.value = !isLoading;
+      };
+      if (timeout)
+        timer = useTimeoutFn(abort, timeout, { immediate: false });
+      const execute = async (throwOnFailed = false) => {
+        var _a2;
+        loading(true);
+        error.value = null;
+        statusCode.value = null;
+        aborted.value = false;
+        controller = void 0;
+        if (supportsAbort) {
+          controller = new AbortController();
+          controller.signal.onabort = () => aborted.value = true;
+          fetchOptions = __spreadProps$3(__spreadValues$c({}, fetchOptions), {
+            signal: controller.signal
+          });
+        }
+        const defaultFetchOptions = {
+          method: config.method,
+          headers: {}
+        };
+        if (config.payload) {
+          const headers = headersToObject(defaultFetchOptions.headers);
+          if (config.payloadType)
+            headers["Content-Type"] = (_a2 = payloadMapping[config.payloadType]) != null ? _a2 : config.payloadType;
+          const payload = resolveUnref(config.payload);
+          defaultFetchOptions.body = config.payloadType === "json" ? JSON.stringify(payload) : payload;
+        }
+        let isCanceled = false;
+        const context = {
+          url: resolveUnref(url),
+          options: __spreadValues$c(__spreadValues$c({}, defaultFetchOptions), fetchOptions),
+          cancel: () => {
+            isCanceled = true;
+          }
+        };
+        if (options.beforeFetch)
+          Object.assign(context, await options.beforeFetch(context));
+        if (isCanceled || !fetch) {
+          loading(false);
+          return Promise.resolve(null);
+        }
+        let responseData = null;
+        if (timer)
+          timer.start();
+        return new Promise((resolve, reject) => {
+          var _a3;
+          fetch(context.url, __spreadProps$3(__spreadValues$c(__spreadValues$c({}, defaultFetchOptions), context.options), {
+            headers: __spreadValues$c(__spreadValues$c({}, headersToObject(defaultFetchOptions.headers)), headersToObject((_a3 = context.options) == null ? void 0 : _a3.headers))
+          })).then(async (fetchResponse) => {
+            response.value = fetchResponse;
+            statusCode.value = fetchResponse.status;
+            responseData = await fetchResponse[config.type]();
+            if (options.afterFetch && statusCode.value >= 200 && statusCode.value < 300)
+              ({ data: responseData } = await options.afterFetch({ data: responseData, response: fetchResponse }));
+            data.value = responseData;
+            if (!fetchResponse.ok)
+              throw new Error(fetchResponse.statusText);
+            responseEvent.trigger(fetchResponse);
+            return resolve(fetchResponse);
+          }).catch(async (fetchError) => {
+            let errorData = fetchError.message || fetchError.name;
+            if (options.onFetchError)
+              ({ data: responseData, error: errorData } = await options.onFetchError({ data: responseData, error: fetchError, response: response.value }));
+            data.value = responseData;
+            error.value = errorData;
+            errorEvent.trigger(fetchError);
+            if (throwOnFailed)
+              return reject(fetchError);
+            return resolve(null);
+          }).finally(() => {
+            loading(false);
+            if (timer)
+              timer.stop();
+            finallyEvent.trigger(null);
+          });
+        });
+      };
+      const refetch = resolveRef(options.refetch);
+      watch([
+        refetch,
+        resolveRef(url)
+      ], ([refetch2]) => refetch2 && execute(), { deep: true });
+      const shell = {
+        isFinished,
+        statusCode,
+        response,
+        error,
+        data,
+        isFetching,
+        canAbort,
+        aborted,
+        abort,
+        execute,
+        onFetchResponse: responseEvent.on,
+        onFetchError: errorEvent.on,
+        onFetchFinally: finallyEvent.on,
+        get: setMethod("GET"),
+        put: setMethod("PUT"),
+        post: setMethod("POST"),
+        delete: setMethod("DELETE"),
+        patch: setMethod("PATCH"),
+        head: setMethod("HEAD"),
+        options: setMethod("OPTIONS"),
+        json: setType("json"),
+        text: setType("text"),
+        blob: setType("blob"),
+        arrayBuffer: setType("arrayBuffer"),
+        formData: setType("formData")
+      };
+      function setMethod(method) {
+        return (payload, payloadType) => {
+          if (!isFetching.value) {
+            config.method = method;
+            config.payload = payload;
+            config.payloadType = payloadType;
+            if (isRef(config.payload)) {
+              watch([
+                refetch,
+                resolveRef(config.payload)
+              ], ([refetch2]) => refetch2 && execute(), { deep: true });
+            }
+            const rawPayload = resolveUnref(config.payload);
+            if (!payloadType && rawPayload && Object.getPrototypeOf(rawPayload) === Object.prototype && !(rawPayload instanceof FormData))
+              config.payloadType = "json";
+            return __spreadProps$3(__spreadValues$c({}, shell), {
+              then(onFulfilled, onRejected) {
+                return waitUntilFinished().then(onFulfilled, onRejected);
+              }
+            });
+          }
+          return void 0;
+        };
+      }
+      function waitUntilFinished() {
+        return new Promise((resolve, reject) => {
+          until(isFinished).toBe(true).then(() => resolve(shell)).catch((error2) => reject(error2));
+        });
+      }
+      function setType(type) {
+        return () => {
+          if (!isFetching.value) {
+            config.type = type;
+            return __spreadProps$3(__spreadValues$c({}, shell), {
+              then(onFulfilled, onRejected) {
+                return waitUntilFinished().then(onFulfilled, onRejected);
+              }
+            });
+          }
+          return void 0;
+        };
+      }
+      if (options.immediate)
+        setTimeout(execute, 0);
+      return __spreadProps$3(__spreadValues$c({}, shell), {
+        then(onFulfilled, onRejected) {
+          return waitUntilFinished().then(onFulfilled, onRejected);
+        }
+      });
+    }
+    function joinPaths(start, end) {
+      if (!start.endsWith("/") && !end.startsWith("/"))
+        return `${start}/${end}`;
+      return `${start}${end}`;
+    }
+
+    var SwipeDirection;
+    (function(SwipeDirection2) {
+      SwipeDirection2["UP"] = "UP";
+      SwipeDirection2["RIGHT"] = "RIGHT";
+      SwipeDirection2["DOWN"] = "DOWN";
+      SwipeDirection2["LEFT"] = "LEFT";
+      SwipeDirection2["NONE"] = "NONE";
+    })(SwipeDirection || (SwipeDirection = {}));
+
+    function useTextareaAutosize(options) {
+      const textarea = ref(options == null ? void 0 : options.element);
+      const input = ref(options == null ? void 0 : options.input);
+      function triggerResize() {
+        var _a, _b;
+        if (!textarea.value)
+          return;
+        textarea.value.style.height = "1px";
+        textarea.value.style.height = `${(_a = textarea.value) == null ? void 0 : _a.scrollHeight}px`;
+        (_b = options == null ? void 0 : options.onResize) == null ? void 0 : _b.call(options);
+      }
+      watch([input, textarea], triggerResize, { immediate: true });
+      useResizeObserver(textarea, () => triggerResize());
+      if (options == null ? void 0 : options.watch)
+        watch(options.watch, triggerResize, { immediate: true, deep: true });
+      return {
+        textarea,
+        input,
+        triggerResize
+      };
+    }
+
+    var __defProp = Object.defineProperty;
+    var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+    var __hasOwnProp = Object.prototype.hasOwnProperty;
+    var __propIsEnum = Object.prototype.propertyIsEnumerable;
+    var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+    var __spreadValues = (a, b) => {
+      for (var prop in b || (b = {}))
+        if (__hasOwnProp.call(b, prop))
+          __defNormalProp(a, prop, b[prop]);
+      if (__getOwnPropSymbols)
+        for (var prop of __getOwnPropSymbols(b)) {
+          if (__propIsEnum.call(b, prop))
+            __defNormalProp(a, prop, b[prop]);
+        }
+      return a;
+    };
+    const _TransitionPresets = {
+      easeInSine: [0.12, 0, 0.39, 0],
+      easeOutSine: [0.61, 1, 0.88, 1],
+      easeInOutSine: [0.37, 0, 0.63, 1],
+      easeInQuad: [0.11, 0, 0.5, 0],
+      easeOutQuad: [0.5, 1, 0.89, 1],
+      easeInOutQuad: [0.45, 0, 0.55, 1],
+      easeInCubic: [0.32, 0, 0.67, 0],
+      easeOutCubic: [0.33, 1, 0.68, 1],
+      easeInOutCubic: [0.65, 0, 0.35, 1],
+      easeInQuart: [0.5, 0, 0.75, 0],
+      easeOutQuart: [0.25, 1, 0.5, 1],
+      easeInOutQuart: [0.76, 0, 0.24, 1],
+      easeInQuint: [0.64, 0, 0.78, 0],
+      easeOutQuint: [0.22, 1, 0.36, 1],
+      easeInOutQuint: [0.83, 0, 0.17, 1],
+      easeInExpo: [0.7, 0, 0.84, 0],
+      easeOutExpo: [0.16, 1, 0.3, 1],
+      easeInOutExpo: [0.87, 0, 0.13, 1],
+      easeInCirc: [0.55, 0, 1, 0.45],
+      easeOutCirc: [0, 0.55, 0.45, 1],
+      easeInOutCirc: [0.85, 0, 0.15, 1],
+      easeInBack: [0.36, 0, 0.66, -0.56],
+      easeOutBack: [0.34, 1.56, 0.64, 1],
+      easeInOutBack: [0.68, -0.6, 0.32, 1.6]
+    };
+    __spreadValues({
+      linear: identity
+    }, _TransitionPresets);
+
+    const _export_sfc = (sfc, props) => {
+      const target = sfc.__vccOpts || sfc;
+      for (const [key, val] of props) {
+        target[key] = val;
+      }
+      return target;
+    };
+
+    const _sfc_main$b = {};
+
+    const _hoisted_1$b = {
+      id: "Layer_2",
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 29.19 29.28"
+    };
+    const _hoisted_2$9 = /*#__PURE__*/createStaticVNode("<g id=\"Layer_1-2\"><g><path fill=\"#f8b1ad\" d=\"M29.19,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z\"></path><path fill=\"currentColor\" d=\"M14.59,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06,1.34,1.38,2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z\"></path><path fill=\"currentColor\" d=\"M14.59,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z\"></path><path fill=\"currentColor\" d=\"M29.17,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z\"></path></g></g>", 1);
+    const _hoisted_3$8 = [
+      _hoisted_2$9
+    ];
+
+    function _sfc_render$2(_ctx, _cache) {
+      return (openBlock(), createElementBlock("svg", _hoisted_1$b, _hoisted_3$8))
+    }
+    const VueLogo = /*#__PURE__*/_export_sfc(_sfc_main$b, [['render',_sfc_render$2]]);
+
+    const useTextClass = (backgroundColor, cutoff = 160) => {
+      const brightness = ref(0);
+      const bgColor = isRef(backgroundColor) ? backgroundColor : computed(() => backgroundColor);
+      const textClass = computed(() => {
+        if (!bgColor.value)
+          return "text-black";
+        const hex = bgColor.value.replace("#", "");
+        const r = parseInt(hex.substring(0, 2), 16);
+        const g = parseInt(hex.substring(2, 4), 16);
+        const b = parseInt(hex.substring(4, 6), 16);
+        brightness.value = (r * 299 + g * 587 + b * 114) / 1e3;
+        if (brightness.value > cutoff)
+          return "text-black";
+        return "text-white";
+      });
+      const styleType = computed(() => {
+        const typ = !bgColor.value?.match("linear-gradient") ? "backgroundColor" : "background";
+        console.log(typ);
+        return typ;
+      });
+      const mainColor = computed(() => bgColor.value?.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/)?.[0] || bgColor.value);
+      return { textClass, brightness, styleType, mainColor };
+    };
+
+    const _hoisted_1$a = { class: "flex items-center" };
+    const _hoisted_2$8 = /* @__PURE__ */ createBaseVNode("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 32 32"
+    }, [
+      /* @__PURE__ */ createBaseVNode("path", {
+        fill: "currentColor",
+        d: "M12 12h2v12h-2zm6 0h2v12h-2z"
+      }),
+      /* @__PURE__ */ createBaseVNode("path", {
+        fill: "currentColor",
+        d: "M4 6v2h2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h2V6zm4 22V8h16v20zm4-26h8v2h-8z"
+      })
+    ], -1);
+    const _hoisted_3$7 = [
+      _hoisted_2$8
+    ];
+    const _hoisted_4$5 = /* @__PURE__ */ createBaseVNode("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 24 24",
+      fill: "currentColor"
+    }, [
+      /* @__PURE__ */ createBaseVNode("path", { d: "M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" })
+    ], -1);
+    const _hoisted_5$5 = [
+      _hoisted_4$5
+    ];
+    const _sfc_main$a = /* @__PURE__ */ defineComponent({
+      __name: "ChatHeader",
+      props: {
+        base_color: { default: "#4fafe4" },
+        header_text: null
+      },
+      emits: ["clear", "close"],
+      setup(__props, { emit }) {
+        const props = __props;
+        const { base_color } = toRefs(props);
+        const { textClass, styleType } = useTextClass(base_color);
+        const style = computed(() => ({
+          [styleType.value]: props.base_color
+        }));
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", {
+            class: "flex justify-between rounded-t-2xl items-center px-3 h-16 min-h-16",
+            style: normalizeStyle(unref(style))
+          }, [
+            createVNode(VueLogo, { class: "w-8 text-white" }),
+            createBaseVNode("h1", {
+              class: normalizeClass(["text-lg text-center py-3", unref(textClass)])
+            }, toDisplayString(props.header_text), 3),
+            createBaseVNode("div", _hoisted_1$a, [
+              createBaseVNode("button", {
+                class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square",
+                onClick: _cache[0] || (_cache[0] = ($event) => emit("clear"))
+              }, [
+                createBaseVNode("div", {
+                  class: normalizeClass(["w-5 h-5", unref(textClass)])
+                }, _hoisted_3$7, 2)
+              ]),
+              createBaseVNode("button", {
+                class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square",
+                onClick: _cache[1] || (_cache[1] = ($event) => emit("close"))
+              }, [
+                createBaseVNode("div", {
+                  class: normalizeClass(["w-5 h-5", unref(textClass)])
+                }, _hoisted_5$5, 2)
+              ])
+            ])
+          ], 4);
+        };
+      }
+    });
+
+    const _hoisted_1$9 = {
+      key: 0,
+      class: "chat chat-start"
+    };
+    const _hoisted_2$7 = { class: "chat-image avatar" };
+    const _hoisted_3$6 = { class: "w-8 rounded-full" };
+    const _hoisted_4$4 = ["src"];
+    const _hoisted_5$4 = {
+      key: 0,
+      class: "chat-header"
+    };
+    const _hoisted_6$4 = { class: "text-xs opacity-50" };
+    const _hoisted_7$3 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5" };
+    const _hoisted_8$2 = {
+      key: 1,
+      class: "chat chat-end"
+    };
+    const _hoisted_9$2 = { key: 0 };
+    const _hoisted_10$2 = { class: "text-xs opacity-50" };
+    const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+      __name: "ChatBubble",
+      props: {
+        message: null,
+        date: null,
+        isFirst: { type: Boolean },
+        base_color: { default: "#4fafe4" },
+        avatar_asset_url: { default: "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" }
+      },
+      emits: ["openProducts"],
+      setup(__props, { emit }) {
+        const props = __props;
+        const showTime = computed(() => {
+          if (props.isFirst)
+            return true;
+          const timestamp = props.date;
+          const current = Math.floor(timestamp / 1e3 / 60);
+          const last = Math.floor(timestamp / 1e3 / 60);
+          if (current === last)
+            return false;
+          return true;
+        });
+        const time = computed(() => {
+          const _date = new Date(props.date);
+          return `${_date.getHours()}:${_date.getMinutes()}`;
+        });
+        const { base_color } = toRefs(props);
+        const { textClass, styleType } = useTextClass(base_color);
+        const style = computed(() => ({
+          [styleType.value]: props.base_color
+        }));
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", null, [
+            "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
+              createBaseVNode("div", _hoisted_2$7, [
+                createBaseVNode("div", _hoisted_3$6, [
+                  createBaseVNode("img", {
+                    src: props.avatar_asset_url
+                  }, null, 8, _hoisted_4$4)
+                ])
+              ]),
+              unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_5$4, [
+                createBaseVNode("time", _hoisted_6$4, toDisplayString(unref(time)), 1)
+              ])) : createCommentVNode("", true),
+              createBaseVNode("div", _hoisted_7$3, [
+                createBaseVNode("p", null, toDisplayString(props.message.user_language_text), 1),
+                props.message.recommended_products && props.message.recommended_products.length ? (openBlock(), createElementBlock("p", {
+                  key: 0,
+                  class: "link link-primary",
+                  onClick: _cache[0] || (_cache[0] = ($event) => emit("openProducts", props.message.recommended_products))
+                }, " show product ")) : createCommentVNode("", true)
+              ])
+            ])) : createCommentVNode("", true),
+            "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_8$2, [
+              unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_9$2, [
+                createBaseVNode("time", _hoisted_10$2, toDisplayString(unref(time)), 1)
+              ])) : createCommentVNode("", true),
+              createBaseVNode("div", {
+                class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5", unref(textClass)]),
+                style: normalizeStyle(unref(style))
+              }, toDisplayString(props.message.text), 7)
+            ])) : createCommentVNode("", true)
+          ]);
+        };
+      }
+    });
+
+    const ChatBubble_vue_vue_type_style_index_0_scoped_90684cd9_lang = '';
+
+    const ChatBubble = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-90684cd9"]]);
+
+    const _hoisted_1$8 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
+    const _hoisted_2$6 = ["placeholder"];
+    const _hoisted_3$5 = ["disabled"];
+    const _hoisted_4$3 = { class: "w-6 h-6" };
+    const _hoisted_5$3 = ["fill"];
+    const _hoisted_6$3 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
+    const _hoisted_7$2 = [
+      _hoisted_6$3
+    ];
+    const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+      __name: "ChatInput",
+      props: {
+        isLoading: { type: Boolean },
+        message_placeholder: { default: "Type your message here..." },
+        base_color: { default: "#4fafe4" }
+      },
+      emits: ["send"],
+      setup(__props, { emit }) {
+        const props = __props;
+        const { textarea, input: messageInput } = useTextareaAutosize({});
+        function maybeSend() {
+          if (!messageInput.value || messageInput.value.trim() === "" || props.isLoading)
+            return;
+          emit("send", messageInput.value);
+          messageInput.value = "";
+        }
+        const { base_color } = toRefs(props);
+        const { mainColor } = useTextClass(base_color);
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", _hoisted_1$8, [
+            createBaseVNode("form", {
+              class: "flex items-center",
+              onSubmit: _cache[2] || (_cache[2] = withModifiers(($event) => maybeSend(), ["prevent"]))
+            }, [
+              withDirectives(createBaseVNode("textarea", {
+                ref_key: "textarea",
+                ref: textarea,
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => isRef(messageInput) ? messageInput.value = $event : null),
+                class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle",
+                type: "text",
+                placeholder: __props.message_placeholder,
+                onKeydown: _cache[1] || (_cache[1] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
+              }, null, 40, _hoisted_2$6), [
+                [vModelText, unref(messageInput)]
+              ]),
+              createBaseVNode("button", {
+                class: "btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square",
+                type: "submit",
+                disabled: __props.isLoading
+              }, [
+                createBaseVNode("div", _hoisted_4$3, [
+                  (openBlock(), createElementBlock("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    fill: unref(mainColor),
+                    viewBox: "0 0 32 32"
+                  }, _hoisted_7$2, 8, _hoisted_5$3))
+                ])
+              ], 8, _hoisted_3$5)
+            ], 32)
+          ]);
+        };
+      }
+    });
+
+    const _hoisted_1$7 = /* @__PURE__ */ createBaseVNode("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      class: "w-8 h-8 mx-auto my-auto",
+      viewBox: "0 0 24 24"
+    }, [
+      /* @__PURE__ */ createBaseVNode("path", {
+        d: "M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2z",
+        fill: "currentColor"
+      })
+    ], -1);
+    const _hoisted_2$5 = [
+      _hoisted_1$7
+    ];
+    const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+      __name: "WidgetButton.ce",
+      props: {
+        isOpen: { type: Boolean, default: true },
+        chat_button_style: { default: "round" },
+        chat_button_label: { type: Boolean, default: false },
+        chat_button_text: null,
+        chat_button_color: null,
+        chat_button_position: { default: "bottom_right" },
+        base_color: { default: "#4fafe4" }
+      },
+      emits: ["toggle"],
+      setup(__props, { emit }) {
+        const props = __props;
+        const cssClasses = computed(() => {
+          const classes = [];
+          props.chat_button_style === "round" ? classes.push("rounded-full") : classes.push("rounded-md");
+          props.chat_button_position === "bottom_right" ? classes.push("right-0") : classes.push("left-0");
+          return classes;
+        });
+        const { base_color } = toRefs(props);
+        const { textClass, styleType } = useTextClass(base_color);
+        const style = computed(() => ({
+          [styleType.value]: props.base_color
+        }));
+        return (_ctx, _cache) => {
+          return withDirectives((openBlock(), createElementBlock("button", {
+            class: normalizeClass(["absolute bottom-0 flex w-16 h-16 rounded-full cursor-pointer hover:scale-105 duration-200 shadow-xl transition-all z-50", [...unref(cssClasses), unref(textClass)]]),
+            style: normalizeStyle(unref(style)),
+            onClick: _cache[0] || (_cache[0] = ($event) => emit("toggle"))
+          }, _hoisted_2$5, 6)), [
+            [vShow, !__props.isOpen]
+          ]);
+        };
+      }
+    });
+
+    const _style_0$2 = "@import url(https://fonts.googleapis.com/css2?family=Nunito&display=swap);\n\n\n/*\n! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com\n*/\n\n\n/*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n::before,\n::after {\n  --tw-content: '';\n}\n\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n5. Use the user's configured `sans` font-feature-settings by default.\n*/\nhtml {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: Nunito; /* 4 */\n  font-feature-settings: normal; /* 5 */\n}\n\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n\n/*\nRemove the default font size and weight for headings.\n*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\nb,\nstrong {\n  font-weight: bolder;\n}\n\n\n/*\n1. Use the user's configured `mono` font family by default.\n2. Correct the odd `em` font sizing in all browsers.\n*/\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n\n/*\nAdd the correct font size in all browsers.\n*/\nsmall {\n  font-size: 80%;\n}\n\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsub {\n  bottom: -0.25em;\n}\nsup {\n  top: -0.5em;\n}\n\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  font-weight: inherit; /* 1 */\n  line-height: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\nbutton,\nselect {\n  text-transform: none;\n}\n\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n:-moz-focusring {\n  outline: auto;\n}\n\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\nprogress {\n  vertical-align: baseline;\n}\n\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\nsummary {\n  display: list-item;\n}\n\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\nfieldset {\n  margin: 0;\n  padding: 0;\n}\nlegend {\n  padding: 0;\n}\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\ntextarea {\n  resize: vertical;\n}\n\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n\n/*\nSet the default cursor for buttons.\n*/\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n\n/* Make elements with the HTML hidden attribute stay hidden by default */\n[hidden] {\n  display: none;\n}\n:root,\n[data-theme]{\n  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1));\n  color: hsla(var(--bc) / var(--tw-text-opacity, 1));\n}\nhtml{\n  -webkit-tap-highlight-color: transparent;\n}\n:root{\n  color-scheme: dark;\n  --pf: 198 93% 48%;\n  --sf: 234 89% 59%;\n  --af: 329 86% 56%;\n  --b2: 222 47% 10%;\n  --b3: 222 47% 9%;\n  --bc: 222 66% 82%;\n  --pc: 198 100% 12%;\n  --sc: 234 100% 15%;\n  --ac: 329 100% 14%;\n  --nc: 217 76% 83%;\n  --inc: 198 100% 10%;\n  --suc: 172 100% 10%;\n  --wac: 41 100% 13%;\n  --erc: 351 100% 14%;\n  --rounded-box: 1rem;\n  --rounded-btn: 0.5rem;\n  --rounded-badge: 1.9rem;\n  --animation-btn: 0.25s;\n  --animation-input: .2s;\n  --btn-text-case: uppercase;\n  --btn-focus-scale: 0.95;\n  --border-btn: 1px;\n  --tab-border: 1px;\n  --tab-radius: 0.5rem;\n  --p: 198 93% 60%;\n  --s: 234 89% 74%;\n  --a: 329 86% 70%;\n  --n: 217 33% 17%;\n  --nf: 217 30% 22%;\n  --b1: 222 47% 11%;\n  --in: 198 90% 48%;\n  --su: 172 66% 50%;\n  --wa: 41 88% 64%;\n  --er: 351 95% 71%;\n}\n*, ::before, ::after{\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n::backdrop{\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n.avatar{\n  position: relative;\n  display: inline-flex;\n}\n.avatar > div{\n  display: block;\n  aspect-ratio: 1 / 1;\n  overflow: hidden;\n}\n.avatar img{\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.avatar.placeholder > div{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.btn{\n  display: inline-flex;\n  flex-shrink: 0;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  border-color: transparent;\n  border-color: hsl(var(--n) / var(--tw-border-opacity));\n  text-align: center;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  border-radius: var(--rounded-btn, 0.5rem);\n  height: 3rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 1em;\n  min-height: 3rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  text-transform: var(--btn-text-case, uppercase);\n  text-decoration-line: none;\n  border-width: var(--border-btn, 1px);\n  animation: button-pop var(--animation-btn, 0.25s) ease-out;\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.btn-disabled,\n  .btn[disabled]{\n  pointer-events: none;\n}\n.btn-square{\n  height: 3rem;\n  width: 3rem;\n  padding: 0px;\n}\n.btn-circle{\n  height: 3rem;\n  width: 3rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn.loading,\n    .btn.loading:hover{\n  pointer-events: none;\n}\n.btn.loading:before{\n  margin-right: 0.5rem;\n  height: 1rem;\n  width: 1rem;\n  border-radius: 9999px;\n  border-width: 2px;\n  animation: spin 2s linear infinite;\n  content: \"\";\n  border-top-color: transparent;\n  border-left-color: transparent;\n  border-bottom-color: currentColor;\n  border-right-color: currentColor;\n}\n@media (prefers-reduced-motion: reduce){\n.btn.loading:before{\n    animation: spin 10s linear infinite;\n}\n}\n@keyframes spin{\nfrom{\n    transform: rotate(0deg);\n}\nto{\n    transform: rotate(360deg);\n}\n}\n.btn-group > input[type=\"radio\"].btn{\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.btn-group > input[type=\"radio\"].btn:before{\n  content: attr(data-title);\n}\n.card{\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  border-radius: var(--rounded-box, 1rem);\n}\n.card:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.card-body{\n  display: flex;\n  flex: 1 1 auto;\n  flex-direction: column;\n  padding: var(--padding-card, 2rem);\n  gap: 0.5rem;\n}\n.card-body :where(p){\n  flex-grow: 1;\n}\n.card-actions{\n  display: flex;\n  flex-wrap: wrap;\n  align-items: flex-start;\n  gap: 0.5rem;\n}\n.card figure{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.card.image-full{\n  display: grid;\n}\n.card.image-full:before{\n  position: relative;\n  content: \"\";\n  z-index: 10;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  opacity: 0.75;\n  border-radius: var(--rounded-box, 1rem);\n}\n.card.image-full:before,\n    .card.image-full > *{\n  grid-column-start: 1;\n  grid-row-start: 1;\n}\n.card.image-full > figure img{\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card.image-full > .card-body{\n  position: relative;\n  z-index: 20;\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.carousel{\n  display: flex;\n  overflow-x: scroll;\n  scroll-snap-type: x mandatory;\n  scroll-behavior: smooth;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.carousel-item{\n  box-sizing: content-box;\n  display: flex;\n  flex: none;\n  scroll-snap-align: start;\n}\n.carousel-center .carousel-item{\n  scroll-snap-align: center;\n}\n.carousel-end .carousel-item{\n  scroll-snap-align: end;\n}\n.chat{\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  -moz-column-gap: 0.75rem;\n       column-gap: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n.chat-image{\n  grid-row: span 2 / span 2;\n  align-self: flex-end;\n}\n.chat-header{\n  grid-row-start: 1;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.chat-bubble{\n  position: relative;\n  display: block;\n  width: -moz-fit-content;\n  width: fit-content;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  max-width: 90%;\n  border-radius: var(--rounded-box, 1rem);\n  min-height: 2.75rem;\n  min-width: 2.75rem;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.chat-bubble:before{\n  position: absolute;\n  bottom: 0px;\n  height: 0.75rem;\n  width: 0.75rem;\n  background-color: inherit;\n  content: \"\";\n  -webkit-mask-size: contain;\n  mask-size: contain;\n  -webkit-mask-repeat: no-repeat;\n  mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  mask-position: center;\n}\n.chat-start{\n  place-items: start;\n  grid-template-columns: auto 1fr;\n}\n.chat-start .chat-header{\n  grid-column-start: 2;\n}\n.chat-start .chat-footer{\n  grid-column-start: 2;\n}\n.chat-start .chat-image{\n  grid-column-start: 1;\n}\n.chat-start .chat-bubble{\n  grid-column-start: 2;\n  border-bottom-left-radius: 0px;\n}\n.chat-start .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  left: -0.75rem;\n}\n[dir=\"rtl\"] .chat-start .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n}\n.chat-end{\n  place-items: end;\n  grid-template-columns: 1fr auto;\n}\n.chat-end .chat-header{\n  grid-column-start: 1;\n}\n.chat-end .chat-footer{\n  grid-column-start: 1;\n}\n.chat-end .chat-image{\n  grid-column-start: 2;\n}\n.chat-end .chat-bubble{\n  grid-column-start: 1;\n  border-bottom-right-radius: 0px;\n}\n.chat-end .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  left: 100%;\n}\n[dir=\"rtl\"] .chat-end .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n}\n.divider{\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  align-self: stretch;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  height: 1rem;\n  white-space: nowrap;\n}\n.divider:before,\n  .divider:after{\n  content: \"\";\n  flex-grow: 1;\n  height: 0.125rem;\n  width: 100%;\n}\n.input{\n  flex-shrink: 1;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  height: 3rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  font-size: 1rem;\n  line-height: 2;\n  line-height: 1.5rem;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b1) / var(--tw-bg-opacity));\n  border-radius: var(--rounded-btn, 0.5rem);\n}\n.input-group > .input{\n  isolation: isolate;\n}\n.input-group > *,\n  .input-group > .input,\n  .input-group > .select{\n  border-radius: 0px;\n}\n.link{\n  cursor: pointer;\n  text-decoration-line: underline;\n}\n.menu > :where(li.disabled > *:not(ul):focus){\n  cursor: auto;\n}\n.steps .step{\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-template-columns: auto;\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n  grid-template-rows: 40px 1fr;\n  place-items: center;\n  text-align: center;\n  min-width: 4rem;\n}\n.swap{\n  position: relative;\n  display: inline-grid;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  place-content: center;\n  cursor: pointer;\n}\n.swap > *{\n  grid-column-start: 1;\n  grid-row-start: 1;\n  transition-duration: 300ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-property: transform, opacity;\n}\n.swap input{\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.swap .swap-on,\n.swap .swap-indeterminate,\n.swap input:indeterminate ~ .swap-on{\n  opacity: 0;\n}\n.swap input:checked ~ .swap-off,\n.swap.swap-active .swap-off,\n.swap input:indeterminate ~ .swap-off{\n  opacity: 0;\n}\n.swap input:checked ~ .swap-on,\n.swap-active .swap-on,\n.swap input:indeterminate ~ .swap-indeterminate{\n  opacity: 1;\n}\n.tab{\n  position: relative;\n  display: inline-flex;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  height: 2rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 2;\n  --tab-padding: 1rem;\n  --tw-text-opacity: 0.5;\n  --tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));\n  --tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));\n  --tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));\n  color: var(--tab-color);\n  padding-left: var(--tab-padding, 1rem);\n  padding-right: var(--tab-padding, 1rem);\n}\n.textarea{\n  flex-shrink: 1;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 2;\n  min-height: 3rem;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b1) / var(--tw-bg-opacity));\n  border-radius: var(--rounded-btn, 0.5rem);\n}\n.toggle{\n  flex-shrink: 0;\n  --tglbg: hsl(var(--b1));\n  --handleoffset: 1.5rem;\n  --handleoffsetcalculator: calc(var(--handleoffset) * -1);\n  --togglehandleborder: 0 0;\n  height: 1.5rem;\n  width: 3rem;\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0.2;\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.5;\n  transition-duration: 300ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  border-radius: var(--rounded-badge, 1.9rem);\n  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;\n  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);\n}\n.avatar-group :where(.avatar){\n  overflow: hidden;\n  border-radius: 9999px;\n  border-width: 4px;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b1) / var(--tw-border-opacity));\n}\n.btm-nav>*.disabled,\n    .btm-nav>*.disabled:hover,\n    .btm-nav>*[disabled],\n    .btm-nav>*[disabled]:hover{\n  pointer-events: none;\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.btn:active:hover,\n  .btn:active:focus{\n  animation: none;\n  transform: scale(var(--btn-focus-scale, 0.95));\n}\n.btn:hover,\n    .btn-active{\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));\n}\n.btn:focus-visible{\n  outline: 2px solid hsl(var(--nf));\n  outline-offset: 2px;\n}\n.btn.glass:hover,\n    .btn.glass.btn-active{\n  --glass-opacity: 25%;\n  --glass-border-opacity: 15%;\n}\n.btn.glass:focus-visible{\n  outline: 2px solid currentColor;\n}\n.btn-ghost{\n  border-width: 1px;\n  border-color: transparent;\n  background-color: transparent;\n  color: currentColor;\n}\n.btn-ghost:hover,\n    .btn-ghost.btn-active{\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n}\n.btn-ghost:focus-visible{\n  outline: 2px solid currentColor;\n}\n.btn-disabled,\n  .btn-disabled:hover,\n  .btn[disabled],\n  .btn[disabled]:hover{\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.btn.loading.btn-square:before,\n    .btn.loading.btn-circle:before{\n  margin-right: 0px;\n}\n.btn.loading.btn-xl:before,\n    .btn.loading.btn-lg:before{\n  height: 1.25rem;\n  width: 1.25rem;\n}\n.btn.loading.btn-sm:before,\n    .btn.loading.btn-xs:before{\n  height: 0.75rem;\n  width: 0.75rem;\n}\n.btn-group > input[type=\"radio\"]:checked.btn,\n  .btn-group > .btn-active{\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--p) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--p) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--pc) / var(--tw-text-opacity));\n}\n.btn-group > input[type=\"radio\"]:checked.btn:focus-visible, .btn-group > .btn-active:focus-visible{\n  outline: 2px solid hsl(var(--p));\n}\n@keyframes button-pop{\n0%{\n    transform: scale(var(--btn-focus-scale, 0.95));\n}\n40%{\n    transform: scale(1.02);\n}\n100%{\n    transform: scale(1);\n}\n}\n.card :where(figure:first-child){\n  overflow: hidden;\n  border-start-start-radius: inherit;\n  border-start-end-radius: inherit;\n  border-end-start-radius: unset;\n  border-end-end-radius: unset;\n}\n.card :where(figure:last-child){\n  overflow: hidden;\n  border-start-start-radius: unset;\n  border-start-end-radius: unset;\n  border-end-start-radius: inherit;\n  border-end-end-radius: inherit;\n}\n.card:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n.card.bordered{\n  border-width: 1px;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n}\n.card.compact .card-body{\n  padding: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.card.image-full :where(figure){\n  overflow: hidden;\n  border-radius: inherit;\n}\n.carousel::-webkit-scrollbar{\n  display: none;\n}\n@keyframes checkmark{\n0%{\n    background-position-y: 5px;\n}\n50%{\n    background-position-y: -2px;\n}\n100%{\n    background-position-y: 0;\n}\n}\n.divider:before{\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n}\n.divider:after{\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n}\n.divider:not(:empty){\n  gap: 1rem;\n}\n.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost{\n  outline: 2px solid currentColor;\n}\n.input[list]::-webkit-calendar-picker-indicator{\n  line-height: 1em;\n}\n.input:focus{\n  outline: 2px solid hsla(var(--bc) / 0.2);\n  outline-offset: 2px;\n}\n.input-disabled,\n  .input[disabled]{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 0.2;\n}\n.input-disabled::-moz-placeholder, .input[disabled]::-moz-placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.input-disabled::placeholder,\n  .input[disabled]::placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.link-primary{\n  --tw-text-opacity: 1;\n  color: hsl(var(--p) / var(--tw-text-opacity));\n}\n.link-primary:hover{\n  --tw-text-opacity: 1;\n  color: hsl(var(--pf, var(--p)) / var(--tw-text-opacity));\n}\n.link:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.link:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n.menu li.disabled > *{\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.menu li.disabled > *:hover{\n  background-color: transparent;\n}\n.mockup-phone .display{\n  overflow: hidden;\n  border-radius: 40px;\n  margin-top: -25px;\n}\n@keyframes progress-loading{\n50%{\n    left: 107%;\n}\n}\n@keyframes radiomark{\n0%{\n    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;\n}\n50%{\n    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;\n}\n100%{\n    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;\n}\n}\n@keyframes rating-pop{\n0%{\n    transform: translateY(-0.125em);\n}\n40%{\n    transform: translateY(-0.125em);\n}\n100%{\n    transform: translateY(0);\n}\n}\n.steps .step:before{\n  top: 0px;\n  grid-column-start: 1;\n  grid-row-start: 1;\n  height: 0.5rem;\n  width: 100%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  content: \"\";\n  margin-left: -100%;\n}\n.steps .step:after{\n  content: counter(step);\n  counter-increment: step;\n  z-index: 1;\n  position: relative;\n  grid-column-start: 1;\n  grid-row-start: 1;\n  display: grid;\n  height: 2rem;\n  width: 2rem;\n  place-items: center;\n  place-self: center;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n}\n.steps .step:first-child:before{\n  content: none;\n}\n.steps .step[data-content]:after{\n  content: attr(data-content);\n}\n.tab:hover{\n  --tw-text-opacity: 1;\n}\n.tab.tab-active{\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 1;\n  --tw-text-opacity: 1;\n}\n.tab:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.tab:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: -3px;\n}\n.tab:focus-visible.tab-lifted{\n  border-bottom-right-radius: var(--tab-radius, 0.5rem);\n  border-bottom-left-radius: var(--tab-radius, 0.5rem);\n}\n.textarea:focus{\n  outline: 2px solid hsla(var(--bc) / 0.2);\n  outline-offset: 2px;\n}\n.textarea-disabled,\n  .textarea[disabled]{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 0.2;\n}\n.textarea-disabled::-moz-placeholder, .textarea[disabled]::-moz-placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.textarea-disabled::placeholder,\n  .textarea[disabled]::placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n@keyframes toast-pop{\n0%{\n    transform: scale(0.9);\n    opacity: 0;\n}\n100%{\n    transform: scale(1);\n    opacity: 1;\n}\n}\n[dir=\"rtl\"] .toggle{\n  --handleoffsetcalculator: calc(var(--handleoffset) * 1);\n}\n.toggle:focus-visible{\n  outline: 2px solid hsl(var(--bc));\n  outline-offset: 2px;\n}\n.toggle:checked,\n  .toggle[checked=\"true\"],\n  .toggle[aria-checked=true]{\n  --handleoffsetcalculator: var(--handleoffset);\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n}\n[dir=\"rtl\"] .toggle:checked, [dir=\"rtl\"] .toggle[checked=\"true\"], [dir=\"rtl\"] .toggle[aria-checked=true]{\n  --handleoffsetcalculator: calc(var(--handleoffset) * -1);\n}\n.toggle:indeterminate{\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;\n}\n[dir=\"rtl\"] .toggle:indeterminate{\n  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;\n}\n.toggle:disabled{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  background-color: transparent;\n  opacity: 0.3;\n  --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;\n}\n.min-h-16{\n  min-height: 4rem;\n}\n.btn-sm{\n  height: 2rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  min-height: 2rem;\n  font-size: 0.875rem;\n}\n.btn-square:where(.btn-xs){\n  height: 1.5rem;\n  width: 1.5rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-sm){\n  height: 2rem;\n  width: 2rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-md){\n  height: 3rem;\n  width: 3rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-lg){\n  height: 4rem;\n  width: 4rem;\n  padding: 0px;\n}\n.btn-circle:where(.btn-xs){\n  height: 1.5rem;\n  width: 1.5rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-sm){\n  height: 2rem;\n  width: 2rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-md){\n  height: 3rem;\n  width: 3rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-lg){\n  height: 4rem;\n  width: 4rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.steps-horizontal .step{\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n  place-items: center;\n  text-align: center;\n}\n.steps-vertical .step{\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  grid-template-rows: repeat(1, minmax(0, 1fr));\n}\n.avatar.online:before{\n  content: \"\";\n  position: absolute;\n  z-index: 10;\n  display: block;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--su) / var(--tw-bg-opacity));\n  width: 15%;\n  height: 15%;\n  top: 7%;\n  right: 7%;\n  box-shadow: 0 0 0 2px hsl(var(--b1));\n}\n.avatar.offline:before{\n  content: \"\";\n  position: absolute;\n  z-index: 10;\n  display: block;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  width: 15%;\n  height: 15%;\n  top: 7%;\n  right: 7%;\n  box-shadow: 0 0 0 2px hsl(var(--b1));\n}\n.btn-group .btn:not(:first-child):not(:last-child), .btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group .btn:first-child:not(:last-child), .btn-group.btn-group-horizontal .btn:first-child:not(:last-child){\n  margin-left: -1px;\n  margin-top: -0px;\n  border-top-left-radius: var(--rounded-btn, 0.5rem);\n  border-top-right-radius: 0;\n  border-bottom-left-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-right-radius: 0;\n}\n.btn-group .btn:last-child:not(:first-child), .btn-group.btn-group-horizontal .btn:last-child:not(:first-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: var(--rounded-btn, 0.5rem);\n}\n.btn-group.btn-group-vertical .btn:first-child:not(:last-child){\n  margin-left: -0px;\n  margin-top: -1px;\n  border-top-left-radius: var(--rounded-btn, 0.5rem);\n  border-top-right-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group.btn-group-vertical .btn:last-child:not(:first-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-left-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-right-radius: var(--rounded-btn, 0.5rem);\n}\n.card-compact .card-body{\n  padding: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.card-compact .card-title{\n  margin-bottom: 0.25rem;\n}\n.card-normal .card-body{\n  padding: var(--padding-card, 2rem);\n  font-size: 1rem;\n  line-height: 1.5rem;\n}\n.steps-horizontal .step{\n  grid-template-rows: 40px 1fr;\n  grid-template-columns: auto;\n  min-width: 4rem;\n}\n.steps-horizontal .step:before{\n  height: 0.5rem;\n  width: 100%;\n  --tw-translate-y: 0px;\n  --tw-translate-x: 0px;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  content: \"\";\n  margin-left: -100%;\n}\n.steps-vertical .step{\n  gap: 0.5rem;\n  grid-template-columns: 40px 1fr;\n  grid-template-rows: auto;\n  min-height: 4rem;\n  justify-items: start;\n}\n.steps-vertical .step:before{\n  height: 100%;\n  width: 0.5rem;\n  --tw-translate-y: -50%;\n  --tw-translate-x: -50%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  margin-left: 50%;\n}\n.fixed{\n  position: fixed;\n}\n.absolute{\n  position: absolute;\n}\n.relative{\n  position: relative;\n}\n.bottom-0{\n  bottom: 0px;\n}\n.right-0{\n  right: 0px;\n}\n.top-3{\n  top: 12px;\n}\n.right-3{\n  right: 12px;\n}\n.left-0{\n  left: 0px;\n}\n.z-50{\n  z-index: 50;\n}\n.z-40{\n  z-index: 40;\n}\n.m-5{\n  margin: 20px;\n}\n.mx-auto{\n  margin-left: auto;\n  margin-right: auto;\n}\n.my-auto{\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.mr-5{\n  margin-right: 20px;\n}\n.ml-5{\n  margin-left: 20px;\n}\n.mt-4{\n  margin-top: 16px;\n}\n.mt-2{\n  margin-top: 8px;\n}\n.mr-2{\n  margin-right: 8px;\n}\n.ml-9{\n  margin-left: 36px;\n}\n.mt-3{\n  margin-top: 12px;\n}\n.mb-2{\n  margin-bottom: 8px;\n}\n.flex{\n  display: flex;\n}\n.h-full{\n  height: 100%;\n}\n.h-8{\n  height: 32px;\n}\n.h-max{\n  height: -moz-max-content;\n  height: max-content;\n}\n.h-10{\n  height: 40px;\n}\n.h-16{\n  height: 64px;\n}\n.h-5{\n  height: 20px;\n}\n.h-6{\n  height: 24px;\n}\n.h-\\[100\\%\\]{\n  height: 100%;\n}\n.h-\\[90\\%\\]{\n  height: 90%;\n}\n.h-\\[694px\\]{\n  height: 694px;\n}\n.\\!h-\\[64px\\]{\n  height: 64px !important;\n}\n.h-\\[630px\\]{\n  height: 630px;\n}\n.h-4{\n  height: 16px;\n}\n.h-32{\n  height: 8rem;\n}\n.max-h-\\[144px\\]{\n  max-height: 144px;\n}\n.w-full{\n  width: 100%;\n}\n.w-8{\n  width: 32px;\n}\n.w-10{\n  width: 40px;\n}\n.w-5{\n  width: 20px;\n}\n.w-6{\n  width: 24px;\n}\n.w-11\\/12{\n  width: 91.666667%;\n}\n.w-\\[372px\\]{\n  width: 372px;\n}\n.w-48{\n  width: 12rem;\n}\n.w-16{\n  width: 64px;\n}\n.flex-none{\n  flex: none;\n}\n.flex-1{\n  flex: 1 1 0%;\n}\n.scale-\\[0\\.3\\]{\n  --tw-scale-x: 0.3;\n  --tw-scale-y: 0.3;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.scale-50{\n  --tw-scale-x: .5;\n  --tw-scale-y: .5;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.transform{\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.cursor-pointer{\n  cursor: pointer;\n}\n.select-none{\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n}\n.resize-none{\n  resize: none;\n}\n.flex-col{\n  flex-direction: column;\n}\n.items-end{\n  align-items: flex-end;\n}\n.items-center{\n  align-items: center;\n}\n.justify-end{\n  justify-content: flex-end;\n}\n.justify-center{\n  justify-content: center;\n}\n.justify-between{\n  justify-content: space-between;\n}\n.space-x-4 > :not([hidden]) ~ :not([hidden]){\n  --tw-space-x-reverse: 0;\n  margin-right: calc(16px * var(--tw-space-x-reverse));\n  margin-left: calc(16px * calc(1 - var(--tw-space-x-reverse)));\n}\n.self-end{\n  align-self: flex-end;\n}\n.overflow-auto{\n  overflow: auto;\n}\n.overflow-y-auto{\n  overflow-y: auto;\n}\n.rounded-full{\n  border-radius: 9999px;\n}\n.rounded-2xl{\n  border-radius: 1rem;\n}\n.rounded-md{\n  border-radius: 0.375rem;\n}\n.rounded-r-lg{\n  border-top-right-radius: 0.5rem;\n  border-bottom-right-radius: 0.5rem;\n}\n.rounded-l-lg{\n  border-top-left-radius: 0.5rem;\n  border-bottom-left-radius: 0.5rem;\n}\n.rounded-t-2xl{\n  border-top-left-radius: 1rem;\n  border-top-right-radius: 1rem;\n}\n.rounded-tl-lg{\n  border-top-left-radius: 0.5rem;\n}\n.rounded-tr-lg{\n  border-top-right-radius: 0.5rem;\n}\n.border-0{\n  border-width: 0px;\n}\n.border-b-2{\n  border-bottom-width: 2px;\n}\n.border-none{\n  border-style: none;\n}\n.bg-white{\n  --tw-bg-opacity: 1;\n  background-color: rgb(255 255 255 / var(--tw-bg-opacity));\n}\n.bg-\\[\\#DDE2EB\\]{\n  --tw-bg-opacity: 1;\n  background-color: rgb(221 226 235 / var(--tw-bg-opacity));\n}\n.bg-transparent{\n  background-color: transparent;\n}\n.bg-white\\/50{\n  background-color: rgb(255 255 255 / 0.5);\n}\n.bg-black\\/30{\n  background-color: rgb(0 0 0 / 0.3);\n}\n.bg-black\\/60{\n  background-color: rgb(0 0 0 / 0.6);\n}\n.bg-primary\\/70{\n  background-color: hsl(var(--p) / 0.7);\n}\n.p-4{\n  padding: 16px;\n}\n.px-5{\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.py-4{\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n.px-3{\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.py-3{\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n.py-2{\n  padding-top: 8px;\n  padding-bottom: 8px;\n}\n.px-4{\n  padding-left: 16px;\n  padding-right: 16px;\n}\n.pr-4{\n  padding-right: 16px;\n}\n.pt-3{\n  padding-top: 12px;\n}\n.pt-0{\n  padding-top: 0px;\n}\n.pb-3{\n  padding-bottom: 12px;\n}\n.text-center{\n  text-align: center;\n}\n.align-middle{\n  vertical-align: middle;\n}\n.\\!font-sans{\n  font-family: Nunito !important;\n}\n.text-xs{\n  font-size: 12px;\n  line-height: 16px;\n}\n.text-xl{\n  font-size: 20px;\n  line-height: 28px;\n}\n.text-lg{\n  font-size: 18px;\n  line-height: 28px;\n}\n.text-\\[16px\\]{\n  font-size: 16px;\n}\n.text-base{\n  font-size: 16px;\n  line-height: 24px;\n}\n.\\!text-base{\n  font-size: 16px !important;\n  line-height: 24px !important;\n}\n.font-bold{\n  font-weight: 700;\n}\n.leading-\\[24px\\]{\n  line-height: 24px;\n}\n.leading-6{\n  line-height: 1.5rem;\n}\n.leading-5{\n  line-height: 1.25rem;\n}\n.\\!leading-\\[24px\\]{\n  line-height: 24px !important;\n}\n.text-black{\n  --tw-text-opacity: 1;\n  color: rgb(0 0 0 / var(--tw-text-opacity));\n}\n.text-white{\n  --tw-text-opacity: 1;\n  color: rgb(255 255 255 / var(--tw-text-opacity));\n}\n.text-white\\/40{\n  color: rgb(255 255 255 / 0.4);\n}\n.text-neutral{\n  --tw-text-opacity: 1;\n  color: hsl(var(--n) / var(--tw-text-opacity));\n}\n.text-opacity-60{\n  --tw-text-opacity: 0.6;\n}\n.opacity-50{\n  opacity: 0.5;\n}\n.shadow-xl{\n  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.blur{\n  --tw-blur: blur(8px);\n  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);\n}\n.drop-shadow-2xl{\n  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));\n  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);\n}\n.backdrop-blur-sm{\n  --tw-backdrop-blur: blur(4px);\n  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n}\n.transition-all{\n  transition-property: all;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.duration-200{\n  transition-duration: 200ms;\n}\n.line-clamp-6{\n  overflow: hidden;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 6;\n}\n.lds-ellipsis {\n  display: inline-block;\n  position: relative;\n  width: 20px;\n  height: 20px;\n}\n.lds-ellipsis div {\n  position: absolute;\n  top: 33px;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  background: #4fafe4;\n  animation-timing-function: cubic-bezier(0, 1, 1, 0);\n}\n.lds-ellipsis div:nth-child(1) {\n  left: 8px;\n  animation: lds-ellipsis1 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(2) {\n  left: 8px;\n  animation: lds-ellipsis2 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(3) {\n  left: 32px;\n  animation: lds-ellipsis2 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(4) {\n  left: 56px;\n  animation: lds-ellipsis3 0.6s infinite;\n}\n@keyframes lds-ellipsis1 {\n0% {\n    transform: scale(0);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes lds-ellipsis3 {\n0% {\n    transform: scale(1);\n}\n100% {\n    transform: scale(0);\n}\n}\n@keyframes lds-ellipsis2 {\n0% {\n    transform: translate(0, 0);\n}\n100% {\n    transform: translate(24px, 0);\n}\n}\n.btn-ghost {\n  border-width: 1px;\n  border-color: transparent;\n  background-color: transparent;\n  color: currentColor;\n}\n.btn-ghost:hover,\n  .btn-ghost.btn-active {\n  --tw-border-opacity: 0;\n  background-color: hsl(222 66% 82% / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n  border-width: 0;\n}\n.btn-ghost:focus-visible {\n  outline: 2px solid currentColor;\n}\n.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost {\n  outline: 2px solid currentColor;\n}\n.hover\\:scale-105:hover{\n  --tw-scale-x: 1.05;\n  --tw-scale-y: 1.05;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.hover\\:\\!border-none:hover{\n  border-style: none !important;\n}\n.hover\\:bg-gray-50:hover{\n  --tw-bg-opacity: 1;\n  background-color: rgb(249 250 251 / var(--tw-bg-opacity));\n}\n.hover\\:text-neutral:hover{\n  --tw-text-opacity: 1;\n  color: hsl(var(--n) / var(--tw-text-opacity));\n}\n.focus\\:\\!border-none:focus{\n  border-style: none !important;\n}\n.focus\\:outline-none:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.group:hover .group-hover\\:text-opacity-100{\n  --tw-text-opacity: 1;\n}\n";
+
+    const WidgetButton = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["styles", [_style_0$2]]]);
+
+    const _sfc_main$6 = {};
+
+    const _hoisted_1$6 = {
+      id: "Layer_2",
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 40.5 55.75"
+    };
+    const _hoisted_2$4 = /*#__PURE__*/createStaticVNode("<g id=\"Layer_1-2\"><g><path fill=\"#fff\" d=\"M19,16.5V6.5c0-2.75-2.25-5-5-5h0c-2.75,0-5,2.25-5,5v15c0,5.5,4.5,10,10,10h5c5.5,0,10-4.5,10-10v-5h-15Z\"></path><path fill=\"#454b54\" d=\"M14,8.5c-.4,0-.8-.15-1.05-.45-.3-.25-.45-.65-.45-1.05h3c0,.4-.15,.8-.45,1.05-.3,.25-.65,.45-1.05,.45Z\"></path><path fill=\"#b9dff4\" d=\"M6,54.25l8.95-12.4c2-2.75,6.1-2.75,8.1,0l8.95,12.4\"></path><path fill=\"#454b54\" d=\"M24,33c6.35,0,11.5-5.15,11.5-11.5v-5c0-.85-.65-1.5-1.5-1.5h-13.5V6.5c0-3.6-2.9-6.5-6.5-6.5S7.5,2.9,7.5,6.5v1H1.5c-.85,0-1.5,.65-1.5,1.5v.5c0,.85,.65,1.5,1.5,1.5,.45,0,.85-.2,1.1-.5H7.5v11c0,5.85,4.35,10.65,10,11.4v5.55c-1.5,.35-2.85,1.25-3.75,2.5l-8.95,12.4c-.5,.65-.35,1.6,.35,2.1,.65,.5,1.6,.35,2.1-.35l8.9-12.35c.65-.9,1.7-1.45,2.85-1.45s2.15,.55,2.85,1.45l8.95,12.4c.3,.4,.75,.6,1.2,.6,.3,0,.6-.1,.9-.3,.65-.5,.8-1.4,.35-2.1l-9-12.35c-.95-1.3-2.25-2.15-3.75-2.5v-5.5h3.5Zm-13.5-11.5V6.5c0-1.95,1.55-3.5,3.5-3.5s3.5,1.55,3.5,3.5v10c0,.85,.65,1.5,1.5,1.5h13.5v3.5c0,4.7-3.8,8.5-8.5,8.5h-5c-4.7,0-8.5-3.85-8.5-8.5Z\"></path><path fill=\"#b9dff4\" d=\"M29,26.5h0c-5.5,0-10-4.5-10-10h20c0,5.5-4.5,10-10,10Z\"></path><path fill=\"#3d8199\" d=\"M39,16h-5v5c0,1.45-.3,2.85-.9,4.1,3.45-1.55,5.9-5.05,5.9-9.1t0,0s0,.05,0,0h0\"></path><path fill=\"#454b54\" d=\"M29,28c-6.35,0-11.5-5.15-11.5-11.5,0-.85,.65-1.5,1.5-1.5h20c.85,0,1.5,.65,1.5,1.5,0,6.35-5.15,11.5-11.5,11.5Zm-8.4-10c.7,3.95,4.2,7,8.35,7s7.65-3.05,8.35-7H20.6Z\"></path></g><path fill=\"#454b54\" d=\"M14,5.5c-.4,0-.8,.15-1.05,.45-.3,.25-.45,.65-.45,1.05h3c0-.4-.15-.8-.45-1.05-.3-.25-.65-.45-1.05-.45Z\"></path></g>", 1);
+    const _hoisted_3$4 = [
+      _hoisted_2$4
+    ];
+
+    function _sfc_render$1(_ctx, _cache) {
+      return (openBlock(), createElementBlock("svg", _hoisted_1$6, _hoisted_3$4))
+    }
+    const BirdAwake = /*#__PURE__*/_export_sfc(_sfc_main$6, [['render',_sfc_render$1]]);
+
+    const _sfc_main$5 = {};
+
+    const _hoisted_1$5 = {
+      id: "Layer_2",
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 107.37 28.44"
+    };
+    const _hoisted_2$3 = /*#__PURE__*/createStaticVNode("<g id=\"Layer_1-2\"><g><path fill=\"#304a5e\" d=\"M18.6,14.1v7.57c0,.08-.02,.19-.05,.32-.03,.13-.19,.19-.46,.19h-.41c-.08,0-.2-.02-.33-.05s-.21-.19-.21-.46v-7.61c0-.76-.13-1.48-.38-2.17-.25-.69-.68-1.2-1.28-1.55-.6-.35-1.23-.52-1.89-.52s-1.29,.15-1.84,.46c-.55,.31-.98,.78-1.28,1.41s-.46,1.43-.46,2.38v7.61c0,.19-.04,.32-.13,.4-.08,.07-.22,.11-.41,.11h-.38c-.08,0-.2-.02-.33-.05-.14-.03-.21-.19-.21-.46v-7.61c0-.76-.13-1.48-.38-2.17s-.68-1.2-1.28-1.55c-.6-.35-1.23-.52-1.89-.52-.42,0-.91,.1-1.47,.3-.56,.2-1.05,.63-1.46,1.28s-.62,1.54-.62,2.66v7.61c0,.19-.04,.32-.13,.4-.08,.07-.22,.11-.41,.11h-.38c-.08,0-.2-.02-.33-.05-.14-.03-.21-.19-.21-.46v-7.57c0-1.04,.14-1.92,.43-2.65s.67-1.31,1.16-1.74c.49-.43,1.02-.73,1.62-.9,.59-.17,1.16-.25,1.71-.25,.68,0,1.33,.12,1.95,.36,.62,.24,1.14,.61,1.54,1.09,.4,.49,.7,.98,.89,1.49,.19-.51,.49-1,.89-1.47,.4-.48,.92-.84,1.55-1.09,.63-.25,1.3-.38,2-.38,.55,0,1.11,.08,1.7,.25,.58,.17,1.11,.47,1.6,.9,.49,.43,.87,1.01,1.16,1.74s.43,1.61,.43,2.65Z\"></path><path fill=\"#304a5e\" d=\"M35.91,15.56c0,.74-.11,1.51-.33,2.31-.22,.8-.64,1.58-1.25,2.35s-1.41,1.33-2.38,1.71c-.97,.38-1.96,.57-2.98,.57s-1.99-.17-2.85-.51c-.87-.34-1.61-.81-2.22-1.43s-1.08-1.35-1.39-2.2c-.32-.86-.48-1.79-.48-2.8s.16-1.92,.49-2.79c.33-.87,.79-1.62,1.39-2.25,.6-.63,1.34-1.12,2.2-1.46,.87-.34,1.82-.51,2.85-.51,2.07,0,3.74,.66,5.02,1.96,1.28,1.31,1.92,2.99,1.92,5.04Zm-1.49,.03c0-1.71-.5-3.1-1.49-4.17-.99-1.07-2.31-1.6-3.96-1.6s-3.03,.53-4.01,1.6c-.98,1.07-1.47,2.46-1.47,4.17s.49,3.05,1.47,4.09,2.32,1.55,4.01,1.55c.61,0,1.24-.09,1.87-.27,.63-.18,1.21-.49,1.74-.93,.53-.44,.97-1.04,1.31-1.77,.35-.74,.52-1.63,.52-2.66Z\"></path><path fill=\"#304a5e\" d=\"M49.22,21.68v-6.75c0-1.63-.36-2.88-1.09-3.76-.73-.88-1.78-1.31-3.15-1.31s-2.45,.44-3.17,1.31c-.72,.88-1.08,2.13-1.08,3.76v6.75c0,.08-.02,.19-.05,.32-.03,.13-.2,.19-.49,.19h-.38c-.08,0-.2-.02-.33-.05-.14-.03-.21-.19-.21-.46v-6.69c0-2.09,.49-3.69,1.47-4.79,.98-1.1,2.39-1.65,4.23-1.65s3.25,.55,4.23,1.65c.98,1.1,1.47,2.69,1.47,4.79v6.69c0,.08-.02,.19-.05,.32-.03,.13-.19,.19-.46,.19h-.41c-.08,0-.2-.02-.33-.05s-.21-.19-.21-.46Z\"></path><path fill=\"#304a5e\" d=\"M67.95,15.56c0,.74-.11,1.51-.33,2.31-.22,.8-.64,1.58-1.25,2.35s-1.41,1.33-2.38,1.71c-.97,.38-1.96,.57-2.98,.57s-1.99-.17-2.85-.51c-.87-.34-1.61-.81-2.22-1.43s-1.08-1.35-1.39-2.2c-.32-.86-.48-1.79-.48-2.8s.16-1.92,.49-2.79c.33-.87,.79-1.62,1.39-2.25,.6-.63,1.34-1.12,2.2-1.46,.87-.34,1.82-.51,2.85-.51,2.07,0,3.74,.66,5.02,1.96,1.28,1.31,1.92,2.99,1.92,5.04Zm-1.49,.03c0-1.71-.5-3.1-1.49-4.17-.99-1.07-2.31-1.6-3.96-1.6s-3.03,.53-4.01,1.6c-.98,1.07-1.47,2.46-1.47,4.17s.49,3.05,1.47,4.09,2.32,1.55,4.01,1.55c.61,0,1.24-.09,1.87-.27,.63-.18,1.21-.49,1.74-.93,.53-.44,.97-1.04,1.31-1.77,.35-.74,.52-1.63,.52-2.66Z\"></path><path fill=\"#304a5e\" d=\"M71.4,19.3V.54c0-.08,.02-.2,.05-.33,.03-.14,.19-.21,.49-.21h.38c.08,0,.19,.02,.33,.05,.14,.03,.21,.2,.21,.49V19.17c0,.66,.08,1.15,.25,1.47,.17,.33,.46,.49,.89,.49,.25,0,.56-.05,.92-.16,.11-.02,.18-.01,.24,.03,.05,.04,.08,.14,.08,.29v.44c0,.23-.13,.4-.38,.51-.38,.11-.75,.16-1.11,.16-.89,0-1.5-.25-1.84-.74-.34-.5-.51-1.28-.51-2.36Z\"></path><path fill=\"#304a5e\" d=\"M90.83,15.56c0,.74-.11,1.51-.33,2.31-.22,.8-.64,1.58-1.25,2.35s-1.41,1.33-2.38,1.71c-.97,.38-1.96,.57-2.98,.57s-1.99-.17-2.85-.51c-.87-.34-1.61-.81-2.22-1.43s-1.08-1.35-1.39-2.2c-.32-.86-.48-1.79-.48-2.8s.16-1.92,.49-2.79c.33-.87,.79-1.62,1.39-2.25,.6-.63,1.34-1.12,2.2-1.46,.87-.34,1.82-.51,2.85-.51,2.07,0,3.74,.66,5.02,1.96,1.28,1.31,1.92,2.99,1.92,5.04Zm-1.49,.03c0-1.71-.5-3.1-1.49-4.17-.99-1.07-2.31-1.6-3.96-1.6s-3.03,.53-4.01,1.6c-.98,1.07-1.47,2.46-1.47,4.17s.49,3.05,1.47,4.09,2.32,1.55,4.01,1.55c.61,0,1.24-.09,1.87-.27,.63-.18,1.21-.49,1.74-.93,.53-.44,.97-1.04,1.31-1.77,.35-.74,.52-1.63,.52-2.66Z\"></path><path fill=\"#f8b1ad\" d=\"M107.37,15.56v12.11c0,.08-.02,.2-.06,.33-.04,.14-.2,.21-.48,.21h-.35c-.21,0-.35-.04-.43-.13-.07-.08-.11-.22-.11-.41v-8.33c-.53,.99-1.28,1.77-2.27,2.33s-2.12,.84-3.41,.84c-2.03,0-3.66-.65-4.9-1.95-1.24-1.3-1.85-2.97-1.85-5.02,0-1.01,.16-1.95,.49-2.82,.33-.87,.79-1.61,1.39-2.23,.6-.62,1.33-1.1,2.19-1.43,.86-.33,1.78-.49,2.77-.49,2.09,0,3.78,.65,5.07,1.93,1.29,1.29,1.93,2.98,1.93,5.07Zm-1.49-.03c0-.8-.11-1.51-.33-2.12-.22-.61-.51-1.16-.87-1.65-.36-.49-.9-.93-1.63-1.33-.73-.4-1.61-.6-2.65-.6-.61,0-1.24,.09-1.87,.29-.63,.19-1.21,.52-1.73,.98-.52,.46-.95,1.07-1.28,1.81-.34,.74-.51,1.62-.51,2.63,0,.59,.08,1.21,.24,1.85,.16,.64,.44,1.25,.84,1.81,.4,.56,.96,1.04,1.66,1.44s1.58,.6,2.61,.6,2-.24,2.88-.73c.89-.49,1.55-1.19,1.98-2.11,.43-.92,.65-1.87,.65-2.87Z\"></path></g></g>", 1);
+    const _hoisted_3$3 = [
+      _hoisted_2$3
+    ];
+
+    function _sfc_render(_ctx, _cache) {
+      return (openBlock(), createElementBlock("svg", _hoisted_1$5, _hoisted_3$3))
+    }
+    const MonoloqLogo = /*#__PURE__*/_export_sfc(_sfc_main$5, [['render',_sfc_render]]);
+
+    const _hoisted_1$4 = { class: "lds-ellipsis" };
+    const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+      __name: "Loader",
+      props: {
+        type: { default: "spinner" },
+        base_color: { default: "#4fafe4" }
+      },
+      setup(__props) {
+        const props = __props;
+        const { base_color } = toRefs(props);
+        const { mainColor } = useTextClass(base_color);
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", _hoisted_1$4, [
+            createBaseVNode("div", {
+              style: normalizeStyle({
+                backgroundColor: unref(mainColor)
+              })
+            }, null, 4),
+            createBaseVNode("div", {
+              style: normalizeStyle({
+                backgroundColor: unref(mainColor)
+              })
+            }, null, 4),
+            createBaseVNode("div", {
+              style: normalizeStyle({
+                backgroundColor: unref(mainColor)
+              })
+            }, null, 4),
+            createBaseVNode("div", {
+              style: normalizeStyle({
+                backgroundColor: unref(mainColor)
+              })
+            }, null, 4)
+          ]);
+        };
+      }
+    });
+
+    const Loader_vue_vue_type_style_index_0_scoped_bcbeb45b_lang = '';
+
+    const LoaderAnimation = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-bcbeb45b"]]);
+
+    const _hoisted_1$3 = { class: "absolute bottom-0 right-0 h-[100%] overflow-auto w-full z-50 bg-black/30 backdrop-blur-sm flex" };
+    const _hoisted_2$2 = /* @__PURE__ */ createBaseVNode("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      class: "h-6 w-6",
+      fill: "none",
+      viewBox: "0 0 24 24",
+      stroke: "currentColor"
+    }, [
+      /* @__PURE__ */ createBaseVNode("path", {
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stroke-width": "2",
+        d: "M6 18L18 6M6 6l12 12"
+      })
+    ], -1);
+    const _hoisted_3$2 = [
+      _hoisted_2$2
+    ];
+    const _hoisted_4$2 = { class: "w-full h-max carousel carousel-center p-4 space-x-4 my-auto" };
+    const _hoisted_5$2 = ["onClick"];
+    const _hoisted_6$2 = { class: "card w-full h-full stuff backdrop-blur-sm card-compact bg-black/60 group" };
+    const _hoisted_7$1 = ["src"];
+    const _hoisted_8$1 = { class: "card-body text-white text-center" };
+    const _hoisted_9$1 = { class: "text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200" };
+    const _hoisted_10$1 = { class: "text-base text-white/40 line-clamp-6" };
+    const _hoisted_11$1 = { class: "text-lg mt-2" };
+    const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+      __name: "ChatProducts",
+      props: {
+        products: null,
+        base_color: { default: "#4fafe4" },
+        header_text: null
+      },
+      emits: ["closeProducts", "close"],
+      setup(__props, { emit }) {
+        const props = __props;
+        const productPatch = (products) => {
+          const mocks = [
+            "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_99896357/fee_786_587_png",
+            "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-77245323/fee_786_587_png",
+            "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76434139/fee_786_587_png",
+            "https://marcopolo.dam.aboutyou.cloud/images/images/a56cef664899799cc4c9e18c808f57e4.jpg?width=1360",
+            "https://marcopolo.dam.aboutyou.cloud/images/images/5897d0e8acb5453420812cff4d3c485f.jpg?width=2000",
+            "https://www.bfgcdn.com/1500_1500_90/301-0312-0211/rock-empire-kanrei-kletterschuhe.jpg",
+            "https://www.bfgcdn.com/600_600_90/535-0245-0211/clif-bar-peanut-butter-banana-with-dark-chocolate-energieriegel-bf.jpg",
+            "https://www.bfgcdn.com/600_600_90/205-2457-0111/smith-ruckus-chromapop-s3-vlt-12-s1-vlt-60-fahrradbrille.jpg",
+            "https://images.squarespace-cdn.com/content/v1/5ed78ddc17b2533584cb0fa7/1595011275795-YVJ7AG3M7L6I15934IJ4/Olivia_.jpg"
+          ];
+          return products.map((product) => {
+            if (Array.isArray(product.images) && product.images.length > 0)
+              return { ...product };
+            const random = Math.floor(Math.random() * mocks.length);
+            return { ...product, images: [{ url: mocks.splice(random, 1)[0] }] };
+          });
+        };
+        function recommend(productUrl, itemId) {
+          const url = new URL(productUrl);
+          history.pushState({ monoloqItemId: itemId }, "", url);
+          window.location.assign(url);
+        }
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", _hoisted_1$3, [
+            createBaseVNode("button", {
+              class: "btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60",
+              onClick: _cache[0] || (_cache[0] = ($event) => emit("closeProducts"))
+            }, _hoisted_3$2),
+            createBaseVNode("div", _hoisted_4$2, [
+              (openBlock(true), createElementBlock(Fragment, null, renderList(productPatch(props.products), (product) => {
+                return openBlock(), createElementBlock("div", {
+                  key: product.item_id,
+                  class: "carousel-item h-max w-11/12 cursor-pointer",
+                  onClick: ($event) => recommend(product.url, product.item_id)
+                }, [
+                  createBaseVNode("div", _hoisted_6$2, [
+                    createBaseVNode("figure", null, [
+                      createBaseVNode("img", {
+                        src: product.images?.[product.match_image_idx || 0]?.url,
+                        alt: "shoes"
+                      }, null, 8, _hoisted_7$1)
+                    ]),
+                    createBaseVNode("div", _hoisted_8$1, [
+                      createBaseVNode("p", _hoisted_9$1, toDisplayString(`${product.title}`), 1),
+                      createBaseVNode("div", null, [
+                        createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
+                      ]),
+                      createBaseVNode("p", _hoisted_11$1, toDisplayString(`$${product.price}`), 1)
+                    ])
+                  ])
+                ], 8, _hoisted_5$2);
+              }), 128))
+            ])
+          ]);
+        };
+      }
+    });
+
+    const ChatProducts_vue_vue_type_style_index_0_lang = '';
+
+    const _hoisted_1$2 = { class: "w-full h-max carousel carousel-center px-4 pt-0 pb-3 space-x-4 my-auto relative" };
+    const _hoisted_2$1 = ["onClick"];
+    const _hoisted_3$1 = { class: "card w-full h-full text-center duration-200 bg-[#DDE2EB] transition-all recommendation" };
+    const _hoisted_4$1 = ["src"];
+    const _hoisted_5$1 = { class: "text-xl mt-2 font-bold" };
+    const _hoisted_6$1 = { class: "text-lg mt-2 mb-2" };
+    const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+      __name: "MiniPreview",
+      props: {
+        products: null,
+        base_color: { default: "#4fafe4" },
+        header_text: null
+      },
+      setup(__props) {
+        const props = __props;
+        const productPatch = (products) => {
+          const mocks = [
+            "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_99896357/fee_786_587_png",
+            "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-77245323/fee_786_587_png",
+            "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76434139/fee_786_587_png",
+            "https://marcopolo.dam.aboutyou.cloud/images/images/a56cef664899799cc4c9e18c808f57e4.jpg?width=1360",
+            "https://marcopolo.dam.aboutyou.cloud/images/images/5897d0e8acb5453420812cff4d3c485f.jpg?width=2000",
+            "https://www.bfgcdn.com/1500_1500_90/301-0312-0211/rock-empire-kanrei-kletterschuhe.jpg",
+            "https://www.bfgcdn.com/600_600_90/535-0245-0211/clif-bar-peanut-butter-banana-with-dark-chocolate-energieriegel-bf.jpg",
+            "https://www.bfgcdn.com/600_600_90/205-2457-0111/smith-ruckus-chromapop-s3-vlt-12-s1-vlt-60-fahrradbrille.jpg",
+            "https://images.squarespace-cdn.com/content/v1/5ed78ddc17b2533584cb0fa7/1595011275795-YVJ7AG3M7L6I15934IJ4/Olivia_.jpg"
+          ];
+          return products.map((product) => {
+            if (product.images || product.images?.length > 0)
+              return product;
+            const random = Math.floor(Math.random() * mocks.length);
+            return { product, images: { url: mocks.splice(random, 1)[0] } };
+          });
+        };
+        function recommend(productUrl, itemId) {
+          const url = new URL(productUrl);
+          history.pushState({ monoloqItemId: itemId }, "", url);
+          window.location.assign(url);
+        }
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", _hoisted_1$2, [
+            (openBlock(true), createElementBlock(Fragment, null, renderList(productPatch(props.products), (product) => {
+              return openBlock(), createElementBlock("div", {
+                key: product.item_id,
+                class: "carousel-item h-max w-48 cursor-pointer",
+                onClick: ($event) => recommend(product.url, product.item_id)
+              }, [
+                createBaseVNode("div", _hoisted_3$1, [
+                  createBaseVNode("figure", null, [
+                    createBaseVNode("img", {
+                      src: product.images[product.match_image_idx || 0]?.url,
+                      alt: "shoes",
+                      class: "h-32 mt-3 rounded-md"
+                    }, null, 8, _hoisted_4$1)
+                  ]),
+                  createBaseVNode("p", _hoisted_5$1, toDisplayString(`${product.title}`), 1),
+                  createBaseVNode("p", _hoisted_6$1, toDisplayString(`$${product.price}`), 1)
+                ])
+              ], 8, _hoisted_2$1);
+            }), 128))
+          ]);
+        };
+      }
+    });
+
+    const MiniPreview_vue_vue_type_style_index_0_lang = '';
+
+    const _hoisted_1$1 = { class: "relative flex flex-col h-[630px]" };
+    const _hoisted_2 = {
+      key: 1,
+      class: "absolute w-full"
+    };
+    const _hoisted_3 = {
+      key: 0,
+      class: "relative flex flex-col pt-3"
+    };
+    const _hoisted_4 = ["onClick"];
+    const _hoisted_5 = /* @__PURE__ */ createBaseVNode("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      class: "h-5 w-5",
+      viewBox: "0 0 24 24"
+    }, [
+      /* @__PURE__ */ createBaseVNode("path", {
+        fill: "none",
+        stroke: "currentColor",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stroke-width": "1.5",
+        d: "M8 21h12.4a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6H3.6a.6.6 0 0 0-.6.6V16m.5 4.5L12 12m0 0v4m0-4H8"
+      })
+    ], -1);
+    const _hoisted_6 = [
+      _hoisted_5
+    ];
+    const _hoisted_7 = /* @__PURE__ */ createBaseVNode("div", { class: "divider" }, null, -1);
+    const _hoisted_8 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
+    const _hoisted_9 = {
+      href: "https://www.monoloq.ai/",
+      target: "_blank",
+      class: "flex items-center hover:text-neutral text-neutral"
+    };
+    const _hoisted_10 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
+    const _hoisted_11 = {
+      key: 1,
+      class: "bottom-0 right-0 w-[372px]"
+    };
+    const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+      __name: "ChatWindow.ce",
+      props: {
+        host_name: { default: "ariasilk.com" },
+        show_button_widget: { type: Boolean, default: false },
+        chat_button_position: { default: "bottom_right" }
+      },
+      setup(__props) {
+        const props = __props;
+        const cssClasses = computed(() => {
+          const classes = [];
+          props.chat_button_position === "bottom_right" ? classes.push("right-0") : classes.push("left-0");
+          return classes;
+        });
+        const retries = ref(0);
+        const conversationId = useStorage("conversationId", "");
+        const messages = useStorage("chatBotMessages", []);
+        const products = ref();
+        const setProducts = (recommendation) => products.value = recommendation;
+        const closeProducts = () => {
+          products.value = void 0;
+        };
+        const refChat = ref();
+        const showWidget = ref(true);
+        const isLoading = ref(false);
+        const isChatOpen = useStorage("isChatOpen", false);
+        computed(() => window.location.hostname);
+        const fetch = createFetch({
+          baseUrl: "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",
+          options: {
+            refetch: false,
+            async beforeFetch({ options, cancel }) {
+              const additionalHeaders = { "x-api-key": "thqMbn962S4Sg2r4U6l6Dzx9DTYk9qP9f4RTAB9j" };
+              if (retries.value > 30 || !showWidget.value)
+                cancel();
+              const newOptions = { ...options, headers: { ...options.headers, ...additionalHeaders } };
+              return { options: newOptions };
+            },
+            async onFetchError(ctx) {
+              if (ctx.response?.status === 429) {
+                showWidget.value = false;
+                throw new Error("Monoloq limit reached. Too many requests.");
+              }
+              const errorMessage = {
+                bot_language_text: ctx.data,
+                conversation_id: conversationId.value,
+                sender: "bot",
+                timestamp: new Date().getTime(),
+                user_language_text: ctx.data || ctx.error?.message || "Unknown error",
+                recommended_products: void 0
+              };
+              ctx.data = errorMessage;
+              return ctx;
+            }
+          }
+        });
+        async function onSend(inputMessage) {
+          isLoading.value = true;
+          if (!refChat.value || !conversationId.value)
+            return;
+          const date = new Date();
+          const message = {
+            text: prepareMessage(inputMessage),
+            timestamp: date.getTime(),
+            conversation_id: conversationId.value
+          };
+          messages.value.push(message);
+          const host_domain = devHost("initiate");
+          const queries = new URLSearchParams({
+            host_domain
+          });
+          const { data: serverResponse } = await fetch(`/chat/handle_message?${queries}`).post(message).json();
+          isLoading.value = false;
+          messages.value.push(serverResponse.value);
+          const maybeRecommendedProduct = serverResponse.value?.recommended_products;
+          if (!maybeRecommendedProduct?.length)
+            return;
+          isLoading.value = true;
+          await new Promise((resolve) => setTimeout(resolve, 3e3));
+          isLoading.value = false;
+          setProducts(maybeRecommendedProduct);
+        }
+        const comesFromDomain = computed(() => {
+          if (!document.referrer)
+            return false;
+          const refferer = new URL(document.referrer);
+          if (window.location.hostname === "localhost")
+            return true;
+          return refferer.hostname === window.location.hostname;
+        });
+        function scrollToBottom() {
+          if (!refChat.value)
+            return;
+          const start = refChat.value.scrollTop;
+          const end = refChat.value.scrollHeight;
+          const distance = end - start;
+          let elapsed = 0;
+          const duration = 100;
+          function animate() {
+            elapsed += 16;
+            const fraction = Math.min(1, elapsed / duration);
+            refChat.value.scrollTop = start + distance * fraction;
+            if (fraction < 1)
+              requestAnimationFrame(animate);
+          }
+          requestAnimationFrame(animate);
+        }
+        async function initiate() {
+          isLoading.value = true;
+          const host_domain = devHost("initiate");
+          const queries = new URLSearchParams({
+            host_domain,
+            language: document.documentElement.lang.slice(0, 2) || "en"
+          });
+          const { data: initMessage } = await fetch(`/chat/initiate?${queries.toString()}`).get().json();
+          isLoading.value = false;
+          messages.value.push(initMessage.value);
+          conversationId.value = initMessage.value?.conversation_id;
+        }
+        async function resume() {
+          isLoading.value = true;
+          const host_domain = devHost("initiate");
+          const queries = new URLSearchParams({
+            host_domain,
+            conversation_id: conversationId.value
+          });
+          const { data: resumeMessage } = await fetch(`/chat/resume?${queries.toString()}`).get().json();
+          isLoading.value = false;
+          messages.value.push(resumeMessage.value);
+        }
+        async function pitch(product_id) {
+          isLoading.value = true;
+          const host_domain = devHost("initiate");
+          const queries = new URLSearchParams({
+            host_domain,
+            product_id,
+            conversation_id: conversationId.value
+          });
+          const { data: pitchMessage } = await fetch(`/chat/pitch_product?${queries.toString()}`).get().json();
+          isLoading.value = false;
+          messages.value.push(pitchMessage.value);
+        }
+        watchEffect(() => {
+          if (!messages.value.length || !refChat.value)
+            return;
+          scrollToBottom();
+        });
+        async function connect() {
+          console.log(window.history);
+          if (window.location.hostname === "localhost" && messages.value.length !== 0)
+            return;
+          if (messages.value.length === 0)
+            return await initiate();
+          if (!conversationId.value)
+            return await initiate();
+          if (!comesFromDomain.value) {
+            const isStale = messages.value[messages.value.length - 1].timestamp < new Date().getTime() - 1e3 * 60 * 60 * 8;
+            if (isStale)
+              return await resume();
+          }
+          if (window.history.state?.monoloqItemId)
+            return await pitch(window.history.state?.monoloqItemId);
+        }
+        connect().then();
+        const throttledConnect = useThrottleFn(() => {
+          messages.value = [];
+          connect();
+        }, 5e3);
+        const onClear = async () => {
+          await throttledConnect();
+        };
+        const onClose = () => {
+          isChatOpen.value = false;
+        };
+        const onToggle = () => {
+          isChatOpen.value = true;
+        };
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock(Fragment, null, [
+            createVNode(unref(TransitionSlide), { offset: [0, 200] }, {
+              default: withCtx(() => [
+                unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
+                  key: 0,
+                  class: normalizeClass(["body !font-sans !text-base absolute bottom-0 right-0 text-black flex flex-col bg-white rounded-2xl my-auto mr-2 h-[694px] w-[372px] drop-shadow-2xl z-40 select-none", [...unref(cssClasses)]])
+                }, [
+                  createVNode(_sfc_main$a, mergeProps({ class: "!h-[64px] flex-none" }, { ..._ctx.$attrs, class: void 0 }, {
+                    onClear: _cache[0] || (_cache[0] = ($event) => onClear()),
+                    onClose: _cache[1] || (_cache[1] = ($event) => onClose())
+                  }), null, 16),
+                  createBaseVNode("div", _hoisted_1$1, [
+                    createVNode(unref(TransitionExpand), { duration: 500 }, {
+                      default: withCtx(() => [
+                        products.value ? (openBlock(), createBlock(_sfc_main$3, {
+                          key: 0,
+                          products: products.value,
+                          onCloseProducts: _cache[2] || (_cache[2] = ($event) => closeProducts())
+                        }, null, 8, ["products"])) : (openBlock(), createElementBlock("div", _hoisted_2))
+                      ]),
+                      _: 1
+                    }),
+                    createBaseVNode("div", {
+                      ref_key: "refChat",
+                      ref: refChat,
+                      class: "overflow-y-auto scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"
+                    }, [
+                      createVNode(unref(TransitionSlide), {
+                        group: "",
+                        offset: [0, 16]
+                      }, {
+                        default: withCtx(() => [
+                          (openBlock(true), createElementBlock(Fragment, null, renderList(unref(messages), (message, index) => {
+                            return openBlock(), createElementBlock(Fragment, {
+                              key: message.timestamp
+                            }, [
+                              createVNode(ChatBubble, mergeProps({ ..._ctx.$attrs, class: void 0 }, {
+                                date: new Date(message.timestamp).getTime(),
+                                message,
+                                "is-first": index === 0,
+                                onOpenProducts: setProducts
+                              }), null, 16, ["date", "message", "is-first"]),
+                              "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_3, [
+                                createBaseVNode("button", {
+                                  class: "btn btn-square self-end btn-sm btn-ghost hover:!border-none focus:!border-none",
+                                  onClick: ($event) => setProducts(message.recommended_products)
+                                }, _hoisted_6, 8, _hoisted_4),
+                                createVNode(_sfc_main$2, {
+                                  products: message.recommended_products
+                                }, null, 8, ["products"]),
+                                _hoisted_7
+                              ])) : createCommentVNode("", true)
+                            ], 64);
+                          }), 128))
+                        ]),
+                        _: 1
+                      }),
+                      withDirectives(createVNode(LoaderAnimation, mergeProps({ class: "scale-50 ml-9" }, { ..._ctx.$attrs, class: void 0 }), null, 16), [
+                        [vShow, isLoading.value]
+                      ])
+                    ], 512),
+                    createBaseVNode("div", _hoisted_8, [
+                      createBaseVNode("a", _hoisted_9, [
+                        _hoisted_10,
+                        createVNode(MonoloqLogo, { class: "h-4 my-auto" })
+                      ])
+                    ]),
+                    createVNode(_sfc_main$8, mergeProps({
+                      class: "flex-none",
+                      "is-loading": isLoading.value
+                    }, { ..._ctx.$attrs, class: void 0 }, { onSend }), null, 16, ["is-loading"])
+                  ])
+                ], 2)) : (openBlock(), createElementBlock("div", _hoisted_11))
+              ]),
+              _: 1
+            }),
+            renderSlot(_ctx.$slots, "widgetButton", { toggle: onToggle }, () => [
+              props.show_button_widget && showWidget.value ? (openBlock(), createBlock(WidgetButton, mergeProps({ key: 0 }, { ..._ctx.$attrs, class: void 0 }, {
+                chat_button_position: props.chat_button_position,
+                "is-open": unref(isChatOpen),
+                onToggle: _cache[3] || (_cache[3] = ($event) => onToggle())
+              }), {
+                default: withCtx(() => [
+                  createVNode(BirdAwake, { class: "w-8 h-8 mx-auto my-auto" })
+                ]),
+                _: 1
+              }, 16, ["chat_button_position", "is-open"])) : createCommentVNode("", true)
+            ])
+          ], 64);
+        };
+      }
+    });
+
+    const _style_0$1 = "@import url(https://fonts.googleapis.com/css2?family=Nunito&display=swap);\n\n\n/*\n! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com\n*/\n\n\n/*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n::before,\n::after {\n  --tw-content: '';\n}\n\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n5. Use the user's configured `sans` font-feature-settings by default.\n*/\nhtml {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: Nunito; /* 4 */\n  font-feature-settings: normal; /* 5 */\n}\n\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n\n/*\nRemove the default font size and weight for headings.\n*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\nb,\nstrong {\n  font-weight: bolder;\n}\n\n\n/*\n1. Use the user's configured `mono` font family by default.\n2. Correct the odd `em` font sizing in all browsers.\n*/\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n\n/*\nAdd the correct font size in all browsers.\n*/\nsmall {\n  font-size: 80%;\n}\n\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsub {\n  bottom: -0.25em;\n}\nsup {\n  top: -0.5em;\n}\n\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  font-weight: inherit; /* 1 */\n  line-height: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\nbutton,\nselect {\n  text-transform: none;\n}\n\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n:-moz-focusring {\n  outline: auto;\n}\n\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\nprogress {\n  vertical-align: baseline;\n}\n\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\nsummary {\n  display: list-item;\n}\n\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\nfieldset {\n  margin: 0;\n  padding: 0;\n}\nlegend {\n  padding: 0;\n}\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\ntextarea {\n  resize: vertical;\n}\n\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n\n/*\nSet the default cursor for buttons.\n*/\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n\n/* Make elements with the HTML hidden attribute stay hidden by default */\n[hidden] {\n  display: none;\n}\n:root,\n[data-theme]{\n  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1));\n  color: hsla(var(--bc) / var(--tw-text-opacity, 1));\n}\nhtml{\n  -webkit-tap-highlight-color: transparent;\n}\n:root{\n  color-scheme: dark;\n  --pf: 198 93% 48%;\n  --sf: 234 89% 59%;\n  --af: 329 86% 56%;\n  --b2: 222 47% 10%;\n  --b3: 222 47% 9%;\n  --bc: 222 66% 82%;\n  --pc: 198 100% 12%;\n  --sc: 234 100% 15%;\n  --ac: 329 100% 14%;\n  --nc: 217 76% 83%;\n  --inc: 198 100% 10%;\n  --suc: 172 100% 10%;\n  --wac: 41 100% 13%;\n  --erc: 351 100% 14%;\n  --rounded-box: 1rem;\n  --rounded-btn: 0.5rem;\n  --rounded-badge: 1.9rem;\n  --animation-btn: 0.25s;\n  --animation-input: .2s;\n  --btn-text-case: uppercase;\n  --btn-focus-scale: 0.95;\n  --border-btn: 1px;\n  --tab-border: 1px;\n  --tab-radius: 0.5rem;\n  --p: 198 93% 60%;\n  --s: 234 89% 74%;\n  --a: 329 86% 70%;\n  --n: 217 33% 17%;\n  --nf: 217 30% 22%;\n  --b1: 222 47% 11%;\n  --in: 198 90% 48%;\n  --su: 172 66% 50%;\n  --wa: 41 88% 64%;\n  --er: 351 95% 71%;\n}\n*, ::before, ::after{\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n::backdrop{\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n.avatar{\n  position: relative;\n  display: inline-flex;\n}\n.avatar > div{\n  display: block;\n  aspect-ratio: 1 / 1;\n  overflow: hidden;\n}\n.avatar img{\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.avatar.placeholder > div{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.btn{\n  display: inline-flex;\n  flex-shrink: 0;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  border-color: transparent;\n  border-color: hsl(var(--n) / var(--tw-border-opacity));\n  text-align: center;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  border-radius: var(--rounded-btn, 0.5rem);\n  height: 3rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 1em;\n  min-height: 3rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  text-transform: var(--btn-text-case, uppercase);\n  text-decoration-line: none;\n  border-width: var(--border-btn, 1px);\n  animation: button-pop var(--animation-btn, 0.25s) ease-out;\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.btn-disabled,\n  .btn[disabled]{\n  pointer-events: none;\n}\n.btn-square{\n  height: 3rem;\n  width: 3rem;\n  padding: 0px;\n}\n.btn-circle{\n  height: 3rem;\n  width: 3rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn.loading,\n    .btn.loading:hover{\n  pointer-events: none;\n}\n.btn.loading:before{\n  margin-right: 0.5rem;\n  height: 1rem;\n  width: 1rem;\n  border-radius: 9999px;\n  border-width: 2px;\n  animation: spin 2s linear infinite;\n  content: \"\";\n  border-top-color: transparent;\n  border-left-color: transparent;\n  border-bottom-color: currentColor;\n  border-right-color: currentColor;\n}\n@media (prefers-reduced-motion: reduce){\n.btn.loading:before{\n    animation: spin 10s linear infinite;\n}\n}\n@keyframes spin{\nfrom{\n    transform: rotate(0deg);\n}\nto{\n    transform: rotate(360deg);\n}\n}\n.btn-group > input[type=\"radio\"].btn{\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.btn-group > input[type=\"radio\"].btn:before{\n  content: attr(data-title);\n}\n.card{\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  border-radius: var(--rounded-box, 1rem);\n}\n.card:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.card-body{\n  display: flex;\n  flex: 1 1 auto;\n  flex-direction: column;\n  padding: var(--padding-card, 2rem);\n  gap: 0.5rem;\n}\n.card-body :where(p){\n  flex-grow: 1;\n}\n.card-actions{\n  display: flex;\n  flex-wrap: wrap;\n  align-items: flex-start;\n  gap: 0.5rem;\n}\n.card figure{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.card.image-full{\n  display: grid;\n}\n.card.image-full:before{\n  position: relative;\n  content: \"\";\n  z-index: 10;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  opacity: 0.75;\n  border-radius: var(--rounded-box, 1rem);\n}\n.card.image-full:before,\n    .card.image-full > *{\n  grid-column-start: 1;\n  grid-row-start: 1;\n}\n.card.image-full > figure img{\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card.image-full > .card-body{\n  position: relative;\n  z-index: 20;\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.carousel{\n  display: flex;\n  overflow-x: scroll;\n  scroll-snap-type: x mandatory;\n  scroll-behavior: smooth;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.carousel-item{\n  box-sizing: content-box;\n  display: flex;\n  flex: none;\n  scroll-snap-align: start;\n}\n.carousel-center .carousel-item{\n  scroll-snap-align: center;\n}\n.carousel-end .carousel-item{\n  scroll-snap-align: end;\n}\n.chat{\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  -moz-column-gap: 0.75rem;\n       column-gap: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n.chat-image{\n  grid-row: span 2 / span 2;\n  align-self: flex-end;\n}\n.chat-header{\n  grid-row-start: 1;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.chat-bubble{\n  position: relative;\n  display: block;\n  width: -moz-fit-content;\n  width: fit-content;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  max-width: 90%;\n  border-radius: var(--rounded-box, 1rem);\n  min-height: 2.75rem;\n  min-width: 2.75rem;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.chat-bubble:before{\n  position: absolute;\n  bottom: 0px;\n  height: 0.75rem;\n  width: 0.75rem;\n  background-color: inherit;\n  content: \"\";\n  -webkit-mask-size: contain;\n  mask-size: contain;\n  -webkit-mask-repeat: no-repeat;\n  mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  mask-position: center;\n}\n.chat-start{\n  place-items: start;\n  grid-template-columns: auto 1fr;\n}\n.chat-start .chat-header{\n  grid-column-start: 2;\n}\n.chat-start .chat-footer{\n  grid-column-start: 2;\n}\n.chat-start .chat-image{\n  grid-column-start: 1;\n}\n.chat-start .chat-bubble{\n  grid-column-start: 2;\n  border-bottom-left-radius: 0px;\n}\n.chat-start .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  left: -0.75rem;\n}\n[dir=\"rtl\"] .chat-start .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n}\n.chat-end{\n  place-items: end;\n  grid-template-columns: 1fr auto;\n}\n.chat-end .chat-header{\n  grid-column-start: 1;\n}\n.chat-end .chat-footer{\n  grid-column-start: 1;\n}\n.chat-end .chat-image{\n  grid-column-start: 2;\n}\n.chat-end .chat-bubble{\n  grid-column-start: 1;\n  border-bottom-right-radius: 0px;\n}\n.chat-end .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  left: 100%;\n}\n[dir=\"rtl\"] .chat-end .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n}\n.divider{\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  align-self: stretch;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  height: 1rem;\n  white-space: nowrap;\n}\n.divider:before,\n  .divider:after{\n  content: \"\";\n  flex-grow: 1;\n  height: 0.125rem;\n  width: 100%;\n}\n.input{\n  flex-shrink: 1;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  height: 3rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  font-size: 1rem;\n  line-height: 2;\n  line-height: 1.5rem;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b1) / var(--tw-bg-opacity));\n  border-radius: var(--rounded-btn, 0.5rem);\n}\n.input-group > .input{\n  isolation: isolate;\n}\n.input-group > *,\n  .input-group > .input,\n  .input-group > .select{\n  border-radius: 0px;\n}\n.link{\n  cursor: pointer;\n  text-decoration-line: underline;\n}\n.menu > :where(li.disabled > *:not(ul):focus){\n  cursor: auto;\n}\n.steps .step{\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-template-columns: auto;\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n  grid-template-rows: 40px 1fr;\n  place-items: center;\n  text-align: center;\n  min-width: 4rem;\n}\n.swap{\n  position: relative;\n  display: inline-grid;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  place-content: center;\n  cursor: pointer;\n}\n.swap > *{\n  grid-column-start: 1;\n  grid-row-start: 1;\n  transition-duration: 300ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-property: transform, opacity;\n}\n.swap input{\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.swap .swap-on,\n.swap .swap-indeterminate,\n.swap input:indeterminate ~ .swap-on{\n  opacity: 0;\n}\n.swap input:checked ~ .swap-off,\n.swap.swap-active .swap-off,\n.swap input:indeterminate ~ .swap-off{\n  opacity: 0;\n}\n.swap input:checked ~ .swap-on,\n.swap-active .swap-on,\n.swap input:indeterminate ~ .swap-indeterminate{\n  opacity: 1;\n}\n.tab{\n  position: relative;\n  display: inline-flex;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  height: 2rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 2;\n  --tab-padding: 1rem;\n  --tw-text-opacity: 0.5;\n  --tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));\n  --tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));\n  --tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));\n  color: var(--tab-color);\n  padding-left: var(--tab-padding, 1rem);\n  padding-right: var(--tab-padding, 1rem);\n}\n.textarea{\n  flex-shrink: 1;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 2;\n  min-height: 3rem;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b1) / var(--tw-bg-opacity));\n  border-radius: var(--rounded-btn, 0.5rem);\n}\n.toggle{\n  flex-shrink: 0;\n  --tglbg: hsl(var(--b1));\n  --handleoffset: 1.5rem;\n  --handleoffsetcalculator: calc(var(--handleoffset) * -1);\n  --togglehandleborder: 0 0;\n  height: 1.5rem;\n  width: 3rem;\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0.2;\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.5;\n  transition-duration: 300ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  border-radius: var(--rounded-badge, 1.9rem);\n  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;\n  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);\n}\n.avatar-group :where(.avatar){\n  overflow: hidden;\n  border-radius: 9999px;\n  border-width: 4px;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b1) / var(--tw-border-opacity));\n}\n.btm-nav>*.disabled,\n    .btm-nav>*.disabled:hover,\n    .btm-nav>*[disabled],\n    .btm-nav>*[disabled]:hover{\n  pointer-events: none;\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.btn:active:hover,\n  .btn:active:focus{\n  animation: none;\n  transform: scale(var(--btn-focus-scale, 0.95));\n}\n.btn:hover,\n    .btn-active{\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));\n}\n.btn:focus-visible{\n  outline: 2px solid hsl(var(--nf));\n  outline-offset: 2px;\n}\n.btn.glass:hover,\n    .btn.glass.btn-active{\n  --glass-opacity: 25%;\n  --glass-border-opacity: 15%;\n}\n.btn.glass:focus-visible{\n  outline: 2px solid currentColor;\n}\n.btn-ghost{\n  border-width: 1px;\n  border-color: transparent;\n  background-color: transparent;\n  color: currentColor;\n}\n.btn-ghost:hover,\n    .btn-ghost.btn-active{\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n}\n.btn-ghost:focus-visible{\n  outline: 2px solid currentColor;\n}\n.btn-disabled,\n  .btn-disabled:hover,\n  .btn[disabled],\n  .btn[disabled]:hover{\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.btn.loading.btn-square:before,\n    .btn.loading.btn-circle:before{\n  margin-right: 0px;\n}\n.btn.loading.btn-xl:before,\n    .btn.loading.btn-lg:before{\n  height: 1.25rem;\n  width: 1.25rem;\n}\n.btn.loading.btn-sm:before,\n    .btn.loading.btn-xs:before{\n  height: 0.75rem;\n  width: 0.75rem;\n}\n.btn-group > input[type=\"radio\"]:checked.btn,\n  .btn-group > .btn-active{\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--p) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--p) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--pc) / var(--tw-text-opacity));\n}\n.btn-group > input[type=\"radio\"]:checked.btn:focus-visible, .btn-group > .btn-active:focus-visible{\n  outline: 2px solid hsl(var(--p));\n}\n@keyframes button-pop{\n0%{\n    transform: scale(var(--btn-focus-scale, 0.95));\n}\n40%{\n    transform: scale(1.02);\n}\n100%{\n    transform: scale(1);\n}\n}\n.card :where(figure:first-child){\n  overflow: hidden;\n  border-start-start-radius: inherit;\n  border-start-end-radius: inherit;\n  border-end-start-radius: unset;\n  border-end-end-radius: unset;\n}\n.card :where(figure:last-child){\n  overflow: hidden;\n  border-start-start-radius: unset;\n  border-start-end-radius: unset;\n  border-end-start-radius: inherit;\n  border-end-end-radius: inherit;\n}\n.card:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n.card.bordered{\n  border-width: 1px;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n}\n.card.compact .card-body{\n  padding: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.card.image-full :where(figure){\n  overflow: hidden;\n  border-radius: inherit;\n}\n.carousel::-webkit-scrollbar{\n  display: none;\n}\n@keyframes checkmark{\n0%{\n    background-position-y: 5px;\n}\n50%{\n    background-position-y: -2px;\n}\n100%{\n    background-position-y: 0;\n}\n}\n.divider:before{\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n}\n.divider:after{\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n}\n.divider:not(:empty){\n  gap: 1rem;\n}\n.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost{\n  outline: 2px solid currentColor;\n}\n.input[list]::-webkit-calendar-picker-indicator{\n  line-height: 1em;\n}\n.input:focus{\n  outline: 2px solid hsla(var(--bc) / 0.2);\n  outline-offset: 2px;\n}\n.input-disabled,\n  .input[disabled]{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 0.2;\n}\n.input-disabled::-moz-placeholder, .input[disabled]::-moz-placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.input-disabled::placeholder,\n  .input[disabled]::placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.link-primary{\n  --tw-text-opacity: 1;\n  color: hsl(var(--p) / var(--tw-text-opacity));\n}\n.link-primary:hover{\n  --tw-text-opacity: 1;\n  color: hsl(var(--pf, var(--p)) / var(--tw-text-opacity));\n}\n.link:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.link:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n.menu li.disabled > *{\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.menu li.disabled > *:hover{\n  background-color: transparent;\n}\n.mockup-phone .display{\n  overflow: hidden;\n  border-radius: 40px;\n  margin-top: -25px;\n}\n@keyframes progress-loading{\n50%{\n    left: 107%;\n}\n}\n@keyframes radiomark{\n0%{\n    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;\n}\n50%{\n    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;\n}\n100%{\n    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;\n}\n}\n@keyframes rating-pop{\n0%{\n    transform: translateY(-0.125em);\n}\n40%{\n    transform: translateY(-0.125em);\n}\n100%{\n    transform: translateY(0);\n}\n}\n.steps .step:before{\n  top: 0px;\n  grid-column-start: 1;\n  grid-row-start: 1;\n  height: 0.5rem;\n  width: 100%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  content: \"\";\n  margin-left: -100%;\n}\n.steps .step:after{\n  content: counter(step);\n  counter-increment: step;\n  z-index: 1;\n  position: relative;\n  grid-column-start: 1;\n  grid-row-start: 1;\n  display: grid;\n  height: 2rem;\n  width: 2rem;\n  place-items: center;\n  place-self: center;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n}\n.steps .step:first-child:before{\n  content: none;\n}\n.steps .step[data-content]:after{\n  content: attr(data-content);\n}\n.tab:hover{\n  --tw-text-opacity: 1;\n}\n.tab.tab-active{\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 1;\n  --tw-text-opacity: 1;\n}\n.tab:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.tab:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: -3px;\n}\n.tab:focus-visible.tab-lifted{\n  border-bottom-right-radius: var(--tab-radius, 0.5rem);\n  border-bottom-left-radius: var(--tab-radius, 0.5rem);\n}\n.textarea:focus{\n  outline: 2px solid hsla(var(--bc) / 0.2);\n  outline-offset: 2px;\n}\n.textarea-disabled,\n  .textarea[disabled]{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 0.2;\n}\n.textarea-disabled::-moz-placeholder, .textarea[disabled]::-moz-placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.textarea-disabled::placeholder,\n  .textarea[disabled]::placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n@keyframes toast-pop{\n0%{\n    transform: scale(0.9);\n    opacity: 0;\n}\n100%{\n    transform: scale(1);\n    opacity: 1;\n}\n}\n[dir=\"rtl\"] .toggle{\n  --handleoffsetcalculator: calc(var(--handleoffset) * 1);\n}\n.toggle:focus-visible{\n  outline: 2px solid hsl(var(--bc));\n  outline-offset: 2px;\n}\n.toggle:checked,\n  .toggle[checked=\"true\"],\n  .toggle[aria-checked=true]{\n  --handleoffsetcalculator: var(--handleoffset);\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n}\n[dir=\"rtl\"] .toggle:checked, [dir=\"rtl\"] .toggle[checked=\"true\"], [dir=\"rtl\"] .toggle[aria-checked=true]{\n  --handleoffsetcalculator: calc(var(--handleoffset) * -1);\n}\n.toggle:indeterminate{\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;\n}\n[dir=\"rtl\"] .toggle:indeterminate{\n  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;\n}\n.toggle:disabled{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  background-color: transparent;\n  opacity: 0.3;\n  --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;\n}\n.min-h-16{\n  min-height: 4rem;\n}\n.btn-sm{\n  height: 2rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  min-height: 2rem;\n  font-size: 0.875rem;\n}\n.btn-square:where(.btn-xs){\n  height: 1.5rem;\n  width: 1.5rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-sm){\n  height: 2rem;\n  width: 2rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-md){\n  height: 3rem;\n  width: 3rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-lg){\n  height: 4rem;\n  width: 4rem;\n  padding: 0px;\n}\n.btn-circle:where(.btn-xs){\n  height: 1.5rem;\n  width: 1.5rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-sm){\n  height: 2rem;\n  width: 2rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-md){\n  height: 3rem;\n  width: 3rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-lg){\n  height: 4rem;\n  width: 4rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.steps-horizontal .step{\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n  place-items: center;\n  text-align: center;\n}\n.steps-vertical .step{\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  grid-template-rows: repeat(1, minmax(0, 1fr));\n}\n.avatar.online:before{\n  content: \"\";\n  position: absolute;\n  z-index: 10;\n  display: block;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--su) / var(--tw-bg-opacity));\n  width: 15%;\n  height: 15%;\n  top: 7%;\n  right: 7%;\n  box-shadow: 0 0 0 2px hsl(var(--b1));\n}\n.avatar.offline:before{\n  content: \"\";\n  position: absolute;\n  z-index: 10;\n  display: block;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  width: 15%;\n  height: 15%;\n  top: 7%;\n  right: 7%;\n  box-shadow: 0 0 0 2px hsl(var(--b1));\n}\n.btn-group .btn:not(:first-child):not(:last-child), .btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group .btn:first-child:not(:last-child), .btn-group.btn-group-horizontal .btn:first-child:not(:last-child){\n  margin-left: -1px;\n  margin-top: -0px;\n  border-top-left-radius: var(--rounded-btn, 0.5rem);\n  border-top-right-radius: 0;\n  border-bottom-left-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-right-radius: 0;\n}\n.btn-group .btn:last-child:not(:first-child), .btn-group.btn-group-horizontal .btn:last-child:not(:first-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: var(--rounded-btn, 0.5rem);\n}\n.btn-group.btn-group-vertical .btn:first-child:not(:last-child){\n  margin-left: -0px;\n  margin-top: -1px;\n  border-top-left-radius: var(--rounded-btn, 0.5rem);\n  border-top-right-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group.btn-group-vertical .btn:last-child:not(:first-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-left-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-right-radius: var(--rounded-btn, 0.5rem);\n}\n.card-compact .card-body{\n  padding: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.card-compact .card-title{\n  margin-bottom: 0.25rem;\n}\n.card-normal .card-body{\n  padding: var(--padding-card, 2rem);\n  font-size: 1rem;\n  line-height: 1.5rem;\n}\n.steps-horizontal .step{\n  grid-template-rows: 40px 1fr;\n  grid-template-columns: auto;\n  min-width: 4rem;\n}\n.steps-horizontal .step:before{\n  height: 0.5rem;\n  width: 100%;\n  --tw-translate-y: 0px;\n  --tw-translate-x: 0px;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  content: \"\";\n  margin-left: -100%;\n}\n.steps-vertical .step{\n  gap: 0.5rem;\n  grid-template-columns: 40px 1fr;\n  grid-template-rows: auto;\n  min-height: 4rem;\n  justify-items: start;\n}\n.steps-vertical .step:before{\n  height: 100%;\n  width: 0.5rem;\n  --tw-translate-y: -50%;\n  --tw-translate-x: -50%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  margin-left: 50%;\n}\n.fixed{\n  position: fixed;\n}\n.absolute{\n  position: absolute;\n}\n.relative{\n  position: relative;\n}\n.bottom-0{\n  bottom: 0px;\n}\n.right-0{\n  right: 0px;\n}\n.top-3{\n  top: 12px;\n}\n.right-3{\n  right: 12px;\n}\n.left-0{\n  left: 0px;\n}\n.z-50{\n  z-index: 50;\n}\n.z-40{\n  z-index: 40;\n}\n.m-5{\n  margin: 20px;\n}\n.mx-auto{\n  margin-left: auto;\n  margin-right: auto;\n}\n.my-auto{\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.mr-5{\n  margin-right: 20px;\n}\n.ml-5{\n  margin-left: 20px;\n}\n.mt-4{\n  margin-top: 16px;\n}\n.mt-2{\n  margin-top: 8px;\n}\n.mr-2{\n  margin-right: 8px;\n}\n.ml-9{\n  margin-left: 36px;\n}\n.mt-3{\n  margin-top: 12px;\n}\n.mb-2{\n  margin-bottom: 8px;\n}\n.flex{\n  display: flex;\n}\n.h-full{\n  height: 100%;\n}\n.h-8{\n  height: 32px;\n}\n.h-max{\n  height: -moz-max-content;\n  height: max-content;\n}\n.h-10{\n  height: 40px;\n}\n.h-16{\n  height: 64px;\n}\n.h-5{\n  height: 20px;\n}\n.h-6{\n  height: 24px;\n}\n.h-\\[100\\%\\]{\n  height: 100%;\n}\n.h-\\[90\\%\\]{\n  height: 90%;\n}\n.h-\\[694px\\]{\n  height: 694px;\n}\n.\\!h-\\[64px\\]{\n  height: 64px !important;\n}\n.h-\\[630px\\]{\n  height: 630px;\n}\n.h-4{\n  height: 16px;\n}\n.h-32{\n  height: 8rem;\n}\n.max-h-\\[144px\\]{\n  max-height: 144px;\n}\n.w-full{\n  width: 100%;\n}\n.w-8{\n  width: 32px;\n}\n.w-10{\n  width: 40px;\n}\n.w-5{\n  width: 20px;\n}\n.w-6{\n  width: 24px;\n}\n.w-11\\/12{\n  width: 91.666667%;\n}\n.w-\\[372px\\]{\n  width: 372px;\n}\n.w-48{\n  width: 12rem;\n}\n.w-16{\n  width: 64px;\n}\n.flex-none{\n  flex: none;\n}\n.flex-1{\n  flex: 1 1 0%;\n}\n.scale-\\[0\\.3\\]{\n  --tw-scale-x: 0.3;\n  --tw-scale-y: 0.3;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.scale-50{\n  --tw-scale-x: .5;\n  --tw-scale-y: .5;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.transform{\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.cursor-pointer{\n  cursor: pointer;\n}\n.select-none{\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n}\n.resize-none{\n  resize: none;\n}\n.flex-col{\n  flex-direction: column;\n}\n.items-end{\n  align-items: flex-end;\n}\n.items-center{\n  align-items: center;\n}\n.justify-end{\n  justify-content: flex-end;\n}\n.justify-center{\n  justify-content: center;\n}\n.justify-between{\n  justify-content: space-between;\n}\n.space-x-4 > :not([hidden]) ~ :not([hidden]){\n  --tw-space-x-reverse: 0;\n  margin-right: calc(16px * var(--tw-space-x-reverse));\n  margin-left: calc(16px * calc(1 - var(--tw-space-x-reverse)));\n}\n.self-end{\n  align-self: flex-end;\n}\n.overflow-auto{\n  overflow: auto;\n}\n.overflow-y-auto{\n  overflow-y: auto;\n}\n.rounded-full{\n  border-radius: 9999px;\n}\n.rounded-2xl{\n  border-radius: 1rem;\n}\n.rounded-md{\n  border-radius: 0.375rem;\n}\n.rounded-r-lg{\n  border-top-right-radius: 0.5rem;\n  border-bottom-right-radius: 0.5rem;\n}\n.rounded-l-lg{\n  border-top-left-radius: 0.5rem;\n  border-bottom-left-radius: 0.5rem;\n}\n.rounded-t-2xl{\n  border-top-left-radius: 1rem;\n  border-top-right-radius: 1rem;\n}\n.rounded-tl-lg{\n  border-top-left-radius: 0.5rem;\n}\n.rounded-tr-lg{\n  border-top-right-radius: 0.5rem;\n}\n.border-0{\n  border-width: 0px;\n}\n.border-b-2{\n  border-bottom-width: 2px;\n}\n.border-none{\n  border-style: none;\n}\n.bg-white{\n  --tw-bg-opacity: 1;\n  background-color: rgb(255 255 255 / var(--tw-bg-opacity));\n}\n.bg-\\[\\#DDE2EB\\]{\n  --tw-bg-opacity: 1;\n  background-color: rgb(221 226 235 / var(--tw-bg-opacity));\n}\n.bg-transparent{\n  background-color: transparent;\n}\n.bg-white\\/50{\n  background-color: rgb(255 255 255 / 0.5);\n}\n.bg-black\\/30{\n  background-color: rgb(0 0 0 / 0.3);\n}\n.bg-black\\/60{\n  background-color: rgb(0 0 0 / 0.6);\n}\n.bg-primary\\/70{\n  background-color: hsl(var(--p) / 0.7);\n}\n.p-4{\n  padding: 16px;\n}\n.px-5{\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.py-4{\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n.px-3{\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.py-3{\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n.py-2{\n  padding-top: 8px;\n  padding-bottom: 8px;\n}\n.px-4{\n  padding-left: 16px;\n  padding-right: 16px;\n}\n.pr-4{\n  padding-right: 16px;\n}\n.pt-3{\n  padding-top: 12px;\n}\n.pt-0{\n  padding-top: 0px;\n}\n.pb-3{\n  padding-bottom: 12px;\n}\n.text-center{\n  text-align: center;\n}\n.align-middle{\n  vertical-align: middle;\n}\n.\\!font-sans{\n  font-family: Nunito !important;\n}\n.text-xs{\n  font-size: 12px;\n  line-height: 16px;\n}\n.text-xl{\n  font-size: 20px;\n  line-height: 28px;\n}\n.text-lg{\n  font-size: 18px;\n  line-height: 28px;\n}\n.text-\\[16px\\]{\n  font-size: 16px;\n}\n.text-base{\n  font-size: 16px;\n  line-height: 24px;\n}\n.\\!text-base{\n  font-size: 16px !important;\n  line-height: 24px !important;\n}\n.font-bold{\n  font-weight: 700;\n}\n.leading-\\[24px\\]{\n  line-height: 24px;\n}\n.leading-6{\n  line-height: 1.5rem;\n}\n.leading-5{\n  line-height: 1.25rem;\n}\n.\\!leading-\\[24px\\]{\n  line-height: 24px !important;\n}\n.text-black{\n  --tw-text-opacity: 1;\n  color: rgb(0 0 0 / var(--tw-text-opacity));\n}\n.text-white{\n  --tw-text-opacity: 1;\n  color: rgb(255 255 255 / var(--tw-text-opacity));\n}\n.text-white\\/40{\n  color: rgb(255 255 255 / 0.4);\n}\n.text-neutral{\n  --tw-text-opacity: 1;\n  color: hsl(var(--n) / var(--tw-text-opacity));\n}\n.text-opacity-60{\n  --tw-text-opacity: 0.6;\n}\n.opacity-50{\n  opacity: 0.5;\n}\n.shadow-xl{\n  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.blur{\n  --tw-blur: blur(8px);\n  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);\n}\n.drop-shadow-2xl{\n  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));\n  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);\n}\n.backdrop-blur-sm{\n  --tw-backdrop-blur: blur(4px);\n  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n}\n.transition-all{\n  transition-property: all;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.duration-200{\n  transition-duration: 200ms;\n}\n.line-clamp-6{\n  overflow: hidden;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 6;\n}\n.lds-ellipsis {\n  display: inline-block;\n  position: relative;\n  width: 20px;\n  height: 20px;\n}\n.lds-ellipsis div {\n  position: absolute;\n  top: 33px;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  background: #4fafe4;\n  animation-timing-function: cubic-bezier(0, 1, 1, 0);\n}\n.lds-ellipsis div:nth-child(1) {\n  left: 8px;\n  animation: lds-ellipsis1 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(2) {\n  left: 8px;\n  animation: lds-ellipsis2 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(3) {\n  left: 32px;\n  animation: lds-ellipsis2 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(4) {\n  left: 56px;\n  animation: lds-ellipsis3 0.6s infinite;\n}\n@keyframes lds-ellipsis1 {\n0% {\n    transform: scale(0);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes lds-ellipsis3 {\n0% {\n    transform: scale(1);\n}\n100% {\n    transform: scale(0);\n}\n}\n@keyframes lds-ellipsis2 {\n0% {\n    transform: translate(0, 0);\n}\n100% {\n    transform: translate(24px, 0);\n}\n}\n.btn-ghost {\n  border-width: 1px;\n  border-color: transparent;\n  background-color: transparent;\n  color: currentColor;\n}\n.btn-ghost:hover,\n  .btn-ghost.btn-active {\n  --tw-border-opacity: 0;\n  background-color: hsl(222 66% 82% / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n  border-width: 0;\n}\n.btn-ghost:focus-visible {\n  outline: 2px solid currentColor;\n}\n.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost {\n  outline: 2px solid currentColor;\n}\n.hover\\:scale-105:hover{\n  --tw-scale-x: 1.05;\n  --tw-scale-y: 1.05;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.hover\\:\\!border-none:hover{\n  border-style: none !important;\n}\n.hover\\:bg-gray-50:hover{\n  --tw-bg-opacity: 1;\n  background-color: rgb(249 250 251 / var(--tw-bg-opacity));\n}\n.hover\\:text-neutral:hover{\n  --tw-text-opacity: 1;\n  color: hsl(var(--n) / var(--tw-text-opacity));\n}\n.focus\\:\\!border-none:focus{\n  border-style: none !important;\n}\n.focus\\:outline-none:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.group:hover .group-hover\\:text-opacity-100{\n  --tw-text-opacity: 1;\n}\n";
+
+    const VueChatWindow = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["styles", [_style_0$1]]]);
+
+    const _hoisted_1 = { class: "body fixed right-0 bottom-0 m-5 z-50 flex items-end select-none leading-1em" };
+    const _sfc_main = /* @__PURE__ */ defineComponent({
+      __name: "MonoloqWidget.ce",
+      setup(__props) {
+        return (_ctx, _cache) => {
+          return openBlock(), createElementBlock("div", _hoisted_1, [
+            createVNode(VueChatWindow, mergeProps({ show_button_widget: true }, _ctx.$attrs), null, 16)
+          ]);
+        };
+      }
+    });
+
+    const _style_0 = "@import url(https://fonts.googleapis.com/css2?family=Nunito&display=swap);\n\n\n/*\n! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com\n*/\n\n\n/*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n::before,\n::after {\n  --tw-content: '';\n}\n\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n5. Use the user's configured `sans` font-feature-settings by default.\n*/\nhtml {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: Nunito; /* 4 */\n  font-feature-settings: normal; /* 5 */\n}\n\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n\n/*\nRemove the default font size and weight for headings.\n*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\nb,\nstrong {\n  font-weight: bolder;\n}\n\n\n/*\n1. Use the user's configured `mono` font family by default.\n2. Correct the odd `em` font sizing in all browsers.\n*/\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n\n/*\nAdd the correct font size in all browsers.\n*/\nsmall {\n  font-size: 80%;\n}\n\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsub {\n  bottom: -0.25em;\n}\nsup {\n  top: -0.5em;\n}\n\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  font-weight: inherit; /* 1 */\n  line-height: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\nbutton,\nselect {\n  text-transform: none;\n}\n\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n:-moz-focusring {\n  outline: auto;\n}\n\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\nprogress {\n  vertical-align: baseline;\n}\n\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\nsummary {\n  display: list-item;\n}\n\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\nfieldset {\n  margin: 0;\n  padding: 0;\n}\nlegend {\n  padding: 0;\n}\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\ntextarea {\n  resize: vertical;\n}\n\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n\n/*\nSet the default cursor for buttons.\n*/\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n\n/* Make elements with the HTML hidden attribute stay hidden by default */\n[hidden] {\n  display: none;\n}\n:root,\n[data-theme]{\n  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1));\n  color: hsla(var(--bc) / var(--tw-text-opacity, 1));\n}\nhtml{\n  -webkit-tap-highlight-color: transparent;\n}\n:root{\n  color-scheme: dark;\n  --pf: 198 93% 48%;\n  --sf: 234 89% 59%;\n  --af: 329 86% 56%;\n  --b2: 222 47% 10%;\n  --b3: 222 47% 9%;\n  --bc: 222 66% 82%;\n  --pc: 198 100% 12%;\n  --sc: 234 100% 15%;\n  --ac: 329 100% 14%;\n  --nc: 217 76% 83%;\n  --inc: 198 100% 10%;\n  --suc: 172 100% 10%;\n  --wac: 41 100% 13%;\n  --erc: 351 100% 14%;\n  --rounded-box: 1rem;\n  --rounded-btn: 0.5rem;\n  --rounded-badge: 1.9rem;\n  --animation-btn: 0.25s;\n  --animation-input: .2s;\n  --btn-text-case: uppercase;\n  --btn-focus-scale: 0.95;\n  --border-btn: 1px;\n  --tab-border: 1px;\n  --tab-radius: 0.5rem;\n  --p: 198 93% 60%;\n  --s: 234 89% 74%;\n  --a: 329 86% 70%;\n  --n: 217 33% 17%;\n  --nf: 217 30% 22%;\n  --b1: 222 47% 11%;\n  --in: 198 90% 48%;\n  --su: 172 66% 50%;\n  --wa: 41 88% 64%;\n  --er: 351 95% 71%;\n}\n*, ::before, ::after{\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n::backdrop{\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n.avatar{\n  position: relative;\n  display: inline-flex;\n}\n.avatar > div{\n  display: block;\n  aspect-ratio: 1 / 1;\n  overflow: hidden;\n}\n.avatar img{\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.avatar.placeholder > div{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.btn{\n  display: inline-flex;\n  flex-shrink: 0;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  border-color: transparent;\n  border-color: hsl(var(--n) / var(--tw-border-opacity));\n  text-align: center;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  border-radius: var(--rounded-btn, 0.5rem);\n  height: 3rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 1em;\n  min-height: 3rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  text-transform: var(--btn-text-case, uppercase);\n  text-decoration-line: none;\n  border-width: var(--border-btn, 1px);\n  animation: button-pop var(--animation-btn, 0.25s) ease-out;\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.btn-disabled,\n  .btn[disabled]{\n  pointer-events: none;\n}\n.btn-square{\n  height: 3rem;\n  width: 3rem;\n  padding: 0px;\n}\n.btn-circle{\n  height: 3rem;\n  width: 3rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn.loading,\n    .btn.loading:hover{\n  pointer-events: none;\n}\n.btn.loading:before{\n  margin-right: 0.5rem;\n  height: 1rem;\n  width: 1rem;\n  border-radius: 9999px;\n  border-width: 2px;\n  animation: spin 2s linear infinite;\n  content: \"\";\n  border-top-color: transparent;\n  border-left-color: transparent;\n  border-bottom-color: currentColor;\n  border-right-color: currentColor;\n}\n@media (prefers-reduced-motion: reduce){\n.btn.loading:before{\n    animation: spin 10s linear infinite;\n}\n}\n@keyframes spin{\nfrom{\n    transform: rotate(0deg);\n}\nto{\n    transform: rotate(360deg);\n}\n}\n.btn-group > input[type=\"radio\"].btn{\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.btn-group > input[type=\"radio\"].btn:before{\n  content: attr(data-title);\n}\n.card{\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  border-radius: var(--rounded-box, 1rem);\n}\n.card:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.card-body{\n  display: flex;\n  flex: 1 1 auto;\n  flex-direction: column;\n  padding: var(--padding-card, 2rem);\n  gap: 0.5rem;\n}\n.card-body :where(p){\n  flex-grow: 1;\n}\n.card-actions{\n  display: flex;\n  flex-wrap: wrap;\n  align-items: flex-start;\n  gap: 0.5rem;\n}\n.card figure{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.card.image-full{\n  display: grid;\n}\n.card.image-full:before{\n  position: relative;\n  content: \"\";\n  z-index: 10;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  opacity: 0.75;\n  border-radius: var(--rounded-box, 1rem);\n}\n.card.image-full:before,\n    .card.image-full > *{\n  grid-column-start: 1;\n  grid-row-start: 1;\n}\n.card.image-full > figure img{\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card.image-full > .card-body{\n  position: relative;\n  z-index: 20;\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.carousel{\n  display: flex;\n  overflow-x: scroll;\n  scroll-snap-type: x mandatory;\n  scroll-behavior: smooth;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.carousel-item{\n  box-sizing: content-box;\n  display: flex;\n  flex: none;\n  scroll-snap-align: start;\n}\n.carousel-center .carousel-item{\n  scroll-snap-align: center;\n}\n.carousel-end .carousel-item{\n  scroll-snap-align: end;\n}\n.chat{\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  -moz-column-gap: 0.75rem;\n       column-gap: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n.chat-image{\n  grid-row: span 2 / span 2;\n  align-self: flex-end;\n}\n.chat-header{\n  grid-row-start: 1;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.chat-bubble{\n  position: relative;\n  display: block;\n  width: -moz-fit-content;\n  width: fit-content;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  max-width: 90%;\n  border-radius: var(--rounded-box, 1rem);\n  min-height: 2.75rem;\n  min-width: 2.75rem;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--nc) / var(--tw-text-opacity));\n}\n.chat-bubble:before{\n  position: absolute;\n  bottom: 0px;\n  height: 0.75rem;\n  width: 0.75rem;\n  background-color: inherit;\n  content: \"\";\n  -webkit-mask-size: contain;\n  mask-size: contain;\n  -webkit-mask-repeat: no-repeat;\n  mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  mask-position: center;\n}\n.chat-start{\n  place-items: start;\n  grid-template-columns: auto 1fr;\n}\n.chat-start .chat-header{\n  grid-column-start: 2;\n}\n.chat-start .chat-footer{\n  grid-column-start: 2;\n}\n.chat-start .chat-image{\n  grid-column-start: 1;\n}\n.chat-start .chat-bubble{\n  grid-column-start: 2;\n  border-bottom-left-radius: 0px;\n}\n.chat-start .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  left: -0.75rem;\n}\n[dir=\"rtl\"] .chat-start .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n}\n.chat-end{\n  place-items: end;\n  grid-template-columns: 1fr auto;\n}\n.chat-end .chat-header{\n  grid-column-start: 1;\n}\n.chat-end .chat-footer{\n  grid-column-start: 1;\n}\n.chat-end .chat-image{\n  grid-column-start: 2;\n}\n.chat-end .chat-bubble{\n  grid-column-start: 1;\n  border-bottom-right-radius: 0px;\n}\n.chat-end .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e\");\n  left: 100%;\n}\n[dir=\"rtl\"] .chat-end .chat-bubble:before{\n  -webkit-mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n  mask-image: url(\"data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e\");\n}\n.divider{\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  align-self: stretch;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  height: 1rem;\n  white-space: nowrap;\n}\n.divider:before,\n  .divider:after{\n  content: \"\";\n  flex-grow: 1;\n  height: 0.125rem;\n  width: 100%;\n}\n.input{\n  flex-shrink: 1;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  height: 3rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  font-size: 1rem;\n  line-height: 2;\n  line-height: 1.5rem;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b1) / var(--tw-bg-opacity));\n  border-radius: var(--rounded-btn, 0.5rem);\n}\n.input-group > .input{\n  isolation: isolate;\n}\n.input-group > *,\n  .input-group > .input,\n  .input-group > .select{\n  border-radius: 0px;\n}\n.link{\n  cursor: pointer;\n  text-decoration-line: underline;\n}\n.menu > :where(li.disabled > *:not(ul):focus){\n  cursor: auto;\n}\n.steps .step{\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-template-columns: auto;\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n  grid-template-rows: 40px 1fr;\n  place-items: center;\n  text-align: center;\n  min-width: 4rem;\n}\n.swap{\n  position: relative;\n  display: inline-grid;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  place-content: center;\n  cursor: pointer;\n}\n.swap > *{\n  grid-column-start: 1;\n  grid-row-start: 1;\n  transition-duration: 300ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-property: transform, opacity;\n}\n.swap input{\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.swap .swap-on,\n.swap .swap-indeterminate,\n.swap input:indeterminate ~ .swap-on{\n  opacity: 0;\n}\n.swap input:checked ~ .swap-off,\n.swap.swap-active .swap-off,\n.swap input:indeterminate ~ .swap-off{\n  opacity: 0;\n}\n.swap input:checked ~ .swap-on,\n.swap-active .swap-on,\n.swap input:indeterminate ~ .swap-indeterminate{\n  opacity: 1;\n}\n.tab{\n  position: relative;\n  display: inline-flex;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  height: 2rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 2;\n  --tab-padding: 1rem;\n  --tw-text-opacity: 0.5;\n  --tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));\n  --tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));\n  --tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));\n  color: var(--tab-color);\n  padding-left: var(--tab-padding, 1rem);\n  padding-right: var(--tab-padding, 1rem);\n}\n.textarea{\n  flex-shrink: 1;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 2;\n  min-height: 3rem;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b1) / var(--tw-bg-opacity));\n  border-radius: var(--rounded-btn, 0.5rem);\n}\n.toggle{\n  flex-shrink: 0;\n  --tglbg: hsl(var(--b1));\n  --handleoffset: 1.5rem;\n  --handleoffsetcalculator: calc(var(--handleoffset) * -1);\n  --togglehandleborder: 0 0;\n  height: 1.5rem;\n  width: 3rem;\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border-width: 1px;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 0.2;\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.5;\n  transition-duration: 300ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  border-radius: var(--rounded-badge, 1.9rem);\n  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;\n  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);\n}\n.avatar-group :where(.avatar){\n  overflow: hidden;\n  border-radius: 9999px;\n  border-width: 4px;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b1) / var(--tw-border-opacity));\n}\n.btm-nav>*.disabled,\n    .btm-nav>*.disabled:hover,\n    .btm-nav>*[disabled],\n    .btm-nav>*[disabled]:hover{\n  pointer-events: none;\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.btn:active:hover,\n  .btn:active:focus{\n  animation: none;\n  transform: scale(var(--btn-focus-scale, 0.95));\n}\n.btn:hover,\n    .btn-active{\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));\n}\n.btn:focus-visible{\n  outline: 2px solid hsl(var(--nf));\n  outline-offset: 2px;\n}\n.btn.glass:hover,\n    .btn.glass.btn-active{\n  --glass-opacity: 25%;\n  --glass-border-opacity: 15%;\n}\n.btn.glass:focus-visible{\n  outline: 2px solid currentColor;\n}\n.btn-ghost{\n  border-width: 1px;\n  border-color: transparent;\n  background-color: transparent;\n  color: currentColor;\n}\n.btn-ghost:hover,\n    .btn-ghost.btn-active{\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n}\n.btn-ghost:focus-visible{\n  outline: 2px solid currentColor;\n}\n.btn-disabled,\n  .btn-disabled:hover,\n  .btn[disabled],\n  .btn[disabled]:hover{\n  --tw-border-opacity: 0;\n  background-color: hsl(var(--n) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.btn.loading.btn-square:before,\n    .btn.loading.btn-circle:before{\n  margin-right: 0px;\n}\n.btn.loading.btn-xl:before,\n    .btn.loading.btn-lg:before{\n  height: 1.25rem;\n  width: 1.25rem;\n}\n.btn.loading.btn-sm:before,\n    .btn.loading.btn-xs:before{\n  height: 0.75rem;\n  width: 0.75rem;\n}\n.btn-group > input[type=\"radio\"]:checked.btn,\n  .btn-group > .btn-active{\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--p) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--p) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--pc) / var(--tw-text-opacity));\n}\n.btn-group > input[type=\"radio\"]:checked.btn:focus-visible, .btn-group > .btn-active:focus-visible{\n  outline: 2px solid hsl(var(--p));\n}\n@keyframes button-pop{\n0%{\n    transform: scale(var(--btn-focus-scale, 0.95));\n}\n40%{\n    transform: scale(1.02);\n}\n100%{\n    transform: scale(1);\n}\n}\n.card :where(figure:first-child){\n  overflow: hidden;\n  border-start-start-radius: inherit;\n  border-start-end-radius: inherit;\n  border-end-start-radius: unset;\n  border-end-end-radius: unset;\n}\n.card :where(figure:last-child){\n  overflow: hidden;\n  border-start-start-radius: unset;\n  border-start-end-radius: unset;\n  border-end-start-radius: inherit;\n  border-end-end-radius: inherit;\n}\n.card:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n.card.bordered{\n  border-width: 1px;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n}\n.card.compact .card-body{\n  padding: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.card.image-full :where(figure){\n  overflow: hidden;\n  border-radius: inherit;\n}\n.carousel::-webkit-scrollbar{\n  display: none;\n}\n@keyframes checkmark{\n0%{\n    background-position-y: 5px;\n}\n50%{\n    background-position-y: -2px;\n}\n100%{\n    background-position-y: 0;\n}\n}\n.divider:before{\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n}\n.divider:after{\n  background-color: hsl(var(--bc) / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.1;\n}\n.divider:not(:empty){\n  gap: 1rem;\n}\n.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost{\n  outline: 2px solid currentColor;\n}\n.input[list]::-webkit-calendar-picker-indicator{\n  line-height: 1em;\n}\n.input:focus{\n  outline: 2px solid hsla(var(--bc) / 0.2);\n  outline-offset: 2px;\n}\n.input-disabled,\n  .input[disabled]{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 0.2;\n}\n.input-disabled::-moz-placeholder, .input[disabled]::-moz-placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.input-disabled::placeholder,\n  .input[disabled]::placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.link-primary{\n  --tw-text-opacity: 1;\n  color: hsl(var(--p) / var(--tw-text-opacity));\n}\n.link-primary:hover{\n  --tw-text-opacity: 1;\n  color: hsl(var(--pf, var(--p)) / var(--tw-text-opacity));\n}\n.link:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.link:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n.menu li.disabled > *{\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  --tw-text-opacity: 0.2;\n}\n.menu li.disabled > *:hover{\n  background-color: transparent;\n}\n.mockup-phone .display{\n  overflow: hidden;\n  border-radius: 40px;\n  margin-top: -25px;\n}\n@keyframes progress-loading{\n50%{\n    left: 107%;\n}\n}\n@keyframes radiomark{\n0%{\n    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;\n}\n50%{\n    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;\n}\n100%{\n    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;\n}\n}\n@keyframes rating-pop{\n0%{\n    transform: translateY(-0.125em);\n}\n40%{\n    transform: translateY(-0.125em);\n}\n100%{\n    transform: translateY(0);\n}\n}\n.steps .step:before{\n  top: 0px;\n  grid-column-start: 1;\n  grid-row-start: 1;\n  height: 0.5rem;\n  width: 100%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n  content: \"\";\n  margin-left: -100%;\n}\n.steps .step:after{\n  content: counter(step);\n  counter-increment: step;\n  z-index: 1;\n  position: relative;\n  grid-column-start: 1;\n  grid-row-start: 1;\n  display: grid;\n  height: 2rem;\n  width: 2rem;\n  place-items: center;\n  place-self: center;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: hsl(var(--bc) / var(--tw-text-opacity));\n}\n.steps .step:first-child:before{\n  content: none;\n}\n.steps .step[data-content]:after{\n  content: attr(data-content);\n}\n.tab:hover{\n  --tw-text-opacity: 1;\n}\n.tab.tab-active{\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  --tw-border-opacity: 1;\n  --tw-text-opacity: 1;\n}\n.tab:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.tab:focus-visible{\n  outline: 2px solid currentColor;\n  outline-offset: -3px;\n}\n.tab:focus-visible.tab-lifted{\n  border-bottom-right-radius: var(--tab-radius, 0.5rem);\n  border-bottom-left-radius: var(--tab-radius, 0.5rem);\n}\n.textarea:focus{\n  outline: 2px solid hsla(var(--bc) / 0.2);\n  outline-offset: 2px;\n}\n.textarea-disabled,\n  .textarea[disabled]{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));\n  --tw-text-opacity: 0.2;\n}\n.textarea-disabled::-moz-placeholder, .textarea[disabled]::-moz-placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n.textarea-disabled::placeholder,\n  .textarea[disabled]::placeholder{\n  color: hsl(var(--bc) / var(--tw-placeholder-opacity));\n  --tw-placeholder-opacity: 0.2;\n}\n@keyframes toast-pop{\n0%{\n    transform: scale(0.9);\n    opacity: 0;\n}\n100%{\n    transform: scale(1);\n    opacity: 1;\n}\n}\n[dir=\"rtl\"] .toggle{\n  --handleoffsetcalculator: calc(var(--handleoffset) * 1);\n}\n.toggle:focus-visible{\n  outline: 2px solid hsl(var(--bc));\n  outline-offset: 2px;\n}\n.toggle:checked,\n  .toggle[checked=\"true\"],\n  .toggle[aria-checked=true]{\n  --handleoffsetcalculator: var(--handleoffset);\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n}\n[dir=\"rtl\"] .toggle:checked, [dir=\"rtl\"] .toggle[checked=\"true\"], [dir=\"rtl\"] .toggle[aria-checked=true]{\n  --handleoffsetcalculator: calc(var(--handleoffset) * -1);\n}\n.toggle:indeterminate{\n  --tw-border-opacity: 1;\n  --tw-bg-opacity: 1;\n  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;\n}\n[dir=\"rtl\"] .toggle:indeterminate{\n  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;\n}\n.toggle:disabled{\n  cursor: not-allowed;\n  --tw-border-opacity: 1;\n  border-color: hsl(var(--bc) / var(--tw-border-opacity));\n  background-color: transparent;\n  opacity: 0.3;\n  --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;\n}\n.min-h-16{\n  min-height: 4rem;\n}\n.btn-sm{\n  height: 2rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  min-height: 2rem;\n  font-size: 0.875rem;\n}\n.btn-square:where(.btn-xs){\n  height: 1.5rem;\n  width: 1.5rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-sm){\n  height: 2rem;\n  width: 2rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-md){\n  height: 3rem;\n  width: 3rem;\n  padding: 0px;\n}\n.btn-square:where(.btn-lg){\n  height: 4rem;\n  width: 4rem;\n  padding: 0px;\n}\n.btn-circle:where(.btn-xs){\n  height: 1.5rem;\n  width: 1.5rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-sm){\n  height: 2rem;\n  width: 2rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-md){\n  height: 3rem;\n  width: 3rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.btn-circle:where(.btn-lg){\n  height: 4rem;\n  width: 4rem;\n  border-radius: 9999px;\n  padding: 0px;\n}\n.steps-horizontal .step{\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n  place-items: center;\n  text-align: center;\n}\n.steps-vertical .step{\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  grid-template-rows: repeat(1, minmax(0, 1fr));\n}\n.avatar.online:before{\n  content: \"\";\n  position: absolute;\n  z-index: 10;\n  display: block;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--su) / var(--tw-bg-opacity));\n  width: 15%;\n  height: 15%;\n  top: 7%;\n  right: 7%;\n  box-shadow: 0 0 0 2px hsl(var(--b1));\n}\n.avatar.offline:before{\n  content: \"\";\n  position: absolute;\n  z-index: 10;\n  display: block;\n  border-radius: 9999px;\n  --tw-bg-opacity: 1;\n  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));\n  width: 15%;\n  height: 15%;\n  top: 7%;\n  right: 7%;\n  box-shadow: 0 0 0 2px hsl(var(--b1));\n}\n.btn-group .btn:not(:first-child):not(:last-child), .btn-group.btn-group-horizontal .btn:not(:first-child):not(:last-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group .btn:first-child:not(:last-child), .btn-group.btn-group-horizontal .btn:first-child:not(:last-child){\n  margin-left: -1px;\n  margin-top: -0px;\n  border-top-left-radius: var(--rounded-btn, 0.5rem);\n  border-top-right-radius: 0;\n  border-bottom-left-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-right-radius: 0;\n}\n.btn-group .btn:last-child:not(:first-child), .btn-group.btn-group-horizontal .btn:last-child:not(:first-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: var(--rounded-btn, 0.5rem);\n}\n.btn-group.btn-group-vertical .btn:first-child:not(:last-child){\n  margin-left: -0px;\n  margin-top: -1px;\n  border-top-left-radius: var(--rounded-btn, 0.5rem);\n  border-top-right-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group.btn-group-vertical .btn:last-child:not(:first-child){\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-left-radius: var(--rounded-btn, 0.5rem);\n  border-bottom-right-radius: var(--rounded-btn, 0.5rem);\n}\n.card-compact .card-body{\n  padding: 1rem;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.card-compact .card-title{\n  margin-bottom: 0.25rem;\n}\n.card-normal .card-body{\n  padding: var(--padding-card, 2rem);\n  font-size: 1rem;\n  line-height: 1.5rem;\n}\n.steps-horizontal .step{\n  grid-template-rows: 40px 1fr;\n  grid-template-columns: auto;\n  min-width: 4rem;\n}\n.steps-horizontal .step:before{\n  height: 0.5rem;\n  width: 100%;\n  --tw-translate-y: 0px;\n  --tw-translate-x: 0px;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  content: \"\";\n  margin-left: -100%;\n}\n.steps-vertical .step{\n  gap: 0.5rem;\n  grid-template-columns: 40px 1fr;\n  grid-template-rows: auto;\n  min-height: 4rem;\n  justify-items: start;\n}\n.steps-vertical .step:before{\n  height: 100%;\n  width: 0.5rem;\n  --tw-translate-y: -50%;\n  --tw-translate-x: -50%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  margin-left: 50%;\n}\n.fixed{\n  position: fixed;\n}\n.absolute{\n  position: absolute;\n}\n.relative{\n  position: relative;\n}\n.bottom-0{\n  bottom: 0px;\n}\n.right-0{\n  right: 0px;\n}\n.top-3{\n  top: 12px;\n}\n.right-3{\n  right: 12px;\n}\n.left-0{\n  left: 0px;\n}\n.z-50{\n  z-index: 50;\n}\n.z-40{\n  z-index: 40;\n}\n.m-5{\n  margin: 20px;\n}\n.mx-auto{\n  margin-left: auto;\n  margin-right: auto;\n}\n.my-auto{\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.mr-5{\n  margin-right: 20px;\n}\n.ml-5{\n  margin-left: 20px;\n}\n.mt-4{\n  margin-top: 16px;\n}\n.mt-2{\n  margin-top: 8px;\n}\n.mr-2{\n  margin-right: 8px;\n}\n.ml-9{\n  margin-left: 36px;\n}\n.mt-3{\n  margin-top: 12px;\n}\n.mb-2{\n  margin-bottom: 8px;\n}\n.flex{\n  display: flex;\n}\n.h-full{\n  height: 100%;\n}\n.h-8{\n  height: 32px;\n}\n.h-max{\n  height: -moz-max-content;\n  height: max-content;\n}\n.h-10{\n  height: 40px;\n}\n.h-16{\n  height: 64px;\n}\n.h-5{\n  height: 20px;\n}\n.h-6{\n  height: 24px;\n}\n.h-\\[100\\%\\]{\n  height: 100%;\n}\n.h-\\[90\\%\\]{\n  height: 90%;\n}\n.h-\\[694px\\]{\n  height: 694px;\n}\n.\\!h-\\[64px\\]{\n  height: 64px !important;\n}\n.h-\\[630px\\]{\n  height: 630px;\n}\n.h-4{\n  height: 16px;\n}\n.h-32{\n  height: 8rem;\n}\n.max-h-\\[144px\\]{\n  max-height: 144px;\n}\n.w-full{\n  width: 100%;\n}\n.w-8{\n  width: 32px;\n}\n.w-10{\n  width: 40px;\n}\n.w-5{\n  width: 20px;\n}\n.w-6{\n  width: 24px;\n}\n.w-11\\/12{\n  width: 91.666667%;\n}\n.w-\\[372px\\]{\n  width: 372px;\n}\n.w-48{\n  width: 12rem;\n}\n.w-16{\n  width: 64px;\n}\n.flex-none{\n  flex: none;\n}\n.flex-1{\n  flex: 1 1 0%;\n}\n.scale-\\[0\\.3\\]{\n  --tw-scale-x: 0.3;\n  --tw-scale-y: 0.3;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.scale-50{\n  --tw-scale-x: .5;\n  --tw-scale-y: .5;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.transform{\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.cursor-pointer{\n  cursor: pointer;\n}\n.select-none{\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n}\n.resize-none{\n  resize: none;\n}\n.flex-col{\n  flex-direction: column;\n}\n.items-end{\n  align-items: flex-end;\n}\n.items-center{\n  align-items: center;\n}\n.justify-end{\n  justify-content: flex-end;\n}\n.justify-center{\n  justify-content: center;\n}\n.justify-between{\n  justify-content: space-between;\n}\n.space-x-4 > :not([hidden]) ~ :not([hidden]){\n  --tw-space-x-reverse: 0;\n  margin-right: calc(16px * var(--tw-space-x-reverse));\n  margin-left: calc(16px * calc(1 - var(--tw-space-x-reverse)));\n}\n.self-end{\n  align-self: flex-end;\n}\n.overflow-auto{\n  overflow: auto;\n}\n.overflow-y-auto{\n  overflow-y: auto;\n}\n.rounded-full{\n  border-radius: 9999px;\n}\n.rounded-2xl{\n  border-radius: 1rem;\n}\n.rounded-md{\n  border-radius: 0.375rem;\n}\n.rounded-r-lg{\n  border-top-right-radius: 0.5rem;\n  border-bottom-right-radius: 0.5rem;\n}\n.rounded-l-lg{\n  border-top-left-radius: 0.5rem;\n  border-bottom-left-radius: 0.5rem;\n}\n.rounded-t-2xl{\n  border-top-left-radius: 1rem;\n  border-top-right-radius: 1rem;\n}\n.rounded-tl-lg{\n  border-top-left-radius: 0.5rem;\n}\n.rounded-tr-lg{\n  border-top-right-radius: 0.5rem;\n}\n.border-0{\n  border-width: 0px;\n}\n.border-b-2{\n  border-bottom-width: 2px;\n}\n.border-none{\n  border-style: none;\n}\n.bg-white{\n  --tw-bg-opacity: 1;\n  background-color: rgb(255 255 255 / var(--tw-bg-opacity));\n}\n.bg-\\[\\#DDE2EB\\]{\n  --tw-bg-opacity: 1;\n  background-color: rgb(221 226 235 / var(--tw-bg-opacity));\n}\n.bg-transparent{\n  background-color: transparent;\n}\n.bg-white\\/50{\n  background-color: rgb(255 255 255 / 0.5);\n}\n.bg-black\\/30{\n  background-color: rgb(0 0 0 / 0.3);\n}\n.bg-black\\/60{\n  background-color: rgb(0 0 0 / 0.6);\n}\n.bg-primary\\/70{\n  background-color: hsl(var(--p) / 0.7);\n}\n.p-4{\n  padding: 16px;\n}\n.px-5{\n  padding-left: 20px;\n  padding-right: 20px;\n}\n.py-4{\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n.px-3{\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.py-3{\n  padding-top: 12px;\n  padding-bottom: 12px;\n}\n.py-2{\n  padding-top: 8px;\n  padding-bottom: 8px;\n}\n.px-4{\n  padding-left: 16px;\n  padding-right: 16px;\n}\n.pr-4{\n  padding-right: 16px;\n}\n.pt-3{\n  padding-top: 12px;\n}\n.pt-0{\n  padding-top: 0px;\n}\n.pb-3{\n  padding-bottom: 12px;\n}\n.text-center{\n  text-align: center;\n}\n.align-middle{\n  vertical-align: middle;\n}\n.\\!font-sans{\n  font-family: Nunito !important;\n}\n.text-xs{\n  font-size: 12px;\n  line-height: 16px;\n}\n.text-xl{\n  font-size: 20px;\n  line-height: 28px;\n}\n.text-lg{\n  font-size: 18px;\n  line-height: 28px;\n}\n.text-\\[16px\\]{\n  font-size: 16px;\n}\n.text-base{\n  font-size: 16px;\n  line-height: 24px;\n}\n.\\!text-base{\n  font-size: 16px !important;\n  line-height: 24px !important;\n}\n.font-bold{\n  font-weight: 700;\n}\n.leading-\\[24px\\]{\n  line-height: 24px;\n}\n.leading-6{\n  line-height: 1.5rem;\n}\n.leading-5{\n  line-height: 1.25rem;\n}\n.\\!leading-\\[24px\\]{\n  line-height: 24px !important;\n}\n.text-black{\n  --tw-text-opacity: 1;\n  color: rgb(0 0 0 / var(--tw-text-opacity));\n}\n.text-white{\n  --tw-text-opacity: 1;\n  color: rgb(255 255 255 / var(--tw-text-opacity));\n}\n.text-white\\/40{\n  color: rgb(255 255 255 / 0.4);\n}\n.text-neutral{\n  --tw-text-opacity: 1;\n  color: hsl(var(--n) / var(--tw-text-opacity));\n}\n.text-opacity-60{\n  --tw-text-opacity: 0.6;\n}\n.opacity-50{\n  opacity: 0.5;\n}\n.shadow-xl{\n  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.blur{\n  --tw-blur: blur(8px);\n  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);\n}\n.drop-shadow-2xl{\n  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));\n  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);\n}\n.backdrop-blur-sm{\n  --tw-backdrop-blur: blur(4px);\n  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n}\n.transition-all{\n  transition-property: all;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.duration-200{\n  transition-duration: 200ms;\n}\n.line-clamp-6{\n  overflow: hidden;\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 6;\n}\n.lds-ellipsis {\n  display: inline-block;\n  position: relative;\n  width: 20px;\n  height: 20px;\n}\n.lds-ellipsis div {\n  position: absolute;\n  top: 33px;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  background: #4fafe4;\n  animation-timing-function: cubic-bezier(0, 1, 1, 0);\n}\n.lds-ellipsis div:nth-child(1) {\n  left: 8px;\n  animation: lds-ellipsis1 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(2) {\n  left: 8px;\n  animation: lds-ellipsis2 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(3) {\n  left: 32px;\n  animation: lds-ellipsis2 0.6s infinite;\n}\n.lds-ellipsis div:nth-child(4) {\n  left: 56px;\n  animation: lds-ellipsis3 0.6s infinite;\n}\n@keyframes lds-ellipsis1 {\n0% {\n    transform: scale(0);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes lds-ellipsis3 {\n0% {\n    transform: scale(1);\n}\n100% {\n    transform: scale(0);\n}\n}\n@keyframes lds-ellipsis2 {\n0% {\n    transform: translate(0, 0);\n}\n100% {\n    transform: translate(24px, 0);\n}\n}\n.btn-ghost {\n  border-width: 1px;\n  border-color: transparent;\n  background-color: transparent;\n  color: currentColor;\n}\n.btn-ghost:hover,\n  .btn-ghost.btn-active {\n  --tw-border-opacity: 0;\n  background-color: hsl(222 66% 82% / var(--tw-bg-opacity));\n  --tw-bg-opacity: 0.2;\n  border-width: 0;\n}\n.btn-ghost:focus-visible {\n  outline: 2px solid currentColor;\n}\n.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost {\n  outline: 2px solid currentColor;\n}\n.hover\\:scale-105:hover{\n  --tw-scale-x: 1.05;\n  --tw-scale-y: 1.05;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.hover\\:\\!border-none:hover{\n  border-style: none !important;\n}\n.hover\\:bg-gray-50:hover{\n  --tw-bg-opacity: 1;\n  background-color: rgb(249 250 251 / var(--tw-bg-opacity));\n}\n.hover\\:text-neutral:hover{\n  --tw-text-opacity: 1;\n  color: hsl(var(--n) / var(--tw-text-opacity));\n}\n.focus\\:\\!border-none:focus{\n  border-style: none !important;\n}\n.focus\\:outline-none:focus{\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n.group:hover .group-hover\\:text-opacity-100{\n  --tw-text-opacity: 1;\n}\n";
+
+    const VueMonoloqWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
+
+    const MonoloqWidget = defineCustomElement(VueMonoloqWidget);
+    defineCustomElement(VueChatWindow);
+    async function register(tagName = "monoloq-widget") {
+      console.log("Installing widget...");
+      const font = document.createElement("link");
+      font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
+      font.rel = "stylesheet";
+      document.head.appendChild(font);
+      let props = {};
+      try {
+        const res = await fetch(
+          `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings/appearance?host_domain=${devHost("appearance")}`
+        );
+        props = await res.json();
+      } catch (e) {
+        console.error("Failed to fetch widget config", e);
+      }
+      customElements.define(tagName, MonoloqWidget);
+      document.body.appendChild(
+        new MonoloqWidget({ ...props })
+      );
+      console.info("Monoloq widget registered.");
+    }
+
+    register().then().catch(console.error);
+
+}));
+//# sourceMappingURL=monoloq-widget.umd.cjs.map
