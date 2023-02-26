@@ -8786,7 +8786,7 @@ function initDev() {
     initDev();
 }
 
-const _0x849bc8=_0x4330;(function(_0x4f2997,_0x2b75bc){const _0x3a36ba=_0x4330,_0x546096=_0x4f2997();while(!![]){try{const _0x5d1d8a=-parseInt(_0x3a36ba(0xd9))/(0x2493+-0x1d12+-0x780)*(parseInt(_0x3a36ba(0xdc))/(-0x4*-0x6f7+-0x1*0x1885+-0x355))+-parseInt(_0x3a36ba(0xcd))/(0x25fd+0x26*0xbe+-0x422e)*(-parseInt(_0x3a36ba(0xd4))/(-0x258+-0x10d3+0x132f))+parseInt(_0x3a36ba(0xc6))/(-0x304*-0x2+0x7*-0xd5+-0x30)*(parseInt(_0x3a36ba(0xdd))/(-0x24b1+0x12f1+0x5*0x38e))+-parseInt(_0x3a36ba(0xd1))/(-0x1df2+0x1531+0x8c8)*(-parseInt(_0x3a36ba(0xd5))/(-0x374+0x3*-0xc31+0x280f))+-parseInt(_0x3a36ba(0xc8))/(-0x666+-0x1f*-0x98+-0xbf9)*(parseInt(_0x3a36ba(0xd6))/(-0x11b0*0x1+0x61*-0x13+-0x2c5*-0x9))+parseInt(_0x3a36ba(0xd7))/(0x1e8f+-0x1f79+0x31*0x5)*(-parseInt(_0x3a36ba(0xcf))/(-0x266c+0x4f7*-0x3+0x355d))+parseInt(_0x3a36ba(0xc1))/(0xcfb*-0x3+0x2*-0x1357+0x4dac);if(_0x5d1d8a===_0x2b75bc)break;else _0x546096['push'](_0x546096['shift']());}catch(_0x21cc21){_0x546096['push'](_0x546096['shift']());}}}(_0x13b8,0x8f9*0xb1+0x5f4e2+-0x84d7f));function devHost(_0x98ea2d){const _0x3c2391=_0x4330,_0x381ea8=window[_0x3c2391(0xc9)][_0x3c2391(0xd8)];if(_0x381ea8!==_0x3c2391(0xcc))return _0x381ea8[_0x3c2391(0xda)]('\x2e')[_0x3c2391(0xdb)](-(0x1c2f+-0x2*-0x77c+-0x5*0x8a1))[_0x3c2391(0xca)]('\x2e');return _0x98ea2d===_0x3c2391(0xd0)?_0x3c2391(0xd2)+'\x6f\x6d':_0x3c2391(0xcb)+'\x2f';}function _0x4330(_0x221cac,_0x4aba84){const _0x177993=_0x13b8();return _0x4330=function(_0x52161d,_0x41f4e3){_0x52161d=_0x52161d-(-0x21b9+-0x1*0x226d+0x1*0x44e6);let _0x22d026=_0x177993[_0x52161d];return _0x22d026;},_0x4330(_0x221cac,_0x4aba84);}function _0x13b8(){const _0x34041d=['\x22\x5f\x62\x6c\x61\x6e\x6b\x22\x3e\x24','\x36\x32\x32\x34\x6a\x57\x51\x6f\x54\x65','\x32\x34\x38\x57\x6c\x74\x4c\x6b\x62','\x33\x30\x76\x4e\x61\x7a\x6d\x74','\x31\x31\x6a\x4e\x6d\x51\x58\x7a','\x68\x6f\x73\x74\x6e\x61\x6d\x65','\x31\x63\x64\x43\x4f\x45\x77','\x73\x70\x6c\x69\x74','\x73\x6c\x69\x63\x65','\x39\x30\x32\x39\x38\x32\x54\x51\x61\x59\x4c\x63','\x38\x30\x34\x6c\x56\x63\x73\x76\x6a','\x31\x3c\x2f\x61\x3e','\x31\x31\x35\x30\x37\x39\x39\x30\x6a\x56\x4e\x5a\x72\x53','\x31\x22\x20\x74\x61\x72\x67\x65\x74\x3d','\x53\x63\x68\x77\x65\x69\x6e\x73\x68\x61','\x72\x65\x70\x6c\x61\x63\x65','\x78\x65\x72\x6c','\x31\x30\x32\x35\x30\x73\x6b\x41\x41\x62\x78','\x61\x70\x70\x65\x61\x72\x61\x6e\x63\x65','\x33\x39\x34\x38\x36\x36\x6a\x49\x77\x6f\x46\x6c','\x6c\x6f\x63\x61\x74\x69\x6f\x6e','\x6a\x6f\x69\x6e','\x70\x61\x72\x61\x6c\x6f\x71\x2e\x61\x74','\x6c\x6f\x63\x61\x6c\x68\x6f\x73\x74','\x36\x44\x62\x64\x65\x70\x54','\x3c\x61\x20\x68\x72\x65\x66\x3d\x22\x24','\x35\x32\x32\x30\x37\x30\x38\x46\x78\x57\x50\x79\x63','\x69\x6e\x69\x74\x69\x61\x74\x65','\x32\x34\x33\x37\x34\x72\x4f\x6c\x79\x41\x77','\x61\x72\x69\x61\x73\x69\x6c\x6b\x2e\x63'];_0x13b8=function(){return _0x34041d;};return _0x13b8();}function prepareMessage(_0x28d5d8){const _0x471c7e=_0x4330;return _0x28d5d8=_0x28d5d8[_0x471c7e(0xc4)](_0x471c7e(0xc3)+_0x471c7e(0xc5),_0x471c7e(0xce)+_0x471c7e(0xc2)+_0x471c7e(0xd3)+_0x471c7e(0xc0)),''+_0x28d5d8;}const appearance=Symbol(_0x849bc8(0xc7));
+const _0x2d8fc4=_0x2908;(function(_0x50b335,_0x38e17c){const _0xf04503=_0x2908,_0xff6e6f=_0x50b335();while(!![]){try{const _0x3dad14=-parseInt(_0xf04503(0xcc))/(0x5*0x63a+0x1da2*0x1+-0x3cc3)+-parseInt(_0xf04503(0xce))/(-0xbda+-0x55e*-0x3+-0x43e)+-parseInt(_0xf04503(0xc0))/(-0x1d8+-0x25*-0x73+0x10e*-0xe)+parseInt(_0xf04503(0xc1))/(-0x1df1+-0xa52+-0x7*-0x5c1)+-parseInt(_0xf04503(0xc8))/(0x2*0xa28+-0x3*-0x3e3+0x1ff4*-0x1)*(-parseInt(_0xf04503(0xca))/(-0xfa3+-0x75f*0x2+-0xb5*-0x2b))+parseInt(_0xf04503(0xc5))/(0x2493+0x767+0x2bf3*-0x1)*(-parseInt(_0xf04503(0xcb))/(-0x1a7e*0x1+0x1*0x23c6+0x2*-0x4a0))+parseInt(_0xf04503(0xc2))/(0xf*-0x71+-0x2*0x911+0x18ca*0x1);if(_0x3dad14===_0x38e17c)break;else _0xff6e6f['push'](_0xff6e6f['shift']());}catch(_0x19c78f){_0xff6e6f['push'](_0xff6e6f['shift']());}}}(_0x41dc,-0x3*0x31243+-0x18c5d+0x2*0x9c4ca));function devHost(_0x4fbb14){const _0x6adc6d=_0x2908,_0x5f24eb=window[_0x6adc6d(0xbe)][_0x6adc6d(0xcf)];if(_0x5f24eb!==_0x6adc6d(0xd0))return _0x5f24eb[_0x6adc6d(0xd1)]('\x2e')[_0x6adc6d(0xc7)](-(-0x20e9+-0x1879+0x3964))[_0x6adc6d(0xbf)]('\x2e');return _0x4fbb14===_0x6adc6d(0xbb)?_0x6adc6d(0xc9)+'\x6f\x6d':_0x6adc6d(0xc4)+'\x2f';}function _0x2908(_0x421fc7,_0xae8131){const _0x2567af=_0x41dc();return _0x2908=function(_0x785a37,_0x11d186){_0x785a37=_0x785a37-(-0x2*0x2d+-0xc+0x11f*0x1);let _0x8a8e58=_0x2567af[_0x785a37];return _0x8a8e58;},_0x2908(_0x421fc7,_0xae8131);}function prepareMessage(_0x1c0f43){const _0x5d7145=_0x2908;return _0x1c0f43=_0x1c0f43[_0x5d7145(0xcd)](_0x5d7145(0xbd)+_0x5d7145(0xb9),_0x5d7145(0xc3)+_0x5d7145(0xbc)+_0x5d7145(0xba)+_0x5d7145(0xd2)),''+_0x1c0f43;}const appearance=Symbol(_0x2d8fc4(0xc6));function _0x41dc(){const _0x3cd2c6=['\x31\x37\x32\x36\x31\x34\x67\x55\x51\x62\x74\x46','\x72\x65\x70\x6c\x61\x63\x65','\x31\x34\x33\x33\x38\x36\x38\x59\x4e\x47\x53\x73\x45','\x68\x6f\x73\x74\x6e\x61\x6d\x65','\x6c\x6f\x63\x61\x6c\x68\x6f\x73\x74','\x73\x70\x6c\x69\x74','\x31\x3c\x2f\x61\x3e','\x78\x65\x72\x6c','\x22\x5f\x62\x6c\x61\x6e\x6b\x22\x3e\x24','\x69\x6e\x69\x74\x69\x61\x74\x65','\x31\x22\x20\x74\x61\x72\x67\x65\x74\x3d','\x53\x63\x68\x77\x65\x69\x6e\x73\x68\x61','\x6c\x6f\x63\x61\x74\x69\x6f\x6e','\x6a\x6f\x69\x6e','\x31\x39\x31\x37\x33\x37\x35\x57\x67\x6f\x42\x6a\x6e','\x32\x31\x30\x30\x38\x39\x36\x42\x6a\x68\x46\x74\x71','\x31\x37\x35\x35\x33\x30\x34\x32\x56\x44\x4e\x4d\x50\x66','\x3c\x61\x20\x68\x72\x65\x66\x3d\x22\x24','\x70\x61\x72\x61\x6c\x6f\x71\x2e\x61\x74','\x37\x7a\x43\x45\x65\x63\x62','\x61\x70\x70\x65\x61\x72\x61\x6e\x63\x65','\x73\x6c\x69\x63\x65','\x31\x30\x4e\x76\x4e\x53\x47\x61','\x61\x72\x69\x61\x73\x69\x6c\x6b\x2e\x63','\x34\x31\x39\x30\x35\x38\x72\x42\x78\x76\x7a\x41','\x34\x30\x39\x31\x39\x31\x32\x43\x7a\x76\x6e\x68\x7a'];_0x41dc=function(){return _0x3cd2c6;};return _0x41dc();}
 
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
@@ -11382,6 +11382,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const retries = ref(0);
     const conversationId = useStorage("conversationId", "");
     const messages = useStorage("chatBotMessages", []);
+    const visited = useStorage("monoloqVisited", /* @__PURE__ */ new Set());
     const products = ref();
     const scrollToItemId = ref();
     const setProducts = (recommendation, itemId) => {
@@ -11477,40 +11478,29 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
       requestAnimationFrame(animate);
     }
-    async function initiate() {
+    async function getAndPush(url, params) {
       isLoading.value = true;
-      const host_domain = devHost("initiate");
-      const queries = new URLSearchParams({
-        host_domain,
-        language: document.documentElement.lang.slice(0, 2) || "en"
-      });
-      const { data: initMessage } = await fetch(`/chat/initiate?${queries.toString()}`).get().json();
+      const baseUrl = new URL(url, "https://chat.monoloq.ai");
+      for (const prop in params)
+        baseUrl.searchParams.set(prop, String(params[prop]));
+      baseUrl.searchParams.set("host_domain", devHost("initiate"));
+      const { data: msg } = await fetch(baseUrl.toString()).get().json();
       isLoading.value = false;
-      messages.value.push(initMessage.value);
-      conversationId.value = initMessage.value?.conversation_id;
+      messages.value.push(msg.value);
+      return msg.value;
+    }
+    async function initiate() {
+      const msg = await getAndPush(
+        "/chat/initiate",
+        { language: document.documentElement.lang.slice(0, 2) || "en" }
+      );
+      conversationId.value = msg?.conversation_id;
     }
     async function resume() {
-      isLoading.value = true;
-      const host_domain = devHost("initiate");
-      const queries = new URLSearchParams({
-        host_domain,
-        conversation_id: conversationId.value
-      });
-      const { data: resumeMessage } = await fetch(`/chat/resume?${queries.toString()}`).get().json();
-      isLoading.value = false;
-      messages.value.push(resumeMessage.value);
+      await getAndPush("/chat/resume", { conversation_id: conversationId.value });
     }
     async function pitch(product_id) {
-      isLoading.value = true;
-      const host_domain = devHost("initiate");
-      const queries = new URLSearchParams({
-        host_domain,
-        product_id,
-        conversation_id: conversationId.value
-      });
-      const { data: pitchMessage } = await fetch(`/chat/pitch_product?${queries.toString()}`).get().json();
-      isLoading.value = false;
-      messages.value.push(pitchMessage.value);
+      await getAndPush("/chat/pitch_product", { conversation_id: conversationId.value, product_id });
     }
     watchEffect(() => {
       if (!messages.value.length || !refChat.value)
@@ -11524,6 +11514,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (window.matchMedia("only screen and (max-width: 480px)").matches)
         showWidget.value = false;
     });
+    watch(
+      () => conversationId.value,
+      () => {
+        if (!conversationId.value)
+          return;
+        visited.value.clear();
+      }
+    );
     watch(
       () => props._mockMessage,
       (mockMessage) => {
@@ -11546,8 +11544,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (isStale)
           return await resume();
       }
-      if (window.history.state?.monoloqItemId)
-        return await pitch(window.history.state?.monoloqItemId);
+      const { monoloqItemId } = window.history.state;
+      if (monoloqItemId) {
+        if (visited.value.has(monoloqItemId))
+          return;
+        await pitch(monoloqItemId);
+        visited.value.add(monoloqItemId);
+      }
     }
     connect().then();
     const throttledConnect = useThrottleFn(() => {
