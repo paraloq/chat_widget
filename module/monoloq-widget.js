@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-function _0x2e4c(_0x59dc77, _0x1262c8) {
-  const _0x5b3dce = _0x1e95();
-  return _0x2e4c = function(_0x3b8130, _0xfbe09) {
-    _0x3b8130 = _0x3b8130 - (4339 + 7270 + -11275);
-    let _0x105cb0 = _0x5b3dce[_0x3b8130];
-    return _0x105cb0;
-  }, _0x2e4c(_0x59dc77, _0x1262c8);
+function _0x30fa() {
+  const _0x4470c3 = ["1</a>", "Schweinsha", "29022RnuRAP", "localhost", "xerl", "appearance", "initiate", "hostname", "1117210UOKurE", "ariasilk.c", "12OfJzqw", "337797tPpORo", "slice", "657162chnuvl", '1" target=', "paraloq.at", "join", '<a href="$', '"_blank">$', "6oQGhqO", "5867540nLXMES", "replace", "split", "3169691DwxJLp", "411700lMvrBQ", "40JjsqNb", "location"];
+  _0x30fa = function() {
+    return _0x4470c3;
+  };
+  return _0x30fa();
 }
-const _0x536a33 = _0x2e4c;
-(function(_0x56f2c2, _0x143874) {
-  const _0x1f0eff = _0x2e4c, _0x380780 = _0x56f2c2();
+const _0x1d6d44 = _0x2a33;
+(function(_0x3106a2, _0x5cc763) {
+  const _0x94184b = _0x2a33, _0x16f010 = _0x3106a2();
   while (!![]) {
     try {
-      const _0x58c4c0 = parseInt(_0x1f0eff(344)) / (59 * -89 + -7 * -79 + 4699) * (-parseInt(_0x1f0eff(359)) / (7461 + -1001 + -6458)) + -parseInt(_0x1f0eff(348)) / (-1 * -9233 + 2368 + -11598) * (-parseInt(_0x1f0eff(339)) / (2783 + -1182 + -1597)) + -parseInt(_0x1f0eff(355)) / (314 * -17 + -6 * 338 + -13 * -567) * (parseInt(_0x1f0eff(360)) / (-6004 + -9314 + 15324)) + -parseInt(_0x1f0eff(340)) / (-4981 + -4254 + 9242) + parseInt(_0x1f0eff(338)) / (25 * -136 + -2892 * -1 + 516) + -parseInt(_0x1f0eff(337)) / (12 * 218 + 4852 + 1 * -7459) + parseInt(_0x1f0eff(347)) / (3 * -3239 + 1 * -6231 + 15958);
-      if (_0x58c4c0 === _0x143874)
+      const _0x2e6637 = parseInt(_0x94184b(258)) / (3593 * -1 + 110 * 49 + -1796) + -parseInt(_0x94184b(248)) / (-24 * 391 + -9909 + 19295) * (parseInt(_0x94184b(240)) / (639 + 2607 + -3243)) + -parseInt(_0x94184b(253)) / (26 * -89 + -6255 + 8573 * 1) + parseInt(_0x94184b(237)) / (6 * -923 + 3 * -2266 + 7 * 1763) * (parseInt(_0x94184b(239)) / (-8655 * -1 + 7662 + -16311)) + parseInt(_0x94184b(252)) / (7211 + -3720 + 67 * -52) + -parseInt(_0x94184b(254)) / (-2267 * -2 + -17 * 230 + -616) * (-parseInt(_0x94184b(242)) / (7861 + 5572 + -13424)) + -parseInt(_0x94184b(249)) / (-1369 + -353 * -23 + -6740);
+      if (_0x2e6637 === _0x5cc763)
         break;
       else
-        _0x380780["push"](_0x380780["shift"]());
-    } catch (_0x2cd9a7) {
-      _0x380780["push"](_0x380780["shift"]());
+        _0x16f010["push"](_0x16f010["shift"]());
+    } catch (_0x241a56) {
+      _0x16f010["push"](_0x16f010["shift"]());
     }
   }
-})(_0x1e95, 5209 * -19 + -255770 + 28425 * 22);
-function devHost(_0x2985e8) {
-  const _0x242855 = _0x2e4c, _0x259f0c = window[_0x242855(343)][_0x242855(357)];
-  if (_0x259f0c !== _0x242855(342))
-    return _0x259f0c[_0x242855(354)](".")[_0x242855(335)](-(-6571 + -4 * 2364 + 16029))[_0x242855(358)](".");
-  return _0x2985e8 === _0x242855(356) ? _0x242855(353) + "om" : _0x242855(346) + "/";
+})(_0x30fa, -112762 * -2 + -1622 * -122 + -5 * 31415);
+function devHost(_0xbfe198) {
+  const _0x462752 = _0x2a33, _0x37b1e6 = window[_0x462752(255)][_0x462752(263)];
+  if (_0x37b1e6 !== _0x462752(259))
+    return _0x37b1e6[_0x462752(251)](".")[_0x462752(241)](-(7352 * 1 + -2 * 860 + -5 * 1126))[_0x462752(245)](".");
+  return _0xbfe198 === _0x462752(262) ? _0x462752(238) + "om" : _0x462752(244) + "/";
 }
-function prepareMessage(_0x332bd9) {
-  const _0x130036 = _0x2e4c;
-  return _0x332bd9 = _0x332bd9[_0x130036(341)](_0x130036(350) + _0x130036(334), _0x130036(336) + _0x130036(352) + _0x130036(345) + _0x130036(349)), "" + _0x332bd9;
+function _0x2a33(_0x3b70df, _0x100f69) {
+  const _0x2e6a03 = _0x30fa();
+  return _0x2a33 = function(_0x52bd85, _0x277ccc) {
+    _0x52bd85 = _0x52bd85 - (-1 * 6043 + 7993 * -1 + 14273);
+    let _0x4ba7fb = _0x2e6a03[_0x52bd85];
+    return _0x4ba7fb;
+  }, _0x2a33(_0x3b70df, _0x100f69);
 }
-function _0x1e95() {
-  const _0x43defb = ["xerl", "slice", '<a href="$', "3348216NiYeIY", "1708720EidXiD", "44aBzRYN", "1781689sFhyMT", "replace", "localhost", "location", "344393qorLhf", '"_blank">$', "paraloq.at", "5733150IRQDSH", "135234ikYdAT", "1</a>", "Schweinsha", "appearance", '1" target=', "ariasilk.c", "split", "50PSYjdL", "initiate", "hostname", "join", "2sNyfzQ", "24726iOdREt"];
-  _0x1e95 = function() {
-    return _0x43defb;
-  };
-  return _0x1e95();
+function prepareMessage(_0x143221) {
+  const _0x483bc7 = _0x2a33;
+  return _0x143221 = _0x143221[_0x483bc7(250)](_0x483bc7(257) + _0x483bc7(260), _0x483bc7(246) + _0x483bc7(243) + _0x483bc7(247) + _0x483bc7(256)), "" + _0x143221;
 }
-const appearance = Symbol(_0x536a33(351));
+const appearance = Symbol(_0x1d6d44(261));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9834,8 +9834,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     const IS_DEV = false;
     const retries = ref(0);
-    const conversationId = useStorage("conversationId", "");
-    const messages = useStorage("chatBotMessages", []);
+    const conversationId = useStorage("monoloqConversationId", "");
+    const messages = useStorage("monoloqChatBotMessages", []);
     const visited = useStorage("monoloqVisited", /* @__PURE__ */ new Set());
     const products = ref();
     const scrollToItemId = ref();
@@ -9850,10 +9850,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const refChat = ref();
     const showWidget = ref(true);
     const isLoading = ref(false);
-    const isChatOpen = useStorage("isChatOpen", false);
+    const isChatOpen = useStorage("monoloqIsChatOpen", false);
     computed(() => window.location.hostname);
     const fetch2 = createFetch({
       baseUrl: "https://chat.monoloq.ai",
+      fetchOptions: {
+        method: "GET"
+      },
       options: {
         refetch: false,
         async beforeFetch({ options, cancel }) {
@@ -9887,7 +9890,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     });
     async function onSend(inputMessage) {
-      var _a2;
       isLoading.value = true;
       if (!refChat.value || !conversationId.value)
         return;
@@ -9898,14 +9900,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         conversation_id: conversationId.value
       };
       messages.value.push(message);
-      const host_domain = devHost("initiate");
-      const queries = new URLSearchParams({
-        host_domain
-      });
-      const { data: serverResponse } = await fetch2(`/chat/handle_message?${queries}`).post(message).json();
-      isLoading.value = false;
-      messages.value.push(serverResponse.value);
-      const maybeRecommendedProduct = (_a2 = serverResponse.value) == null ? void 0 : _a2.recommended_products;
+      const serverResponse = await handleMessage(message);
+      const maybeRecommendedProduct = serverResponse == null ? void 0 : serverResponse.recommended_products;
       if (!(maybeRecommendedProduct == null ? void 0 : maybeRecommendedProduct.length))
         return;
       isLoading.value = true;
@@ -9938,29 +9934,41 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
       requestAnimationFrame(animate);
     }
-    async function getAndPush(url, params) {
+    async function requestAndPush(url, params, fetchOptions = {}) {
       isLoading.value = true;
       const baseUrl = new URL(url, "https://chat.monoloq.ai");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
       baseUrl.searchParams.set("host_domain", devHost("initiate"));
-      const { data: msg } = await fetch2(baseUrl.toString()).get().json();
+      let retries2 = 0;
+      const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
+      while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
+        await execute();
+        retries2 += 1;
+      }
       isLoading.value = false;
       messages.value.push(msg.value);
       return msg.value;
     }
+    async function handleMessage(body) {
+      return await requestAndPush(
+        "/chat/handle_message",
+        void 0,
+        { method: "POST", body: JSON.stringify(body) }
+      );
+    }
     async function initiate() {
-      const msg = await getAndPush(
+      const msg = await requestAndPush(
         "/chat/initiate",
         { language: document.documentElement.lang.slice(0, 2) || "en" }
       );
       conversationId.value = msg == null ? void 0 : msg.conversation_id;
     }
     async function resume() {
-      await getAndPush("/chat/resume", { conversation_id: conversationId.value });
+      await requestAndPush("/chat/resume", { conversation_id: conversationId.value });
     }
     async function pitch(product_id) {
-      await getAndPush("/chat/pitch_product", { conversation_id: conversationId.value, product_id });
+      await requestAndPush("/chat/pitch_product", { conversation_id: conversationId.value, product_id });
     }
     watchEffect(() => {
       if (!messages.value.length || !refChat.value)
@@ -9968,7 +9976,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       scrollToBottom();
     });
     watchEffect(() => {
-      console.log("Enabling on mobile");
       if (props.enable_on_mobile)
         return;
       if (window.matchMedia("only screen and (max-width: 480px)").matches)
