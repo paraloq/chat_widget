@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-const _0x2b337e = _0x4a7d;
-(function(_0x597189, _0x13f8c7) {
-  const _0x45ac3d = _0x4a7d, _0x22e38f = _0x597189();
+function _0x5880() {
+  const _0x530df0 = ["8KuECCC", "replace", "1438280Eoryex", "Schweinsha", "4390776BXFRnq", "location", "6353186gJkqpE", "paraloq.at", "150fRDhWe", "21ZqsDdb", "slice", "8DcSxML", '<a href="$', "appearance", "36487352bUwMGZ", "initiate", "1</a>", "split", '1" target=', "155970wDOTSW", "join", "xerl", "localhost", '"_blank">$', "ariasilk.c", "hostname", "578457gtKcrX", "20642yIbhse"];
+  _0x5880 = function() {
+    return _0x530df0;
+  };
+  return _0x5880();
+}
+function _0x1eb0(_0x436839, _0x3a51d3) {
+  const _0x30ceba = _0x5880();
+  return _0x1eb0 = function(_0x3f0617, _0x53e1e5) {
+    _0x3f0617 = _0x3f0617 - (-8 * 141 + -6503 + 7834);
+    let _0x352019 = _0x30ceba[_0x3f0617];
+    return _0x352019;
+  }, _0x1eb0(_0x436839, _0x3a51d3);
+}
+const _0x2f594e = _0x1eb0;
+(function(_0x1203ad, _0xf0b500) {
+  const _0x192e8b = _0x1eb0, _0x211b94 = _0x1203ad();
   while (!![]) {
     try {
-      const _0x3a2f91 = -parseInt(_0x45ac3d(161)) / (1077 + 328 + -1404) + parseInt(_0x45ac3d(155)) / (7411 + -8254 + -169 * -5) + -parseInt(_0x45ac3d(168)) / (361 * -25 + 7138 + 1890) * (-parseInt(_0x45ac3d(159)) / (-3312 + 3677 + -361)) + parseInt(_0x45ac3d(170)) / (3869 + 2 * 2194 + 4126 * -2) * (parseInt(_0x45ac3d(150)) / (-2 * -4419 + -7500 + -37 * 36)) + parseInt(_0x45ac3d(149)) / (3262 + 97 * 78 + -10821) + parseInt(_0x45ac3d(173)) / (-14 * -141 + -1 * -2857 + 4823 * -1) + parseInt(_0x45ac3d(153)) / (-34 * 172 + 102 * 86 + -2915) * (-parseInt(_0x45ac3d(171)) / (-6863 + -8933 + 15806));
-      if (_0x3a2f91 === _0x13f8c7)
+      const _0x22ebef = -parseInt(_0x192e8b(208)) / (3665 + 5608 + -2318 * 4) + -parseInt(_0x192e8b(205)) / (204 + -5285 + 5083) * (parseInt(_0x192e8b(215)) / (-7725 + 1184 + 6544)) + parseInt(_0x192e8b(206)) / (-7183 + -179 * -39 + 206 * 1) * (parseInt(_0x192e8b(225)) / (1275 + -219 * 7 + -263 * -1)) + parseInt(_0x192e8b(210)) / (19 * 318 + -1161 + -15 * 325) + parseInt(_0x192e8b(212)) / (-9432 + -1646 * -4 + 1 * 2855) * (-parseInt(_0x192e8b(217)) / (46 * -34 + -1733 * -1 + -161)) + parseInt(_0x192e8b(204)) / (7298 + 3 * -1381 + -3146) * (-parseInt(_0x192e8b(214)) / (-118 * 53 + 5482 + -2 * -391)) + parseInt(_0x192e8b(220)) / (4717 + -7346 + 240 * 11);
+      if (_0x22ebef === _0xf0b500)
         break;
       else
-        _0x22e38f["push"](_0x22e38f["shift"]());
-    } catch (_0x30c9e7) {
-      _0x22e38f["push"](_0x22e38f["shift"]());
+        _0x211b94["push"](_0x211b94["shift"]());
+    } catch (_0x4b3d26) {
+      _0x211b94["push"](_0x211b94["shift"]());
     }
   }
-})(_0x16a6, 3 * 31493 + -4983 * -127 + -1 * 366031);
-function devHost(_0x49d3e6) {
-  const _0x3669f4 = _0x4a7d, _0xc45bd8 = window[_0x3669f4(164)][_0x3669f4(172)];
-  if (_0xc45bd8 !== _0x3669f4(163))
-    return _0xc45bd8[_0x3669f4(165)](".")[_0x3669f4(174)](-(6698 + -2336 + -4360))[_0x3669f4(169)](".");
-  return _0x49d3e6 === _0x3669f4(167) ? _0x3669f4(175) + "om" : _0x3669f4(151) + "/";
+})(_0x5880, -597658 + -1 * 662197 + 1988851);
+function devHost(_0x5b881d) {
+  const _0x12bb28 = _0x1eb0, _0x5d53ff = window[_0x12bb28(211)][_0x12bb28(203)];
+  if (_0x5d53ff !== _0x12bb28(228))
+    return _0x5d53ff[_0x12bb28(223)](".")[_0x12bb28(216)](-(7592 + -60 * -19 + -8730))[_0x12bb28(226)](".");
+  return _0x5b881d === _0x12bb28(221) ? _0x12bb28(230) + "om" : _0x12bb28(213) + "/";
 }
-function prepareMessage(_0x3317f7) {
-  const _0x227681 = _0x4a7d;
-  return _0x3317f7 = _0x3317f7[_0x227681(157)](_0x227681(162) + _0x227681(154), _0x227681(156) + _0x227681(152) + _0x227681(160) + _0x227681(158)), "" + _0x3317f7;
+function prepareMessage(_0x3bd6e8) {
+  const _0x311e57 = _0x1eb0;
+  return _0x3bd6e8 = _0x3bd6e8[_0x311e57(207)](_0x311e57(209) + _0x311e57(227), _0x311e57(218) + _0x311e57(224) + _0x311e57(229) + _0x311e57(222)), "" + _0x3bd6e8;
 }
-function _0x16a6() {
-  const _0x1a8e18 = ["80cAWPtx", "hostname", "2619472frYULr", "slice", "ariasilk.c", "2242891zCNbae", "6lTfjjM", "paraloq.at", '1" target=', "1620558Cubvgm", "xerl", "946608NphWmt", '<a href="$', "replace", "1</a>", "16428olNffO", '"_blank">$', "96517AnZWpc", "Schweinsha", "localhost", "location", "split", "appearance", "initiate", "411IksgXA", "join", "1072460qSfPdA"];
-  _0x16a6 = function() {
-    return _0x1a8e18;
-  };
-  return _0x16a6();
-}
-function _0x4a7d(_0x131314, _0x449f70) {
-  const _0x2fa705 = _0x16a6();
-  return _0x4a7d = function(_0x3976d6, _0x4f9f14) {
-    _0x3976d6 = _0x3976d6 - (-2369 + -8805 * -1 + -6287);
-    let _0x248c8a = _0x2fa705[_0x3976d6];
-    return _0x248c8a;
-  }, _0x4a7d(_0x131314, _0x449f70);
-}
-const appearance = Symbol(_0x2b337e(166));
+const appearance = Symbol(_0x2f594e(219));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9954,7 +9954,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return await requestAndPush(
         "/chat/handle_message",
         void 0,
-        { method: "POST", body: JSON.stringify(body) }
+        { method: "POST", body: JSON.stringify(body), headers: { "Content-Type": "application/json" } }
       );
     }
     async function initiate() {
