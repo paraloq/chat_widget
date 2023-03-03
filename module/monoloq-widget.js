@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-function _0x5880() {
-  const _0x530df0 = ["8KuECCC", "replace", "1438280Eoryex", "Schweinsha", "4390776BXFRnq", "location", "6353186gJkqpE", "paraloq.at", "150fRDhWe", "21ZqsDdb", "slice", "8DcSxML", '<a href="$', "appearance", "36487352bUwMGZ", "initiate", "1</a>", "split", '1" target=', "155970wDOTSW", "join", "xerl", "localhost", '"_blank">$', "ariasilk.c", "hostname", "578457gtKcrX", "20642yIbhse"];
-  _0x5880 = function() {
-    return _0x530df0;
+function _0x142d(_0x494f9c, _0xf2fb0e) {
+  const _0x19cbef = _0x3c0d();
+  return _0x142d = function(_0x3ab13d, _0x168735) {
+    _0x3ab13d = _0x3ab13d - (-271 * -28 + 2964 + -10358);
+    let _0x5af006 = _0x19cbef[_0x3ab13d];
+    return _0x5af006;
+  }, _0x142d(_0x494f9c, _0xf2fb0e);
+}
+function _0x3c0d() {
+  const _0x13b476 = ["4xbmAnB", "appearance", '<a href="$', "4826948zPqRfu", "initiate", "split", "6BCMGRj", "846246WYjEnD", "8aiWDkp", "9744810SyhIxT", "slice", "4428090iCrjFP", "hostname", "replace", "location", "2367660eyWwSI", "localhost", "xerl", "60355kOzWCl", '"_blank">$', "paraloq.at", "ariasilk.c", "1</a>", '1" target=', "1362291VuVWIs", "join", "Schweinsha"];
+  _0x3c0d = function() {
+    return _0x13b476;
   };
-  return _0x5880();
+  return _0x3c0d();
 }
-function _0x1eb0(_0x436839, _0x3a51d3) {
-  const _0x30ceba = _0x5880();
-  return _0x1eb0 = function(_0x3f0617, _0x53e1e5) {
-    _0x3f0617 = _0x3f0617 - (-8 * 141 + -6503 + 7834);
-    let _0x352019 = _0x30ceba[_0x3f0617];
-    return _0x352019;
-  }, _0x1eb0(_0x436839, _0x3a51d3);
-}
-const _0x2f594e = _0x1eb0;
-(function(_0x1203ad, _0xf0b500) {
-  const _0x192e8b = _0x1eb0, _0x211b94 = _0x1203ad();
+const _0x203341 = _0x142d;
+(function(_0x147d55, _0x18e678) {
+  const _0x39ed8e = _0x142d, _0x5b509e = _0x147d55();
   while (!![]) {
     try {
-      const _0x22ebef = -parseInt(_0x192e8b(208)) / (3665 + 5608 + -2318 * 4) + -parseInt(_0x192e8b(205)) / (204 + -5285 + 5083) * (parseInt(_0x192e8b(215)) / (-7725 + 1184 + 6544)) + parseInt(_0x192e8b(206)) / (-7183 + -179 * -39 + 206 * 1) * (parseInt(_0x192e8b(225)) / (1275 + -219 * 7 + -263 * -1)) + parseInt(_0x192e8b(210)) / (19 * 318 + -1161 + -15 * 325) + parseInt(_0x192e8b(212)) / (-9432 + -1646 * -4 + 1 * 2855) * (-parseInt(_0x192e8b(217)) / (46 * -34 + -1733 * -1 + -161)) + parseInt(_0x192e8b(204)) / (7298 + 3 * -1381 + -3146) * (-parseInt(_0x192e8b(214)) / (-118 * 53 + 5482 + -2 * -391)) + parseInt(_0x192e8b(220)) / (4717 + -7346 + 240 * 11);
-      if (_0x22ebef === _0xf0b500)
+      const _0x336b36 = -parseInt(_0x39ed8e(217)) / (-2600 * -3 + 1644 * 5 + -16019) + parseInt(_0x39ed8e(216)) / (-1347 + 1009 * 1 + 340) * (-parseInt(_0x39ed8e(207)) / (-7503 * -1 + 9493 * -1 + 1 * 1993)) + -parseInt(_0x39ed8e(210)) / (6363 + 1 * 7653 + 226 * -62) * (parseInt(_0x39ed8e(201)) / (-658 + 668 + 5 * -1)) + parseInt(_0x39ed8e(219)) / (-5606 + -6741 + 12353 * 1) + parseInt(_0x39ed8e(213)) / (-1233 + -4285 * -1 + 609 * -5) * (parseInt(_0x39ed8e(218)) / (-1 * 5651 + -6542 + 12201)) + parseInt(_0x39ed8e(194)) / (-1 * 86 + 63 * -73 + 4694) + parseInt(_0x39ed8e(198)) / (-33 * -67 + 1604 + -3805);
+      if (_0x336b36 === _0x18e678)
         break;
       else
-        _0x211b94["push"](_0x211b94["shift"]());
-    } catch (_0x4b3d26) {
-      _0x211b94["push"](_0x211b94["shift"]());
+        _0x5b509e["push"](_0x5b509e["shift"]());
+    } catch (_0xa74cb6) {
+      _0x5b509e["push"](_0x5b509e["shift"]());
     }
   }
-})(_0x5880, -597658 + -1 * 662197 + 1988851);
-function devHost(_0x5b881d) {
-  const _0x12bb28 = _0x1eb0, _0x5d53ff = window[_0x12bb28(211)][_0x12bb28(203)];
-  if (_0x5d53ff !== _0x12bb28(228))
-    return _0x5d53ff[_0x12bb28(223)](".")[_0x12bb28(216)](-(7592 + -60 * -19 + -8730))[_0x12bb28(226)](".");
-  return _0x5b881d === _0x12bb28(221) ? _0x12bb28(230) + "om" : _0x12bb28(213) + "/";
+})(_0x3c0d, -1 * -647531 + -9 * 140860 + 1442076);
+function devHost(_0x1071e1) {
+  const _0x30babb = _0x142d, _0x231307 = window[_0x30babb(197)][_0x30babb(195)];
+  if (_0x231307 !== _0x30babb(199))
+    return _0x231307[_0x30babb(215)](".")[_0x30babb(220)](-(-5277 + -1 * -9071 + 1 * -3792))[_0x30babb(208)](".");
+  return _0x1071e1 === _0x30babb(214) ? _0x30babb(204) + "om" : _0x30babb(203) + "/";
 }
-function prepareMessage(_0x3bd6e8) {
-  const _0x311e57 = _0x1eb0;
-  return _0x3bd6e8 = _0x3bd6e8[_0x311e57(207)](_0x311e57(209) + _0x311e57(227), _0x311e57(218) + _0x311e57(224) + _0x311e57(229) + _0x311e57(222)), "" + _0x3bd6e8;
+function prepareMessage(_0x3393a1) {
+  const _0x3e8edf = _0x142d;
+  return _0x3393a1 = _0x3393a1[_0x3e8edf(196)](_0x3e8edf(209) + _0x3e8edf(200), _0x3e8edf(212) + _0x3e8edf(206) + _0x3e8edf(202) + _0x3e8edf(205)), "" + _0x3393a1;
 }
-const appearance = Symbol(_0x2f594e(219));
+const appearance = Symbol(_0x203341(211));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9860,7 +9860,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       options: {
         refetch: false,
         async beforeFetch({ options, cancel }) {
-          const additionalHeaders = { "x-api-key": "thqMbn962S4Sg2r4U6l6Dzx9DTYk9qP9f4RTAB9j" };
+          const additionalHeaders = { "x-api-key": "thqMbn962S4Sg2r4U6l6Dzx9DTYk9qP9f4RTAB9j", "Content-Type": "application/json" };
           if (retries.value > 30 || !showWidget.value)
             cancel();
           const newOptions = { ...options, headers: { ...options.headers, ...additionalHeaders } };
@@ -9905,7 +9905,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (!(maybeRecommendedProduct == null ? void 0 : maybeRecommendedProduct.length))
         return;
       isLoading.value = true;
-      await new Promise((resolve2) => setTimeout(resolve2, 3e3));
+      await new Promise((resolve2) => setTimeout(resolve2, 1e3));
       isLoading.value = false;
       setProducts(maybeRecommendedProduct);
     }
@@ -9954,7 +9954,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return await requestAndPush(
         "/chat/handle_message",
         void 0,
-        { method: "POST", body: JSON.stringify(body), headers: { "Content-Type": "application/json" } }
+        { method: "POST", body: JSON.stringify(body) }
       );
     }
     async function initiate() {
