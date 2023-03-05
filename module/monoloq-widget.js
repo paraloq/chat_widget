@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-function _0x1f63(_0x30efe2, _0x22b244) {
-  const _0xad8487 = _0x2f0a();
-  return _0x1f63 = function(_0x17ecb8, _0x14fbd8) {
-    _0x17ecb8 = _0x17ecb8 - (7742 + 2148 + -9497);
-    let _0x4804b1 = _0xad8487[_0x17ecb8];
-    return _0x4804b1;
-  }, _0x1f63(_0x30efe2, _0x22b244);
+const _0x242daf = _0x5217;
+function _0x32ce() {
+  const _0x4b08c6 = ["location", "xerl", "8968610ByUHqj", "299620VGTcPj", "localhost", "join", "hostname", "45132wwlTRp", "797775wfbjvq", '1" target=', "ariasilk.c", "split", "116530MayyGx", "replace", "45BIbGED", '"_blank">$', "1</a>", "4329352VLYJpL", "paraloq.at", "5048016BIVJnv", "appearance", "Schweinsha", "27oijhpo", "slice", "initiate", '<a href="$'];
+  _0x32ce = function() {
+    return _0x4b08c6;
+  };
+  return _0x32ce();
 }
-const _0x376dd1 = _0x1f63;
-(function(_0x592475, _0x474d7e) {
-  const _0x4a552f = _0x1f63, _0x3f82f7 = _0x592475();
+(function(_0x1fe322, _0x28b7f2) {
+  const _0x3ffc1f = _0x5217, _0xf60725 = _0x1fe322();
   while (!![]) {
     try {
-      const _0x47b9a2 = parseInt(_0x4a552f(410)) / (-807 * 7 + 34 * 268 + -3462) + -parseInt(_0x4a552f(401)) / (146 * -61 + 403 * 13 + -3669 * -1) * (-parseInt(_0x4a552f(416)) / (-205 * 12 + 24 * -6 + 2607 * 1)) + parseInt(_0x4a552f(413)) / (-5901 + 5772 + 133) + parseInt(_0x4a552f(409)) / (9249 * -1 + -7183 + 1 * 16437) * (-parseInt(_0x4a552f(418)) / (853 * 1 + -45 * -45 + -2872 * 1)) + parseInt(_0x4a552f(412)) / (7811 + -1787 * 3 + -7 * 349) * (parseInt(_0x4a552f(411)) / (5101 + -890 + 1 * -4203)) + -parseInt(_0x4a552f(417)) / (-1 * -2273 + -2557 + -293 * -1) + -parseInt(_0x4a552f(400)) / (1 * 2353 + -205 * 40 + -1 * -5857) * (parseInt(_0x4a552f(403)) / (-32 * -164 + 7557 + -12794));
-      if (_0x47b9a2 === _0x474d7e)
+      const _0x2d8bc0 = parseInt(_0x3ffc1f(206)) / (-1 * -4211 + -7 * 827 + 1579 * 1) + parseInt(_0x3ffc1f(205)) / (-3878 + -1514 * 5 + 11450) * (-parseInt(_0x3ffc1f(212)) / (7849 * -1 + 5780 + 28 * 74)) + -parseInt(_0x3ffc1f(227)) / (-15 * 86 + -4979 * 2 + 11252) + -parseInt(_0x3ffc1f(210)) / (3943 * 2 + -5555 + -2326) + parseInt(_0x3ffc1f(217)) / (-6263 * -1 + -163 * 59 + 3360) + parseInt(_0x3ffc1f(226)) / (-8266 + -8342 + 5 * 3323) + parseInt(_0x3ffc1f(215)) / (635 + 362 * -14 + -4441 * -1) * (-parseInt(_0x3ffc1f(220)) / (-6789 + 1 * 788 + 6010));
+      if (_0x2d8bc0 === _0x28b7f2)
         break;
       else
-        _0x3f82f7["push"](_0x3f82f7["shift"]());
-    } catch (_0x231582) {
-      _0x3f82f7["push"](_0x3f82f7["shift"]());
+        _0xf60725["push"](_0xf60725["shift"]());
+    } catch (_0xeeb7d3) {
+      _0xf60725["push"](_0xf60725["shift"]());
     }
   }
-})(_0x2f0a, -17 * 60310 + 992945 + 4 * 193213);
-function devHost(_0x2849f0) {
-  const _0x47ba0f = _0x1f63, _0x25ec39 = window[_0x47ba0f(420)][_0x47ba0f(408)];
-  if (_0x25ec39 !== _0x47ba0f(395))
-    return _0x25ec39[_0x47ba0f(415)](".")[_0x47ba0f(397)](-(-14 * 647 + 1 * 8069 + -991 * -1))[_0x47ba0f(398)](".");
-  return _0x2849f0 === _0x47ba0f(414) ? _0x47ba0f(405) + "om" : _0x47ba0f(404) + "/";
+})(_0x32ce, -1 * 601028 + -17177 * 67 + 1220 * 2141);
+function _0x5217(_0x35184a, _0x4891f3) {
+  const _0x2bfb8d = _0x32ce();
+  return _0x5217 = function(_0x384b7c, _0x2459e8) {
+    _0x384b7c = _0x384b7c - (6452 + -5 * 1279 + 148);
+    let _0x37ddce = _0x2bfb8d[_0x384b7c];
+    return _0x37ddce;
+  }, _0x5217(_0x35184a, _0x4891f3);
 }
-function prepareMessage(_0x34b98d) {
-  const _0x458045 = _0x1f63;
-  return _0x34b98d = _0x34b98d[_0x458045(399)](_0x458045(393) + _0x458045(396), _0x458045(419) + _0x458045(402) + _0x458045(394) + _0x458045(406)), "" + _0x34b98d;
+function devHost(_0x45e370) {
+  const _0xa12ffd = _0x5217, _0x47e833 = window[_0xa12ffd(224)][_0xa12ffd(230)];
+  if (_0x47e833 !== _0xa12ffd(228))
+    return _0x47e833[_0xa12ffd(209)](".")[_0xa12ffd(221)](-(-2378 + 1715 + -95 * -7))[_0xa12ffd(229)](".");
+  return _0x45e370 === _0xa12ffd(222) ? _0xa12ffd(208) + "om" : _0xa12ffd(216) + "/";
 }
-const appearance = Symbol(_0x376dd1(407));
-function _0x2f0a() {
-  const _0x5f04f5 = ['"_blank">$', "localhost", "xerl", "slice", "join", "replace", "10VNrfqb", "106JINyJz", '1" target=', "6188600iNjOeh", "paraloq.at", "ariasilk.c", "1</a>", "appearance", "hostname", "1461365wWTebk", "1053016JSKXct", "4168BqKdUj", "17843hfQSeq", "308816yLekiQ", "initiate", "split", "47103Edkozi", "12624561CulYig", "12Cagvbz", '<a href="$', "location", "Schweinsha"];
-  _0x2f0a = function() {
-    return _0x5f04f5;
-  };
-  return _0x2f0a();
+function prepareMessage(_0x1d5942) {
+  const _0x320fb1 = _0x5217;
+  return _0x1d5942 = _0x1d5942[_0x320fb1(211)](_0x320fb1(219) + _0x320fb1(225), _0x320fb1(223) + _0x320fb1(207) + _0x320fb1(213) + _0x320fb1(214)), "" + _0x1d5942;
 }
+const appearance = Symbol(_0x242daf(218));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9373,11 +9373,16 @@ const _hoisted_5$4 = {
 const _hoisted_6$4 = { class: "text-xs opacity-50" };
 const _hoisted_7$4 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
 const _hoisted_8$2 = {
+  key: 0,
+  class: "mt-3 text-xs"
+};
+const _hoisted_9$2 = ["href"];
+const _hoisted_10$1 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
-const _hoisted_9$2 = { key: 0 };
-const _hoisted_10$1 = { class: "text-xs opacity-50" };
+const _hoisted_11 = { key: 0 };
+const _hoisted_12 = { class: "text-xs opacity-50" };
 const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
@@ -9433,12 +9438,21 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
             createBaseVNode("time", _hoisted_6$4, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("div", _hoisted_7$4, [
-            createBaseVNode("p", null, toDisplayString(props.message.user_language_text), 1)
+            createBaseVNode("p", null, toDisplayString(props.message.user_language_text), 1),
+            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_8$2, [
+              createTextVNode(" See "),
+              createBaseVNode("a", {
+                href: props.message.source_links[0],
+                style: normalizeStyle({ color: unref(provided).mainColor }),
+                target: "_blank"
+              }, "here", 12, _hoisted_9$2),
+              createTextVNode(" for more information. ")
+            ])) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_8$2, [
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_9$2, [
-            createBaseVNode("time", _hoisted_10$1, toDisplayString(unref(time)), 1)
+        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$1, [
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11, [
+            createBaseVNode("time", _hoisted_12, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
             class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
@@ -10887,23 +10901,6 @@ to{
   -webkit-mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");
   mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");
 }
-.divider{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-self: stretch;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  height: 1rem;
-  white-space: nowrap;
-}
-.divider:before,
-  .divider:after{
-  content: "";
-  flex-grow: 1;
-  height: 0.125rem;
-  width: 100%;
-}
 .input{
   flex-shrink: 1;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -11265,17 +11262,6 @@ to{
 100%{
     background-position-y: 0;
 }
-}
-.divider:before{
-  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.1;
-}
-.divider:after{
-  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.1;
-}
-.divider:not(:empty){
-  gap: 1rem;
 }
 .drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-primary{
   outline: 2px solid hsl(var(--p));
@@ -11705,6 +11691,9 @@ to{
 .mr-5{
   margin-right: 20px;
 }
+.mt-3{
+  margin-top: 12px;
+}
 .ml-5{
   margin-left: 20px;
 }
@@ -11719,9 +11708,6 @@ to{
 }
 .mr-2{
   margin-right: 8px;
-}
-.mt-3{
-  margin-top: 12px;
 }
 .mt-6{
   margin-top: 24px;
