@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-const _0x19ea25 = _0x4726;
-function _0x4726(_0xe118c8, _0x1c7f12) {
-  const _0x36a420 = _0x53d9();
-  return _0x4726 = function(_0x53ef06, _0x2abf64) {
-    _0x53ef06 = _0x53ef06 - (1 * 4013 + 1949 + 529 * -11);
-    let _0x2e0aac = _0x36a420[_0x53ef06];
-    return _0x2e0aac;
-  }, _0x4726(_0xe118c8, _0x1c7f12);
-}
-function _0x53d9() {
-  const _0x52542d = ["3737012AyuTaF", "84187ydRQjk", "join", "3QuLUUd", "paraloq.at", "Schweinsha", "location", "xerl", "replace", "2Wvmzdo", '1" target=', "7393211dVdmRp", "split", "1</a>", '"_blank">$', "930294DSySyr", '<a href="$', "localhost", "ariasilk.c", "12218630nYdlxV", "5iRXJae", "appearance", "slice", "hostname", "initiate", "3874536yqKyCO", "1452720YOTBZN"];
-  _0x53d9 = function() {
-    return _0x52542d;
-  };
-  return _0x53d9();
-}
-(function(_0x573d2c, _0x3682a8) {
-  const _0x53ade9 = _0x4726, _0x31fa33 = _0x573d2c();
+const _0xf646fd = _0x14a9;
+(function(_0x2800a7, _0x1f54cf) {
+  const _0x578145 = _0x14a9, _0x3b0504 = _0x2800a7();
   while (!![]) {
     try {
-      const _0x5db8f7 = parseInt(_0x53ade9(151)) / (-5791 * -1 + 1 * 6435 + -12225) * (parseInt(_0x53ade9(159)) / (8818 + -2196 + -4 * 1655)) + parseInt(_0x53ade9(153)) / (9129 + -892 * 2 + -7342) * (parseInt(_0x53ade9(150)) / (-21 * 186 + 7509 + -3599)) + -parseInt(_0x53ade9(143)) / (-1 * 2078 + 2697 + 614 * -1) * (parseInt(_0x53ade9(148)) / (-11 * -897 + 7831 * -1 + -2030)) + -parseInt(_0x53ade9(161)) / (-2 * -50 + 1483 + 197 * -8) + parseInt(_0x53ade9(149)) / (222 * -7 + 1829 * 3 + -3925) + -parseInt(_0x53ade9(165)) / (-59 * 107 + -7724 + -2 * -7023) + parseInt(_0x53ade9(169)) / (-1607 + 1 * -9570 + -99 * -113);
-      if (_0x5db8f7 === _0x3682a8)
+      const _0x177cfa = -parseInt(_0x578145(336)) / (1 * 9095 + 8 * 1077 + -17710) * (parseInt(_0x578145(323)) / (-2523 + -7 * 1013 + 4 * 2404)) + parseInt(_0x578145(348)) / (248 + 1726 + 9 * -219) * (parseInt(_0x578145(339)) / (-41 * 94 + -1201 + 5059 * 1)) + parseInt(_0x578145(335)) / (5673 + -1 * 3499 + -723 * 3) * (parseInt(_0x578145(345)) / (11 * 129 + 1057 * -3 + -1758 * -1)) + parseInt(_0x578145(340)) / (117 * -67 + -5 * -260 + -3 * -2182) * (parseInt(_0x578145(320)) / (-1 * 5123 + 9144 + -4013)) + parseInt(_0x578145(330)) / (-9991 + 9305 + 695) * (-parseInt(_0x578145(328)) / (1513 * -3 + -4227 + 4388 * 2)) + parseInt(_0x578145(327)) / (1097 * -1 + -7153 + 8261 * 1) * (-parseInt(_0x578145(342)) / (-820 + 2 * 1803 + 73 * -38)) + parseInt(_0x578145(347)) / (-7444 + -2397 + 4927 * 2);
+      if (_0x177cfa === _0x1f54cf)
         break;
       else
-        _0x31fa33["push"](_0x31fa33["shift"]());
-    } catch (_0x4b3dfa) {
-      _0x31fa33["push"](_0x31fa33["shift"]());
+        _0x3b0504["push"](_0x3b0504["shift"]());
+    } catch (_0x21e365) {
+      _0x3b0504["push"](_0x3b0504["shift"]());
     }
   }
-})(_0x53d9, -21789 * -46 + -597943 + 3369 * 63);
-function devHost(_0x4ac2af) {
-  const _0x30823f = _0x4726, _0x351bb4 = window[_0x30823f(156)][_0x30823f(146)];
-  if (_0x351bb4 !== _0x30823f(167))
-    return _0x351bb4[_0x30823f(162)](".")[_0x30823f(145)](-(7602 + -37 * 28 + -3282 * 2))[_0x30823f(152)](".");
-  return _0x4ac2af === _0x30823f(147) ? _0x30823f(168) + "om" : _0x30823f(154) + "/";
+})(_0x4969, 111875 + -13933 * 3 + 103674);
+function devHost(_0x2e52ee) {
+  const _0x224823 = _0x14a9, _0x3a8514 = window[_0x224823(337)][_0x224823(326)];
+  if (_0x3a8514 !== _0x224823(321))
+    return _0x3a8514[_0x224823(322)](".")[_0x224823(324)](-(-21 * 428 + -5729 + -14719 * -1))[_0x224823(325)](".");
+  return _0x2e52ee === _0x224823(349) ? _0x224823(338) + "om" : _0x224823(344) + "/";
 }
-function prepareMessage(_0x27e25a) {
-  const _0x4b15d9 = _0x4726;
-  return _0x27e25a = _0x27e25a[_0x4b15d9(158)](_0x4b15d9(155) + _0x4b15d9(157), _0x4b15d9(166) + _0x4b15d9(160) + _0x4b15d9(164) + _0x4b15d9(163)), "" + _0x27e25a;
+function _0x14a9(_0x1f5282, _0x91c6c5) {
+  const _0x14d147 = _0x4969();
+  return _0x14a9 = function(_0x4d6a49, _0x145fc7) {
+    _0x4d6a49 = _0x4d6a49 - (-105 * -48 + 9121 + -1 * 13841);
+    let _0x44aa36 = _0x14d147[_0x4d6a49];
+    return _0x44aa36;
+  }, _0x14a9(_0x1f5282, _0x91c6c5);
 }
-const appearance = Symbol(_0x19ea25(144));
+function _0x4969() {
+  const _0x5ee656 = ["localhost", "split", "402574QerDHR", "slice", "join", "hostname", "253zKrmqc", "130NVggCg", "appearance", "32247yTROQi", '<a href="$', '1" target=', "replace", "xerl", "5rdNFSt", "1sLWPBn", "location", "ariasilk.c", "176UmSZKZ", "7JlBpVZ", "Schweinsha", "75156NeviEH", "1</a>", "paraloq.at", "1520418VtVRdB", '"_blank">$', "2116257hDRZSG", "5592CwdKks", "initiate", "539656WqAveX"];
+  _0x4969 = function() {
+    return _0x5ee656;
+  };
+  return _0x4969();
+}
+function prepareMessage(_0x749f97) {
+  const _0x2eed8f = _0x14a9;
+  return _0x749f97 = _0x749f97[_0x2eed8f(333)](_0x2eed8f(341) + _0x2eed8f(334), _0x2eed8f(331) + _0x2eed8f(332) + _0x2eed8f(346) + _0x2eed8f(343)), "" + _0x749f97;
+}
+const appearance = Symbol(_0xf646fd(329));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10013,6 +10013,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       { immediate: true }
     );
     async function connect() {
+      var _a2, _b;
       if (window.location.hostname === "localhost" && messages.value.length !== 0)
         return;
       if (messages.value.length === 0)
@@ -10024,8 +10025,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (isStale)
           return await resume();
       }
-      if (window.history.state.monoloqItemId) {
-        const { monoloqItemId } = window.history.state;
+      const monoloqItemId = (_b = (_a2 = window.history) == null ? void 0 : _a2.state) == null ? void 0 : _b.monoloqItemId;
+      if (monoloqItemId) {
         if (visited.value.has(monoloqItemId))
           return;
         await pitch(monoloqItemId);
@@ -12266,7 +12267,7 @@ async function register(tagName = "monoloq-widget") {
   document.body.appendChild(
     new ChatWindow({ ...props })
   );
-  console.info("Monoloq widget v8 registered.");
+  console.info("Monoloq widget v9 registered.");
 }
 export {
   ChatWindow,
