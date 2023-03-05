@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-function _0x1bbb() {
-  const _0x4afe94 = ["appearance", "ariasilk.c", "location", "Schweinsha", '1" target=', "1JLOSAG", "slice", '<a href="$', "2252468sgUecB", "join", "hostname", "1614276SZRBEt", "5HzWXMJ", "split", "6151578TgfpMC", "59204PhBtVO", "paraloq.at", "xerl", '"_blank">$', "5060256xxejcO", "initiate", "15494832jhqfDU", "8441307yrdaUK", "localhost", "1</a>", "replace"];
-  _0x1bbb = function() {
-    return _0x4afe94;
+const _0x19ea25 = _0x4726;
+function _0x4726(_0xe118c8, _0x1c7f12) {
+  const _0x36a420 = _0x53d9();
+  return _0x4726 = function(_0x53ef06, _0x2abf64) {
+    _0x53ef06 = _0x53ef06 - (1 * 4013 + 1949 + 529 * -11);
+    let _0x2e0aac = _0x36a420[_0x53ef06];
+    return _0x2e0aac;
+  }, _0x4726(_0xe118c8, _0x1c7f12);
+}
+function _0x53d9() {
+  const _0x52542d = ["3737012AyuTaF", "84187ydRQjk", "join", "3QuLUUd", "paraloq.at", "Schweinsha", "location", "xerl", "replace", "2Wvmzdo", '1" target=', "7393211dVdmRp", "split", "1</a>", '"_blank">$', "930294DSySyr", '<a href="$', "localhost", "ariasilk.c", "12218630nYdlxV", "5iRXJae", "appearance", "slice", "hostname", "initiate", "3874536yqKyCO", "1452720YOTBZN"];
+  _0x53d9 = function() {
+    return _0x52542d;
   };
-  return _0x1bbb();
+  return _0x53d9();
 }
-const _0x580eb6 = _0x37fc;
-function _0x37fc(_0x51f248, _0x28c630) {
-  const _0x4c743c = _0x1bbb();
-  return _0x37fc = function(_0x44e24f, _0x54acb9) {
-    _0x44e24f = _0x44e24f - (-5003 + 1 * -4339 + -25 * -388);
-    let _0x3e0ec9 = _0x4c743c[_0x44e24f];
-    return _0x3e0ec9;
-  }, _0x37fc(_0x51f248, _0x28c630);
-}
-(function(_0x9a8dd4, _0x2a49e5) {
-  const _0x132be8 = _0x37fc, _0x40a627 = _0x9a8dd4();
+(function(_0x573d2c, _0x3682a8) {
+  const _0x53ade9 = _0x4726, _0x31fa33 = _0x573d2c();
   while (!![]) {
     try {
-      const _0x28a670 = -parseInt(_0x132be8(369)) / (243 * 4 + -52 * -186 + -10643) * (-parseInt(_0x132be8(372)) / (2694 + 1 * 6221 + -8913)) + parseInt(_0x132be8(375)) / (790 + 2187 + 2974 * -1) + parseInt(_0x132be8(379)) / (-1050 + 1256 * 2 + -9 * 162) + parseInt(_0x132be8(376)) / (6848 + 9945 + -8394 * 2) * (-parseInt(_0x132be8(378)) / (-13 * 148 + -3436 + -1 * -5366)) + parseInt(_0x132be8(360)) / (-37 * 219 + -17 * 503 + 16661 * 1) + parseInt(_0x132be8(383)) / (2415 + 687 * -3 + -2 * 173) + -parseInt(_0x132be8(359)) / (1673 * -1 + -9887 * 1 + 11569);
-      if (_0x28a670 === _0x2a49e5)
+      const _0x5db8f7 = parseInt(_0x53ade9(151)) / (-5791 * -1 + 1 * 6435 + -12225) * (parseInt(_0x53ade9(159)) / (8818 + -2196 + -4 * 1655)) + parseInt(_0x53ade9(153)) / (9129 + -892 * 2 + -7342) * (parseInt(_0x53ade9(150)) / (-21 * 186 + 7509 + -3599)) + -parseInt(_0x53ade9(143)) / (-1 * 2078 + 2697 + 614 * -1) * (parseInt(_0x53ade9(148)) / (-11 * -897 + 7831 * -1 + -2030)) + -parseInt(_0x53ade9(161)) / (-2 * -50 + 1483 + 197 * -8) + parseInt(_0x53ade9(149)) / (222 * -7 + 1829 * 3 + -3925) + -parseInt(_0x53ade9(165)) / (-59 * 107 + -7724 + -2 * -7023) + parseInt(_0x53ade9(169)) / (-1607 + 1 * -9570 + -99 * -113);
+      if (_0x5db8f7 === _0x3682a8)
         break;
       else
-        _0x40a627["push"](_0x40a627["shift"]());
-    } catch (_0x581c0c) {
-      _0x40a627["push"](_0x40a627["shift"]());
+        _0x31fa33["push"](_0x31fa33["shift"]());
+    } catch (_0x4b3dfa) {
+      _0x31fa33["push"](_0x31fa33["shift"]());
     }
   }
-})(_0x1bbb, -123 * -6515 + 1 * 63985 + -94681);
-function devHost(_0xe080b3) {
-  const _0x56ec4f = _0x37fc, _0x229e10 = window[_0x56ec4f(366)][_0x56ec4f(374)];
-  if (_0x229e10 !== _0x56ec4f(361))
-    return _0x229e10[_0x56ec4f(377)](".")[_0x56ec4f(370)](-(13 * 342 + -7758 * -1 + -12202 * 1))[_0x56ec4f(373)](".");
-  return _0xe080b3 === _0x56ec4f(358) ? _0x56ec4f(365) + "om" : _0x56ec4f(380) + "/";
+})(_0x53d9, -21789 * -46 + -597943 + 3369 * 63);
+function devHost(_0x4ac2af) {
+  const _0x30823f = _0x4726, _0x351bb4 = window[_0x30823f(156)][_0x30823f(146)];
+  if (_0x351bb4 !== _0x30823f(167))
+    return _0x351bb4[_0x30823f(162)](".")[_0x30823f(145)](-(7602 + -37 * 28 + -3282 * 2))[_0x30823f(152)](".");
+  return _0x4ac2af === _0x30823f(147) ? _0x30823f(168) + "om" : _0x30823f(154) + "/";
 }
-function prepareMessage(_0x8090fa) {
-  const _0x2eb7d9 = _0x37fc;
-  return _0x8090fa = _0x8090fa[_0x2eb7d9(363)](_0x2eb7d9(367) + _0x2eb7d9(381), _0x2eb7d9(371) + _0x2eb7d9(368) + _0x2eb7d9(382) + _0x2eb7d9(362)), "" + _0x8090fa;
+function prepareMessage(_0x27e25a) {
+  const _0x4b15d9 = _0x4726;
+  return _0x27e25a = _0x27e25a[_0x4b15d9(158)](_0x4b15d9(155) + _0x4b15d9(157), _0x4b15d9(166) + _0x4b15d9(160) + _0x4b15d9(164) + _0x4b15d9(163)), "" + _0x27e25a;
 }
-const appearance = Symbol(_0x580eb6(364));
+const appearance = Symbol(_0x19ea25(144));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10024,8 +10024,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (isStale)
           return await resume();
       }
-      const { monoloqItemId } = window.history.state;
-      if (monoloqItemId) {
+      if (window.history.state.monoloqItemId) {
+        const { monoloqItemId } = window.history.state;
         if (visited.value.has(monoloqItemId))
           return;
         await pitch(monoloqItemId);
