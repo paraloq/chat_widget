@@ -7347,47 +7347,47 @@ function initDev() {
 {
   initDev();
 }
-const _0x564289 = _0x6ba0;
-function _0x11c0() {
-  const _0x3aba6c = ["4561623YxJTnD", "1060818MaNFnv", "138GkZQPb", "16211oYsOua", "1VBGolT", "16644qaYDzs", "69RgWotV", "hostname", "initiate", "ariasilk.c", "43428PTyNcI", "6856773SNaTVh", '1" target=', "xerl", "www.", "paraloq.at", "localhost", "replace", "Schweinsha", '<a href="$', "189130MWfPXT", "10bTuqRp", "location", "1</a>", '"_blank">$', "144520hkKtrV", "136OaMkiY", "appearance"];
-  _0x11c0 = function() {
-    return _0x3aba6c;
-  };
-  return _0x11c0();
-}
-(function(_0x4a0b69, _0x2c898f) {
-  const _0x16f2d9 = _0x6ba0, _0xaf2156 = _0x4a0b69();
+const _0x4dcd68 = _0x3beb;
+(function(_0x40c8ff, _0x5bd185) {
+  const _0x2fad9b = _0x3beb, _0x1e3402 = _0x40c8ff();
   while (!![]) {
     try {
-      const _0x8080eb = parseInt(_0x16f2d9(328)) / (-6182 + -4437 + 10620) * (parseInt(_0x16f2d9(325)) / (3 * -1807 + -232 * 31 + 12615)) + parseInt(_0x16f2d9(330)) / (-9630 * -1 + 8692 + 1 * -18319) * (parseInt(_0x16f2d9(321)) / (-14 * 107 + 55 * -119 + 8047)) + -parseInt(_0x16f2d9(316)) / (-1784 + 2894 + -1105) * (parseInt(_0x16f2d9(326)) / (-37 * 25 + -1030 + 1961)) + -parseInt(_0x16f2d9(334)) / (-155 * 7 + 171 * 3 + -579 * -1) * (parseInt(_0x16f2d9(322)) / (-6274 * 1 + 2895 + 1129 * 3)) + -parseInt(_0x16f2d9(324)) / (5366 + 9517 + 111 * -134) + -parseInt(_0x16f2d9(317)) / (7574 + -1 * 953 + 601 * -11) * (parseInt(_0x16f2d9(335)) / (-4024 + -2598 + 6633)) + parseInt(_0x16f2d9(329)) / (-849 + -343 + 1204) * (parseInt(_0x16f2d9(327)) / (5576 + -276 * 29 + 1 * 2441));
-      if (_0x8080eb === _0x2c898f)
+      const _0x5d14fa = -parseInt(_0x2fad9b(176)) / (-3943 + 7004 + -3060) * (parseInt(_0x2fad9b(167)) / (8431 + 1 * -6053 + -2376)) + parseInt(_0x2fad9b(173)) / (8614 + -8291 + -4 * 80) * (-parseInt(_0x2fad9b(186)) / (4293 + 7857 + -12146 * 1)) + -parseInt(_0x2fad9b(169)) / (-659 * -11 + 4369 + -79 * 147) + parseInt(_0x2fad9b(174)) / (4141 * 1 + -5582 + 1447) * (-parseInt(_0x2fad9b(171)) / (2632 * 2 + -15 * -625 + -14632 * 1)) + parseInt(_0x2fad9b(179)) / (3 * -1759 + -8583 * -1 + -3298) * (-parseInt(_0x2fad9b(189)) / (10 * 877 + -2097 + -14 * 476)) + -parseInt(_0x2fad9b(183)) / (-9466 + 2271 + -5 * -1441) + parseInt(_0x2fad9b(178)) / (-219 * 25 + -3556 + -4521 * -2);
+      if (_0x5d14fa === _0x5bd185)
         break;
       else
-        _0xaf2156["push"](_0xaf2156["shift"]());
-    } catch (_0x54fc34) {
-      _0xaf2156["push"](_0xaf2156["shift"]());
+        _0x1e3402["push"](_0x1e3402["shift"]());
+    } catch (_0x41dc33) {
+      _0x1e3402["push"](_0x1e3402["shift"]());
     }
   }
-})(_0x11c0, 14 * 28986 + -52 * -16344 + -270360);
-function _0x6ba0(_0x54c662, _0x260584) {
-  const _0x2bddfd = _0x11c0();
-  return _0x6ba0 = function(_0x5bd48f, _0x288f95) {
-    _0x5bd48f = _0x5bd48f - (-6845 + -2732 + -9893 * -1);
-    let _0x38eb48 = _0x2bddfd[_0x5bd48f];
-    return _0x38eb48;
-  }, _0x6ba0(_0x54c662, _0x260584);
+})(_0x4054, 7 * 77310 + -3471 * 19 + -3 * 57814);
+function _0x4054() {
+  const _0x49e6dd = ["20920XgdBrM", "1</a>", "36945YLDWlO", "appearance", "1715882qbroIB", "localhost", "3vugyDp", "6cKnJgO", "Schweinsha", "25MOswyP", '"_blank">$', "18044433RjBgiT", "752bQbkLy", "ariasilk.c", "location", "hostname", "3388120ayMIyy", "initiate", "replace", "1520564xdumys", '<a href="$', "xerl", "10116nMmNrZ", "paraloq.at", "www.", '1" target='];
+  _0x4054 = function() {
+    return _0x49e6dd;
+  };
+  return _0x4054();
 }
-function devHost(_0x288f95) {
-  const _0x319554 = _0x6ba0, _0x38eb48 = window[_0x319554(318)][_0x319554(331)];
-  if (_0x38eb48 !== _0x319554(340))
-    return _0x38eb48[_0x319554(341)](_0x319554(338), "");
-  return _0x288f95 === _0x319554(332) ? _0x319554(333) + "om" : _0x319554(339) + "/";
+function devHost(_0x34c0f1) {
+  const _0x131c47 = _0x3beb, _0x1e4c77 = window[_0x131c47(181)][_0x131c47(182)];
+  if (_0x1e4c77 !== _0x131c47(172))
+    return _0x1e4c77[_0x131c47(185)](_0x131c47(191), "");
+  return _0x34c0f1 === _0x131c47(184) ? _0x131c47(180) + "om" : _0x131c47(190) + "/";
 }
-function prepareMessage(_0x56767b) {
-  const _0x361ae5 = _0x6ba0;
-  return _0x56767b = _0x56767b[_0x361ae5(341)](_0x361ae5(342) + _0x361ae5(337), _0x361ae5(343) + _0x361ae5(336) + _0x361ae5(320) + _0x361ae5(319)), "" + _0x56767b;
+function _0x3beb(_0x4aaaf3, _0x5500e5) {
+  const _0x4f9125 = _0x4054();
+  return _0x3beb = function(_0x5cdb50, _0x34c0f1) {
+    _0x5cdb50 = _0x5cdb50 - (-9356 + 97 * -55 + 14857);
+    let _0x1e4c77 = _0x4f9125[_0x5cdb50];
+    return _0x1e4c77;
+  }, _0x3beb(_0x4aaaf3, _0x5500e5);
 }
-const appearance = Symbol(_0x564289(323));
+function prepareMessage(_0x1f648e) {
+  const _0x20841 = _0x3beb;
+  return _0x1f648e = _0x1f648e[_0x20841(185)](_0x20841(175) + _0x20841(188), _0x20841(187) + _0x20841(166) + _0x20841(177) + _0x20841(168)), "" + _0x1f648e;
+}
+const appearance = Symbol(_0x4dcd68(170));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9829,7 +9829,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     chat_button_color: null,
     chat_button_position: { default: "bottom_right" },
     enable_on_mobile: { type: Boolean, default: false },
-    host_name: { default: "ariasilk.com" },
     show_button_widget: { type: Boolean, default: true },
     fixed: { type: Boolean, default: true },
     _mockLoading: { type: Boolean, default: false },
@@ -9867,7 +9866,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
     computed(() => window.location.hostname);
     const fetch2 = createFetch({
-      baseUrl: "https://ob4e4npfkj.execute-api.eu-west-1.amazonaws.com/prod",
+      baseUrl: "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",
       fetchOptions: {
         method: "GET"
       },
@@ -9950,7 +9949,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     async function requestAndPush(url, params, fetchOptions = {}) {
       isLoading.value = true;
-      const baseUrl = new URL(url, "https://ob4e4npfkj.execute-api.eu-west-1.amazonaws.com/prod");
+      const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
       baseUrl.searchParams.set("host_domain", devHost("initiate"));
@@ -12258,7 +12257,7 @@ async function register(tagName = "monoloq-widget") {
     let props = {};
     try {
       const res = await fetch(
-        `${String("https://ob4e4npfkj.execute-api.eu-west-1.amazonaws.com/prod")}/settings/appearance?host_domain=${devHost("appearance")}`
+        `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings/appearance?host_domain=${devHost("appearance")}`
       );
       props = await res.json();
     } catch (e) {
