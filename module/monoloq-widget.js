@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x187c() {
-  const _0x3c8c45 = ["450784CPfTmR", "3xDxPfu", "7EBPyog", "replace", "includes", "www.", "11921910jxfxgu", "ariasilk.c", ".amazonaws", "initiate", "map", "55187Zlwsyu", "split", "5356780kQbebu", "hostname", "https://ob", "1152774ifoqXD", "4e4npfkj.e", "location", "4501216IRMDVC", "xecute-api", "paraloq.at", "500022NAfHnP", "9CFGjAP", ".com/prod", ".eu-west-1", "10nQhZYx", "appearance"];
-  _0x187c = function() {
-    return _0x3c8c45;
+function _0x4aa4() {
+  const _0x738a82 = ["map", "674098siYoOB", "replace", "4535GkKbbk", "paraloq.at", ".eu-west-1", "ariasilk.c", "www.", "7481150KWFWOD", "xecute-api", "16NLuHdS", "33haXimW", "3185623CeVqXE", "10YaEFfO", "4146QIfLnx", "hostname", "1986196Kgglwr", "9528795CTHoBU", "split", "location", "initiate", "4e4npfkj.e", "includes", "https://ob", ".com/prod", ".amazonaws", "appearance", "26421MRuvns"];
+  _0x4aa4 = function() {
+    return _0x738a82;
   };
-  return _0x187c();
+  return _0x4aa4();
 }
-function _0x52f3(_0x193b8b, _0x11ef92) {
-  const _0x19bba7 = _0x187c();
-  return _0x52f3 = function(_0x1839da, _0x96a4f9) {
-    _0x1839da = _0x1839da - (5329 + 2 * 79 + -5042);
-    let _0x3845a3 = _0x19bba7[_0x1839da];
-    return _0x3845a3;
-  }, _0x52f3(_0x193b8b, _0x11ef92);
-}
-const _0x215a50 = _0x52f3;
-(function(_0x3d7ef2, _0x2f1115) {
-  const _0x1757ac = _0x52f3, _0x5721ad = _0x3d7ef2();
+const _0x113a16 = _0x5b7e;
+(function(_0x58db66, _0x30eb5f) {
+  const _0x3ecee4 = _0x5b7e, _0x533eeb = _0x58db66();
   while (!![]) {
     try {
-      const _0x4d2b21 = -parseInt(_0x1757ac(457)) / (-57 * -34 + 7617 * -1 + 5680) + parseInt(_0x1757ac(468)) / (-6291 + 8858 + -513 * 5) * (-parseInt(_0x1757ac(447)) / (-7 * 303 + -1688 * -4 + -4628)) + -parseInt(_0x1757ac(446)) / (3967 + -1 * -2588 + -1 * 6551) * (parseInt(_0x1757ac(472)) / (-6945 * -1 + -7736 + 796)) + -parseInt(_0x1757ac(462)) / (454 + 3839 * 2 + -8126) + -parseInt(_0x1757ac(448)) / (-5128 * 1 + 4567 + 568) * (parseInt(_0x1757ac(465)) / (1 * 8167 + 25 * 397 + 1507 * -12)) + parseInt(_0x1757ac(469)) / (7421 + -5229 * 1 + -2183) * (parseInt(_0x1757ac(459)) / (6382 + 3655 * 2 + -6841 * 2)) + parseInt(_0x1757ac(452)) / (1 * 4799 + -9012 + 4224);
-      if (_0x4d2b21 === _0x2f1115)
+      const _0x5f29f6 = parseInt(_0x3ecee4(481)) / (6109 + 35 * 97 + -9503 * 1) + parseInt(_0x3ecee4(493)) / (-2879 * -2 + -641 * 13 + -3 * -859) * (parseInt(_0x3ecee4(479)) / (-4471 + 438 * 2 + -3598 * -1)) + -parseInt(_0x3ecee4(468)) / (895 * -4 + 535 * -2 + -2 * -2327) + parseInt(_0x3ecee4(483)) / (98 * 15 + -2657 * 1 + 1192) * (parseInt(_0x3ecee4(494)) / (393 * 17 + -4107 + -321 * 8)) + -parseInt(_0x3ecee4(492)) / (6657 + -1 * 6906 + -32 * -8) * (-parseInt(_0x3ecee4(490)) / (2363 * -1 + -4377 + 6748)) + parseInt(_0x3ecee4(469)) / (187 * -43 + 4 * 1100 + -1 * -3650) + parseInt(_0x3ecee4(488)) / (1476 + -423 * -21 + -10349) * (-parseInt(_0x3ecee4(491)) / (-4709 + 267 * 34 + 2179 * -2));
+      if (_0x5f29f6 === _0x30eb5f)
         break;
       else
-        _0x5721ad["push"](_0x5721ad["shift"]());
-    } catch (_0x128538) {
-      _0x5721ad["push"](_0x5721ad["shift"]());
+        _0x533eeb["push"](_0x533eeb["shift"]());
+    } catch (_0x36bad2) {
+      _0x533eeb["push"](_0x533eeb["shift"]());
     }
   }
-})(_0x187c, -9 * 25703 + -789 * -647 + 54961 * 1);
-function devHost(_0x96a4f9, _0x3845a3) {
-  const _0x31d16e = _0x52f3, _0x57a7dd = window[_0x31d16e(464)][_0x31d16e(460)], _0x45b611 = String(_0x31d16e(461) + _0x31d16e(463) + _0x31d16e(466) + _0x31d16e(471) + _0x31d16e(454) + _0x31d16e(470))[_0x31d16e(458)](", ")[_0x31d16e(456)]((_0x4576cc) => new URL(_0x4576cc)[_0x31d16e(460)]);
+})(_0x4aa4, 747992 + 288535 + -463618);
+function devHost(_0x2f7852, _0x176901) {
+  const _0x564a65 = _0x5b7e, _0x5af636 = window[_0x564a65(471)][_0x564a65(467)], _0x165043 = String(_0x564a65(475) + _0x564a65(473) + _0x564a65(489) + _0x564a65(485) + _0x564a65(477) + _0x564a65(476))[_0x564a65(470)](", ")[_0x564a65(480)]((_0x23186d) => new URL(_0x23186d)[_0x564a65(467)]);
   if (![])
-    return _0x96a4f9 === _0x31d16e(455) ? _0x31d16e(453) + "om" : _0x31d16e(467) + "/";
-  if (!_0x3845a3)
-    return _0x57a7dd[_0x31d16e(449)](_0x31d16e(451), "");
-  if (!_0x45b611[_0x31d16e(450)](_0x57a7dd))
-    return _0x57a7dd[_0x31d16e(449)](_0x31d16e(451), "");
-  return _0x3845a3;
+    return _0x2f7852 === _0x564a65(472) ? _0x564a65(486) + "om" : _0x564a65(484) + "/";
+  if (!_0x176901)
+    return _0x5af636[_0x564a65(482)](_0x564a65(487), "");
+  if (!_0x165043[_0x564a65(474)](_0x5af636))
+    return _0x5af636[_0x564a65(482)](_0x564a65(487), "");
+  return _0x176901;
 }
-function prepareMessage(_0x2ed379) {
-  return "" + _0x2ed379;
+function _0x5b7e(_0x26139a, _0x5301a3) {
+  const _0x2f7852 = _0x4aa4();
+  return _0x5b7e = function(_0x176901, _0x5af636) {
+    _0x176901 = _0x176901 - (292 * -1 + -12 * 369 + -273 * -19);
+    let _0x165043 = _0x2f7852[_0x176901];
+    return _0x165043;
+  }, _0x5b7e(_0x26139a, _0x5301a3);
 }
-const appearance = Symbol(_0x215a50(445));
+function prepareMessage(_0x109afa) {
+  return "" + _0x109afa;
+}
+const appearance = Symbol(_0x113a16(478));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9380,7 +9380,7 @@ const _hoisted_8$2 = {
   class: "mt-3 text-xs"
 };
 const _hoisted_9$2 = ["href"];
-const _hoisted_10$1 = {
+const _hoisted_10$2 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
@@ -9453,7 +9453,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
             ])) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$1, [
+        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
           unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11, [
             createBaseVNode("time", _hoisted_12, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
@@ -9632,7 +9632,7 @@ const _hoisted_6$2 = ["src"];
 const _hoisted_7$2 = { class: "card-body text-white text-center" };
 const _hoisted_8$1 = { class: "text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200" };
 const _hoisted_9$1 = { class: "text-base text-white/40 line-clamp-6" };
-const _hoisted_10 = { class: "text-lg mt-2" };
+const _hoisted_10$1 = { class: "text-lg mt-2" };
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "ChatProducts",
   props: {
@@ -9689,7 +9689,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                   createBaseVNode("div", null, [
                     createBaseVNode("p", _hoisted_9$1, toDisplayString(product.description), 1)
                   ]),
-                  createBaseVNode("p", _hoisted_10, toDisplayString(`$${product.price}`), 1)
+                  createBaseVNode("p", _hoisted_10$1, toDisplayString(`$${product.price}`), 1)
                 ])
               ])
             ], 8, _hoisted_4$2);
@@ -9702,12 +9702,13 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 const _hoisted_1$1 = { class: "w-full h-max carousel carousel-center px-4 pt-0 pb-3 space-x-4 my-auto relative pl-5" };
 const _hoisted_2$1 = ["onClick"];
 const _hoisted_3$1 = { class: "flex flex-col text-left flex-1 mt-3" };
-const _hoisted_4$1 = { class: "text-lg font-bold" };
-const _hoisted_5$1 = { class: "text-md text-neutral/70 mt-6 mb-2" };
-const _hoisted_6$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_4$1 = { class: "text-sm font-bold line-clamp-3 mr-2" };
+const _hoisted_5$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_6$1 = { class: "text-md text-neutral/70 mb-4" };
 const _hoisted_7$1 = { class: "flex justify-start" };
 const _hoisted_8 = ["onClick"];
-const _hoisted_9 = ["src"];
+const _hoisted_9 = { class: "grid place-items-center" };
+const _hoisted_10 = ["src"];
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "MiniPreview",
   props: {
@@ -9729,7 +9730,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           var _a2;
           return openBlock(), createElementBlock("div", {
             key: product.item_id,
-            class: "carousel-item h-max w-[284px] cursor-pointer",
+            class: "carousel-item w-[284px] cursor-pointer min-h-[160px]",
             onClick: ($event) => recommend(product.url, product.item_id)
           }, [
             createBaseVNode("div", {
@@ -9737,8 +9738,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
             }, [
               createBaseVNode("div", _hoisted_3$1, [
                 createBaseVNode("h2", _hoisted_4$1, toDisplayString(`${product.title}`), 1),
-                createBaseVNode("p", _hoisted_5$1, toDisplayString(`$${product.price}`), 1),
-                _hoisted_6$1,
+                _hoisted_5$1,
+                createBaseVNode("p", _hoisted_6$1, toDisplayString(`$${product.price}`), 1),
                 createBaseVNode("div", _hoisted_7$1, [
                   createBaseVNode("button", {
                     class: normalizeClass(["btn btn-xs hover:opacity-80 text-[12px] px-[8px] h-[24px] capitalize border-none btn-primary", unref(provided).textClass]),
@@ -9749,12 +9750,12 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                   }, " Preview ", 46, _hoisted_8)
                 ])
               ]),
-              createBaseVNode("figure", null, [
+              createBaseVNode("figure", _hoisted_9, [
                 createBaseVNode("img", {
                   src: (_a2 = product.images[product.match_image_idx || 0]) == null ? void 0 : _a2.url,
                   alt: "shoes",
-                  class: "h-[144px] rounded-md"
-                }, null, 8, _hoisted_9)
+                  class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
+                }, null, 8, _hoisted_10)
               ])
             ], 2)
           ], 8, _hoisted_2$1);
@@ -11721,17 +11722,17 @@ to{
 .mr-2{
   margin-right: 8px;
 }
-.mt-6{
-  margin-top: 24px;
-}
-.mb-2{
-  margin-bottom: 8px;
+.mb-4{
+  margin-bottom: 16px;
 }
 .block{
   display: block;
 }
 .flex{
   display: flex;
+}
+.grid{
+  display: grid;
 }
 .hidden{
   display: none;
@@ -11773,9 +11774,6 @@ to{
 .h-\\[24px\\]{
   height: 24px;
 }
-.h-\\[144px\\]{
-  height: 144px;
-}
 .h-8{
   height: 32px;
 }
@@ -11787,6 +11785,9 @@ to{
 }
 .max-h-\\[630px\\]{
   max-height: 630px;
+}
+.min-h-\\[160px\\]{
+  min-height: 160px;
 }
 .w-full{
   width: 100%;
@@ -11821,6 +11822,9 @@ to{
 .max-w-\\[372px\\]{
   max-width: 372px;
 }
+.max-w-\\[144px\\]{
+  max-width: 144px;
+}
 .flex-none{
   flex: none;
 }
@@ -11845,6 +11849,9 @@ to{
 }
 .flex-col{
   flex-direction: column;
+}
+.place-items-center{
+  place-items: center;
 }
 .items-center{
   align-items: center;
@@ -12035,6 +12042,10 @@ to{
   font-size: 16px !important;
   line-height: 24px !important;
 }
+.text-sm{
+  font-size: 14px;
+  line-height: 20px;
+}
 .text-\\[12px\\]{
   font-size: 12px;
 }
@@ -12108,6 +12119,12 @@ to{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
+}
+.line-clamp-3{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .lds-ellipsis {
   display: inline-block;
