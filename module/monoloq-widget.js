@@ -7347,46 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x3de3f2 = _0x5bf5;
-(function(_0x5c3af2, _0x44edc9) {
-  const _0x552ad1 = _0x5bf5, _0x352db0 = _0x5c3af2();
+function _0x37e0(_0x44d739, _0x336624) {
+  const _0x2055ea = _0x2dcb();
+  return _0x37e0 = function(_0x437fd4, _0x5dc9fc) {
+    _0x437fd4 = _0x437fd4 - (9444 + -5303 * 1 + -5 * 785);
+    let _0x33f1e4 = _0x2055ea[_0x437fd4];
+    return _0x33f1e4;
+  }, _0x37e0(_0x44d739, _0x336624);
+}
+function _0x2dcb() {
+  const _0x1e0c6e = ["https://ob", "1448526xysomb", "location", "4e4npfkj.e", "paraloq.at", "1107970JjvvZP", "12wHURfS", "appearance", "initiate", ".com/prod", "hostname", "split", ".amazonaws", "includes", "2755172cZmYjD", "map", "210911cUbjtA", "www.", "10818702SWaHLY", "5Etlhmu", "xecute-api", "1718360iKYSBd", "ariasilk.c", "replace", "360123ttdYNu", ".eu-west-1"];
+  _0x2dcb = function() {
+    return _0x1e0c6e;
+  };
+  return _0x2dcb();
+}
+const _0x1a0f9d = _0x37e0;
+(function(_0x1bf554, _0x71205e) {
+  const _0x41d039 = _0x37e0, _0x38bab8 = _0x1bf554();
   while (!![]) {
     try {
-      const _0x40ebac = parseInt(_0x552ad1(341)) / (1039 * -7 + -997 * -9 + -1699) * (-parseInt(_0x552ad1(339)) / (1011 + 6433 + -1 * 7442)) + -parseInt(_0x552ad1(346)) / (-158 * 22 + 14 * 581 + -4655) + -parseInt(_0x552ad1(354)) / (-1766 + -5255 * 1 + 7025) * (parseInt(_0x552ad1(353)) / (-9453 + 6998 + 2460)) + -parseInt(_0x552ad1(347)) / (17 * 174 + 3715 + 6667 * -1) + -parseInt(_0x552ad1(340)) / (-2041 * -2 + -3377 + -698) * (parseInt(_0x552ad1(345)) / (-1213 * -7 + 381 * 5 + 7 * -1484)) + parseInt(_0x552ad1(337)) / (1 * -6643 + -3154 + 1 * 9806) + parseInt(_0x552ad1(344)) / (-7449 + 9143 + -1684);
-      if (_0x40ebac === _0x44edc9)
+      const _0x2dceef = -parseInt(_0x41d039(227)) / (4487 + 8874 + -13360) + parseInt(_0x41d039(216)) / (1093 + -5809 + -2359 * -2) + -parseInt(_0x41d039(235)) / (-7803 + 2 * -4498 + 16802) * (parseInt(_0x41d039(217)) / (3556 + 9111 + 21 * -603)) + -parseInt(_0x41d039(230)) / (579 * -5 + 8619 + 133 * -43) * (parseInt(_0x41d039(238)) / (967 + -5064 + -1 * -4103)) + -parseInt(_0x41d039(225)) / (-9622 + -1 * 2087 + 58 * 202) + -parseInt(_0x41d039(232)) / (359 * -5 + 11 * -670 + -1 * -9173) + parseInt(_0x41d039(229)) / (3 * 2213 + -9729 + 3099);
+      if (_0x2dceef === _0x71205e)
         break;
       else
-        _0x352db0["push"](_0x352db0["shift"]());
-    } catch (_0x463341) {
-      _0x352db0["push"](_0x352db0["shift"]());
+        _0x38bab8["push"](_0x38bab8["shift"]());
+    } catch (_0x910f5c) {
+      _0x38bab8["push"](_0x38bab8["shift"]());
     }
   }
-})(_0x5a63, 39916 + 529870 + 320285);
-function devHost(_0x22da2b) {
-  const _0x4d137b = _0x5bf5, _0xef710e = window[_0x4d137b(355)][_0x4d137b(348)];
-  if (_0xef710e !== _0x4d137b(349))
-    return _0xef710e[_0x4d137b(351)](_0x4d137b(338), "");
-  return _0x22da2b === _0x4d137b(350) ? _0x4d137b(342) + "om" : _0x4d137b(352) + "/";
+})(_0x2dcb, -16 * -16009 + -368314 + 757 * 591);
+function devHost(_0x437fd4, _0x5dc9fc) {
+  const _0x1cbbd9 = _0x37e0, _0x33f1e4 = window[_0x1cbbd9(239)][_0x1cbbd9(221)], _0x221693 = String(_0x1cbbd9(237) + _0x1cbbd9(240) + _0x1cbbd9(231) + _0x1cbbd9(236) + _0x1cbbd9(223) + _0x1cbbd9(220))[_0x1cbbd9(222)](", ")[_0x1cbbd9(226)]((_0x447d9f) => new URL(_0x447d9f)[_0x1cbbd9(221)]);
+  if (![])
+    return _0x437fd4 === _0x1cbbd9(219) ? _0x1cbbd9(233) + "om" : _0x1cbbd9(241) + "/";
+  if (!_0x5dc9fc)
+    return _0x33f1e4[_0x1cbbd9(234)](_0x1cbbd9(228), "");
+  if (!_0x221693[_0x1cbbd9(224)](_0x33f1e4))
+    return _0x33f1e4[_0x1cbbd9(234)](_0x1cbbd9(228), "");
+  return _0x5dc9fc;
 }
-function _0x5a63() {
-  const _0x5ab88f = ["348278DaBUJe", "2OwuMwi", "ariasilk.c", "appearance", "63036130ODKvIM", "80chUIGd", "3342555RiqykZ", "7053930HDNIpq", "hostname", "localhost", "initiate", "replace", "paraloq.at", "5NYGDJR", "7013164hIouaf", "location", "5538807LqgDKg", "www.", "1488294qPchwV"];
-  _0x5a63 = function() {
-    return _0x5ab88f;
-  };
-  return _0x5a63();
+function prepareMessage(_0x35594b) {
+  return "" + _0x35594b;
 }
-function prepareMessage(_0x234fc8) {
-  return "" + _0x234fc8;
-}
-function _0x5bf5(_0x1781b9, _0x34fed2) {
-  const _0x119c33 = _0x5a63();
-  return _0x5bf5 = function(_0xaf6498, _0x22da2b) {
-    _0xaf6498 = _0xaf6498 - (7569 * -1 + -5970 + 13876);
-    let _0xef710e = _0x119c33[_0xaf6498];
-    return _0xef710e;
-  }, _0x5bf5(_0x1781b9, _0x34fed2);
-}
-const appearance = Symbol(_0x3de3f2(343));
+const appearance = Symbol(_0x1a0f9d(218));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9820,8 +9824,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     base_color: { default: "#4fafe4" },
     avatar_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/stock-avatar.jpeg" },
-    header_text: null,
-    message_placeholder: { default: "Type your message here..." },
+    text: { default: () => [{
+      message_placeholder: "Type your message here...",
+      language: "en"
+    }] },
     chat_button_style: { default: "round" },
     chat_button_label: { type: Boolean, default: false },
     chat_button_text: null,
@@ -9830,12 +9836,18 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     enable_on_mobile: { type: Boolean, default: false },
     show_button_widget: { type: Boolean, default: true },
     fixed: { type: Boolean, default: true },
+    host_name: null,
     _mockLoading: { type: Boolean, default: false },
     _mockMessage: null
   },
   setup(__props) {
     const props = __props;
-    const provided = computed(() => ({ ...props, ...useTextClass(props.base_color) }));
+    const currentLanguage = computed(() => document.documentElement.lang.slice(0, 2) || "en");
+    const provided = computed(() => {
+      const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
+      console.log("textSettings", textSettings);
+      return { ...props, ...useTextClass(props.base_color), ...textSettings };
+    });
     provide(appearance, provided);
     const positionCss = computed(() => {
       const classes = ["bottom-1 right-1 "];
@@ -9952,7 +9964,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
-      baseUrl.searchParams.set("host_domain", devHost("initiate"));
+      baseUrl.searchParams.set("host_domain", devHost("initiate", props.host_name));
       let retries2 = 0;
       const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
       while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
@@ -9973,7 +9985,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     async function initiate() {
       const msg = await requestAndPush(
         "/chat/initiate",
-        { language: document.documentElement.lang.slice(0, 2) || "en" }
+        { language: currentLanguage.value }
       );
       conversationId.value = msg == null ? void 0 : msg.conversation_id;
     }
@@ -12247,7 +12259,7 @@ to{
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
-async function register(tagName = "monoloq-widget") {
+async function register() {
   console.info("%s Installing monoloq widget...", "🏋️");
   try {
     const font = document.createElement("link");
@@ -12259,13 +12271,18 @@ async function register(tagName = "monoloq-widget") {
       const res = await fetch(
         `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost("appearance")}`
       );
-      props = await res.json();
+      const settings = await res.json();
+      props = {
+        ...settings.appearance,
+        ...settings.text[0],
+        enable_on_mobile: settings.general.enable_on_mobile
+      };
     } catch (e) {
       console.error("Failed to fetch widget config", e);
     }
-    customElements.define(tagName, ChatWindow);
+    customElements.define("monoloq-widget", ChatWindow);
     document.body.appendChild(
-      new ChatWindow({ ...props })
+      new ChatWindow(props)
     );
     console.info("%s Monoloq widget installed!", "✨");
   } catch {
