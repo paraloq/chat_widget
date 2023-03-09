@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x79c3(_0x5ccad6, _0x1036b7) {
-  const _0x1b2903 = _0x2b1f();
-  return _0x79c3 = function(_0x21cfd1, _0x15ec76) {
-    _0x21cfd1 = _0x21cfd1 - (7180 + 6810 + -13682);
-    let _0x494d96 = _0x1b2903[_0x21cfd1];
-    return _0x494d96;
-  }, _0x79c3(_0x5ccad6, _0x1036b7);
+function _0x39a9(_0x511d57, _0x16a3a8) {
+  const _0x15002f = _0x4a2c();
+  return _0x39a9 = function(_0x2b1567, _0x40f7bf) {
+    _0x2b1567 = _0x2b1567 - (1 * 5731 + 8353 + -13909);
+    let _0x381483 = _0x15002f[_0x2b1567];
+    return _0x381483;
+  }, _0x39a9(_0x511d57, _0x16a3a8);
 }
-const _0x476a4d = _0x79c3;
-(function(_0x4ccac3, _0x2d4068) {
-  const _0x2174ca = _0x79c3, _0xd8340d = _0x4ccac3();
+const _0x19c9e9 = _0x39a9;
+(function(_0x5611c6, _0x54e552) {
+  const _0x2d0e37 = _0x39a9, _0x14b396 = _0x5611c6();
   while (!![]) {
     try {
-      const _0x29f81a = parseInt(_0x2174ca(333)) / (-2371 * -2 + -5197 + 456) * (parseInt(_0x2174ca(312)) / (-2872 + -285 + -351 * -9)) + -parseInt(_0x2174ca(309)) / (19 * -201 + 7549 * 1 + 3727 * -1) + parseInt(_0x2174ca(313)) / (-1727 + 6108 + -4377) * (parseInt(_0x2174ca(335)) / (-9884 + -22 * 269 + -479 * -33)) + -parseInt(_0x2174ca(328)) / (-3713 + 7647 + -3928) * (parseInt(_0x2174ca(316)) / (-7732 + -443 * 1 + 8182)) + -parseInt(_0x2174ca(330)) / (2777 * -2 + -1 * 8268 + -30 * -461) * (parseInt(_0x2174ca(323)) / (-2532 * 1 + 2987 + -446)) + parseInt(_0x2174ca(319)) / (-61 * 23 + 7509 + -6096) + -parseInt(_0x2174ca(336)) / (1238 + -9556 + 8329) * (-parseInt(_0x2174ca(311)) / (-770 + -1 * 877 + 1659));
-      if (_0x29f81a === _0x2d4068)
+      const _0x453a12 = parseInt(_0x2d0e37(185)) / (-3720 + 57 * 17 + -2 * -1376) * (parseInt(_0x2d0e37(181)) / (9639 + -3 * 291 + -4 * 2191)) + parseInt(_0x2d0e37(176)) / (4379 * -1 + -2270 + -1663 * -4) * (parseInt(_0x2d0e37(200)) / (5551 + -8 * 514 + 1 * -1435)) + -parseInt(_0x2d0e37(190)) / (-6084 + 2045 + 4044) + -parseInt(_0x2d0e37(183)) / (9179 + -6569 * -1 + -15742) * (-parseInt(_0x2d0e37(196)) / (4710 + 636 * 11 + -11699)) + -parseInt(_0x2d0e37(180)) / (-1 * -9253 + 8 * 644 + -3 * 4799) + -parseInt(_0x2d0e37(193)) / (1 * -1113 + -8551 + -1 * -9673) * (parseInt(_0x2d0e37(202)) / (6229 + 1 * -6869 + -13 * -50)) + parseInt(_0x2d0e37(192)) / (27 * 280 + -8428 + 879);
+      if (_0x453a12 === _0x54e552)
         break;
       else
-        _0xd8340d["push"](_0xd8340d["shift"]());
-    } catch (_0x460cc6) {
-      _0xd8340d["push"](_0xd8340d["shift"]());
+        _0x14b396["push"](_0x14b396["shift"]());
+    } catch (_0x1ad407) {
+      _0x14b396["push"](_0x14b396["shift"]());
     }
   }
-})(_0x2b1f, -5435 * -97 + 439481 * -4 + 3 * 710873);
-function devHost(_0x494d96, _0x5b6602) {
-  const _0x3b59b0 = _0x79c3, _0x1b9667 = window[_0x3b59b0(325)][_0x3b59b0(324)], _0x8fdb47 = String(_0x3b59b0(331) + _0x3b59b0(317) + _0x3b59b0(318) + _0x3b59b0(314) + _0x3b59b0(308) + _0x3b59b0(327))[_0x3b59b0(310)](", ")[_0x3b59b0(322)]((_0x47f823) => new URL(_0x47f823)[_0x3b59b0(324)]);
-  if (![])
-    return _0x494d96 === _0x3b59b0(326) ? _0x3b59b0(321) + "om" : _0x3b59b0(332) + "/";
-  if (!_0x5b6602)
-    return _0x1b9667[_0x3b59b0(315)](_0x3b59b0(334), "");
-  if (!_0x8fdb47[_0x3b59b0(329)](_0x1b9667))
-    return _0x1b9667[_0x3b59b0(315)](_0x3b59b0(334), "");
-  return _0x5b6602;
-}
-function prepareMessage(_0x2f719d) {
-  return "" + _0x2f719d;
-}
-const appearance = Symbol(_0x476a4d(320));
-function _0x2b1f() {
-  const _0xe81e01 = ["12bdgtyW", "includes", "4136696Aqxdcy", "https://ob", "paraloq.at", "1rWJHie", "www.", "20SLBoox", "242lqwNeX", ".amazonaws", "4433643UBBvrQ", "split", "1001376iqLWAf", "2946758PyRsuc", "42172guzZRE", ".eu-west-1", "replace", "378567MEUwZt", "4e4npfkj.e", "xecute-api", "1707000KYhaHv", "appearance", "ariasilk.c", "map", "18QGendr", "hostname", "location", "initiate", ".com/prod"];
-  _0x2b1f = function() {
-    return _0xe81e01;
+})(_0x4a2c, -866146 + -1231132 + 40869 * 68);
+function _0x4a2c() {
+  const _0x351974 = [".eu-west-1", "1491784oTHnnc", "12gyBnTE", "split", "1422TfDaOT", "appearance", "139478jKwVpe", "ariasilk.c", ".amazonaws", "xecute-api", "initiate", "6162645cgfLNK", "www.", "17527807HIoMYR", "171Ardnof", "https://ob", "map", "10836zZCJTQ", "replace", ".com/prod", "hostname", "10332ZEaOCL", "4e4npfkj.e", "412730kTcnKA", "paraloq.at", "102EpROOz", "includes", "location"];
+  _0x4a2c = function() {
+    return _0x351974;
   };
-  return _0x2b1f();
+  return _0x4a2c();
 }
+function devHost(_0x40f7bf, _0x381483) {
+  const _0x103131 = _0x39a9, _0x464780 = window[_0x103131(178)][_0x103131(199)], _0x3c2c12 = String(_0x103131(194) + _0x103131(201) + _0x103131(188) + _0x103131(179) + _0x103131(187) + _0x103131(198))[_0x103131(182)](", ")[_0x103131(195)]((_0x49ccfa) => new URL(_0x49ccfa)[_0x103131(199)]);
+  if (![])
+    return _0x40f7bf === _0x103131(189) ? _0x103131(186) + "om" : _0x103131(175) + "/";
+  if (!_0x381483)
+    return _0x464780[_0x103131(197)](_0x103131(191), "");
+  if (!_0x3c2c12[_0x103131(177)](_0x464780))
+    return _0x464780[_0x103131(197)](_0x103131(191), "");
+  return _0x381483;
+}
+function prepareMessage(_0x37a94f) {
+  return "" + _0x37a94f;
+}
+const appearance = Symbol(_0x19c9e9(184));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10065,7 +10065,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl z-40 select-none", [...unref(positionCss)]])
+              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl select-none", [...unref(positionCss)]]),
+              style: {
+                zIndex: 999
+              }
             }, [
               createVNode(_sfc_main$8, {
                 class: "!h-[64px] flex-none",
@@ -11686,9 +11689,6 @@ to{
 }
 .z-50{
   z-index: 50;
-}
-.z-40{
-  z-index: 40;
 }
 .m-2{
   margin: 8px;
