@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x39a9(_0x511d57, _0x16a3a8) {
-  const _0x15002f = _0x4a2c();
-  return _0x39a9 = function(_0x2b1567, _0x40f7bf) {
-    _0x2b1567 = _0x2b1567 - (1 * 5731 + 8353 + -13909);
-    let _0x381483 = _0x15002f[_0x2b1567];
-    return _0x381483;
-  }, _0x39a9(_0x511d57, _0x16a3a8);
-}
-const _0x19c9e9 = _0x39a9;
-(function(_0x5611c6, _0x54e552) {
-  const _0x2d0e37 = _0x39a9, _0x14b396 = _0x5611c6();
+const _0x33d8c3 = _0x3bf9;
+(function(_0x5d700c, _0x2ddf30) {
+  const _0x5eb923 = _0x3bf9, _0x579e04 = _0x5d700c();
   while (!![]) {
     try {
-      const _0x453a12 = parseInt(_0x2d0e37(185)) / (-3720 + 57 * 17 + -2 * -1376) * (parseInt(_0x2d0e37(181)) / (9639 + -3 * 291 + -4 * 2191)) + parseInt(_0x2d0e37(176)) / (4379 * -1 + -2270 + -1663 * -4) * (parseInt(_0x2d0e37(200)) / (5551 + -8 * 514 + 1 * -1435)) + -parseInt(_0x2d0e37(190)) / (-6084 + 2045 + 4044) + -parseInt(_0x2d0e37(183)) / (9179 + -6569 * -1 + -15742) * (-parseInt(_0x2d0e37(196)) / (4710 + 636 * 11 + -11699)) + -parseInt(_0x2d0e37(180)) / (-1 * -9253 + 8 * 644 + -3 * 4799) + -parseInt(_0x2d0e37(193)) / (1 * -1113 + -8551 + -1 * -9673) * (parseInt(_0x2d0e37(202)) / (6229 + 1 * -6869 + -13 * -50)) + parseInt(_0x2d0e37(192)) / (27 * 280 + -8428 + 879);
-      if (_0x453a12 === _0x54e552)
+      const _0x2b28f5 = parseInt(_0x5eb923(337)) / (3710 + 23 * 119 + 22 * -293) + -parseInt(_0x5eb923(351)) / (1 * -8839 + -1302 * 5 + 15351) + -parseInt(_0x5eb923(347)) / (-459 + 1187 * 3 + -3099) * (parseInt(_0x5eb923(340)) / (-7351 + 1 * -3337 + 1188 * 9)) + parseInt(_0x5eb923(341)) / (-4675 + 428 + 4252) + parseInt(_0x5eb923(357)) / (1840 * -5 + -1595 * 3 + 17 * 823) * (parseInt(_0x5eb923(349)) / (1255 * 4 + -5 * -443 + 278 * -26)) + -parseInt(_0x5eb923(353)) / (-1 * -6279 + 474 + 6745 * -1) * (-parseInt(_0x5eb923(332)) / (2577 + -7863 + 1765 * 3)) + -parseInt(_0x5eb923(333)) / (-587 * 1 + 6848 + 7 * -893);
+      if (_0x2b28f5 === _0x2ddf30)
         break;
       else
-        _0x14b396["push"](_0x14b396["shift"]());
-    } catch (_0x1ad407) {
-      _0x14b396["push"](_0x14b396["shift"]());
+        _0x579e04["push"](_0x579e04["shift"]());
+    } catch (_0xfe20fb) {
+      _0x579e04["push"](_0x579e04["shift"]());
     }
   }
-})(_0x4a2c, -866146 + -1231132 + 40869 * 68);
-function _0x4a2c() {
-  const _0x351974 = [".eu-west-1", "1491784oTHnnc", "12gyBnTE", "split", "1422TfDaOT", "appearance", "139478jKwVpe", "ariasilk.c", ".amazonaws", "xecute-api", "initiate", "6162645cgfLNK", "www.", "17527807HIoMYR", "171Ardnof", "https://ob", "map", "10836zZCJTQ", "replace", ".com/prod", "hostname", "10332ZEaOCL", "4e4npfkj.e", "412730kTcnKA", "paraloq.at", "102EpROOz", "includes", "location"];
-  _0x4a2c = function() {
-    return _0x351974;
-  };
-  return _0x4a2c();
-}
-function devHost(_0x40f7bf, _0x381483) {
-  const _0x103131 = _0x39a9, _0x464780 = window[_0x103131(178)][_0x103131(199)], _0x3c2c12 = String(_0x103131(194) + _0x103131(201) + _0x103131(188) + _0x103131(179) + _0x103131(187) + _0x103131(198))[_0x103131(182)](", ")[_0x103131(195)]((_0x49ccfa) => new URL(_0x49ccfa)[_0x103131(199)]);
+})(_0x4058, -441109 + 174 * 8160 + 18317);
+function devHost(_0x4dbbd9, _0x5af2f8) {
+  const _0x407332 = _0x3bf9, _0x19db2b = window[_0x407332(345)][_0x407332(342)], _0x55877e = String(_0x407332(354) + _0x407332(331) + _0x407332(356) + _0x407332(343) + _0x407332(352) + _0x407332(334))[_0x407332(335)](", ")[_0x407332(344)]((_0x4750e0) => new URL(_0x4750e0)[_0x407332(342)]);
   if (![])
-    return _0x40f7bf === _0x103131(189) ? _0x103131(186) + "om" : _0x103131(175) + "/";
-  if (!_0x381483)
-    return _0x464780[_0x103131(197)](_0x103131(191), "");
-  if (!_0x3c2c12[_0x103131(177)](_0x464780))
-    return _0x464780[_0x103131(197)](_0x103131(191), "");
-  return _0x381483;
+    return _0x4dbbd9 === _0x407332(350) ? _0x407332(338) + "om" : _0x407332(348) + "/";
+  if (!_0x5af2f8)
+    return _0x19db2b[_0x407332(339)](_0x407332(336), "");
+  if (!_0x55877e[_0x407332(355)](_0x19db2b))
+    return _0x19db2b[_0x407332(339)](_0x407332(336), "");
+  return _0x5af2f8;
 }
-function prepareMessage(_0x37a94f) {
-  return "" + _0x37a94f;
+function prepareMessage(_0x4c2989) {
+  return "" + _0x4c2989;
 }
-const appearance = Symbol(_0x19c9e9(184));
+function _0x4058() {
+  const _0x233ab6 = ["1526814UXfNsR", "ariasilk.c", "replace", "124znjJMg", "2856335bwVauI", "hostname", ".eu-west-1", "map", "location", "appearance", "56859KGrroB", "paraloq.at", "147iswTVf", "initiate", "1279404vrPcPC", ".amazonaws", "8JqdcXk", "https://ob", "includes", "xecute-api", "205002aQPaFp", "4e4npfkj.e", "6791985MsUmjI", "13459600thcRvg", ".com/prod", "split", "www."];
+  _0x4058 = function() {
+    return _0x233ab6;
+  };
+  return _0x4058();
+}
+function _0x3bf9(_0x56075b, _0x3ee1bc) {
+  const _0x369081 = _0x4058();
+  return _0x3bf9 = function(_0x1b0d19, _0x4dbbd9) {
+    _0x1b0d19 = _0x1b0d19 - (4643 + 1 * -6461 + 2149);
+    let _0x5af2f8 = _0x369081[_0x1b0d19];
+    return _0x5af2f8;
+  }, _0x3bf9(_0x56075b, _0x3ee1bc);
+}
+const appearance = Symbol(_0x33d8c3(346));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9505,7 +9505,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             ref_key: "textarea",
             ref: textarea,
             "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => messageInput.value = $event),
-            class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle !px-[16px] !py-[8px]",
+            class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle !px-[16px] !py-[8px] min-h-[48px]",
             type: "text",
             placeholder: unref(provided).message_placeholder,
             onKeydown: _cache[1] || (_cache[1] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
@@ -11785,6 +11785,9 @@ to{
 }
 .max-h-\\[630px\\]{
   max-height: 630px;
+}
+.min-h-\\[48px\\]{
+  min-height: 48px;
 }
 .min-h-\\[160px\\]{
   min-height: 160px;
