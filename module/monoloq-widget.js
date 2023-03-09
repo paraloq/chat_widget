@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x4aa4() {
-  const _0x738a82 = ["map", "674098siYoOB", "replace", "4535GkKbbk", "paraloq.at", ".eu-west-1", "ariasilk.c", "www.", "7481150KWFWOD", "xecute-api", "16NLuHdS", "33haXimW", "3185623CeVqXE", "10YaEFfO", "4146QIfLnx", "hostname", "1986196Kgglwr", "9528795CTHoBU", "split", "location", "initiate", "4e4npfkj.e", "includes", "https://ob", ".com/prod", ".amazonaws", "appearance", "26421MRuvns"];
-  _0x4aa4 = function() {
-    return _0x738a82;
-  };
-  return _0x4aa4();
+function _0x79c3(_0x5ccad6, _0x1036b7) {
+  const _0x1b2903 = _0x2b1f();
+  return _0x79c3 = function(_0x21cfd1, _0x15ec76) {
+    _0x21cfd1 = _0x21cfd1 - (7180 + 6810 + -13682);
+    let _0x494d96 = _0x1b2903[_0x21cfd1];
+    return _0x494d96;
+  }, _0x79c3(_0x5ccad6, _0x1036b7);
 }
-const _0x113a16 = _0x5b7e;
-(function(_0x58db66, _0x30eb5f) {
-  const _0x3ecee4 = _0x5b7e, _0x533eeb = _0x58db66();
+const _0x476a4d = _0x79c3;
+(function(_0x4ccac3, _0x2d4068) {
+  const _0x2174ca = _0x79c3, _0xd8340d = _0x4ccac3();
   while (!![]) {
     try {
-      const _0x5f29f6 = parseInt(_0x3ecee4(481)) / (6109 + 35 * 97 + -9503 * 1) + parseInt(_0x3ecee4(493)) / (-2879 * -2 + -641 * 13 + -3 * -859) * (parseInt(_0x3ecee4(479)) / (-4471 + 438 * 2 + -3598 * -1)) + -parseInt(_0x3ecee4(468)) / (895 * -4 + 535 * -2 + -2 * -2327) + parseInt(_0x3ecee4(483)) / (98 * 15 + -2657 * 1 + 1192) * (parseInt(_0x3ecee4(494)) / (393 * 17 + -4107 + -321 * 8)) + -parseInt(_0x3ecee4(492)) / (6657 + -1 * 6906 + -32 * -8) * (-parseInt(_0x3ecee4(490)) / (2363 * -1 + -4377 + 6748)) + parseInt(_0x3ecee4(469)) / (187 * -43 + 4 * 1100 + -1 * -3650) + parseInt(_0x3ecee4(488)) / (1476 + -423 * -21 + -10349) * (-parseInt(_0x3ecee4(491)) / (-4709 + 267 * 34 + 2179 * -2));
-      if (_0x5f29f6 === _0x30eb5f)
+      const _0x29f81a = parseInt(_0x2174ca(333)) / (-2371 * -2 + -5197 + 456) * (parseInt(_0x2174ca(312)) / (-2872 + -285 + -351 * -9)) + -parseInt(_0x2174ca(309)) / (19 * -201 + 7549 * 1 + 3727 * -1) + parseInt(_0x2174ca(313)) / (-1727 + 6108 + -4377) * (parseInt(_0x2174ca(335)) / (-9884 + -22 * 269 + -479 * -33)) + -parseInt(_0x2174ca(328)) / (-3713 + 7647 + -3928) * (parseInt(_0x2174ca(316)) / (-7732 + -443 * 1 + 8182)) + -parseInt(_0x2174ca(330)) / (2777 * -2 + -1 * 8268 + -30 * -461) * (parseInt(_0x2174ca(323)) / (-2532 * 1 + 2987 + -446)) + parseInt(_0x2174ca(319)) / (-61 * 23 + 7509 + -6096) + -parseInt(_0x2174ca(336)) / (1238 + -9556 + 8329) * (-parseInt(_0x2174ca(311)) / (-770 + -1 * 877 + 1659));
+      if (_0x29f81a === _0x2d4068)
         break;
       else
-        _0x533eeb["push"](_0x533eeb["shift"]());
-    } catch (_0x36bad2) {
-      _0x533eeb["push"](_0x533eeb["shift"]());
+        _0xd8340d["push"](_0xd8340d["shift"]());
+    } catch (_0x460cc6) {
+      _0xd8340d["push"](_0xd8340d["shift"]());
     }
   }
-})(_0x4aa4, 747992 + 288535 + -463618);
-function devHost(_0x2f7852, _0x176901) {
-  const _0x564a65 = _0x5b7e, _0x5af636 = window[_0x564a65(471)][_0x564a65(467)], _0x165043 = String(_0x564a65(475) + _0x564a65(473) + _0x564a65(489) + _0x564a65(485) + _0x564a65(477) + _0x564a65(476))[_0x564a65(470)](", ")[_0x564a65(480)]((_0x23186d) => new URL(_0x23186d)[_0x564a65(467)]);
+})(_0x2b1f, -5435 * -97 + 439481 * -4 + 3 * 710873);
+function devHost(_0x494d96, _0x5b6602) {
+  const _0x3b59b0 = _0x79c3, _0x1b9667 = window[_0x3b59b0(325)][_0x3b59b0(324)], _0x8fdb47 = String(_0x3b59b0(331) + _0x3b59b0(317) + _0x3b59b0(318) + _0x3b59b0(314) + _0x3b59b0(308) + _0x3b59b0(327))[_0x3b59b0(310)](", ")[_0x3b59b0(322)]((_0x47f823) => new URL(_0x47f823)[_0x3b59b0(324)]);
   if (![])
-    return _0x2f7852 === _0x564a65(472) ? _0x564a65(486) + "om" : _0x564a65(484) + "/";
-  if (!_0x176901)
-    return _0x5af636[_0x564a65(482)](_0x564a65(487), "");
-  if (!_0x165043[_0x564a65(474)](_0x5af636))
-    return _0x5af636[_0x564a65(482)](_0x564a65(487), "");
-  return _0x176901;
+    return _0x494d96 === _0x3b59b0(326) ? _0x3b59b0(321) + "om" : _0x3b59b0(332) + "/";
+  if (!_0x5b6602)
+    return _0x1b9667[_0x3b59b0(315)](_0x3b59b0(334), "");
+  if (!_0x8fdb47[_0x3b59b0(329)](_0x1b9667))
+    return _0x1b9667[_0x3b59b0(315)](_0x3b59b0(334), "");
+  return _0x5b6602;
 }
-function _0x5b7e(_0x26139a, _0x5301a3) {
-  const _0x2f7852 = _0x4aa4();
-  return _0x5b7e = function(_0x176901, _0x5af636) {
-    _0x176901 = _0x176901 - (292 * -1 + -12 * 369 + -273 * -19);
-    let _0x165043 = _0x2f7852[_0x176901];
-    return _0x165043;
-  }, _0x5b7e(_0x26139a, _0x5301a3);
+function prepareMessage(_0x2f719d) {
+  return "" + _0x2f719d;
 }
-function prepareMessage(_0x109afa) {
-  return "" + _0x109afa;
+const appearance = Symbol(_0x476a4d(320));
+function _0x2b1f() {
+  const _0xe81e01 = ["12bdgtyW", "includes", "4136696Aqxdcy", "https://ob", "paraloq.at", "1rWJHie", "www.", "20SLBoox", "242lqwNeX", ".amazonaws", "4433643UBBvrQ", "split", "1001376iqLWAf", "2946758PyRsuc", "42172guzZRE", ".eu-west-1", "replace", "378567MEUwZt", "4e4npfkj.e", "xecute-api", "1707000KYhaHv", "appearance", "ariasilk.c", "map", "18QGendr", "hostname", "location", "initiate", ".com/prod"];
+  _0x2b1f = function() {
+    return _0xe81e01;
+  };
+  return _0x2b1f();
 }
-const appearance = Symbol(_0x113a16(478));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9384,7 +9384,7 @@ const _hoisted_10$2 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
-const _hoisted_11 = { key: 0 };
+const _hoisted_11$1 = { key: 0 };
 const _hoisted_12 = { class: "text-xs opacity-50" };
 const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
@@ -9454,7 +9454,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
           ])
         ])) : createCommentVNode("", true),
         "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11, [
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11$1, [
             createBaseVNode("time", _hoisted_12, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
@@ -9625,14 +9625,15 @@ const _hoisted_1$2 = /* @__PURE__ */ createBaseVNode("svg", {
 const _hoisted_2$2 = [
   _hoisted_1$2
 ];
-const _hoisted_3$2 = { class: "w-full h-max carousel carousel-center p-4 space-x-4 my-auto" };
+const _hoisted_3$2 = { class: "w-full h-[510px] carousel carousel-center p-4 space-x-4 my-auto" };
 const _hoisted_4$2 = ["id", "onClick"];
 const _hoisted_5$2 = { class: "card w-full h-full stuff backdrop-blur-sm card-compact !bg-black/60 group" };
 const _hoisted_6$2 = ["src"];
-const _hoisted_7$2 = { class: "card-body text-white text-center" };
-const _hoisted_8$1 = { class: "text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200" };
+const _hoisted_7$2 = { class: "card-body text-white text-center flex flex-col" };
+const _hoisted_8$1 = { class: "text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 line-clamp-1" };
 const _hoisted_9$1 = { class: "text-base text-white/40 line-clamp-6" };
-const _hoisted_10$1 = { class: "text-lg mt-2" };
+const _hoisted_10$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_11 = { class: "text-lg flex-none" };
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "ChatProducts",
   props: {
@@ -9662,7 +9663,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       return openBlock(), createElementBlock("div", {
         ref_key: "chatProducts",
         ref: chatProducts,
-        class: "absolute bottom-0 right-0 h-[100%] overflow-auto w-full z-50 bg-black/30 backdrop-blur-sm flex"
+        class: "absolute bottom-0 right-0 h-[100%] overflow-hidden w-full z-50 bg-black/30 backdrop-blur-sm flex"
       }, [
         createBaseVNode("button", {
           class: "btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60 text-back",
@@ -9674,7 +9675,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             return openBlock(), createElementBlock("div", {
               id: `monoloq-${product.item_id}`,
               key: product.item_id,
-              class: "carousel-item h-max w-11/12 cursor-pointer",
+              class: "carousel-item h-full w-11/12 cursor-pointer",
               onClick: ($event) => recommend(product.url, product.item_id)
             }, [
               createBaseVNode("div", _hoisted_5$2, [
@@ -9686,10 +9687,9 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                 ]),
                 createBaseVNode("div", _hoisted_7$2, [
                   createBaseVNode("p", _hoisted_8$1, toDisplayString(`${product.title}`), 1),
-                  createBaseVNode("div", null, [
-                    createBaseVNode("p", _hoisted_9$1, toDisplayString(product.description), 1)
-                  ]),
-                  createBaseVNode("p", _hoisted_10$1, toDisplayString(`$${product.price}`), 1)
+                  createBaseVNode("p", _hoisted_9$1, toDisplayString(product.description), 1),
+                  _hoisted_10$1,
+                  createBaseVNode("p", _hoisted_11, toDisplayString(`$${product.price}`), 1)
                 ])
               ])
             ], 8, _hoisted_4$2);
@@ -11713,9 +11713,6 @@ to{
 .mt-4{
   margin-top: 16px;
 }
-.mt-2{
-  margin-top: 8px;
-}
 .ml-9{
   margin-left: 36px;
 }
@@ -11761,6 +11758,9 @@ to{
 }
 .h-\\[100\\%\\]{
   height: 100%;
+}
+.h-\\[510px\\]{
+  height: 510px;
 }
 .\\!h-\\[64px\\]{
   height: 64px !important;
@@ -11825,11 +11825,11 @@ to{
 .max-w-\\[144px\\]{
   max-width: 144px;
 }
-.flex-none{
-  flex: none;
-}
 .flex-1{
   flex: 1 1 0%;
+}
+.flex-none{
+  flex: none;
 }
 .scale-50{
   --tw-scale-x: .5;
@@ -11874,8 +11874,8 @@ to{
   margin-right: calc(16px * var(--tw-space-x-reverse));
   margin-left: calc(16px * calc(1 - var(--tw-space-x-reverse)));
 }
-.overflow-auto{
-  overflow: auto;
+.overflow-hidden{
+  overflow: hidden;
 }
 .overflow-y-auto{
   overflow-y: auto;
@@ -12113,6 +12113,12 @@ to{
 }
 .duration-200{
   transition-duration: 200ms;
+}
+.line-clamp-1{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .line-clamp-6{
   overflow: hidden;
