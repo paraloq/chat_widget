@@ -7347,53 +7347,53 @@ function initDev() {
 {
   initDev();
 }
-const _0x37e8ef = _0x242e;
-function _0xeb4a() {
-  const _0x3f4dc2 = ["http://loc", "4e4npfkj.e", "whiteliste", "hostname", "6CwgoFP", "1667596TIJgfW", "not prop", "2799lARGNG", ".amazonaws", "paraloq.at", "86010AKjxLH", "2593393DPcpkc", "location", "initiate", "replace", "appearance", ".com/prod,", "ariasilk.c", "4KTbsJy", "https://ob", "www.", "7433160bVCAZX", "1299376gMQcTe", "not dev", "228544LcrOdZ", "includes", "map", "not listed", "split", ".eu-west-1", "xecute-api", "log", "23350mvAPxV", "alhost:333", "78KBzIuB"];
-  _0xeb4a = function() {
-    return _0x3f4dc2;
-  };
-  return _0xeb4a();
+const _0x4dd944 = _0x2917;
+function _0x2917(_0x229808, _0x44b7b3) {
+  const _0x2c9582 = _0x482c();
+  return _0x2917 = function(_0x2b9397, _0x4f0103) {
+    _0x2b9397 = _0x2b9397 - (-3 * -1603 + 9844 + 1 * -14549);
+    let _0x6568d3 = _0x2c9582[_0x2b9397];
+    return _0x6568d3;
+  }, _0x2917(_0x229808, _0x44b7b3);
 }
-(function(_0x5549cb, _0x1fc6ea) {
-  const _0x3af64d = _0x242e, _0x8f698 = _0x5549cb();
+(function(_0xaac07c, _0x5dd0cf) {
+  const _0x375b52 = _0x2917, _0x31d39f = _0xaac07c();
   while (!![]) {
     try {
-      const _0x58a8da = -parseInt(_0x3af64d(407)) / (2295 + 6629 + -8923) * (parseInt(_0x3af64d(401)) / (2 * -2477 + -3951 + 8907)) + -parseInt(_0x3af64d(387)) / (-2813 * -1 + 5760 + 10 * -857) * (-parseInt(_0x3af64d(405)) / (-6031 + 3407 + 2628)) + -parseInt(_0x3af64d(393)) / (2816 + -3754 + 943) * (-parseInt(_0x3af64d(417)) / (-2223 * -1 + 7356 + -1 * 9573)) + -parseInt(_0x3af64d(388)) / (1464 + -126 + -1331 * 1) + parseInt(_0x3af64d(404)) / (-7490 + -5471 * -1 + -2027 * -1) + parseInt(_0x3af64d(390)) / (244 * 23 + -2 * 575 + -1 * 4453) * (-parseInt(_0x3af64d(415)) / (614 * 8 + 179 * 9 + -6513 * 1)) + parseInt(_0x3af64d(394)) / (2780 + 230 + 2999 * -1);
-      if (_0x58a8da === _0x1fc6ea)
+      const _0x2fdbf7 = -parseInt(_0x375b52(105)) / (-106 * -86 + -9624 + 509 * 1) + parseInt(_0x375b52(107)) / (-1 * 7453 + -6547 + -2 * -7001) + parseInt(_0x375b52(123)) / (543 * -17 + 3193 * -1 + -731 * -17) + parseInt(_0x375b52(115)) / (-651 * -7 + -95 * -36 + 1139 * -7) * (parseInt(_0x375b52(135)) / (3 * -63 + 2345 + -239 * 9)) + parseInt(_0x375b52(114)) / (-7441 + -3182 + 3 * 3543) * (parseInt(_0x375b52(129)) / (-4134 + -2331 + 6472)) + -parseInt(_0x375b52(134)) / (-16 * 286 + -57 * 80 + 4572 * 2) + parseInt(_0x375b52(108)) / (8463 + -3 * 1213 + -4815) * (parseInt(_0x375b52(118)) / (-2 * -41 + -8138 + 2 * 4033));
+      if (_0x2fdbf7 === _0x5dd0cf)
         break;
       else
-        _0x8f698["push"](_0x8f698["shift"]());
-    } catch (_0x243e55) {
-      _0x8f698["push"](_0x8f698["shift"]());
+        _0x31d39f["push"](_0x31d39f["shift"]());
+    } catch (_0x3ff460) {
+      _0x31d39f["push"](_0x31d39f["shift"]());
     }
   }
-})(_0xeb4a, 47 * 601 + 325064 + -26341 * -10);
-function devHost(_0xc7e683, _0x461d3e) {
-  const _0x3651d8 = _0x242e, _0x288c62 = window[_0x3651d8(395)][_0x3651d8(386)], _0x4138c = String(_0x3651d8(402) + _0x3651d8(419) + _0x3651d8(413) + _0x3651d8(412) + _0x3651d8(391) + _0x3651d8(399) + _0x3651d8(418) + _0x3651d8(416) + "3/")[_0x3651d8(411)](",")[_0x3651d8(409)]((_0x4dbf3b) => new URL(_0x4dbf3b)[_0x3651d8(386)]);
-  console[_0x3651d8(414)](_0x3651d8(385) + "d", _0x4138c);
+})(_0x482c, -722 * -1409 + -3 * 106763 + 290294);
+function devHost(_0x2b9397, _0x4f0103) {
+  const _0x36671e = _0x2917, _0x6568d3 = window[_0x36671e(111)][_0x36671e(116)], _0xacdaca = String(_0x36671e(132) + _0x36671e(128) + _0x36671e(119) + _0x36671e(112) + _0x36671e(126) + _0x36671e(130) + _0x36671e(133) + _0x36671e(110) + "3/")[_0x36671e(104)](",")[_0x36671e(109)]((_0x3a4e31) => new URL(_0x3a4e31)[_0x36671e(116)]);
+  console[_0x36671e(125)](_0x36671e(127) + "d", _0xacdaca);
   if (![])
-    return _0xc7e683 === _0x3651d8(396) ? _0x3651d8(400) + "om" : _0x3651d8(392) + "/";
-  console[_0x3651d8(414)](_0x3651d8(406));
-  if (!_0x461d3e)
-    return _0x288c62[_0x3651d8(397)](_0x3651d8(403), "");
-  console[_0x3651d8(414)](_0x3651d8(389));
-  if (!_0x4138c[_0x3651d8(408)](_0x288c62))
-    return _0x288c62[_0x3651d8(397)](_0x3651d8(403), "");
-  return console[_0x3651d8(414)](_0x3651d8(410)), _0x461d3e;
+    return _0x2b9397 === _0x36671e(121) ? _0x36671e(124) + "om" : _0x36671e(113) + "/";
+  console[_0x36671e(125)](_0x36671e(117));
+  if (!_0x4f0103)
+    return _0x6568d3[_0x36671e(137)](_0x36671e(131), "");
+  console[_0x36671e(125)](_0x36671e(122));
+  if (!_0xacdaca[_0x36671e(106)](_0x6568d3))
+    return _0x6568d3[_0x36671e(137)](_0x36671e(131), "");
+  return console[_0x36671e(125)](_0x36671e(136)), _0x4f0103;
 }
-function prepareMessage(_0x5b965e) {
-  return "" + _0x5b965e;
+function prepareMessage(_0x3bb0ae) {
+  return "" + _0x3bb0ae;
 }
-function _0x242e(_0x4705f0, _0x361db8) {
-  const _0x2495d5 = _0xeb4a();
-  return _0x242e = function(_0x55bc10, _0x10eb98) {
-    _0x55bc10 = _0x55bc10 - (3907 + 8364 + -11886);
-    let _0xc7e683 = _0x2495d5[_0x55bc10];
-    return _0xc7e683;
-  }, _0x242e(_0x4705f0, _0x361db8);
+function _0x482c() {
+  const _0x311586 = ["1023151UoenRD", "includes", "135646eHWhae", "99qPqSnv", "map", "alhost:333", "location", ".eu-west-1", "paraloq.at", "162UorvyK", "244MqqyPE", "hostname", "not dev", "827300VEuhNm", "xecute-api", "appearance", "initiate", "not prop", "789540JgyZbJ", "ariasilk.c", "log", ".amazonaws", "whiteliste", "4e4npfkj.e", "320754lpCieJ", ".com/prod,", "www.", "https://ob", "http://loc", "4694272sIcRkC", "9755InRuAy", "not listed", "replace", "split"];
+  _0x482c = function() {
+    return _0x311586;
+  };
+  return _0x482c();
 }
-const appearance = Symbol(_0x37e8ef(398));
+const appearance = Symbol(_0x4dd944(120));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9963,7 +9963,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
-      baseUrl.searchParams.set("host_domain", devHost("initiate", props.host_name));
+      baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_name));
       let retries2 = 0;
       const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
       while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
