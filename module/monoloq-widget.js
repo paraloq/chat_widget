@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x33d8c3 = _0x3bf9;
-(function(_0x5d700c, _0x2ddf30) {
-  const _0x5eb923 = _0x3bf9, _0x579e04 = _0x5d700c();
+const _0x30899f = _0x4c1f;
+(function(_0x5432bc, _0x919eb3) {
+  const _0x8a382b = _0x4c1f, _0xf535b4 = _0x5432bc();
   while (!![]) {
     try {
-      const _0x2b28f5 = parseInt(_0x5eb923(337)) / (3710 + 23 * 119 + 22 * -293) + -parseInt(_0x5eb923(351)) / (1 * -8839 + -1302 * 5 + 15351) + -parseInt(_0x5eb923(347)) / (-459 + 1187 * 3 + -3099) * (parseInt(_0x5eb923(340)) / (-7351 + 1 * -3337 + 1188 * 9)) + parseInt(_0x5eb923(341)) / (-4675 + 428 + 4252) + parseInt(_0x5eb923(357)) / (1840 * -5 + -1595 * 3 + 17 * 823) * (parseInt(_0x5eb923(349)) / (1255 * 4 + -5 * -443 + 278 * -26)) + -parseInt(_0x5eb923(353)) / (-1 * -6279 + 474 + 6745 * -1) * (-parseInt(_0x5eb923(332)) / (2577 + -7863 + 1765 * 3)) + -parseInt(_0x5eb923(333)) / (-587 * 1 + 6848 + 7 * -893);
-      if (_0x2b28f5 === _0x2ddf30)
+      const _0x1e1217 = -parseInt(_0x8a382b(445)) / (16 + 7742 + -7757) + parseInt(_0x8a382b(429)) / (-1909 + 966 + -15 * -63) * (parseInt(_0x8a382b(432)) / (-3 * 1203 + 6692 + 44 * -70)) + parseInt(_0x8a382b(453)) / (17 * 281 + -4831 + 58) + parseInt(_0x8a382b(443)) / (41 * 7 + 7379 + -7661) + -parseInt(_0x8a382b(448)) / (-7 * -623 + -5107 + 8 * 94) * (-parseInt(_0x8a382b(441)) / (-4101 + -8703 + 12811)) + parseInt(_0x8a382b(451)) / (8918 + -3597 + -231 * 23) * (parseInt(_0x8a382b(440)) / (1833 * -1 + -1309 + 3151)) + parseInt(_0x8a382b(442)) / (-1059 * -5 + -2 * 538 + -4209) * (-parseInt(_0x8a382b(436)) / (-3 * -1014 + -1 * -8264 + -11295));
+      if (_0x1e1217 === _0x919eb3)
         break;
       else
-        _0x579e04["push"](_0x579e04["shift"]());
-    } catch (_0xfe20fb) {
-      _0x579e04["push"](_0x579e04["shift"]());
+        _0xf535b4["push"](_0xf535b4["shift"]());
+    } catch (_0x221816) {
+      _0xf535b4["push"](_0xf535b4["shift"]());
     }
   }
-})(_0x4058, -441109 + 174 * 8160 + 18317);
-function devHost(_0x4dbbd9, _0x5af2f8) {
-  const _0x407332 = _0x3bf9, _0x19db2b = window[_0x407332(345)][_0x407332(342)], _0x55877e = String(_0x407332(354) + _0x407332(331) + _0x407332(356) + _0x407332(343) + _0x407332(352) + _0x407332(334))[_0x407332(335)](", ")[_0x407332(344)]((_0x4750e0) => new URL(_0x4750e0)[_0x407332(342)]);
+})(_0x1bab, 1182592 + -73 * -14419 + -5 * 314251);
+function _0x4c1f(_0x528f37, _0x3a14a1) {
+  const _0x3adc4d = _0x1bab();
+  return _0x4c1f = function(_0xcfdbd8, _0x3543fc) {
+    _0xcfdbd8 = _0xcfdbd8 - (8325 + 8571 * 1 + -16468);
+    let _0x3d01a0 = _0x3adc4d[_0xcfdbd8];
+    return _0x3d01a0;
+  }, _0x4c1f(_0x528f37, _0x3a14a1);
+}
+function devHost(_0x3543fc, _0x3d01a0) {
+  const _0x2e90c3 = _0x4c1f, _0x1a6796 = window[_0x2e90c3(446)][_0x2e90c3(452)], _0x4bcdca = String(_0x2e90c3(447) + _0x2e90c3(454) + _0x2e90c3(444) + _0x2e90c3(433) + _0x2e90c3(431) + _0x2e90c3(439))[_0x2e90c3(437)](", ")[_0x2e90c3(428)]((_0x22c41f) => new URL(_0x22c41f)[_0x2e90c3(452)]);
   if (![])
-    return _0x4dbbd9 === _0x407332(350) ? _0x407332(338) + "om" : _0x407332(348) + "/";
-  if (!_0x5af2f8)
-    return _0x19db2b[_0x407332(339)](_0x407332(336), "");
-  if (!_0x55877e[_0x407332(355)](_0x19db2b))
-    return _0x19db2b[_0x407332(339)](_0x407332(336), "");
-  return _0x5af2f8;
+    return _0x3543fc === _0x2e90c3(430) ? _0x2e90c3(450) + "om" : _0x2e90c3(434) + "/";
+  if (!_0x3d01a0)
+    return _0x1a6796[_0x2e90c3(438)](_0x2e90c3(449), "");
+  if (!_0x4bcdca[_0x2e90c3(435)](_0x1a6796))
+    return _0x1a6796[_0x2e90c3(438)](_0x2e90c3(449), "");
+  return _0x3d01a0;
 }
-function prepareMessage(_0x4c2989) {
-  return "" + _0x4c2989;
+function prepareMessage(_0x546756) {
+  return "" + _0x546756;
 }
-function _0x4058() {
-  const _0x233ab6 = ["1526814UXfNsR", "ariasilk.c", "replace", "124znjJMg", "2856335bwVauI", "hostname", ".eu-west-1", "map", "location", "appearance", "56859KGrroB", "paraloq.at", "147iswTVf", "initiate", "1279404vrPcPC", ".amazonaws", "8JqdcXk", "https://ob", "includes", "xecute-api", "205002aQPaFp", "4e4npfkj.e", "6791985MsUmjI", "13459600thcRvg", ".com/prod", "split", "www."];
-  _0x4058 = function() {
-    return _0x233ab6;
+const appearance = Symbol(_0x30899f(455));
+function _0x1bab() {
+  const _0x11df65 = ["4229168MYCzBk", "4e4npfkj.e", "appearance", "map", "6htcAGc", "initiate", ".amazonaws", "1237611BpQubB", ".eu-west-1", "paraloq.at", "includes", "11SQLgBm", "split", "replace", ".com/prod", "44910VDPiRz", "77cbEQMG", "42067780EyEpBk", "6452675RAqsOS", "xecute-api", "75738RkZAUb", "location", "https://ob", "214332RTMmTn", "www.", "ariasilk.c", "1552rtQIAd", "hostname"];
+  _0x1bab = function() {
+    return _0x11df65;
   };
-  return _0x4058();
+  return _0x1bab();
 }
-function _0x3bf9(_0x56075b, _0x3ee1bc) {
-  const _0x369081 = _0x4058();
-  return _0x3bf9 = function(_0x1b0d19, _0x4dbbd9) {
-    _0x1b0d19 = _0x1b0d19 - (4643 + 1 * -6461 + 2149);
-    let _0x5af2f8 = _0x369081[_0x1b0d19];
-    return _0x5af2f8;
-  }, _0x3bf9(_0x56075b, _0x3ee1bc);
-}
-const appearance = Symbol(_0x33d8c3(346));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9302,15 +9302,11 @@ const VueLogo = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render
 const _hoisted_1$8 = { class: "flex items-center" };
 const _hoisted_2$7 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 32 32"
+  viewBox: "0 0 24 24"
 }, [
   /* @__PURE__ */ createBaseVNode("path", {
     fill: "currentColor",
-    d: "M12 12h2v12h-2zm6 0h2v12h-2z"
-  }),
-  /* @__PURE__ */ createBaseVNode("path", {
-    fill: "currentColor",
-    d: "M4 6v2h2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h2V6zm4 22V8h16v20zm4-26h8v2h-8z"
+    d: "m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95l-4.95 4.95Z"
   })
 ], -1);
 const _hoisted_3$6 = [
@@ -9346,7 +9342,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             onClick: _cache[0] || (_cache[0] = ($event) => emit2("clear"))
           }, [
             createBaseVNode("div", {
-              class: normalizeClass(["w-5 h-5", unref(provided).textClass])
+              class: normalizeClass(["w-6 h-6", unref(provided).textClass])
             }, _hoisted_3$6, 2)
           ]),
           createBaseVNode("button", {
@@ -9845,8 +9841,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const props = __props;
     const currentLanguage = computed(() => document.documentElement.lang.slice(0, 2) || "en");
     const provided = computed(() => {
-      const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
       console.log("textSettings", textSettings);
+      const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
       return { ...props, ...useTextClass(props.base_color), ...textSettings };
     });
     provide(appearance, provided);
@@ -11746,15 +11742,15 @@ to{
 .h-\\[32px\\]{
   height: 32px;
 }
+.h-6{
+  height: 24px;
+}
 .h-5{
   height: 20px;
 }
 .h-max{
   height: -moz-max-content;
   height: max-content;
-}
-.h-6{
-  height: 24px;
 }
 .h-\\[100\\%\\]{
   height: 100%;
@@ -11801,11 +11797,11 @@ to{
 .w-\\[32px\\]{
   width: 32px;
 }
-.w-5{
-  width: 20px;
-}
 .w-6{
   width: 24px;
+}
+.w-5{
+  width: 20px;
 }
 .w-11\\/12{
   width: 91.666667%;
