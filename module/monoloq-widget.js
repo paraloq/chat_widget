@@ -7347,53 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x5bdf(_0x512d32, _0x19f3dc) {
-  const _0xa17b84 = _0x36ab();
-  return _0x5bdf = function(_0x246e65, _0x518d62) {
-    _0x246e65 = _0x246e65 - (9692 * 1 + 9161 + -18417);
-    let _0xd5ab4c = _0xa17b84[_0x246e65];
-    return _0xd5ab4c;
-  }, _0x5bdf(_0x512d32, _0x19f3dc);
-}
-const _0x20e0b9 = _0x5bdf;
-(function(_0x35e8ca, _0x54e527) {
-  const _0x4ada9f = _0x5bdf, _0x46cad1 = _0x35e8ca();
+const _0x23722b = _0x4e9e;
+(function(_0x1dc234, _0x4b3f4c) {
+  const _0x18b7d8 = _0x4e9e, _0x2459f7 = _0x1dc234();
   while (!![]) {
     try {
-      const _0x5ed027 = parseInt(_0x4ada9f(448)) / (6038 + -8437 + 2400) + parseInt(_0x4ada9f(472)) / (-3132 + -9822 + 12956) + -parseInt(_0x4ada9f(451)) / (8917 + -6751 + -2163) + parseInt(_0x4ada9f(442)) / (-6290 * 1 + 33 * 201 + -339 * 1) + -parseInt(_0x4ada9f(459)) / (-3 * -1079 + 508 * 14 + 10344 * -1) * (-parseInt(_0x4ada9f(455)) / (502 * 17 + -1 * 7104 + -1424)) + -parseInt(_0x4ada9f(462)) / (-3184 + 4064 + -873) * (-parseInt(_0x4ada9f(443)) / (-1262 + -343 * 13 + 5729)) + -parseInt(_0x4ada9f(436)) / (-152 * -61 + -514 + -8749);
-      if (_0x5ed027 === _0x54e527)
+      const _0x426872 = parseInt(_0x18b7d8(193)) / (-4973 * -2 + 3168 + -13113) + -parseInt(_0x18b7d8(185)) / (9583 + 271 * -9 + -7142) + parseInt(_0x18b7d8(194)) / (3241 + 217 * -16 + -6 * -39) + parseInt(_0x18b7d8(181)) / (-3833 + 7937 + -4100) + -parseInt(_0x18b7d8(183)) / (4772 + -4875 * 2 + 3 * 1661) * (-parseInt(_0x18b7d8(202)) / (-781 * -1 + -9604 + 8829)) + -parseInt(_0x18b7d8(175)) / (-9 * -373 + 1 * -1209 + -2141) + -parseInt(_0x18b7d8(178)) / (5340 + -7535 + 2203) * (-parseInt(_0x18b7d8(187)) / (-8489 + -9575 + 18073));
+      if (_0x426872 === _0x4b3f4c)
         break;
       else
-        _0x46cad1["push"](_0x46cad1["shift"]());
-    } catch (_0x4ab99c) {
-      _0x46cad1["push"](_0x46cad1["shift"]());
+        _0x2459f7["push"](_0x2459f7["shift"]());
+    } catch (_0xb5b490) {
+      _0x2459f7["push"](_0x2459f7["shift"]());
     }
   }
-})(_0x36ab, 344048 + -21013 * 7 + -13 * -1454);
-function devHost(_0x518d62, _0xd5ab4c) {
-  const _0x496309 = _0x5bdf, _0x3ea04c = window[_0x496309(461)][_0x496309(467)], _0x589179 = String(_0x496309(439) + _0x496309(466) + _0x496309(464) + _0x496309(453) + _0x496309(470) + _0x496309(447) + _0x496309(441) + _0x496309(449) + "3/")[_0x496309(460)](",")[_0x496309(440)]((_0x46477f) => new URL(_0x46477f)[_0x496309(467)]);
-  console[_0x496309(457)](_0x496309(454) + _0x496309(452), _0x589179), console[_0x496309(457)](_0x496309(469) + _0x496309(438), _0x3ea04c);
-  if (![])
-    return _0x518d62 === _0x496309(437) ? _0x496309(468) + "om" : _0x496309(450) + "/";
-  console[_0x496309(457)](_0x496309(465) + _0x496309(446), _0xd5ab4c);
-  if (!_0xd5ab4c)
-    return _0x3ea04c[_0x496309(471)](_0x496309(458), "");
-  console[_0x496309(457)](_0x496309(445));
-  if (!_0x589179[_0x496309(456)](_0x3ea04c))
-    return _0x3ea04c[_0x496309(471)](_0x496309(458), "");
-  return console[_0x496309(457)](_0x496309(463)), _0xd5ab4c;
-}
-function prepareMessage(_0x11010a) {
-  return "" + _0x11010a;
-}
-function _0x36ab() {
-  const _0x33ed7e = ["hostname :", ".amazonaws", "replace", "842754INuZjB", "8263422wknsZL", "initiate", ">> ", "https://ob", "map", "http://loc", "936008IVmYCv", "1063144QVuBXb", "appearance", "not prop", "op :>> ", ".com/prod,", "132718WkDArY", "alhost:333", "paraloq.at", "947922hDWpDC", "d :>> ", ".eu-west-1", "whiteliste", "366sYCiHb", "includes", "log", "www.", "21575nWUbwp", "split", "location", "21buQHga", "not listed", "xecute-api", "hostNamePr", "4e4npfkj.e", "hostname", "ariasilk.c"];
-  _0x36ab = function() {
-    return _0x33ed7e;
+})(_0x51a5, 114693 + 3 * -175103 + -2 * -353946);
+function _0x51a5() {
+  const _0x1df8aa = ["hostname :", "not listed", ".amazonaws", "3626427WxncqC", "alhost:333", "hostname", "928slvEwL", "includes", "not prop", "369580TZkmdT", "log", "186845GOlUbO", "http://loc", "954508xOhdiF", "op :>> ", "40419VviqQd", "split", ">> ", "xecute-api", ".com/prod,", "https://ob", "378682zYAfiL", "453246HafdYx", "location", "d :>> ", ".eu-west-1", "appearance", "map", "replace", "whiteliste", "24ZgSMLY", "4e4npfkj.e", "www.", "hostNamePr"];
+  _0x51a5 = function() {
+    return _0x1df8aa;
   };
-  return _0x36ab();
+  return _0x51a5();
 }
-const appearance = Symbol(_0x20e0b9(444));
+function devHost(_0x26cf8d, _0x5c5df2) {
+  const _0x3aec56 = _0x4e9e, _0x471636 = window[_0x3aec56(195)][_0x3aec56(177)], _0x270316 = String(_0x3aec56(192) + _0x3aec56(169) + _0x3aec56(190) + _0x3aec56(197) + _0x3aec56(174) + _0x3aec56(191) + _0x3aec56(184) + _0x3aec56(176) + "3/")[_0x3aec56(188)](",")[_0x3aec56(199)]((_0x5e0912) => new URL(_0x5e0912)[_0x3aec56(177)]);
+  console[_0x3aec56(182)](_0x3aec56(201) + _0x3aec56(196), _0x270316), console[_0x3aec56(182)](_0x3aec56(172) + _0x3aec56(189), _0x471636), console[_0x3aec56(182)](_0x3aec56(171) + _0x3aec56(186), _0x5c5df2);
+  if (!_0x5c5df2)
+    return _0x471636[_0x3aec56(200)](_0x3aec56(170), "");
+  console[_0x3aec56(182)](_0x3aec56(180));
+  if (!_0x270316[_0x3aec56(179)](_0x471636))
+    return _0x471636[_0x3aec56(200)](_0x3aec56(170), "");
+  return console[_0x3aec56(182)](_0x3aec56(173)), _0x5c5df2;
+}
+function prepareMessage(_0x4a713a) {
+  return "" + _0x4a713a;
+}
+function _0x4e9e(_0x1aab14, _0x1464bd) {
+  const _0x57829 = _0x51a5();
+  return _0x4e9e = function(_0x26cf8d, _0x5c5df2) {
+    _0x26cf8d = _0x26cf8d - (94 * -46 + -85 * -34 + 1603);
+    let _0x471636 = _0x57829[_0x26cf8d];
+    return _0x471636;
+  }, _0x4e9e(_0x1aab14, _0x1464bd);
+}
+const appearance = Symbol(_0x23722b(198));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9891,7 +9888,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     enable_on_mobile: { type: Boolean, default: false },
     show_button_widget: { type: Boolean, default: true },
     fixed: { type: Boolean, default: true },
-    host_name: null,
+    host_domain: null,
     language: null,
     _mockLoading: { type: Boolean, default: false },
     _mockMessage: null
@@ -10020,7 +10017,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
-      baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_name));
+      baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
       let retries2 = 0;
       const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
       while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
@@ -11876,11 +11873,11 @@ to{
 .h-8{
   height: 32px;
 }
-.max-h-\\[694px\\]{
-  max-height: 694px;
-}
 .max-h-\\[144px\\]{
   max-height: 144px;
+}
+.max-h-\\[694px\\]{
+  max-height: 694px;
 }
 .max-h-\\[630px\\]{
   max-height: 630px;
@@ -11918,11 +11915,11 @@ to{
 .w-16{
   width: 64px;
 }
-.max-w-\\[372px\\]{
-  max-width: 372px;
-}
 .max-w-\\[316px\\]{
   max-width: 316px;
+}
+.max-w-\\[372px\\]{
+  max-width: 372px;
 }
 .max-w-\\[144px\\]{
   max-width: 144px;
@@ -11988,11 +11985,11 @@ to{
 .\\!break-words{
   overflow-wrap: break-word !important;
 }
-.rounded-2xl{
-  border-radius: 1rem;
-}
 .rounded-full{
   border-radius: 9999px;
+}
+.rounded-2xl{
+  border-radius: 1rem;
 }
 .rounded-lg{
   border-radius: 0.5rem;
@@ -12104,6 +12101,12 @@ to{
   padding-left: 8px;
   padding-right: 8px;
 }
+.pt-60{
+  padding-top: 15rem;
+}
+.pl-32{
+  padding-left: 8rem;
+}
 .pr-4{
   padding-right: 16px;
 }
@@ -12131,10 +12134,6 @@ to{
 .\\!font-sans{
   font-family: Nunito !important;
 }
-.\\!text-base{
-  font-size: 16px !important;
-  line-height: 24px !important;
-}
 .text-xs{
   font-size: 12px;
   line-height: 16px;
@@ -12153,6 +12152,10 @@ to{
 .text-base{
   font-size: 16px;
   line-height: 24px;
+}
+.\\!text-base{
+  font-size: 16px !important;
+  line-height: 24px !important;
 }
 .text-sm{
   font-size: 14px;
@@ -12374,11 +12377,11 @@ to{
 .sm\\:m-0{
     margin: 0px;
 }
-.sm\\:mr-2{
-    margin-right: 8px;
-}
 .sm\\:ml-0{
     margin-left: 0px;
+}
+.sm\\:mr-2{
+    margin-right: 8px;
 }
 .sm\\:flex{
     display: flex;
