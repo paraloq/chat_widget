@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x23722b = _0x4e9e;
-(function(_0x1dc234, _0x4b3f4c) {
-  const _0x18b7d8 = _0x4e9e, _0x2459f7 = _0x1dc234();
+const _0x1320c2 = _0x39ef;
+(function(_0x168aa0, _0x85ed52) {
+  const _0xa604c8 = _0x39ef, _0x84ce93 = _0x168aa0();
   while (!![]) {
     try {
-      const _0x426872 = parseInt(_0x18b7d8(193)) / (-4973 * -2 + 3168 + -13113) + -parseInt(_0x18b7d8(185)) / (9583 + 271 * -9 + -7142) + parseInt(_0x18b7d8(194)) / (3241 + 217 * -16 + -6 * -39) + parseInt(_0x18b7d8(181)) / (-3833 + 7937 + -4100) + -parseInt(_0x18b7d8(183)) / (4772 + -4875 * 2 + 3 * 1661) * (-parseInt(_0x18b7d8(202)) / (-781 * -1 + -9604 + 8829)) + -parseInt(_0x18b7d8(175)) / (-9 * -373 + 1 * -1209 + -2141) + -parseInt(_0x18b7d8(178)) / (5340 + -7535 + 2203) * (-parseInt(_0x18b7d8(187)) / (-8489 + -9575 + 18073));
-      if (_0x426872 === _0x4b3f4c)
+      const _0x4c90ba = -parseInt(_0xa604c8(520)) / (6090 + 61 * -129 + 1780) * (parseInt(_0xa604c8(515)) / (1959 * 3 + 4583 + -10458)) + -parseInt(_0xa604c8(516)) / (3321 * -1 + 6060 + -72 * 38) + -parseInt(_0xa604c8(504)) / (-1 * -3076 + -8814 + 5742) * (parseInt(_0xa604c8(484)) / (8066 + -7628 + -433)) + -parseInt(_0xa604c8(514)) / (-7082 + 18 * -508 + 16232) * (-parseInt(_0xa604c8(518)) / (5491 + -170 * -17 + -8374)) + parseInt(_0xa604c8(517)) / (-3793 + 29 + 164 * 23) * (-parseInt(_0xa604c8(499)) / (-104 * 85 + 7686 + 1163)) + -parseInt(_0xa604c8(494)) / (-7886 + -6421 * -1 + -295 * -5) + -parseInt(_0xa604c8(495)) / (-1 * 221 + 164 * -2 + 560) * (-parseInt(_0xa604c8(510)) / (-156 + 899 + 731 * -1));
+      if (_0x4c90ba === _0x85ed52)
         break;
       else
-        _0x2459f7["push"](_0x2459f7["shift"]());
-    } catch (_0xb5b490) {
-      _0x2459f7["push"](_0x2459f7["shift"]());
+        _0x84ce93["push"](_0x84ce93["shift"]());
+    } catch (_0x4d0225) {
+      _0x84ce93["push"](_0x84ce93["shift"]());
     }
   }
-})(_0x51a5, 114693 + 3 * -175103 + -2 * -353946);
-function _0x51a5() {
-  const _0x1df8aa = ["hostname :", "not listed", ".amazonaws", "3626427WxncqC", "alhost:333", "hostname", "928slvEwL", "includes", "not prop", "369580TZkmdT", "log", "186845GOlUbO", "http://loc", "954508xOhdiF", "op :>> ", "40419VviqQd", "split", ">> ", "xecute-api", ".com/prod,", "https://ob", "378682zYAfiL", "453246HafdYx", "location", "d :>> ", ".eu-west-1", "appearance", "map", "replace", "whiteliste", "24ZgSMLY", "4e4npfkj.e", "www.", "hostNamePr"];
-  _0x51a5 = function() {
-    return _0x1df8aa;
+})(_0x28cc, -43 * 313 + 1020036 + -462585);
+function _0x39ef(_0x585b62, _0x5a0338) {
+  const _0x3d166e = _0x28cc();
+  return _0x39ef = function(_0x1ef58a, _0x9c7117) {
+    _0x1ef58a = _0x1ef58a - (8362 + 466 * 19 + -2 * 8366);
+    let _0x59d8f4 = _0x3d166e[_0x1ef58a];
+    return _0x59d8f4;
+  }, _0x39ef(_0x585b62, _0x5a0338);
+}
+function _0x28cc() {
+  const _0x144ce9 = ["1224414zMDxaC", "2206881AXsrUN", "1042488RGXFRD", "11599gtHWkc", "http://loc", "1zqkBMa", "145XLAKvT", "4e4npfkj.e", "https://ob", "xecute-api", "replace", "not listed", "op :>> ", "alhost:333", "not prop", "location", "5079630ivFFDw", "64559ncxvgM", "includes", ".com/prod,", "hostname :", "9HACLGe", "www.", "hostname", ".eu-west-1", "split", "71816ZUEDKG", "log", "d :>> ", "whiteliste", "hostNamePr", "map", "4188iYrKvs", ".amazonaws", ">> ", "appearance", "3630djJsCT"];
+  _0x28cc = function() {
+    return _0x144ce9;
   };
-  return _0x51a5();
+  return _0x28cc();
 }
-function devHost(_0x26cf8d, _0x5c5df2) {
-  const _0x3aec56 = _0x4e9e, _0x471636 = window[_0x3aec56(195)][_0x3aec56(177)], _0x270316 = String(_0x3aec56(192) + _0x3aec56(169) + _0x3aec56(190) + _0x3aec56(197) + _0x3aec56(174) + _0x3aec56(191) + _0x3aec56(184) + _0x3aec56(176) + "3/")[_0x3aec56(188)](",")[_0x3aec56(199)]((_0x5e0912) => new URL(_0x5e0912)[_0x3aec56(177)]);
-  console[_0x3aec56(182)](_0x3aec56(201) + _0x3aec56(196), _0x270316), console[_0x3aec56(182)](_0x3aec56(172) + _0x3aec56(189), _0x471636), console[_0x3aec56(182)](_0x3aec56(171) + _0x3aec56(186), _0x5c5df2);
-  if (!_0x5c5df2)
-    return _0x471636[_0x3aec56(200)](_0x3aec56(170), "");
-  console[_0x3aec56(182)](_0x3aec56(180));
-  if (!_0x270316[_0x3aec56(179)](_0x471636))
-    return _0x471636[_0x3aec56(200)](_0x3aec56(170), "");
-  return console[_0x3aec56(182)](_0x3aec56(173)), _0x5c5df2;
+function devHost(_0x1ef58a, _0x9c7117) {
+  const _0x45b030 = _0x39ef, _0x59d8f4 = window[_0x45b030(493)][_0x45b030(501)], _0x2275d5 = String(_0x45b030(486) + _0x45b030(485) + _0x45b030(487) + _0x45b030(502) + _0x45b030(511) + _0x45b030(497) + _0x45b030(519) + _0x45b030(491) + "3/")[_0x45b030(503)](",")[_0x45b030(509)]((_0x3b78c8) => new URL(_0x3b78c8)[_0x45b030(501)]);
+  console[_0x45b030(505)](_0x45b030(507) + _0x45b030(506), _0x2275d5), console[_0x45b030(505)](_0x45b030(498) + _0x45b030(512), _0x59d8f4), console[_0x45b030(505)](_0x45b030(508) + _0x45b030(490), _0x9c7117);
+  if (!_0x9c7117)
+    return _0x59d8f4[_0x45b030(488)](_0x45b030(500), "");
+  console[_0x45b030(505)](_0x45b030(492));
+  if (!_0x2275d5[_0x45b030(496)](_0x59d8f4))
+    return _0x59d8f4[_0x45b030(488)](_0x45b030(500), "");
+  return console[_0x45b030(505)](_0x45b030(489)), _0x9c7117;
 }
-function prepareMessage(_0x4a713a) {
-  return "" + _0x4a713a;
+function prepareMessage(_0x32716f) {
+  return "" + _0x32716f;
 }
-function _0x4e9e(_0x1aab14, _0x1464bd) {
-  const _0x57829 = _0x51a5();
-  return _0x4e9e = function(_0x26cf8d, _0x5c5df2) {
-    _0x26cf8d = _0x26cf8d - (94 * -46 + -85 * -34 + 1603);
-    let _0x471636 = _0x57829[_0x26cf8d];
-    return _0x471636;
-  }, _0x4e9e(_0x1aab14, _0x1464bd);
-}
-const appearance = Symbol(_0x23722b(198));
+const appearance = Symbol(_0x1320c2(513));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9568,9 +9568,9 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
             return openBlock(), createElementBlock("button", {
               key: language,
-              class: "btn btn-ghost w-full justify-start capitalize",
+              class: normalizeClass(["btn btn-ghost w-full justify-start capitalize", { "btn-active": language === unref(provided).language }]),
               onClick: ($event) => emit2("setLanguage", language)
-            }, toDisplayString(language), 9, _hoisted_6$3);
+            }, toDisplayString(language), 11, _hoisted_6$3);
           }), 128))
         ])
       ]);
@@ -11240,6 +11240,48 @@ to{
 .btn-primary:focus-visible{
   outline: 2px solid hsl(var(--p));
 }
+.btn-secondary:hover,
+    .btn-secondary.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+}
+.btn-accent:hover,
+    .btn-accent.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+}
+.btn-info:hover,
+    .btn-info.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+}
+.btn-success:hover,
+    .btn-success.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+}
+.btn-warning:hover,
+    .btn-warning.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+}
+.btn-error:hover,
+    .btn-error.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+}
 .btn.glass:hover,
     .btn.glass.btn-active{
   --glass-opacity: 25%;
@@ -11263,6 +11305,21 @@ to{
 .btn-ghost:focus-visible{
   outline: 2px solid currentColor;
 }
+.btn-link:hover,
+    .btn-link.btn-active{
+  border-color: transparent;
+  background-color: transparent;
+  text-decoration-line: underline;
+}
+.btn-outline:hover,
+    .btn-outline.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--b1) / var(--tw-text-opacity));
+}
 .btn-outline.btn-primary{
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
@@ -11275,6 +11332,60 @@ to{
   background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary:hover,
+      .btn-outline.btn-secondary.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent:hover,
+      .btn-outline.btn-accent.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
+}
+.btn-outline.btn-success:hover,
+      .btn-outline.btn-success.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--suc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-info:hover,
+      .btn-outline.btn-info.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--inc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-warning:hover,
+      .btn-outline.btn-warning.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--wac, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-error:hover,
+      .btn-outline.btn-error.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
 }
 .btn-disabled,
   .btn-disabled:hover,
@@ -11572,6 +11683,28 @@ to{
   background-color: transparent;
   opacity: 0.3;
   --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
+}
+.glass,
+  .glass:hover,
+  .glass.btn-active{
+  border: none;
+  -webkit-backdrop-filter: blur(var(--glass-blur, 40px));
+          backdrop-filter: blur(var(--glass-blur, 40px));
+  background-color: transparent;
+  background-image: linear-gradient(
+        135deg,
+        rgb(255 255 255 / var(--glass-opacity, 30%)) 0%,
+        rgb(0 0 0 / 0%) 100%
+      ),
+      linear-gradient(
+        var(--glass-reflex-degree, 100deg),
+        rgb(255 255 255 / var(--glass-reflex-opacity, 10%)) 25%,
+        rgb(0 0 0 / 0%) 25%
+      );
+  box-shadow: 0 0 0 1px rgb(255 255 255 / var(--glass-border-opacity, 10%))
+        inset,
+      0 0 0 2px rgb(0 0 0 / 5%);
+  text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
 }
 .min-h-16{
   min-height: 4rem;
