@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x1320c2 = _0x39ef;
-(function(_0x168aa0, _0x85ed52) {
-  const _0xa604c8 = _0x39ef, _0x84ce93 = _0x168aa0();
+const _0x5b0d92 = _0x4f31;
+(function(_0x126022, _0x18c04e) {
+  const _0x1f24ba = _0x4f31, _0x1a4957 = _0x126022();
   while (!![]) {
     try {
-      const _0x4c90ba = -parseInt(_0xa604c8(520)) / (6090 + 61 * -129 + 1780) * (parseInt(_0xa604c8(515)) / (1959 * 3 + 4583 + -10458)) + -parseInt(_0xa604c8(516)) / (3321 * -1 + 6060 + -72 * 38) + -parseInt(_0xa604c8(504)) / (-1 * -3076 + -8814 + 5742) * (parseInt(_0xa604c8(484)) / (8066 + -7628 + -433)) + -parseInt(_0xa604c8(514)) / (-7082 + 18 * -508 + 16232) * (-parseInt(_0xa604c8(518)) / (5491 + -170 * -17 + -8374)) + parseInt(_0xa604c8(517)) / (-3793 + 29 + 164 * 23) * (-parseInt(_0xa604c8(499)) / (-104 * 85 + 7686 + 1163)) + -parseInt(_0xa604c8(494)) / (-7886 + -6421 * -1 + -295 * -5) + -parseInt(_0xa604c8(495)) / (-1 * 221 + 164 * -2 + 560) * (-parseInt(_0xa604c8(510)) / (-156 + 899 + 731 * -1));
-      if (_0x4c90ba === _0x85ed52)
+      const _0x21e8d8 = -parseInt(_0x1f24ba(444)) / (111 * -58 + -5662 + 12101) * (parseInt(_0x1f24ba(456)) / (-1 * -3197 + 17 * 1 + -803 * 4)) + -parseInt(_0x1f24ba(471)) / (193 * 28 + -9182 + 3781 * 1) * (parseInt(_0x1f24ba(462)) / (-115 * -23 + -1302 * -7 + -5 * 2351)) + parseInt(_0x1f24ba(474)) / (1 * -1664 + 619 * -9 + -1 * -7240) * (-parseInt(_0x1f24ba(470)) / (4637 + 9179 + -13810)) + parseInt(_0x1f24ba(463)) / (411 * 22 + -4633 + -1 * 4402) * (-parseInt(_0x1f24ba(454)) / (-722 + 1 * -689 + 1419)) + -parseInt(_0x1f24ba(475)) / (-6690 + -2649 + -19 * -492) + parseInt(_0x1f24ba(464)) / (328 * -6 + -1 * 3332 + -2 * -2655) + parseInt(_0x1f24ba(473)) / (7010 * -1 + -3698 + -9 * -1191);
+      if (_0x21e8d8 === _0x18c04e)
         break;
       else
-        _0x84ce93["push"](_0x84ce93["shift"]());
-    } catch (_0x4d0225) {
-      _0x84ce93["push"](_0x84ce93["shift"]());
+        _0x1a4957["push"](_0x1a4957["shift"]());
+    } catch (_0x5f1f57) {
+      _0x1a4957["push"](_0x1a4957["shift"]());
     }
   }
-})(_0x28cc, -43 * 313 + 1020036 + -462585);
-function _0x39ef(_0x585b62, _0x5a0338) {
-  const _0x3d166e = _0x28cc();
-  return _0x39ef = function(_0x1ef58a, _0x9c7117) {
-    _0x1ef58a = _0x1ef58a - (8362 + 466 * 19 + -2 * 8366);
-    let _0x59d8f4 = _0x3d166e[_0x1ef58a];
-    return _0x59d8f4;
-  }, _0x39ef(_0x585b62, _0x5a0338);
+})(_0x1f34, -410012 * -1 + -968665 + -1 * -1056656);
+function devHost(_0x2b93d8, _0x59a45f) {
+  const _0xf63142 = _0x4f31, _0x35b099 = window[_0xf63142(451)][_0xf63142(458)], _0x298c83 = String(_0xf63142(443) + _0xf63142(467) + _0xf63142(446) + _0xf63142(469) + _0xf63142(476) + _0xf63142(441) + _0xf63142(460) + _0xf63142(442) + "3/")[_0xf63142(453)](",")[_0xf63142(449)]((_0x1ecf49) => new URL(_0x1ecf49)[_0xf63142(458)]);
+  console[_0xf63142(472)](_0xf63142(448) + _0xf63142(466), _0x298c83), console[_0xf63142(472)](_0xf63142(468) + _0xf63142(447), _0x35b099), console[_0xf63142(472)](_0xf63142(465) + _0xf63142(455), _0x59a45f);
+  if (!_0x59a45f)
+    return _0x35b099[_0xf63142(450)](_0xf63142(452), "");
+  console[_0xf63142(472)](_0xf63142(459));
+  if (!_0x298c83[_0xf63142(461)](_0x35b099))
+    return _0x35b099[_0xf63142(450)](_0xf63142(452), "");
+  return console[_0xf63142(472)](_0xf63142(445)), _0x59a45f;
 }
-function _0x28cc() {
-  const _0x144ce9 = ["1224414zMDxaC", "2206881AXsrUN", "1042488RGXFRD", "11599gtHWkc", "http://loc", "1zqkBMa", "145XLAKvT", "4e4npfkj.e", "https://ob", "xecute-api", "replace", "not listed", "op :>> ", "alhost:333", "not prop", "location", "5079630ivFFDw", "64559ncxvgM", "includes", ".com/prod,", "hostname :", "9HACLGe", "www.", "hostname", ".eu-west-1", "split", "71816ZUEDKG", "log", "d :>> ", "whiteliste", "hostNamePr", "map", "4188iYrKvs", ".amazonaws", ">> ", "appearance", "3630djJsCT"];
-  _0x28cc = function() {
-    return _0x144ce9;
+function prepareMessage(_0x4020e9) {
+  return "" + _0x4020e9;
+}
+function _0x4f31(_0x3c05db, _0x255218) {
+  const _0x32e613 = _0x1f34();
+  return _0x4f31 = function(_0x21686b, _0x2b93d8) {
+    _0x21686b = _0x21686b - (3169 + -37 * -227 + -11127);
+    let _0x59a45f = _0x32e613[_0x21686b];
+    return _0x59a45f;
+  }, _0x4f31(_0x3c05db, _0x255218);
+}
+function _0x1f34() {
+  const _0x520a8a = ["hostNamePr", "d :>> ", "4e4npfkj.e", "hostname :", ".eu-west-1", "933714QbqlCb", "12153PioBJh", "log", "13262029NvpfyK", "15UbigcP", "2008296coBgUN", ".amazonaws", ".com/prod,", "alhost:333", "https://ob", "1kLvzdQ", "not listed", "xecute-api", ">> ", "whiteliste", "map", "replace", "location", "www.", "split", "9400aniQqm", "op :>> ", "1060798bTlEfK", "appearance", "hostname", "not prop", "http://loc", "includes", "12KNDrAu", "1050gdwiyV", "7011670jTwESS"];
+  _0x1f34 = function() {
+    return _0x520a8a;
   };
-  return _0x28cc();
+  return _0x1f34();
 }
-function devHost(_0x1ef58a, _0x9c7117) {
-  const _0x45b030 = _0x39ef, _0x59d8f4 = window[_0x45b030(493)][_0x45b030(501)], _0x2275d5 = String(_0x45b030(486) + _0x45b030(485) + _0x45b030(487) + _0x45b030(502) + _0x45b030(511) + _0x45b030(497) + _0x45b030(519) + _0x45b030(491) + "3/")[_0x45b030(503)](",")[_0x45b030(509)]((_0x3b78c8) => new URL(_0x3b78c8)[_0x45b030(501)]);
-  console[_0x45b030(505)](_0x45b030(507) + _0x45b030(506), _0x2275d5), console[_0x45b030(505)](_0x45b030(498) + _0x45b030(512), _0x59d8f4), console[_0x45b030(505)](_0x45b030(508) + _0x45b030(490), _0x9c7117);
-  if (!_0x9c7117)
-    return _0x59d8f4[_0x45b030(488)](_0x45b030(500), "");
-  console[_0x45b030(505)](_0x45b030(492));
-  if (!_0x2275d5[_0x45b030(496)](_0x59d8f4))
-    return _0x59d8f4[_0x45b030(488)](_0x45b030(500), "");
-  return console[_0x45b030(505)](_0x45b030(489)), _0x9c7117;
-}
-function prepareMessage(_0x32716f) {
-  return "" + _0x32716f;
-}
-const appearance = Symbol(_0x1320c2(513));
+const appearance = Symbol(_0x5b0d92(457));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9338,7 +9338,9 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
           onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
         }, [
-          createVNode(LogoGlobal, { class: "w-5 h-5 text-white" })
+          createVNode(LogoGlobal, {
+            class: normalizeClass(["w-5 h-5", unref(provided).textClass])
+          }, null, 8, ["class"])
         ]),
         createBaseVNode("h1", {
           class: normalizeClass(["text-lg text-center py-3", unref(provided).textClass])
@@ -9388,7 +9390,7 @@ const _hoisted_10$2 = {
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
 const _hoisted_11$1 = { key: 0 };
-const _hoisted_12 = { class: "text-xs opacity-50" };
+const _hoisted_12$1 = { class: "text-xs opacity-50" };
 const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
@@ -9458,7 +9460,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         ])) : createCommentVNode("", true),
         "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
           unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11$1, [
-            createBaseVNode("time", _hoisted_12, toDisplayString(unref(time)), 1)
+            createBaseVNode("time", _hoisted_12$1, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
             class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
@@ -9560,9 +9562,9 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       return openBlock(), createElementBlock("div", _hoisted_1$6, [
         createBaseVNode("div", _hoisted_2$5, [
           createBaseVNode("button", {
-            class: "btn btn-ghost btn-square btn-sm ml-3",
+            class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
             onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
-          }, _hoisted_4$3)
+          }, _hoisted_4$3, 2)
         ]),
         createBaseVNode("div", _hoisted_5$3, [
           (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
@@ -9677,10 +9679,11 @@ const _hoisted_4$2 = ["id", "onClick"];
 const _hoisted_5$2 = { class: "card w-full h-full stuff backdrop-blur-sm card-compact !bg-black/60 group" };
 const _hoisted_6$2 = ["src"];
 const _hoisted_7$2 = { class: "card-body text-white text-center flex flex-col" };
-const _hoisted_8$2 = { class: "text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 line-clamp-1" };
-const _hoisted_9$1 = { class: "text-base text-white/40 line-clamp-6" };
-const _hoisted_10$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
-const _hoisted_11 = { class: "text-lg flex-none" };
+const _hoisted_8$2 = { class: "mt-4" };
+const _hoisted_9$1 = { class: "text-xl font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 !line-clamp-1" };
+const _hoisted_10$1 = { class: "text-base text-white/40 !line-clamp-6" };
+const _hoisted_11 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_12 = { class: "text-lg flex-none" };
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "ChatProducts",
   props: {
@@ -9733,10 +9736,14 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                   }, null, 8, _hoisted_6$2)
                 ]),
                 createBaseVNode("div", _hoisted_7$2, [
-                  createBaseVNode("p", _hoisted_8$2, toDisplayString(`${product.title}`), 1),
-                  createBaseVNode("p", _hoisted_9$1, toDisplayString(product.description), 1),
-                  _hoisted_10$1,
-                  createBaseVNode("p", _hoisted_11, toDisplayString(`$${product.price}`), 1)
+                  createBaseVNode("div", _hoisted_8$2, [
+                    createBaseVNode("p", _hoisted_9$1, toDisplayString(`${product.title}`), 1)
+                  ]),
+                  createBaseVNode("div", null, [
+                    createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
+                  ]),
+                  _hoisted_11,
+                  createBaseVNode("p", _hoisted_12, toDisplayString(`$${product.price}`), 1)
                 ])
               ])
             ], 8, _hoisted_4$2);
@@ -12024,6 +12031,9 @@ to{
 .w-full{
   width: 100%;
 }
+.w-52{
+  width: 13rem;
+}
 .w-8{
   width: 32px;
 }
@@ -12078,6 +12088,9 @@ to{
 }
 .resize-none{
   resize: none;
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-col{
   flex-direction: column;
@@ -12362,17 +12375,17 @@ to{
 .duration-200{
   transition-duration: 200ms;
 }
-.line-clamp-1{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+.\\!line-clamp-1{
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 1 !important;
 }
-.line-clamp-6{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+.\\!line-clamp-6{
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 6 !important;
 }
 .line-clamp-3{
   overflow: hidden;
