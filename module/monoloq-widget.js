@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x171e74 = _0x48d5;
-function _0x48d5(_0xed4f83, _0x1cef4d) {
-  const _0x3ab310 = _0x1150();
-  return _0x48d5 = function(_0x2b955e, _0x1606b3) {
-    _0x2b955e = _0x2b955e - (-1996 + 5 * 909 + -2088);
-    let _0x189cf8 = _0x3ab310[_0x2b955e];
-    return _0x189cf8;
-  }, _0x48d5(_0xed4f83, _0x1cef4d);
-}
-(function(_0x1a8819, _0x34fe1f) {
-  const _0x2ef6a1 = _0x48d5, _0x211286 = _0x1a8819();
+const _0x29cbbe = _0x2828;
+(function(_0x49989f, _0x2ce466) {
+  const _0x4b6f47 = _0x2828, _0x4a8050 = _0x49989f();
   while (!![]) {
     try {
-      const _0x21d604 = -parseInt(_0x2ef6a1(496)) / (6114 + -482 * 4 + -4185) * (parseInt(_0x2ef6a1(474)) / (-321 * -1 + -4452 + 4133)) + parseInt(_0x2ef6a1(467)) / (1966 * 4 + 2517 + 10378 * -1) + -parseInt(_0x2ef6a1(468)) / (2385 * 3 + -9551 + 2400) * (parseInt(_0x2ef6a1(473)) / (1501 + -1 * 9047 + 9 * 839)) + -parseInt(_0x2ef6a1(489)) / (77 * -86 + -2049 + 1 * 8677) + -parseInt(_0x2ef6a1(495)) / (2678 * -1 + 9724 + -7039) * (-parseInt(_0x2ef6a1(480)) / (925 + -3263 * 1 + 2346)) + -parseInt(_0x2ef6a1(488)) / (1 * 8026 + -4573 * 1 + -3444) * (-parseInt(_0x2ef6a1(462)) / (31 * -93 + 199 * -19 + 6674)) + -parseInt(_0x2ef6a1(482)) / (3053 + -1 * 7 + 607 * -5) * (parseInt(_0x2ef6a1(490)) / (3155 * 2 + 3803 * -1 + 2495 * -1));
-      if (_0x21d604 === _0x34fe1f)
+      const _0xe6f8d0 = parseInt(_0x4b6f47(264)) / (-83 * 29 + 221 * -43 + 277 * 43) + parseInt(_0x4b6f47(255)) / (88 * 86 + -1 * 4079 + 11 * -317) + -parseInt(_0x4b6f47(253)) / (-118 * -62 + 865 * 1 + -8178) * (-parseInt(_0x4b6f47(266)) / (-5715 + -3 * 841 + 1 * 8242)) + -parseInt(_0x4b6f47(259)) / (3614 + 14 * 179 + -6115) * (parseInt(_0x4b6f47(282)) / (-1564 + 2385 + -815 * 1)) + parseInt(_0x4b6f47(281)) / (-8858 + -9759 + 48 * 388) * (parseInt(_0x4b6f47(273)) / (7 * 118 + 11 * 159 + -2567)) + parseInt(_0x4b6f47(258)) / (-2 * 2455 + 2362 * 3 + -197 * 11) * (-parseInt(_0x4b6f47(256)) / (3 * -985 + 6829 + -3864)) + parseInt(_0x4b6f47(260)) / (-1237 + -3189 + 4437 * 1) * (-parseInt(_0x4b6f47(272)) / (-9751 * 1 + 30 * 138 + 5623 * 1));
+      if (_0xe6f8d0 === _0x2ce466)
         break;
       else
-        _0x211286["push"](_0x211286["shift"]());
-    } catch (_0x9a1370) {
-      _0x211286["push"](_0x211286["shift"]());
+        _0x4a8050["push"](_0x4a8050["shift"]());
+    } catch (_0x4de6e0) {
+      _0x4a8050["push"](_0x4a8050["shift"]());
     }
   }
-})(_0x1150, -896764 + -947255 + 2652636);
-function devHost(_0x1606b3, _0x189cf8) {
-  const _0x12cdae = _0x48d5, _0x3c8c98 = window[_0x12cdae(494)][_0x12cdae(470)], _0x3e73ee = String(_0x12cdae(471) + _0x12cdae(475) + _0x12cdae(476) + _0x12cdae(492) + _0x12cdae(461) + _0x12cdae(478) + _0x12cdae(493) + _0x12cdae(469) + "3/")[_0x12cdae(481)](",")[_0x12cdae(485)]((_0x52874c) => new URL(_0x52874c)[_0x12cdae(470)]);
-  console[_0x12cdae(477)](_0x12cdae(463) + _0x12cdae(465), _0x3e73ee), console[_0x12cdae(477)](_0x12cdae(483) + _0x12cdae(486), _0x3c8c98), console[_0x12cdae(477)](_0x12cdae(479) + _0x12cdae(466), _0x189cf8);
-  if (!_0x189cf8)
-    return _0x3c8c98[_0x12cdae(487)](_0x12cdae(491), "");
-  console[_0x12cdae(477)](_0x12cdae(472));
-  if (!_0x3e73ee[_0x12cdae(464)](_0x3c8c98))
-    return _0x3c8c98[_0x12cdae(487)](_0x12cdae(491), "");
-  return console[_0x12cdae(477)](_0x12cdae(497)), _0x189cf8;
+})(_0x3a79, 877671 + -1348988 + 1224211);
+function _0x2828(_0xbe8057, _0x166146) {
+  const _0x25d555 = _0x3a79();
+  return _0x2828 = function(_0x2b9119, _0x5dc4a6) {
+    _0x2b9119 = _0x2b9119 - (-8 * 957 + -1 * -7837 + 72);
+    let _0x164fd7 = _0x25d555[_0x2b9119];
+    return _0x164fd7;
+  }, _0x2828(_0xbe8057, _0x166146);
 }
-function _0x1150() {
-  const _0x454878 = ["whiteliste", "includes", "d :>> ", "op :>> ", "3732270UEcxAm", "168xUtbDv", "alhost:333", "hostname", "https://ob", "not prop", "5235BGdCvD", "4274auSIiL", "4e4npfkj.e", "xecute-api", "log", ".com/prod,", "hostNamePr", "424712fEamSK", "split", "341539uLALFB", "hostname :", "appearance", "map", ">> ", "replace", "488583fOwXqT", "6795810oVjZIy", "264vRQSBl", "www.", ".eu-west-1", "http://loc", "location", "196xTfiCI", "461NzVvTC", "not listed", ".amazonaws", "170KQyLew"];
-  _0x1150 = function() {
-    return _0x454878;
+function devHost(_0x2b9119, _0x5dc4a6) {
+  const _0x23e1a8 = _0x2828, _0x164fd7 = window[_0x23e1a8(286)][_0x23e1a8(275)], _0x12d970 = String(_0x23e1a8(284) + _0x23e1a8(274) + _0x23e1a8(262) + _0x23e1a8(288) + _0x23e1a8(268) + _0x23e1a8(277) + _0x23e1a8(280) + _0x23e1a8(283) + "3/")[_0x23e1a8(261)](",")[_0x23e1a8(257)]((_0x25b923) => new URL(_0x25b923)[_0x23e1a8(275)]);
+  console[_0x23e1a8(254)](_0x23e1a8(267) + _0x23e1a8(279), _0x12d970), console[_0x23e1a8(254)](_0x23e1a8(269) + _0x23e1a8(270), _0x164fd7), console[_0x23e1a8(254)](_0x23e1a8(278) + _0x23e1a8(289), _0x5dc4a6);
+  if (!_0x5dc4a6)
+    return _0x164fd7[_0x23e1a8(265)](_0x23e1a8(271), "");
+  console[_0x23e1a8(254)](_0x23e1a8(285));
+  if (!_0x12d970[_0x23e1a8(263)](_0x164fd7))
+    return _0x164fd7[_0x23e1a8(265)](_0x23e1a8(271), "");
+  return console[_0x23e1a8(254)](_0x23e1a8(287)), _0x5dc4a6;
+}
+function _0x3a79() {
+  const _0x154939 = ["1852512EyPNjY", "alhost:333", "https://ob", "not prop", "location", "not listed", ".eu-west-1", "op :>> ", "261VarHkh", "log", "2551400HABTVD", "10DZnqXI", "map", "6603912NfsmIH", "10bqBsPb", "940764zkMiJT", "split", "xecute-api", "includes", "1160278wCuNXn", "replace", "50972GpkKop", "whiteliste", ".amazonaws", "hostname :", ">> ", "www.", "348yLdbcZ", "776fUAijO", "4e4npfkj.e", "hostname", "appearance", ".com/prod,", "hostNamePr", "d :>> ", "http://loc", "75033kbYBDh"];
+  _0x3a79 = function() {
+    return _0x154939;
   };
-  return _0x1150();
+  return _0x3a79();
 }
-function prepareMessage(_0x597eb7) {
-  return "" + _0x597eb7;
+function prepareMessage(_0x5bd4b8) {
+  return "" + _0x5bd4b8;
 }
-const appearance = Symbol(_0x171e74(484));
+const appearance = Symbol(_0x29cbbe(276));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9692,8 +9692,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     const chatProducts = ref();
     function recommend(productUrl, itemId) {
       const url = new URL(productUrl);
-      history.pushState({ monoloqItemId: itemId }, "", url);
+      console.log("url :>> ", url);
       window.location.assign(url);
+      console.log("itemId :>> ", itemId);
+      history.pushState({ monoloqItemId: itemId }, "", url);
     }
     onMounted(async () => {
       var _a2;
@@ -12517,7 +12519,7 @@ async function register() {
       const settings = await res.json();
       props = {
         ...settings.appearance,
-        ...settings.text[0],
+        text: settings.text,
         enable_on_mobile: settings.general.enable_on_mobile
       };
     } catch (e) {
