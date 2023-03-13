@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x5b0d92 = _0x4f31;
-(function(_0x126022, _0x18c04e) {
-  const _0x1f24ba = _0x4f31, _0x1a4957 = _0x126022();
+const _0x56f749 = _0x24d8;
+function _0x24d8(_0x1f19bb, _0x5a58df) {
+  const _0x50c7a1 = _0x4efb();
+  return _0x24d8 = function(_0x51261e, _0x566b35) {
+    _0x51261e = _0x51261e - (-7 * 1095 + 2 * 1559 + 7 * 671);
+    let _0x2fb503 = _0x50c7a1[_0x51261e];
+    return _0x2fb503;
+  }, _0x24d8(_0x1f19bb, _0x5a58df);
+}
+(function(_0xeca7cd, _0x302bed) {
+  const _0x5b3794 = _0x24d8, _0xae03f9 = _0xeca7cd();
   while (!![]) {
     try {
-      const _0x21e8d8 = -parseInt(_0x1f24ba(444)) / (111 * -58 + -5662 + 12101) * (parseInt(_0x1f24ba(456)) / (-1 * -3197 + 17 * 1 + -803 * 4)) + -parseInt(_0x1f24ba(471)) / (193 * 28 + -9182 + 3781 * 1) * (parseInt(_0x1f24ba(462)) / (-115 * -23 + -1302 * -7 + -5 * 2351)) + parseInt(_0x1f24ba(474)) / (1 * -1664 + 619 * -9 + -1 * -7240) * (-parseInt(_0x1f24ba(470)) / (4637 + 9179 + -13810)) + parseInt(_0x1f24ba(463)) / (411 * 22 + -4633 + -1 * 4402) * (-parseInt(_0x1f24ba(454)) / (-722 + 1 * -689 + 1419)) + -parseInt(_0x1f24ba(475)) / (-6690 + -2649 + -19 * -492) + parseInt(_0x1f24ba(464)) / (328 * -6 + -1 * 3332 + -2 * -2655) + parseInt(_0x1f24ba(473)) / (7010 * -1 + -3698 + -9 * -1191);
-      if (_0x21e8d8 === _0x18c04e)
+      const _0x2e08e2 = parseInt(_0x5b3794(175)) / (604 + -7046 + -17 * -379) + parseInt(_0x5b3794(181)) / (-634 * -2 + 5785 + -7051) + -parseInt(_0x5b3794(166)) / (-6087 + 195 + 5895) + -parseInt(_0x5b3794(177)) / (6046 * 1 + -1 * 1175 + -4867) * (-parseInt(_0x5b3794(176)) / (8976 + 20 * 226 + 1499 * -9)) + -parseInt(_0x5b3794(167)) / (1 * 996 + -244 * 10 + 1450) + parseInt(_0x5b3794(151)) / (-3093 * -1 + 8453 * 1 + 1049 * -11) * (parseInt(_0x5b3794(154)) / (-2335 + 9481 + 2 * -3569)) + parseInt(_0x5b3794(178)) / (6030 + 8542 + -14563);
+      if (_0x2e08e2 === _0x302bed)
         break;
       else
-        _0x1a4957["push"](_0x1a4957["shift"]());
-    } catch (_0x5f1f57) {
-      _0x1a4957["push"](_0x1a4957["shift"]());
+        _0xae03f9["push"](_0xae03f9["shift"]());
+    } catch (_0x10f40e) {
+      _0xae03f9["push"](_0xae03f9["shift"]());
     }
   }
-})(_0x1f34, -410012 * -1 + -968665 + -1 * -1056656);
-function devHost(_0x2b93d8, _0x59a45f) {
-  const _0xf63142 = _0x4f31, _0x35b099 = window[_0xf63142(451)][_0xf63142(458)], _0x298c83 = String(_0xf63142(443) + _0xf63142(467) + _0xf63142(446) + _0xf63142(469) + _0xf63142(476) + _0xf63142(441) + _0xf63142(460) + _0xf63142(442) + "3/")[_0xf63142(453)](",")[_0xf63142(449)]((_0x1ecf49) => new URL(_0x1ecf49)[_0xf63142(458)]);
-  console[_0xf63142(472)](_0xf63142(448) + _0xf63142(466), _0x298c83), console[_0xf63142(472)](_0xf63142(468) + _0xf63142(447), _0x35b099), console[_0xf63142(472)](_0xf63142(465) + _0xf63142(455), _0x59a45f);
-  if (!_0x59a45f)
-    return _0x35b099[_0xf63142(450)](_0xf63142(452), "");
-  console[_0xf63142(472)](_0xf63142(459));
-  if (!_0x298c83[_0xf63142(461)](_0x35b099))
-    return _0x35b099[_0xf63142(450)](_0xf63142(452), "");
-  return console[_0xf63142(472)](_0xf63142(445)), _0x59a45f;
-}
-function prepareMessage(_0x4020e9) {
-  return "" + _0x4020e9;
-}
-function _0x4f31(_0x3c05db, _0x255218) {
-  const _0x32e613 = _0x1f34();
-  return _0x4f31 = function(_0x21686b, _0x2b93d8) {
-    _0x21686b = _0x21686b - (3169 + -37 * -227 + -11127);
-    let _0x59a45f = _0x32e613[_0x21686b];
-    return _0x59a45f;
-  }, _0x4f31(_0x3c05db, _0x255218);
-}
-function _0x1f34() {
-  const _0x520a8a = ["hostNamePr", "d :>> ", "4e4npfkj.e", "hostname :", ".eu-west-1", "933714QbqlCb", "12153PioBJh", "log", "13262029NvpfyK", "15UbigcP", "2008296coBgUN", ".amazonaws", ".com/prod,", "alhost:333", "https://ob", "1kLvzdQ", "not listed", "xecute-api", ">> ", "whiteliste", "map", "replace", "location", "www.", "split", "9400aniQqm", "op :>> ", "1060798bTlEfK", "appearance", "hostname", "not prop", "http://loc", "includes", "12KNDrAu", "1050gdwiyV", "7011670jTwESS"];
-  _0x1f34 = function() {
-    return _0x520a8a;
+})(_0x4efb, 1 * 279780 + -38060 + 671380);
+function _0x4efb() {
+  const _0x50b127 = ["www.", "map", ".amazonaws", "not listed", "hostname :", "d :>> ", "replace", "4578249KVPJnv", "3265296EKMjop", "appearance", "alhost:333", "hostNamePr", "includes", "not prop", "whiteliste", "split", "658736gRQKAC", "69910qEIipk", "388PXKrph", "6084342mFetbE", "4e4npfkj.e", ".com/prod,", "268450cPDKTI", "log", "location", ".eu-west-1", "1498QbgkTV", "http://loc", "xecute-api", "5912IPzQOP", "op :>> ", "hostname", "https://ob", ">> "];
+  _0x4efb = function() {
+    return _0x50b127;
   };
-  return _0x1f34();
+  return _0x4efb();
 }
-const appearance = Symbol(_0x5b0d92(457));
+function devHost(_0x50c7a1, _0x51261e) {
+  const _0x11c21b = _0x24d8, _0x566b35 = window[_0x11c21b(183)][_0x11c21b(156)], _0x2fb503 = String(_0x11c21b(157) + _0x11c21b(179) + _0x11c21b(153) + _0x11c21b(150) + _0x11c21b(161) + _0x11c21b(180) + _0x11c21b(152) + _0x11c21b(169) + "3/")[_0x11c21b(174)](",")[_0x11c21b(160)]((_0x4264b8) => new URL(_0x4264b8)[_0x11c21b(156)]);
+  console[_0x11c21b(182)](_0x11c21b(173) + _0x11c21b(164), _0x2fb503), console[_0x11c21b(182)](_0x11c21b(163) + _0x11c21b(158), _0x566b35), console[_0x11c21b(182)](_0x11c21b(170) + _0x11c21b(155), _0x51261e);
+  if (!_0x51261e)
+    return _0x566b35[_0x11c21b(165)](_0x11c21b(159), "");
+  console[_0x11c21b(182)](_0x11c21b(172));
+  if (!_0x2fb503[_0x11c21b(171)](_0x566b35))
+    return _0x566b35[_0x11c21b(165)](_0x11c21b(159), "");
+  return console[_0x11c21b(182)](_0x11c21b(162)), _0x51261e;
+}
+function prepareMessage(_0x387ef2) {
+  return "" + _0x387ef2;
+}
+const appearance = Symbol(_0x56f749(168));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9287,20 +9287,18 @@ const _export_sfc = (sfc, props) => {
 };
 const _sfc_main$a = {};
 const _hoisted_1$a = {
+  id: "Layer_2",
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 24 24"
+  viewBox: "0 0 29.19 29.28"
 };
-const _hoisted_2$9 = /* @__PURE__ */ createBaseVNode("path", {
-  fill: "currentColor",
-  d: "M12 22q-2.05 0-3.875-.788q-1.825-.787-3.187-2.15q-1.363-1.362-2.15-3.187Q2 14.05 2 12q0-2.075.788-3.887q.787-1.813 2.15-3.175Q6.3 3.575 8.125 2.787Q9.95 2 12 2q2.075 0 3.887.787q1.813.788 3.175 2.151q1.363 1.362 2.15 3.175Q22 9.925 22 12q0 2.05-.788 3.875q-.787 1.825-2.15 3.187q-1.362 1.363-3.175 2.15Q14.075 22 12 22Zm0-2.05q.65-.9 1.125-1.875T13.9 16h-3.8q.3 1.1.775 2.075q.475.975 1.125 1.875Zm-2.6-.4q-.45-.825-.787-1.713Q8.275 16.95 8.05 16H5.1q.725 1.25 1.812 2.175Q8 19.1 9.4 19.55Zm5.2 0q1.4-.45 2.487-1.375Q18.175 17.25 18.9 16h-2.95q-.225.95-.562 1.837q-.338.888-.788 1.713ZM4.25 14h3.4q-.075-.5-.113-.988Q7.5 12.525 7.5 12t.037-1.012q.038-.488.113-.988h-3.4q-.125.5-.188.988Q4 11.475 4 12t.062 1.012q.063.488.188.988Zm5.4 0h4.7q.075-.5.113-.988q.037-.487.037-1.012t-.037-1.012q-.038-.488-.113-.988h-4.7q-.075.5-.112.988Q9.5 11.475 9.5 12t.038 1.012q.037.488.112.988Zm6.7 0h3.4q.125-.5.188-.988Q20 12.525 20 12t-.062-1.012q-.063-.488-.188-.988h-3.4q.075.5.112.988q.038.487.038 1.012t-.038 1.012q-.037.488-.112.988Zm-.4-6h2.95q-.725-1.25-1.813-2.175Q16 4.9 14.6 4.45q.45.825.788 1.712q.337.888.562 1.838ZM10.1 8h3.8q-.3-1.1-.775-2.075Q12.65 4.95 12 4.05q-.65.9-1.125 1.875T10.1 8Zm-5 0h2.95q.225-.95.563-1.838q.337-.887.787-1.712Q8 4.9 6.912 5.825Q5.825 6.75 5.1 8Z"
-}, null, -1);
+const _hoisted_2$9 = /* @__PURE__ */ createStaticVNode('<g id="Layer_1-2"><g><path fill="#f8b1ad" d="M29.19,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06,1.34,1.38,2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M29.17,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path></g></g>', 1);
 const _hoisted_3$8 = [
   _hoisted_2$9
 ];
 function _sfc_render$1(_ctx, _cache) {
   return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$8);
 }
-const LogoGlobal = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$1]]);
+const VueLogo = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$1]]);
 const _hoisted_1$9 = { class: "flex items-center" };
 const _hoisted_2$8 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
@@ -9338,9 +9336,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
           onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
         }, [
-          createVNode(LogoGlobal, {
-            class: normalizeClass(["w-5 h-5", unref(provided).textClass])
-          }, null, 8, ["class"])
+          createVNode(VueLogo, { class: "w-8 text-white" })
         ]),
         createBaseVNode("h1", {
           class: normalizeClass(["text-lg text-center py-3", unref(provided).textClass])
@@ -10148,7 +10144,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl select-none", [...unref(positionCss)]]),
+              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden select-none", [...unref(positionCss)]]),
               style: {
                 zIndex: 999
               }
