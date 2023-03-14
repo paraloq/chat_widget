@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x5b47(_0x59f8d0, _0x50fe37) {
-  const _0x2637c5 = _0x2284();
-  return _0x5b47 = function(_0x5cadaa, _0x3cba08) {
-    _0x5cadaa = _0x5cadaa - (-6003 + -504 * 2 + 7364);
-    let _0x38742a = _0x2637c5[_0x5cadaa];
-    return _0x38742a;
-  }, _0x5b47(_0x59f8d0, _0x50fe37);
-}
-const _0x18018b = _0x5b47;
-(function(_0x1d8c19, _0x18a518) {
-  const _0x505ee4 = _0x5b47, _0x34ca9b = _0x1d8c19();
+const _0x50c744 = _0x1f0b;
+(function(_0x2eafad, _0x578493) {
+  const _0x60b0b6 = _0x1f0b, _0x6520da = _0x2eafad();
   while (!![]) {
     try {
-      const _0x2d270 = parseInt(_0x505ee4(369)) / (-332 * -18 + 649 * -3 + -4028) * (-parseInt(_0x505ee4(356)) / (-1 * -873 + -6740 + 5869)) + parseInt(_0x505ee4(375)) / (5855 + -6154 + 302) * (parseInt(_0x505ee4(380)) / (-5705 + 3923 * -1 + 9632)) + parseInt(_0x505ee4(354)) / (-151 * -11 + -8 * 575 + 2944) + parseInt(_0x505ee4(366)) / (57 * 33 + 470 + -1 * 2345) + parseInt(_0x505ee4(385)) / (5815 + -2274 + 38 * -93) + -parseInt(_0x505ee4(373)) / (3890 + -3071 + 1 * -811) * (parseInt(_0x505ee4(381)) / (489 * 1 + -6396 + -5916 * -1)) + -parseInt(_0x505ee4(374)) / (-7475 + -4600 + 12085) * (-parseInt(_0x505ee4(382)) / (-336 + 4583 + 1059 * -4));
-      if (_0x2d270 === _0x18a518)
+      const _0x1997c7 = parseInt(_0x60b0b6(440)) / (4965 + 380 * -1 + 12 * -382) * (-parseInt(_0x60b0b6(431)) / (3 * -485 + -53 * -146 + -6281)) + parseInt(_0x60b0b6(438)) / (-776 + 229 * -37 + 9252) * (parseInt(_0x60b0b6(425)) / (3589 + -29 * 227 + 2998)) + -parseInt(_0x60b0b6(436)) / (4367 * 2 + -963 + -7766) * (-parseInt(_0x60b0b6(411)) / (-3297 * 2 + 4894 + -2 * -853)) + parseInt(_0x60b0b6(433)) / (-7575 + 9587 * -1 + 17169) + parseInt(_0x60b0b6(408)) / (-8896 + 1 * -2092 + -10996 * -1) * (parseInt(_0x60b0b6(423)) / (9933 + 848 * 2 + -4 * 2905)) + -parseInt(_0x60b0b6(439)) / (-13 * 173 + 4999 + -2 * 1370) + parseInt(_0x60b0b6(424)) / (-5128 + 9683 + -4544) * (-parseInt(_0x60b0b6(429)) / (-5802 + -130 * 39 + 3 * 3628));
+      if (_0x1997c7 === _0x578493)
         break;
       else
-        _0x34ca9b["push"](_0x34ca9b["shift"]());
-    } catch (_0x3cfee1) {
-      _0x34ca9b["push"](_0x34ca9b["shift"]());
+        _0x6520da["push"](_0x6520da["shift"]());
+    } catch (_0x56064e) {
+      _0x6520da["push"](_0x6520da["shift"]());
     }
   }
-})(_0x2284, -1145324 + -1012207 + 2862430);
-function devHost(_0x3cba08, _0x38742a) {
-  const _0x2cd71d = _0x5b47, _0x5975a2 = window[_0x2cd71d(361)][_0x2cd71d(377)], _0x3113d3 = String(_0x2cd71d(357) + _0x2cd71d(383) + _0x2cd71d(359) + _0x2cd71d(386) + _0x2cd71d(363) + _0x2cd71d(384) + _0x2cd71d(368))[_0x2cd71d(364)](",")[_0x2cd71d(372)]((_0xa310da) => new URL(_0xa310da)[_0x2cd71d(377)]);
-  console[_0x2cd71d(362)](_0x2cd71d(355) + _0x2cd71d(376), _0x3113d3), console[_0x2cd71d(362)](_0x2cd71d(353) + _0x2cd71d(378), _0x5975a2), console[_0x2cd71d(362)](_0x2cd71d(365) + _0x2cd71d(370), _0x38742a);
-  if (!_0x38742a)
-    return _0x5975a2[_0x2cd71d(387)](_0x2cd71d(379), "");
-  console[_0x2cd71d(362)](_0x2cd71d(371));
-  if (!_0x3113d3[_0x2cd71d(360)](_0x5975a2))
-    return _0x5975a2[_0x2cd71d(387)](_0x2cd71d(379), "");
-  return console[_0x2cd71d(362)](_0x2cd71d(367)), _0x38742a;
+})(_0x264c, 396253 * -4 + -1758727 + -2136982 * -2);
+function devHost(_0x5a9fa8, _0x14adf4) {
+  const _0x38e822 = _0x1f0b, _0x47934e = window[_0x38e822(415)][_0x38e822(407)], _0x2b8852 = String(_0x38e822(417) + _0x38e822(419) + _0x38e822(412) + _0x38e822(414) + _0x38e822(413) + _0x38e822(437) + _0x38e822(432))[_0x38e822(410)](",")[_0x38e822(435)]((_0x913c68) => new URL(_0x913c68)[_0x38e822(407)]);
+  console[_0x38e822(426)](_0x38e822(441) + _0x38e822(421), _0x2b8852), console[_0x38e822(426)](_0x38e822(442) + _0x38e822(428), _0x47934e), console[_0x38e822(426)](_0x38e822(409) + _0x38e822(418), _0x14adf4);
+  if (!_0x14adf4)
+    return _0x47934e[_0x38e822(427)](_0x38e822(430), "");
+  console[_0x38e822(426)](_0x38e822(416));
+  if (!_0x2b8852[_0x38e822(434)](_0x47934e))
+    return _0x47934e[_0x38e822(427)](_0x38e822(430), "");
+  return console[_0x38e822(426)](_0x38e822(422)), _0x14adf4;
 }
-function prepareMessage(_0x1b73ed) {
-  return "" + _0x1b73ed;
+function _0x1f0b(_0x677719, _0x2be09b) {
+  const _0x5b51b6 = _0x264c();
+  return _0x1f0b = function(_0x175f71, _0x5a9fa8) {
+    _0x175f71 = _0x175f71 - (-6274 + 1557 + 1281 * 4);
+    let _0x14adf4 = _0x5b51b6[_0x175f71];
+    return _0x14adf4;
+  }, _0x1f0b(_0x677719, _0x2be09b);
 }
-function _0x2284() {
-  const _0x7faff2 = ["d :>> ", "hostname", ">> ", "www.", "1408136caHAZm", "27pcOcHz", "840169iTgXbc", "v.d8g529d2", "calhost:33", "8351462ujPjHM", "ifyapp.com", "replace", "hostname :", "1540635zSqZcW", "whiteliste", "2MaYrhy", "https://de", "appearance", "owgcy.ampl", "includes", "location", "log", ",http://lo", "split", "hostNamePr", "4221540SgGsTI", "not listed", "33/", "921695EyFIxG", "op :>> ", "not prop", "map", "3295304LmrlAk", "40OTrSPW", "3LmEViD"];
-  _0x2284 = function() {
-    return _0x7faff2;
+function _0x264c() {
+  const _0x13b17b = [",http://lo", "ifyapp.com", "location", "not prop", "https://de", "op :>> ", "v.d8g529d2", "appearance", "d :>> ", "not listed", "423UEYDEY", "638165IAhPGw", "16Kybuhz", "log", "replace", ">> ", "684basRyv", "www.", "417034GSTNdc", "33/", "11472734ZBbhtI", "includes", "map", "150imrMEx", "calhost:33", "589581crzMTa", "9460920xQOpSL", "3WbTqMu", "whiteliste", "hostname :", "hostname", "287752ZgBwxJ", "hostNamePr", "split", "338622GLfBeH", "owgcy.ampl"];
+  _0x264c = function() {
+    return _0x13b17b;
   };
-  return _0x2284();
+  return _0x264c();
 }
-const appearance = Symbol(_0x18018b(358));
+function prepareMessage(_0x2e778f) {
+  return "" + _0x2e778f;
+}
+const appearance = Symbol(_0x50c744(420));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9689,6 +9689,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   emits: ["closeProducts", "close"],
   setup(__props, { emit: emit2 }) {
     const props = __props;
+    const provided = inject(appearance);
     const chatProducts = ref();
     function recommend(productUrl, itemId) {
       const url = new URL(productUrl);
@@ -9741,7 +9742,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                     createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
                   ]),
                   _hoisted_11,
-                  createBaseVNode("p", _hoisted_12, toDisplayString(`$${product.price}`), 1)
+                  createBaseVNode("p", _hoisted_12, toDisplayString(`${unref(provided).currency_symbol}${product.price}`), 1)
                 ])
               ])
             ], 8, _hoisted_4$2);
@@ -9791,7 +9792,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               createBaseVNode("div", _hoisted_3$1, [
                 createBaseVNode("h2", _hoisted_4$1, toDisplayString(`${product.title}`), 1),
                 _hoisted_5$1,
-                createBaseVNode("p", _hoisted_6$1, toDisplayString(`$${product.price}`), 1),
+                createBaseVNode("p", _hoisted_6$1, toDisplayString(`${unref(provided).currency_symbol}${product.price}`), 1),
                 createBaseVNode("div", _hoisted_7$1, [
                   createBaseVNode("button", {
                     class: normalizeClass(["btn btn-xs hover:opacity-80 text-[12px] px-[8px] h-[24px] capitalize border-none btn-primary", unref(provided).textClass]),
@@ -9890,6 +9891,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     chat_button_text: null,
     chat_button_color: null,
     chat_button_position: { default: "bottom_right" },
+    currency_symbol: { default: "$" },
     enable_on_mobile: { type: Boolean, default: false },
     show_button_widget: { type: Boolean, default: true },
     fixed: { type: Boolean, default: true },
@@ -9900,7 +9902,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const currentLanguage = ref("en");
+    const currentLanguage = useStorage("monoloqLanguage", "en");
     const provided = computed(() => {
       const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
       return { ...props, ...useTextClass(props.base_color), ...textSettings };
@@ -10140,6 +10142,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const onToggle = () => {
       isChatOpen.value = true;
     };
+    const openSettings = async () => {
+      if (products.value) {
+        products.value = void 0;
+        await new Promise((resolve2) => setTimeout(resolve2, 600));
+      }
+      isSettingOpen.value = true;
+    };
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createVNode(unref(TransitionSlide), { offset: [0, 200] }, {
@@ -10168,7 +10177,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 class: "!h-[64px] flex-none",
                 onClear: _cache[1] || (_cache[1] = ($event) => onClear()),
                 onClose: _cache[2] || (_cache[2] = ($event) => onClose()),
-                onOpenSetting: _cache[3] || (_cache[3] = ($event) => isSettingOpen.value = !unref(isSettingOpen))
+                onOpenSetting: _cache[3] || (_cache[3] = ($event) => openSettings())
               }),
               createBaseVNode("div", _hoisted_2, [
                 createVNode(unref(TransitionExpand), { duration: 500 }, {
