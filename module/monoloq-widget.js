@@ -7347,50 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0xa66c(_0x9cd55f, _0x231c68) {
-  const _0x5da950 = _0x58dc();
-  return _0xa66c = function(_0x48e8c6, _0x542b09) {
-    _0x48e8c6 = _0x48e8c6 - (-2951 * -2 + 3319 + -9024);
-    let _0xe24cac = _0x5da950[_0x48e8c6];
-    return _0xe24cac;
-  }, _0xa66c(_0x9cd55f, _0x231c68);
-}
-const _0x43c74b = _0xa66c;
-function _0x58dc() {
-  const _0x49049a = ["9947990bihotg", "v.d8g529d2", "27tXQtHp", "owgcy.ampl", "not listed", "split", "includes", "hostNamePr", "5848913srIMPu", "2145552LKAKDV", "replace", "https://de", "d :>> ", "1250130DNuZHD", ">> ", "5JXinhz", "33/", "op :>> ", "appearance", "www.", "ifyapp.com", "map", "log", ",http://lo", "2664717gmDlfm", "hostname", "location", "4QYIjms", "not prop", "1323592dcBRdK", "hostname :", "calhost:33", "whiteliste", "1183291ykGdpn"];
-  _0x58dc = function() {
-    return _0x49049a;
+function _0x52cd() {
+  const _0x4ffe2d = ["9943362gVbxAB", "split", "location", "4063248OPrWmA", "33/", "v.d8g529d2", "8721587HkcKst", "1000730Nuerbw", "map", "4433824mwxYHB", "3KhvJmL", "hostname", "ifyapp.com", "includes", "www.", "https://de", "owgcy.ampl", "1909295gLNELu", "697913ZjOECO", "appearance", "replace", ",http://lo", "calhost:33"];
+  _0x52cd = function() {
+    return _0x4ffe2d;
   };
-  return _0x58dc();
+  return _0x52cd();
 }
-(function(_0x4d14c4, _0x444520) {
-  const _0x5c67d9 = _0xa66c, _0x5442a5 = _0x4d14c4();
+const _0x5a2f5e = _0x5a37;
+function _0x5a37(_0x5e357d, _0x154471) {
+  const _0x6f2932 = _0x52cd();
+  return _0x5a37 = function(_0x1336e6, _0x267aba) {
+    _0x1336e6 = _0x1336e6 - (8603 * 1 + -6797 + -1453);
+    let _0x4f2e2a = _0x6f2932[_0x1336e6];
+    return _0x4f2e2a;
+  }, _0x5a37(_0x5e357d, _0x154471);
+}
+(function(_0x1fe6fe, _0x39f162) {
+  const _0x3c7e15 = _0x5a37, _0x9e2344 = _0x1fe6fe();
   while (!![]) {
     try {
-      const _0x43b04f = parseInt(_0x5c67d9(212)) / (-5 * 1889 + -7456 + -2 * -8451) + -parseInt(_0x5c67d9(208)) / (4823 + -19 * -222 + -3013 * 3) + -parseInt(_0x5c67d9(203)) / (9778 + -3 * 1318 + -1 * 5821) * (-parseInt(_0x5c67d9(206)) / (1 * 617 + 1839 + -2452)) + -parseInt(_0x5c67d9(228)) / (-2 * -455 + -2482 * -2 + -5869) * (-parseInt(_0x5c67d9(226)) / (2289 * 1 + 3934 * 2 + -10151 * 1)) + -parseInt(_0x5c67d9(221)) / (-9321 + -3353 + 12681) + -parseInt(_0x5c67d9(222)) / (617 * 13 + -3806 * 2 + 1 * -401) * (-parseInt(_0x5c67d9(215)) / (276 * 31 + 6360 * -1 + 9 * -243)) + -parseInt(_0x5c67d9(213)) / (-147 + 393 + 118 * -2);
-      if (_0x43b04f === _0x444520)
+      const _0x4f5ae8 = -parseInt(_0x3c7e15(364)) / (-9153 + 1 * 6242 + 2912) + -parseInt(_0x3c7e15(353)) / (7089 + 5051 * 1 + 42 * -289) * (parseInt(_0x3c7e15(356)) / (-3189 * -1 + 4957 * 1 + -8143)) + -parseInt(_0x3c7e15(372)) / (-4631 + 4922 + 287 * -1) + -parseInt(_0x3c7e15(363)) / (17 * -530 + 7540 + 1475) + parseInt(_0x3c7e15(369)) / (-391 + -8682 + 9079) + parseInt(_0x3c7e15(375)) / (27 * -17 + 3 * -1481 + -1 * -4909) + parseInt(_0x3c7e15(355)) / (3886 + -1 * -5567 + -9445);
+      if (_0x4f5ae8 === _0x39f162)
         break;
       else
-        _0x5442a5["push"](_0x5442a5["shift"]());
-    } catch (_0x218947) {
-      _0x5442a5["push"](_0x5442a5["shift"]());
+        _0x9e2344["push"](_0x9e2344["shift"]());
+    } catch (_0x22df50) {
+      _0x9e2344["push"](_0x9e2344["shift"]());
     }
   }
-})(_0x58dc, 1026661 + -58 * -19088 + -1541452);
-function devHost(_0x542b09, _0xe24cac) {
-  const _0x349950 = _0xa66c, _0x1a9ee1 = window[_0x349950(205)][_0x349950(204)], _0x3e1dfa = String(_0x349950(224) + _0x349950(214) + _0x349950(216) + _0x349950(199) + _0x349950(202) + _0x349950(210) + _0x349950(229))[_0x349950(218)](",")[_0x349950(200)]((_0x1285b6) => new URL(_0x1285b6)[_0x349950(204)]);
-  console[_0x349950(201)](_0x349950(211) + _0x349950(225), _0x3e1dfa), console[_0x349950(201)](_0x349950(209) + _0x349950(227), _0x1a9ee1), console[_0x349950(201)](_0x349950(220) + _0x349950(230), _0xe24cac);
-  if (!_0xe24cac)
-    return _0x1a9ee1[_0x349950(223)](_0x349950(198), "");
-  console[_0x349950(201)](_0x349950(207));
-  if (!_0x3e1dfa[_0x349950(219)](_0x1a9ee1))
-    return _0x1a9ee1[_0x349950(223)](_0x349950(198), "");
-  return console[_0x349950(201)](_0x349950(217)), _0xe24cac;
+})(_0x52cd, 740802 * -2 + -833946 + 3176997);
+function devHost(_0x267aba, _0x4f2e2a) {
+  const _0x555943 = _0x5a37, _0x2440b4 = window[_0x555943(371)][_0x555943(357)], _0x264eab = String(_0x555943(361) + _0x555943(374) + _0x555943(362) + _0x555943(358) + _0x555943(367) + _0x555943(368) + _0x555943(373))[_0x555943(370)](",")[_0x555943(354)]((_0x29f799) => new URL(_0x29f799)[_0x555943(357)]);
+  if (!_0x4f2e2a)
+    return _0x2440b4[_0x555943(366)](_0x555943(360), "");
+  if (!_0x264eab[_0x555943(359)](_0x2440b4))
+    return _0x2440b4[_0x555943(366)](_0x555943(360), "");
+  return _0x4f2e2a;
 }
-function prepareMessage(_0x175fe3) {
-  return "" + _0x175fe3;
+function prepareMessage(_0x51593f) {
+  return "" + _0x51593f;
 }
-const appearance = Symbol(_0x43c74b(197));
+const appearance = Symbol(_0x5a2f5e(365));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -12513,7 +12511,7 @@ const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
-  console.info("%s Installing monoloq widget v1.1...", "🏋️");
+  console.info("%s Installing monoloq widget v1.2...", "🏋️");
   try {
     const font = document.createElement("link");
     font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -12528,7 +12526,8 @@ async function register() {
       props = {
         ...settings.appearance,
         text: settings.text,
-        enable_on_mobile: settings.general.enable_on_mobile
+        enable_on_mobile: settings.general.enable_on_mobile,
+        currency_symbol: settings.general.currency_symbol
       };
     } catch (e) {
       console.error("Failed to fetch widget config", e);
