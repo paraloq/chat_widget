@@ -7347,50 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x3555c9 = _0x1f2b;
-(function(_0x557289, _0x8064c6) {
-  const _0x1d657a = _0x1f2b, _0x1dac3c = _0x557289();
+function _0x4de9() {
+  const _0x4dc7dd = ["map", "includes", "calhost:33", "www.", "location", "10094448TEXlhB", "1459613mvjBSE", "v.d8g529d2", "4094859gSDiJD", "https://de", "hostname", "24tPInlY", ",http://lo", "replace", "appearance", "33/", "ifyapp.com", "1928300SQUGkN", "2039812XMDcIe", "598409ptUwao", "owgcy.ampl", "split", "1886068ETrWBD"];
+  _0x4de9 = function() {
+    return _0x4dc7dd;
+  };
+  return _0x4de9();
+}
+const _0x3de2ac = _0x10a2;
+(function(_0x4a7618, _0x117c91) {
+  const _0x57c66a = _0x10a2, _0x4342cf = _0x4a7618();
   while (!![]) {
     try {
-      const _0x59db92 = -parseInt(_0x1d657a(323)) / (86 * -73 + 7829 * -1 + -14108 * -1) + -parseInt(_0x1d657a(333)) / (-6043 + -13 * -719 + -127 * 26) * (-parseInt(_0x1d657a(317)) / (-2269 + 1 * -2612 + 37 * 132)) + -parseInt(_0x1d657a(324)) / (-1217 * -3 + -1 * 8107 + 4460) * (-parseInt(_0x1d657a(327)) / (0 + 1 * 5327 + 6 * -887)) + -parseInt(_0x1d657a(328)) / (3 * 70 + 602 * -14 + 8224) * (-parseInt(_0x1d657a(314)) / (-197 * -4 + -1 * 5177 + -1099 * -4)) + -parseInt(_0x1d657a(329)) / (8159 + -6840 + -1311) * (-parseInt(_0x1d657a(299)) / (-904 + -2722 * -1 + 1809 * -1)) + parseInt(_0x1d657a(318)) / (1998 + 4002 + 5990 * -1) + -parseInt(_0x1d657a(326)) / (4299 + 65 * -38 + -909 * 2);
-      if (_0x59db92 === _0x8064c6)
+      const _0x1ed901 = -parseInt(_0x57c66a(210)) / (-5443 * 1 + 7557 + -2113 * 1) + parseInt(_0x57c66a(199)) / (-23 * 36 + 137 * 5 + 145) + parseInt(_0x57c66a(212)) / (3045 + 535 * 10 + -8392) + -parseInt(_0x57c66a(203)) / (491 * -1 + 4135 * -1 + 4630) + -parseInt(_0x57c66a(198)) / (1902 + 5462 + -7359) * (-parseInt(_0x57c66a(215)) / (-1553 + 1288 + -271 * -1)) + parseInt(_0x57c66a(200)) / (-4181 + 153 * 33 + -861) + -parseInt(_0x57c66a(209)) / (5510 + 29 * 19 + 6053 * -1);
+      if (_0x1ed901 === _0x117c91)
         break;
       else
-        _0x1dac3c["push"](_0x1dac3c["shift"]());
-    } catch (_0x5e0b9b) {
-      _0x1dac3c["push"](_0x1dac3c["shift"]());
+        _0x4342cf["push"](_0x4342cf["shift"]());
+    } catch (_0x3ebef6) {
+      _0x4342cf["push"](_0x4342cf["shift"]());
     }
   }
-})(_0x3c42, -902 * 903 + -948360 + 2288555);
-function _0x1f2b(_0x3cfc95, _0x997f7c) {
-  const _0x26de9c = _0x3c42();
-  return _0x1f2b = function(_0x1faec4, _0x38b329) {
-    _0x1faec4 = _0x1faec4 - (-1 * -1451 + 4149 + -5301);
-    let _0x5d1a05 = _0x26de9c[_0x1faec4];
-    return _0x5d1a05;
-  }, _0x1f2b(_0x3cfc95, _0x997f7c);
+})(_0x4de9, -1023785 + -1 * 1514597 + -376 * -8932);
+function _0x10a2(_0x37a60b, _0x53ee32) {
+  const _0x28f483 = _0x4de9();
+  return _0x10a2 = function(_0x538a94, _0x2b26ca) {
+    _0x538a94 = _0x538a94 - (-61 * -25 + -3313 + 3 * 661);
+    let _0x2e5d80 = _0x28f483[_0x538a94];
+    return _0x2e5d80;
+  }, _0x10a2(_0x37a60b, _0x53ee32);
 }
-function _0x3c42() {
-  const _0x2521eb = ["77cpBaDJ", "calhost:33", "https://de", "3dcwzWh", "164710RCivmL", "33/", "replace", ",http://lo", "hostname", "361169iHGfEn", "107528ckpGio", "v.d8g529d2", "13739363oTSfuW", "105NCNFwm", "250866ooFXdz", "14616AoxlYn", "ifyapp.com", "split", "appearance", "403148VHRcLw", "4401fkAuKV", "log", "d :>> ", "includes", "op :>> ", "not prop", "hostname :", "not listed", "hostNamePr", ">> ", "owgcy.ampl", "map", "location", "www.", "whiteliste"];
-  _0x3c42 = function() {
-    return _0x2521eb;
-  };
-  return _0x3c42();
+function devHost(_0x538a94, _0x2b26ca) {
+  const _0x52e09c = _0x10a2, _0x2e5d80 = window[_0x52e09c(208)][_0x52e09c(214)], _0x2718d5 = String(_0x52e09c(213) + _0x52e09c(211) + _0x52e09c(201) + _0x52e09c(197) + _0x52e09c(216) + _0x52e09c(206) + _0x52e09c(196))[_0x52e09c(202)](",")[_0x52e09c(204)]((_0x285bc2) => new URL(_0x285bc2)[_0x52e09c(214)]);
+  if (!_0x2b26ca)
+    return _0x2e5d80[_0x52e09c(217)](_0x52e09c(207), "");
+  if (!_0x2718d5[_0x52e09c(205)](_0x2e5d80))
+    return _0x2e5d80[_0x52e09c(217)](_0x52e09c(207), "");
+  return _0x2b26ca;
 }
-function devHost(_0x38b329, _0x5d1a05) {
-  const _0x4fa732 = _0x1f2b, _0x50b704 = window[_0x4fa732(311)][_0x4fa732(322)], _0x3f768b = String(_0x4fa732(316) + _0x4fa732(325) + _0x4fa732(309) + _0x4fa732(330) + _0x4fa732(321) + _0x4fa732(315) + _0x4fa732(319))[_0x4fa732(331)](",")[_0x4fa732(310)]((_0x29b47f) => new URL(_0x29b47f)[_0x4fa732(322)]);
-  console[_0x4fa732(300)](_0x4fa732(313) + _0x4fa732(301), _0x3f768b), console[_0x4fa732(300)](_0x4fa732(305) + _0x4fa732(308), _0x50b704), console[_0x4fa732(300)](_0x4fa732(307) + _0x4fa732(303), _0x5d1a05);
-  if (!_0x5d1a05)
-    return _0x50b704[_0x4fa732(320)](_0x4fa732(312), "");
-  console[_0x4fa732(300)](_0x4fa732(304));
-  if (!_0x3f768b[_0x4fa732(302)](_0x50b704))
-    return _0x50b704[_0x4fa732(320)](_0x4fa732(312), "");
-  return console[_0x4fa732(300)](_0x4fa732(306)), _0x5d1a05;
+function prepareMessage(_0x5f04b2) {
+  return "" + _0x5f04b2;
 }
-function prepareMessage(_0x179e1d) {
-  return "" + _0x179e1d;
-}
-const appearance = Symbol(_0x3555c9(332));
+const appearance = Symbol(_0x3de2ac(195));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -12513,7 +12511,7 @@ const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
-  console.info("%s Installing monoloq widget v1.1...", "🏋️");
+  console.info("%s Installing monoloq widget v1.2...", "🏋️");
   try {
     const font = document.createElement("link");
     font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -12528,7 +12526,8 @@ async function register() {
       props = {
         ...settings.appearance,
         text: settings.text,
-        enable_on_mobile: settings.general.enable_on_mobile
+        enable_on_mobile: settings.general.enable_on_mobile,
+        currency_symbol: settings.general.currency_symbol
       };
     } catch (e) {
       console.error("Failed to fetch widget config", e);
