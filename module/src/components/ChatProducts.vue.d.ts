@@ -13,6 +13,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         (e: 'closeProducts'): void;
         (e: 'close'): void;
     };
+    provided: import("./ChatWidget.ce.vue").Injection;
     chatProducts: import("vue").Ref<HTMLDivElement | undefined>;
     recommend: (productUrl: string, itemId: string) => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("close" | "closeProducts")[], "close" | "closeProducts", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{

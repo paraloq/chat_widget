@@ -7347,47 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x5246ea = _0x54b5;
-function _0x54b5(_0x47d0ad, _0x249eb4) {
-  const _0x43252f = _0x362d();
-  return _0x54b5 = function(_0x1c4737, _0x4574df) {
-    _0x1c4737 = _0x1c4737 - (4666 * -1 + -7801 * -1 + -2772);
-    let _0x26e20d = _0x43252f[_0x1c4737];
-    return _0x26e20d;
-  }, _0x54b5(_0x47d0ad, _0x249eb4);
-}
-(function(_0x59ba2b, _0xdd81e4) {
-  const _0x21166a = _0x54b5, _0x4cde00 = _0x59ba2b();
+const _0x366e69 = _0x20a1;
+(function(_0xebe560, _0x4cbb26) {
+  const _0x50dbd1 = _0x20a1, _0x59abd7 = _0xebe560();
   while (!![]) {
     try {
-      const _0x1d9be8 = -parseInt(_0x21166a(388)) / (-4869 + 1 * -4691 + 9561) * (parseInt(_0x21166a(387)) / (-233 * -21 + -5 * 1119 + 704)) + parseInt(_0x21166a(391)) / (3733 + 1 * 5314 + -9044) * (parseInt(_0x21166a(366)) / (19 * 266 + 3291 + -8341)) + -parseInt(_0x21166a(364)) / (1616 + -4405 + 2794) * (-parseInt(_0x21166a(369)) / (-106 * 71 + -4765 * -1 + 2767)) + -parseInt(_0x21166a(384)) / (8333 + -1 * 8761 + -29 * -15) * (-parseInt(_0x21166a(382)) / (2 * 3229 + -463 * 17 + 29 * 49)) + parseInt(_0x21166a(378)) / (-1203 + 9990 + -8778) + -parseInt(_0x21166a(376)) / (-1 * 8136 + 8008 + -2 * -69) * (parseInt(_0x21166a(374)) / (7 * 306 + 65 * 113 + -9476)) + -parseInt(_0x21166a(375)) / (-1079 * -5 + -9315 * -1 + -14698);
-      if (_0x1d9be8 === _0xdd81e4)
+      const _0x43e26d = parseInt(_0x50dbd1(232)) / (468 + 7403 + -2 * 3935) * (-parseInt(_0x50dbd1(211)) / (-3176 * -1 + 4421 + -7595)) + parseInt(_0x50dbd1(217)) / (-8344 + -3851 + 12198) * (-parseInt(_0x50dbd1(229)) / (-738 + 677 * 7 + -3997)) + parseInt(_0x50dbd1(225)) / (-3711 + 8891 * 1 + -69 * 75) + parseInt(_0x50dbd1(210)) / (-8721 + -1039 * -7 + 1454) + -parseInt(_0x50dbd1(236)) / (5815 + 9072 + -14880) + parseInt(_0x50dbd1(205)) / (-2367 + -58 * -34 + 403) + parseInt(_0x50dbd1(216)) / (-7 * 778 + -9060 + -2903 * -5);
+      if (_0x43e26d === _0x4cbb26)
         break;
       else
-        _0x4cde00["push"](_0x4cde00["shift"]());
-    } catch (_0x5ac05f) {
-      _0x4cde00["push"](_0x4cde00["shift"]());
+        _0x59abd7["push"](_0x59abd7["shift"]());
+    } catch (_0x305f67) {
+      _0x59abd7["push"](_0x59abd7["shift"]());
     }
   }
-})(_0x362d, -11 * -54299 + 219206 + -398974);
-function _0x362d() {
-  const _0x5b9376 = ["1</a>", "localhost", "476428CnvNju", "2SexvCz", "paraloq.at", "slice", "12WTpBDR", "location", "2980DzPatC", "hostname", "53652kKBvBF", "replace", "split", "5658gRsHMu", "ariasilk.c", "xerl", "appearance", '<a href="$', "253cTyWDL", "10463748zXpDHV", "11450qrBffS", '"_blank">$', "3115899azhQwN", "join", "Schweinsha", "initiate", "16xVaAlJ", '1" target=', "2906302TBqaDm"];
-  _0x362d = function() {
-    return _0x5b9376;
+})(_0x1e97, -563945 * 1 + -236984 + -582436 * -2);
+function devHost(_0x5bd2f3, _0x49db9e) {
+  const _0x7ca9b2 = _0x20a1, _0x3bfd91 = window[_0x7ca9b2(224)][_0x7ca9b2(223)], _0x57f0c8 = String(_0x7ca9b2(209) + _0x7ca9b2(237) + _0x7ca9b2(219) + _0x7ca9b2(227) + _0x7ca9b2(208) + _0x7ca9b2(215) + _0x7ca9b2(233))[_0x7ca9b2(234)](",")[_0x7ca9b2(231)]((_0x44df18) => new URL(_0x44df18)[_0x7ca9b2(223)]);
+  console[_0x7ca9b2(206)](_0x7ca9b2(228) + _0x7ca9b2(222), _0x57f0c8), console[_0x7ca9b2(206)](_0x7ca9b2(226) + _0x7ca9b2(207), _0x3bfd91), console[_0x7ca9b2(206)](_0x7ca9b2(221) + _0x7ca9b2(212), _0x49db9e);
+  if (!_0x49db9e)
+    return _0x3bfd91[_0x7ca9b2(214)](_0x7ca9b2(230), "");
+  console[_0x7ca9b2(206)](_0x7ca9b2(218));
+  if (!_0x57f0c8[_0x7ca9b2(235)](_0x3bfd91))
+    return _0x3bfd91[_0x7ca9b2(214)](_0x7ca9b2(230), "");
+  return console[_0x7ca9b2(206)](_0x7ca9b2(213)), _0x49db9e;
+}
+function _0x1e97() {
+  const _0x498b33 = [",http://lo", "https://de", "766542AHWQHL", "18gEqJKh", "op :>> ", "not listed", "replace", "calhost:33", "1738881FEPbNn", "152715sHteDy", "not prop", "owgcy.ampl", "appearance", "hostNamePr", "d :>> ", "hostname", "location", "3432985VKdNRS", "hostname :", "ifyapp.com", "whiteliste", "4paqmVv", "www.", "map", "50599UhRecP", "33/", "split", "includes", "3270253cGUXEh", "v.d8g529d2", "2638840cMeCli", "log", ">> "];
+  _0x1e97 = function() {
+    return _0x498b33;
   };
-  return _0x362d();
+  return _0x1e97();
 }
-function devHost(_0x3f7812) {
-  const _0x284613 = _0x54b5, _0x33d244 = window[_0x284613(363)][_0x284613(365)];
-  if (_0x33d244 !== _0x284613(386))
-    return _0x33d244[_0x284613(368)](".")[_0x284613(390)](-(-4071 + 2283 * 2 + -493))[_0x284613(379)](".");
-  return _0x3f7812 === _0x284613(381) ? _0x284613(370) + "om" : _0x284613(389) + "/";
+function _0x20a1(_0x1aaff0, _0x529e8e) {
+  const _0xdc2f19 = _0x1e97();
+  return _0x20a1 = function(_0x4bf157, _0x5bd2f3) {
+    _0x4bf157 = _0x4bf157 - (940 + 8009 + 2186 * -4);
+    let _0x49db9e = _0xdc2f19[_0x4bf157];
+    return _0x49db9e;
+  }, _0x20a1(_0x1aaff0, _0x529e8e);
 }
-function prepareMessage(_0x2278cb) {
-  const _0x4be5fb = _0x54b5;
-  return _0x2278cb = _0x2278cb[_0x4be5fb(367)](_0x4be5fb(380) + _0x4be5fb(371), _0x4be5fb(373) + _0x4be5fb(383) + _0x4be5fb(377) + _0x4be5fb(385)), "" + _0x2278cb;
+function prepareMessage(_0x45be16) {
+  return "" + _0x45be16;
 }
-const appearance = Symbol(_0x5246ea(372));
+const appearance = Symbol(_0x366e69(220));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -8188,7 +8191,7 @@ const validateSlideOffset = (value) => validateEnterLeave(value, (val) => {
     return true;
   });
 });
-const _sfc_main$a = {
+const _sfc_main$b = {
   name: "transition-slide",
   mixins: [
     baseTransition
@@ -8256,7 +8259,7 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     _: 3
   }, 16);
 }
-const TransitionSlide = /* @__PURE__ */ _export_sfc$1(_sfc_main$a, [["render", _sfc_render$4]]);
+const TransitionSlide = /* @__PURE__ */ _export_sfc$1(_sfc_main$b, [["render", _sfc_render$4]]);
 const components = {
   [TransitionExpand.name]: TransitionExpand,
   [TransitionFade.name]: TransitionFade,
@@ -9282,108 +9285,109 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$9 = {};
-const _hoisted_1$9 = {
+const _sfc_main$a = {};
+const _hoisted_1$a = {
   id: "Layer_2",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 29.19 29.28"
 };
-const _hoisted_2$8 = /* @__PURE__ */ createStaticVNode('<g id="Layer_1-2"><g><path fill="#f8b1ad" d="M29.19,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06,1.34,1.38,2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M29.17,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path></g></g>', 1);
-const _hoisted_3$7 = [
-  _hoisted_2$8
+const _hoisted_2$9 = /* @__PURE__ */ createStaticVNode('<g id="Layer_1-2"><g><path fill="#f8b1ad" d="M29.19,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06,1.34,1.38,2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M29.17,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path></g></g>', 1);
+const _hoisted_3$8 = [
+  _hoisted_2$9
 ];
 function _sfc_render$1(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$9, _hoisted_3$7);
+  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$8);
 }
-const VueLogo = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$1]]);
-const _hoisted_1$8 = { class: "flex items-center" };
-const _hoisted_2$7 = /* @__PURE__ */ createBaseVNode("svg", {
+const VueLogo = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$1]]);
+const _hoisted_1$9 = { class: "flex items-center" };
+const _hoisted_2$8 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 32 32"
+  viewBox: "0 0 24 24"
 }, [
   /* @__PURE__ */ createBaseVNode("path", {
     fill: "currentColor",
-    d: "M12 12h2v12h-2zm6 0h2v12h-2z"
-  }),
-  /* @__PURE__ */ createBaseVNode("path", {
-    fill: "currentColor",
-    d: "M4 6v2h2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h2V6zm4 22V8h16v20zm4-26h8v2h-8z"
+    d: "m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95l-4.95 4.95Z"
   })
 ], -1);
-const _hoisted_3$6 = [
-  _hoisted_2$7
+const _hoisted_3$7 = [
+  _hoisted_2$8
 ];
-const _hoisted_4$5 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_4$6 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   fill: "currentColor"
 }, [
   /* @__PURE__ */ createBaseVNode("path", { d: "M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" })
 ], -1);
-const _hoisted_5$5 = [
-  _hoisted_4$5
+const _hoisted_5$6 = [
+  _hoisted_4$6
 ];
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatHeader",
-  emits: ["clear", "close"],
+  emits: ["clear", "close", "openSetting"],
   setup(__props, { emit: emit2 }) {
     const provided = inject(appearance);
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
-        class: "flex justify-between rounded-t-2xl items-center px-3 h-16 min-h-16 z-50",
+        class: "flex justify-between rounded-t-2xl items-center px-3 h-16 min-h-16 z-40",
         style: normalizeStyle(unref(provided).style)
       }, [
-        createVNode(VueLogo, { class: "w-8 text-white" }),
+        createBaseVNode("button", {
+          class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+          onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
+        }, [
+          createVNode(VueLogo, { class: "w-8 text-white" })
+        ]),
         createBaseVNode("h1", {
           class: normalizeClass(["text-lg text-center py-3", unref(provided).textClass])
         }, toDisplayString(unref(provided).header_text), 3),
-        createBaseVNode("div", _hoisted_1$8, [
+        createBaseVNode("div", _hoisted_1$9, [
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
-            onClick: _cache[0] || (_cache[0] = ($event) => emit2("clear"))
+            onClick: _cache[1] || (_cache[1] = ($event) => emit2("clear"))
           }, [
             createBaseVNode("div", {
-              class: normalizeClass(["w-5 h-5", unref(provided).textClass])
-            }, _hoisted_3$6, 2)
+              class: normalizeClass(["w-6 h-6", unref(provided).textClass])
+            }, _hoisted_3$7, 2)
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
-            onClick: _cache[1] || (_cache[1] = ($event) => emit2("close"))
+            onClick: _cache[2] || (_cache[2] = ($event) => emit2("close"))
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-5 h-5", unref(provided).textClass])
-            }, _hoisted_5$5, 2)
+            }, _hoisted_5$6, 2)
           ])
         ])
       ], 4);
     };
   }
 });
-const _hoisted_1$7 = {
+const _hoisted_1$8 = {
   key: 0,
   class: "chat chat-start !py-1 !gap-x-[12px]"
 };
-const _hoisted_2$6 = { class: "chat-image avatar" };
-const _hoisted_3$5 = { class: "w-8 rounded-full" };
-const _hoisted_4$4 = ["src"];
-const _hoisted_5$4 = {
+const _hoisted_2$7 = { class: "chat-image avatar" };
+const _hoisted_3$6 = { class: "w-8 rounded-full" };
+const _hoisted_4$5 = ["src"];
+const _hoisted_5$5 = {
   key: 0,
   class: "chat-header"
 };
-const _hoisted_6$4 = { class: "text-xs opacity-50" };
+const _hoisted_6$5 = { class: "text-xs opacity-50" };
 const _hoisted_7$4 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
-const _hoisted_8$2 = {
+const _hoisted_8$3 = {
   key: 0,
   class: "mt-3 text-xs"
 };
 const _hoisted_9$2 = ["href"];
-const _hoisted_10$1 = {
+const _hoisted_10$2 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
-const _hoisted_11 = { key: 0 };
-const _hoisted_12 = { class: "text-xs opacity-50" };
-const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+const _hoisted_11$1 = { key: 0 };
+const _hoisted_12$1 = { class: "text-xs opacity-50" };
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
     message: null,
@@ -9426,20 +9430,20 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$7, [
-          createBaseVNode("div", _hoisted_2$6, [
-            createBaseVNode("div", _hoisted_3$5, [
+        "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$8, [
+          createBaseVNode("div", _hoisted_2$7, [
+            createBaseVNode("div", _hoisted_3$6, [
               createBaseVNode("img", {
                 src: unref(provided).avatar_asset_url
-              }, null, 8, _hoisted_4$4)
+              }, null, 8, _hoisted_4$5)
             ])
           ]),
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_5$4, [
-            createBaseVNode("time", _hoisted_6$4, toDisplayString(unref(time)), 1)
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_5$5, [
+            createBaseVNode("time", _hoisted_6$5, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("div", _hoisted_7$4, [
             createBaseVNode("p", null, toDisplayString(props.message.user_language_text), 1),
-            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_8$2, [
+            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_8$3, [
               createTextVNode(" See "),
               createBaseVNode("a", {
                 href: props.message.source_links[0],
@@ -9450,9 +9454,9 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
             ])) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$1, [
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11, [
-            createBaseVNode("time", _hoisted_12, toDisplayString(unref(time)), 1)
+        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11$1, [
+            createBaseVNode("time", _hoisted_12$1, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
             class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
@@ -9463,16 +9467,16 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$6 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
-const _hoisted_2$5 = ["placeholder"];
-const _hoisted_3$4 = ["disabled"];
-const _hoisted_4$3 = { class: "w-6 h-6" };
-const _hoisted_5$3 = ["fill"];
-const _hoisted_6$3 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
+const _hoisted_1$7 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
+const _hoisted_2$6 = ["placeholder"];
+const _hoisted_3$5 = ["disabled"];
+const _hoisted_4$4 = { class: "w-6 h-6" };
+const _hoisted_5$4 = ["fill"];
+const _hoisted_6$4 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
 const _hoisted_7$3 = [
-  _hoisted_6$3
+  _hoisted_6$4
 ];
-const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "ChatInput",
   props: {
     isLoading: { type: Boolean }
@@ -9493,7 +9497,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       });
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
         createBaseVNode("form", {
           class: "flex items-center",
           onSubmit: _cache[2] || (_cache[2] = withModifiers(($event) => maybeSend(), ["prevent"]))
@@ -9502,11 +9506,11 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             ref_key: "textarea",
             ref: textarea,
             "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => messageInput.value = $event),
-            class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle !px-[16px] !py-[8px]",
+            class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle !px-[16px] !py-[8px] min-h-[48px]",
             type: "text",
             placeholder: unref(provided).message_placeholder,
             onKeydown: _cache[1] || (_cache[1] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
-          }, null, 40, _hoisted_2$5), [
+          }, null, 40, _hoisted_2$6), [
             [vModelText, messageInput.value]
           ]),
           createBaseVNode("button", {
@@ -9514,15 +9518,59 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             type: "submit",
             disabled: __props.isLoading
           }, [
-            createBaseVNode("div", _hoisted_4$3, [
+            createBaseVNode("div", _hoisted_4$4, [
               (openBlock(), createElementBlock("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: unref(provided).mainColor,
                 viewBox: "0 0 32 32"
-              }, _hoisted_7$3, 8, _hoisted_5$3))
+              }, _hoisted_7$3, 8, _hoisted_5$4))
             ])
-          ], 8, _hoisted_3$4)
+          ], 8, _hoisted_3$5)
         ], 32)
+      ]);
+    };
+  }
+});
+const _hoisted_1$6 = { class: "absolute bottom-0 right-0 h-full overflow-hidden w-full z-50 bg-black/70 backdrop-blur-sm text-white rounded-t-md" };
+const _hoisted_2$5 = { class: "my-auto w-full flex items-center border-b h-16" };
+const _hoisted_3$4 = /* @__PURE__ */ createBaseVNode("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  class: "w-6 h-6",
+  viewBox: "0 0 24 24"
+}, [
+  /* @__PURE__ */ createBaseVNode("path", {
+    fill: "currentColor",
+    d: "M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z"
+  })
+], -1);
+const _hoisted_4$3 = [
+  _hoisted_3$4
+];
+const _hoisted_5$3 = { class: "flex flex-col p-4" };
+const _hoisted_6$3 = ["onClick"];
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+  __name: "ChatSettings",
+  emits: ["setLanguage", "close"],
+  setup(__props, { emit: emit2 }) {
+    const provided = inject(appearance);
+    return (_ctx, _cache) => {
+      var _a2;
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+        createBaseVNode("div", _hoisted_2$5, [
+          createBaseVNode("button", {
+            class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
+            onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
+          }, _hoisted_4$3, 2)
+        ]),
+        createBaseVNode("div", _hoisted_5$3, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
+            return openBlock(), createElementBlock("button", {
+              key: language,
+              class: normalizeClass(["btn btn-ghost w-full justify-start capitalize", { "btn-active": language === unref(provided).language }]),
+              onClick: ($event) => emit2("setLanguage", language)
+            }, toDisplayString(language), 11, _hoisted_6$3);
+          }), 128))
+        ])
       ]);
     };
   }
@@ -9622,14 +9670,16 @@ const _hoisted_1$2 = /* @__PURE__ */ createBaseVNode("svg", {
 const _hoisted_2$2 = [
   _hoisted_1$2
 ];
-const _hoisted_3$2 = { class: "w-full h-max carousel carousel-center p-4 space-x-4 my-auto" };
+const _hoisted_3$2 = { class: "w-full h-[510px] carousel carousel-center p-4 space-x-4 my-auto" };
 const _hoisted_4$2 = ["id", "onClick"];
 const _hoisted_5$2 = { class: "card w-full h-full stuff backdrop-blur-sm card-compact !bg-black/60 group" };
 const _hoisted_6$2 = ["src"];
-const _hoisted_7$2 = { class: "card-body text-white text-center" };
-const _hoisted_8$1 = { class: "text-xl mt-4 font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200" };
-const _hoisted_9$1 = { class: "text-base text-white/40 line-clamp-6" };
-const _hoisted_10 = { class: "text-lg mt-2" };
+const _hoisted_7$2 = { class: "card-body text-white text-center flex flex-col" };
+const _hoisted_8$2 = { class: "mt-4" };
+const _hoisted_9$1 = { class: "text-xl font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 !line-clamp-1" };
+const _hoisted_10$1 = { class: "text-base text-white/40 !line-clamp-6" };
+const _hoisted_11 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_12 = { class: "text-lg flex-none" };
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "ChatProducts",
   props: {
@@ -9639,11 +9689,14 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   emits: ["closeProducts", "close"],
   setup(__props, { emit: emit2 }) {
     const props = __props;
+    const provided = inject(appearance);
     const chatProducts = ref();
     function recommend(productUrl, itemId) {
       const url = new URL(productUrl);
-      history.pushState({ monoloqItemId: itemId }, "", url);
+      console.log("url :>> ", url);
       window.location.assign(url);
+      console.log("itemId :>> ", itemId);
+      history.pushState({ monoloqItemId: itemId }, "", url);
     }
     onMounted(async () => {
       var _a2;
@@ -9659,7 +9712,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       return openBlock(), createElementBlock("div", {
         ref_key: "chatProducts",
         ref: chatProducts,
-        class: "absolute bottom-0 right-0 h-[100%] overflow-auto w-full z-50 bg-black/30 backdrop-blur-sm flex"
+        class: "absolute bottom-0 right-0 h-[100%] overflow-hidden w-full z-50 bg-black/30 backdrop-blur-sm flex"
       }, [
         createBaseVNode("button", {
           class: "btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60 text-back",
@@ -9671,7 +9724,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             return openBlock(), createElementBlock("div", {
               id: `monoloq-${product.item_id}`,
               key: product.item_id,
-              class: "carousel-item h-max w-11/12 cursor-pointer",
+              class: "carousel-item h-full w-11/12 cursor-pointer",
               onClick: ($event) => recommend(product.url, product.item_id)
             }, [
               createBaseVNode("div", _hoisted_5$2, [
@@ -9682,11 +9735,14 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                   }, null, 8, _hoisted_6$2)
                 ]),
                 createBaseVNode("div", _hoisted_7$2, [
-                  createBaseVNode("p", _hoisted_8$1, toDisplayString(`${product.title}`), 1),
-                  createBaseVNode("div", null, [
-                    createBaseVNode("p", _hoisted_9$1, toDisplayString(product.description), 1)
+                  createBaseVNode("div", _hoisted_8$2, [
+                    createBaseVNode("p", _hoisted_9$1, toDisplayString(`${product.title}`), 1)
                   ]),
-                  createBaseVNode("p", _hoisted_10, toDisplayString(`$${product.price}`), 1)
+                  createBaseVNode("div", null, [
+                    createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
+                  ]),
+                  _hoisted_11,
+                  createBaseVNode("p", _hoisted_12, toDisplayString(`${unref(provided).currency_symbol}${product.price}`), 1)
                 ])
               ])
             ], 8, _hoisted_4$2);
@@ -9699,12 +9755,13 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 const _hoisted_1$1 = { class: "w-full h-max carousel carousel-center px-4 pt-0 pb-3 space-x-4 my-auto relative pl-5" };
 const _hoisted_2$1 = ["onClick"];
 const _hoisted_3$1 = { class: "flex flex-col text-left flex-1 mt-3" };
-const _hoisted_4$1 = { class: "text-lg font-bold" };
-const _hoisted_5$1 = { class: "text-md text-neutral/70 mt-6 mb-2" };
-const _hoisted_6$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_4$1 = { class: "text-sm font-bold line-clamp-3 mr-2" };
+const _hoisted_5$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_6$1 = { class: "text-md text-neutral/70 mb-4" };
 const _hoisted_7$1 = { class: "flex justify-start" };
-const _hoisted_8 = ["onClick"];
-const _hoisted_9 = ["src"];
+const _hoisted_8$1 = ["onClick"];
+const _hoisted_9 = { class: "grid place-items-center" };
+const _hoisted_10 = ["src"];
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "MiniPreview",
   props: {
@@ -9726,7 +9783,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           var _a2;
           return openBlock(), createElementBlock("div", {
             key: product.item_id,
-            class: "carousel-item h-max w-[284px] cursor-pointer",
+            class: "carousel-item w-[284px] cursor-pointer min-h-[160px]",
             onClick: ($event) => recommend(product.url, product.item_id)
           }, [
             createBaseVNode("div", {
@@ -9734,8 +9791,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
             }, [
               createBaseVNode("div", _hoisted_3$1, [
                 createBaseVNode("h2", _hoisted_4$1, toDisplayString(`${product.title}`), 1),
-                createBaseVNode("p", _hoisted_5$1, toDisplayString(`$${product.price}`), 1),
-                _hoisted_6$1,
+                _hoisted_5$1,
+                createBaseVNode("p", _hoisted_6$1, toDisplayString(`${unref(provided).currency_symbol}${product.price}`), 1),
                 createBaseVNode("div", _hoisted_7$1, [
                   createBaseVNode("button", {
                     class: normalizeClass(["btn btn-xs hover:opacity-80 text-[12px] px-[8px] h-[24px] capitalize border-none btn-primary", unref(provided).textClass]),
@@ -9743,15 +9800,15 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                     onClick: withModifiers(($event) => emit2("scrollTo", product.item_id), ["stop"]),
                     onMouseenter: _cache[0] || (_cache[0] = ($event) => hideShadow.value = true),
                     onMouseleave: _cache[1] || (_cache[1] = ($event) => hideShadow.value = false)
-                  }, " Preview ", 46, _hoisted_8)
+                  }, " Preview ", 46, _hoisted_8$1)
                 ])
               ]),
-              createBaseVNode("figure", null, [
+              createBaseVNode("figure", _hoisted_9, [
                 createBaseVNode("img", {
                   src: (_a2 = product.images[product.match_image_idx || 0]) == null ? void 0 : _a2.url,
                   alt: "shoes",
-                  class: "h-[144px] rounded-md"
-                }, null, 8, _hoisted_9)
+                  class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
+                }, null, 8, _hoisted_10)
               ])
             ], 2)
           ], 8, _hoisted_2$1);
@@ -9796,23 +9853,27 @@ const useTextClass = (backgroundColor, cutoff = 160) => {
     mainColor: unref(mainColor)
   };
 };
-const _hoisted_1 = { class: "relative flex flex-col h-[630px] max-h-[630px] flex-1" };
-const _hoisted_2 = {
+const _hoisted_1 = {
   key: 1,
   class: "absolute w-full"
 };
+const _hoisted_2 = { class: "relative flex flex-col h-[630px] max-h-[630px] flex-1" };
 const _hoisted_3 = {
+  key: 1,
+  class: "absolute w-full"
+};
+const _hoisted_4 = {
   key: 0,
   class: "relative flex flex-col pt-3"
 };
-const _hoisted_4 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
-const _hoisted_5 = {
+const _hoisted_5 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
+const _hoisted_6 = {
   href: "https://www.monoloq.ai/",
   target: "_blank",
   class: "flex items-center hover:text-neutral text-neutral"
 };
-const _hoisted_6 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
-const _hoisted_7 = {
+const _hoisted_7 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
+const _hoisted_8 = {
   key: 1,
   class: "bottom-0 right-0 w-[372px]"
 };
@@ -9821,23 +9882,31 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     base_color: { default: "#4fafe4" },
     avatar_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/stock-avatar.jpeg" },
-    header_text: null,
-    message_placeholder: { default: "Type your message here..." },
+    text: { default: () => [{
+      message_placeholder: "Type your message here...",
+      language: "en"
+    }] },
     chat_button_style: { default: "round" },
     chat_button_label: { type: Boolean, default: false },
     chat_button_text: null,
     chat_button_color: null,
     chat_button_position: { default: "bottom_right" },
+    currency_symbol: { default: "$" },
     enable_on_mobile: { type: Boolean, default: false },
-    host_name: { default: "ariasilk.com" },
     show_button_widget: { type: Boolean, default: true },
     fixed: { type: Boolean, default: true },
+    host_domain: null,
+    language: null,
     _mockLoading: { type: Boolean, default: false },
     _mockMessage: null
   },
   setup(__props) {
     const props = __props;
-    const provided = computed(() => ({ ...props, ...useTextClass(props.base_color) }));
+    const currentLanguage = useStorage("monoloqLanguage", "en");
+    const provided = computed(() => {
+      const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
+      return { ...props, ...useTextClass(props.base_color), ...textSettings };
+    });
     provide(appearance, provided);
     const positionCss = computed(() => {
       const classes = ["bottom-1 right-1 "];
@@ -9865,9 +9934,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const showWidget = ref(true);
     const isLoading = ref(false);
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
+    const isSettingOpen = useStorage("monoloqSettingsOpen", false);
     computed(() => window.location.hostname);
     const fetch2 = createFetch({
-      baseUrl: "https://chat.monoloq.ai",
+      baseUrl: "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",
       fetchOptions: {
         method: "GET"
       },
@@ -9950,10 +10020,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     async function requestAndPush(url, params, fetchOptions = {}) {
       isLoading.value = true;
-      const baseUrl = new URL(url, "https://chat.monoloq.ai");
+      url = `prod${url}`;
+      const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
-      baseUrl.searchParams.set("host_domain", devHost("initiate"));
+      baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
       let retries2 = 0;
       const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
       while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
@@ -9974,7 +10045,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     async function initiate() {
       const msg = await requestAndPush(
         "/chat/initiate",
-        { language: document.documentElement.lang.slice(0, 2) || "en" }
+        { language: currentLanguage.value }
       );
       conversationId.value = msg == null ? void 0 : msg.conversation_id;
     }
@@ -9995,6 +10066,34 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (window.matchMedia("only screen and (max-width: 480px)").matches)
         showWidget.value = false;
     });
+    function setLanguage(language) {
+      const languages = provided.value.text.map((t) => t.language);
+      let docLang;
+      try {
+        docLang = document.documentElement.lang.slice(0, 2);
+      } catch {
+        docLang = "en";
+      }
+      language = language || docLang;
+      if (languages.includes(language))
+        return currentLanguage.value = language;
+      if (languages.includes(docLang))
+        return currentLanguage.value = docLang;
+    }
+    async function setLanguageAndInitiate(language) {
+      setLanguage(language);
+      isSettingOpen.value = false;
+      await initiate();
+    }
+    watch(
+      () => props.language,
+      (newVal, oldVal) => {
+        if (newVal === oldVal)
+          return;
+        console.log("watch props");
+        setLanguage(props.language);
+      }
+    );
     watch(
       () => conversationId.value,
       () => {
@@ -10013,6 +10112,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       { immediate: true }
     );
     async function connect() {
+      var _a2, _b;
       if (window.location.hostname === "localhost" && messages.value.length !== 0)
         return;
       if (messages.value.length === 0)
@@ -10024,7 +10124,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (isStale)
           return await resume();
       }
-      const { monoloqItemId } = window.history.state;
+      const monoloqItemId = (_b = (_a2 = window.history) == null ? void 0 : _a2.state) == null ? void 0 : _b.monoloqItemId;
       if (monoloqItemId) {
         if (visited.value.has(monoloqItemId))
           return;
@@ -10046,28 +10146,52 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const onToggle = () => {
       isChatOpen.value = true;
     };
+    const openSettings = async () => {
+      if (products.value) {
+        products.value = void 0;
+        await new Promise((resolve2) => setTimeout(resolve2, 600));
+      }
+      isSettingOpen.value = true;
+    };
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createVNode(unref(TransitionSlide), { offset: [0, 200] }, {
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl z-40 select-none", [...unref(positionCss)]])
+              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden", [...unref(positionCss)]]),
+              style: {
+                zIndex: 999
+              }
             }, [
-              createVNode(_sfc_main$8, {
-                class: "!h-[64px] flex-none",
-                onClear: _cache[0] || (_cache[0] = ($event) => onClear()),
-                onClose: _cache[1] || (_cache[1] = ($event) => onClose())
+              createVNode(unref(TransitionExpand), {
+                duration: 500,
+                delay: 100
+              }, {
+                default: withCtx(() => [
+                  unref(isSettingOpen) ? (openBlock(), createBlock(_sfc_main$6, {
+                    key: 0,
+                    onClose: _cache[0] || (_cache[0] = ($event) => isSettingOpen.value = false),
+                    onSetLanguage: setLanguageAndInitiate
+                  })) : (openBlock(), createElementBlock("div", _hoisted_1))
+                ]),
+                _: 1
               }),
-              createBaseVNode("div", _hoisted_1, [
+              createVNode(_sfc_main$9, {
+                class: "!h-[64px] flex-none",
+                onClear: _cache[1] || (_cache[1] = ($event) => onClear()),
+                onClose: _cache[2] || (_cache[2] = ($event) => onClose()),
+                onOpenSetting: _cache[3] || (_cache[3] = ($event) => openSettings())
+              }),
+              createBaseVNode("div", _hoisted_2, [
                 createVNode(unref(TransitionExpand), { duration: 500 }, {
                   default: withCtx(() => [
                     products.value ? (openBlock(), createBlock(_sfc_main$2, {
                       key: 0,
                       products: products.value,
                       "scroll-to": scrollToItemId.value,
-                      onCloseProducts: _cache[2] || (_cache[2] = ($event) => closeProducts())
-                    }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_2))
+                      onCloseProducts: _cache[4] || (_cache[4] = ($event) => closeProducts())
+                    }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_3))
                   ]),
                   _: 1
                 }),
@@ -10085,13 +10209,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         return openBlock(), createElementBlock(Fragment, {
                           key: message.timestamp
                         }, [
-                          createVNode(_sfc_main$7, {
+                          createVNode(_sfc_main$8, {
                             timestamp: message.timestamp,
                             message,
                             "is-first": index === 0,
                             onOpenProducts: setProducts
                           }, null, 8, ["timestamp", "message", "is-first"]),
-                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_3, [
+                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_4, [
                             createVNode(_sfc_main$1, {
                               products: message.recommended_products,
                               onScrollTo: (itemId) => setProducts(message.recommended_products, itemId)
@@ -10106,19 +10230,19 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     [vShow, isLoading.value || props._mockLoading]
                   ])
                 ], 512),
-                createBaseVNode("div", _hoisted_4, [
-                  createBaseVNode("a", _hoisted_5, [
-                    _hoisted_6,
+                createBaseVNode("div", _hoisted_5, [
+                  createBaseVNode("a", _hoisted_6, [
+                    _hoisted_7,
                     createVNode(MonoloqLogo, { class: "h-4 my-auto" })
                   ])
                 ]),
-                createVNode(_sfc_main$6, {
+                createVNode(_sfc_main$7, {
                   class: "flex-none",
                   "is-loading": isLoading.value,
                   onSend
                 }, null, 8, ["is-loading"])
               ])
-            ], 2)) : (openBlock(), createElementBlock("div", _hoisted_7))
+            ], 2)) : (openBlock(), createElementBlock("div", _hoisted_8))
           ]),
           _: 1
         }),
@@ -10128,7 +10252,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             class: normalizeClass([...unref(positionCss)]),
             chat_button_position: props.chat_button_position,
             "is-open": unref(isChatOpen),
-            onToggle: _cache[3] || (_cache[3] = ($event) => onToggle())
+            onToggle: _cache[5] || (_cache[5] = ($event) => onToggle())
           }, null, 8, ["class", "chat_button_position", "is-open"])) : createCommentVNode("", true)
         ])
       ], 64);
@@ -10518,43 +10642,6 @@ video {
 }
 html{
   -webkit-tap-highlight-color: transparent;
-}
-:root{
-  color-scheme: dark;
-  --pf: 198 93% 48%;
-  --sf: 234 89% 59%;
-  --af: 329 86% 56%;
-  --b2: 222 47% 10%;
-  --b3: 222 47% 9%;
-  --bc: 222 66% 82%;
-  --pc: 198 100% 12%;
-  --sc: 234 100% 15%;
-  --ac: 329 100% 14%;
-  --nc: 217 76% 83%;
-  --inc: 198 100% 10%;
-  --suc: 172 100% 10%;
-  --wac: 41 100% 13%;
-  --erc: 351 100% 14%;
-  --rounded-box: 1rem;
-  --rounded-btn: 0.5rem;
-  --rounded-badge: 1.9rem;
-  --animation-btn: 0.25s;
-  --animation-input: .2s;
-  --btn-text-case: uppercase;
-  --btn-focus-scale: 0.95;
-  --border-btn: 1px;
-  --tab-border: 1px;
-  --tab-radius: 0.5rem;
-  --p: 198 93% 60%;
-  --s: 234 89% 74%;
-  --a: 329 86% 70%;
-  --n: 217 33% 17%;
-  --nf: 217 30% 22%;
-  --b1: 222 47% 11%;
-  --in: 198 90% 48%;
-  --su: 172 66% 50%;
-  --wa: 41 88% 64%;
-  --er: 351 95% 71%;
 }
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -11134,6 +11221,48 @@ to{
 .btn-primary:focus-visible{
   outline: 2px solid hsl(var(--p));
 }
+.btn-secondary:hover,
+    .btn-secondary.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+}
+.btn-accent:hover,
+    .btn-accent.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+}
+.btn-info:hover,
+    .btn-info.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+}
+.btn-success:hover,
+    .btn-success.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+}
+.btn-warning:hover,
+    .btn-warning.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+}
+.btn-error:hover,
+    .btn-error.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+}
 .btn.glass:hover,
     .btn.glass.btn-active{
   --glass-opacity: 25%;
@@ -11157,6 +11286,21 @@ to{
 .btn-ghost:focus-visible{
   outline: 2px solid currentColor;
 }
+.btn-link:hover,
+    .btn-link.btn-active{
+  border-color: transparent;
+  background-color: transparent;
+  text-decoration-line: underline;
+}
+.btn-outline:hover,
+    .btn-outline.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--b1) / var(--tw-text-opacity));
+}
 .btn-outline.btn-primary{
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
@@ -11169,6 +11313,60 @@ to{
   background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary:hover,
+      .btn-outline.btn-secondary.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent:hover,
+      .btn-outline.btn-accent.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
+}
+.btn-outline.btn-success:hover,
+      .btn-outline.btn-success.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--suc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-info:hover,
+      .btn-outline.btn-info.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--inc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-warning:hover,
+      .btn-outline.btn-warning.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--wac, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-error:hover,
+      .btn-outline.btn-error.btn-active{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
 }
 .btn-disabled,
   .btn-disabled:hover,
@@ -11467,6 +11665,28 @@ to{
   opacity: 0.3;
   --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
 }
+.glass,
+  .glass:hover,
+  .glass.btn-active{
+  border: none;
+  -webkit-backdrop-filter: blur(var(--glass-blur, 40px));
+          backdrop-filter: blur(var(--glass-blur, 40px));
+  background-color: transparent;
+  background-image: linear-gradient(
+        135deg,
+        rgb(255 255 255 / var(--glass-opacity, 30%)) 0%,
+        rgb(0 0 0 / 0%) 100%
+      ),
+      linear-gradient(
+        var(--glass-reflex-degree, 100deg),
+        rgb(255 255 255 / var(--glass-reflex-opacity, 10%)) 25%,
+        rgb(0 0 0 / 0%) 25%
+      );
+  box-shadow: 0 0 0 1px rgb(255 255 255 / var(--glass-border-opacity, 10%))
+        inset,
+      0 0 0 2px rgb(0 0 0 / 5%);
+  text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
+}
 .min-h-16{
   min-height: 4rem;
 }
@@ -11671,11 +11891,11 @@ to{
 .right-1{
   right: 4px;
 }
-.z-50{
-  z-index: 50;
-}
 .z-40{
   z-index: 40;
+}
+.z-50{
+  z-index: 50;
 }
 .m-2{
   margin: 8px;
@@ -11700,8 +11920,8 @@ to{
 .mt-4{
   margin-top: 16px;
 }
-.mt-2{
-  margin-top: 8px;
+.ml-3{
+  margin-left: 12px;
 }
 .ml-9{
   margin-left: 36px;
@@ -11709,17 +11929,17 @@ to{
 .mr-2{
   margin-right: 8px;
 }
-.mt-6{
-  margin-top: 24px;
-}
-.mb-2{
-  margin-bottom: 8px;
+.mb-4{
+  margin-bottom: 16px;
 }
 .block{
   display: block;
 }
 .flex{
   display: flex;
+}
+.grid{
+  display: grid;
 }
 .hidden{
   display: none;
@@ -11739,15 +11959,18 @@ to{
 .h-5{
   height: 20px;
 }
+.h-6{
+  height: 24px;
+}
 .h-max{
   height: -moz-max-content;
   height: max-content;
 }
-.h-6{
-  height: 24px;
-}
 .h-\\[100\\%\\]{
   height: 100%;
+}
+.h-\\[510px\\]{
+  height: 510px;
 }
 .\\!h-\\[64px\\]{
   height: 64px !important;
@@ -11761,9 +11984,6 @@ to{
 .h-\\[24px\\]{
   height: 24px;
 }
-.h-\\[144px\\]{
-  height: 144px;
-}
 .h-8{
   height: 32px;
 }
@@ -11776,8 +11996,17 @@ to{
 .max-h-\\[630px\\]{
   max-height: 630px;
 }
+.min-h-\\[48px\\]{
+  min-height: 48px;
+}
+.min-h-\\[160px\\]{
+  min-height: 160px;
+}
 .w-full{
   width: 100%;
+}
+.w-52{
+  width: 13rem;
 }
 .w-8{
   width: 32px;
@@ -11809,11 +12038,14 @@ to{
 .max-w-\\[372px\\]{
   max-width: 372px;
 }
-.flex-none{
-  flex: none;
+.max-w-\\[144px\\]{
+  max-width: 144px;
 }
 .flex-1{
   flex: 1 1 0%;
+}
+.flex-none{
+  flex: none;
 }
 .scale-50{
   --tw-scale-x: .5;
@@ -11823,16 +12055,17 @@ to{
 .cursor-pointer{
   cursor: pointer;
 }
-.select-none{
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 .resize-none{
   resize: none;
 }
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .flex-col{
   flex-direction: column;
+}
+.place-items-center{
+  place-items: center;
 }
 .items-center{
   align-items: center;
@@ -11855,8 +12088,8 @@ to{
   margin-right: calc(16px * var(--tw-space-x-reverse));
   margin-left: calc(16px * calc(1 - var(--tw-space-x-reverse)));
 }
-.overflow-auto{
-  overflow: auto;
+.overflow-hidden{
+  overflow: hidden;
 }
 .overflow-y-auto{
   overflow-y: auto;
@@ -11891,11 +12124,18 @@ to{
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+.rounded-t-md{
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
 .rounded-tl-lg{
   border-top-left-radius: 0.5rem;
 }
 .rounded-tr-lg{
   border-top-right-radius: 0.5rem;
+}
+.border-b{
+  border-bottom-width: 1px;
 }
 .border-b-2{
   border-bottom-width: 2px;
@@ -11907,9 +12147,9 @@ to{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-slate-400{
+.bg-base-100{
   --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
 .bg-\\[\\#DDE2EB\\]{
   --tw-bg-opacity: 1;
@@ -11929,6 +12169,9 @@ to{
 }
 .\\!bg-black\\/60{
   background-color: rgb(0 0 0 / 0.6) !important;
+}
+.bg-black\\/70{
+  background-color: rgb(0 0 0 / 0.7);
 }
 .p-4{
   padding: 16px;
@@ -11972,6 +12215,12 @@ to{
 .px-\\[8px\\]{
   padding-left: 8px;
   padding-right: 8px;
+}
+.pt-60{
+  padding-top: 15rem;
+}
+.pl-32{
+  padding-left: 8rem;
 }
 .pr-4{
   padding-right: 16px;
@@ -12022,6 +12271,10 @@ to{
 .\\!text-base{
   font-size: 16px !important;
   line-height: 24px !important;
+}
+.text-sm{
+  font-size: 14px;
+  line-height: 20px;
 }
 .text-\\[12px\\]{
   font-size: 12px;
@@ -12091,11 +12344,23 @@ to{
 .duration-200{
   transition-duration: 200ms;
 }
-.line-clamp-6{
+.\\!line-clamp-1{
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 1 !important;
+}
+.\\!line-clamp-6{
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 6 !important;
+}
+.line-clamp-3{
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 3;
 }
 .lds-ellipsis {
   display: inline-block;
@@ -12247,26 +12512,35 @@ to{
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
-async function register(tagName = "monoloq-widget") {
-  console.info("Installing widget...");
-  const font = document.createElement("link");
-  font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
-  font.rel = "stylesheet";
-  document.head.appendChild(font);
-  let props = {};
+async function register() {
+  console.info("%s Installing monoloq widget v1.1...", "🏋️");
   try {
-    const res = await fetch(
-      `${String("https://chat.monoloq.ai")}/settings/appearance?host_domain=${devHost("appearance")}`
+    const font = document.createElement("link");
+    font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
+    font.rel = "stylesheet";
+    document.head.appendChild(font);
+    let props = {};
+    try {
+      const res = await fetch(
+        `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost("appearance")}`
+      );
+      const settings = await res.json();
+      props = {
+        ...settings.appearance,
+        text: settings.text,
+        enable_on_mobile: settings.general.enable_on_mobile
+      };
+    } catch (e) {
+      console.error("Failed to fetch widget config", e);
+    }
+    customElements.define("monoloq-widget", ChatWindow);
+    document.body.appendChild(
+      new ChatWindow(props)
     );
-    props = await res.json();
-  } catch (e) {
-    console.error("Failed to fetch widget config", e);
+    console.info("%s Monoloq widget installed!", "✨");
+  } catch {
+    console.error("Monoloq widget could not be installed. Please contact the Monoloq support.");
   }
-  customElements.define(tagName, ChatWindow);
-  document.body.appendChild(
-    new ChatWindow({ ...props })
-  );
-  console.info("Monoloq widget v8 registered.");
 }
 export {
   ChatWindow,
