@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-const _0x50c744 = _0x1f0b;
-(function(_0x2eafad, _0x578493) {
-  const _0x60b0b6 = _0x1f0b, _0x6520da = _0x2eafad();
+function _0x4863(_0x1c76d0, _0x2e83bb) {
+  const _0x36ac8e = _0x3dbb();
+  return _0x4863 = function(_0x2a2e81, _0x2a11c1) {
+    _0x2a2e81 = _0x2a2e81 - (135 * -71 + 13 * 411 + 2352 * 2);
+    let _0x3db971 = _0x36ac8e[_0x2a2e81];
+    return _0x3db971;
+  }, _0x4863(_0x1c76d0, _0x2e83bb);
+}
+const _0x383789 = _0x4863;
+(function(_0x50bad9, _0x590018) {
+  const _0x4af87a = _0x4863, _0x1de009 = _0x50bad9();
   while (!![]) {
     try {
-      const _0x1997c7 = parseInt(_0x60b0b6(440)) / (4965 + 380 * -1 + 12 * -382) * (-parseInt(_0x60b0b6(431)) / (3 * -485 + -53 * -146 + -6281)) + parseInt(_0x60b0b6(438)) / (-776 + 229 * -37 + 9252) * (parseInt(_0x60b0b6(425)) / (3589 + -29 * 227 + 2998)) + -parseInt(_0x60b0b6(436)) / (4367 * 2 + -963 + -7766) * (-parseInt(_0x60b0b6(411)) / (-3297 * 2 + 4894 + -2 * -853)) + parseInt(_0x60b0b6(433)) / (-7575 + 9587 * -1 + 17169) + parseInt(_0x60b0b6(408)) / (-8896 + 1 * -2092 + -10996 * -1) * (parseInt(_0x60b0b6(423)) / (9933 + 848 * 2 + -4 * 2905)) + -parseInt(_0x60b0b6(439)) / (-13 * 173 + 4999 + -2 * 1370) + parseInt(_0x60b0b6(424)) / (-5128 + 9683 + -4544) * (-parseInt(_0x60b0b6(429)) / (-5802 + -130 * 39 + 3 * 3628));
-      if (_0x1997c7 === _0x578493)
+      const _0x2eb0fd = parseInt(_0x4af87a(486)) / (916 * -1 + -4979 * 2 + 10875) + parseInt(_0x4af87a(464)) / (2041 * -3 + -6242 + 12367 * 1) + parseInt(_0x4af87a(472)) / (-9759 + 24 + 9738) * (-parseInt(_0x4af87a(465)) / (-6661 + 961 + 5704)) + -parseInt(_0x4af87a(494)) / (4587 * 1 + -31 * -237 + 79 * -151) * (-parseInt(_0x4af87a(479)) / (4507 * 1 + 4811 + -9312)) + -parseInt(_0x4af87a(491)) / (-6547 + 2 * 92 + 6370) + parseInt(_0x4af87a(482)) / (-6022 + 7006 + -976) + parseInt(_0x4af87a(467)) / (-5 * -1363 + 5884 + 270 * -47);
+      if (_0x2eb0fd === _0x590018)
         break;
       else
-        _0x6520da["push"](_0x6520da["shift"]());
-    } catch (_0x56064e) {
-      _0x6520da["push"](_0x6520da["shift"]());
+        _0x1de009["push"](_0x1de009["shift"]());
+    } catch (_0x136111) {
+      _0x1de009["push"](_0x1de009["shift"]());
     }
   }
-})(_0x264c, 396253 * -4 + -1758727 + -2136982 * -2);
-function devHost(_0x5a9fa8, _0x14adf4) {
-  const _0x38e822 = _0x1f0b, _0x47934e = window[_0x38e822(415)][_0x38e822(407)], _0x2b8852 = String(_0x38e822(417) + _0x38e822(419) + _0x38e822(412) + _0x38e822(414) + _0x38e822(413) + _0x38e822(437) + _0x38e822(432))[_0x38e822(410)](",")[_0x38e822(435)]((_0x913c68) => new URL(_0x913c68)[_0x38e822(407)]);
-  console[_0x38e822(426)](_0x38e822(441) + _0x38e822(421), _0x2b8852), console[_0x38e822(426)](_0x38e822(442) + _0x38e822(428), _0x47934e), console[_0x38e822(426)](_0x38e822(409) + _0x38e822(418), _0x14adf4);
-  if (!_0x14adf4)
-    return _0x47934e[_0x38e822(427)](_0x38e822(430), "");
-  console[_0x38e822(426)](_0x38e822(416));
-  if (!_0x2b8852[_0x38e822(434)](_0x47934e))
-    return _0x47934e[_0x38e822(427)](_0x38e822(430), "");
-  return console[_0x38e822(426)](_0x38e822(422)), _0x14adf4;
+})(_0x3dbb, -4 * 47351 + -246195 * 1 + -199444 * -3);
+function devHost(_0x36ac8e, _0x2a2e81) {
+  const _0x5bfea2 = _0x4863, _0x2a11c1 = window[_0x5bfea2(487)][_0x5bfea2(462)], _0x3db971 = String(_0x5bfea2(471) + _0x5bfea2(489) + _0x5bfea2(463) + _0x5bfea2(480) + _0x5bfea2(475) + _0x5bfea2(488) + _0x5bfea2(468))[_0x5bfea2(484)](",")[_0x5bfea2(485)]((_0x5e6dd2) => new URL(_0x5e6dd2)[_0x5bfea2(462)]);
+  console[_0x5bfea2(481)](_0x5bfea2(466) + _0x5bfea2(474), _0x3db971), console[_0x5bfea2(481)](_0x5bfea2(478) + _0x5bfea2(473), _0x2a11c1), console[_0x5bfea2(481)](_0x5bfea2(493) + _0x5bfea2(469), _0x2a2e81);
+  if (!_0x2a2e81)
+    return _0x2a11c1[_0x5bfea2(477)](_0x5bfea2(476), "");
+  console[_0x5bfea2(481)](_0x5bfea2(470));
+  if (!_0x3db971[_0x5bfea2(490)](_0x2a11c1))
+    return _0x2a11c1[_0x5bfea2(477)](_0x5bfea2(476), "");
+  return console[_0x5bfea2(481)](_0x5bfea2(483)), _0x2a2e81;
 }
-function _0x1f0b(_0x677719, _0x2be09b) {
-  const _0x5b51b6 = _0x264c();
-  return _0x1f0b = function(_0x175f71, _0x5a9fa8) {
-    _0x175f71 = _0x175f71 - (-6274 + 1557 + 1281 * 4);
-    let _0x14adf4 = _0x5b51b6[_0x175f71];
-    return _0x14adf4;
-  }, _0x1f0b(_0x677719, _0x2be09b);
+function prepareMessage(_0x9560d1) {
+  return "" + _0x9560d1;
 }
-function _0x264c() {
-  const _0x13b17b = [",http://lo", "ifyapp.com", "location", "not prop", "https://de", "op :>> ", "v.d8g529d2", "appearance", "d :>> ", "not listed", "423UEYDEY", "638165IAhPGw", "16Kybuhz", "log", "replace", ">> ", "684basRyv", "www.", "417034GSTNdc", "33/", "11472734ZBbhtI", "includes", "map", "150imrMEx", "calhost:33", "589581crzMTa", "9460920xQOpSL", "3WbTqMu", "whiteliste", "hostname :", "hostname", "287752ZgBwxJ", "hostNamePr", "split", "338622GLfBeH", "owgcy.ampl"];
-  _0x264c = function() {
-    return _0x13b17b;
+const appearance = Symbol(_0x383789(492));
+function _0x3dbb() {
+  const _0x407b90 = ["includes", "196847giiWWo", "appearance", "hostNamePr", "5oOuRjP", "hostname", "owgcy.ampl", "469970SsYRzi", "11668aOCMFJ", "whiteliste", "139257lhlJaM", "33/", "op :>> ", "not prop", "https://de", "330nRrQzS", ">> ", "d :>> ", ",http://lo", "www.", "replace", "hostname :", "451614jqFOBu", "ifyapp.com", "log", "520008WroZmg", "not listed", "split", "map", "120996zikfKM", "location", "calhost:33", "v.d8g529d2"];
+  _0x3dbb = function() {
+    return _0x407b90;
   };
-  return _0x264c();
+  return _0x3dbb();
 }
-function prepareMessage(_0x2e778f) {
-  return "" + _0x2e778f;
-}
-const appearance = Symbol(_0x50c744(420));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10068,13 +10068,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     function setLanguage(language) {
       const languages = provided.value.text.map((t) => t.language);
-      const docLang = document.documentElement.lang.slice(0, 2);
+      let docLang;
+      try {
+        docLang = document.documentElement.lang.slice(0, 2);
+      } catch {
+        docLang = "en";
+      }
       language = language || docLang;
       if (languages.includes(language))
         return currentLanguage.value = language;
       if (languages.includes(docLang))
         return currentLanguage.value = docLang;
-      currentLanguage.value = "en";
     }
     async function setLanguageAndInitiate(language) {
       setLanguage(language);
