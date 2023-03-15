@@ -7347,50 +7347,50 @@ function initDev() {
 {
   initDev();
 }
-function _0x4863(_0x1c76d0, _0x2e83bb) {
-  const _0x36ac8e = _0x3dbb();
-  return _0x4863 = function(_0x2a2e81, _0x2a11c1) {
-    _0x2a2e81 = _0x2a2e81 - (135 * -71 + 13 * 411 + 2352 * 2);
-    let _0x3db971 = _0x36ac8e[_0x2a2e81];
-    return _0x3db971;
-  }, _0x4863(_0x1c76d0, _0x2e83bb);
+function _0xa66c(_0x9cd55f, _0x231c68) {
+  const _0x5da950 = _0x58dc();
+  return _0xa66c = function(_0x48e8c6, _0x542b09) {
+    _0x48e8c6 = _0x48e8c6 - (-2951 * -2 + 3319 + -9024);
+    let _0xe24cac = _0x5da950[_0x48e8c6];
+    return _0xe24cac;
+  }, _0xa66c(_0x9cd55f, _0x231c68);
 }
-const _0x383789 = _0x4863;
-(function(_0x50bad9, _0x590018) {
-  const _0x4af87a = _0x4863, _0x1de009 = _0x50bad9();
+const _0x43c74b = _0xa66c;
+function _0x58dc() {
+  const _0x49049a = ["9947990bihotg", "v.d8g529d2", "27tXQtHp", "owgcy.ampl", "not listed", "split", "includes", "hostNamePr", "5848913srIMPu", "2145552LKAKDV", "replace", "https://de", "d :>> ", "1250130DNuZHD", ">> ", "5JXinhz", "33/", "op :>> ", "appearance", "www.", "ifyapp.com", "map", "log", ",http://lo", "2664717gmDlfm", "hostname", "location", "4QYIjms", "not prop", "1323592dcBRdK", "hostname :", "calhost:33", "whiteliste", "1183291ykGdpn"];
+  _0x58dc = function() {
+    return _0x49049a;
+  };
+  return _0x58dc();
+}
+(function(_0x4d14c4, _0x444520) {
+  const _0x5c67d9 = _0xa66c, _0x5442a5 = _0x4d14c4();
   while (!![]) {
     try {
-      const _0x2eb0fd = parseInt(_0x4af87a(486)) / (916 * -1 + -4979 * 2 + 10875) + parseInt(_0x4af87a(464)) / (2041 * -3 + -6242 + 12367 * 1) + parseInt(_0x4af87a(472)) / (-9759 + 24 + 9738) * (-parseInt(_0x4af87a(465)) / (-6661 + 961 + 5704)) + -parseInt(_0x4af87a(494)) / (4587 * 1 + -31 * -237 + 79 * -151) * (-parseInt(_0x4af87a(479)) / (4507 * 1 + 4811 + -9312)) + -parseInt(_0x4af87a(491)) / (-6547 + 2 * 92 + 6370) + parseInt(_0x4af87a(482)) / (-6022 + 7006 + -976) + parseInt(_0x4af87a(467)) / (-5 * -1363 + 5884 + 270 * -47);
-      if (_0x2eb0fd === _0x590018)
+      const _0x43b04f = parseInt(_0x5c67d9(212)) / (-5 * 1889 + -7456 + -2 * -8451) + -parseInt(_0x5c67d9(208)) / (4823 + -19 * -222 + -3013 * 3) + -parseInt(_0x5c67d9(203)) / (9778 + -3 * 1318 + -1 * 5821) * (-parseInt(_0x5c67d9(206)) / (1 * 617 + 1839 + -2452)) + -parseInt(_0x5c67d9(228)) / (-2 * -455 + -2482 * -2 + -5869) * (-parseInt(_0x5c67d9(226)) / (2289 * 1 + 3934 * 2 + -10151 * 1)) + -parseInt(_0x5c67d9(221)) / (-9321 + -3353 + 12681) + -parseInt(_0x5c67d9(222)) / (617 * 13 + -3806 * 2 + 1 * -401) * (-parseInt(_0x5c67d9(215)) / (276 * 31 + 6360 * -1 + 9 * -243)) + -parseInt(_0x5c67d9(213)) / (-147 + 393 + 118 * -2);
+      if (_0x43b04f === _0x444520)
         break;
       else
-        _0x1de009["push"](_0x1de009["shift"]());
-    } catch (_0x136111) {
-      _0x1de009["push"](_0x1de009["shift"]());
+        _0x5442a5["push"](_0x5442a5["shift"]());
+    } catch (_0x218947) {
+      _0x5442a5["push"](_0x5442a5["shift"]());
     }
   }
-})(_0x3dbb, -4 * 47351 + -246195 * 1 + -199444 * -3);
-function devHost(_0x36ac8e, _0x2a2e81) {
-  const _0x5bfea2 = _0x4863, _0x2a11c1 = window[_0x5bfea2(487)][_0x5bfea2(462)], _0x3db971 = String(_0x5bfea2(471) + _0x5bfea2(489) + _0x5bfea2(463) + _0x5bfea2(480) + _0x5bfea2(475) + _0x5bfea2(488) + _0x5bfea2(468))[_0x5bfea2(484)](",")[_0x5bfea2(485)]((_0x5e6dd2) => new URL(_0x5e6dd2)[_0x5bfea2(462)]);
-  console[_0x5bfea2(481)](_0x5bfea2(466) + _0x5bfea2(474), _0x3db971), console[_0x5bfea2(481)](_0x5bfea2(478) + _0x5bfea2(473), _0x2a11c1), console[_0x5bfea2(481)](_0x5bfea2(493) + _0x5bfea2(469), _0x2a2e81);
-  if (!_0x2a2e81)
-    return _0x2a11c1[_0x5bfea2(477)](_0x5bfea2(476), "");
-  console[_0x5bfea2(481)](_0x5bfea2(470));
-  if (!_0x3db971[_0x5bfea2(490)](_0x2a11c1))
-    return _0x2a11c1[_0x5bfea2(477)](_0x5bfea2(476), "");
-  return console[_0x5bfea2(481)](_0x5bfea2(483)), _0x2a2e81;
+})(_0x58dc, 1026661 + -58 * -19088 + -1541452);
+function devHost(_0x542b09, _0xe24cac) {
+  const _0x349950 = _0xa66c, _0x1a9ee1 = window[_0x349950(205)][_0x349950(204)], _0x3e1dfa = String(_0x349950(224) + _0x349950(214) + _0x349950(216) + _0x349950(199) + _0x349950(202) + _0x349950(210) + _0x349950(229))[_0x349950(218)](",")[_0x349950(200)]((_0x1285b6) => new URL(_0x1285b6)[_0x349950(204)]);
+  console[_0x349950(201)](_0x349950(211) + _0x349950(225), _0x3e1dfa), console[_0x349950(201)](_0x349950(209) + _0x349950(227), _0x1a9ee1), console[_0x349950(201)](_0x349950(220) + _0x349950(230), _0xe24cac);
+  if (!_0xe24cac)
+    return _0x1a9ee1[_0x349950(223)](_0x349950(198), "");
+  console[_0x349950(201)](_0x349950(207));
+  if (!_0x3e1dfa[_0x349950(219)](_0x1a9ee1))
+    return _0x1a9ee1[_0x349950(223)](_0x349950(198), "");
+  return console[_0x349950(201)](_0x349950(217)), _0xe24cac;
 }
-function prepareMessage(_0x9560d1) {
-  return "" + _0x9560d1;
+function prepareMessage(_0x175fe3) {
+  return "" + _0x175fe3;
 }
-const appearance = Symbol(_0x383789(492));
-function _0x3dbb() {
-  const _0x407b90 = ["includes", "196847giiWWo", "appearance", "hostNamePr", "5oOuRjP", "hostname", "owgcy.ampl", "469970SsYRzi", "11668aOCMFJ", "whiteliste", "139257lhlJaM", "33/", "op :>> ", "not prop", "https://de", "330nRrQzS", ">> ", "d :>> ", ",http://lo", "www.", "replace", "hostname :", "451614jqFOBu", "ifyapp.com", "log", "520008WroZmg", "not listed", "split", "map", "120996zikfKM", "location", "calhost:33", "v.d8g529d2"];
-  _0x3dbb = function() {
-    return _0x407b90;
-  };
-  return _0x3dbb();
-}
+const appearance = Symbol(_0x43c74b(197));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
