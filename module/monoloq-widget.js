@@ -7347,49 +7347,49 @@ function initDev() {
 {
   initDev();
 }
-const _0x51355a = _0x25a0;
-(function(_0x497b33, _0xb4af63) {
-  const _0x53e8be = _0x25a0, _0xa022a6 = _0x497b33();
+const _0x3c94e5 = _0x5eb2;
+(function(_0x37e672, _0x22bfc5) {
+  const _0x532101 = _0x5eb2, _0x53f772 = _0x37e672();
   while (!![]) {
     try {
-      const _0x5d1ab0 = parseInt(_0x53e8be(443)) / (-994 + -2 * 1099 + 3193) * (-parseInt(_0x53e8be(425)) / (9 * -238 + 5337 + 3193 * -1)) + parseInt(_0x53e8be(428)) / (-36 * -130 + 761 * 7 + -10004) + parseInt(_0x53e8be(435)) / (-101 * 51 + 3040 + 1 * 2115) + parseInt(_0x53e8be(427)) / (3202 + 919 * 1 + -4116) + -parseInt(_0x53e8be(438)) / (3 * 2641 + -2 * 1943 + -139 * 29) * (-parseInt(_0x53e8be(431)) / (-8685 + -4766 * 2 + 272 * 67)) + parseInt(_0x53e8be(440)) / (17 * -43 + -279 * 32 + 9667) * (-parseInt(_0x53e8be(432)) / (9949 + 3455 + -13395)) + -parseInt(_0x53e8be(445)) / (-7410 + -654 + 8074);
-      if (_0x5d1ab0 === _0xb4af63)
+      const _0x332852 = -parseInt(_0x532101(263)) / (-5596 + -1502 + 229 * 31) * (parseInt(_0x532101(274)) / (-2118 + -4991 + 7111)) + -parseInt(_0x532101(281)) / (-2511 + -1607 * 1 + 13 * 317) * (-parseInt(_0x532101(276)) / (3576 * -2 + 16 * -289 + 11780)) + -parseInt(_0x532101(264)) / (-4156 * 1 + -1 * -7354 + -3193) * (parseInt(_0x532101(279)) / (-4450 + -1 * -8924 + 1117 * -4)) + parseInt(_0x532101(265)) / (3279 + 7793 + -1 * 11065) * (-parseInt(_0x532101(272)) / (-8747 * 1 + 8876 + -11 * 11)) + -parseInt(_0x532101(280)) / (5 * 1405 + -9093 * 1 + 2077) + parseInt(_0x532101(266)) / (1093 * 7 + -1453 * -5 + -14906) + parseInt(_0x532101(275)) / (-759 + -6243 + 7013);
+      if (_0x332852 === _0x22bfc5)
         break;
       else
-        _0xa022a6["push"](_0xa022a6["shift"]());
-    } catch (_0xb99eb7) {
-      _0xa022a6["push"](_0xa022a6["shift"]());
+        _0x53f772["push"](_0x53f772["shift"]());
+    } catch (_0x408315) {
+      _0x53f772["push"](_0x53f772["shift"]());
     }
   }
-})(_0x268b, 702350 + 3 * -152741 + 537390);
-function devHost(_0x6752f3, _0x4fd844) {
-  const _0x40d623 = _0x25a0, _0x2a2371 = window[_0x40d623(430)][_0x40d623(421)], _0x3c106c = String(_0x40d623(446) + _0x40d623(434) + _0x40d623(433) + _0x40d623(423) + _0x40d623(441) + _0x40d623(448) + _0x40d623(439))[_0x40d623(429)](",")[_0x40d623(424)]((_0x46c0b0) => new URL(_0x46c0b0)[_0x40d623(421)]);
-  console[_0x40d623(436)](_0x40d623(437) + _0x40d623(422), _0x3c106c);
-  if (!_0x4fd844)
-    return _0x2a2371[_0x40d623(447)](_0x40d623(442), "");
-  if (!_0x3c106c[_0x40d623(426)](_0x2a2371))
-    return _0x2a2371[_0x40d623(447)](_0x40d623(442), "");
-  return _0x4fd844;
+})(_0x539e, 167972 + 421129 + -188769);
+function devHost(_0x4a1e95, _0x201b7c) {
+  const _0x5dd051 = _0x5eb2, _0xb8791c = window[_0x5dd051(285)][_0x5dd051(269)], _0x4737c6 = String(_0x5dd051(283) + _0x5dd051(267) + "ai")[_0x5dd051(271)](",")[_0x5dd051(273)]((_0x37a54c) => new URL(_0x37a54c)[_0x5dd051(269)]);
+  console[_0x5dd051(286)](_0x5dd051(284) + _0x5dd051(268), _0x4737c6);
+  if (!_0x201b7c)
+    return _0xb8791c[_0x5dd051(270)](_0x5dd051(278), "");
+  if (!_0x4737c6[_0x5dd051(282)](_0xb8791c))
+    return _0xb8791c[_0x5dd051(270)](_0x5dd051(278), "");
+  return _0x201b7c;
 }
-function prepareMessage(_0xd11ea8) {
-  return "" + _0xd11ea8;
+function prepareMessage(_0x23525d) {
+  return "" + _0x23525d;
 }
-function _0x25a0(_0xc43d1, _0x1ea57f) {
-  const _0x50ee58 = _0x268b();
-  return _0x25a0 = function(_0x246a49, _0x6752f3) {
-    _0x246a49 = _0x246a49 - (979 + -6869 + -6311 * -1);
-    let _0x4fd844 = _0x50ee58[_0x246a49];
-    return _0x4fd844;
-  }, _0x25a0(_0xc43d1, _0x1ea57f);
-}
-const appearance = Symbol(_0x51355a(444));
-function _0x268b() {
-  const _0x19fe2c = ["5251090rHaIZD", "4444314CtgAum", "split", "location", "42OEeVLJ", "9484551fBLuwc", "owgcy.ampl", "v.d8g529d2", "4409704nsdtxt", "log", "whiteliste", "1485756NxwoVg", "33/", "8WhWKXF", ",http://lo", "www.", "17fFoAGm", "appearance", "23407440TdAMZi", "https://de", "replace", "calhost:33", "hostname", "d :>> ", "ifyapp.com", "map", "111028btGbwq", "includes"];
-  _0x268b = function() {
-    return _0x19fe2c;
+function _0x539e() {
+  const _0x4d9635 = ["p.monoloq.", "d :>> ", "hostname", "replace", "split", "657592wxtUrm", "map", "198032sHeGei", "22937662kmbvkT", "64924cAIxLz", "appearance", "www.", "4130826WotLvC", "2932353fpiZwh", "87bDswsO", "includes", "https://ap", "whiteliste", "location", "log", "5YhAMLE", "5hQijcG", "56RlaRwx", "113510BosTnP"];
+  _0x539e = function() {
+    return _0x4d9635;
   };
-  return _0x268b();
+  return _0x539e();
 }
+function _0x5eb2(_0x13a7a8, _0xf5168e) {
+  const _0x21accd = _0x539e();
+  return _0x5eb2 = function(_0x92a793, _0x4a1e95) {
+    _0x92a793 = _0x92a793 - (6885 * -1 + 6987 + 161);
+    let _0x201b7c = _0x21accd[_0x92a793];
+    return _0x201b7c;
+  }, _0x5eb2(_0x13a7a8, _0xf5168e);
+}
+const appearance = Symbol(_0x3c94e5(277));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9924,7 +9924,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isSettingOpen = useStorage("monoloqSettingsOpen", false);
     computed(() => window.location.hostname);
     const fetch2 = createFetch({
-      baseUrl: "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",
+      baseUrl: "https://chat.monoloq.ai",
       fetchOptions: {
         method: "GET"
       },
@@ -10007,8 +10007,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     async function requestAndPush(url, params, fetchOptions = {}) {
       isLoading.value = true;
-      url = `prod${url}`;
-      const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
+      const baseUrl = new URL(url, "https://chat.monoloq.ai");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
       baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
@@ -12518,7 +12517,7 @@ async function register() {
     let props = {};
     try {
       const res = await fetch(
-        `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost("appearance")}`
+        `${String("https://chat.monoloq.ai")}/settings?host_domain=${devHost("appearance")}`
       );
       const settings = await res.json();
       props = {
