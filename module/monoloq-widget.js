@@ -7347,48 +7347,49 @@ function initDev() {
 {
   initDev();
 }
-const _0x48baf0 = _0x1ec3;
-(function(_0x28c52a, _0x58b53a) {
-  const _0x19199b = _0x1ec3, _0x942d09 = _0x28c52a();
+const _0x1ea38d = _0x17b0;
+(function(_0x47285a, _0x4c7b45) {
+  const _0x3d228d = _0x17b0, _0x4e0191 = _0x47285a();
   while (!![]) {
     try {
-      const _0x468764 = -parseInt(_0x19199b(277)) / (4 * -2060 + 198 * -3 + 57 * 155) + -parseInt(_0x19199b(285)) / (-27 * -188 + 922 * 3 + 784 * -10) * (parseInt(_0x19199b(291)) / (-1 * 4817 + -290 * 17 + -15 * -650)) + parseInt(_0x19199b(293)) / (-1341 + 2 * -3862 + 9069) * (-parseInt(_0x19199b(296)) / (7 * 1165 + 2762 + -1 * 10912)) + parseInt(_0x19199b(270)) / (341 * 21 + -8535 + 1380) * (-parseInt(_0x19199b(284)) / (-6993 + 1 * 921 + 6079)) + -parseInt(_0x19199b(295)) / (375 * -25 + 3794 * -2 + 16971) * (parseInt(_0x19199b(289)) / (-8060 + 792 + 7277)) + -parseInt(_0x19199b(290)) / (-5557 + -1 * -1019 + 4548) + parseInt(_0x19199b(273)) / (7498 + 5778 + -13265) * (parseInt(_0x19199b(283)) / (1459 * -5 + 1648 * 2 + 4011));
-      if (_0x468764 === _0x58b53a)
+      const _0x29cc36 = -parseInt(_0x3d228d(247)) / (-7592 + 1488 + 6105) + parseInt(_0x3d228d(224)) / (3034 + 2004 + -1 * 5036) * (parseInt(_0x3d228d(236)) / (7288 + -640 + -6645)) + parseInt(_0x3d228d(245)) / (-7188 + -1 * 1349 + 8541) * (-parseInt(_0x3d228d(234)) / (-8332 + -5877 + -103 * -138)) + parseInt(_0x3d228d(237)) / (-4 * -1577 + -3469 + -2833 * 1) * (parseInt(_0x3d228d(239)) / (-606 * 15 + -69 * -47 + 5854)) + parseInt(_0x3d228d(238)) / (5103 + -3160 + 215 * -9) + -parseInt(_0x3d228d(240)) / (8414 + 117 * -37 + 1019 * -4) * (-parseInt(_0x3d228d(235)) / (3714 + 1739 + -5443 * 1)) + parseInt(_0x3d228d(222)) / (1651 * -1 + 1429 * -1 + 3091);
+      if (_0x29cc36 === _0x4c7b45)
         break;
       else
-        _0x942d09["push"](_0x942d09["shift"]());
-    } catch (_0x3781e4) {
-      _0x942d09["push"](_0x942d09["shift"]());
+        _0x4e0191["push"](_0x4e0191["shift"]());
+    } catch (_0x3ec909) {
+      _0x4e0191["push"](_0x4e0191["shift"]());
     }
   }
-})(_0x1b79, 585977 + 587068 + -689640);
-function devHost(_0x29aa8e, _0x55a870) {
-  const _0x4a01c6 = _0x1ec3, _0x2559a9 = window[_0x4a01c6(280)][_0x4a01c6(294)], _0x5cc63f = String(_0x4a01c6(287) + _0x4a01c6(292) + _0x4a01c6(275) + _0x4a01c6(274) + _0x4a01c6(271) + _0x4a01c6(278) + _0x4a01c6(281))[_0x4a01c6(276)](",")[_0x4a01c6(286)]((_0x18440e) => new URL(_0x18440e)[_0x4a01c6(294)]);
-  if (!_0x55a870)
-    return _0x2559a9[_0x4a01c6(279)](_0x4a01c6(282), "");
-  if (!_0x5cc63f[_0x4a01c6(288)](_0x2559a9))
-    return _0x2559a9[_0x4a01c6(279)](_0x4a01c6(282), "");
-  return _0x55a870;
+})(_0x3ceb, -1179003 + 1488324 + 465383 * 1);
+function _0x17b0(_0x5c7895, _0x35c2eb) {
+  const _0x26df98 = _0x3ceb();
+  return _0x17b0 = function(_0x48b03d, _0x402acb) {
+    _0x48b03d = _0x48b03d - (-239 * -18 + 137 * -40 + 2 * 699);
+    let _0x5ea490 = _0x26df98[_0x48b03d];
+    return _0x5ea490;
+  }, _0x17b0(_0x5c7895, _0x35c2eb);
 }
-function _0x1b79() {
-  const _0x294949 = ["ifyapp.com", "owgcy.ampl", "split", "182151BQSWyO", "calhost:33", "replace", "location", "33/", "www.", "132gUQCOf", "49dNlnuc", "4fwUdHw", "map", "https://de", "includes", "18zkIXuS", "5739380DuCyNi", "1415202ALwGIs", "v.d8g529d2", "1869688ZPpGRQ", "hostname", "114496cETEUa", "5PiEuPx", "410622orncsS", ",http://lo", "appearance", "3158067DeGGyI"];
-  _0x1b79 = function() {
-    return _0x294949;
+function devHost(_0x26df98, _0x48b03d) {
+  const _0x4e53de = _0x17b0, _0x402acb = window[_0x4e53de(229)][_0x4e53de(226)], _0x5ea490 = String(_0x4e53de(227) + _0x4e53de(243) + _0x4e53de(225) + _0x4e53de(248) + _0x4e53de(221) + _0x4e53de(233) + _0x4e53de(228))[_0x4e53de(246)](",")[_0x4e53de(244)]((_0x21efa4) => new URL(_0x21efa4)[_0x4e53de(226)]);
+  console[_0x4e53de(241)](_0x4e53de(231) + _0x4e53de(220), _0x5ea490);
+  if (!_0x48b03d)
+    return _0x402acb[_0x4e53de(230)](_0x4e53de(232), "");
+  if (!_0x5ea490[_0x4e53de(223)](_0x402acb))
+    return _0x402acb[_0x4e53de(230)](_0x4e53de(232), "");
+  return _0x48b03d;
+}
+function prepareMessage(_0x16281c) {
+  return "" + _0x16281c;
+}
+const appearance = Symbol(_0x1ea38d(242));
+function _0x3ceb() {
+  const _0x1dff41 = ["5835944EAuwdM", "split", "1464677TkNreE", "ifyapp.com", "d :>> ", ",http://lo", "4272136KLCLVX", "includes", "794uVjpBR", "owgcy.ampl", "hostname", "https://de", "33/", "location", "replace", "whiteliste", "www.", "calhost:33", "5FZGImH", "420110VnpiCM", "4533tgTamY", "150FeeSPb", "11832528WxPpen", "309407SUUqSS", "27MYurZX", "log", "appearance", "v.d8g529d2", "map"];
+  _0x3ceb = function() {
+    return _0x1dff41;
   };
-  return _0x1b79();
+  return _0x3ceb();
 }
-function _0x1ec3(_0x3ffacc, _0x3e3946) {
-  const _0x55901b = _0x1b79();
-  return _0x1ec3 = function(_0x505473, _0x29aa8e) {
-    _0x505473 = _0x505473 - (1375 + 7099 + -14 * 586);
-    let _0x55a870 = _0x55901b[_0x505473];
-    return _0x55a870;
-  }, _0x1ec3(_0x3ffacc, _0x3e3946);
-}
-function prepareMessage(_0x1e5de1) {
-  return "" + _0x1e5de1;
-}
-const appearance = Symbol(_0x48baf0(272));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9684,18 +9685,11 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     products: null,
     scrollTo: null
   },
-  emits: ["closeProducts", "close"],
+  emits: ["closeProducts", "close", "navigate"],
   setup(__props, { emit: emit2 }) {
     const props = __props;
     const provided = inject(appearance);
     const chatProducts = ref();
-    function recommend(productUrl, itemId) {
-      const url = new URL(productUrl);
-      console.log("url :>> ", url);
-      window.location.assign(url);
-      console.log("itemId :>> ", itemId);
-      history.pushState({ monoloqItemId: itemId }, "", url);
-    }
     onMounted(async () => {
       var _a2;
       if (!props.scrollTo)
@@ -9723,7 +9717,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
               id: `monoloq-${product.item_id}`,
               key: product.item_id,
               class: "carousel-item h-full w-11/12 cursor-pointer",
-              onClick: ($event) => recommend(product.url, product.item_id)
+              onClick: ($event) => emit2("navigate", product.url, product.item_id)
             }, [
               createBaseVNode("div", _hoisted_5$2, [
                 createBaseVNode("figure", null, [
@@ -9765,24 +9759,19 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   props: {
     products: null
   },
-  emits: ["scrollTo"],
+  emits: ["scrollTo", "navigate"],
   setup(__props, { emit: emit2 }) {
     const props = __props;
     const provided = inject(appearance);
-    function recommend(productUrl, itemId) {
-      const url = new URL(productUrl);
-      history.pushState({ monoloqItemId: itemId }, "", url);
-      window.location.assign(url);
-    }
     const hideShadow = ref(false);
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$1, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(props.products, (product) => {
-          var _a2;
+          var _a2, _b;
           return openBlock(), createElementBlock("div", {
             key: product.item_id,
             class: "carousel-item w-[284px] cursor-pointer min-h-[160px]",
-            onClick: ($event) => recommend(product.url, product.item_id)
+            onClick: ($event) => emit2("navigate", product.url, product.item_id)
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-full h-full flex rounded-lg px-3 py-2 text-center duration-200 bg-[#DDE2EB] transition-all", { recommendation: !hideShadow.value }])
@@ -9803,7 +9792,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               ]),
               createBaseVNode("figure", _hoisted_9, [
                 createBaseVNode("img", {
-                  src: (_a2 = product.images[product.match_image_idx || 0]) == null ? void 0 : _a2.url,
+                  src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
                   alt: "shoes",
                   class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
                 }, null, 8, _hoisted_10)
@@ -10151,6 +10140,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
       isSettingOpen.value = true;
     };
+    function navigate(productUrl, itemId) {
+      console.log("productUrl :>> ", productUrl);
+      console.log("itemId :>> ", itemId);
+      const url = new URL(productUrl);
+      history.pushState({ monoloqItemId: itemId }, "", url);
+      window.location.assign(url);
+    }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createVNode(unref(TransitionSlide), { offset: [0, 200] }, {
@@ -10188,7 +10184,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       key: 0,
                       products: products.value,
                       "scroll-to": scrollToItemId.value,
-                      onCloseProducts: _cache[4] || (_cache[4] = ($event) => closeProducts())
+                      onCloseProducts: _cache[4] || (_cache[4] = ($event) => closeProducts()),
+                      onNavigate: navigate
                     }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_3))
                   ]),
                   _: 1
@@ -10216,7 +10213,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_4, [
                             createVNode(_sfc_main$1, {
                               products: message.recommended_products,
-                              onScrollTo: (itemId) => setProducts(message.recommended_products, itemId)
+                              onScrollTo: (itemId) => setProducts(message.recommended_products, itemId),
+                              onNavigate: navigate
                             }, null, 8, ["products", "onScrollTo"])
                           ])) : createCommentVNode("", true)
                         ], 64);
@@ -12511,7 +12509,7 @@ const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
-  console.info("%s Installing monoloq widget v1.2...", "🏋️");
+  console.info("%s Installing monoloq widget v1.3...", "🏋️");
   try {
     const font = document.createElement("link");
     font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
