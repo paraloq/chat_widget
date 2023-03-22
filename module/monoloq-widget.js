@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x1959ba = _0x12c4;
-(function(_0x207154, _0x4a79a6) {
-  const _0x265b96 = _0x12c4, _0xd6ea7d = _0x207154();
+function _0x12d3(_0x45e55e, _0x1cf2f2) {
+  const _0x2f20b9 = _0x2909();
+  return _0x12d3 = function(_0x15da09, _0x4f7567) {
+    _0x15da09 = _0x15da09 - (1358 + -5497 + 1 * 4303);
+    let _0x3b14ee = _0x2f20b9[_0x15da09];
+    return _0x3b14ee;
+  }, _0x12d3(_0x45e55e, _0x1cf2f2);
+}
+function _0x2909() {
+  const _0x263aef = ["ifyapp.com", "33/", "57085dgBouw", "appearance", "www.", "replace", "hostname", "v.d8g529d2", "38238wLUDzj", "3462OWjysZ", "map", "570471FqkYGc", ",http://lo", "9UKuUxV", "split", "160vBBIOE", "calhost:33", "2256jcRlzp", "893246Sfrnog", "2690AQfqaP", "location", "1085020gOadcK", "includes", "owgcy.ampl", "https://de"];
+  _0x2909 = function() {
+    return _0x263aef;
+  };
+  return _0x2909();
+}
+const _0x48b29c = _0x12d3;
+(function(_0x25598f, _0x312114) {
+  const _0xbb68c6 = _0x12d3, _0x380055 = _0x25598f();
   while (!![]) {
     try {
-      const _0x1dff2f = -parseInt(_0x265b96(141)) / (-1 * -5223 + -129 * -75 + -14897) + -parseInt(_0x265b96(142)) / (1 * -3695 + -7221 + 10918) * (-parseInt(_0x265b96(124)) / (9697 + -4763 + -4931)) + -parseInt(_0x265b96(134)) / (-21 * 353 + -3 * 3299 + -787 * -22) * (-parseInt(_0x265b96(123)) / (-5486 + 6984 + -1493 * 1)) + parseInt(_0x265b96(127)) / (-3933 + -2524 * -1 + 1415) + parseInt(_0x265b96(132)) / (4109 * -1 + -8964 + 654 * 20) * (parseInt(_0x265b96(144)) / (-1868 * -1 + 123 * -81 + 8103)) + -parseInt(_0x265b96(126)) / (8079 + -8369 + 23 * 13) + -parseInt(_0x265b96(129)) / (9 * 757 + -32 * -124 + 1 * -10771);
-      if (_0x1dff2f === _0x4a79a6)
+      const _0x2e28c6 = -parseInt(_0xbb68c6(169)) / (-1 * -7177 + 6213 + -13389) + parseInt(_0xbb68c6(179)) / (-29 * -218 + 2519 + -1 * 8839) + parseInt(_0xbb68c6(172)) / (-1 * 7798 + -7817 + 15618) + parseInt(_0xbb68c6(178)) / (-295 * 23 + -2 * -3752 + -65 * 11) + parseInt(_0xbb68c6(180)) / (-8277 + -4677 * -1 + -3605 * -1) * (-parseInt(_0xbb68c6(170)) / (3275 * 1 + -18 * -11 + 3467 * -1)) + -parseInt(_0xbb68c6(188)) / (-1556 * -6 + -1 * 1025 + -8304) * (parseInt(_0xbb68c6(176)) / (9309 + 7824 + -17125)) + parseInt(_0xbb68c6(174)) / (-1824 + 2513 + -20 * 34) * (parseInt(_0xbb68c6(182)) / (-6759 + -43 * -131 + 1136));
+      if (_0x2e28c6 === _0x312114)
         break;
       else
-        _0xd6ea7d["push"](_0xd6ea7d["shift"]());
-    } catch (_0x54c594) {
-      _0xd6ea7d["push"](_0xd6ea7d["shift"]());
+        _0x380055["push"](_0x380055["shift"]());
+    } catch (_0x42aa7d) {
+      _0x380055["push"](_0x380055["shift"]());
     }
   }
-})(_0x560c, -140624 + 498141 + -79595);
-function devHost(_0x2478fc, _0x108661) {
-  const _0x30df75 = _0x12c4, _0x5ede5b = window[_0x30df75(140)][_0x30df75(121)], _0x39c91d = String(_0x30df75(125) + _0x30df75(139) + _0x30df75(130) + _0x30df75(137) + _0x30df75(128) + _0x30df75(120) + _0x30df75(135))[_0x30df75(136)](",")[_0x30df75(131)]((_0x4c170c) => new URL(_0x4c170c)[_0x30df75(121)]);
-  if (!_0x108661)
-    return _0x5ede5b[_0x30df75(133)](_0x30df75(122), "");
-  if (!_0x39c91d[_0x30df75(138)](_0x5ede5b))
-    return _0x5ede5b[_0x30df75(133)](_0x30df75(122), "");
-  return _0x108661;
+})(_0x2909, -5 * 80782 + 47409 * 3 + 495765);
+function devHost(_0x4f7567, _0x3b14ee) {
+  const _0x3e9a74 = _0x12d3, _0x10b7ec = window[_0x3e9a74(181)][_0x3e9a74(167)], _0x50d09d = String(_0x3e9a74(185) + _0x3e9a74(168) + _0x3e9a74(184) + _0x3e9a74(186) + _0x3e9a74(173) + _0x3e9a74(177) + _0x3e9a74(187))[_0x3e9a74(175)](",")[_0x3e9a74(171)]((_0x5cb049) => new URL(_0x5cb049)[_0x3e9a74(167)]);
+  if (!_0x3b14ee)
+    return _0x10b7ec[_0x3e9a74(166)](_0x3e9a74(165), "");
+  if (!_0x50d09d[_0x3e9a74(183)](_0x10b7ec))
+    return _0x10b7ec[_0x3e9a74(166)](_0x3e9a74(165), "");
+  return _0x3b14ee;
 }
-function _0x12c4(_0x2da6db, _0x5b647c) {
-  const _0x3c58cc = _0x560c();
-  return _0x12c4 = function(_0x425a9e, _0x2478fc) {
-    _0x425a9e = _0x425a9e - (-157 * 10 + 8322 + -6632);
-    let _0x108661 = _0x3c58cc[_0x425a9e];
-    return _0x108661;
-  }, _0x12c4(_0x2da6db, _0x5b647c);
+function prepareMessage(_0x1e6e98) {
+  return "" + _0x1e6e98;
 }
-function prepareMessage(_0x1999ba) {
-  return "" + _0x1999ba;
-}
-function _0x560c() {
-  const _0x5abb3a = ["13737zwFsHP", "https://de", "343008KzHYVv", "529770lKyqOv", ",http://lo", "4919480BJUhdv", "owgcy.ampl", "map", "63BwaQHV", "replace", "734340jkzdGB", "33/", "split", "ifyapp.com", "includes", "v.d8g529d2", "location", "75764CCzyQk", "98OfDXgf", "appearance", "344440UiSneC", "calhost:33", "hostname", "www.", "5WrMVPb"];
-  _0x560c = function() {
-    return _0x5abb3a;
-  };
-  return _0x560c();
-}
-const appearance = Symbol(_0x1959ba(143));
+const appearance = Symbol(_0x48b29c(164));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9342,6 +9342,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
         createBaseVNode("div", _hoisted_1$9, [
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+            "aria-label": "clear chat",
             onClick: _cache[1] || (_cache[1] = ($event) => emit2("clear"))
           }, [
             createBaseVNode("div", {
@@ -9350,6 +9351,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+            "aria-label": "change assistant language",
             onClick: _cache[2] || (_cache[2] = ($event) => emit2("close"))
           }, [
             createBaseVNode("div", {
@@ -9602,6 +9604,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return withDirectives((openBlock(), createElementBlock("button", {
+        "aria-label": "open shopping assistant chat",
         class: normalizeClass(["flex w-16 h-16 rounded-full cursor-pointer hover:scale-105 duration-200 shadow-xl transition-all z-50", [...unref(cssClasses), unref(provided).textClass]]),
         style: normalizeStyle(unref(provided).style),
         onClick: _cache[0] || (_cache[0] = ($event) => emit2("toggle"))
@@ -9941,17 +9944,23 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           return ctx;
         },
         async onFetchError(ctx) {
-          var _a2, _b;
+          var _a2, _b, _c;
+          let errorMsg;
           if (((_a2 = ctx.response) == null ? void 0 : _a2.status) === 429) {
             showWidget.value = false;
             throw new Error("Monoloq limit reached. Too many requests.");
+          }
+          if (((_b = ctx.response) == null ? void 0 : _b.status) === 403) {
+            showWidget.value = false;
+            errorMsg = "Dear customer! 🌟 I'm your AI shopping assistant, currently being trained to serve you better. 🎓 Please bear with me, and in the meantime, enjoy browsing our fantastic products. Thank you for your patience! 😊";
+            throw new Error("Monoloq assistant is currently being created.");
           }
           const errorMessage = {
             bot_language_text: ctx.data,
             conversation_id: conversationId.value,
             sender: "bot",
             timestamp: new Date().getTime(),
-            user_language_text: ctx.data || ((_b = ctx.error) == null ? void 0 : _b.message) || "Unknown error",
+            user_language_text: errorMsg || ctx.data || ((_c = ctx.error) == null ? void 0 : _c.message) || "Unknown error",
             recommended_products: void 0
           };
           ctx.data = errorMessage;
