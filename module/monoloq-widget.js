@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x12d3(_0x45e55e, _0x1cf2f2) {
-  const _0x2f20b9 = _0x2909();
-  return _0x12d3 = function(_0x15da09, _0x4f7567) {
-    _0x15da09 = _0x15da09 - (1358 + -5497 + 1 * 4303);
-    let _0x3b14ee = _0x2f20b9[_0x15da09];
-    return _0x3b14ee;
-  }, _0x12d3(_0x45e55e, _0x1cf2f2);
-}
-function _0x2909() {
-  const _0x263aef = ["ifyapp.com", "33/", "57085dgBouw", "appearance", "www.", "replace", "hostname", "v.d8g529d2", "38238wLUDzj", "3462OWjysZ", "map", "570471FqkYGc", ",http://lo", "9UKuUxV", "split", "160vBBIOE", "calhost:33", "2256jcRlzp", "893246Sfrnog", "2690AQfqaP", "location", "1085020gOadcK", "includes", "owgcy.ampl", "https://de"];
-  _0x2909 = function() {
-    return _0x263aef;
-  };
-  return _0x2909();
-}
-const _0x48b29c = _0x12d3;
-(function(_0x25598f, _0x312114) {
-  const _0xbb68c6 = _0x12d3, _0x380055 = _0x25598f();
+const _0x59f02e = _0x2035;
+(function(_0x207d62, _0x12505d) {
+  const _0x30f20f = _0x2035, _0x5de345 = _0x207d62();
   while (!![]) {
     try {
-      const _0x2e28c6 = -parseInt(_0xbb68c6(169)) / (-1 * -7177 + 6213 + -13389) + parseInt(_0xbb68c6(179)) / (-29 * -218 + 2519 + -1 * 8839) + parseInt(_0xbb68c6(172)) / (-1 * 7798 + -7817 + 15618) + parseInt(_0xbb68c6(178)) / (-295 * 23 + -2 * -3752 + -65 * 11) + parseInt(_0xbb68c6(180)) / (-8277 + -4677 * -1 + -3605 * -1) * (-parseInt(_0xbb68c6(170)) / (3275 * 1 + -18 * -11 + 3467 * -1)) + -parseInt(_0xbb68c6(188)) / (-1556 * -6 + -1 * 1025 + -8304) * (parseInt(_0xbb68c6(176)) / (9309 + 7824 + -17125)) + parseInt(_0xbb68c6(174)) / (-1824 + 2513 + -20 * 34) * (parseInt(_0xbb68c6(182)) / (-6759 + -43 * -131 + 1136));
-      if (_0x2e28c6 === _0x312114)
+      const _0x22b1b7 = parseInt(_0x30f20f(437)) / (-8952 + 461 * 14 + 2499) * (-parseInt(_0x30f20f(450)) / (1871 + -8812 + -1 * -6943)) + parseInt(_0x30f20f(441)) / (6785 + 8779 + -171 * 91) + -parseInt(_0x30f20f(455)) / (-3019 * 1 + 1 * 2297 + 726) * (parseInt(_0x30f20f(435)) / (-3443 + 7280 + 479 * -8)) + parseInt(_0x30f20f(440)) / (-5593 + -9137 + -16 * -921) + -parseInt(_0x30f20f(445)) / (8521 * 1 + -2 * 347 + -2 * 3910) * (-parseInt(_0x30f20f(454)) / (-9833 + -4105 + 6973 * 2)) + -parseInt(_0x30f20f(436)) / (-3694 * -2 + 1219 + -1 * 8598) + -parseInt(_0x30f20f(438)) / (4784 + -515 * -1 + -41 * 129) * (parseInt(_0x30f20f(449)) / (5857 + 6114 + -11960));
+      if (_0x22b1b7 === _0x12505d)
         break;
       else
-        _0x380055["push"](_0x380055["shift"]());
-    } catch (_0x42aa7d) {
-      _0x380055["push"](_0x380055["shift"]());
+        _0x5de345["push"](_0x5de345["shift"]());
+    } catch (_0x16aef8) {
+      _0x5de345["push"](_0x5de345["shift"]());
     }
   }
-})(_0x2909, -5 * 80782 + 47409 * 3 + 495765);
-function devHost(_0x4f7567, _0x3b14ee) {
-  const _0x3e9a74 = _0x12d3, _0x10b7ec = window[_0x3e9a74(181)][_0x3e9a74(167)], _0x50d09d = String(_0x3e9a74(185) + _0x3e9a74(168) + _0x3e9a74(184) + _0x3e9a74(186) + _0x3e9a74(173) + _0x3e9a74(177) + _0x3e9a74(187))[_0x3e9a74(175)](",")[_0x3e9a74(171)]((_0x5cb049) => new URL(_0x5cb049)[_0x3e9a74(167)]);
-  if (!_0x3b14ee)
-    return _0x10b7ec[_0x3e9a74(166)](_0x3e9a74(165), "");
-  if (!_0x50d09d[_0x3e9a74(183)](_0x10b7ec))
-    return _0x10b7ec[_0x3e9a74(166)](_0x3e9a74(165), "");
-  return _0x3b14ee;
+})(_0x2964, 44362 * 2 + 3457 * 26 + 1037 * -73);
+function devHost(_0xb0cd99, _0x50216b) {
+  const _0x1b017a = _0x2035, _0x152fce = window[_0x1b017a(446)][_0x1b017a(451)], _0x295cd7 = String(_0x1b017a(434) + _0x1b017a(448) + _0x1b017a(453) + _0x1b017a(433) + _0x1b017a(442) + _0x1b017a(452) + _0x1b017a(447))[_0x1b017a(439)](",")[_0x1b017a(456)]((_0x413a84) => new URL(_0x413a84)[_0x1b017a(451)]);
+  if (!_0x50216b)
+    return _0x152fce[_0x1b017a(443)](_0x1b017a(457), "");
+  if (!_0x295cd7[_0x1b017a(444)](_0x152fce))
+    return _0x152fce[_0x1b017a(443)](_0x1b017a(457), "");
+  return _0x50216b;
 }
-function prepareMessage(_0x1e6e98) {
-  return "" + _0x1e6e98;
+function prepareMessage(_0x976dda) {
+  return "" + _0x976dda;
 }
-const appearance = Symbol(_0x48b29c(164));
+function _0x2035(_0x5cabe3, _0x4fe402) {
+  const _0x1f13bb = _0x2964();
+  return _0x2035 = function(_0x3938ac, _0x1f04e6) {
+    _0x3938ac = _0x3938ac - (-1563 + 9359 + -7364);
+    let _0xb0cd99 = _0x1f13bb[_0x3938ac];
+    return _0xb0cd99;
+  }, _0x2035(_0x5cabe3, _0x4fe402);
+}
+const appearance = Symbol(_0x59f02e(432));
+function _0x2964() {
+  const _0x3efd28 = ["v.d8g529d2", "11KFfrLW", "10726uskErc", "hostname", "calhost:33", "owgcy.ampl", "4808AvnAAv", "40388kpBcol", "map", "www.", "appearance", "ifyapp.com", "https://de", "25ZyRKkD", "417816IEyVVU", "29UEMAoO", "354010nKQGpk", "split", "917580nHIQKE", "210399vlwVgq", ",http://lo", "replace", "includes", "1953yIPcVJ", "location", "33/"];
+  _0x2964 = function() {
+    return _0x3efd28;
+  };
+  return _0x2964();
+}
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9332,6 +9332,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       }, [
         createBaseVNode("button", {
           class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+          "aria-label": "change assistant language",
           onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
         }, [
           createVNode(VueLogo, { class: "w-8 text-white" })
@@ -9351,7 +9352,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
-            "aria-label": "change assistant language",
+            "aria-label": "minimize",
             onClick: _cache[2] || (_cache[2] = ($event) => emit2("close"))
           }, [
             createBaseVNode("div", {
@@ -10022,7 +10023,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
       let retries2 = 0;
       const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
-      while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
+      while (statusCode.value && (statusCode.value >= 500 || statusCode.value === 404) && retries2 < 2) {
         await execute();
         retries2 += 1;
       }
