@@ -7347,49 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x3c94e5 = _0x5eb2;
-(function(_0x37e672, _0x22bfc5) {
-  const _0x532101 = _0x5eb2, _0x53f772 = _0x37e672();
+const _0x58ad43 = _0x41f5;
+(function(_0x20340f, _0x3854f5) {
+  const _0x3ed64d = _0x41f5, _0x467f14 = _0x20340f();
   while (!![]) {
     try {
-      const _0x332852 = -parseInt(_0x532101(263)) / (-5596 + -1502 + 229 * 31) * (parseInt(_0x532101(274)) / (-2118 + -4991 + 7111)) + -parseInt(_0x532101(281)) / (-2511 + -1607 * 1 + 13 * 317) * (-parseInt(_0x532101(276)) / (3576 * -2 + 16 * -289 + 11780)) + -parseInt(_0x532101(264)) / (-4156 * 1 + -1 * -7354 + -3193) * (parseInt(_0x532101(279)) / (-4450 + -1 * -8924 + 1117 * -4)) + parseInt(_0x532101(265)) / (3279 + 7793 + -1 * 11065) * (-parseInt(_0x532101(272)) / (-8747 * 1 + 8876 + -11 * 11)) + -parseInt(_0x532101(280)) / (5 * 1405 + -9093 * 1 + 2077) + parseInt(_0x532101(266)) / (1093 * 7 + -1453 * -5 + -14906) + parseInt(_0x532101(275)) / (-759 + -6243 + 7013);
-      if (_0x332852 === _0x22bfc5)
+      const _0x5395a4 = parseInt(_0x3ed64d(257)) / (-4 * -895 + 2525 + -6104) + parseInt(_0x3ed64d(259)) / (-4172 + -20 * 160 + -2 * -3687) * (parseInt(_0x3ed64d(265)) / (-1861 + -754 + -374 * -7)) + -parseInt(_0x3ed64d(268)) / (9169 * -1 + -4589 * 2 + 18351) * (-parseInt(_0x3ed64d(261)) / (2942 + 10 * -44 + -11 * 227)) + parseInt(_0x3ed64d(247)) / (3158 + -614 * 7 + -1146 * -1) * (-parseInt(_0x3ed64d(250)) / (7595 + -1915 * -3 + -1 * 13333)) + parseInt(_0x3ed64d(258)) / (3 * -3153 + 1155 + 8312) * (parseInt(_0x3ed64d(255)) / (7 * -647 + 1879 * 1 + 2659)) + parseInt(_0x3ed64d(262)) / (1 * 7777 + -2847 + 12 * -410) * (-parseInt(_0x3ed64d(264)) / (868 + 1445 * -6 + 7813)) + -parseInt(_0x3ed64d(246)) / (2217 + -3668 + -1463 * -1) * (parseInt(_0x3ed64d(267)) / (-6203 + -4 * -2375 + -3284));
+      if (_0x5395a4 === _0x3854f5)
         break;
       else
-        _0x53f772["push"](_0x53f772["shift"]());
-    } catch (_0x408315) {
-      _0x53f772["push"](_0x53f772["shift"]());
+        _0x467f14["push"](_0x467f14["shift"]());
+    } catch (_0x2fb710) {
+      _0x467f14["push"](_0x467f14["shift"]());
     }
   }
-})(_0x539e, 167972 + 421129 + -188769);
-function devHost(_0x4a1e95, _0x201b7c) {
-  const _0x5dd051 = _0x5eb2, _0xb8791c = window[_0x5dd051(285)][_0x5dd051(269)], _0x4737c6 = String(_0x5dd051(283) + _0x5dd051(267) + "ai")[_0x5dd051(271)](",")[_0x5dd051(273)]((_0x37a54c) => new URL(_0x37a54c)[_0x5dd051(269)]);
-  console[_0x5dd051(286)](_0x5dd051(284) + _0x5dd051(268), _0x4737c6);
-  if (!_0x201b7c)
-    return _0xb8791c[_0x5dd051(270)](_0x5dd051(278), "");
-  if (!_0x4737c6[_0x5dd051(282)](_0xb8791c))
-    return _0xb8791c[_0x5dd051(270)](_0x5dd051(278), "");
-  return _0x201b7c;
+})(_0x4761, -198397 * -1 + -1528815 + 2153317 * 1);
+function devHost(_0x53108b, _0x431385) {
+  const _0x462947 = _0x41f5, _0x21f157 = window[_0x462947(253)][_0x462947(266)], _0x271cfe = String(_0x462947(251) + _0x462947(256) + "ai")[_0x462947(248)](",")[_0x462947(254)]((_0x556f2a) => new URL(_0x556f2a)[_0x462947(266)]);
+  if (!_0x431385)
+    return _0x21f157[_0x462947(260)](_0x462947(263), "");
+  if (!_0x271cfe[_0x462947(249)](_0x21f157))
+    return _0x21f157[_0x462947(260)](_0x462947(263), "");
+  return _0x431385;
 }
-function prepareMessage(_0x23525d) {
-  return "" + _0x23525d;
-}
-function _0x539e() {
-  const _0x4d9635 = ["p.monoloq.", "d :>> ", "hostname", "replace", "split", "657592wxtUrm", "map", "198032sHeGei", "22937662kmbvkT", "64924cAIxLz", "appearance", "www.", "4130826WotLvC", "2932353fpiZwh", "87bDswsO", "includes", "https://ap", "whiteliste", "location", "log", "5YhAMLE", "5hQijcG", "56RlaRwx", "113510BosTnP"];
-  _0x539e = function() {
-    return _0x4d9635;
+function _0x4761() {
+  const _0x8463e3 = ["location", "map", "387NazGMc", "p.monoloq.", "533429kiAyhz", "108616ztASHd", "14JvYxFN", "replace", "1345YanlXS", "20JCeCVR", "www.", "3206247JcjFzV", "631317eRBhbR", "hostname", "52jvRNcX", "17164vTPtQI", "6824700jqhdUw", "6vABefT", "split", "includes", "446873OKSnKf", "https://ap", "appearance"];
+  _0x4761 = function() {
+    return _0x8463e3;
   };
-  return _0x539e();
+  return _0x4761();
 }
-function _0x5eb2(_0x13a7a8, _0xf5168e) {
-  const _0x21accd = _0x539e();
-  return _0x5eb2 = function(_0x92a793, _0x4a1e95) {
-    _0x92a793 = _0x92a793 - (6885 * -1 + 6987 + 161);
-    let _0x201b7c = _0x21accd[_0x92a793];
-    return _0x201b7c;
-  }, _0x5eb2(_0x13a7a8, _0xf5168e);
+function _0x41f5(_0x1bc65e, _0x58ff33) {
+  const _0x53108b = _0x4761();
+  return _0x41f5 = function(_0x431385, _0x21f157) {
+    _0x431385 = _0x431385 - (6 * 1493 + -7 * -913 + 15103 * -1);
+    let _0x271cfe = _0x53108b[_0x431385];
+    return _0x271cfe;
+  }, _0x41f5(_0x1bc65e, _0x58ff33);
 }
-const appearance = Symbol(_0x3c94e5(277));
+function prepareMessage(_0x3b27b3) {
+  return "" + _0x3b27b3;
+}
+const appearance = Symbol(_0x58ad43(252));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9333,6 +9332,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       }, [
         createBaseVNode("button", {
           class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+          "aria-label": "change assistant language",
           onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
         }, [
           createVNode(VueLogo, { class: "w-8 text-white" })
@@ -9343,6 +9343,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
         createBaseVNode("div", _hoisted_1$9, [
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+            "aria-label": "clear chat",
             onClick: _cache[1] || (_cache[1] = ($event) => emit2("clear"))
           }, [
             createBaseVNode("div", {
@@ -9351,6 +9352,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+            "aria-label": "minimize",
             onClick: _cache[2] || (_cache[2] = ($event) => emit2("close"))
           }, [
             createBaseVNode("div", {
@@ -9458,7 +9460,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             createBaseVNode("time", _hoisted_12$1, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
-            class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
+            class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-[24px] py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
             style: normalizeStyle(unref(provided).style)
           }, toDisplayString(props.message.text), 7)
         ])) : createCommentVNode("", true)
@@ -9558,6 +9560,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
         createBaseVNode("div", _hoisted_2$5, [
           createBaseVNode("button", {
             class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
+            "aria-label": "close language settings",
             onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
           }, _hoisted_4$3, 2)
         ]),
@@ -9565,7 +9568,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
             return openBlock(), createElementBlock("button", {
               key: language,
-              class: normalizeClass(["btn btn-ghost w-full justify-start capitalize", { "btn-active": language === unref(provided).language }]),
+              class: normalizeClass(["btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]", { "btn-active": language === unref(provided).language }]),
               onClick: ($event) => emit2("setLanguage", language)
             }, toDisplayString(language), 11, _hoisted_6$3);
           }), 128))
@@ -9603,6 +9606,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return withDirectives((openBlock(), createElementBlock("button", {
+        "aria-label": "open shopping assistant chat",
         class: normalizeClass(["flex w-16 h-16 rounded-full cursor-pointer hover:scale-105 duration-200 shadow-xl transition-all z-50", [...unref(cssClasses), unref(provided).textClass]]),
         style: normalizeStyle(unref(provided).style),
         onClick: _cache[0] || (_cache[0] = ($event) => emit2("toggle"))
@@ -9702,12 +9706,14 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
+        id: "chatProducts",
         ref_key: "chatProducts",
         ref: chatProducts,
         class: "absolute bottom-0 right-0 h-[100%] overflow-hidden w-full z-50 bg-black/30 backdrop-blur-sm flex"
       }, [
         createBaseVNode("button", {
           class: "btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60 text-back",
+          "aria-label": "close recommendations",
           onClick: _cache[0] || (_cache[0] = ($event) => emit2("closeProducts"))
         }, _hoisted_2$2),
         createBaseVNode("div", _hoisted_3$2, [
@@ -9722,8 +9728,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
               createBaseVNode("div", _hoisted_5$2, [
                 createBaseVNode("figure", null, [
                   createBaseVNode("img", {
-                    src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
-                    alt: "shoes"
+                    src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url
                   }, null, 8, _hoisted_6$2)
                 ]),
                 createBaseVNode("div", _hoisted_7$2, [
@@ -9793,7 +9798,6 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               createBaseVNode("figure", _hoisted_9, [
                 createBaseVNode("img", {
                   src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
-                  alt: "shoes",
                   class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
                 }, null, 8, _hoisted_10)
               ])
@@ -9940,30 +9944,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         afterFetch(ctx) {
           ctx.data.timestamp = Date.parse(ctx.data.timestamp);
           return ctx;
-        },
-        async onFetchError(ctx) {
-          var _a2, _b;
-          if (((_a2 = ctx.response) == null ? void 0 : _a2.status) === 429) {
-            showWidget.value = false;
-            throw new Error("Monoloq limit reached. Too many requests.");
-          }
-          const errorMessage = {
-            bot_language_text: ctx.data,
-            conversation_id: conversationId.value,
-            sender: "bot",
-            timestamp: new Date().getTime(),
-            user_language_text: ctx.data || ((_b = ctx.error) == null ? void 0 : _b.message) || "Unknown error",
-            recommended_products: void 0
-          };
-          ctx.data = errorMessage;
-          return ctx;
         }
       }
     });
     async function onSend(inputMessage) {
       isLoading.value = true;
-      if (!refChat.value || !conversationId.value)
-        return;
       const date = new Date();
       const message = {
         text: prepareMessage(inputMessage),
@@ -9971,6 +9956,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         conversation_id: conversationId.value
       };
       messages.value.push(message);
+      if (!refChat.value)
+        return;
+      if (!conversationId.value)
+        return await initiate();
       const serverResponse = await handleMessage(message);
       const maybeRecommendedProduct = serverResponse == null ? void 0 : serverResponse.recommended_products;
       if (!(maybeRecommendedProduct == null ? void 0 : maybeRecommendedProduct.length))
@@ -10006,19 +9995,40 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       requestAnimationFrame(animate);
     }
     async function requestAndPush(url, params, fetchOptions = {}) {
+      var _a2;
       isLoading.value = true;
       const baseUrl = new URL(url, "https://chat.monoloq.ai");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
       baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
+      const { data: msg, execute, statusCode, response } = await fetch2(baseUrl.toString(), fetchOptions).json();
       let retries2 = 0;
-      const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
-      while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
+      while (statusCode.value && (statusCode.value >= 500 || statusCode.value === 404) && retries2 < 2) {
         await execute();
         retries2 += 1;
       }
+      let errorMessage;
+      if (!((_a2 = response.value) == null ? void 0 : _a2.ok)) {
+        let errorMsg = "Hello customer! 🌟 Apologies, but we're facing a small hiccup at the moment. 🚧 Our team is working diligently to resolve the issue. Meanwhile, please enjoy exploring our amazing products. Thank you for your understanding! 😊";
+        if (statusCode.value === 429) {
+          showWidget.value = false;
+          throw new Error("Monoloq limit reached. Too many requests.");
+        }
+        if (statusCode.value === 403) {
+          errorMsg = "Dear customer! 🌟 I'm your AI shopping assistant, currently being trained to serve you better. 🎓 Please bear with me, and in the meantime, enjoy browsing our fantastic products. Thank you for your patience! 😊";
+          console.info("Monoloq assistant is currently being created. Please wait!");
+        }
+        errorMessage = {
+          bot_language_text: errorMsg,
+          conversation_id: conversationId.value,
+          sender: "bot",
+          timestamp: new Date().getTime(),
+          user_language_text: errorMsg,
+          recommended_products: void 0
+        };
+      }
       isLoading.value = false;
-      messages.value.push(msg.value);
+      messages.value.push(errorMessage || msg.value);
       return msg.value;
     }
     async function handleMessage(body) {
@@ -10076,7 +10086,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       (newVal, oldVal) => {
         if (newVal === oldVal)
           return;
-        console.log("watch props");
         setLanguage(props.language);
       }
     );
@@ -10140,8 +10149,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       isSettingOpen.value = true;
     };
     function navigate(productUrl, itemId) {
-      console.log("productUrl :>> ", productUrl);
-      console.log("itemId :>> ", itemId);
+      if (isLoading.value)
+        return;
       const url = new URL(productUrl);
       history.pushState({ monoloqItemId: itemId }, "", url);
       window.location.assign(url);
@@ -11967,6 +11976,9 @@ to{
 .h-\\[510px\\]{
   height: 510px;
 }
+.h-\\[48px\\]{
+  height: 48px;
+}
 .\\!h-\\[64px\\]{
   height: 64px !important;
 }
@@ -12263,6 +12275,9 @@ to{
   font-size: 16px;
   line-height: 24px;
 }
+.text-\\[14px\\]{
+  font-size: 14px;
+}
 .\\!text-base{
   font-size: 16px !important;
   line-height: 24px !important;
@@ -12282,9 +12297,6 @@ to{
 }
 .leading-\\[24px\\]{
   line-height: 24px;
-}
-.leading-6{
-  line-height: 1.5rem;
 }
 .\\!leading-\\[24px\\]{
   line-height: 24px !important;
