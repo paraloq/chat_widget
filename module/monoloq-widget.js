@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x59f02e = _0x2035;
-(function(_0x207d62, _0x12505d) {
-  const _0x30f20f = _0x2035, _0x5de345 = _0x207d62();
+function _0x546c() {
+  const _0x1828e0 = ["calhost:33", "3118270nBzOow", ",http://lo", "appearance", "includes", "ifyapp.com", "v.d8g529d2", "hostname", "1385531NYngeA", "1678170XQbxaZ", "21ugbDoq", "location", "8306881vglYFZ", "split", "6hbATvE", "9bzFqPu", "replace", "map", "www.", "966934VqMVUH", "https://de", "1qqNYbY", "33/", "owgcy.ampl", "88436ziBSaQ", "3569760skBiBD"];
+  _0x546c = function() {
+    return _0x1828e0;
+  };
+  return _0x546c();
+}
+const _0x2e2ea9 = _0x4a7d;
+function _0x4a7d(_0xbcf079, _0x21efe1) {
+  const _0x2073dd = _0x546c();
+  return _0x4a7d = function(_0x19ebdd, _0x3b4918) {
+    _0x19ebdd = _0x19ebdd - (1949 * 3 + 73 * -91 + 1063 * 1);
+    let _0x5affd9 = _0x2073dd[_0x19ebdd];
+    return _0x5affd9;
+  }, _0x4a7d(_0xbcf079, _0x21efe1);
+}
+(function(_0x42caf7, _0x5978f5) {
+  const _0x3ca7e5 = _0x4a7d, _0x4c40d3 = _0x42caf7();
   while (!![]) {
     try {
-      const _0x22b1b7 = parseInt(_0x30f20f(437)) / (-8952 + 461 * 14 + 2499) * (-parseInt(_0x30f20f(450)) / (1871 + -8812 + -1 * -6943)) + parseInt(_0x30f20f(441)) / (6785 + 8779 + -171 * 91) + -parseInt(_0x30f20f(455)) / (-3019 * 1 + 1 * 2297 + 726) * (parseInt(_0x30f20f(435)) / (-3443 + 7280 + 479 * -8)) + parseInt(_0x30f20f(440)) / (-5593 + -9137 + -16 * -921) + -parseInt(_0x30f20f(445)) / (8521 * 1 + -2 * 347 + -2 * 3910) * (-parseInt(_0x30f20f(454)) / (-9833 + -4105 + 6973 * 2)) + -parseInt(_0x30f20f(436)) / (-3694 * -2 + 1219 + -1 * 8598) + -parseInt(_0x30f20f(438)) / (4784 + -515 * -1 + -41 * 129) * (parseInt(_0x30f20f(449)) / (5857 + 6114 + -11960));
-      if (_0x22b1b7 === _0x12505d)
+      const _0x5e4dc3 = parseInt(_0x3ca7e5(286)) / (3914 + 4609 + -8522) * (parseInt(_0x3ca7e5(284)) / (2237 + -5 * -1492 + 5 * -1939)) + parseInt(_0x3ca7e5(275)) / (3 * -25 + -2783 * 3 + 8427) * (parseInt(_0x3ca7e5(289)) / (20 * -279 + -43 * -21 + 1 * 4681)) + parseInt(_0x3ca7e5(274)) / (8006 + -9524 + 1523) + parseInt(_0x3ca7e5(279)) / (1 * 3184 + 9164 * 1 + 17 * -726) * (parseInt(_0x3ca7e5(273)) / (-9088 + 1 * 3925 + 5170)) + -parseInt(_0x3ca7e5(290)) / (85 + 471 * -17 + 26 * 305) + parseInt(_0x3ca7e5(280)) / (4045 + -3908 + -2 * 64) * (parseInt(_0x3ca7e5(292)) / (-4687 + -8974 + 1 * 13671)) + -parseInt(_0x3ca7e5(277)) / (-4882 * -1 + -4393 + -478);
+      if (_0x5e4dc3 === _0x5978f5)
         break;
       else
-        _0x5de345["push"](_0x5de345["shift"]());
-    } catch (_0x16aef8) {
-      _0x5de345["push"](_0x5de345["shift"]());
+        _0x4c40d3["push"](_0x4c40d3["shift"]());
+    } catch (_0x404c7e) {
+      _0x4c40d3["push"](_0x4c40d3["shift"]());
     }
   }
-})(_0x2964, 44362 * 2 + 3457 * 26 + 1037 * -73);
-function devHost(_0xb0cd99, _0x50216b) {
-  const _0x1b017a = _0x2035, _0x152fce = window[_0x1b017a(446)][_0x1b017a(451)], _0x295cd7 = String(_0x1b017a(434) + _0x1b017a(448) + _0x1b017a(453) + _0x1b017a(433) + _0x1b017a(442) + _0x1b017a(452) + _0x1b017a(447))[_0x1b017a(439)](",")[_0x1b017a(456)]((_0x413a84) => new URL(_0x413a84)[_0x1b017a(451)]);
-  if (!_0x50216b)
-    return _0x152fce[_0x1b017a(443)](_0x1b017a(457), "");
-  if (!_0x295cd7[_0x1b017a(444)](_0x152fce))
-    return _0x152fce[_0x1b017a(443)](_0x1b017a(457), "");
-  return _0x50216b;
+})(_0x546c, -1 * -161303 + -35266 + 68 * 2297);
+function devHost(_0x2073dd, _0x19ebdd) {
+  const _0x323e8f = _0x4a7d, _0x3b4918 = window[_0x323e8f(276)][_0x323e8f(272)], _0x5affd9 = String(_0x323e8f(285) + _0x323e8f(271) + _0x323e8f(288) + _0x323e8f(270) + _0x323e8f(267) + _0x323e8f(291) + _0x323e8f(287))[_0x323e8f(278)](",")[_0x323e8f(282)]((_0x1bb93c) => new URL(_0x1bb93c)[_0x323e8f(272)]);
+  if (!_0x19ebdd)
+    return _0x3b4918[_0x323e8f(281)](_0x323e8f(283), "");
+  if (!_0x5affd9[_0x323e8f(269)](_0x3b4918))
+    return _0x3b4918[_0x323e8f(281)](_0x323e8f(283), "");
+  return _0x19ebdd;
 }
-function prepareMessage(_0x976dda) {
-  return "" + _0x976dda;
+function prepareMessage(_0x2b3e47) {
+  return "" + _0x2b3e47;
 }
-function _0x2035(_0x5cabe3, _0x4fe402) {
-  const _0x1f13bb = _0x2964();
-  return _0x2035 = function(_0x3938ac, _0x1f04e6) {
-    _0x3938ac = _0x3938ac - (-1563 + 9359 + -7364);
-    let _0xb0cd99 = _0x1f13bb[_0x3938ac];
-    return _0xb0cd99;
-  }, _0x2035(_0x5cabe3, _0x4fe402);
-}
-const appearance = Symbol(_0x59f02e(432));
-function _0x2964() {
-  const _0x3efd28 = ["v.d8g529d2", "11KFfrLW", "10726uskErc", "hostname", "calhost:33", "owgcy.ampl", "4808AvnAAv", "40388kpBcol", "map", "www.", "appearance", "ifyapp.com", "https://de", "25ZyRKkD", "417816IEyVVU", "29UEMAoO", "354010nKQGpk", "split", "917580nHIQKE", "210399vlwVgq", ",http://lo", "replace", "includes", "1953yIPcVJ", "location", "33/"];
-  _0x2964 = function() {
-    return _0x3efd28;
-  };
-  return _0x2964();
-}
+const appearance = Symbol(_0x2e2ea9(268));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9460,7 +9460,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             createBaseVNode("time", _hoisted_12$1, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
-            class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-6 py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
+            class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-[24px] py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
             style: normalizeStyle(unref(provided).style)
           }, toDisplayString(props.message.text), 7)
         ])) : createCommentVNode("", true)
@@ -9560,6 +9560,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
         createBaseVNode("div", _hoisted_2$5, [
           createBaseVNode("button", {
             class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
+            "aria-label": "close language settings",
             onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
           }, _hoisted_4$3, 2)
         ]),
@@ -9567,7 +9568,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
             return openBlock(), createElementBlock("button", {
               key: language,
-              class: normalizeClass(["btn btn-ghost w-full justify-start capitalize", { "btn-active": language === unref(provided).language }]),
+              class: normalizeClass(["btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]", { "btn-active": language === unref(provided).language }]),
               onClick: ($event) => emit2("setLanguage", language)
             }, toDisplayString(language), 11, _hoisted_6$3);
           }), 128))
@@ -9705,12 +9706,14 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
+        id: "chatProducts",
         ref_key: "chatProducts",
         ref: chatProducts,
         class: "absolute bottom-0 right-0 h-[100%] overflow-hidden w-full z-50 bg-black/30 backdrop-blur-sm flex"
       }, [
         createBaseVNode("button", {
           class: "btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60 text-back",
+          "aria-label": "close recommendations",
           onClick: _cache[0] || (_cache[0] = ($event) => emit2("closeProducts"))
         }, _hoisted_2$2),
         createBaseVNode("div", _hoisted_3$2, [
@@ -9725,8 +9728,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
               createBaseVNode("div", _hoisted_5$2, [
                 createBaseVNode("figure", null, [
                   createBaseVNode("img", {
-                    src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
-                    alt: "shoes"
+                    src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url
                   }, null, 8, _hoisted_6$2)
                 ]),
                 createBaseVNode("div", _hoisted_7$2, [
@@ -9796,7 +9798,6 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               createBaseVNode("figure", _hoisted_9, [
                 createBaseVNode("img", {
                   src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
-                  alt: "shoes",
                   class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
                 }, null, 8, _hoisted_10)
               ])
@@ -9943,36 +9944,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         afterFetch(ctx) {
           ctx.data.timestamp = Date.parse(ctx.data.timestamp);
           return ctx;
-        },
-        async onFetchError(ctx) {
-          var _a2, _b, _c;
-          let errorMsg;
-          if (((_a2 = ctx.response) == null ? void 0 : _a2.status) === 429) {
-            showWidget.value = false;
-            throw new Error("Monoloq limit reached. Too many requests.");
-          }
-          if (((_b = ctx.response) == null ? void 0 : _b.status) === 403) {
-            showWidget.value = false;
-            errorMsg = "Dear customer! 🌟 I'm your AI shopping assistant, currently being trained to serve you better. 🎓 Please bear with me, and in the meantime, enjoy browsing our fantastic products. Thank you for your patience! 😊";
-            throw new Error("Monoloq assistant is currently being created.");
-          }
-          const errorMessage = {
-            bot_language_text: ctx.data,
-            conversation_id: conversationId.value,
-            sender: "bot",
-            timestamp: new Date().getTime(),
-            user_language_text: errorMsg || ctx.data || ((_c = ctx.error) == null ? void 0 : _c.message) || "Unknown error",
-            recommended_products: void 0
-          };
-          ctx.data = errorMessage;
-          return ctx;
         }
       }
     });
     async function onSend(inputMessage) {
       isLoading.value = true;
-      if (!refChat.value || !conversationId.value)
-        return;
       const date = new Date();
       const message = {
         text: prepareMessage(inputMessage),
@@ -9980,6 +9956,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         conversation_id: conversationId.value
       };
       messages.value.push(message);
+      if (!refChat.value)
+        return;
+      if (!conversationId.value)
+        return await initiate();
       const serverResponse = await handleMessage(message);
       const maybeRecommendedProduct = serverResponse == null ? void 0 : serverResponse.recommended_products;
       if (!(maybeRecommendedProduct == null ? void 0 : maybeRecommendedProduct.length))
@@ -10015,20 +9995,41 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       requestAnimationFrame(animate);
     }
     async function requestAndPush(url, params, fetchOptions = {}) {
+      var _a2;
       isLoading.value = true;
       url = `prod${url}`;
       const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
       baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
+      const { data: msg, execute, statusCode, response } = await fetch2(baseUrl.toString(), fetchOptions).json();
       let retries2 = 0;
-      const { data: msg, execute, statusCode } = await fetch2(baseUrl.toString(), fetchOptions).json();
       while (statusCode.value && (statusCode.value >= 500 || statusCode.value === 404) && retries2 < 2) {
         await execute();
         retries2 += 1;
       }
+      let errorMessage;
+      if (!((_a2 = response.value) == null ? void 0 : _a2.ok)) {
+        let errorMsg = "Hello customer! 🌟 Apologies, but we're facing a small hiccup at the moment. 🚧 Our team is working diligently to resolve the issue. Meanwhile, please enjoy exploring our amazing products. Thank you for your understanding! 😊";
+        if (statusCode.value === 429) {
+          showWidget.value = false;
+          throw new Error("Monoloq limit reached. Too many requests.");
+        }
+        if (statusCode.value === 403) {
+          errorMsg = "Dear customer! 🌟 I'm your AI shopping assistant, currently being trained to serve you better. 🎓 Please bear with me, and in the meantime, enjoy browsing our fantastic products. Thank you for your patience! 😊";
+          console.info("Monoloq assistant is currently being created. Please wait!");
+        }
+        errorMessage = {
+          bot_language_text: errorMsg,
+          conversation_id: conversationId.value,
+          sender: "bot",
+          timestamp: new Date().getTime(),
+          user_language_text: errorMsg,
+          recommended_products: void 0
+        };
+      }
       isLoading.value = false;
-      messages.value.push(msg.value);
+      messages.value.push(errorMessage || msg.value);
       return msg.value;
     }
     async function handleMessage(body) {
@@ -10149,6 +10150,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       isSettingOpen.value = true;
     };
     function navigate(productUrl, itemId) {
+      if (isLoading.value)
+        return;
       const url = new URL(productUrl);
       history.pushState({ monoloqItemId: itemId }, "", url);
       window.location.assign(url);
@@ -11974,6 +11977,9 @@ to{
 .h-\\[510px\\]{
   height: 510px;
 }
+.h-\\[48px\\]{
+  height: 48px;
+}
 .\\!h-\\[64px\\]{
   height: 64px !important;
 }
@@ -12270,6 +12276,9 @@ to{
   font-size: 16px;
   line-height: 24px;
 }
+.text-\\[14px\\]{
+  font-size: 14px;
+}
 .\\!text-base{
   font-size: 16px !important;
   line-height: 24px !important;
@@ -12289,9 +12298,6 @@ to{
 }
 .leading-\\[24px\\]{
   line-height: 24px;
-}
-.leading-6{
-  line-height: 1.5rem;
 }
 .\\!leading-\\[24px\\]{
   line-height: 24px !important;
