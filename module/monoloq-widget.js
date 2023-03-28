@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x27f4(_0xcefcdb, _0x2c86c1) {
-  const _0x2367c1 = _0x2de3();
-  return _0x27f4 = function(_0x3aa868, _0x25aaba) {
-    _0x3aa868 = _0x3aa868 - (6979 + 4580 + 1 * -11337);
-    let _0x3e725b = _0x2367c1[_0x3aa868];
-    return _0x3e725b;
-  }, _0x27f4(_0xcefcdb, _0x2c86c1);
-}
-const _0x345915 = _0x27f4;
-function _0x2de3() {
-  const _0x3bb112 = ["map", "16705fduiMT", "1059ocEiqX", "split", "location", "p.monoloq.", "146XtKHXi", "includes", "557092nIVHDn", "4602857OsdxMy", "https://ap", "www.", "8021030ddxDgs", "hostname", "296eHkIQk", "1036LivrxU", "7004214DDUBYh", "replace", "appearance", "137079OQdjwA"];
-  _0x2de3 = function() {
-    return _0x3bb112;
-  };
-  return _0x2de3();
-}
-(function(_0x2ecf21, _0x19ec71) {
-  const _0x33602e = _0x27f4, _0x49f59d = _0x2ecf21();
+const _0x302961 = _0x35f5;
+(function(_0x1d23b2, _0xf3a2e6) {
+  const _0x18e1c1 = _0x35f5, _0x48522d = _0x1d23b2();
   while (!![]) {
     try {
-      const _0x166d0b = parseInt(_0x33602e(229)) / (45 * 163 + -1869 + -5465) + -parseInt(_0x33602e(227)) / (7598 + -7978 * -1 + 599 * -26) * (parseInt(_0x33602e(223)) / (1 * -5363 + 709 + 4657)) + -parseInt(_0x33602e(236)) / (11 * 677 + 5 * -1451 + -47 * 4) * (-parseInt(_0x33602e(222)) / (-2 * -3595 + -5770 + 5 * -283)) + -parseInt(_0x33602e(237)) / (5922 + 2281 + -8197) + parseInt(_0x33602e(230)) / (4045 * 1 + 2100 + -6138) + parseInt(_0x33602e(235)) / (-1630 + 549 + 33 * 33) * (parseInt(_0x33602e(240)) / (-2189 + 1141 * 8 + -6930)) + -parseInt(_0x33602e(233)) / (4331 * -1 + 7102 + 1 * -2761);
-      if (_0x166d0b === _0x19ec71)
+      const _0x329988 = parseInt(_0x18e1c1(277)) / (-1513 * -5 + 1115 + -8679 * 1) + parseInt(_0x18e1c1(287)) / (-12 * -367 + 9132 + -13534) * (-parseInt(_0x18e1c1(291)) / (-3 * 1299 + 1149 + -393 * -7)) + parseInt(_0x18e1c1(274)) / (41 * 123 + -1741 * 3 + 184) * (parseInt(_0x18e1c1(275)) / (-2 * 307 + -9213 + 9832)) + parseInt(_0x18e1c1(289)) / (9493 + 4949 + -14436) + parseInt(_0x18e1c1(285)) / (-5196 + -14 * -662 + -1 * 4065) + -parseInt(_0x18e1c1(278)) / (-4392 + 4 * -642 + -4 * -1742) + -parseInt(_0x18e1c1(286)) / (5005 * -1 + -24 * 256 + 11158);
+      if (_0x329988 === _0xf3a2e6)
         break;
       else
-        _0x49f59d["push"](_0x49f59d["shift"]());
-    } catch (_0x42e0be) {
-      _0x49f59d["push"](_0x49f59d["shift"]());
+        _0x48522d["push"](_0x48522d["shift"]());
+    } catch (_0x290dff) {
+      _0x48522d["push"](_0x48522d["shift"]());
     }
   }
-})(_0x2de3, -242 * -4234 + -970191 + 593831);
-function devHost(_0x25aaba, _0x3e725b) {
-  const _0x4bcade = _0x27f4, _0x39ccd4 = window[_0x4bcade(225)][_0x4bcade(234)], _0x2a2ced = String(_0x4bcade(231) + _0x4bcade(226) + "ai")[_0x4bcade(224)](",")[_0x4bcade(241)]((_0x240641) => new URL(_0x240641)[_0x4bcade(234)]);
-  if (!_0x3e725b)
-    return _0x39ccd4[_0x4bcade(238)](_0x4bcade(232), "");
-  if (!_0x2a2ced[_0x4bcade(228)](_0x39ccd4))
-    return _0x39ccd4[_0x4bcade(238)](_0x4bcade(232), "");
-  return _0x3e725b;
+})(_0x272a, -157699 * -1 + 36 * -7451 + 317915);
+function _0x272a() {
+  const _0x43b2e5 = ["map", "appearance", "p.monoloq.", "split", "location", "hostname", "1582098ttbGeK", "1779966YJHVgU", "265394lFTMXz", "includes", "776898gYLCNA", "https://ap", "6SraFsQ", "685852KoYMSG", "5lBwfnd", "www.", "146057bxlGrV", "19768JXYmyZ"];
+  _0x272a = function() {
+    return _0x43b2e5;
+  };
+  return _0x272a();
 }
-function prepareMessage(_0x254fb8) {
-  return "" + _0x254fb8;
+function _0x35f5(_0xe86297, _0x2ba0c2) {
+  const _0x353a9c = _0x272a();
+  return _0x35f5 = function(_0x2cb84e, _0x3923fe) {
+    _0x2cb84e = _0x2cb84e - (-7338 + -136 * 7 + 1 * 8564);
+    let _0x1b5fa2 = _0x353a9c[_0x2cb84e];
+    return _0x1b5fa2;
+  }, _0x35f5(_0xe86297, _0x2ba0c2);
 }
-const appearance = Symbol(_0x345915(239));
+function devHost(_0x2cb84e, _0x3923fe) {
+  const _0x19518c = _0x35f5, _0x1b5fa2 = window[_0x19518c(283)][_0x19518c(284)], _0x3b92de = String(_0x19518c(290) + _0x19518c(281) + "ai")[_0x19518c(282)](",")[_0x19518c(279)]((_0xe8f6aa) => new URL(_0xe8f6aa)[_0x19518c(284)]), _0x25b071 = _0x3923fe ? _0x19518c(276) + _0x1b5fa2 : _0x1b5fa2;
+  if (!_0x2cb84e)
+    return _0x25b071;
+  if (!_0x3b92de[_0x19518c(288)](_0x1b5fa2))
+    return _0x25b071;
+  return _0x2cb84e;
+}
+function prepareMessage(_0x59f6b4) {
+  return "" + _0x59f6b4;
+}
+const appearance = Symbol(_0x302961(280));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,6 +9910,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const IS_DEV = false;
     const retries = ref(0);
     const conversationId = useStorage("monoloqConversationId", "");
+    const addWww = useStorage("monoloqAddWww", false);
     const messages = useStorage("monoloqChatBotMessages", []);
     const visited = useStorage("monoloqVisited", /* @__PURE__ */ new Set());
     const products = ref();
@@ -9939,12 +9940,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       },
       options: {
         refetch: false,
-        async beforeFetch({ options, cancel }) {
+        async beforeFetch({ options, cancel, url }) {
           const additionalHeaders = { "x-api-key": "thqMbn962S4Sg2r4U6l6Dzx9DTYk9qP9f4RTAB9j", "Content-Type": "application/json" };
           if (retries.value > 30 || !showWidget.value)
             cancel();
           const newOptions = { ...options, headers: { ...options.headers, ...additionalHeaders } };
-          return { options: newOptions };
+          url = addWww.value ? url.replace(/host_domain=/, "host_domain=www.") : url;
+          return { options: newOptions, url };
         },
         afterFetch(ctx) {
           ctx.data.timestamp = Date.parse(ctx.data.timestamp);
@@ -10006,10 +10008,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const baseUrl = new URL(url, "https://chat.monoloq.ai");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
-      baseUrl.searchParams.set("host_domain", devHost("initiate", provided.value.host_domain));
+      baseUrl.searchParams.set("host_domain", devHost(provided.value.host_domain));
       const { data: msg, execute, statusCode, response } = await fetch2(baseUrl.toString(), fetchOptions).json();
       let retries2 = 0;
-      while (statusCode.value && (statusCode.value >= 500 || statusCode.value === 404) && retries2 < 2) {
+      while (statusCode.value && statusCode.value >= 500 && retries2 < 2) {
+        await execute();
+        retries2 += 1;
+      }
+      if (statusCode.value === 404 && retries2 < 1) {
+        addWww.value = !addWww.value;
         await execute();
         retries2 += 1;
       }
@@ -12527,16 +12534,19 @@ const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
   console.info("%s Installing monoloq widget 4...", "🏋️");
+  const getSettings = async (addWww) => await fetch(`${String("https://chat.monoloq.ai")}/settings?host_domain=${devHost(void 0, addWww)}`);
   try {
     const font = document.createElement("link");
     font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
     font.rel = "stylesheet";
     document.head.appendChild(font);
     let props = {};
+    const addWww = localStorage.getItem("monoloqAddWww") === "true";
     try {
-      const res = await fetch(
-        `${String("https://chat.monoloq.ai")}/settings?host_domain=${devHost("appearance")}`
-      );
+      let res;
+      res = await getSettings(addWww);
+      if (!res.ok)
+        res = await getSettings(!addWww);
       const settings = await res.json();
       props = {
         ...settings.appearance,
