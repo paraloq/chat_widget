@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x54433d = _0x23aa;
-(function(_0x1cc622, _0x359619) {
-  const _0x2c6633 = _0x23aa, _0x3089cb = _0x1cc622();
+function _0xa9f1() {
+  const _0x9fa9fd = ["ifyapp.com", "appearance", "75026ZXKmdD", "37vpIycB", ",http://lo", "33/", "map", "https://de", "calhost:33", "74454EsmaiA", "18RlFYXn", "2994968xVbPfy", "217ygTLjm", "split", "hostname", "3954096YiexQf", "6007890tLTibT", "owgcy.ampl", "11382130AhViJp", "includes", "930748tCiZwI", "v.d8g529d2", "location", "www."];
+  _0xa9f1 = function() {
+    return _0x9fa9fd;
+  };
+  return _0xa9f1();
+}
+const _0x3bfb3e = _0x19c9;
+(function(_0x2feb6d, _0x33a032) {
+  const _0x3b27d0 = _0x19c9, _0x4ffdff = _0x2feb6d();
   while (!![]) {
     try {
-      const _0x1c2554 = -parseInt(_0x2c6633(400)) / (4083 + -1337 * 1 + 549 * -5) + -parseInt(_0x2c6633(389)) / (-23 * -293 + 4183 * -1 + 1277 * -2) * (parseInt(_0x2c6633(395)) / (-2010 + 8 * -898 + 9197)) + -parseInt(_0x2c6633(385)) / (-3 * -2096 + -3674 + -2610) + parseInt(_0x2c6633(380)) / (-1 * 7047 + -9994 + -947 * -18) * (-parseInt(_0x2c6633(402)) / (1963 + -9435 * -1 + -5696 * 2)) + -parseInt(_0x2c6633(398)) / (-5490 + 936 + 4561) * (-parseInt(_0x2c6633(391)) / (11 * 413 + 5 * 1609 + 148 * -85)) + -parseInt(_0x2c6633(387)) / (8853 + -5910 + -2934) * (-parseInt(_0x2c6633(401)) / (189 * -31 + 3755 * -1 + 2406 * 4)) + parseInt(_0x2c6633(381)) / (-364 + 22 * 233 + 4751 * -1);
-      if (_0x1c2554 === _0x359619)
+      const _0x1aa593 = parseInt(_0x3b27d0(163)) / (5898 + 7698 + -13595) * (-parseInt(_0x3b27d0(162)) / (6562 + 6668 + 13228 * -1)) + parseInt(_0x3b27d0(151)) / (-2507 * -1 + -945 + -1559) + -parseInt(_0x3b27d0(156)) / (-478 * -16 + -18 * 146 + 88 * -57) + -parseInt(_0x3b27d0(152)) / (1993 + 4813 * -2 + 7638) + parseInt(_0x3b27d0(169)) / (223 * -4 + -1 * -2466 + -1 * 1568) * (parseInt(_0x3b27d0(172)) / (-9713 + 2553 + -1 * -7167)) + -parseInt(_0x3b27d0(171)) / (11 * -199 + 3670 * 1 + -1473) + parseInt(_0x3b27d0(170)) / (-526 + -1019 + 1554) * (parseInt(_0x3b27d0(154)) / (-846 + -119 * -41 + -9 * 447));
+      if (_0x1aa593 === _0x33a032)
         break;
       else
-        _0x3089cb["push"](_0x3089cb["shift"]());
-    } catch (_0x4a7f61) {
-      _0x3089cb["push"](_0x3089cb["shift"]());
+        _0x4ffdff["push"](_0x4ffdff["shift"]());
+    } catch (_0x52384a) {
+      _0x4ffdff["push"](_0x4ffdff["shift"]());
     }
   }
-})(_0x34f5, 1706510 + -1504710 + -31 * -21361);
-function devHost(_0xdfd89f, _0x5ab02e) {
-  const _0x480549 = _0x23aa, _0x4bea98 = window[_0x480549(384)][_0x480549(382)], _0x3fe986 = String(_0x480549(403) + _0x480549(388) + _0x480549(394) + _0x480549(404) + _0x480549(383) + _0x480549(399) + _0x480549(393))[_0x480549(386)](",")[_0x480549(396)]((_0x5604e1) => new URL(_0x5604e1)[_0x480549(382)]), _0x2a1c77 = _0x5ab02e ? _0x480549(392) + _0x4bea98 : _0x4bea98;
-  if (!_0xdfd89f)
-    return _0x2a1c77;
-  if (!_0x3fe986[_0x480549(390)](_0x4bea98))
-    return _0x2a1c77;
-  return _0xdfd89f;
+})(_0xa9f1, 858378 + -81 * 10379 + 764841);
+function devHost(_0x41708e, _0xd281b0) {
+  const _0x44cb65 = _0x19c9, _0x344d15 = window[_0x44cb65(158)][_0x44cb65(150)], _0x5af8c3 = String(_0x44cb65(167) + _0x44cb65(157) + _0x44cb65(153) + _0x44cb65(160) + _0x44cb65(164) + _0x44cb65(168) + _0x44cb65(165))[_0x44cb65(149)](",")[_0x44cb65(166)]((_0x55854d) => new URL(_0x55854d)[_0x44cb65(150)]), _0x3c41a2 = _0xd281b0 ? _0x44cb65(159) + _0x344d15 : _0x344d15;
+  if (!_0x41708e)
+    return _0x3c41a2;
+  if (!_0x5af8c3[_0x44cb65(155)](_0x344d15))
+    return _0x3c41a2;
+  return _0x41708e;
 }
-function _0x23aa(_0x324b7, _0x5bbdff) {
-  const _0xdfd89f = _0x34f5();
-  return _0x23aa = function(_0x5ab02e, _0x4bea98) {
-    _0x5ab02e = _0x5ab02e - (-23 * 248 + -1224 * -3 + -804 * -3);
-    let _0x3fe986 = _0xdfd89f[_0x5ab02e];
-    return _0x3fe986;
-  }, _0x23aa(_0x324b7, _0x5bbdff);
+function prepareMessage(_0x5343e9) {
+  return "" + _0x5343e9;
 }
-function _0x34f5() {
-  const _0xc661ed = ["4612034KQfwOm", "calhost:33", "245151suPgRu", "10OpRcGz", "73212NfNVnu", "https://de", "ifyapp.com", "350ABHBav", "21378709fGhcgq", "hostname", ",http://lo", "location", "2639968QrcqxV", "split", "3628143XJWbwJ", "v.d8g529d2", "2PJBctg", "includes", "8rnQemU", "www.", "33/", "owgcy.ampl", "1146702ulDTCQ", "map", "appearance"];
-  _0x34f5 = function() {
-    return _0xc661ed;
-  };
-  return _0x34f5();
+function _0x19c9(_0x2ac06b, _0x139b67) {
+  const _0x12a849 = _0xa9f1();
+  return _0x19c9 = function(_0x41d7c0, _0x41708e) {
+    _0x41d7c0 = _0x41d7c0 - (-2828 + -6587 + 1 * 9564);
+    let _0xd281b0 = _0x12a849[_0x41d7c0];
+    return _0xd281b0;
+  }, _0x19c9(_0x2ac06b, _0x139b67);
 }
-function prepareMessage(_0x4dd103) {
-  return "" + _0x4dd103;
-}
-const appearance = Symbol(_0x54433d(397));
+const appearance = Symbol(_0x3bfb3e(161));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9901,8 +9901,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     provide(appearance, provided);
     const positionCss = computed(() => {
-      const classes = ["bottom-1 right-1 "];
-      props.chat_button_position === "bottom_right" ? classes.push(" sm:right-5") : classes.push("sm:left-5");
+      const classes = ["bottom-1 "];
+      props.chat_button_position === "bottom_right" ? classes.push("right-1 sm:right-5") : classes.push("left-1 sm:left-5");
       props.fixed ? classes.push("fixed sm:ml-0 sm:bottom-5") : classes.push("absolute");
       props.enable_on_mobile ? classes.push("") : classes.push("hidden sm:flex");
       return classes;
@@ -10177,7 +10177,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               key: 0,
               class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden", [...unref(positionCss)]]),
               style: {
-                zIndex: 999
+                zIndex: 999999999999
               }
             }, [
               createVNode(unref(TransitionExpand), {
@@ -11908,6 +11908,9 @@ to{
 }
 .right-1{
   right: 4px;
+}
+.left-1{
+  left: 4px;
 }
 .z-40{
   z-index: 40;
