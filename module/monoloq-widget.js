@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x51bb1a = _0x3228;
-(function(_0x34b0e4, _0x2ee0f6) {
-  const _0x4e0cc2 = _0x3228, _0x1177ff = _0x34b0e4();
+const _0x34479d = _0x43ec;
+(function(_0x5f02b0, _0x506d57) {
+  const _0x5eb75e = _0x43ec, _0x5f234b = _0x5f02b0();
   while (!![]) {
     try {
-      const _0x3561eb = -parseInt(_0x4e0cc2(428)) / (1774 + 4013 + 11 * -526) * (-parseInt(_0x4e0cc2(409)) / (7088 + 1 * 1631 + -8717)) + -parseInt(_0x4e0cc2(405)) / (-1783 + -1 * -8939 + 23 * -311) + parseInt(_0x4e0cc2(416)) / (-34 * 240 + -7355 + 15519) + -parseInt(_0x4e0cc2(420)) / (-7262 + 60 * -102 + 13387) * (parseInt(_0x4e0cc2(408)) / (263 * 10 + -5722 + 3098)) + parseInt(_0x4e0cc2(415)) / (1 * 4127 + 1 * 9393 + -1 * 13513) * (parseInt(_0x4e0cc2(418)) / (4 * -418 + 640 * -6 + 5520)) + parseInt(_0x4e0cc2(413)) / (-4970 + 3696 + 1 * 1283) + -parseInt(_0x4e0cc2(411)) / (3859 + 799 * 7 + 2 * -4721);
-      if (_0x3561eb === _0x2ee0f6)
+      const _0x2eaa84 = -parseInt(_0x5eb75e(266)) / (-2234 + 99 * 58 + 21 * -167) + -parseInt(_0x5eb75e(258)) / (-3001 * 2 + 1 * 2657 + 3347) + -parseInt(_0x5eb75e(253)) / (7 * -98 + 541 * -7 + 4476) + -parseInt(_0x5eb75e(255)) / (-23 * 409 + -5 * -956 + -11 * -421) * (parseInt(_0x5eb75e(259)) / (-164 + 1242 + -29 * 37)) + parseInt(_0x5eb75e(264)) / (2503 * -1 + -8272 + 1 * 10781) + -parseInt(_0x5eb75e(263)) / (-5554 + 9242 + -9 * 409) * (-parseInt(_0x5eb75e(252)) / (-1 * 2047 + 6469 + -4414)) + -parseInt(_0x5eb75e(272)) / (-4341 * -1 + 1021 * 4 + 32 * -263) * (-parseInt(_0x5eb75e(271)) / (-2464 + -622 * 13 + 2 * 5280));
+      if (_0x2eaa84 === _0x506d57)
         break;
       else
-        _0x1177ff["push"](_0x1177ff["shift"]());
-    } catch (_0xc7f10c) {
-      _0x1177ff["push"](_0x1177ff["shift"]());
+        _0x5f234b["push"](_0x5f234b["shift"]());
+    } catch (_0x316a02) {
+      _0x5f234b["push"](_0x5f234b["shift"]());
     }
   }
-})(_0x34f2, 172148 + 325284 + 77578 * -4);
-function devHost(_0x2b569a, _0xcb2c9e) {
-  const _0x1405a8 = _0x3228, _0x36f3c5 = window[_0x1405a8(417)][_0x1405a8(410)], _0x253580 = String(_0x1405a8(414) + _0x1405a8(427) + _0x1405a8(426) + _0x1405a8(422) + _0x1405a8(425) + _0x1405a8(423) + _0x1405a8(421))[_0x1405a8(419)](",")[_0x1405a8(407)]((_0x167189) => new URL(_0x167189)[_0x1405a8(410)]), _0x3ce1c3 = _0xcb2c9e ? _0x1405a8(424) + _0x36f3c5 : _0x36f3c5;
-  if (!_0x2b569a)
-    return _0x3ce1c3;
-  if (!_0x253580[_0x1405a8(412)](_0x36f3c5))
-    return _0x3ce1c3;
-  return _0x2b569a;
+})(_0x15bf, 32 * -2575 + 401 * -423 + -124 * -4486);
+function _0x43ec(_0x2a1bdf, _0x5a9c7e) {
+  const _0x40d421 = _0x15bf();
+  return _0x43ec = function(_0x11ede6, _0x58df9c) {
+    _0x11ede6 = _0x11ede6 - (6148 + 7 * 130 + -6809);
+    let _0x24ba27 = _0x40d421[_0x11ede6];
+    return _0x24ba27;
+  }, _0x43ec(_0x2a1bdf, _0x5a9c7e);
 }
-function _0x3228(_0x37b8d0, _0x949daf) {
-  const _0x4b5e2a = _0x34f2();
-  return _0x3228 = function(_0x2b569a, _0xcb2c9e) {
-    _0x2b569a = _0x2b569a - (2 * -4563 + -3443 + 2 * 6487);
-    let _0x36f3c5 = _0x4b5e2a[_0x2b569a];
-    return _0x36f3c5;
-  }, _0x3228(_0x37b8d0, _0x949daf);
-}
-function prepareMessage(_0x51b38d) {
-  return "" + _0x51b38d;
-}
-function _0x34f2() {
-  const _0x5cea5b = ["393236UQXVTp", "location", "8JnwSgs", "split", "5JitIuw", "33/", "ifyapp.com", "calhost:33", "www.", ",http://lo", "owgcy.ampl", "v.d8g529d2", "2XaaUaV", "59958dksaCt", "appearance", "map", "636204HArlKs", "105992sGozyb", "hostname", "2623780WsVmDa", "includes", "2183814EbOlrJ", "https://de", "899997TAkzvs"];
-  _0x34f2 = function() {
-    return _0x5cea5b;
+function _0x15bf() {
+  const _0x322d78 = ["71770cMzZvz", "owgcy.ampl", "hostname", "includes", "7iLylcd", "979122DRjjpi", "map", "185763ITjDoJ", "calhost:33", "www.", "location", "v.d8g529d2", "3638430osCgWE", "27ndgqPD", "split", "33/", "https://de", "2773656EJLKSO", "1536246NuqCHD", ",http://lo", "44xoMWQP", "appearance", "ifyapp.com", "882886EcGkEI"];
+  _0x15bf = function() {
+    return _0x322d78;
   };
-  return _0x34f2();
+  return _0x15bf();
 }
-const appearance = Symbol(_0x51bb1a(406));
+function devHost(_0x58df9c, _0x24ba27) {
+  const _0x276bf2 = _0x43ec, _0x5c7968 = window[_0x276bf2(269)][_0x276bf2(261)], _0x514254 = String(_0x276bf2(251) + _0x276bf2(270) + _0x276bf2(260) + _0x276bf2(257) + _0x276bf2(254) + _0x276bf2(267) + _0x276bf2(250))[_0x276bf2(249)](",")[_0x276bf2(265)]((_0x4c3b0a) => new URL(_0x4c3b0a)[_0x276bf2(261)]), _0x23c15c = _0x24ba27 ? _0x276bf2(268) + _0x5c7968 : _0x5c7968;
+  if (!_0x58df9c)
+    return _0x23c15c;
+  if (!_0x514254[_0x276bf2(262)](_0x5c7968))
+    return _0x23c15c;
+  return _0x58df9c;
+}
+function prepareMessage(_0x1eff6a) {
+  return "" + _0x1eff6a;
+}
+const appearance = Symbol(_0x34479d(256));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9417,11 +9417,13 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       const yesterday = new Date(now);
       yesterday.setDate(now.getDate() - 1);
       const language = navigator.language;
+      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       if (date.toDateString() === now.toDateString()) {
         return new Intl.DateTimeFormat(language, {
           hour: "numeric",
           minute: "numeric",
-          hour12: false
+          hour12: false,
+          timeZone
         }).format(date);
       } else if (date.toDateString() === yesterday.toDateString()) {
         return "Yesterday";
@@ -9429,7 +9431,8 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
         return new Intl.DateTimeFormat(language, {
           hour12: false,
           day: "numeric",
-          month: "short"
+          month: "short",
+          timeZone
         }).format(date);
       }
     });
@@ -10345,6 +10348,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (props._isOpen !== void 0)
         isChatOpen.value = props._isOpen;
     });
+    function dateFromISO8601(isoDateString) {
+      if (!isoDateString || typeof isoDateString !== "string") {
+        throw new Error("Invalid input: expecting a non-empty string.");
+      }
+      const parts = isoDateString.match(/\d+/g);
+      const isoTime = Date.UTC(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], parts[5]);
+      const isoDate = new Date(isoTime);
+      return isoDate;
+    }
     const fetch2 = createFetch({
       baseUrl: "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",
       fetchOptions: {
@@ -10361,7 +10373,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           return { options: newOptions, url };
         },
         afterFetch(ctx) {
-          ctx.data.timestamp = Date.parse(ctx.data.timestamp);
+          ctx.data.timestamp = dateFromISO8601(ctx.data.timestamp);
           return ctx;
         }
       }
