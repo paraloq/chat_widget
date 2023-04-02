@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x1f86() {
-  const _0x1a0d9d = ["3540kMsuXL", "29619nCEnwW", "12ZNZdFW", "hostname", "10014334jrZKWe", "location", "split", "355098xPRnjT", "33/", "www.", "1744431sUWtqo", "8nYWtiu", "ifyapp.com", "appearance", "4HpynKd", "map", "15XSnvxE", "52RQokHG", "owgcy.ampl", "7182553QboFYX", "includes", ",http://lo", "3375894paHDUc", "https://de", "v.d8g529d2", "calhost:33", "181119hYPZVX"];
-  _0x1f86 = function() {
-    return _0x1a0d9d;
+function _0x1611() {
+  const _0x55de97 = ["33/", "owgcy.ampl", "split", "3762856EKNkqe", "https://de", "hostname", "4741348TfnmJk", "location", ",http://lo", "982610XngrPR", "www.", "3004TIHXEO", "3906625sTVoyg", "126mHrwoO", "v.d8g529d2", "47WeMZoQ", "calhost:33", "appearance", "ifyapp.com", "30264443HwfuKA", "map", "3FFEtci", "67602KIgarc", "1064hQJDTZ", "includes"];
+  _0x1611 = function() {
+    return _0x55de97;
   };
-  return _0x1f86();
+  return _0x1611();
 }
-const _0x3ce56c = _0x3e90;
-(function(_0x4e4a78, _0x3ba214) {
-  const _0x4e236e = _0x3e90, _0x2c9c28 = _0x4e4a78();
+const _0xeb6cc3 = _0x30ab;
+(function(_0x418851, _0x385041) {
+  const _0x59277c = _0x30ab, _0x3a7f61 = _0x418851();
   while (!![]) {
     try {
-      const _0x90f37f = -parseInt(_0x4e236e(262)) / (1231 * 1 + 2319 + 3549 * -1) * (-parseInt(_0x4e236e(255)) / (600 * 3 + -4551 + 2753)) + -parseInt(_0x4e236e(274)) / (2482 + -2 * 397 + -337 * 5) * (parseInt(_0x4e236e(265)) / (4211 * -1 + -1 * -1741 + -1 * -2474)) + -parseInt(_0x4e236e(264)) / (4549 + -3547 * 2 + -3 * -850) * (-parseInt(_0x4e236e(270)) / (5 * 391 + 586 + 169 * -15)) + parseInt(_0x4e236e(267)) / (7815 + 751 * -11 + 453) * (-parseInt(_0x4e236e(259)) / (-11 * 504 + -880 + 6432)) + parseInt(_0x4e236e(276)) / (7058 + 592 * 8 + -5 * 2357) * (parseInt(_0x4e236e(275)) / (-247 * -14 + -2485 * 3 + 4007)) + -parseInt(_0x4e236e(252)) / (1401 + -47 * -202 + -2721 * 4) + parseInt(_0x4e236e(250)) / (1 * 2365 + -5351 * 1 + 2998) * (parseInt(_0x4e236e(258)) / (1944 + 2 * 3438 + -8807 * 1));
-      if (_0x90f37f === _0x3ba214)
+      const _0x3c52e4 = -parseInt(_0x59277c(402)) / (-1 * -572 + 2867 + -6 * 573) * (-parseInt(_0x59277c(398)) / (-5162 + -2005 + -1 * -7169)) + parseInt(_0x59277c(408)) / (138 + 5 * -1343 + -329 * -20) * (-parseInt(_0x59277c(418)) / (2360 + -11 * -359 + 97 * -65)) + -parseInt(_0x59277c(399)) / (3080 + 1 * -8173 + 5098) + parseInt(_0x59277c(409)) / (-5063 + 4480 + -31 * -19) * (-parseInt(_0x59277c(410)) / (-829 * -1 + 5 * -1751 + 7933)) + parseInt(_0x59277c(415)) / (-9638 + 6243 + 3403 * 1) + parseInt(_0x59277c(400)) / (-194 * -18 + 47 + -3530) * (parseInt(_0x59277c(421)) / (53 * -53 + -1171 * 2 + 5161)) + parseInt(_0x59277c(406)) / (9227 * 1 + -634 * -3 + -34 * 327);
+      if (_0x3c52e4 === _0x385041)
         break;
       else
-        _0x2c9c28["push"](_0x2c9c28["shift"]());
-    } catch (_0x1aa213) {
-      _0x2c9c28["push"](_0x2c9c28["shift"]());
+        _0x3a7f61["push"](_0x3a7f61["shift"]());
+    } catch (_0x44955d) {
+      _0x3a7f61["push"](_0x3a7f61["shift"]());
     }
   }
-})(_0x1f86, 1743683 + 14 * 73148 + -1791733 * 1);
-function _0x3e90(_0x26c251, _0x56a305) {
-  const _0x513ac7 = _0x1f86();
-  return _0x3e90 = function(_0x4aed67, _0x50aade) {
-    _0x4aed67 = _0x4aed67 - (-8258 + -1 * -8346 + 81 * 2);
-    let _0x1d8719 = _0x513ac7[_0x4aed67];
-    return _0x1d8719;
-  }, _0x3e90(_0x26c251, _0x56a305);
+})(_0x1611, -6 * 56345 + -1 * -283291 + 3 * 347817);
+function devHost(_0x96c5c9, _0x474553) {
+  const _0x3715a0 = _0x30ab, _0x4b1473 = window[_0x3715a0(419)][_0x3715a0(417)], _0x15da90 = String(_0x3715a0(416) + _0x3715a0(401) + _0x3715a0(413) + _0x3715a0(405) + _0x3715a0(420) + _0x3715a0(403) + _0x3715a0(412))[_0x3715a0(414)](",")[_0x3715a0(407)]((_0x2bccf8) => new URL(_0x2bccf8)[_0x3715a0(417)]), _0x37729e = _0x474553 ? _0x3715a0(397) + _0x4b1473 : _0x4b1473;
+  if (!_0x96c5c9)
+    return _0x37729e;
+  if (!_0x15da90[_0x3715a0(411)](_0x4b1473))
+    return _0x37729e;
+  return _0x96c5c9;
 }
-function devHost(_0x4aed67, _0x50aade) {
-  const _0x170f7c = _0x3e90, _0x1d8719 = window[_0x170f7c(253)][_0x170f7c(251)], _0x2d05d1 = String(_0x170f7c(271) + _0x170f7c(272) + _0x170f7c(266) + _0x170f7c(260) + _0x170f7c(269) + _0x170f7c(273) + _0x170f7c(256))[_0x170f7c(254)](",")[_0x170f7c(263)]((_0xc97f65) => new URL(_0xc97f65)[_0x170f7c(251)]), _0x3fae14 = _0x50aade ? _0x170f7c(257) + _0x1d8719 : _0x1d8719;
-  if (!_0x4aed67)
-    return _0x3fae14;
-  if (!_0x2d05d1[_0x170f7c(268)](_0x1d8719))
-    return _0x3fae14;
-  return _0x4aed67;
+function _0x30ab(_0x2dfefc, _0x58c29e) {
+  const _0x9a4c52 = _0x1611();
+  return _0x30ab = function(_0x96c5c9, _0x474553) {
+    _0x96c5c9 = _0x96c5c9 - (1277 + 1259 * 7 + -3231 * 3);
+    let _0x4b1473 = _0x9a4c52[_0x96c5c9];
+    return _0x4b1473;
+  }, _0x30ab(_0x2dfefc, _0x58c29e);
 }
-function prepareMessage(_0x36d011) {
-  return "" + _0x36d011;
+function prepareMessage(_0x557eaf) {
+  return "" + _0x557eaf;
 }
-const appearance = Symbol(_0x3ce56c(261));
+const appearance = Symbol(_0xeb6cc3(404));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10432,7 +10432,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isSoundEnabled = useStorage("monoloqSoundEnabled", props.enable_sound);
     const currentLanguage = useStorage("monoloqLanguage", "en");
     const provided = computed(() => {
-      const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
+      var _a2;
+      const textSettings = ((_a2 = props.text) == null ? void 0 : _a2.find((t) => t.language === currentLanguage.value)) || props.text[0];
       const translation = getTranslations(currentLanguage.value);
       return {
         ...props,
@@ -13150,7 +13151,7 @@ const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
-  console.info("%s Installing monoloq widget 4...", "🏋️");
+  console.info("%s Installing monoloq widget 1.6...", "🏋️");
   const getSettings = async (addWww) => await fetch(`${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost(void 0, addWww)}`);
   try {
     const font = document.createElement("link");
