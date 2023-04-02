@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x3443() {
-  const _0x39b795 = ["7qwgskM", "v.d8g529d2", "5206808enSind", "3189153uiqGAo", "18dNFoUS", "12aZWZBs", "https://de", "hostname", "33/", "4789920qGKGyd", "1626wOMpjX", "owgcy.ampl", "281iVTavp", "split", "2659555BzSiwE", "map", "calhost:33", "includes", "appearance", "23890WzEvvV", ",http://lo", "2781BIGIzP", "www.", "7284607bAiKgO", "location", "ifyapp.com"];
-  _0x3443 = function() {
-    return _0x39b795;
+function _0x1f86() {
+  const _0x1a0d9d = ["3540kMsuXL", "29619nCEnwW", "12ZNZdFW", "hostname", "10014334jrZKWe", "location", "split", "355098xPRnjT", "33/", "www.", "1744431sUWtqo", "8nYWtiu", "ifyapp.com", "appearance", "4HpynKd", "map", "15XSnvxE", "52RQokHG", "owgcy.ampl", "7182553QboFYX", "includes", ",http://lo", "3375894paHDUc", "https://de", "v.d8g529d2", "calhost:33", "181119hYPZVX"];
+  _0x1f86 = function() {
+    return _0x1a0d9d;
   };
-  return _0x3443();
+  return _0x1f86();
 }
-const _0x376428 = _0x5445;
-function _0x5445(_0xdde602, _0x3394eb) {
-  const _0x20a161 = _0x3443();
-  return _0x5445 = function(_0x249ecd, _0x4226b4) {
-    _0x249ecd = _0x249ecd - (3884 * -2 + -9878 + 17813);
-    let _0x540808 = _0x20a161[_0x249ecd];
-    return _0x540808;
-  }, _0x5445(_0xdde602, _0x3394eb);
-}
-(function(_0x57bf1e, _0x5e60cc) {
-  const _0x278c45 = _0x5445, _0x386d7d = _0x57bf1e();
+const _0x3ce56c = _0x3e90;
+(function(_0x4e4a78, _0x3ba214) {
+  const _0x4e236e = _0x3e90, _0x2c9c28 = _0x4e4a78();
   while (!![]) {
     try {
-      const _0x161aaf = -parseInt(_0x278c45(189)) / (56 * -71 + 1508 + 823 * 3) * (parseInt(_0x278c45(187)) / (2510 * -2 + 868 * -11 + 14570)) + -parseInt(_0x278c45(180)) / (-9105 + -67 + 9175) + parseInt(_0x278c45(186)) / (-1 * 5805 + -1511 * 3 + -1 * -10342) + parseInt(_0x278c45(191)) / (-8213 + -2 * -353 + 7512) * (parseInt(_0x278c45(181)) / (1 * 3343 + 3227 + -6564)) + parseInt(_0x278c45(177)) / (4150 + -7550 + -3407 * -1) * (-parseInt(_0x278c45(179)) / (5 + -7125 + 7128)) + parseInt(_0x278c45(172)) / (7371 + -853 * -3 + 9921 * -1) * (parseInt(_0x278c45(170)) / (1 * -9805 + -7915 + 17730)) + -parseInt(_0x278c45(174)) / (-192 * -23 + 7755 + -640 * 19) * (parseInt(_0x278c45(182)) / (-1151 + 152 + 1011));
-      if (_0x161aaf === _0x5e60cc)
+      const _0x90f37f = -parseInt(_0x4e236e(262)) / (1231 * 1 + 2319 + 3549 * -1) * (-parseInt(_0x4e236e(255)) / (600 * 3 + -4551 + 2753)) + -parseInt(_0x4e236e(274)) / (2482 + -2 * 397 + -337 * 5) * (parseInt(_0x4e236e(265)) / (4211 * -1 + -1 * -1741 + -1 * -2474)) + -parseInt(_0x4e236e(264)) / (4549 + -3547 * 2 + -3 * -850) * (-parseInt(_0x4e236e(270)) / (5 * 391 + 586 + 169 * -15)) + parseInt(_0x4e236e(267)) / (7815 + 751 * -11 + 453) * (-parseInt(_0x4e236e(259)) / (-11 * 504 + -880 + 6432)) + parseInt(_0x4e236e(276)) / (7058 + 592 * 8 + -5 * 2357) * (parseInt(_0x4e236e(275)) / (-247 * -14 + -2485 * 3 + 4007)) + -parseInt(_0x4e236e(252)) / (1401 + -47 * -202 + -2721 * 4) + parseInt(_0x4e236e(250)) / (1 * 2365 + -5351 * 1 + 2998) * (parseInt(_0x4e236e(258)) / (1944 + 2 * 3438 + -8807 * 1));
+      if (_0x90f37f === _0x3ba214)
         break;
       else
-        _0x386d7d["push"](_0x386d7d["shift"]());
-    } catch (_0x48d0a1) {
-      _0x386d7d["push"](_0x386d7d["shift"]());
+        _0x2c9c28["push"](_0x2c9c28["shift"]());
+    } catch (_0x1aa213) {
+      _0x2c9c28["push"](_0x2c9c28["shift"]());
     }
   }
-})(_0x3443, 631187 + -273746 + 569381);
-function devHost(_0x4226b4, _0x540808) {
-  const _0x3b3860 = _0x5445, _0x330ccb = window[_0x3b3860(175)][_0x3b3860(184)], _0x4a85c8 = String(_0x3b3860(183) + _0x3b3860(178) + _0x3b3860(188) + _0x3b3860(176) + _0x3b3860(171) + _0x3b3860(167) + _0x3b3860(185))[_0x3b3860(190)](",")[_0x3b3860(192)]((_0xe665a9) => new URL(_0xe665a9)[_0x3b3860(184)]), _0x2566d6 = _0x540808 ? _0x3b3860(173) + _0x330ccb : _0x330ccb;
-  if (!_0x4226b4)
-    return _0x2566d6;
-  if (!_0x4a85c8[_0x3b3860(168)](_0x330ccb))
-    return _0x2566d6;
-  return _0x4226b4;
+})(_0x1f86, 1743683 + 14 * 73148 + -1791733 * 1);
+function _0x3e90(_0x26c251, _0x56a305) {
+  const _0x513ac7 = _0x1f86();
+  return _0x3e90 = function(_0x4aed67, _0x50aade) {
+    _0x4aed67 = _0x4aed67 - (-8258 + -1 * -8346 + 81 * 2);
+    let _0x1d8719 = _0x513ac7[_0x4aed67];
+    return _0x1d8719;
+  }, _0x3e90(_0x26c251, _0x56a305);
 }
-function prepareMessage(_0x3c76a1) {
-  return "" + _0x3c76a1;
+function devHost(_0x4aed67, _0x50aade) {
+  const _0x170f7c = _0x3e90, _0x1d8719 = window[_0x170f7c(253)][_0x170f7c(251)], _0x2d05d1 = String(_0x170f7c(271) + _0x170f7c(272) + _0x170f7c(266) + _0x170f7c(260) + _0x170f7c(269) + _0x170f7c(273) + _0x170f7c(256))[_0x170f7c(254)](",")[_0x170f7c(263)]((_0xc97f65) => new URL(_0xc97f65)[_0x170f7c(251)]), _0x3fae14 = _0x50aade ? _0x170f7c(257) + _0x1d8719 : _0x1d8719;
+  if (!_0x4aed67)
+    return _0x3fae14;
+  if (!_0x2d05d1[_0x170f7c(268)](_0x1d8719))
+    return _0x3fae14;
+  return _0x4aed67;
 }
-const appearance = Symbol(_0x376428(169));
+function prepareMessage(_0x36d011) {
+  return "" + _0x36d011;
+}
+const appearance = Symbol(_0x3ce56c(261));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9691,7 +9691,7 @@ const _hoisted_5$3 = [
   _hoisted_4$3
 ];
 const _hoisted_6$3 = { class: "w-full" };
-const _hoisted_7$3 = { class: "flex flex-col p-4" };
+const _hoisted_7$3 = { class: "flex flex-col p-4 mb-3" };
 const _hoisted_8$3 = /* @__PURE__ */ createBaseVNode("span", null, [
   /* @__PURE__ */ createBaseVNode("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -9760,8 +9760,9 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             _hoisted_8$3,
             createTextVNode(" " + toDisplayString(unref(provided).translation.language), 1)
           ]),
-          createBaseVNode("button", {
-            class: "btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px] mb-3",
+          unref(provided).enable_sound ? (openBlock(), createElementBlock("button", {
+            key: 0,
+            class: "btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]",
             "aria-label": "toggle sound",
             onClick: _cache[2] || (_cache[2] = ($event) => toggleSound())
           }, [
@@ -9769,7 +9770,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
               unref(provided).isSoundEnabled.value ? (openBlock(), createElementBlock("svg", _hoisted_9$3, _hoisted_11$1)) : (openBlock(), createElementBlock("svg", _hoisted_12$1, _hoisted_14))
             ]),
             createTextVNode(" " + toDisplayString(unref(provided).translation.sound), 1)
-          ])
+          ])) : createCommentVNode("", true)
         ])
       ]);
     };
@@ -10479,10 +10480,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     if (props.enable_sound)
       play = useSound(`https://cdn.jsdelivr.net/gh/paraloq/chat_widget${"@dev"}/umd/pop-down.mp3`).play;
     function playSound() {
-      if (isSoundEnabled.value && props.enable_sound && showWidget.value) {
-        console.log("here");
+      if (isSoundEnabled.value && props.enable_sound && showWidget.value)
         play();
-      }
     }
     watchEffect(() => {
       if (props._isOpen !== void 0)
@@ -12537,11 +12536,11 @@ to{
 .mt-4{
   margin-top: 16px;
 }
-.mr-4{
-  margin-right: 16px;
-}
 .mb-3{
   margin-bottom: 12px;
+}
+.mr-4{
+  margin-right: 16px;
 }
 .ml-9{
   margin-left: 36px;
