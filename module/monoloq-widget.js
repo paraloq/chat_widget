@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x4c9b() {
-  const _0x56e30e = ["7752FKJoxo", "owgcy.ampl", "location", "includes", "ifyapp.com", "428012hKXrms", "hostname", "calhost:33", "386855AkUmXT", "appearance", "8789080ymOBXs", ",http://lo", "4RggqHK", "https://de", "335841DWBVua", "1190UoaVtR", "www.", "164959CUhfOM", "33/", "3095730bHyCgA", "6wPnonG", "split", "v.d8g529d2", "map"];
-  _0x4c9b = function() {
-    return _0x56e30e;
+const _0x30c842 = _0x52a6;
+function _0x12e7() {
+  const _0x486764 = ["26KReatP", "157701qkhaRk", "381544eFvKeU", "includes", "split", "12774FhadIZ", "location", "ifyapp.com", "appearance", "2465096lbsMbz", "calhost:33", "map", "owgcy.ampl", "v.d8g529d2", "14055110fVHBuZ", "https://de", ",http://lo", "hostname", "886165UMyStV", "32vKWYhD", "33/", "661671VdILwp", "1085gwYYNs", "www."];
+  _0x12e7 = function() {
+    return _0x486764;
   };
-  return _0x4c9b();
+  return _0x12e7();
 }
-const _0x2d7059 = _0x1820;
-(function(_0x2fba57, _0x3e7192) {
-  const _0x488be8 = _0x1820, _0x3f7798 = _0x2fba57();
+function _0x52a6(_0xb4a0e8, _0x31dca7) {
+  const _0x1a6c93 = _0x12e7();
+  return _0x52a6 = function(_0x59bfc8, _0x45f14d) {
+    _0x59bfc8 = _0x59bfc8 - (-8542 + -351 * 16 + 14390);
+    let _0x4bafb4 = _0x1a6c93[_0x59bfc8];
+    return _0x4bafb4;
+  }, _0x52a6(_0xb4a0e8, _0x31dca7);
+}
+(function(_0x525ba4, _0x4813fd) {
+  const _0x2a447f = _0x52a6, _0x4c5c45 = _0x525ba4();
   while (!![]) {
     try {
-      const _0x3ef9b7 = parseInt(_0x488be8(274)) / (-110 * 12 + -1035 * 2 + 1 * 3391) + parseInt(_0x488be8(293)) / (-745 * 11 + 1 * -7695 + -2 * -7946) * (parseInt(_0x488be8(271)) / (4466 + 1039 * 9 + -13814)) + parseInt(_0x488be8(286)) / (-9034 + -5427 + 14465) + parseInt(_0x488be8(289)) / (2587 + -2600 + 18) * (parseInt(_0x488be8(277)) / (7529 + 15 * -305 + -1474 * 2)) + -parseInt(_0x488be8(272)) / (7299 + -972 + -6320) * (-parseInt(_0x488be8(281)) / (-9 * 441 + -2762 * 1 + -293 * -23)) + parseInt(_0x488be8(276)) / (-82 + -7270 + 1 * 7361) + -parseInt(_0x488be8(291)) / (1706 * 3 + 1 * 9409 + -14517);
-      if (_0x3ef9b7 === _0x3e7192)
+      const _0x4cff42 = -parseInt(_0x2a447f(245)) / (-63 + -29 * 275 + -8039 * -1) + parseInt(_0x2a447f(243)) / (9309 + -219 + -2272 * 4) * (-parseInt(_0x2a447f(244)) / (4869 + -5 * 1039 + 329)) + parseInt(_0x2a447f(252)) / (1395 + -3381 + 1990) + parseInt(_0x2a447f(237)) / (5 * 1993 + -2143 * 3 + -1177 * 3) + parseInt(_0x2a447f(248)) / (-3826 * 2 + 6508 + 1150) * (-parseInt(_0x2a447f(241)) / (-1 * -6054 + 7636 + -13683)) + parseInt(_0x2a447f(238)) / (1 * 3503 + 897 * -6 + -37 * -51) * (-parseInt(_0x2a447f(240)) / (-3417 + 85 * -83 + -10481 * -1)) + parseInt(_0x2a447f(233)) / (4889 + -84 * -53 + -1333 * 7);
+      if (_0x4cff42 === _0x4813fd)
         break;
       else
-        _0x3f7798["push"](_0x3f7798["shift"]());
-    } catch (_0x53e26e) {
-      _0x3f7798["push"](_0x3f7798["shift"]());
+        _0x4c5c45["push"](_0x4c5c45["shift"]());
+    } catch (_0x25076b) {
+      _0x4c5c45["push"](_0x4c5c45["shift"]());
     }
   }
-})(_0x4c9b, 88 * -2228 + -271344 + 1 * 670427);
-function devHost(_0x38f644, _0x1c342a) {
-  const _0x49ab9b = _0x1820, _0x24b64a = window[_0x49ab9b(283)][_0x49ab9b(287)], _0x122675 = String(_0x49ab9b(270) + _0x49ab9b(279) + _0x49ab9b(282) + _0x49ab9b(285) + _0x49ab9b(292) + _0x49ab9b(288) + _0x49ab9b(275))[_0x49ab9b(278)](",")[_0x49ab9b(280)]((_0x53bf16) => new URL(_0x53bf16)[_0x49ab9b(287)]), _0x23979c = _0x1c342a ? _0x49ab9b(273) + _0x24b64a : _0x24b64a;
-  if (!_0x38f644)
-    return _0x23979c;
-  if (!_0x122675[_0x49ab9b(284)](_0x24b64a))
-    return _0x23979c;
-  return _0x38f644;
+})(_0x12e7, -4 * 40837 + -6 * -26394 + 515016);
+function devHost(_0x45f14d, _0x4bafb4) {
+  const _0x28b7eb = _0x52a6, _0x5f025a = window[_0x28b7eb(249)][_0x28b7eb(236)], _0x1568c4 = String(_0x28b7eb(234) + _0x28b7eb(232) + _0x28b7eb(255) + _0x28b7eb(250) + _0x28b7eb(235) + _0x28b7eb(253) + _0x28b7eb(239))[_0x28b7eb(247)](",")[_0x28b7eb(254)]((_0x2b0e09) => new URL(_0x2b0e09)[_0x28b7eb(236)]), _0x4ef524 = _0x4bafb4 ? _0x28b7eb(242) + _0x5f025a : _0x5f025a;
+  if (!_0x45f14d)
+    return _0x4ef524;
+  if (!_0x1568c4[_0x28b7eb(246)](_0x5f025a))
+    return _0x4ef524;
+  return _0x45f14d;
 }
-function prepareMessage(_0x5ab701) {
-  return "" + _0x5ab701;
+function prepareMessage(_0x4a7ae3) {
+  return "" + _0x4a7ae3;
 }
-function _0x1820(_0xe635bb, _0xab5a1b) {
-  const _0x38cbff = _0x4c9b();
-  return _0x1820 = function(_0x38f644, _0x1c342a) {
-    _0x38f644 = _0x38f644 - (-18 * 467 + -6321 * -1 + 2355);
-    let _0x24b64a = _0x38cbff[_0x38f644];
-    return _0x24b64a;
-  }, _0x1820(_0xe635bb, _0xab5a1b);
-}
-const appearance = Symbol(_0x2d7059(290));
+const appearance = Symbol(_0x30c842(251));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10477,7 +10477,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     let play = () => {
     };
     if (props.enable_sound)
-      play = useSound("https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/pop-down.mp3").play;
+      play = useSound(`https://cdn.jsdelivr.net/gh/paraloq/chat_widget${"@dev"}/umd/pop-down.mp3`).play;
     function playSound() {
       if (isSoundEnabled.value && props.enable_sound && showWidget.value) {
         console.log("here");
