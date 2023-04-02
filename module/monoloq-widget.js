@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x1611() {
-  const _0x55de97 = ["33/", "owgcy.ampl", "split", "3762856EKNkqe", "https://de", "hostname", "4741348TfnmJk", "location", ",http://lo", "982610XngrPR", "www.", "3004TIHXEO", "3906625sTVoyg", "126mHrwoO", "v.d8g529d2", "47WeMZoQ", "calhost:33", "appearance", "ifyapp.com", "30264443HwfuKA", "map", "3FFEtci", "67602KIgarc", "1064hQJDTZ", "includes"];
-  _0x1611 = function() {
-    return _0x55de97;
-  };
-  return _0x1611();
-}
-const _0xeb6cc3 = _0x30ab;
-(function(_0x418851, _0x385041) {
-  const _0x59277c = _0x30ab, _0x3a7f61 = _0x418851();
+const _0x51bb1a = _0x3228;
+(function(_0x34b0e4, _0x2ee0f6) {
+  const _0x4e0cc2 = _0x3228, _0x1177ff = _0x34b0e4();
   while (!![]) {
     try {
-      const _0x3c52e4 = -parseInt(_0x59277c(402)) / (-1 * -572 + 2867 + -6 * 573) * (-parseInt(_0x59277c(398)) / (-5162 + -2005 + -1 * -7169)) + parseInt(_0x59277c(408)) / (138 + 5 * -1343 + -329 * -20) * (-parseInt(_0x59277c(418)) / (2360 + -11 * -359 + 97 * -65)) + -parseInt(_0x59277c(399)) / (3080 + 1 * -8173 + 5098) + parseInt(_0x59277c(409)) / (-5063 + 4480 + -31 * -19) * (-parseInt(_0x59277c(410)) / (-829 * -1 + 5 * -1751 + 7933)) + parseInt(_0x59277c(415)) / (-9638 + 6243 + 3403 * 1) + parseInt(_0x59277c(400)) / (-194 * -18 + 47 + -3530) * (parseInt(_0x59277c(421)) / (53 * -53 + -1171 * 2 + 5161)) + parseInt(_0x59277c(406)) / (9227 * 1 + -634 * -3 + -34 * 327);
-      if (_0x3c52e4 === _0x385041)
+      const _0x3561eb = -parseInt(_0x4e0cc2(428)) / (1774 + 4013 + 11 * -526) * (-parseInt(_0x4e0cc2(409)) / (7088 + 1 * 1631 + -8717)) + -parseInt(_0x4e0cc2(405)) / (-1783 + -1 * -8939 + 23 * -311) + parseInt(_0x4e0cc2(416)) / (-34 * 240 + -7355 + 15519) + -parseInt(_0x4e0cc2(420)) / (-7262 + 60 * -102 + 13387) * (parseInt(_0x4e0cc2(408)) / (263 * 10 + -5722 + 3098)) + parseInt(_0x4e0cc2(415)) / (1 * 4127 + 1 * 9393 + -1 * 13513) * (parseInt(_0x4e0cc2(418)) / (4 * -418 + 640 * -6 + 5520)) + parseInt(_0x4e0cc2(413)) / (-4970 + 3696 + 1 * 1283) + -parseInt(_0x4e0cc2(411)) / (3859 + 799 * 7 + 2 * -4721);
+      if (_0x3561eb === _0x2ee0f6)
         break;
       else
-        _0x3a7f61["push"](_0x3a7f61["shift"]());
-    } catch (_0x44955d) {
-      _0x3a7f61["push"](_0x3a7f61["shift"]());
+        _0x1177ff["push"](_0x1177ff["shift"]());
+    } catch (_0xc7f10c) {
+      _0x1177ff["push"](_0x1177ff["shift"]());
     }
   }
-})(_0x1611, -6 * 56345 + -1 * -283291 + 3 * 347817);
-function devHost(_0x96c5c9, _0x474553) {
-  const _0x3715a0 = _0x30ab, _0x4b1473 = window[_0x3715a0(419)][_0x3715a0(417)], _0x15da90 = String(_0x3715a0(416) + _0x3715a0(401) + _0x3715a0(413) + _0x3715a0(405) + _0x3715a0(420) + _0x3715a0(403) + _0x3715a0(412))[_0x3715a0(414)](",")[_0x3715a0(407)]((_0x2bccf8) => new URL(_0x2bccf8)[_0x3715a0(417)]), _0x37729e = _0x474553 ? _0x3715a0(397) + _0x4b1473 : _0x4b1473;
-  if (!_0x96c5c9)
-    return _0x37729e;
-  if (!_0x15da90[_0x3715a0(411)](_0x4b1473))
-    return _0x37729e;
-  return _0x96c5c9;
+})(_0x34f2, 172148 + 325284 + 77578 * -4);
+function devHost(_0x2b569a, _0xcb2c9e) {
+  const _0x1405a8 = _0x3228, _0x36f3c5 = window[_0x1405a8(417)][_0x1405a8(410)], _0x253580 = String(_0x1405a8(414) + _0x1405a8(427) + _0x1405a8(426) + _0x1405a8(422) + _0x1405a8(425) + _0x1405a8(423) + _0x1405a8(421))[_0x1405a8(419)](",")[_0x1405a8(407)]((_0x167189) => new URL(_0x167189)[_0x1405a8(410)]), _0x3ce1c3 = _0xcb2c9e ? _0x1405a8(424) + _0x36f3c5 : _0x36f3c5;
+  if (!_0x2b569a)
+    return _0x3ce1c3;
+  if (!_0x253580[_0x1405a8(412)](_0x36f3c5))
+    return _0x3ce1c3;
+  return _0x2b569a;
 }
-function _0x30ab(_0x2dfefc, _0x58c29e) {
-  const _0x9a4c52 = _0x1611();
-  return _0x30ab = function(_0x96c5c9, _0x474553) {
-    _0x96c5c9 = _0x96c5c9 - (1277 + 1259 * 7 + -3231 * 3);
-    let _0x4b1473 = _0x9a4c52[_0x96c5c9];
-    return _0x4b1473;
-  }, _0x30ab(_0x2dfefc, _0x58c29e);
+function _0x3228(_0x37b8d0, _0x949daf) {
+  const _0x4b5e2a = _0x34f2();
+  return _0x3228 = function(_0x2b569a, _0xcb2c9e) {
+    _0x2b569a = _0x2b569a - (2 * -4563 + -3443 + 2 * 6487);
+    let _0x36f3c5 = _0x4b5e2a[_0x2b569a];
+    return _0x36f3c5;
+  }, _0x3228(_0x37b8d0, _0x949daf);
 }
-function prepareMessage(_0x557eaf) {
-  return "" + _0x557eaf;
+function prepareMessage(_0x51b38d) {
+  return "" + _0x51b38d;
 }
-const appearance = Symbol(_0xeb6cc3(404));
+function _0x34f2() {
+  const _0x5cea5b = ["393236UQXVTp", "location", "8JnwSgs", "split", "5JitIuw", "33/", "ifyapp.com", "calhost:33", "www.", ",http://lo", "owgcy.ampl", "v.d8g529d2", "2XaaUaV", "59958dksaCt", "appearance", "map", "636204HArlKs", "105992sGozyb", "hostname", "2623780WsVmDa", "includes", "2183814EbOlrJ", "https://de", "899997TAkzvs"];
+  _0x34f2 = function() {
+    return _0x5cea5b;
+  };
+  return _0x34f2();
+}
+const appearance = Symbol(_0x51bb1a(406));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9276,99 +9276,6 @@ const _TransitionPresets = {
 __spreadValues({
   linear: identity
 }, _TransitionPresets);
-function useSound(url, { volume = 1, playbackRate = 1, soundEnabled = true, interrupt = false, autoplay = false, onload, ...delegated } = {}) {
-  const HowlConstructor = ref(null);
-  const isPlaying = ref(false);
-  const duration = ref(null);
-  const sound = ref(null);
-  function handleLoad() {
-    var _a2;
-    if (typeof onload === "function")
-      onload.call(this);
-    duration.value = (duration.value || ((_a2 = sound.value) == null ? void 0 : _a2.duration()) || 0) * 1e3;
-    if (autoplay === true) {
-      isPlaying.value = true;
-    }
-  }
-  onMounted(async () => {
-    const howler = await import("./howler-efe5138d.js").then((n) => n.h);
-    HowlConstructor.value = howler.default.Howl;
-    sound.value = new HowlConstructor.value({
-      src: unref(url),
-      volume: unref(volume),
-      rate: unref(playbackRate),
-      onload: handleLoad,
-      ...delegated
-    });
-  });
-  watch(
-    () => [url],
-    () => {
-      if (HowlConstructor.value && HowlConstructor.value && sound && sound.value) {
-        sound.value = new HowlConstructor.value({
-          src: unref(url),
-          volume: unref(volume),
-          rate: unref(playbackRate),
-          onload: handleLoad,
-          ...delegated
-        });
-      }
-    }
-  );
-  watch(
-    () => [unref(volume), unref(playbackRate)],
-    () => {
-      if (sound.value) {
-        sound.value.volume(unref(volume));
-        sound.value.rate(unref(playbackRate));
-      }
-    }
-  );
-  const play = (options) => {
-    if (typeof options === "undefined") {
-      options = {};
-    }
-    if (!sound.value || !soundEnabled && !options.forceSoundEnabled) {
-      return;
-    }
-    if (interrupt) {
-      sound.value.stop();
-    }
-    if (options.playbackRate) {
-      sound.value.rate(options.playbackRate);
-    }
-    sound.value.play(options.id);
-    sound.value.once("end", () => {
-      if (sound.value && sound.value && !sound.value.playing()) {
-        isPlaying.value = false;
-      }
-    });
-    isPlaying.value = true;
-  };
-  const stop = (id) => {
-    if (!sound.value) {
-      return;
-    }
-    sound.value.stop(typeof id === "number" ? id : void 0);
-    isPlaying.value = false;
-  };
-  const pause = (id) => {
-    if (!sound.value) {
-      return;
-    }
-    sound.value.pause(typeof id === "number" ? id : void 0);
-    isPlaying.value = false;
-  };
-  const returnedValue = {
-    play,
-    sound,
-    isPlaying,
-    duration,
-    pause,
-    stop
-  };
-  return returnedValue;
-}
 const _hoisted_1$a = { class: "flex items-center" };
 const _hoisted_2$9 = /* @__PURE__ */ createBaseVNode("path", {
   fill: "currentColor",
@@ -9378,7 +9285,7 @@ const _hoisted_3$8 = [
   _hoisted_2$9
 ];
 const _hoisted_4$7 = { class: "avatar" };
-const _hoisted_5$7 = { class: "w-8 rounded-full" };
+const _hoisted_5$7 = { class: "w-8 rounded" };
 const _hoisted_6$7 = ["src"];
 const _hoisted_7$6 = { class: "flex items-center" };
 const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
@@ -9390,18 +9297,18 @@ const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
     d: "m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95l-4.95 4.95Z"
   })
 ], -1);
-const _hoisted_9$5 = [
+const _hoisted_9$4 = [
   _hoisted_8$5
 ];
-const _hoisted_10$4 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_10$3 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   fill: "currentColor"
 }, [
   /* @__PURE__ */ createBaseVNode("path", { d: "M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" })
 ], -1);
-const _hoisted_11$3 = [
-  _hoisted_10$4
+const _hoisted_11$2 = [
+  _hoisted_10$3
 ];
 const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __name: "ChatHeader",
@@ -9445,7 +9352,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-6 h-6", unref(provided).textClass])
-            }, _hoisted_9$5, 2)
+            }, _hoisted_9$4, 2)
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
@@ -9454,7 +9361,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-5 h-5", unref(provided).textClass])
-            }, _hoisted_11$3, 2)
+            }, _hoisted_11$2, 2)
           ])
         ])
       ], 4);
@@ -9478,13 +9385,13 @@ const _hoisted_8$4 = {
   key: 0,
   class: "mt-3 text-xs"
 };
-const _hoisted_9$4 = ["href"];
-const _hoisted_10$3 = {
+const _hoisted_9$3 = ["href"];
+const _hoisted_10$2 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
-const _hoisted_11$2 = { key: 0 };
-const _hoisted_12$2 = { class: "text-xs opacity-50" };
+const _hoisted_11$1 = { key: 0 };
+const _hoisted_12$1 = { class: "text-xs opacity-50" };
 const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
@@ -9547,14 +9454,14 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
                 href: props.message.source_links[0],
                 style: normalizeStyle({ color: unref(provided).mainColor }),
                 target: "_blank"
-              }, "here", 12, _hoisted_9$4),
+              }, "here", 12, _hoisted_9$3),
               createTextVNode(" for more information. ")
             ])) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$3, [
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11$2, [
-            createBaseVNode("time", _hoisted_12$2, toDisplayString(unref(time)), 1)
+        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11$1, [
+            createBaseVNode("time", _hoisted_12$1, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
             class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-[24px] py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
@@ -9704,41 +9611,11 @@ const _hoisted_8$3 = /* @__PURE__ */ createBaseVNode("span", null, [
     })
   ])
 ], -1);
-const _hoisted_9$3 = {
-  key: 0,
-  xmlns: "http://www.w3.org/2000/svg",
-  class: "h-5 w-5 mr-4",
-  viewBox: "0 0 256 256"
-};
-const _hoisted_10$2 = /* @__PURE__ */ createBaseVNode("path", {
-  fill: "currentColor",
-  d: "M155.51 24.81a8 8 0 0 0-8.42.88L77.25 80H32a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h45.25l69.84 54.31A8 8 0 0 0 160 224V32a8 8 0 0 0-4.49-7.19ZM72 160H32V96h40Zm126-58.44a40 40 0 0 1 0 52.88a8 8 0 0 1-12-10.58a24 24 0 0 0 0-31.72a8 8 0 0 1 12-10.58ZM248 128a79.9 79.9 0 0 1-20.37 53.34a8 8 0 0 1-11.92-10.67a64 64 0 0 0 0-85.33a8 8 0 1 1 11.92-10.67A79.83 79.83 0 0 1 248 128Z"
-}, null, -1);
-const _hoisted_11$1 = [
-  _hoisted_10$2
-];
-const _hoisted_12$1 = {
-  key: 1,
-  xmlns: "http://www.w3.org/2000/svg",
-  class: "h-5 w-5 mr-4",
-  viewBox: "0 0 256 256"
-};
-const _hoisted_13 = /* @__PURE__ */ createBaseVNode("path", {
-  fill: "currentColor",
-  d: "M155.51 24.81a8 8 0 0 0-8.42.88L77.25 80H32a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h45.25l69.84 54.31A8 8 0 0 0 160 224V32a8 8 0 0 0-4.49-7.19ZM32 96h40v64H32Z"
-}, null, -1);
-const _hoisted_14 = [
-  _hoisted_13
-];
 const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "ChatSettings",
   emits: ["openLanguage", "toggleSound", "close"],
   setup(__props, { emit: emit2 }) {
     const provided = inject(appearance);
-    function toggleSound() {
-      provided.value.isSoundEnabled.value = !provided.value.isSoundEnabled.value;
-      emit2("close");
-    }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$6, [
         createBaseVNode("div", _hoisted_2$5, [
@@ -9759,18 +9636,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           }, [
             _hoisted_8$3,
             createTextVNode(" " + toDisplayString(unref(provided).translation.language), 1)
-          ]),
-          unref(provided).enable_sound ? (openBlock(), createElementBlock("button", {
-            key: 0,
-            class: "btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]",
-            "aria-label": "toggle sound",
-            onClick: _cache[2] || (_cache[2] = ($event) => toggleSound())
-          }, [
-            createBaseVNode("span", null, [
-              unref(provided).isSoundEnabled.value ? (openBlock(), createElementBlock("svg", _hoisted_9$3, _hoisted_11$1)) : (openBlock(), createElementBlock("svg", _hoisted_12$1, _hoisted_14))
-            ]),
-            createTextVNode(" " + toDisplayString(unref(provided).translation.sound), 1)
-          ])) : createCommentVNode("", true)
+          ])
         ])
       ]);
     };
@@ -10406,7 +10272,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     base_color: { default: "#4fafe4" },
     avatar_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/stock-avatar.jpeg" },
-    logo_asset_url: null,
+    logo_asset_url: { default: "https://d1xecltoymgutn.cloudfront.net/monoloq-assets/Asset%2014@4x.png" },
     text: { default: () => [{
       message_placeholder: "Type your message here...",
       language: "en"
@@ -10429,7 +10295,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const isSoundEnabled = useStorage("monoloqSoundEnabled", props.enable_sound);
     const currentLanguage = useStorage("monoloqLanguage", "en");
     const provided = computed(() => {
       var _a2;
@@ -10440,7 +10305,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         ...useTextClass(props.base_color),
         ...textSettings,
         translation,
-        isSoundEnabled,
+        // isSoundEnabled,
         currentLanguage: currentLanguage.value
       };
     });
@@ -10476,14 +10341,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isLoading = ref(false);
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
     const isLanguageSettingsOpen = useStorage("monoloqLanguageSettingsOpen", false);
-    let play = () => {
-    };
-    if (props.enable_sound)
-      play = useSound(`https://cdn.jsdelivr.net/gh/paraloq/chat_widget${"@dev"}/umd/pop-down.mp3`).play;
-    function playSound() {
-      if (isSoundEnabled.value && props.enable_sound && showWidget.value)
-        play();
-    }
     watchEffect(() => {
       if (props._isOpen !== void 0)
         isChatOpen.value = props._isOpen;
@@ -10531,8 +10388,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (!conversationId.value)
         return await initiate();
       const serverResponse = await handleMessage(message);
-      if (!isChatOpen.value)
-        playSound();
       const maybeRecommendedProduct = serverResponse == null ? void 0 : serverResponse.recommended_products;
       if (!(maybeRecommendedProduct == null ? void 0 : maybeRecommendedProduct.length))
         return;
@@ -10621,7 +10476,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         "/chat/initiate",
         { language: currentLanguage.value }
       );
-      playSound();
       conversationId.value = msg == null ? void 0 : msg.conversation_id;
     }
     async function resume() {
@@ -12725,6 +12579,9 @@ to{
 }
 .rounded-full{
   border-radius: 9999px;
+}
+.rounded{
+  border-radius: 0.25rem;
 }
 .rounded-2xl{
   border-radius: 1rem;
