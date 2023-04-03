@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x94b55a = _0x394e;
-(function(_0x3bbb88, _0x14ea28) {
-  const _0x5a24e9 = _0x394e, _0x22c128 = _0x3bbb88();
+const _0x4758ec = _0x9e10;
+function _0x9e10(_0x4d380d, _0x57c85d) {
+  const _0x3c3e9d = _0x5a89();
+  return _0x9e10 = function(_0x576b68, _0x474e4b) {
+    _0x576b68 = _0x576b68 - (-984 * 9 + -2983 + 1350 * 9);
+    let _0x5f0294 = _0x3c3e9d[_0x576b68];
+    return _0x5f0294;
+  }, _0x9e10(_0x4d380d, _0x57c85d);
+}
+(function(_0x5b125e, _0x21abf1) {
+  const _0x236e65 = _0x9e10, _0x498043 = _0x5b125e();
   while (!![]) {
     try {
-      const _0x5202c3 = parseInt(_0x5a24e9(420)) / (-278 + 2566 + -2287) + parseInt(_0x5a24e9(409)) / (-5115 + 1 * 3388 + -91 * -19) * (parseInt(_0x5a24e9(410)) / (8094 + -7588 + -503)) + -parseInt(_0x5a24e9(421)) / (9231 + -2 * 3917 + -1393) * (parseInt(_0x5a24e9(419)) / (-7757 * 1 + 129 * 30 + 3892)) + -parseInt(_0x5a24e9(413)) / (3862 + -6546 + 2690) + parseInt(_0x5a24e9(417)) / (-64 * 90 + 1 * 4889 + -878 * -1) + -parseInt(_0x5a24e9(406)) / (-3619 * 1 + 2 * -2587 + 8801) * (-parseInt(_0x5a24e9(423)) / (2193 + -1 * 4658 + 2474)) + parseInt(_0x5a24e9(411)) / (-3370 + 4894 + 2 * -757);
-      if (_0x5202c3 === _0x14ea28)
+      const _0x269cff = -parseInt(_0x236e65(314)) / (87 * 23 + 2481 * 4 + 542 * -22) + parseInt(_0x236e65(312)) / (-793 * 11 + 427 + -2 * -4149) * (parseInt(_0x236e65(328)) / (-104 * -48 + -1060 + -3929)) + parseInt(_0x236e65(311)) / (-9500 + 1695 + 7809) * (-parseInt(_0x236e65(326)) / (218 * 34 + 1625 + 1 * -9032)) + parseInt(_0x236e65(325)) / (4795 + 67 * -127 + 8 * 465) + -parseInt(_0x236e65(313)) / (313 + -6871 + 6565) + parseInt(_0x236e65(315)) / (6479 + 6997 * 1 + -7 * 1924) * (parseInt(_0x236e65(320)) / (-1114 * -1 + 3740 + -4845)) + parseInt(_0x236e65(322)) / (4 * 926 + -3466 * 2 + 2 * 1619);
+      if (_0x269cff === _0x21abf1)
         break;
       else
-        _0x22c128["push"](_0x22c128["shift"]());
-    } catch (_0xf38e98) {
-      _0x22c128["push"](_0x22c128["shift"]());
+        _0x498043["push"](_0x498043["shift"]());
+    } catch (_0x1efb8e) {
+      _0x498043["push"](_0x498043["shift"]());
     }
   }
-})(_0x2f6d, -34581 * 51 + -791643 + 1 * 3457683);
-function _0x394e(_0x1c1c8f, _0x23ab88) {
-  const _0x5f0716 = _0x2f6d();
-  return _0x394e = function(_0x13bce4, _0xc2dd8) {
-    _0x13bce4 = _0x13bce4 - (-164 + 5 * -1707 + 9104);
-    let _0x57dd55 = _0x5f0716[_0x13bce4];
-    return _0x57dd55;
-  }, _0x394e(_0x1c1c8f, _0x23ab88);
+})(_0x5a89, -2 * 211319 + -1144607 + -12430 * -173);
+function devHost(_0x576b68, _0x474e4b) {
+  const _0x5463da = _0x9e10, _0x5f0294 = window[_0x5463da(321)][_0x5463da(323)], _0x1c52cb = String(_0x5463da(317) + _0x5463da(327) + "ai")[_0x5463da(316)](",")[_0x5463da(324)]((_0x57db46) => new URL(_0x57db46)[_0x5463da(323)]), _0x36acaa = _0x474e4b ? _0x5463da(319) + _0x5f0294 : _0x5f0294;
+  if (!_0x576b68)
+    return _0x36acaa;
+  if (!_0x1c52cb[_0x5463da(318)](_0x5f0294))
+    return _0x36acaa;
+  return _0x576b68;
 }
-function devHost(_0xc2dd8, _0x57dd55) {
-  const _0x4f3f7e = _0x394e, _0x287c63 = window[_0x4f3f7e(412)][_0x4f3f7e(407)], _0x497521 = String(_0x4f3f7e(418) + _0x4f3f7e(405) + "ai")[_0x4f3f7e(422)](",")[_0x4f3f7e(415)]((_0x4835f1) => new URL(_0x4835f1)[_0x4f3f7e(407)]), _0x3b0e74 = _0x57dd55 ? _0x4f3f7e(416) + _0x287c63 : _0x287c63;
-  if (!_0xc2dd8)
-    return _0x3b0e74;
-  if (!_0x497521[_0x4f3f7e(414)](_0x287c63))
-    return _0x3b0e74;
-  return _0xc2dd8;
+function prepareMessage(_0xd5758b) {
+  return "" + _0xd5758b;
 }
-function _0x2f6d() {
-  const _0x1ddbc3 = ["map", "www.", "2159717jEIHCV", "https://ap", "236935wBzlXU", "647956HiKpkb", "12pFlSBQ", "split", "90XfsRPW", "p.monoloq.", "271680dMDtQU", "hostname", "appearance", "303664VjxGNa", "3TchIJk", "11106600edPDxH", "location", "9084054AFIsxq", "includes"];
-  _0x2f6d = function() {
-    return _0x1ddbc3;
+function _0x5a89() {
+  const _0x207375 = ["appearance", "3148AqJreJ", "157382dmYqLp", "2110227WHTBST", "558928tIZYMZ", "280bxJxgc", "split", "https://ap", "includes", "www.", "35163evPCsz", "location", "11122130jrpbXN", "hostname", "map", "648792OzthwA", "6450uSOpwQ", "p.monoloq.", "42cEYDDK"];
+  _0x5a89 = function() {
+    return _0x207375;
   };
-  return _0x2f6d();
+  return _0x5a89();
 }
-function prepareMessage(_0xf0aace) {
-  return "" + _0xf0aace;
-}
-const appearance = Symbol(_0x94b55a(408));
+const appearance = Symbol(_0x4758ec(329));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -8166,7 +8166,7 @@ const _sfc_main$1$1 = {
     }
   }
 };
-function _sfc_render$1$1(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock(resolveDynamicComponent(_ctx.cComponent), mergeProps({ name: "scale" }, _ctx.cAttrs, toHandlers(_ctx.cHooks)), {
     default: withCtx(() => [
       renderSlot(_ctx.$slots, "default")
@@ -8174,7 +8174,7 @@ function _sfc_render$1$1(_ctx, _cache, $props, $setup, $data, $options) {
     _: 3
   }, 16);
 }
-const TransitionScale = /* @__PURE__ */ _export_sfc$1(_sfc_main$1$1, [["render", _sfc_render$1$1]]);
+const TransitionScale = /* @__PURE__ */ _export_sfc$1(_sfc_main$1$1, [["render", _sfc_render$1]]);
 const validateSlideOffset = (value) => validateEnterLeave(value, (val) => {
   if (!isArray(val))
     return false;
@@ -9276,29 +9276,19 @@ const _TransitionPresets = {
 __spreadValues({
   linear: identity
 }, _TransitionPresets);
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
-const _sfc_main$a = {};
-const _hoisted_1$a = {
-  id: "Layer_2",
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 29.19 29.28"
-};
-const _hoisted_2$9 = /* @__PURE__ */ createStaticVNode('<g id="Layer_1-2"><g><path fill="#f8b1ad" d="M29.19,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,7.36c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06,1.34,1.38,2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M14.59,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path><path fill="currentColor" d="M29.17,21.99c0,.77-.12,1.59-.35,2.43-.24,.85-.67,1.67-1.32,2.47-.64,.8-1.48,1.4-2.5,1.8-1.02,.4-2.06,.6-3.13,.6s-2.09-.17-2.99-.53c-.91-.35-1.69-.85-2.33-1.5-.64-.64-1.13-1.41-1.46-2.31s-.5-1.88-.5-2.95,.17-2.02,.52-2.93,.83-1.7,1.47-2.36c.63-.67,1.4-1.18,2.31-1.53,.91-.35,1.91-.53,2.99-.53,2.18,0,3.93,.69,5.28,2.06s2.02,3.14,2.02,5.29Zm-1.57,.03c0-1.8-.52-3.26-1.57-4.38s-2.43-1.68-4.16-1.68-3.18,.56-4.21,1.68-1.55,2.58-1.55,4.38,.51,3.21,1.55,4.3c1.03,1.08,2.44,1.63,4.21,1.63,.64,0,1.3-.1,1.96-.29,.67-.18,1.28-.51,1.83-.98s1.02-1.08,1.38-1.86c.37-.77,.55-1.71,.55-2.8Z"></path></g></g>', 1);
+const _hoisted_1$a = { class: "flex items-center" };
+const _hoisted_2$9 = /* @__PURE__ */ createBaseVNode("path", {
+  fill: "currentColor",
+  d: "M9.5 13a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0z"
+}, null, -1);
 const _hoisted_3$8 = [
   _hoisted_2$9
 ];
-function _sfc_render$1(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$8);
-}
-const VueLogo = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$1]]);
-const _hoisted_1$9 = { class: "flex items-center" };
-const _hoisted_2$8 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_4$7 = { class: "avatar" };
+const _hoisted_5$7 = { class: "w-8 rounded" };
+const _hoisted_6$7 = ["src"];
+const _hoisted_7$6 = { class: "flex items-center" };
+const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 }, [
@@ -9307,20 +9297,20 @@ const _hoisted_2$8 = /* @__PURE__ */ createBaseVNode("svg", {
     d: "m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95l-4.95 4.95Z"
   })
 ], -1);
-const _hoisted_3$7 = [
-  _hoisted_2$8
+const _hoisted_9$4 = [
+  _hoisted_8$5
 ];
-const _hoisted_4$6 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_10$3 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   fill: "currentColor"
 }, [
   /* @__PURE__ */ createBaseVNode("path", { d: "M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" })
 ], -1);
-const _hoisted_5$6 = [
-  _hoisted_4$6
+const _hoisted_11$2 = [
+  _hoisted_10$3
 ];
-const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __name: "ChatHeader",
   emits: ["clear", "close", "openSetting"],
   setup(__props, { emit: emit2 }) {
@@ -9330,17 +9320,31 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
         class: "flex justify-between rounded-t-2xl items-center px-3 h-16 min-h-16 z-40",
         style: normalizeStyle(unref(provided).style)
       }, [
-        createBaseVNode("button", {
-          class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
-          "aria-label": "change assistant language",
-          onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
-        }, [
-          createVNode(VueLogo, { class: "w-8 text-white" })
+        createBaseVNode("div", _hoisted_1$a, [
+          createBaseVNode("button", {
+            class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
+            "aria-label": "open settings",
+            onClick: _cache[0] || (_cache[0] = ($event) => emit2("openSetting"))
+          }, [
+            (openBlock(), createElementBlock("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              class: normalizeClass(["h-5 my-auto", unref(provided).textClass]),
+              viewBox: "0 0 16 16"
+            }, _hoisted_3$8, 2))
+          ]),
+          createBaseVNode("div", _hoisted_4$7, [
+            createBaseVNode("div", _hoisted_5$7, [
+              unref(provided).logo_asset_url ? (openBlock(), createElementBlock("img", {
+                key: 0,
+                src: unref(provided).logo_asset_url
+              }, null, 8, _hoisted_6$7)) : createCommentVNode("", true)
+            ])
+          ])
         ]),
         createBaseVNode("h1", {
-          class: normalizeClass(["text-lg text-center py-3", unref(provided).textClass])
+          class: normalizeClass(["text-lg text-center py-3 mx-2 hyphens-auto", unref(provided).textClass])
         }, toDisplayString(unref(provided).header_text), 3),
-        createBaseVNode("div", _hoisted_1$9, [
+        createBaseVNode("div", _hoisted_7$6, [
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
             "aria-label": "clear chat",
@@ -9348,7 +9352,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-6 h-6", unref(provided).textClass])
-            }, _hoisted_3$7, 2)
+            }, _hoisted_9$4, 2)
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
@@ -9357,38 +9361,38 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-5 h-5", unref(provided).textClass])
-            }, _hoisted_5$6, 2)
+            }, _hoisted_11$2, 2)
           ])
         ])
       ], 4);
     };
   }
 });
-const _hoisted_1$8 = {
+const _hoisted_1$9 = {
   key: 0,
   class: "chat chat-start !py-1 !gap-x-[12px]"
 };
-const _hoisted_2$7 = { class: "chat-image avatar" };
-const _hoisted_3$6 = { class: "w-8 rounded-full" };
-const _hoisted_4$5 = ["src"];
-const _hoisted_5$5 = {
+const _hoisted_2$8 = { class: "chat-image avatar" };
+const _hoisted_3$7 = { class: "w-8 rounded-full" };
+const _hoisted_4$6 = ["src"];
+const _hoisted_5$6 = {
   key: 0,
   class: "chat-header"
 };
-const _hoisted_6$5 = { class: "text-xs opacity-50" };
-const _hoisted_7$4 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
-const _hoisted_8$3 = {
+const _hoisted_6$6 = { class: "text-xs opacity-50" };
+const _hoisted_7$5 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
+const _hoisted_8$4 = {
   key: 0,
   class: "mt-3 text-xs"
 };
-const _hoisted_9$2 = ["href"];
+const _hoisted_9$3 = ["href"];
 const _hoisted_10$2 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
 const _hoisted_11$1 = { key: 0 };
 const _hoisted_12$1 = { class: "text-xs opacity-50" };
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
     message: null,
@@ -9413,11 +9417,13 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
       const yesterday = new Date(now);
       yesterday.setDate(now.getDate() - 1);
       const language = navigator.language;
+      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       if (date.toDateString() === now.toDateString()) {
         return new Intl.DateTimeFormat(language, {
           hour: "numeric",
           minute: "numeric",
-          hour12: false
+          hour12: false,
+          timeZone
         }).format(date);
       } else if (date.toDateString() === yesterday.toDateString()) {
         return "Yesterday";
@@ -9425,32 +9431,33 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         return new Intl.DateTimeFormat(language, {
           hour12: false,
           day: "numeric",
-          month: "short"
+          month: "short",
+          timeZone
         }).format(date);
       }
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$8, [
-          createBaseVNode("div", _hoisted_2$7, [
-            createBaseVNode("div", _hoisted_3$6, [
+        "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
+          createBaseVNode("div", _hoisted_2$8, [
+            createBaseVNode("div", _hoisted_3$7, [
               createBaseVNode("img", {
                 src: unref(provided).avatar_asset_url
-              }, null, 8, _hoisted_4$5)
+              }, null, 8, _hoisted_4$6)
             ])
           ]),
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_5$5, [
-            createBaseVNode("time", _hoisted_6$5, toDisplayString(unref(time)), 1)
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_5$6, [
+            createBaseVNode("time", _hoisted_6$6, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
-          createBaseVNode("div", _hoisted_7$4, [
+          createBaseVNode("div", _hoisted_7$5, [
             createBaseVNode("p", null, toDisplayString(props.message.user_language_text), 1),
-            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_8$3, [
+            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_8$4, [
               createTextVNode(" See "),
               createBaseVNode("a", {
                 href: props.message.source_links[0],
                 style: normalizeStyle({ color: unref(provided).mainColor }),
                 target: "_blank"
-              }, "here", 12, _hoisted_9$2),
+              }, "here", 12, _hoisted_9$3),
               createTextVNode(" for more information. ")
             ])) : createCommentVNode("", true)
           ])
@@ -9468,16 +9475,16 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$7 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
-const _hoisted_2$6 = ["placeholder"];
-const _hoisted_3$5 = ["disabled"];
-const _hoisted_4$4 = { class: "w-6 h-6" };
-const _hoisted_5$4 = ["fill"];
-const _hoisted_6$4 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
-const _hoisted_7$3 = [
-  _hoisted_6$4
+const _hoisted_1$8 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
+const _hoisted_2$7 = ["placeholder"];
+const _hoisted_3$6 = ["disabled"];
+const _hoisted_4$5 = { class: "w-6 h-6" };
+const _hoisted_5$5 = ["fill"];
+const _hoisted_6$5 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
+const _hoisted_7$4 = [
+  _hoisted_6$5
 ];
-const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "ChatInput",
   props: {
     isLoading: { type: Boolean }
@@ -9498,7 +9505,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
       });
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+      return openBlock(), createElementBlock("div", _hoisted_1$8, [
         createBaseVNode("form", {
           class: "flex items-center",
           onSubmit: _cache[2] || (_cache[2] = withModifiers(($event) => maybeSend(), ["prevent"]))
@@ -9511,7 +9518,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
             type: "text",
             placeholder: unref(provided).message_placeholder,
             onKeydown: _cache[1] || (_cache[1] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
-          }, null, 40, _hoisted_2$6), [
+          }, null, 40, _hoisted_2$7), [
             [vModelText, messageInput.value]
           ]),
           createBaseVNode("button", {
@@ -9519,22 +9526,22 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
             type: "submit",
             disabled: __props.isLoading
           }, [
-            createBaseVNode("div", _hoisted_4$4, [
+            createBaseVNode("div", _hoisted_4$5, [
               (openBlock(), createElementBlock("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: unref(provided).mainColor,
                 viewBox: "0 0 32 32"
-              }, _hoisted_7$3, 8, _hoisted_5$4))
+              }, _hoisted_7$4, 8, _hoisted_5$5))
             ])
-          ], 8, _hoisted_3$5)
+          ], 8, _hoisted_3$6)
         ], 32)
       ]);
     };
   }
 });
-const _hoisted_1$6 = { class: "absolute bottom-0 right-0 h-full overflow-hidden w-full z-50 bg-black/70 backdrop-blur-sm text-white rounded-t-md" };
-const _hoisted_2$5 = { class: "my-auto w-full flex items-center border-b h-16" };
-const _hoisted_3$4 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_1$7 = { class: "overlay h-full text-white rounded-t-md" };
+const _hoisted_2$6 = { class: "my-auto w-full flex items-center border-b h-16" };
+const _hoisted_3$5 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "w-6 h-6",
   viewBox: "0 0 24 24"
@@ -9544,34 +9551,95 @@ const _hoisted_3$4 = /* @__PURE__ */ createBaseVNode("svg", {
     d: "M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z"
   })
 ], -1);
-const _hoisted_4$3 = [
-  _hoisted_3$4
+const _hoisted_4$4 = [
+  _hoisted_3$5
 ];
-const _hoisted_5$3 = { class: "flex flex-col p-4" };
-const _hoisted_6$3 = ["onClick"];
-const _sfc_main$6 = /* @__PURE__ */ defineComponent({
-  __name: "ChatSettings",
+const _hoisted_5$4 = { class: "flex flex-col p-4" };
+const _hoisted_6$4 = ["onClick"];
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+  __name: "ChatLanguage",
   emits: ["setLanguage", "close"],
   setup(__props, { emit: emit2 }) {
     const provided = inject(appearance);
     return (_ctx, _cache) => {
       var _a2;
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
-        createBaseVNode("div", _hoisted_2$5, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+        createBaseVNode("div", _hoisted_2$6, [
           createBaseVNode("button", {
             class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
             "aria-label": "close language settings",
             onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
-          }, _hoisted_4$3, 2)
+          }, _hoisted_4$4, 2)
         ]),
-        createBaseVNode("div", _hoisted_5$3, [
+        createBaseVNode("div", _hoisted_5$4, [
           (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
             return openBlock(), createElementBlock("button", {
               key: language,
               class: normalizeClass(["btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]", { "btn-active": language === unref(provided).language }]),
               onClick: ($event) => emit2("setLanguage", language)
-            }, toDisplayString(language), 11, _hoisted_6$3);
+            }, toDisplayString(language), 11, _hoisted_6$4);
           }), 128))
+        ])
+      ]);
+    };
+  }
+});
+const _hoisted_1$6 = { class: "overlay h-max text-white rounded-t-md" };
+const _hoisted_2$5 = { class: "my-auto w-full flex items-center border-b text-center h-16 relative" };
+const _hoisted_3$4 = { class: "absolute left-0 bottom-0 h-full flex flex-col" };
+const _hoisted_4$3 = /* @__PURE__ */ createBaseVNode("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  class: "w-6 h-6",
+  viewBox: "0 0 24 24"
+}, [
+  /* @__PURE__ */ createBaseVNode("path", {
+    fill: "currentColor",
+    d: "M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z"
+  })
+], -1);
+const _hoisted_5$3 = [
+  _hoisted_4$3
+];
+const _hoisted_6$3 = { class: "w-full" };
+const _hoisted_7$3 = { class: "flex flex-col p-4 mb-3" };
+const _hoisted_8$3 = /* @__PURE__ */ createBaseVNode("span", null, [
+  /* @__PURE__ */ createBaseVNode("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    class: "h-5 w-5 mr-4",
+    viewBox: "0 0 512 512"
+  }, [
+    /* @__PURE__ */ createBaseVNode("path", {
+      fill: "currentColor",
+      d: "m478.33 433.6l-90-218a22 22 0 0 0-40.67 0l-90 218a22 22 0 1 0 40.67 16.79L316.66 406h102.67l18.33 44.39A22 22 0 0 0 458 464a22 22 0 0 0 20.32-30.4ZM334.83 362L368 281.65L401.17 362Zm-66.99-19.08a22 22 0 0 0-4.89-30.7c-.2-.15-15-11.13-36.49-34.73c39.65-53.68 62.11-114.75 71.27-143.49H330a22 22 0 0 0 0-44H214V70a22 22 0 0 0-44 0v20H54a22 22 0 0 0 0 44h197.25c-9.52 26.95-27.05 69.5-53.79 108.36c-31.41-41.68-43.08-68.65-43.17-68.87a22 22 0 0 0-40.58 17c.58 1.38 14.55 34.23 52.86 83.93c.92 1.19 1.83 2.35 2.74 3.51c-39.24 44.35-77.74 71.86-93.85 80.74a22 22 0 1 0 21.07 38.63c2.16-1.18 48.6-26.89 101.63-85.59c22.52 24.08 38 35.44 38.93 36.1a22 22 0 0 0 30.75-4.9Z"
+    })
+  ])
+], -1);
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+  __name: "ChatSettings",
+  emits: ["openLanguage", "toggleSound", "close"],
+  setup(__props, { emit: emit2 }) {
+    const provided = inject(appearance);
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+        createBaseVNode("div", _hoisted_2$5, [
+          createBaseVNode("div", _hoisted_3$4, [
+            createBaseVNode("button", {
+              class: normalizeClass(["my-auto btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
+              "aria-label": "close language settings",
+              onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
+            }, _hoisted_5$3, 2)
+          ]),
+          createBaseVNode("p", _hoisted_6$3, toDisplayString(unref(provided).translation.settings), 1)
+        ]),
+        createBaseVNode("div", _hoisted_7$3, [
+          createBaseVNode("button", {
+            class: "btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]",
+            "aria-label": "change assistant language",
+            onClick: _cache[1] || (_cache[1] = ($event) => emit2("openLanguage"))
+          }, [
+            _hoisted_8$3,
+            createTextVNode(" " + toDisplayString(unref(provided).translation.language), 1)
+          ])
         ])
       ]);
     };
@@ -9616,6 +9684,13 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
 const _sfc_main$4 = {};
 const _hoisted_1$4 = {
   id: "Layer_2",
@@ -9679,7 +9754,7 @@ const _hoisted_5$2 = { class: "card w-full h-full stuff backdrop-blur-sm card-co
 const _hoisted_6$2 = ["src"];
 const _hoisted_7$2 = { class: "card-body text-white text-center flex flex-col" };
 const _hoisted_8$2 = { class: "mt-4" };
-const _hoisted_9$1 = { class: "text-xl font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 !line-clamp-1" };
+const _hoisted_9$2 = { class: "text-xl font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 !line-clamp-1" };
 const _hoisted_10$1 = { class: "text-base text-white/40 !line-clamp-6" };
 const _hoisted_11 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
 const _hoisted_12 = { class: "text-lg flex-none" };
@@ -9709,7 +9784,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
         id: "chatProducts",
         ref_key: "chatProducts",
         ref: chatProducts,
-        class: "absolute bottom-0 right-0 h-[100%] overflow-hidden w-full z-50 bg-black/30 backdrop-blur-sm flex"
+        class: "overlay h-full flex"
       }, [
         createBaseVNode("button", {
           class: "btn btn-circle btn-ghost hover:!border-none focus:!border-none btn-sm absolute top-3 right-3 z-50 bg-black/60 text-back",
@@ -9733,7 +9808,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                 ]),
                 createBaseVNode("div", _hoisted_7$2, [
                   createBaseVNode("div", _hoisted_8$2, [
-                    createBaseVNode("p", _hoisted_9$1, toDisplayString(`${product.title}`), 1)
+                    createBaseVNode("p", _hoisted_9$2, toDisplayString(`${product.title}`), 1)
                   ]),
                   createBaseVNode("div", null, [
                     createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
@@ -9757,7 +9832,7 @@ const _hoisted_5$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" },
 const _hoisted_6$1 = { class: "text-md text-neutral/70 mb-4" };
 const _hoisted_7$1 = { class: "flex justify-start" };
 const _hoisted_8$1 = ["onClick"];
-const _hoisted_9 = { class: "grid place-items-center" };
+const _hoisted_9$1 = { class: "grid place-items-center" };
 const _hoisted_10 = ["src"];
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "MiniPreview",
@@ -9795,7 +9870,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                   }, " Preview ", 46, _hoisted_8$1)
                 ])
               ]),
-              createBaseVNode("figure", _hoisted_9, [
+              createBaseVNode("figure", _hoisted_9$1, [
                 createBaseVNode("img", {
                   src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
                   class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
@@ -9844,27 +9919,354 @@ const useTextClass = (backgroundColor, cutoff = 160) => {
     mainColor: unref(mainColor)
   };
 };
+const translations = {
+  af: {
+    settings: "Instellings",
+    language: "Taal",
+    sound: "Klank"
+  },
+  am: {
+    settings: "ቅንብሮች",
+    language: "ቋንቋ",
+    sound: "ድምፅ"
+  },
+  ar: {
+    settings: "الإعدادات",
+    language: "اللغة",
+    sound: "الصوت"
+  },
+  hy: {
+    settings: "Կարգավորումներ",
+    language: "Լեզու",
+    sound: "Ձայն"
+  },
+  az: {
+    settings: "Ayarlar",
+    language: "Dil",
+    sound: "Səs"
+  },
+  bn: {
+    settings: "সেটিংস",
+    language: "ভাষা",
+    sound: "শব্দ"
+  },
+  bs: {
+    settings: "Postavke",
+    language: "Jezik",
+    sound: "Zvuk"
+  },
+  bg: {
+    settings: "Настройки",
+    language: "Език",
+    sound: "Звук"
+  },
+  ca: {
+    settings: "Configuració",
+    language: "Llengua",
+    sound: "So"
+  },
+  sq: {
+    settings: "Parametrat",
+    language: "Gjuha",
+    sound: "Tinguj"
+  },
+  hr: {
+    settings: "Postavke",
+    language: "Jezik",
+    sound: "Zvuk"
+  },
+  cs: {
+    settings: "Nastavení",
+    language: "Jazyk",
+    sound: "Zvuk"
+  },
+  da: {
+    settings: "Indstillinger",
+    language: "Sprog",
+    sound: "Lyd"
+  },
+  nl: {
+    settings: "Instellingen",
+    language: "Taal",
+    sound: "Geluid"
+  },
+  en: {
+    settings: "Settings",
+    language: "Language",
+    sound: "Sound"
+  },
+  et: {
+    settings: "Seaded",
+    language: "Keel",
+    sound: "Heli"
+  },
+  fi: {
+    settings: "Asetukset",
+    language: "Kieli",
+    sound: "Ääni"
+  },
+  fr: {
+    settings: "Paramètres",
+    language: "Langue",
+    sound: "Son"
+  },
+  ka: {
+    settings: "პარამეტრები",
+    language: "ენა",
+    sound: "ხმა"
+  },
+  de: {
+    settings: "Einstellungen",
+    language: "Sprache",
+    sound: "Ton"
+  },
+  el: {
+    settings: "Ρυθμίσεις",
+    language: "Γλώσσα",
+    sound: "Ήχος"
+  },
+  gu: {
+    settings: "સેટિંગ્સ",
+    language: "ભાષા",
+    sound: "ધ્વનિ"
+  },
+  ha: {
+    settings: "Saitin",
+    language: "Yaren",
+    sound: "Hoto"
+  },
+  he: {
+    settings: "הגדרות",
+    language: "שפה",
+    sound: "צליל"
+  },
+  hi: {
+    settings: "सेटिंग्स",
+    language: "भाषा",
+    sound: "ध्वनि"
+  },
+  hu: {
+    settings: "Beállítások",
+    language: "Nyelv",
+    sound: "Hang"
+  },
+  is: {
+    settings: "Stillingar",
+    language: "Tungumál",
+    sound: "Hljóð"
+  },
+  id: {
+    settings: "Pengaturan",
+    language: "Bahasa",
+    sound: "Suara"
+  },
+  ga: {
+    settings: "Socruithe",
+    language: "Teanga",
+    sound: "Fuaim"
+  },
+  it: {
+    settings: "Impostazioni",
+    language: "Lingua",
+    sound: "Audio"
+  },
+  ja: {
+    settings: "設定",
+    language: "言語",
+    sound: "音声"
+  },
+  kn: {
+    settings: "ಸೆಟ್ಟಿಂಗ್ಗಳು",
+    language: "ಭಾಷೆ",
+    sound: "ಶಬ್ದ"
+  },
+  kk: {
+    settings: "Баптаулар",
+    language: "Тіл",
+    sound: "Дыбыс"
+  },
+  ko: {
+    settings: "설정",
+    language: "언어",
+    sound: "소리"
+  },
+  lv: {
+    settings: "Iestatījumi",
+    language: "Valoda",
+    sound: "Skaņa"
+  },
+  lt: {
+    settings: "Nustatymai",
+    language: "Kalba",
+    sound: "Garsas"
+  },
+  mk: {
+    settings: "Поставки",
+    language: "Јазик",
+    sound: "Звук"
+  },
+  ms: {
+    settings: "Tetapan",
+    language: "Bahasa",
+    sound: "Bunyi"
+  },
+  ml: {
+    settings: "ക്രമീകരണങ്ങൾ",
+    language: "ഭാഷ",
+    sound: "ശബ്ദം"
+  },
+  mt: {
+    settings: "Settings",
+    language: "Lingwa",
+    sound: "Ħoss"
+  },
+  mr: {
+    settings: "सेटिंग्ज",
+    language: "भाषा",
+    sound: "आवाज"
+  },
+  mn: {
+    settings: "Тохиргоо",
+    language: "Хэл",
+    sound: "Дуу"
+  },
+  ps: {
+    settings: "تنظیمات",
+    language: "ژبه",
+    sound: "غږ"
+  },
+  pl: {
+    settings: "Ustawienia",
+    language: "Język",
+    sound: "Dźwięk"
+  },
+  pa: {
+    settings: "ਸੈਟਿੰਗ",
+    language: "ਭਾਸ਼ਾ",
+    sound: "ਆਵਾਜ਼"
+  },
+  ro: {
+    settings: "Setări",
+    language: "Limbă",
+    sound: "Sunet"
+  },
+  ru: {
+    settings: "Настройки",
+    language: "Язык",
+    sound: "Звук"
+  },
+  sr: {
+    settings: "Подешавања",
+    language: "Језик",
+    sound: "Звук"
+  },
+  si: {
+    settings: "සැකසුම්",
+    language: "භාෂාව",
+    sound: "ශබ්දය"
+  },
+  sk: {
+    settings: "Nastavenia",
+    language: "Jazyk",
+    sound: "Zvuk"
+  },
+  sl: {
+    settings: "Nastavitve",
+    language: "Jezik",
+    sound: "Zvok"
+  },
+  so: {
+    settings: "Dejinta",
+    language: "Luqadda",
+    sound: "Dhagayso"
+  },
+  es: {
+    settings: "Ajustes",
+    language: "Idioma",
+    sound: "Sonido"
+  },
+  sw: {
+    settings: "Mipangilio",
+    language: "Lugha",
+    sound: "Sauti"
+  },
+  sv: {
+    settings: "Inställningar",
+    language: "Språk",
+    sound: "Ljud"
+  },
+  ta: {
+    settings: "அமைப்புகள்",
+    language: "மொழி",
+    sound: "ஒலி"
+  },
+  te: {
+    settings: "సెట్టింగులు",
+    language: "భాష",
+    sound: "శబ్దం"
+  },
+  th: {
+    settings: "การตั้งค่า",
+    language: "ภาษา",
+    sound: "เสียง"
+  },
+  tr: {
+    settings: "Ayarlar",
+    language: "Dil",
+    sound: "Ses"
+  },
+  uk: {
+    settings: "Налаштування",
+    language: "Мова",
+    sound: "Звук"
+  },
+  ur: {
+    settings: "ترتیبات",
+    language: "زبان",
+    sound: "آواز"
+  },
+  uz: {
+    settings: "Sozlamalar",
+    language: "Til",
+    sound: "Tovush"
+  },
+  vi: {
+    settings: "Cài đặt",
+    language: "Ngôn ngữ",
+    sound: "Âm thanh"
+  },
+  cy: {
+    settings: "Gosodiadau",
+    language: "Iaith",
+    sound: "Sain"
+  }
+};
+const getTranslations = (lang) => translations[lang] || translations.en;
 const _hoisted_1 = {
   key: 1,
   class: "absolute w-full"
 };
-const _hoisted_2 = { class: "relative flex flex-col h-[630px] max-h-[630px] flex-1" };
-const _hoisted_3 = {
+const _hoisted_2 = {
   key: 1,
   class: "absolute w-full"
 };
+const _hoisted_3 = { class: "relative flex flex-col h-[630px] max-h-[630px] flex-1" };
 const _hoisted_4 = {
+  key: 1,
+  class: "absolute w-full"
+};
+const _hoisted_5 = {
   key: 0,
   class: "relative flex flex-col pt-3"
 };
-const _hoisted_5 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
-const _hoisted_6 = {
+const _hoisted_6 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
+const _hoisted_7 = {
   href: "https://www.monoloq.ai/",
   target: "_blank",
   class: "flex items-center hover:text-neutral text-neutral"
 };
-const _hoisted_7 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
-const _hoisted_8 = {
+const _hoisted_8 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
+const _hoisted_9 = {
   key: 1,
   class: "bottom-0 right-0 w-[372px]"
 };
@@ -9873,6 +10275,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     base_color: { default: "#4fafe4" },
     avatar_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/stock-avatar.jpeg" },
+    logo_asset_url: { default: "https://d1xecltoymgutn.cloudfront.net/monoloq-assets/Asset%2014@4x.png" },
     text: { default: () => [{
       message_placeholder: "Type your message here...",
       language: "en"
@@ -9884,6 +10287,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     chat_button_position: { default: "bottom_right" },
     currency_symbol: { default: "$" },
     enable_on_mobile: { type: Boolean, default: false },
+    enable_sound: { type: Boolean, default: false },
     show_button_widget: { type: Boolean, default: true },
     fixed: { type: Boolean, default: true },
     host_domain: null,
@@ -9896,8 +10300,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const props = __props;
     const currentLanguage = useStorage("monoloqLanguage", "en");
     const provided = computed(() => {
-      const textSettings = props.text.find((t) => t.language === currentLanguage.value) || props.text[0];
-      return { ...props, ...useTextClass(props.base_color), ...textSettings };
+      var _a2;
+      const textSettings = ((_a2 = props.text) == null ? void 0 : _a2.find((t) => t.language === currentLanguage.value)) || props.text[0];
+      const translation = getTranslations(currentLanguage.value);
+      return {
+        ...props,
+        ...useTextClass(props.base_color),
+        ...textSettings,
+        translation,
+        // isSoundEnabled,
+        currentLanguage: currentLanguage.value
+      };
     });
     provide(appearance, provided);
     const positionCss = computed(() => {
@@ -9913,9 +10326,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const addWww = useStorage("monoloqAddWww", false);
     const messages = useStorage("monoloqChatBotMessages", []);
     const visited = useStorage("monoloqVisited", /* @__PURE__ */ new Set());
+    const isSettingOpen = useStorage("monoloqSettingsOpen", false);
     const products = ref();
     const scrollToItemId = ref();
-    const setProducts = (recommendation, itemId) => {
+    const setProducts = async (recommendation, itemId) => {
+      isSettingOpen.value = false;
+      await new Promise((resolve2) => setTimeout(resolve2, 600));
       products.value = recommendation;
       scrollToItemId.value = itemId;
     };
@@ -9927,12 +10343,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const showWidget = ref(true);
     const isLoading = ref(false);
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
-    const isSettingOpen = useStorage("monoloqSettingsOpen", false);
+    const isLanguageSettingsOpen = useStorage("monoloqLanguageSettingsOpen", false);
     watchEffect(() => {
       if (props._isOpen !== void 0)
         isChatOpen.value = props._isOpen;
     });
-    computed(() => window.location.hostname);
+    function dateFromISO8601(isoDateString) {
+      if (!isoDateString || typeof isoDateString !== "string") {
+        throw new Error("Invalid input: expecting a non-empty string.");
+      }
+      const parts = isoDateString.match(/\d+/g);
+      const isoTime = Date.UTC(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], parts[5]);
+      const isoDate = new Date(isoTime);
+      return isoDate;
+    }
     const fetch2 = createFetch({
       baseUrl: "https://chat.monoloq.ai",
       fetchOptions: {
@@ -9949,11 +10373,18 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           return { options: newOptions, url };
         },
         afterFetch(ctx) {
-          ctx.data.timestamp = Date.parse(ctx.data.timestamp);
+          ctx.data.timestamp = dateFromISO8601(ctx.data.timestamp);
           return ctx;
         }
       }
     });
+    function removeQueries() {
+      const url = new URL(window.location.href);
+      url.hostname = devHost(provided.value.host_domain);
+      url.port = "";
+      url.search = "";
+      return url.toString();
+    }
     async function onSend(inputMessage) {
       isLoading.value = true;
       const date = new Date();
@@ -9961,7 +10392,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         text: prepareMessage(inputMessage),
         timestamp: date.getTime(),
         conversation_id: conversationId.value,
-        current_product_url: window.location.href
+        current_product_url: removeQueries()
       };
       messages.value.push(message);
       if (!refChat.value)
@@ -10075,7 +10506,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (window.matchMedia("only screen and (max-width: 480px)").matches)
         showWidget.value = false;
     });
-    function setLanguage(language) {
+    async function setLanguage(language) {
       const languages = provided.value.text.map((t) => t.language);
       let docLang;
       try {
@@ -10091,7 +10522,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     async function setLanguageAndInitiate(language) {
       setLanguage(language);
-      isSettingOpen.value = false;
+      isLanguageSettingsOpen.value = false;
       await initiate();
     }
     watch(
@@ -10154,12 +10585,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const onToggle = () => {
       isChatOpen.value = true;
     };
-    const openSettings = async () => {
+    const openSettings = async (setting) => {
       if (products.value) {
         products.value = void 0;
         await new Promise((resolve2) => setTimeout(resolve2, 600));
       }
-      isSettingOpen.value = true;
+      if (setting === "main")
+        return isSettingOpen.value = !isSettingOpen.value;
+      isSettingOpen.value = false;
+      isSettingOpen.value = false;
+      await new Promise((resolve2) => setTimeout(resolve2, 600));
+      isLanguageSettingsOpen.value = true;
     };
     function navigate(productUrl, itemId) {
       if (isLoading.value)
@@ -10184,30 +10620,43 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 delay: 100
               }, {
                 default: withCtx(() => [
-                  unref(isSettingOpen) ? (openBlock(), createBlock(_sfc_main$6, {
+                  unref(isLanguageSettingsOpen) ? (openBlock(), createBlock(_sfc_main$7, {
                     key: 0,
-                    onClose: _cache[0] || (_cache[0] = ($event) => isSettingOpen.value = false),
+                    onClose: _cache[0] || (_cache[0] = ($event) => isLanguageSettingsOpen.value = false),
                     onSetLanguage: setLanguageAndInitiate
                   })) : (openBlock(), createElementBlock("div", _hoisted_1))
                 ]),
                 _: 1
               }),
-              createVNode(_sfc_main$9, {
-                class: "!h-[64px] flex-none",
-                onClear: _cache[1] || (_cache[1] = ($event) => onClear()),
-                onClose: _cache[2] || (_cache[2] = ($event) => onClose()),
-                onOpenSetting: _cache[3] || (_cache[3] = ($event) => openSettings())
+              createVNode(unref(TransitionExpand), {
+                duration: 500,
+                delay: 100
+              }, {
+                default: withCtx(() => [
+                  unref(isSettingOpen) ? (openBlock(), createBlock(_sfc_main$6, {
+                    key: 0,
+                    onClose: _cache[1] || (_cache[1] = ($event) => isSettingOpen.value = false),
+                    onOpenLanguage: _cache[2] || (_cache[2] = ($event) => openSettings("language"))
+                  })) : (openBlock(), createElementBlock("div", _hoisted_2))
+                ]),
+                _: 1
               }),
-              createBaseVNode("div", _hoisted_2, [
+              createVNode(_sfc_main$a, {
+                class: "!h-[64px] flex-none",
+                onClear: _cache[3] || (_cache[3] = ($event) => onClear()),
+                onClose: _cache[4] || (_cache[4] = ($event) => onClose()),
+                onOpenSetting: _cache[5] || (_cache[5] = ($event) => openSettings("main"))
+              }),
+              createBaseVNode("div", _hoisted_3, [
                 createVNode(unref(TransitionExpand), { duration: 500 }, {
                   default: withCtx(() => [
                     products.value ? (openBlock(), createBlock(_sfc_main$2, {
                       key: 0,
                       products: products.value,
                       "scroll-to": scrollToItemId.value,
-                      onCloseProducts: _cache[4] || (_cache[4] = ($event) => closeProducts()),
+                      onCloseProducts: _cache[6] || (_cache[6] = ($event) => closeProducts()),
                       onNavigate: navigate
-                    }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_3))
+                    }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_4))
                   ]),
                   _: 1
                 }),
@@ -10225,13 +10674,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         return openBlock(), createElementBlock(Fragment, {
                           key: message.timestamp
                         }, [
-                          createVNode(_sfc_main$8, {
+                          createVNode(_sfc_main$9, {
                             timestamp: message.timestamp,
                             message,
                             "is-first": index === 0,
                             onOpenProducts: setProducts
                           }, null, 8, ["timestamp", "message", "is-first"]),
-                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_4, [
+                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_5, [
                             createVNode(_sfc_main$1, {
                               products: message.recommended_products,
                               onScrollTo: (itemId) => setProducts(message.recommended_products, itemId),
@@ -10247,22 +10696,22 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     [vShow, isLoading.value || props._mockLoading]
                   ])
                 ], 512),
-                createBaseVNode("div", _hoisted_5, [
-                  createBaseVNode("a", _hoisted_6, [
-                    _hoisted_7,
+                createBaseVNode("div", _hoisted_6, [
+                  createBaseVNode("a", _hoisted_7, [
+                    _hoisted_8,
                     createVNode(MonoloqLogo, {
                       class: "h-4 my-auto",
                       style: normalizeStyle({ color: unref(provided).mainColor })
                     }, null, 8, ["style"])
                   ])
                 ]),
-                createVNode(_sfc_main$7, {
+                createVNode(_sfc_main$8, {
                   class: "flex-none",
                   "is-loading": isLoading.value,
                   onSend
                 }, null, 8, ["is-loading"])
               ])
-            ], 2)) : (openBlock(), createElementBlock("div", _hoisted_8))
+            ], 2)) : (openBlock(), createElementBlock("div", _hoisted_9))
           ]),
           _: 1
         }),
@@ -10272,7 +10721,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             class: normalizeClass([...unref(positionCss)]),
             chat_button_position: props.chat_button_position,
             "is-open": unref(isChatOpen),
-            onToggle: _cache[5] || (_cache[5] = ($event) => onToggle())
+            onToggle: _cache[7] || (_cache[7] = ($event) => onToggle())
           }, null, 8, ["class", "chat_button_position", "is-open"])) : createCommentVNode("", true)
         ])
       ], 64);
@@ -11893,17 +12342,17 @@ to{
 .relative{
   position: relative;
 }
-.bottom-0{
-  bottom: 0px;
-}
-.right-0{
-  right: 0px;
-}
 .top-3{
   top: 12px;
 }
 .right-3{
   right: 12px;
+}
+.left-0{
+  left: 0px;
+}
+.bottom-0{
+  bottom: 0px;
 }
 .bottom-1{
   bottom: 4px;
@@ -11913,6 +12362,9 @@ to{
 }
 .left-1{
   left: 4px;
+}
+.right-0{
+  right: 0px;
 }
 .z-40{
   z-index: 40;
@@ -11927,6 +12379,10 @@ to{
   margin-top: auto;
   margin-bottom: auto;
 }
+.mx-2{
+  margin-left: 8px;
+  margin-right: 8px;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -11940,11 +12396,17 @@ to{
 .ml-5{
   margin-left: 20px;
 }
+.ml-3{
+  margin-left: 12px;
+}
 .mt-4{
   margin-top: 16px;
 }
-.ml-3{
-  margin-left: 12px;
+.mb-3{
+  margin-bottom: 12px;
+}
+.mr-4{
+  margin-right: 16px;
 }
 .ml-9{
   margin-left: 36px;
@@ -11989,14 +12451,11 @@ to{
   height: -moz-max-content;
   height: max-content;
 }
-.h-\\[100\\%\\]{
-  height: 100%;
+.h-\\[48px\\]{
+  height: 48px;
 }
 .h-\\[510px\\]{
   height: 510px;
-}
-.h-\\[48px\\]{
-  height: 48px;
 }
 .\\!h-\\[64px\\]{
   height: 64px !important;
@@ -12040,11 +12499,11 @@ to{
 .w-\\[32px\\]{
   width: 32px;
 }
-.w-5{
-  width: 20px;
-}
 .w-6{
   width: 24px;
+}
+.w-5{
+  width: 20px;
 }
 .w-11\\/12{
   width: 91.666667%;
@@ -12105,6 +12564,9 @@ to{
 .justify-between{
   justify-content: space-between;
 }
+.justify-around{
+  justify-content: space-around;
+}
 .\\!gap-x-\\[12px\\]{
   -moz-column-gap: 12px !important;
        column-gap: 12px !important;
@@ -12128,6 +12590,9 @@ to{
 }
 .rounded-full{
   border-radius: 9999px;
+}
+.rounded{
+  border-radius: 0.25rem;
 }
 .rounded-2xl{
   border-radius: 1rem;
@@ -12196,11 +12661,11 @@ to{
 .\\!bg-black\\/60{
   background-color: rgb(0 0 0 / 0.6) !important;
 }
-.bg-black\\/70{
-  background-color: rgb(0 0 0 / 0.7);
-}
 .p-4{
   padding: 16px;
+}
+.p-3{
+  padding: 12px;
 }
 .\\!py-1{
   padding-top: 4px !important;
@@ -12286,6 +12751,9 @@ to{
 .text-\\[16px\\]{
   font-size: 16px;
 }
+.text-\\[14px\\]{
+  font-size: 14px;
+}
 .text-xl{
   font-size: 20px;
   line-height: 28px;
@@ -12293,9 +12761,6 @@ to{
 .text-base{
   font-size: 16px;
   line-height: 24px;
-}
-.text-\\[14px\\]{
-  font-size: 14px;
 }
 .\\!text-base{
   font-size: 16px !important;
@@ -12330,6 +12795,9 @@ to{
 }
 .text-white\\/40{
   color: rgb(255 255 255 / 0.4);
+}
+.text-white\\/50{
+  color: rgb(255 255 255 / 0.5);
 }
 .text-neutral{
   --tw-text-opacity: 1;
@@ -12480,6 +12948,18 @@ to{
               0 8px 8px rgba(0,0,0,0.12),
               0 16px 16px rgba(0,0,0,0.12);
 }
+.overlay{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 50;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(0 0 0 / 0.7);
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
 .hover\\:scale-105:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -12539,14 +13019,15 @@ const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
-  console.info("%s Installing monoloq widget 4...", "🏋️");
+  console.info("%s Installing monoloq widget 1.6...", "🏋️");
   const getSettings = async (addWww) => await fetch(`${String("https://chat.monoloq.ai")}/settings?host_domain=${devHost(void 0, addWww)}`);
   try {
     const font = document.createElement("link");
     font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
     font.rel = "stylesheet";
     document.head.appendChild(font);
-    let props = {};
+    let props;
+    let excludedPaths = [];
     const addWww = localStorage.getItem("monoloqAddWww") === "true";
     try {
       let res;
@@ -12560,9 +13041,12 @@ async function register() {
         enable_on_mobile: settings.general.enable_on_mobile,
         currency_symbol: settings.general.currency_symbol
       };
+      excludedPaths = settings.general.exclude_bot_paths;
     } catch (e) {
       console.error("Failed to fetch widget config", e);
     }
+    if (excludedPaths.includes(window.location.href))
+      return;
     customElements.define("monoloq-widget", ChatWindow);
     document.body.appendChild(
       new ChatWindow(props)
