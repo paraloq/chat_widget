@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x10f72f = _0x532e;
-(function(_0x70d7a8, _0x32bf2d) {
-  const _0x78b583 = _0x532e, _0x43ff76 = _0x70d7a8();
+function _0x58b4() {
+  const _0x42181b = ["www.", "appearance", "hostname", "416SSlWlJ", "3016401IGhXkf", "357830YuQxgv", "includes", "calhost:33", "5265LdqdFc", "ifyapp.com", "33/", "178892ofprkV", "4EAShzj", "12ZInhdd", "https://de", "7278cnvIMs", "owgcy.ampl", "map", "47024016cRzWRu", "2239380fOuMKw", "v.d8g529d2", "location", "split", "1063cSavcR", ",http://lo", "9lQqPUQ", "2938TaBzhR"];
+  _0x58b4 = function() {
+    return _0x42181b;
+  };
+  return _0x58b4();
+}
+const _0x130bab = _0x3606;
+(function(_0x1d34ac, _0x5edeac) {
+  const _0x38446d = _0x3606, _0x8e8add = _0x1d34ac();
   while (!![]) {
     try {
-      const _0x882634 = -parseInt(_0x78b583(147)) / (-8194 + -5441 + -2 * -6818) * (parseInt(_0x78b583(140)) / (13 * -323 + 9216 + -5015 * 1)) + parseInt(_0x78b583(144)) / (-92 * -13 + 8487 + -9680) * (-parseInt(_0x78b583(129)) / (-8502 + 4 * -1697 + -2 * -7647)) + parseInt(_0x78b583(146)) / (-124 * -5 + 19 * -355 + -5 * -1226) * (parseInt(_0x78b583(138)) / (-5271 * -1 + 6129 + -11394 * 1)) + -parseInt(_0x78b583(150)) / (-721 + 4158 + 343 * -10) + parseInt(_0x78b583(128)) / (19 * 1 + 1527 * 3 + -4592) * (-parseInt(_0x78b583(141)) / (6 * -934 + -139 * -55 + -2032)) + parseInt(_0x78b583(149)) / (1109 + 1747 + -2846) * (parseInt(_0x78b583(139)) / (-7778 * -1 + -55 * 134 + 397 * -1)) + parseInt(_0x78b583(132)) / (-3329 * 1 + -5240 + 8581);
-      if (_0x882634 === _0x32bf2d)
+      const _0x528cd3 = -parseInt(_0x38446d(459)) / (-666 + 4849 + -4182) * (parseInt(_0x38446d(462)) / (-3474 + -5811 + 9287)) + -parseInt(_0x38446d(467)) / (-881 + -4763 + 5647) * (parseInt(_0x38446d(475)) / (-2623 + 1367 * 3 + -1474)) + -parseInt(_0x38446d(471)) / (5008 * -1 + 4157 + 214 * 4) * (parseInt(_0x38446d(478)) / (8962 * 1 + 1 * -1376 + -7580)) + -parseInt(_0x38446d(474)) / (-1 * 2773 + 2452 + -2 * -164) * (-parseInt(_0x38446d(466)) / (-1 * 5293 + -109 * -81 + 441 * -8)) + parseInt(_0x38446d(461)) / (-122 * 65 + -7026 + 14965) * (parseInt(_0x38446d(468)) / (-4337 * -1 + -1 * -7703 + 802 * -15)) + -parseInt(_0x38446d(455)) / (-2697 + 541 + -11 * -197) + -parseInt(_0x38446d(476)) / (-5328 + 2261 + 3079) * (-parseInt(_0x38446d(481)) / (-7652 + -31 * -93 + 4782));
+      if (_0x528cd3 === _0x5edeac)
         break;
       else
-        _0x43ff76["push"](_0x43ff76["shift"]());
-    } catch (_0x5243d8) {
-      _0x43ff76["push"](_0x43ff76["shift"]());
+        _0x8e8add["push"](_0x8e8add["shift"]());
+    } catch (_0x24b842) {
+      _0x8e8add["push"](_0x8e8add["shift"]());
     }
   }
-})(_0x298b, 128239 * -1 + 19897 * 13 + -97 * -2999);
-function _0x298b() {
-  const _0x5a882c = ["2SNFoYI", "1602CBBYcP", "map", "33/", "173724auWJsv", "v.d8g529d2", "190MFIzVT", "835369FqTULG", "split", "155770GbUkoX", "3137841WEQLeu", "https://de", "includes", "appearance", "17928EzzlHD", "48afcQgU", "owgcy.ampl", "calhost:33", "28761060myNuHa", "ifyapp.com", "www.", ",http://lo", "location", "hostname", "58554IlPvsm", "22TpdrOb"];
-  _0x298b = function() {
-    return _0x5a882c;
-  };
-  return _0x298b();
+})(_0x58b4, 1 * 729915 + 1354069 * -1 + 2 * 779099);
+function devHost(_0x3dd9af, _0x89961c) {
+  const _0x57e81e = _0x3606, _0x4191d5 = window[_0x57e81e(457)][_0x57e81e(465)], _0x5d26d7 = String(_0x57e81e(477) + _0x57e81e(456) + _0x57e81e(479) + _0x57e81e(472) + _0x57e81e(460) + _0x57e81e(470) + _0x57e81e(473))[_0x57e81e(458)](",")[_0x57e81e(480)]((_0x564b19) => new URL(_0x564b19)[_0x57e81e(465)]), _0x3cd6c6 = _0x89961c ? _0x57e81e(463) + _0x4191d5 : _0x4191d5;
+  if (!_0x3dd9af)
+    return _0x3cd6c6;
+  if (!_0x5d26d7[_0x57e81e(469)](_0x4191d5))
+    return _0x3cd6c6;
+  return _0x3dd9af;
 }
-function _0x532e(_0x2fa770, _0x170964) {
-  const _0x230ae1 = _0x298b();
-  return _0x532e = function(_0x419378, _0x5eda56) {
-    _0x419378 = _0x419378 - (-7414 + -8 * -73 + 6958);
-    let _0x48621d = _0x230ae1[_0x419378];
-    return _0x48621d;
-  }, _0x532e(_0x2fa770, _0x170964);
+function _0x3606(_0x15c943, _0x17056f) {
+  const _0x256a34 = _0x58b4();
+  return _0x3606 = function(_0x3dd9af, _0x89961c) {
+    _0x3dd9af = _0x3dd9af - (5 * 1477 + -1 * -6395 + -13325);
+    let _0x4191d5 = _0x256a34[_0x3dd9af];
+    return _0x4191d5;
+  }, _0x3606(_0x15c943, _0x17056f);
 }
-function devHost(_0x5eda56, _0x48621d) {
-  const _0x4efbfb = _0x532e, _0x4591ee = window[_0x4efbfb(136)][_0x4efbfb(137)], _0x140598 = String(_0x4efbfb(151) + _0x4efbfb(145) + _0x4efbfb(130) + _0x4efbfb(133) + _0x4efbfb(135) + _0x4efbfb(131) + _0x4efbfb(143))[_0x4efbfb(148)](",")[_0x4efbfb(142)]((_0x5cfccc) => new URL(_0x5cfccc)[_0x4efbfb(137)]), _0x577273 = _0x48621d ? _0x4efbfb(134) + _0x4591ee : _0x4591ee;
-  if (!_0x5eda56)
-    return _0x577273;
-  if (!_0x140598[_0x4efbfb(152)](_0x4591ee))
-    return _0x577273;
-  return _0x5eda56;
+function prepareMessage(_0x5a87d5) {
+  return "" + _0x5a87d5;
 }
-function prepareMessage(_0x1fd17f) {
-  return "" + _0x1fd17f;
-}
-const appearance = Symbol(_0x10f72f(153));
+const appearance = Symbol(_0x130bab(464));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10292,8 +10292,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     fixed: { type: Boolean, default: true },
     host_domain: null,
     language: null,
-    _mockLoading: { type: Boolean, default: false },
-    _isOpen: { type: Boolean, default: void 0 }
+    _mockLoading: { type: Boolean, default: false }
   },
   setup(__props) {
     const props = __props;
@@ -10343,10 +10342,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isLoading = ref(false);
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
     const isLanguageSettingsOpen = useStorage("monoloqLanguageSettingsOpen", false);
-    watchEffect(() => {
-      if (props._isOpen !== void 0)
-        isChatOpen.value = props._isOpen;
-    });
     function dateFromISO8601(isoDateString) {
       if (!isoDateString || typeof isoDateString !== "string") {
         throw new Error("Invalid input: expecting a non-empty string.");
