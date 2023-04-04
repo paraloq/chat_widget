@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x34479d = _0x43ec;
-(function(_0x5f02b0, _0x506d57) {
-  const _0x5eb75e = _0x43ec, _0x5f234b = _0x5f02b0();
+const _0x36cec7 = _0x1809;
+(function(_0x404443, _0x360249) {
+  const _0x37b232 = _0x1809, _0x28d0c1 = _0x404443();
   while (!![]) {
     try {
-      const _0x2eaa84 = -parseInt(_0x5eb75e(266)) / (-2234 + 99 * 58 + 21 * -167) + -parseInt(_0x5eb75e(258)) / (-3001 * 2 + 1 * 2657 + 3347) + -parseInt(_0x5eb75e(253)) / (7 * -98 + 541 * -7 + 4476) + -parseInt(_0x5eb75e(255)) / (-23 * 409 + -5 * -956 + -11 * -421) * (parseInt(_0x5eb75e(259)) / (-164 + 1242 + -29 * 37)) + parseInt(_0x5eb75e(264)) / (2503 * -1 + -8272 + 1 * 10781) + -parseInt(_0x5eb75e(263)) / (-5554 + 9242 + -9 * 409) * (-parseInt(_0x5eb75e(252)) / (-1 * 2047 + 6469 + -4414)) + -parseInt(_0x5eb75e(272)) / (-4341 * -1 + 1021 * 4 + 32 * -263) * (-parseInt(_0x5eb75e(271)) / (-2464 + -622 * 13 + 2 * 5280));
-      if (_0x2eaa84 === _0x506d57)
+      const _0x488e37 = parseInt(_0x37b232(392)) / (-9 * -753 + 3571 * 2 + -1 * 13918) * (-parseInt(_0x37b232(386)) / (1 * 5741 + 4834 * -2 + 1 * 3929)) + -parseInt(_0x37b232(383)) / (235 * -33 + -43 * -2 + 7672) * (-parseInt(_0x37b232(399)) / (-5129 * 1 + 772 * -10 + 1 * 12853)) + -parseInt(_0x37b232(400)) / (-4490 + 1663 + -8 * -354) * (parseInt(_0x37b232(402)) / (-1 * -8199 + -9012 + 819)) + parseInt(_0x37b232(406)) / (-93 * 41 + 1227 + -2593 * -1) + parseInt(_0x37b232(391)) / (7915 + 19 * 183 + 4 * -2846) + -parseInt(_0x37b232(397)) / (5092 + 8506 + -13589) + parseInt(_0x37b232(401)) / (-145 * -1 + 2425 + -2560 * 1) * (-parseInt(_0x37b232(403)) / (-1038 + -1614 + 2663));
+      if (_0x488e37 === _0x360249)
         break;
       else
-        _0x5f234b["push"](_0x5f234b["shift"]());
-    } catch (_0x316a02) {
-      _0x5f234b["push"](_0x5f234b["shift"]());
+        _0x28d0c1["push"](_0x28d0c1["shift"]());
+    } catch (_0x5f2375) {
+      _0x28d0c1["push"](_0x28d0c1["shift"]());
     }
   }
-})(_0x15bf, 32 * -2575 + 401 * -423 + -124 * -4486);
-function _0x43ec(_0x2a1bdf, _0x5a9c7e) {
-  const _0x40d421 = _0x15bf();
-  return _0x43ec = function(_0x11ede6, _0x58df9c) {
-    _0x11ede6 = _0x11ede6 - (6148 + 7 * 130 + -6809);
-    let _0x24ba27 = _0x40d421[_0x11ede6];
-    return _0x24ba27;
-  }, _0x43ec(_0x2a1bdf, _0x5a9c7e);
-}
-function _0x15bf() {
-  const _0x322d78 = ["71770cMzZvz", "owgcy.ampl", "hostname", "includes", "7iLylcd", "979122DRjjpi", "map", "185763ITjDoJ", "calhost:33", "www.", "location", "v.d8g529d2", "3638430osCgWE", "27ndgqPD", "split", "33/", "https://de", "2773656EJLKSO", "1536246NuqCHD", ",http://lo", "44xoMWQP", "appearance", "ifyapp.com", "882886EcGkEI"];
-  _0x15bf = function() {
-    return _0x322d78;
+})(_0x2c8a, 232744 + 121570 + 101 * 1618);
+function _0x2c8a() {
+  const _0xf29dcd = ["v.d8g529d2", "ifyapp.com", "location", "7611200tiCVyS", "805029iaBqPk", "www.", "hostname", "map", "33/", "769959LEYOpQ", "appearance", "4phmVox", "50HjWZvq", "7165630drrHPc", "358518jqJkVO", "11KbmtGC", "split", "calhost:33", "7113568cyEIHo", ",http://lo", "2264343NeBWIU", "includes", "https://de", "2eVICCK", "owgcy.ampl"];
+  _0x2c8a = function() {
+    return _0xf29dcd;
   };
-  return _0x15bf();
+  return _0x2c8a();
 }
-function devHost(_0x58df9c, _0x24ba27) {
-  const _0x276bf2 = _0x43ec, _0x5c7968 = window[_0x276bf2(269)][_0x276bf2(261)], _0x514254 = String(_0x276bf2(251) + _0x276bf2(270) + _0x276bf2(260) + _0x276bf2(257) + _0x276bf2(254) + _0x276bf2(267) + _0x276bf2(250))[_0x276bf2(249)](",")[_0x276bf2(265)]((_0x4c3b0a) => new URL(_0x4c3b0a)[_0x276bf2(261)]), _0x23c15c = _0x24ba27 ? _0x276bf2(268) + _0x5c7968 : _0x5c7968;
-  if (!_0x58df9c)
-    return _0x23c15c;
-  if (!_0x514254[_0x276bf2(262)](_0x5c7968))
-    return _0x23c15c;
-  return _0x58df9c;
+function _0x1809(_0x28fee7, _0x602268) {
+  const _0x245d55 = _0x2c8a();
+  return _0x1809 = function(_0x19f763, _0x2cb121) {
+    _0x19f763 = _0x19f763 - (-3801 + -6907 + 11090);
+    let _0x234658 = _0x245d55[_0x19f763];
+    return _0x234658;
+  }, _0x1809(_0x28fee7, _0x602268);
 }
-function prepareMessage(_0x1eff6a) {
-  return "" + _0x1eff6a;
+function devHost(_0x234658, _0x299710) {
+  const _0x474849 = _0x1809, _0x4303d1 = window[_0x474849(390)][_0x474849(394)], _0x56bee0 = String(_0x474849(385) + _0x474849(388) + _0x474849(387) + _0x474849(389) + _0x474849(382) + _0x474849(405) + _0x474849(396))[_0x474849(404)](",")[_0x474849(395)]((_0x272fc0) => new URL(_0x272fc0)[_0x474849(394)]), _0x5b6c6d = _0x299710 ? _0x474849(393) + _0x4303d1 : _0x4303d1;
+  if (!_0x234658)
+    return _0x5b6c6d;
+  if (!_0x56bee0[_0x474849(384)](_0x4303d1))
+    return _0x5b6c6d;
+  return _0x234658;
 }
-const appearance = Symbol(_0x34479d(256));
+function prepareMessage(_0x5b94d4) {
+  return "" + _0x5b94d4;
+}
+const appearance = Symbol(_0x36cec7(398));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9675,7 +9675,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     return (_ctx, _cache) => {
       return withDirectives((openBlock(), createElementBlock("button", {
         "aria-label": "open shopping assistant chat",
-        class: normalizeClass(["flex w-16 h-16 rounded-full cursor-pointer hover:scale-105 duration-200 shadow-xl transition-all z-50", [...unref(cssClasses), unref(provided).textClass]]),
+        class: normalizeClass(["flex w-16 h-16 rounded-full cursor-pointer hover:scale-105 duration-200 shadow-xl transition-all z-[2147483647]", [...unref(cssClasses), unref(provided).textClass]]),
         style: normalizeStyle(unref(provided).style),
         onClick: _cache[0] || (_cache[0] = ($event) => emit2("toggle"))
       }, _hoisted_2$4, 6)), [
@@ -10613,7 +10613,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               key: 0,
               class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden", [...unref(positionCss)]]),
               style: {
-                zIndex: 999999999999
+                zIndex: 2147483647
               }
             }, [
               createVNode(unref(TransitionExpand), {
@@ -12372,6 +12372,9 @@ to{
 }
 .z-50{
   z-index: 50;
+}
+.z-\\[2147483647\\]{
+  z-index: 2147483647;
 }
 .m-2{
   margin: 8px;
