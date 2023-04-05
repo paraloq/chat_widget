@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x58b4() {
-  const _0x42181b = ["www.", "appearance", "hostname", "416SSlWlJ", "3016401IGhXkf", "357830YuQxgv", "includes", "calhost:33", "5265LdqdFc", "ifyapp.com", "33/", "178892ofprkV", "4EAShzj", "12ZInhdd", "https://de", "7278cnvIMs", "owgcy.ampl", "map", "47024016cRzWRu", "2239380fOuMKw", "v.d8g529d2", "location", "split", "1063cSavcR", ",http://lo", "9lQqPUQ", "2938TaBzhR"];
-  _0x58b4 = function() {
-    return _0x42181b;
-  };
-  return _0x58b4();
-}
-const _0x130bab = _0x3606;
-(function(_0x1d34ac, _0x5edeac) {
-  const _0x38446d = _0x3606, _0x8e8add = _0x1d34ac();
+const _0x1152ab = _0x1c9d;
+(function(_0x4b5a3a, _0x122bfd) {
+  const _0x151116 = _0x1c9d, _0x4063ff = _0x4b5a3a();
   while (!![]) {
     try {
-      const _0x528cd3 = -parseInt(_0x38446d(459)) / (-666 + 4849 + -4182) * (parseInt(_0x38446d(462)) / (-3474 + -5811 + 9287)) + -parseInt(_0x38446d(467)) / (-881 + -4763 + 5647) * (parseInt(_0x38446d(475)) / (-2623 + 1367 * 3 + -1474)) + -parseInt(_0x38446d(471)) / (5008 * -1 + 4157 + 214 * 4) * (parseInt(_0x38446d(478)) / (8962 * 1 + 1 * -1376 + -7580)) + -parseInt(_0x38446d(474)) / (-1 * 2773 + 2452 + -2 * -164) * (-parseInt(_0x38446d(466)) / (-1 * 5293 + -109 * -81 + 441 * -8)) + parseInt(_0x38446d(461)) / (-122 * 65 + -7026 + 14965) * (parseInt(_0x38446d(468)) / (-4337 * -1 + -1 * -7703 + 802 * -15)) + -parseInt(_0x38446d(455)) / (-2697 + 541 + -11 * -197) + -parseInt(_0x38446d(476)) / (-5328 + 2261 + 3079) * (-parseInt(_0x38446d(481)) / (-7652 + -31 * -93 + 4782));
-      if (_0x528cd3 === _0x5edeac)
+      const _0x57b71a = -parseInt(_0x151116(404)) / (3 * -1828 + -9799 * 1 + 15284) + parseInt(_0x151116(425)) / (4367 + -5441 + -538 * -2) * (-parseInt(_0x151116(408)) / (483 + -1 * 6068 + 11 * 508)) + -parseInt(_0x151116(418)) / (3183 + -1968 + -1211) * (parseInt(_0x151116(427)) / (-4 * -1135 + 15 * 284 + -8795 * 1)) + parseInt(_0x151116(420)) / (25 * 249 + -2 * 305 + -5609) * (-parseInt(_0x151116(407)) / (-7 * -1123 + -1 * 9089 + 1235)) + parseInt(_0x151116(422)) / (2137 * 2 + 94 * -106 + 22 * 259) + -parseInt(_0x151116(415)) / (5166 + 8244 + -1 * 13401) * (-parseInt(_0x151116(410)) / (-8529 * 1 + 1 * -6299 + 4946 * 3)) + parseInt(_0x151116(419)) / (3522 * -2 + 1 * 5177 + 3 * 626);
+      if (_0x57b71a === _0x122bfd)
         break;
       else
-        _0x8e8add["push"](_0x8e8add["shift"]());
-    } catch (_0x24b842) {
-      _0x8e8add["push"](_0x8e8add["shift"]());
+        _0x4063ff["push"](_0x4063ff["shift"]());
+    } catch (_0x56a643) {
+      _0x4063ff["push"](_0x4063ff["shift"]());
     }
   }
-})(_0x58b4, 1 * 729915 + 1354069 * -1 + 2 * 779099);
-function devHost(_0x3dd9af, _0x89961c) {
-  const _0x57e81e = _0x3606, _0x4191d5 = window[_0x57e81e(457)][_0x57e81e(465)], _0x5d26d7 = String(_0x57e81e(477) + _0x57e81e(456) + _0x57e81e(479) + _0x57e81e(472) + _0x57e81e(460) + _0x57e81e(470) + _0x57e81e(473))[_0x57e81e(458)](",")[_0x57e81e(480)]((_0x564b19) => new URL(_0x564b19)[_0x57e81e(465)]), _0x3cd6c6 = _0x89961c ? _0x57e81e(463) + _0x4191d5 : _0x4191d5;
-  if (!_0x3dd9af)
-    return _0x3cd6c6;
-  if (!_0x5d26d7[_0x57e81e(469)](_0x4191d5))
-    return _0x3cd6c6;
-  return _0x3dd9af;
+})(_0x22c7, 80338 + -297739 + 3 * 250322);
+function _0x1c9d(_0x210a1f, _0x2f8ff0) {
+  const _0x49f291 = _0x22c7();
+  return _0x1c9d = function(_0x11ce51, _0x28df20) {
+    _0x11ce51 = _0x11ce51 - (3905 + -6928 + 6 * 571);
+    let _0x52910c = _0x49f291[_0x11ce51];
+    return _0x52910c;
+  }, _0x1c9d(_0x210a1f, _0x2f8ff0);
 }
-function _0x3606(_0x15c943, _0x17056f) {
-  const _0x256a34 = _0x58b4();
-  return _0x3606 = function(_0x3dd9af, _0x89961c) {
-    _0x3dd9af = _0x3dd9af - (5 * 1477 + -1 * -6395 + -13325);
-    let _0x4191d5 = _0x256a34[_0x3dd9af];
-    return _0x4191d5;
-  }, _0x3606(_0x15c943, _0x17056f);
+function _0x22c7() {
+  const _0xfcb879 = [",http://lo", "1415AflBMX", "map", "627311BuBEzn", "33/", "split", "5397sCWAZi", "24327crBQmf", "hostname", "208020palXrX", "www.", "ifyapp.com", "owgcy.ampl", "v.d8g529d2", "324GKRMZl", "https://de", "location", "14036bhvCvk", "5057690eEGXiN", "84QwJPmV", "appearance", "7713312qbLxiV", "calhost:33", "includes", "2AlyzWm"];
+  _0x22c7 = function() {
+    return _0xfcb879;
+  };
+  return _0x22c7();
 }
-function prepareMessage(_0x5a87d5) {
-  return "" + _0x5a87d5;
+function devHost(_0x28df20, _0x52910c) {
+  const _0x5c6b8f = _0x1c9d, _0x5094dd = window[_0x5c6b8f(417)][_0x5c6b8f(409)], _0x2b369d = String(_0x5c6b8f(416) + _0x5c6b8f(414) + _0x5c6b8f(413) + _0x5c6b8f(412) + _0x5c6b8f(426) + _0x5c6b8f(423) + _0x5c6b8f(405))[_0x5c6b8f(406)](",")[_0x5c6b8f(403)]((_0x588da9) => new URL(_0x588da9)[_0x5c6b8f(409)]), _0x4647e3 = _0x52910c ? _0x5c6b8f(411) + _0x5094dd : _0x5094dd;
+  if (!_0x28df20)
+    return _0x4647e3;
+  if (!_0x2b369d[_0x5c6b8f(424)](_0x5094dd))
+    return _0x4647e3;
+  return _0x28df20;
 }
-const appearance = Symbol(_0x130bab(464));
+function prepareMessage(_0x359355) {
+  return "" + _0x359355;
+}
+const appearance = Symbol(_0x1152ab(421));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10343,9 +10343,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
     const isLanguageSettingsOpen = useStorage("monoloqLanguageSettingsOpen", false);
     function dateFromISO8601(isoDateString) {
-      if (!isoDateString || typeof isoDateString !== "string") {
+      if (!isoDateString || typeof isoDateString !== "string")
         throw new Error("Invalid input: expecting a non-empty string.");
-      }
       const parts = isoDateString.match(/\d+/g);
       const isoTime = Date.UTC(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], parts[5]);
       const isoDate = new Date(isoTime);
@@ -10367,7 +10366,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           return { options: newOptions, url };
         },
         afterFetch(ctx) {
-          ctx.data.timestamp = dateFromISO8601(ctx.data.timestamp);
+          ctx.data.timestamp = Date.parse(dateFromISO8601(ctx.data.timestamp));
           return ctx;
         }
       }
