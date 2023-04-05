@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0xca5fe4 = _0x2634;
-(function(_0x143676, _0x3af674) {
-  const _0x416aba = _0x2634, _0x48699b = _0x143676();
+const _0x111a43 = _0x2266;
+(function(_0xbeafe1, _0x616bb) {
+  const _0x3bc8ae = _0x2266, _0x46ec03 = _0xbeafe1();
   while (!![]) {
     try {
-      const _0x42a68b = parseInt(_0x416aba(257)) / (-4046 + -445 * 1 + -4 * -1123) * (parseInt(_0x416aba(261)) / (-4558 + -2894 + 7454)) + -parseInt(_0x416aba(245)) / (6155 + -2 * -4353 + -14858) + -parseInt(_0x416aba(248)) / (3809 + 2543 + -6 * 1058) + -parseInt(_0x416aba(250)) / (3 * 983 + -3 * 2986 + -1 * -6014) * (parseInt(_0x416aba(243)) / (-110 * -3 + -11 * 95 + 721)) + -parseInt(_0x416aba(255)) / (4188 + -4806 + 625) + -parseInt(_0x416aba(256)) / (5786 + -3439 + -2339) * (parseInt(_0x416aba(251)) / (3660 + 3 * -2644 + 4281)) + parseInt(_0x416aba(254)) / (-35 * 273 + 2110 + 71 * 105);
-      if (_0x42a68b === _0x3af674)
+      const _0x534d1b = -parseInt(_0x3bc8ae(298)) / (-5691 + 5 * -433 + 7857) * (-parseInt(_0x3bc8ae(292)) / (-8807 + 5361 + 3448)) + parseInt(_0x3bc8ae(283)) / (1901 + -2951 * -1 + -4849) * (-parseInt(_0x3bc8ae(294)) / (1 * -7237 + -11 + -14 * -518)) + parseInt(_0x3bc8ae(297)) / (-4357 + -3973 + 8335) * (-parseInt(_0x3bc8ae(284)) / (-3113 + 8103 + -4984)) + parseInt(_0x3bc8ae(289)) / (-6566 + 275 + -1 * -6298) + parseInt(_0x3bc8ae(293)) / (-4733 + -3 * 2391 + 11914) * (-parseInt(_0x3bc8ae(301)) / (-3569 + -1164 + 4742)) + -parseInt(_0x3bc8ae(295)) / (691 * -8 + 143 * 45 + -3 * 299) + parseInt(_0x3bc8ae(288)) / (4 * -81 + -8203 + 6 * 1423) * (-parseInt(_0x3bc8ae(290)) / (-9104 + -7261 + -103 * -159));
+      if (_0x534d1b === _0x616bb)
         break;
       else
-        _0x48699b["push"](_0x48699b["shift"]());
-    } catch (_0x3b1c63) {
-      _0x48699b["push"](_0x48699b["shift"]());
+        _0x46ec03["push"](_0x46ec03["shift"]());
+    } catch (_0x3cae0b) {
+      _0x46ec03["push"](_0x46ec03["shift"]());
     }
   }
-})(_0x24a5, -407 * -906 + -2 * -225886 + -553287);
-function devHost(_0xcacaa4, _0x22b2fe) {
-  const _0x2ae8ba = _0x2634, _0x3f7ea7 = window[_0x2ae8ba(252)][_0x2ae8ba(253)], _0x161a6e = String(_0x2ae8ba(246) + _0x2ae8ba(258) + "ai")[_0x2ae8ba(247)](",")[_0x2ae8ba(259)]((_0x301da7) => new URL(_0x301da7)[_0x2ae8ba(253)]), _0x30214b = _0x22b2fe ? _0x2ae8ba(244) + _0x3f7ea7 : _0x3f7ea7;
-  if (!_0xcacaa4)
-    return _0x30214b;
-  if (!_0x161a6e[_0x2ae8ba(260)](_0x3f7ea7))
-    return _0x30214b;
-  return _0xcacaa4;
+})(_0xdd3c, 100845 + -446572 + 21421 * 29);
+function devHost(_0x46b6dc, _0x30102a) {
+  const _0xe2c953 = _0x2266, _0x32361e = window[_0xe2c953(287)][_0xe2c953(299)], _0x1e072e = String(_0xe2c953(296) + _0xe2c953(285) + "ai")[_0xe2c953(291)](",")[_0xe2c953(300)]((_0x36941e) => new URL(_0x36941e)[_0xe2c953(299)]), _0x3bf975 = _0x30102a ? _0xe2c953(286) + _0x32361e : _0x32361e;
+  if (!_0x46b6dc)
+    return _0x3bf975;
+  if (!_0x1e072e[_0xe2c953(303)](_0x32361e))
+    return _0x3bf975;
+  return _0x46b6dc;
 }
-function _0x24a5() {
-  const _0xdbfa9c = ["split", "1112856EDQHiK", "appearance", "600mdzUyu", "71667CkkiYs", "location", "hostname", "21139840LcUUBl", "3549280KBxeiD", "536MutdAw", "3BlbYSD", "p.monoloq.", "map", "includes", "97234rVzfal", "10530AfhLRl", "www.", "1389699gPIuFJ", "https://ap"];
-  _0x24a5 = function() {
-    return _0xdbfa9c;
+function prepareMessage(_0x73a866) {
+  return "" + _0x73a866;
+}
+function _0x2266(_0x2ce39c, _0x5b80a5) {
+  const _0x5b1cdb = _0xdd3c();
+  return _0x2266 = function(_0x42c7b5, _0x49355f) {
+    _0x42c7b5 = _0x42c7b5 - (-3745 + 1355 + 2673);
+    let _0x46b6dc = _0x5b1cdb[_0x42c7b5];
+    return _0x46b6dc;
+  }, _0x2266(_0x2ce39c, _0x5b80a5);
+}
+function _0xdd3c() {
+  const _0x4c3bc5 = ["75jgJNoF", "89221sXKkwF", "hostname", "map", "108tvlNdC", "appearance", "includes", "249xRLUwp", "7842OzjUta", "p.monoloq.", "www.", "location", "1716GOxxzi", "1620542QjyedE", "3456CgtJka", "split", "12SBzWPP", "91384TjmvHT", "1244VURAOM", "2639280LidJqN", "https://ap"];
+  _0xdd3c = function() {
+    return _0x4c3bc5;
   };
-  return _0x24a5();
+  return _0xdd3c();
 }
-function prepareMessage(_0x3ce032) {
-  return "" + _0x3ce032;
-}
-function _0x2634(_0x4839ea, _0x4050ae) {
-  const _0x5c5489 = _0x24a5();
-  return _0x2634 = function(_0xc84c61, _0x523bc4) {
-    _0xc84c61 = _0xc84c61 - (6799 + -8358 + 1802);
-    let _0xcacaa4 = _0x5c5489[_0xc84c61];
-    return _0xcacaa4;
-  }, _0x2634(_0x4839ea, _0x4050ae);
-}
-const appearance = Symbol(_0xca5fe4(249));
+const appearance = Symbol(_0x111a43(302));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10292,8 +10292,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     fixed: { type: Boolean, default: true },
     host_domain: null,
     language: null,
-    _mockLoading: { type: Boolean, default: false },
-    _isOpen: { type: Boolean, default: void 0 }
+    _mockLoading: { type: Boolean, default: false }
   },
   setup(__props) {
     const props = __props;
@@ -10343,14 +10342,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isLoading = ref(false);
     const isChatOpen = useStorage("monoloqIsChatOpen", false);
     const isLanguageSettingsOpen = useStorage("monoloqLanguageSettingsOpen", false);
-    watchEffect(() => {
-      if (props._isOpen !== void 0)
-        isChatOpen.value = props._isOpen;
-    });
     function dateFromISO8601(isoDateString) {
-      if (!isoDateString || typeof isoDateString !== "string") {
+      if (!isoDateString || typeof isoDateString !== "string")
         throw new Error("Invalid input: expecting a non-empty string.");
-      }
       const parts = isoDateString.match(/\d+/g);
       const isoTime = Date.UTC(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], parts[5]);
       const isoDate = new Date(isoTime);
@@ -10372,7 +10366,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           return { options: newOptions, url };
         },
         afterFetch(ctx) {
-          ctx.data.timestamp = dateFromISO8601(ctx.data.timestamp);
+          ctx.data.timestamp = Date.parse(dateFromISO8601(ctx.data.timestamp));
           return ctx;
         }
       }
