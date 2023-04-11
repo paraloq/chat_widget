@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x1152ab = _0x1c9d;
-(function(_0x4b5a3a, _0x122bfd) {
-  const _0x151116 = _0x1c9d, _0x4063ff = _0x4b5a3a();
+const _0x2f9e46 = _0x3144;
+(function(_0x33d975, _0x5bdc40) {
+  const _0x24942c = _0x3144, _0x6085cd = _0x33d975();
   while (!![]) {
     try {
-      const _0x57b71a = -parseInt(_0x151116(404)) / (3 * -1828 + -9799 * 1 + 15284) + parseInt(_0x151116(425)) / (4367 + -5441 + -538 * -2) * (-parseInt(_0x151116(408)) / (483 + -1 * 6068 + 11 * 508)) + -parseInt(_0x151116(418)) / (3183 + -1968 + -1211) * (parseInt(_0x151116(427)) / (-4 * -1135 + 15 * 284 + -8795 * 1)) + parseInt(_0x151116(420)) / (25 * 249 + -2 * 305 + -5609) * (-parseInt(_0x151116(407)) / (-7 * -1123 + -1 * 9089 + 1235)) + parseInt(_0x151116(422)) / (2137 * 2 + 94 * -106 + 22 * 259) + -parseInt(_0x151116(415)) / (5166 + 8244 + -1 * 13401) * (-parseInt(_0x151116(410)) / (-8529 * 1 + 1 * -6299 + 4946 * 3)) + parseInt(_0x151116(419)) / (3522 * -2 + 1 * 5177 + 3 * 626);
-      if (_0x57b71a === _0x122bfd)
+      const _0x169ddc = parseInt(_0x24942c(451)) / (7102 + -822 * -1 + 57 * -139) + -parseInt(_0x24942c(453)) / (37 * 167 + 2 * 2721 + -11619) + -parseInt(_0x24942c(460)) / (5 * -37 + -7932 + 4 * 2030) + parseInt(_0x24942c(462)) / (-10 * 9 + 2763 + -2669) + -parseInt(_0x24942c(458)) / (-526 * 1 + -1 * 4661 + -59 * -88) * (parseInt(_0x24942c(464)) / (323 * -9 + -3853 + -17 * -398)) + parseInt(_0x24942c(472)) / (1663 * 4 + -9814 + 3169) + -parseInt(_0x24942c(459)) / (1 * 7412 + -5486 + 7 * -274) * (-parseInt(_0x24942c(471)) / (1 * 7745 + -5063 + -11 * 243));
+      if (_0x169ddc === _0x5bdc40)
         break;
       else
-        _0x4063ff["push"](_0x4063ff["shift"]());
-    } catch (_0x56a643) {
-      _0x4063ff["push"](_0x4063ff["shift"]());
+        _0x6085cd["push"](_0x6085cd["shift"]());
+    } catch (_0x2cea2e) {
+      _0x6085cd["push"](_0x6085cd["shift"]());
     }
   }
-})(_0x22c7, 80338 + -297739 + 3 * 250322);
-function _0x1c9d(_0x210a1f, _0x2f8ff0) {
-  const _0x49f291 = _0x22c7();
-  return _0x1c9d = function(_0x11ce51, _0x28df20) {
-    _0x11ce51 = _0x11ce51 - (3905 + -6928 + 6 * 571);
-    let _0x52910c = _0x49f291[_0x11ce51];
-    return _0x52910c;
-  }, _0x1c9d(_0x210a1f, _0x2f8ff0);
+})(_0x5382, -1445846 + -11 * 26153 + -81 * -31418);
+function _0x3144(_0x3fb25f, _0x10a4c0) {
+  const _0x3eef3d = _0x5382();
+  return _0x3144 = function(_0x52a040, _0x153ee7) {
+    _0x52a040 = _0x52a040 - (2 * 2640 + 106 * 5 + -233 * 23);
+    let _0x956a7f = _0x3eef3d[_0x52a040];
+    return _0x956a7f;
+  }, _0x3144(_0x3fb25f, _0x10a4c0);
 }
-function _0x22c7() {
-  const _0xfcb879 = [",http://lo", "1415AflBMX", "map", "627311BuBEzn", "33/", "split", "5397sCWAZi", "24327crBQmf", "hostname", "208020palXrX", "www.", "ifyapp.com", "owgcy.ampl", "v.d8g529d2", "324GKRMZl", "https://de", "location", "14036bhvCvk", "5057690eEGXiN", "84QwJPmV", "appearance", "7713312qbLxiV", "calhost:33", "includes", "2AlyzWm"];
-  _0x22c7 = function() {
-    return _0xfcb879;
+function devHost(_0x3eef3d, _0x52a040) {
+  const _0x384a3e = _0x3144, _0x153ee7 = window[_0x384a3e(463)][_0x384a3e(473)], _0x956a7f = String(_0x384a3e(457) + _0x384a3e(455) + _0x384a3e(470) + _0x384a3e(468) + _0x384a3e(466) + _0x384a3e(467) + _0x384a3e(454))[_0x384a3e(461)](",")[_0x384a3e(452)]((_0x34d638) => new URL(_0x34d638)[_0x384a3e(473)]), _0x47f7d7 = _0x52a040 ? _0x384a3e(456) + _0x153ee7 : _0x153ee7;
+  if (!_0x3eef3d)
+    return _0x47f7d7;
+  if (!_0x956a7f[_0x384a3e(465)](_0x153ee7))
+    return _0x47f7d7;
+  return _0x3eef3d;
+}
+function prepareMessage(_0x2c6a29) {
+  return "" + _0x2c6a29;
+}
+function _0x5382() {
+  const _0x50271b = ["calhost:33", "ifyapp.com", "appearance", "owgcy.ampl", "1115973VEOUYl", "11151567iKMCia", "hostname", "198235gcNikV", "map", "2718774nGRKDU", "33/", "v.d8g529d2", "www.", "https://de", "1774610YBQmRN", "136hQzsVV", "4703586Dpuwgs", "split", "3616316bissvY", "location", "18orNIfk", "includes", ",http://lo"];
+  _0x5382 = function() {
+    return _0x50271b;
   };
-  return _0x22c7();
+  return _0x5382();
 }
-function devHost(_0x28df20, _0x52910c) {
-  const _0x5c6b8f = _0x1c9d, _0x5094dd = window[_0x5c6b8f(417)][_0x5c6b8f(409)], _0x2b369d = String(_0x5c6b8f(416) + _0x5c6b8f(414) + _0x5c6b8f(413) + _0x5c6b8f(412) + _0x5c6b8f(426) + _0x5c6b8f(423) + _0x5c6b8f(405))[_0x5c6b8f(406)](",")[_0x5c6b8f(403)]((_0x588da9) => new URL(_0x588da9)[_0x5c6b8f(409)]), _0x4647e3 = _0x52910c ? _0x5c6b8f(411) + _0x5094dd : _0x5094dd;
-  if (!_0x28df20)
-    return _0x4647e3;
-  if (!_0x2b369d[_0x5c6b8f(424)](_0x5094dd))
-    return _0x4647e3;
-  return _0x28df20;
-}
-function prepareMessage(_0x359355) {
-  return "" + _0x359355;
-}
-const appearance = Symbol(_0x1152ab(421));
+const appearance = Symbol(_0x2f9e46(469));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -13041,8 +13041,8 @@ async function register() {
       new ChatWindow(props)
     );
     console.info("%s Monoloq widget installed!", "✨");
-  } catch {
-    console.error("Monoloq widget could not be installed. Please contact the Monoloq support.");
+  } catch (e) {
+    console.error(`Monoloq widget could not be installed. Please contact the Monoloq support. Error: ${e}`);
   }
 }
 export {
