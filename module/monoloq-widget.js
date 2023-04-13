@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x52a4e4 = _0x454f;
-(function(_0x44fdf6, _0xa3038d) {
-  const _0x1e2aa4 = _0x454f, _0xb9baaa = _0x44fdf6();
+function _0x4977() {
+  const _0x332e66 = ["https://de", "33/", "3684goFzKe", "appearance", "63789wNUcqf", "split", "4zEeKAR", "www.", "ifyapp.com", "8IgVpGc", ",http://lo", "location", "calhost:33", "hostname", "290fSJRWC", "includes", "623448wkkYPZ", "map", "4315545LVsfDQ", "owgcy.ampl", "168VAnSLz", "430AAZjjC", "3888fnjkCo", "29757gaNNTR", "1241421CBHfvB", "1421yvPONe", "v.d8g529d2"];
+  _0x4977 = function() {
+    return _0x332e66;
+  };
+  return _0x4977();
+}
+const _0x1e0e5b = _0x29e9;
+function _0x29e9(_0x539de8, _0x32f64a) {
+  const _0x330452 = _0x4977();
+  return _0x29e9 = function(_0x23c0a0, _0x48f8c1) {
+    _0x23c0a0 = _0x23c0a0 - (-1 * 8714 + 2464 + -1 * -6421);
+    let _0x765a22 = _0x330452[_0x23c0a0];
+    return _0x765a22;
+  }, _0x29e9(_0x539de8, _0x32f64a);
+}
+(function(_0x49840c, _0x214293) {
+  const _0x231b0d = _0x29e9, _0x440599 = _0x49840c();
   while (!![]) {
     try {
-      const _0x25fbcf = -parseInt(_0x1e2aa4(392)) / (-1438 * 5 + 7051 + 140) + parseInt(_0x1e2aa4(378)) / (-7357 + 9 * 996 + -1605) + -parseInt(_0x1e2aa4(384)) / (519 + -4567 * -1 + -5083) + parseInt(_0x1e2aa4(389)) / (-1 * -4447 + 2297 * 1 + 20 * -337) + parseInt(_0x1e2aa4(380)) / (-982 * -8 + -471 * -9 + 806 * -15) * (-parseInt(_0x1e2aa4(379)) / (-2 * -2878 + 1 * -6829 + 1079)) + parseInt(_0x1e2aa4(381)) / (-33 * -21 + 13 * -554 + 6516) + parseInt(_0x1e2aa4(375)) / (40 * 179 + -1862 * -3 + -2 * 6369);
-      if (_0x25fbcf === _0xa3038d)
+      const _0xd7d36c = -parseInt(_0x231b0d(179)) / (722 + -2280 + 1559) * (parseInt(_0x231b0d(174)) / (4629 + -937 * 1 + -3690)) + parseInt(_0x231b0d(178)) / (-1 * -5782 + -4095 + -1 * 1684) * (-parseInt(_0x231b0d(187)) / (-625 + 2576 + -1947)) + parseInt(_0x231b0d(195)) / (617 * 16 + -6243 + -3624) * (-parseInt(_0x231b0d(176)) / (-2189 + -9042 + 11237)) + parseInt(_0x231b0d(197)) / (-97 * 22 + -106 * -8 + 1 * 1293) * (-parseInt(_0x231b0d(190)) / (5041 + 8155 + -13188)) + parseInt(_0x231b0d(172)) / (-6271 + -4475 + 1195 * 9) + -parseInt(_0x231b0d(175)) / (1 * 4027 + -1474 + 1 * -2543) * (parseInt(_0x231b0d(185)) / (2750 + 8366 + 2221 * -5)) + parseInt(_0x231b0d(183)) / (2 * 4262 + 1597 * 1 + -10109) * (parseInt(_0x231b0d(177)) / (-7026 * -1 + 23 * -333 + 34 * 19));
+      if (_0xd7d36c === _0x214293)
         break;
       else
-        _0xb9baaa["push"](_0xb9baaa["shift"]());
-    } catch (_0x7c44f1) {
-      _0xb9baaa["push"](_0xb9baaa["shift"]());
+        _0x440599["push"](_0x440599["shift"]());
+    } catch (_0x7f3cf5) {
+      _0x440599["push"](_0x440599["shift"]());
     }
   }
-})(_0x1918, -176221 + -373571 * 1 + -5438 * -203);
-function _0x1918() {
-  const _0x203329 = ["owgcy.ampl", "location", "966543Csestf", "hostname", "includes", "33/", "ifyapp.com", "2655568DxYAtI", "v.d8g529d2", "https://de", "1027822VbkNfb", "276ygbhFK", "71140fOzOky", "7350924piJcQF", "calhost:33", "appearance", "669240MUEsgX", ",http://lo", "split", "map", "www.", "2008976bgRAsH"];
-  _0x1918 = function() {
-    return _0x203329;
-  };
-  return _0x1918();
+})(_0x4977, 233278 + -21263 + 67 * 911);
+function devHost(_0x23c0a0, _0x48f8c1) {
+  const _0x4aec40 = _0x29e9, _0x765a22 = window[_0x4aec40(192)][_0x4aec40(194)], _0x2a5177 = String(_0x4aec40(181) + _0x4aec40(180) + _0x4aec40(173) + _0x4aec40(189) + _0x4aec40(191) + _0x4aec40(193) + _0x4aec40(182))[_0x4aec40(186)](",")[_0x4aec40(171)]((_0x45f5a6) => new URL(_0x45f5a6)[_0x4aec40(194)]), _0x16fb53 = _0x48f8c1 ? _0x4aec40(188) + _0x765a22 : _0x765a22;
+  if (!_0x23c0a0)
+    return _0x16fb53;
+  if (!_0x2a5177[_0x4aec40(196)](_0x765a22))
+    return _0x16fb53;
+  return _0x23c0a0;
 }
-function devHost(_0x27fe05, _0x496686) {
-  const _0x56476c = _0x454f, _0x41d904 = window[_0x56476c(391)][_0x56476c(393)], _0x1d5410 = String(_0x56476c(377) + _0x56476c(376) + _0x56476c(390) + _0x56476c(374) + _0x56476c(385) + _0x56476c(382) + _0x56476c(373))[_0x56476c(386)](",")[_0x56476c(387)]((_0xc71e15) => new URL(_0xc71e15)[_0x56476c(393)]), _0x2aed7c = _0x496686 ? _0x56476c(388) + _0x41d904 : _0x41d904;
-  if (!_0x27fe05)
-    return _0x2aed7c;
-  if (!_0x1d5410[_0x56476c(394)](_0x41d904))
-    return _0x2aed7c;
-  return _0x27fe05;
+function prepareMessage(_0x5f0ff8) {
+  return "" + _0x5f0ff8;
 }
-function _0x454f(_0x2632ff, _0x40aa93) {
-  const _0x1b376a = _0x1918();
-  return _0x454f = function(_0xac7984, _0x27fe05) {
-    _0xac7984 = _0xac7984 - (-6811 + -1 * -8891 + -1707);
-    let _0x496686 = _0x1b376a[_0xac7984];
-    return _0x496686;
-  }, _0x454f(_0x2632ff, _0x40aa93);
-}
-function prepareMessage(_0x33c622) {
-  return "" + _0x33c622;
-}
-const appearance = Symbol(_0x52a4e4(383));
+const appearance = Symbol(_0x1e0e5b(184));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9381,17 +9381,19 @@ const _hoisted_5$6 = {
 };
 const _hoisted_6$6 = { class: "text-xs opacity-50" };
 const _hoisted_7$5 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
-const _hoisted_8$4 = {
+const _hoisted_8$4 = { key: 0 };
+const _hoisted_9$3 = ["href"];
+const _hoisted_10$2 = {
   key: 0,
   class: "mt-3 text-xs"
 };
-const _hoisted_9$3 = ["href"];
-const _hoisted_10$2 = {
+const _hoisted_11$1 = ["href"];
+const _hoisted_12$1 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
-const _hoisted_11$1 = { key: 0 };
-const _hoisted_12$1 = { class: "text-xs opacity-50" };
+const _hoisted_13 = { key: 0 };
+const _hoisted_14 = { class: "text-xs opacity-50" };
 const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
@@ -9402,6 +9404,22 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const props = __props;
     const provided = inject(appearance);
+    const parsedMessage = computed(() => {
+      const regex = /<a href="([^"]+)">([^<]+)<\/a>/g;
+      let match;
+      let lastIndex = 0;
+      const parts = [];
+      if ("text" in props.message)
+        return;
+      while ((match = regex.exec(props.message.user_language_text)) !== null) {
+        parts.push({ isLink: false, text: props.message.user_language_text.slice(lastIndex, match.index) });
+        parts.push({ isLink: true, href: match[1], text: match[2] });
+        lastIndex = match.index + match[0].length;
+      }
+      const remainingText = props.message.user_language_text.slice(lastIndex);
+      parts.push(...remainingText.split("\n").map((text, index) => ({ isLink: false, text, isLineBreak: index > 0 })));
+      return parts;
+    });
     const showTime = computed(() => {
       if (props.isFirst)
         return true;
@@ -9438,7 +9456,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
+        unref(parsedMessage) && "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
           createBaseVNode("div", _hoisted_2$8, [
             createBaseVNode("div", _hoisted_3$7, [
               createBaseVNode("img", {
@@ -9450,21 +9468,31 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
             createBaseVNode("time", _hoisted_6$6, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("div", _hoisted_7$5, [
-            createBaseVNode("p", null, toDisplayString(props.message.user_language_text), 1),
-            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_8$4, [
+            (openBlock(true), createElementBlock(Fragment, null, renderList(unref(parsedMessage), (part) => {
+              return openBlock(), createElementBlock(Fragment, {
+                key: part.text
+              }, [
+                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$4, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
+                  key: 1,
+                  href: part.href,
+                  style: normalizeStyle({ color: unref(provided).mainColor })
+                }, toDisplayString(part.text), 13, _hoisted_9$3))
+              ], 64);
+            }), 128)),
+            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$2, [
               createTextVNode(" See "),
               createBaseVNode("a", {
                 href: props.message.source_links[0],
                 style: normalizeStyle({ color: unref(provided).mainColor }),
                 target: "_blank"
-              }, "here", 12, _hoisted_9$3),
+              }, "here", 12, _hoisted_11$1),
               createTextVNode(" for more information. ")
             ])) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_11$1, [
-            createBaseVNode("time", _hoisted_12$1, toDisplayString(unref(time)), 1)
+        "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_12$1, [
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_13, [
+            createBaseVNode("time", _hoisted_14, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
             class: normalizeClass(["rounded-l-lg rounded-tr-lg px-5 leading-[24px] py-4 ml-5 !break-words max-w-[316px]", unref(provided).textClass]),
