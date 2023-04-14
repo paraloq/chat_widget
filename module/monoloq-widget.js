@@ -4139,7 +4139,7 @@ function createAppAPI(render2, hydrate) {
       _container: null,
       _context: context,
       _instance: null,
-      version,
+      version: version$1,
       get config() {
         return context.config;
       },
@@ -4221,7 +4221,7 @@ function createAppAPI(render2, hydrate) {
           rootContainer.__vue_app__ = app;
           {
             app._instance = vnode.component;
-            devtoolsInitApp(app, version);
+            devtoolsInitApp(app, version$1);
           }
           return getExposeProxy(vnode.component) || vnode.component.proxy;
         } else {
@@ -6304,7 +6304,7 @@ function initCustomFormatter() {
     window.devtoolsFormatters = [formatter];
   }
 }
-const version = "3.2.45";
+const version$1 = "3.2.45";
 const svgNS = "http://www.w3.org/2000/svg";
 const doc = typeof document !== "undefined" ? document : null;
 const templateContainer = doc && /* @__PURE__ */ doc.createElement("template");
@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x1d75() {
-  const _0x2df21a = ["206094RzBggs", "includes", "www.", "3296oIcBQR", "calhost:33", "v.d8g529d2", "63tgmHAg", "2bbAhdJ", "29570JHmcTW", "20206keSBJO", "ifyapp.com", "6916085RORhzk", "1055kkxauE", "owgcy.ampl", "33/", "location", ",http://lo", "hostname", "2060STxscV", "appearance", "1679700vEMRTv", "split", "3913yGFIcm", "map", "https://de"];
-  _0x1d75 = function() {
-    return _0x2df21a;
-  };
-  return _0x1d75();
-}
-const _0x286030 = _0x291b;
-function _0x291b(_0x3f5f95, _0x29aeff) {
-  const _0x2ad4e9 = _0x1d75();
-  return _0x291b = function(_0xa632b3, _0x124d8e) {
-    _0xa632b3 = _0xa632b3 - (-6950 + -5482 + -12734 * -1);
-    let _0x5b13d7 = _0x2ad4e9[_0xa632b3];
-    return _0x5b13d7;
-  }, _0x291b(_0x3f5f95, _0x29aeff);
-}
-(function(_0x323958, _0x1d051e) {
-  const _0x5ac442 = _0x291b, _0x4de9e9 = _0x323958();
+const _0x22833b = _0x539d;
+(function(_0x37ccf8, _0x15d9f6) {
+  const _0x391bde = _0x539d, _0x274b15 = _0x37ccf8();
   while (!![]) {
     try {
-      const _0x30b9ce = -parseInt(_0x5ac442(319)) / (88 * -65 + 5366 + 355) * (-parseInt(_0x5ac442(317)) / (6398 + 2 * 4996 + -16388)) + -parseInt(_0x5ac442(310)) / (9056 + -7123 + -1930) + parseInt(_0x5ac442(303)) / (1 * -767 + -3611 * -1 + -2840) * (parseInt(_0x5ac442(322)) / (-67 + 1512 + -1440)) + -parseInt(_0x5ac442(305)) / (-6534 + 2 * -911 + 8362) + parseInt(_0x5ac442(307)) / (-577 * -15 + -1 * 4019 + 1 * -4629) * (-parseInt(_0x5ac442(313)) / (6428 * -1 + -9782 + 16218)) + parseInt(_0x5ac442(316)) / (7883 * -1 + -2559 + 10451) * (-parseInt(_0x5ac442(318)) / (6189 + 2781 + -8960)) + parseInt(_0x5ac442(321)) / (11 * 840 + -554 * -14 + 79 * -215);
-      if (_0x30b9ce === _0x1d051e)
+      const _0x3ac8f1 = parseInt(_0x391bde(343)) / (-6366 + 904 * -7 + -5 * -2539) + -parseInt(_0x391bde(363)) / (-337 * 2 + 3667 + -2991) * (-parseInt(_0x391bde(342)) / (-4708 + -8078 + 12789 * 1)) + parseInt(_0x391bde(355)) / (5405 * 1 + -205 * 1 + 6 * -866) + -parseInt(_0x391bde(353)) / (-8053 + -6142 + 14200) + parseInt(_0x391bde(346)) / (-7526 + 5375 + 1 * 2157) * (parseInt(_0x391bde(350)) / (1286 * -7 + -2275 + -11284 * -1)) + -parseInt(_0x391bde(357)) / (8584 * -1 + 8065 + 1 * 527) * (-parseInt(_0x391bde(356)) / (14 * 604 + -20 * -366 + -15767)) + -parseInt(_0x391bde(349)) / (11 * -711 + -113 * -23 + -654 * -8);
+      if (_0x3ac8f1 === _0x15d9f6)
         break;
       else
-        _0x4de9e9["push"](_0x4de9e9["shift"]());
-    } catch (_0x44946b) {
-      _0x4de9e9["push"](_0x4de9e9["shift"]());
+        _0x274b15["push"](_0x274b15["shift"]());
+    } catch (_0x408f05) {
+      _0x274b15["push"](_0x274b15["shift"]());
     }
   }
-})(_0x1d75, 19234 + -76940 + 215657);
-function devHost(_0x124d8e, _0x5b13d7) {
-  const _0x22c840 = _0x291b, _0x3bd275 = window[_0x22c840(325)][_0x22c840(302)], _0x3ef984 = String(_0x22c840(309) + _0x22c840(315) + _0x22c840(323) + _0x22c840(320) + _0x22c840(326) + _0x22c840(314) + _0x22c840(324))[_0x22c840(306)](",")[_0x22c840(308)]((_0x56f059) => new URL(_0x56f059)[_0x22c840(302)]), _0x1f0c96 = _0x5b13d7 ? _0x22c840(312) + _0x3bd275 : _0x3bd275;
-  if (!_0x124d8e)
-    return _0x1f0c96;
-  if (!_0x3ef984[_0x22c840(311)](_0x3bd275))
-    return _0x1f0c96;
-  return _0x124d8e;
+})(_0x1474, 470566 + 3782 * 145 + -2 * 290482);
+function devHost(_0x273d55, _0x389c24) {
+  const _0x11957f = _0x539d, _0x2a4475 = window[_0x11957f(348)][_0x11957f(347)], _0x5913b8 = String(_0x11957f(352) + _0x11957f(345) + _0x11957f(354) + _0x11957f(344) + _0x11957f(360) + _0x11957f(362) + _0x11957f(364))[_0x11957f(341)](",")[_0x11957f(351)]((_0x4735e1) => new URL(_0x4735e1)[_0x11957f(347)]), _0x2704dc = _0x389c24 ? _0x11957f(358) + _0x2a4475 : _0x2a4475;
+  if (!_0x273d55)
+    return _0x2704dc;
+  if (!_0x5913b8[_0x11957f(359)](_0x2a4475))
+    return _0x2704dc;
+  return _0x273d55;
 }
-function prepareMessage(_0x306e6f) {
-  return "" + _0x306e6f;
+function prepareMessage(_0x274c42) {
+  return "" + _0x274c42;
 }
-const appearance = Symbol(_0x286030(304));
+function _0x539d(_0x28d3f9, _0x4d8123) {
+  const _0x429baa = _0x1474();
+  return _0x539d = function(_0x46fcf8, _0x273d55) {
+    _0x46fcf8 = _0x46fcf8 - (-4027 + 11 * -118 + 5666);
+    let _0x389c24 = _0x429baa[_0x46fcf8];
+    return _0x389c24;
+  }, _0x539d(_0x28d3f9, _0x4d8123);
+}
+const appearance = Symbol(_0x22833b(361));
+function _0x1474() {
+  const _0x2043cd = ["appearance", "calhost:33", "2krOqnJ", "33/", "split", "2163153cmSigX", "388716UpNWpK", "ifyapp.com", "v.d8g529d2", "16134hFLFcL", "hostname", "location", "3317150Zmeaak", "581HgIAeR", "map", "https://de", "3596430leBqil", "owgcy.ampl", "119860PbiRLN", "3042LogJwx", "2984ZzahJd", "www.", "includes", ",http://lo"];
+  _0x1474 = function() {
+    return _0x2043cd;
+  };
+  return _0x1474();
+}
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9411,13 +9411,13 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       const parts = [];
       if ("text" in props.message)
         return;
-      while ((match = regex.exec(props.message.user_language_text)) !== null) {
-        parts.push({ isLink: false, text: props.message.user_language_text.slice(lastIndex, match.index) });
+      const userText = props.message.user_language_text;
+      while ((match = regex.exec(userText)) !== null) {
+        parts.push({ isLink: false, text: userText.slice(lastIndex, match.index) });
         parts.push({ isLink: true, href: match[1], text: match[2] });
         lastIndex = match.index + match[0].length;
       }
-      const remainingText = props.message.user_language_text.slice(lastIndex);
-      parts.push(...remainingText.split("\n").map((text, index) => ({ isLink: false, text, isLineBreak: index > 0 })));
+      parts.push({ isLink: false, text: userText.slice(lastIndex) });
       return parts;
     });
     const showTime = computed(() => {
@@ -10315,6 +10315,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     chat_button_position: { default: "bottom_right" },
     window_height: null,
     style_tags: null,
+    margin_side: { default: 20 },
+    margin_bottom: { default: 20 },
     currency_symbol: { default: "$" },
     enable_on_mobile: { type: Boolean, default: false },
     enable_sound: { type: Boolean, default: false },
@@ -10341,12 +10343,29 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       };
     });
     provide(appearance, provided);
-    const positionCss = computed(() => {
-      const classes = ["bottom-1 "];
-      props.chat_button_position === "bottom_right" ? classes.push("right-1 sm:right-5") : classes.push("left-1 sm:left-5");
-      props.fixed ? classes.push("fixed sm:ml-0 sm:bottom-5") : classes.push("absolute");
-      props.enable_on_mobile ? classes.push("") : classes.push("hidden sm:flex");
-      return classes;
+    const positionStyle = computed(() => {
+      const styles = {
+        bottom: `${props.margin_bottom}px`,
+        zIndex: 2147483647
+      };
+      if (props.chat_button_position === "bottom_right") {
+        styles.right = `${props.margin_side}px`;
+        styles.left = "auto";
+      } else {
+        styles.left = `${props.margin_side}px`;
+        styles.right = "auto";
+      }
+      if (props.fixed) {
+        styles.position = "fixed";
+        styles.marginLeft = "0";
+        styles.bottom = `${props.margin_bottom}px`;
+      } else {
+        styles.position = "absolute";
+      }
+      styles.display = "flex";
+      return {
+        ...styles
+      };
     });
     const IS_DEV = false;
     const retries = ref(0);
@@ -10626,10 +10645,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: normalizeClass(["!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden", [...unref(positionCss)]]),
-              style: {
-                zIndex: 2147483647
-              }
+              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden",
+              style: normalizeStyle(unref(positionStyle))
             }, [
               createVNode(unref(TransitionExpand), {
                 duration: 500,
@@ -10727,18 +10744,18 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   onSend
                 }, null, 8, ["is-loading"])
               ])
-            ], 2)) : (openBlock(), createElementBlock("div", _hoisted_9))
+            ], 4)) : (openBlock(), createElementBlock("div", _hoisted_9))
           ]),
           _: 1
         }),
         renderSlot(_ctx.$slots, "widgetButton", { toggle: onToggle }, () => [
           props.show_button_widget && showWidget.value ? (openBlock(), createBlock(_sfc_main$5, {
             key: 0,
-            class: normalizeClass([...unref(positionCss)]),
+            style: normalizeStyle(unref(positionStyle)),
             chat_button_position: props.chat_button_position,
             "is-open": unref(isChatOpen),
             onToggle: _cache[7] || (_cache[7] = ($event) => onToggle())
-          }, null, 8, ["class", "chat_button_position", "is-open"])) : createCommentVNode("", true)
+          }, null, 8, ["style", "chat_button_position", "is-open"])) : createCommentVNode("", true)
         ])
       ], 64);
     };
@@ -12085,6 +12102,13 @@ to{
   border-bottom-right-radius: var(--tab-radius, 0.5rem);
   border-bottom-left-radius: var(--tab-radius, 0.5rem);
 }
+.table tr.hover:hover th,
+    .table tr.hover:hover td,
+    .table tr.hover:nth-child(even):hover th,
+    .table tr.hover:nth-child(even):hover td{
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+}
 .textarea:focus{
   outline: 2px solid hsla(var(--bc) / 0.2);
   outline-offset: 2px;
@@ -12370,15 +12394,6 @@ to{
 .bottom-0{
   bottom: 0px;
 }
-.bottom-1{
-  bottom: 4px;
-}
-.right-1{
-  right: 4px;
-}
-.left-1{
-  left: 4px;
-}
 .right-0{
   right: 0px;
 }
@@ -12444,9 +12459,6 @@ to{
 }
 .grid{
   display: grid;
-}
-.hidden{
-  display: none;
 }
 .h-full{
   height: 100%;
@@ -13005,26 +13017,11 @@ to{
   --tw-text-opacity: 1;
 }
 @media (min-width: 640px){
-.sm\\:right-5{
-    right: 20px;
-}
-.sm\\:left-5{
-    left: 20px;
-}
-.sm\\:bottom-5{
-    bottom: 20px;
-}
 .sm\\:m-0{
     margin: 0px;
 }
-.sm\\:ml-0{
-    margin-left: 0px;
-}
 .sm\\:mr-2{
     margin-right: 8px;
-}
-.sm\\:flex{
-    display: flex;
 }
 .sm\\:h-\\[694px\\]{
     height: 694px;
@@ -13035,42 +13032,81 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
+const version = "1.1.1";
+const installFont = () => {
+  const font = document.createElement("link");
+  font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
+  font.rel = "stylesheet";
+  document.head.appendChild(font);
+};
+const fetchSettings = async (addWww) => {
+  const response = await fetch(
+    `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost(void 0, addWww)}`
+  );
+  console.log("response :>> ", response);
+  if (!response.ok)
+    throw new Error(`Failed to fetch settings: ${response.statusText}`);
+  return response.json();
+};
+const waitForElement = async (selector) => {
+  return new Promise((resolve2) => {
+    const interval = setInterval(() => {
+      if (document.querySelector(selector)) {
+        clearInterval(interval);
+        resolve2(true);
+      }
+    }, 100);
+  });
+};
 const ChatWindow = defineCustomElement(VueChatWidget);
 const installWidget = () => customElements.define("monoloq-widget", ChatWindow);
 async function register() {
-  console.info("%s Installing monoloq widget v1.8...", "🏋️");
-  const getSettings = async (addWww) => await fetch(`${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost(void 0, addWww)}`);
+  console.info("%s Installing monoloq widget v1.9...", "🏋️");
+  console.info(version, "🏋️");
+  installFont();
   try {
-    const font = document.createElement("link");
-    font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
-    font.rel = "stylesheet";
-    document.head.appendChild(font);
-    let props;
-    let excludedPaths = [];
     const addWww = localStorage.getItem("monoloqAddWww") === "true";
-    try {
-      let res;
-      res = await getSettings(addWww);
-      if (!res.ok)
-        res = await getSettings(!addWww);
-      const settings = await res.json();
-      props = {
-        ...settings.appearance,
-        text: settings.text,
-        enable_on_mobile: settings.general.enable_on_mobile,
-        currency_symbol: settings.general.currency_symbol
-      };
-      excludedPaths = settings.general.exclude_bot_paths;
-    } catch (e) {
-      console.error("Failed to fetch widget config", e);
-    }
-    if (excludedPaths.includes(window.location.href))
+    const settings = await fetchSettings(addWww).catch(() => fetchSettings(!addWww)).catch((error) => {
+      console.warn("Failed to fetch settings, using default values.", error);
+      return {};
+    });
+    const { appearance: appearance2 = {}, text = [], general = {} } = settings;
+    const {
+      enable_on_mobile,
+      currency_symbol,
+      exclude_bot_paths = [],
+      chaty_integration
+    } = general;
+    const props = {
+      ...appearance2,
+      text,
+      enable_on_mobile,
+      currency_symbol
+    };
+    if (exclude_bot_paths == null ? void 0 : exclude_bot_paths.includes(window.location.href))
       return;
-    customElements.define("monoloq-widget", ChatWindow);
+    if (chaty_integration) {
+      Object.assign(props, {
+        fixed: false,
+        margin_bottom: 0,
+        margin_side: 0,
+        enable_on_mobile: true
+      });
+    }
+    customElements.define(true ? "monoloq-widget-test" : "monoloq-widget", ChatWindow);
     const chatWindowInstance = new ChatWindow(props);
-    chatWindowInstance.style.display = "initial";
-    document.body.appendChild(chatWindowInstance);
-    console.info("%s Monoloq widget installed!", "✨");
+    if (chaty_integration) {
+      chatWindowInstance.classList.add("csaas-channel", "has-gae", "csaas-tooltip", "pos-left");
+      chatWindowInstance.setAttribute("data-hover", "Monoloq Chat");
+      await waitForElement(".csaas-channel-list");
+      const element = document.querySelector(".Waze-channel");
+      element == null ? void 0 : element.replaceWith(chatWindowInstance);
+      console.info("%s Monoloq widget injected!", "✨");
+    } else {
+      chatWindowInstance.style.display = "initial";
+      document.body.appendChild(chatWindowInstance);
+      console.info("%s Monoloq widget installed!", "✨");
+    }
   } catch (e) {
     console.error(`Monoloq widget could not be installed. Please contact the Monoloq support. Error: ${e}`);
   }
