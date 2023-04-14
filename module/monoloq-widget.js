@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x461b1f = _0x47d7;
-function _0x47d7(_0xf94188, _0x1384db) {
-  const _0x3b72dc = _0x4877();
-  return _0x47d7 = function(_0x2711f3, _0x512c13) {
-    _0x2711f3 = _0x2711f3 - (4877 * -1 + -4887 + 10249);
-    let _0x1b5ca7 = _0x3b72dc[_0x2711f3];
-    return _0x1b5ca7;
-  }, _0x47d7(_0xf94188, _0x1384db);
+function _0x18a7(_0x566824, _0x131d56) {
+  const _0x5549a3 = _0x31a5();
+  return _0x18a7 = function(_0x237fcc, _0x2946cc) {
+    _0x237fcc = _0x237fcc - (-26 * -281 + -331 * 16 + -1539);
+    let _0x270299 = _0x5549a3[_0x237fcc];
+    return _0x270299;
+  }, _0x18a7(_0x566824, _0x131d56);
 }
-(function(_0x343fd9, _0x5d246) {
-  const _0x2df084 = _0x47d7, _0x42bd5d = _0x343fd9();
+const _0x1ebbef = _0x18a7;
+function _0x31a5() {
+  const _0x5cdf0b = ["33/", "60JBgmqR", "3GaQKgo", "6624eakGGz", "https://de", "2769426IlxHLN", "141670dVrRJD", "109467zgNLXq", "hostname", "136vCaCtl", "v.d8g529d2", "map", "location", "owgcy.ampl", "ifyapp.com", "6zDpPYC", "www.", "1531040PEeMdQ", "split", "15203830JJrrzs", "12726kSuuUe", "includes", "calhost:33", ",http://lo", "1016472ZLegPT", "appearance"];
+  _0x31a5 = function() {
+    return _0x5cdf0b;
+  };
+  return _0x31a5();
+}
+(function(_0x384722, _0x24338d) {
+  const _0x329e63 = _0x18a7, _0x2dcbdc = _0x384722();
   while (!![]) {
     try {
-      const _0x1c298c = -parseInt(_0x2df084(491)) / (3 * -1741 + -3348 + 8572) + -parseInt(_0x2df084(493)) / (-411 * 17 + 1142 + 5847 * 1) + -parseInt(_0x2df084(492)) / (-1 * 4900 + -4 * -181 + 4179) + -parseInt(_0x2df084(496)) / (-1 * 8990 + -4329 + 1 * 13323) + parseInt(_0x2df084(490)) / (1446 + -3671 + 2230) * (-parseInt(_0x2df084(498)) / (-4271 * -1 + -68 * -3 + -109 * 41)) + parseInt(_0x2df084(495)) / (-3571 * 2 + -2874 + 10023) * (-parseInt(_0x2df084(485)) / (1812 + 5596 + 74 * -100)) + parseInt(_0x2df084(501)) / (8462 + -1 * 6037 + 8 * -302);
-      if (_0x1c298c === _0x5d246)
+      const _0x2d64ce = parseInt(_0x329e63(489)) / (-4964 + -1004 + 5969) * (-parseInt(_0x329e63(485)) / (-8192 + -7933 + 16127)) + parseInt(_0x329e63(494)) / (-2392 + 73 * 107 + -8 * 677) * (parseInt(_0x329e63(496)) / (2 * 119 + -9e3 + 487 * 18)) + parseInt(_0x329e63(493)) / (2097 * -3 + 5 * 525 + 3671 * 1) * (parseInt(_0x329e63(476)) / (1 * -9223 + 2520 + 1 * 6709)) + parseInt(_0x329e63(478)) / (-8399 + 1 * 1259 + 7147) + parseInt(_0x329e63(490)) / (-2159 + 565 * -7 + 6122) * (parseInt(_0x329e63(481)) / (-2785 + 634 * 4 + -1 * -258)) + -parseInt(_0x329e63(480)) / (3 * -1990 + -5 * 1574 + 13850) + parseInt(_0x329e63(492)) / (7827 + 434 + -330 * 25) * (parseInt(_0x329e63(488)) / (-4 * 499 + -9340 + 11348));
+      if (_0x2d64ce === _0x24338d)
         break;
       else
-        _0x42bd5d["push"](_0x42bd5d["shift"]());
-    } catch (_0x29a58e) {
-      _0x42bd5d["push"](_0x42bd5d["shift"]());
+        _0x2dcbdc["push"](_0x2dcbdc["shift"]());
+    } catch (_0x1bd4a0) {
+      _0x2dcbdc["push"](_0x2dcbdc["shift"]());
     }
   }
-})(_0x4877, 3806 * 39 + 320313 * 2 + 1 * -92393);
-function devHost(_0x512c13, _0x1b5ca7) {
-  const _0x14bf6c = _0x47d7, _0x399252 = window[_0x14bf6c(486)][_0x14bf6c(502)], _0xc7f42c = String(_0x14bf6c(500) + _0x14bf6c(504) + _0x14bf6c(487) + _0x14bf6c(503) + _0x14bf6c(497) + _0x14bf6c(494) + _0x14bf6c(489))[_0x14bf6c(499)](",")[_0x14bf6c(507)]((_0x32ee87) => new URL(_0x32ee87)[_0x14bf6c(502)]), _0x226f67 = _0x1b5ca7 ? _0x14bf6c(488) + _0x399252 : _0x399252;
-  if (!_0x512c13)
-    return _0x226f67;
-  if (!_0xc7f42c[_0x14bf6c(505)](_0x399252))
-    return _0x226f67;
-  return _0x512c13;
+})(_0x31a5, 52623 + 6 * 256276 + -718068);
+function devHost(_0x237fcc, _0x2946cc) {
+  const _0x2de8ec = _0x18a7, _0x270299 = window[_0x2de8ec(473)][_0x2de8ec(495)], _0x3c8787 = String(_0x2de8ec(491) + _0x2de8ec(471) + _0x2de8ec(474) + _0x2de8ec(475) + _0x2de8ec(484) + _0x2de8ec(483) + _0x2de8ec(487))[_0x2de8ec(479)](",")[_0x2de8ec(472)]((_0x30c418) => new URL(_0x30c418)[_0x2de8ec(495)]), _0x161fb5 = _0x2946cc ? _0x2de8ec(477) + _0x270299 : _0x270299;
+  if (!_0x237fcc)
+    return _0x161fb5;
+  if (!_0x3c8787[_0x2de8ec(482)](_0x270299))
+    return _0x161fb5;
+  return _0x237fcc;
 }
-function prepareMessage(_0x3643e7) {
-  return "" + _0x3643e7;
+function prepareMessage(_0x3ba590) {
+  return "" + _0x3ba590;
 }
-function _0x4877() {
-  const _0x1d6ccf = [",http://lo", "306DMGfYm", "split", "https://de", "36981342YXEDyf", "hostname", "ifyapp.com", "v.d8g529d2", "includes", "appearance", "map", "104qJMEuL", "location", "owgcy.ampl", "www.", "33/", "23705vtPlMw", "2761xFBmqw", "1934217UTcfjl", "243764djvXlO", "calhost:33", "678916Uumtyw", "4561416lIdVfw"];
-  _0x4877 = function() {
-    return _0x1d6ccf;
-  };
-  return _0x4877();
-}
-const appearance = Symbol(_0x461b1f(506));
+const appearance = Symbol(_0x1ebbef(486));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -13032,7 +13032,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.1";
+const version = "1.1.2";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
