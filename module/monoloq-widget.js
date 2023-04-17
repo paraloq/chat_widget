@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x13d6f1 = _0x47f1;
-(function(_0x3296b3, _0x1a2a65) {
-  const _0x5ba87b = _0x47f1, _0x265080 = _0x3296b3();
+const _0x5c6836 = _0x265e;
+(function(_0x3cf04d, _0x2e57dd) {
+  const _0x5dde79 = _0x265e, _0x52c460 = _0x3cf04d();
   while (!![]) {
     try {
-      const _0x25f4bd = parseInt(_0x5ba87b(220)) / (-2214 * -4 + 8498 + 37 * -469) + -parseInt(_0x5ba87b(218)) / (-3577 + -1 * -1384 + 2195) + -parseInt(_0x5ba87b(235)) / (-2739 + -1 * 1301 + 4043) + -parseInt(_0x5ba87b(232)) / (-10 * 403 + 94 * -58 + 153 * 62) * (parseInt(_0x5ba87b(233)) / (1513 + -1 * -5399 + -1 * 6907)) + parseInt(_0x5ba87b(223)) / (3926 + 8060 + -20 * 599) + -parseInt(_0x5ba87b(226)) / (-1 * 7027 + 8004 + -970 * 1) + -parseInt(_0x5ba87b(222)) / (844 * -1 + -3274 + 4126) * (-parseInt(_0x5ba87b(219)) / (-2371 + 416 + 1964));
-      if (_0x25f4bd === _0x1a2a65)
+      const _0x285dde = parseInt(_0x5dde79(225)) / (-1 * 1729 + -1 * -103 + -1 * -1627) * (-parseInt(_0x5dde79(244)) / (-3102 + 1718 * 4 + -3768)) + parseInt(_0x5dde79(236)) / (-52 * 178 + -2 * -4053 + 1 * 1153) * (-parseInt(_0x5dde79(238)) / (3736 + 7189 + 163 * -67)) + -parseInt(_0x5dde79(226)) / (-5 * -1999 + -644 * -11 + -17074 * 1) * (parseInt(_0x5dde79(240)) / (-6002 * -1 + 4024 * -1 + 34 * -58)) + parseInt(_0x5dde79(231)) / (1789 + -7838 * -1 + -65 * 148) + -parseInt(_0x5dde79(243)) / (-1371 * -5 + 3257 * -1 + -10 * 359) * (-parseInt(_0x5dde79(227)) / (-6 * -1544 + 7764 + -17019)) + -parseInt(_0x5dde79(229)) / (-92 * -70 + -1 * 8221 + 1791) + parseInt(_0x5dde79(234)) / (2 * -2646 + 8241 * -1 + 1693 * 8);
+      if (_0x285dde === _0x2e57dd)
         break;
       else
-        _0x265080["push"](_0x265080["shift"]());
-    } catch (_0x5575f4) {
-      _0x265080["push"](_0x265080["shift"]());
+        _0x52c460["push"](_0x52c460["shift"]());
+    } catch (_0x12dd9d) {
+      _0x52c460["push"](_0x52c460["shift"]());
     }
   }
-})(_0xcac1, -469337 + -1 * -334139 + -1 * -522630);
-function _0x47f1(_0x40577a, _0x24c38b) {
-  const _0x25bbfc = _0xcac1();
-  return _0x47f1 = function(_0xe1f02b, _0x176bd8) {
-    _0xe1f02b = _0xe1f02b - (4605 + 1 * -7147 + 2760);
-    let _0x2dbcb7 = _0x25bbfc[_0xe1f02b];
-    return _0x2dbcb7;
-  }, _0x47f1(_0x40577a, _0x24c38b);
-}
-function devHost(_0x176bd8, _0x2dbcb7) {
-  const _0x4fe656 = _0x47f1, _0x322870 = window[_0x4fe656(227)][_0x4fe656(229)], _0x4a6175 = String(_0x4fe656(230) + _0x4fe656(228) + "ai")[_0x4fe656(231)](",")[_0x4fe656(221)]((_0x573337) => new URL(_0x573337)[_0x4fe656(229)]), _0x3dcffc = _0x2dbcb7 ? _0x4fe656(234) + _0x322870 : _0x322870;
-  if (!_0x176bd8)
-    return _0x3dcffc;
-  if (!_0x4a6175[_0x4fe656(224)](_0x322870))
-    return _0x3dcffc;
-  return _0x176bd8;
-}
-function _0xcac1() {
-  const _0x1fdaef = ["2900922gjVJev", "includes", "appearance", "1499092HqIadA", "location", "p.monoloq.", "hostname", "https://ap", "split", "22248mIlXTl", "120RtbmnF", "www.", "2063211wNsIpP", "320872lIwIvC", "9oSHhxy", "239893TTfEvy", "map", "6878952dKbZUL"];
-  _0xcac1 = function() {
-    return _0x1fdaef;
+})(_0xb484, -405688 + 1194859 * -1 + 1 * 2354311);
+function _0xb484() {
+  const _0x1050aa = ["2154936iBAFrP", "p.monoloq.", "split", "29081129dMQLOa", "www.", "2644014JOXaeP", "includes", "4Wgcvlv", "hostname", "6ERzYFJ", "appearance", "https://ap", "5249208fpvKRN", "2NkuIJT", "476107tPHzQJ", "2399720oYPxHW", "9Gafvnt", "map", "10165850dJXZhj", "location"];
+  _0xb484 = function() {
+    return _0x1050aa;
   };
-  return _0xcac1();
+  return _0xb484();
 }
-function prepareMessage(_0x18789a) {
-  return "" + _0x18789a;
+function _0x265e(_0x2efdc3, _0x1d1bf1) {
+  const _0xbf4701 = _0xb484();
+  return _0x265e = function(_0x507340, _0x15b26d) {
+    _0x507340 = _0x507340 - (9472 + 9474 + -18721);
+    let _0x1b3869 = _0xbf4701[_0x507340];
+    return _0x1b3869;
+  }, _0x265e(_0x2efdc3, _0x1d1bf1);
 }
-const appearance = Symbol(_0x13d6f1(225));
+function devHost(_0x1b3869, _0x4cefbb) {
+  const _0x343fbf = _0x265e, _0x2dd4ff = window[_0x343fbf(230)][_0x343fbf(239)], _0x3c5db9 = String(_0x343fbf(242) + _0x343fbf(232) + "ai")[_0x343fbf(233)](",")[_0x343fbf(228)]((_0x3d9cec) => new URL(_0x3d9cec)[_0x343fbf(239)]), _0xc51088 = _0x4cefbb ? _0x343fbf(235) + _0x2dd4ff : _0x2dd4ff;
+  if (!_0x1b3869)
+    return _0xc51088;
+  if (!_0x3c5db9[_0x343fbf(237)](_0x2dd4ff))
+    return _0xc51088;
+  return _0x1b3869;
+}
+function prepareMessage(_0x510b1b) {
+  return "" + _0x510b1b;
+}
+const appearance = Symbol(_0x5c6836(241));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -13034,8 +13034,11 @@ const fetchSettings = async (addWww) => {
   const response = await fetch(
     `${String("https://chat.monoloq.ai")}/settings?host_domain=${devHost(void 0, addWww)}`
   );
-  if (!response.ok)
-    throw new Error(`Failed to fetch settings: ${response.statusText}`);
+  if (!response.ok) {
+    const error = new Error(`Failed to fetch settings: ${response.statusText}`);
+    error.code = response.status;
+    throw error;
+  }
   return response.json();
 };
 const waitForElement = async (selector, timeout = 30 * 1e3) => {
@@ -13062,8 +13065,14 @@ async function register() {
   installFont();
   try {
     const addWww = localStorage.getItem("monoloqAddWww") === "true";
-    const settings = await fetchSettings(addWww).catch(() => fetchSettings(!addWww)).catch((error) => {
-      console.warn("Failed to fetch settings, using default values.", error);
+    const settings = await fetchSettings(addWww).catch((error) => {
+      if (error.code === 403)
+        throw error;
+      console.log("fetching again with www");
+      return fetchSettings(!addWww);
+    }).catch((error) => {
+      if (error.code === 403)
+        throw error;
       return {};
     });
     const { appearance: appearance2 = {}, text = [], general = {} } = settings;
