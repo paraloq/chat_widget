@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x1b1023 = _0x8b63;
-(function(_0x464508, _0x5d0825) {
-  const _0x1708b2 = _0x8b63, _0x38eba3 = _0x464508();
+function _0x240e() {
+  const _0x45a63a = ["311700llpCuZ", "159709wHCZcC", "1775992zlBDcZ", "map", "2349688tmJqPG", "5YuqNjA", "ifyapp.com", "v.d8g529d2", "split", "calhost:33", "376245ltgMBh", "https://de", "3713982yqlnqH", "owgcy.ampl", "33/", "www.", "hostname", "27nTWsWz", "location", "appearance", "includes", "1154832rPcwke", ",http://lo"];
+  _0x240e = function() {
+    return _0x45a63a;
+  };
+  return _0x240e();
+}
+const _0x83a70e = _0x444d;
+function _0x444d(_0x26039f, _0x407f0f) {
+  const _0x21395b = _0x240e();
+  return _0x444d = function(_0x416d98, _0x197c98) {
+    _0x416d98 = _0x416d98 - (4908 + -6945 * 1 + -179 * -13);
+    let _0x1c4dd1 = _0x21395b[_0x416d98];
+    return _0x1c4dd1;
+  }, _0x444d(_0x26039f, _0x407f0f);
+}
+(function(_0x4f8828, _0x5d4201) {
+  const _0xf43e41 = _0x444d, _0x4dab5f = _0x4f8828();
   while (!![]) {
     try {
-      const _0x4a94f6 = parseInt(_0x1708b2(231)) / (-8 * 314 + -5891 + 8404) * (parseInt(_0x1708b2(224)) / (-432 * -21 + -9 * -238 + -11212)) + parseInt(_0x1708b2(232)) / (514 + 1 * 4987 + -5498) + parseInt(_0x1708b2(217)) / (7941 * -1 + 727 * -5 + -20 * -579) + parseInt(_0x1708b2(238)) / (-5593 + 4090 * 2 + -2582) * (-parseInt(_0x1708b2(237)) / (2 * 515 + 9294 + 10318 * -1)) + parseInt(_0x1708b2(230)) / (1479 * 2 + 7303 + -10254) * (-parseInt(_0x1708b2(226)) / (-1200 + 1 * 479 + -1 * -729)) + -parseInt(_0x1708b2(240)) / (-2945 + 4509 * -2 + 11972) + parseInt(_0x1708b2(227)) / (-1771 + 47 * -121 + 1 * 7468) * (-parseInt(_0x1708b2(222)) / (-2423 * 4 + -729 + 5216 * 2));
-      if (_0x4a94f6 === _0x5d0825)
+      const _0x34a9f6 = -parseInt(_0xf43e41(309)) / (-70 * 81 + 4142 + 1529) + parseInt(_0xf43e41(308)) / (317 * -12 + 9528 + 5722 * -1) + -parseInt(_0xf43e41(295)) / (2452 + -2924 + -1 * -475) + parseInt(_0xf43e41(312)) / (4577 + -4225 + -348) + parseInt(_0xf43e41(290)) / (284 + -9 * -906 + 9 * -937) * (-parseInt(_0xf43e41(297)) / (22 * -38 + 6180 + -5338)) + -parseInt(_0xf43e41(306)) / (-1319 + 1160 * 4 + -3314) + -parseInt(_0xf43e41(310)) / (-2246 + -4578 * 1 + 122 * 56) * (-parseInt(_0xf43e41(302)) / (3 * -1431 + 4794 + -2 * 246));
+      if (_0x34a9f6 === _0x5d4201)
         break;
       else
-        _0x38eba3["push"](_0x38eba3["shift"]());
-    } catch (_0x98be48) {
-      _0x38eba3["push"](_0x38eba3["shift"]());
+        _0x4dab5f["push"](_0x4dab5f["shift"]());
+    } catch (_0x365ffe) {
+      _0x4dab5f["push"](_0x4dab5f["shift"]());
     }
   }
-})(_0x4e18, 797775 + 236 * 436 + 2 * -122963);
-function devHost(_0x5056d5, _0x1b3437) {
-  const _0x481e88 = _0x8b63, _0x3dcdc7 = window[_0x481e88(235)][_0x481e88(241)], _0x5ebbd1 = String(_0x481e88(220) + _0x481e88(233) + _0x481e88(228) + _0x481e88(223) + _0x481e88(229) + _0x481e88(219) + _0x481e88(218))[_0x481e88(234)](",")[_0x481e88(225)]((_0xdfd2f3) => new URL(_0xdfd2f3)[_0x481e88(241)]), _0x76619 = _0x1b3437 ? _0x481e88(221) + _0x3dcdc7 : _0x3dcdc7;
-  if (!_0x5056d5)
-    return _0x76619;
-  if (!_0x5ebbd1[_0x481e88(236)](_0x3dcdc7))
-    return _0x76619;
-  return _0x5056d5;
+})(_0x240e, 611943 * 1 + -48107 * -3 + -416092);
+function devHost(_0x416d98, _0x197c98) {
+  const _0x2a6f3b = _0x444d, _0x1c4dd1 = window[_0x2a6f3b(303)][_0x2a6f3b(301)], _0x187370 = String(_0x2a6f3b(296) + _0x2a6f3b(292) + _0x2a6f3b(298) + _0x2a6f3b(291) + _0x2a6f3b(307) + _0x2a6f3b(294) + _0x2a6f3b(299))[_0x2a6f3b(293)](",")[_0x2a6f3b(311)]((_0xff00b0) => new URL(_0xff00b0)[_0x2a6f3b(301)]), _0x3d71c8 = _0x197c98 ? _0x2a6f3b(300) + _0x1c4dd1 : _0x1c4dd1;
+  if (!_0x416d98)
+    return _0x3d71c8;
+  if (!_0x187370[_0x2a6f3b(305)](_0x1c4dd1))
+    return _0x3d71c8;
+  return _0x416d98;
 }
-function prepareMessage(_0x35fbf0) {
-  return "" + _0x35fbf0;
+function prepareMessage(_0x55e041) {
+  return "" + _0x55e041;
 }
-const appearance = Symbol(_0x1b1023(239));
-function _0x8b63(_0x225052, _0x434a3e) {
-  const _0x2d11de = _0x4e18();
-  return _0x8b63 = function(_0x5056d5, _0x1b3437) {
-    _0x5056d5 = _0x5056d5 - (-2753 * -1 + 8531 + -3689 * 3);
-    let _0x3dcdc7 = _0x2d11de[_0x5056d5];
-    return _0x3dcdc7;
-  }, _0x8b63(_0x225052, _0x434a3e);
-}
-function _0x4e18() {
-  const _0x36cbea = ["includes", "3100362ixWLsC", "5femNjd", "appearance", "3924576aaYGNC", "hostname", "4974192BIiBos", "33/", "calhost:33", "https://de", "www.", "5236lPthyA", "ifyapp.com", "387818HmRqoL", "map", "151000dmdOTy", "15520SuizsZ", "owgcy.ampl", ",http://lo", "175XrlspX", "6hIuJwn", "1233483eYAedS", "v.d8g529d2", "split", "location"];
-  _0x4e18 = function() {
-    return _0x36cbea;
-  };
-  return _0x4e18();
-}
+const appearance = Symbol(_0x83a70e(304));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -13024,7 +13024,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.8";
+const version = "1.1.9";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -13035,7 +13035,6 @@ const fetchSettings = async (addWww) => {
   const response = await fetch(
     `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost(void 0, addWww)}`
   );
-  console.log("response :>> ", response);
   if (!response.ok)
     throw new Error(`Failed to fetch settings: ${response.statusText}`);
   return response.json();
@@ -13099,7 +13098,7 @@ async function register() {
       const chatyLoaded = await waitForElement(".csaas-channel-list");
       if (!chatyLoaded)
         return console.error("%s Monoloq widget could not be injected into chaty, because the chaty element was not found within the timeout!", "✨");
-      const chatyMonoloq = document.querySelector('a[href="https://www.monoloq.ai/"]');
+      const chatyMonoloq = document.querySelector('a[href="https://www.monoloq.ai"]');
       const element = chatyMonoloq == null ? void 0 : chatyMonoloq.closest("div.csaas-channel");
       element == null ? void 0 : element.replaceWith(chatWindowInstance);
       console.info("%s Monoloq widget injected into chaty!", "✨");
