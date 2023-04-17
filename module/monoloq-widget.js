@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x16143b = _0x5e93;
-(function(_0x43500c, _0x579a65) {
-  const _0x25cbf6 = _0x5e93, _0x2e190a = _0x43500c();
+const _0x13d6f1 = _0x47f1;
+(function(_0x3296b3, _0x1a2a65) {
+  const _0x5ba87b = _0x47f1, _0x265080 = _0x3296b3();
   while (!![]) {
     try {
-      const _0x615836 = -parseInt(_0x25cbf6(285)) / (-22 * 211 + 5 * -505 + 7168) + parseInt(_0x25cbf6(282)) / (-9482 + 1 * -3077 + 12561) + parseInt(_0x25cbf6(270)) / (-4929 + 3247 + 1 * 1685) * (-parseInt(_0x25cbf6(286)) / (-9587 * 1 + -862 + 1 * 10453)) + parseInt(_0x25cbf6(268)) / (803 * -10 + 1 * -2083 + 10118) + -parseInt(_0x25cbf6(283)) / (-2504 * 2 + -206 + -6 * -870) * (-parseInt(_0x25cbf6(279)) / (-254 + 1812 * 1 + -3 * 517)) + parseInt(_0x25cbf6(271)) / (5129 + -2121 + -3e3) + -parseInt(_0x25cbf6(272)) / (-2032 * 4 + -3011 * -2 + 2115) * (parseInt(_0x25cbf6(277)) / (1 * -5931 + 5558 * 1 + 383));
-      if (_0x615836 === _0x579a65)
+      const _0x25f4bd = parseInt(_0x5ba87b(220)) / (-2214 * -4 + 8498 + 37 * -469) + -parseInt(_0x5ba87b(218)) / (-3577 + -1 * -1384 + 2195) + -parseInt(_0x5ba87b(235)) / (-2739 + -1 * 1301 + 4043) + -parseInt(_0x5ba87b(232)) / (-10 * 403 + 94 * -58 + 153 * 62) * (parseInt(_0x5ba87b(233)) / (1513 + -1 * -5399 + -1 * 6907)) + parseInt(_0x5ba87b(223)) / (3926 + 8060 + -20 * 599) + -parseInt(_0x5ba87b(226)) / (-1 * 7027 + 8004 + -970 * 1) + -parseInt(_0x5ba87b(222)) / (844 * -1 + -3274 + 4126) * (-parseInt(_0x5ba87b(219)) / (-2371 + 416 + 1964));
+      if (_0x25f4bd === _0x1a2a65)
         break;
       else
-        _0x2e190a["push"](_0x2e190a["shift"]());
-    } catch (_0x3ae9eb) {
-      _0x2e190a["push"](_0x2e190a["shift"]());
+        _0x265080["push"](_0x265080["shift"]());
+    } catch (_0x5575f4) {
+      _0x265080["push"](_0x265080["shift"]());
     }
   }
-})(_0x4005, 981549 + 682646 + -1150766);
-function _0x4005() {
-  const _0x497a95 = ["hostname", "p.monoloq.", "location", "map", "30tgzuaA", "https://ap", "14jNuFdx", "www.", "includes", "1119184lrnyHO", "990540Nlaukk", "appearance", "783059rdcOqN", "70024ZeVEIz", "79420pVdGHv", "split", "3iVnhuY", "5499640YMRkKg", "837351psEdcp"];
-  _0x4005 = function() {
-    return _0x497a95;
+})(_0xcac1, -469337 + -1 * -334139 + -1 * -522630);
+function _0x47f1(_0x40577a, _0x24c38b) {
+  const _0x25bbfc = _0xcac1();
+  return _0x47f1 = function(_0xe1f02b, _0x176bd8) {
+    _0xe1f02b = _0xe1f02b - (4605 + 1 * -7147 + 2760);
+    let _0x2dbcb7 = _0x25bbfc[_0xe1f02b];
+    return _0x2dbcb7;
+  }, _0x47f1(_0x40577a, _0x24c38b);
+}
+function devHost(_0x176bd8, _0x2dbcb7) {
+  const _0x4fe656 = _0x47f1, _0x322870 = window[_0x4fe656(227)][_0x4fe656(229)], _0x4a6175 = String(_0x4fe656(230) + _0x4fe656(228) + "ai")[_0x4fe656(231)](",")[_0x4fe656(221)]((_0x573337) => new URL(_0x573337)[_0x4fe656(229)]), _0x3dcffc = _0x2dbcb7 ? _0x4fe656(234) + _0x322870 : _0x322870;
+  if (!_0x176bd8)
+    return _0x3dcffc;
+  if (!_0x4a6175[_0x4fe656(224)](_0x322870))
+    return _0x3dcffc;
+  return _0x176bd8;
+}
+function _0xcac1() {
+  const _0x1fdaef = ["2900922gjVJev", "includes", "appearance", "1499092HqIadA", "location", "p.monoloq.", "hostname", "https://ap", "split", "22248mIlXTl", "120RtbmnF", "www.", "2063211wNsIpP", "320872lIwIvC", "9oSHhxy", "239893TTfEvy", "map", "6878952dKbZUL"];
+  _0xcac1 = function() {
+    return _0x1fdaef;
   };
-  return _0x4005();
+  return _0xcac1();
 }
-function devHost(_0x50227f, _0x546a59) {
-  const _0x40088d = _0x5e93, _0xe10a81 = window[_0x40088d(275)][_0x40088d(273)], _0x358db4 = String(_0x40088d(278) + _0x40088d(274) + "ai")[_0x40088d(269)](",")[_0x40088d(276)]((_0x46b909) => new URL(_0x46b909)[_0x40088d(273)]), _0x45c539 = _0x546a59 ? _0x40088d(280) + _0xe10a81 : _0xe10a81;
-  if (!_0x50227f)
-    return _0x45c539;
-  if (!_0x358db4[_0x40088d(281)](_0xe10a81))
-    return _0x45c539;
-  return _0x50227f;
+function prepareMessage(_0x18789a) {
+  return "" + _0x18789a;
 }
-function _0x5e93(_0x13c170, _0x5f2c92) {
-  const _0x4eb5d4 = _0x4005();
-  return _0x5e93 = function(_0x50227f, _0x546a59) {
-    _0x50227f = _0x50227f - (3311 * 1 + 228 * 42 + -12619);
-    let _0xe10a81 = _0x4eb5d4[_0x50227f];
-    return _0xe10a81;
-  }, _0x5e93(_0x13c170, _0x5f2c92);
-}
-function prepareMessage(_0xc1ee3b) {
-  return "" + _0xc1ee3b;
-}
-const appearance = Symbol(_0x16143b(284));
+const appearance = Symbol(_0x13d6f1(225));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -13023,7 +13023,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.9";
+const version = "1.1.10";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -13093,7 +13093,7 @@ async function register() {
     const chatWindowInstance = new ChatWindow(props);
     if (chaty_integration) {
       chatWindowInstance.classList.add("csaas-channel", "has-gae", "csaas-tooltip", "pos-left");
-      chatWindowInstance.setAttribute("data-hover", "Monoloq Chat");
+      chatWindowInstance.setAttribute("data-hover", "Personal AI Assistant");
       const chatyLoaded = await waitForElement(".csaas-channel-list");
       if (!chatyLoaded)
         return console.error("%s Monoloq widget could not be injected into chaty, because the chaty element was not found within the timeout!", "✨");
