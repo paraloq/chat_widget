@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x318543 = _0x2146;
-(function(_0x14a9c7, _0x13c1df) {
-  const _0x2ca525 = _0x2146, _0x4f2e52 = _0x14a9c7();
+const _0x51c3c1 = _0x2caa;
+(function(_0x35bc59, _0x148090) {
+  const _0xbc512f = _0x2caa, _0x599948 = _0x35bc59();
   while (!![]) {
     try {
-      const _0x3823cd = parseInt(_0x2ca525(110)) / (9990 + 25 * -12 + -1 * 9689) + -parseInt(_0x2ca525(107)) / (-2847 + -4071 + 4 * 1730) * (-parseInt(_0x2ca525(111)) / (-6898 + -4539 + 4 * 2860)) + parseInt(_0x2ca525(125)) / (33 * 86 + -4381 * 2 + 1482 * 4) + -parseInt(_0x2ca525(108)) / (-9472 + 9577 + -10 * 10) * (parseInt(_0x2ca525(121)) / (222 + 6 * 389 + -50 * 51)) + parseInt(_0x2ca525(127)) / (3 * -289 + -6124 + 6998 * 1) * (parseInt(_0x2ca525(114)) / (1 * 5167 + 3431 + 2 * -4295)) + -parseInt(_0x2ca525(117)) / (-3792 + -7935 + 1467 * 8) + -parseInt(_0x2ca525(118)) / (5419 + -4780 * -1 + 23 * -443);
-      if (_0x3823cd === _0x13c1df)
+      const _0x564f91 = -parseInt(_0xbc512f(292)) / (8220 + -45 + -8174) + parseInt(_0xbc512f(290)) / (474 + -913 + 441) * (-parseInt(_0xbc512f(296)) / (-1676 * 1 + 1 * 2762 + -1083)) + -parseInt(_0xbc512f(306)) / (-3098 + 1e3 + 2 * 1051) * (-parseInt(_0xbc512f(300)) / (-211 * 31 + 38 * 118 + 2062)) + parseInt(_0xbc512f(298)) / (6871 * 1 + -5 * 1579 + 1030) * (parseInt(_0xbc512f(305)) / (-5592 + 7459 + -1860)) + -parseInt(_0xbc512f(284)) / (-6087 + -2779 + 58 * 153) * (-parseInt(_0xbc512f(288)) / (-1584 + -1 * -3733 + -2140)) + -parseInt(_0xbc512f(299)) / (404 * -2 + -4594 * -2 + -837 * 10) + -parseInt(_0xbc512f(289)) / (6319 + -5325 + 983 * -1) * (-parseInt(_0xbc512f(285)) / (6 * -278 + 111 * 59 + -4869));
+      if (_0x564f91 === _0x148090)
         break;
       else
-        _0x4f2e52["push"](_0x4f2e52["shift"]());
-    } catch (_0x139e29) {
-      _0x4f2e52["push"](_0x4f2e52["shift"]());
+        _0x599948["push"](_0x599948["shift"]());
+    } catch (_0x451f83) {
+      _0x599948["push"](_0x599948["shift"]());
     }
   }
-})(_0x5e7a, -87591 * 1 + -8 * 37346 + 557940);
-function devHost(_0x38cdfa, _0x5e2adc) {
-  const _0x4da080 = _0x2146, _0xa7f685 = window[_0x4da080(123)][_0x4da080(106)], _0xe7b081 = String(_0x4da080(119) + _0x4da080(122) + _0x4da080(113) + _0x4da080(105) + _0x4da080(112) + _0x4da080(109) + _0x4da080(115))[_0x4da080(120)](",")[_0x4da080(104)]((_0x54de1c) => new URL(_0x54de1c)[_0x4da080(106)]), _0x36c8d3 = _0x5e2adc ? _0x4da080(126) + _0xa7f685 : _0xa7f685;
-  if (!_0x38cdfa)
-    return _0x36c8d3;
-  if (!_0xe7b081[_0x4da080(124)](_0xa7f685))
-    return _0x36c8d3;
-  return _0x38cdfa;
-}
-function _0x2146(_0x3cba7b, _0x5b6ec6) {
-  const _0x29d8e2 = _0x5e7a();
-  return _0x2146 = function(_0x38cdfa, _0x5e2adc) {
-    _0x38cdfa = _0x38cdfa - (-22 * 310 + -6974 + 13898 * 1);
-    let _0xa7f685 = _0x29d8e2[_0x38cdfa];
-    return _0xa7f685;
-  }, _0x2146(_0x3cba7b, _0x5b6ec6);
-}
-function _0x5e7a() {
-  const _0x2d7a62 = ["126090UHCegh", "3OgYpTL", ",http://lo", "owgcy.ampl", "280344izgLAN", "33/", "appearance", "123678IDLOro", "4068380stogwy", "https://de", "split", "4866rLxdov", "v.d8g529d2", "location", "includes", "302136QmlRZy", "www.", "49zrWxfH", "map", "ifyapp.com", "hostname", "399146ZxUwpv", "335iaKfDd", "calhost:33"];
-  _0x5e7a = function() {
-    return _0x2d7a62;
+})(_0x2789, -256597 + -21 * -9857 + 178740);
+function _0x2789() {
+  const _0x4fe257 = ["204377VBAgDs", "v.d8g529d2", "split", "map", "449481TTORYn", "https://de", "120534cZvghn", "1003700OMQhRl", "350325CYxdad", "appearance", "calhost:33", "ifyapp.com", "www.", "7skntAH", "8xSvzFF", "33/", "hostname", "location", "184ohkVKS", "18192nCRfSW", "includes", "owgcy.ampl", "69021jnWYyZ", "1793jKOIOb", "2CWBsif", ",http://lo"];
+  _0x2789 = function() {
+    return _0x4fe257;
   };
-  return _0x5e7a();
+  return _0x2789();
 }
-function prepareMessage(_0x105732) {
-  return "" + _0x105732;
+function devHost(_0x29ba19, _0x39ba03) {
+  const _0x39db78 = _0x2caa, _0x59746c = window[_0x39db78(283)][_0x39db78(282)], _0x4fba6f = String(_0x39db78(297) + _0x39db78(293) + _0x39db78(287) + _0x39db78(303) + _0x39db78(291) + _0x39db78(302) + _0x39db78(281))[_0x39db78(294)](",")[_0x39db78(295)]((_0x35f2fb) => new URL(_0x35f2fb)[_0x39db78(282)]), _0x20e38e = _0x39ba03 ? _0x39db78(304) + _0x59746c : _0x59746c;
+  if (!_0x29ba19)
+    return _0x20e38e;
+  if (!_0x4fba6f[_0x39db78(286)](_0x59746c))
+    return _0x20e38e;
+  return _0x29ba19;
 }
-const appearance = Symbol(_0x318543(116));
+function prepareMessage(_0x41e602) {
+  return "" + _0x41e602;
+}
+function _0x2caa(_0x5be2f2, _0x50a356) {
+  const _0x1412de = _0x2789();
+  return _0x2caa = function(_0x242ac9, _0x29ba19) {
+    _0x242ac9 = _0x242ac9 - (-2745 + -4756 + -2594 * -3);
+    let _0x39ba03 = _0x1412de[_0x242ac9];
+    return _0x39ba03;
+  }, _0x2caa(_0x5be2f2, _0x50a356);
+}
+const appearance = Symbol(_0x51c3c1(301));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10644,7 +10644,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden",
+              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden overflow-y-auto",
               style: normalizeStyle(unref(positionStyle))
             }, [
               createVNode(unref(TransitionExpand), {
@@ -13024,7 +13024,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.12";
+const version = "1.1.13";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
