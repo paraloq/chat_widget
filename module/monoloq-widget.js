@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x475c() {
-  const _0x46cdc0 = ["includes", "location", "hostname", "10LiidEJ", "317253wdLuUz", "calhost:33", "www.", "v.d8g529d2", "90tjRabA", "459430vexUyk", "2837275zLXupP", "1093254yTzqbI", "map", "split", "953728stmaBV", "ifyapp.com", "181665QvGBgP", "owgcy.ampl", "appearance", "8uiNYtG", "416549YTweCQ", "https://de", "384PZxpOe", "33/", ",http://lo", "10vMeVFt"];
-  _0x475c = function() {
-    return _0x46cdc0;
-  };
-  return _0x475c();
+function _0x21af(_0x1e60d9, _0x39be57) {
+  const _0x19b58a = _0x9e02();
+  return _0x21af = function(_0x597cf1, _0x5662f4) {
+    _0x597cf1 = _0x597cf1 - (9862 + 8267 + -17740 * 1);
+    let _0xd9b448 = _0x19b58a[_0x597cf1];
+    return _0xd9b448;
+  }, _0x21af(_0x1e60d9, _0x39be57);
 }
-const _0x19b924 = _0x59b7;
-function _0x59b7(_0x21a446, _0x13e632) {
-  const _0x8b73d0 = _0x475c();
-  return _0x59b7 = function(_0x28a12b, _0x125b09) {
-    _0x28a12b = _0x28a12b - (6901 * -1 + 1669 + -12 * -458);
-    let _0x475b00 = _0x8b73d0[_0x28a12b];
-    return _0x475b00;
-  }, _0x59b7(_0x21a446, _0x13e632);
-}
-(function(_0x8fc26c, _0x29f80a) {
-  const _0x1e50eb = _0x59b7, _0x105688 = _0x8fc26c();
+const _0x200157 = _0x21af;
+(function(_0x18aa55, _0x225254) {
+  const _0x2810ab = _0x21af, _0x2ed72e = _0x18aa55();
   while (!![]) {
     try {
-      const _0x37df3d = -parseInt(_0x1e50eb(282)) / (54 * 144 + -2312 + 5463 * -1) + parseInt(_0x1e50eb(265)) / (1 * -487 + -4017 + 4506) * (parseInt(_0x1e50eb(266)) / (-1 * -4054 + 9 * 1104 + -13987)) + parseInt(_0x1e50eb(276)) / (2 * -934 + 159 * -38 + -3 * -2638) + parseInt(_0x1e50eb(287)) / (-2690 + -5046 + -1 * -7741) * (parseInt(_0x1e50eb(273)) / (9196 + 3107 * -1 + -6083)) + parseInt(_0x1e50eb(272)) / (-74 * -2 + 1 * 5969 + 13 * -470) * (-parseInt(_0x1e50eb(281)) / (-2036 * -1 + 3470 + 2749 * -2)) + parseInt(_0x1e50eb(270)) / (9875 + -1 * -5441 + -1 * 15307) * (-parseInt(_0x1e50eb(271)) / (1 * 218 + -4670 + 4462)) + -parseInt(_0x1e50eb(278)) / (183 * -29 + 4058 + 1260) * (-parseInt(_0x1e50eb(284)) / (9275 + -7367 + 632 * -3));
-      if (_0x37df3d === _0x29f80a)
+      const _0x4387d1 = -parseInt(_0x2810ab(396)) / (1 * -5039 + 2762 + -2 * -1139) * (parseInt(_0x2810ab(408)) / (8 * -377 + -1573 * 1 + -1 * -4591)) + -parseInt(_0x2810ab(398)) / (1 * -617 + -1 * -8271 + 1093 * -7) + -parseInt(_0x2810ab(409)) / (-1 * 9475 + 7 * 518 + 3 * 1951) + parseInt(_0x2810ab(392)) / (-1114 * -6 + -1342 * -6 + 14731 * -1) * (parseInt(_0x2810ab(413)) / (-2397 + 727 + 1676)) + -parseInt(_0x2810ab(391)) / (6521 + -8889 + 2375) * (parseInt(_0x2810ab(390)) / (-5 * 1417 + 8026 + -933)) + -parseInt(_0x2810ab(394)) / (-92 * -79 + -3 * 129 + 1718 * -4) + -parseInt(_0x2810ab(410)) / (2300 + 9984 + -38 * 323) * (-parseInt(_0x2810ab(389)) / (-1 * -4022 + -1249 * -4 + -9007));
+      if (_0x4387d1 === _0x225254)
         break;
       else
-        _0x105688["push"](_0x105688["shift"]());
-    } catch (_0x2662b0) {
-      _0x105688["push"](_0x105688["shift"]());
+        _0x2ed72e["push"](_0x2ed72e["shift"]());
+    } catch (_0x5069a3) {
+      _0x2ed72e["push"](_0x2ed72e["shift"]());
     }
   }
-})(_0x475c, 13 * 29076 + 44221 * -7 + 155170 * 2);
-function devHost(_0x28a12b, _0x125b09) {
-  const _0x3d05b5 = _0x59b7, _0x475b00 = window[_0x3d05b5(289)][_0x3d05b5(264)], _0x5381a0 = String(_0x3d05b5(283) + _0x3d05b5(269) + _0x3d05b5(279) + _0x3d05b5(277) + _0x3d05b5(286) + _0x3d05b5(267) + _0x3d05b5(285))[_0x3d05b5(275)](",")[_0x3d05b5(274)]((_0x2d3331) => new URL(_0x2d3331)[_0x3d05b5(264)]), _0xb47b2a = _0x125b09 ? _0x3d05b5(268) + _0x475b00 : _0x475b00;
-  if (!_0x28a12b)
-    return _0xb47b2a;
-  if (!_0x5381a0[_0x3d05b5(288)](_0x475b00))
-    return _0xb47b2a;
-  return _0x28a12b;
+})(_0x9e02, -950229 + 9989 * -101 + 2714149);
+function devHost(_0x5662f4, _0xd9b448) {
+  const _0x25181e = _0x21af, _0x193f5c = window[_0x25181e(412)][_0x25181e(404)], _0x309a61 = String(_0x25181e(401) + _0x25181e(405) + _0x25181e(397) + _0x25181e(407) + _0x25181e(399) + _0x25181e(395) + _0x25181e(402))[_0x25181e(400)](",")[_0x25181e(393)]((_0x2a89e2) => new URL(_0x2a89e2)[_0x25181e(404)]), _0x406f0d = _0xd9b448 ? _0x25181e(406) + _0x193f5c : _0x193f5c;
+  if (!_0x5662f4)
+    return _0x406f0d;
+  if (!_0x309a61[_0x25181e(411)](_0x193f5c))
+    return _0x406f0d;
+  return _0x5662f4;
 }
-function prepareMessage(_0x95cb44) {
-  return "" + _0x95cb44;
+function prepareMessage(_0x47e9f8) {
+  return "" + _0x47e9f8;
 }
-const appearance = Symbol(_0x19b924(280));
+function _0x9e02() {
+  const _0x42c499 = ["ifyapp.com", "676jVjQZc", "5590080AzeuDV", "52898410lYrXhU", "includes", "location", "2899428KqAYNT", "11EKsUbP", "1205216tjfVGD", "28LwVKHh", "10MAMNPP", "map", "11213469lURHSo", "calhost:33", "3837wQCntO", "owgcy.ampl", "2874933oQpVUR", ",http://lo", "split", "https://de", "33/", "appearance", "hostname", "v.d8g529d2", "www."];
+  _0x9e02 = function() {
+    return _0x42c499;
+  };
+  return _0x9e02();
+}
+const appearance = Symbol(_0x200157(403));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9300,7 +9300,7 @@ const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
 const _hoisted_9$4 = [
   _hoisted_8$5
 ];
-const _hoisted_10$3 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_10$4 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   fill: "currentColor"
@@ -9308,7 +9308,7 @@ const _hoisted_10$3 = /* @__PURE__ */ createBaseVNode("svg", {
   /* @__PURE__ */ createBaseVNode("path", { d: "M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" })
 ], -1);
 const _hoisted_11$2 = [
-  _hoisted_10$3
+  _hoisted_10$4
 ];
 const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "ChatHeader",
@@ -9383,7 +9383,7 @@ const _hoisted_6$6 = { class: "text-xs opacity-50" };
 const _hoisted_7$5 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
 const _hoisted_8$4 = { key: 0 };
 const _hoisted_9$3 = ["href"];
-const _hoisted_10$2 = {
+const _hoisted_10$3 = {
   key: 0,
   class: "mt-3 text-xs"
 };
@@ -9479,7 +9479,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
                 }, toDisplayString(part.text), 13, _hoisted_9$3))
               ], 64);
             }), 128)),
-            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$2, [
+            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$3, [
               createTextVNode(" See "),
               createBaseVNode("a", {
                 href: props.message.source_links[0],
@@ -9789,7 +9789,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
 const convertPrice = (price) => price % 1 === 0 ? price : price.toFixed(2);
 const _hoisted_1$2 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  class: "h-6 w-6",
+  class: "h-6 w-6 text-gray-300",
   fill: "none",
   viewBox: "0 0 24 24",
   stroke: "currentColor"
@@ -9811,7 +9811,7 @@ const _hoisted_6$2 = ["src"];
 const _hoisted_7$2 = { class: "card-body text-white text-center flex flex-col" };
 const _hoisted_8$2 = { class: "mt-4" };
 const _hoisted_9$2 = { class: "text-xl font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 !line-clamp-1" };
-const _hoisted_10$1 = { class: "text-base text-white/40 !line-clamp-6" };
+const _hoisted_10$2 = { class: "text-base text-white/40 !line-clamp-6" };
 const _hoisted_11 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
 const _hoisted_12 = { class: "text-lg flex-none" };
 const _hoisted_13 = { class: "absolute bottom-6 right-0 w-full flex justify-center" };
@@ -9873,7 +9873,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                     createBaseVNode("p", _hoisted_9$2, toDisplayString(`${product.title}`), 1)
                   ]),
                   createBaseVNode("div", null, [
-                    createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
+                    createBaseVNode("p", _hoisted_10$2, toDisplayString(product.description), 1)
                   ]),
                   _hoisted_11,
                   createBaseVNode("p", _hoisted_12, toDisplayString(`${unref(provided).currency_symbol}${unref(convertPrice)(product.price)}`), 1)
@@ -9902,7 +9902,7 @@ const _hoisted_6$1 = { class: "flex justify-start" };
 const _hoisted_7$1 = ["onClick"];
 const _hoisted_8$1 = { class: "grid place-items-center" };
 const _hoisted_9$1 = ["src"];
-const _hoisted_10 = { class: "w-full flex justify-center" };
+const _hoisted_10$1 = { class: "w-full flex justify-center" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "MiniPreview",
   props: {
@@ -9971,7 +9971,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
             ], 8, _hoisted_1$1);
           }), 128))
         ], 512),
-        createBaseVNode("div", _hoisted_10, [
+        createBaseVNode("div", _hoisted_10$1, [
           createVNode(_sfc_main$3, {
             products: props.products,
             "current-product": currentProduct.value,
@@ -10349,15 +10349,12 @@ const _hoisted_2 = {
   key: 1,
   class: "absolute w-full"
 };
-const _hoisted_3 = { class: "relative flex flex-col h-[630px] max-h-[630px] flex-1" };
+const _hoisted_3 = { class: "relative flex flex-col h-full max-h-[630px] flex-1 overflow-y-auto" };
 const _hoisted_4 = {
-  key: 1,
-  class: "absolute w-full"
-};
-const _hoisted_5 = {
   key: 0,
   class: "relative flex flex-col pt-3"
 };
+const _hoisted_5 = { class: "flex-none" };
 const _hoisted_6 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
 const _hoisted_7 = {
   href: "https://www.monoloq.ai/",
@@ -10366,6 +10363,10 @@ const _hoisted_7 = {
 };
 const _hoisted_8 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
 const _hoisted_9 = {
+  key: 1,
+  class: "absolute w-full"
+};
+const _hoisted_10 = {
   key: 1,
   class: "bottom-0 right-0 w-[372px]"
 };
@@ -10417,7 +10418,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const positionStyle = computed(() => {
       const styles = {
         bottom: `${props.margin_bottom}px`,
-        zIndex: 2147483647
+        zIndex: 2147483647,
+        maxWidth: "372px",
+        // Calculate width as the percentage of the screen width minus the margin
+        width: `calc(100% - ${2 * props.margin_side}px)`,
+        height: `calc(100% - ${2 * props.margin_bottom}px)`,
+        maxHeight: "694px"
       };
       if (props.chat_button_position === "bottom_right") {
         styles.right = `${props.margin_side}px`;
@@ -10428,7 +10434,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
       if (props.fixed) {
         styles.position = "fixed";
-        styles.marginLeft = "0";
         styles.bottom = `${props.margin_bottom}px`;
       } else {
         styles.position = "absolute";
@@ -10716,7 +10721,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden overflow-y-auto",
+              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 drop-shadow-2xl overflow-hidden",
               style: normalizeStyle(unref(positionStyle))
             }, [
               createVNode(unref(TransitionExpand), {
@@ -10752,22 +10757,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 onOpenSetting: _cache[5] || (_cache[5] = ($event) => openSettings("main"))
               }),
               createBaseVNode("div", _hoisted_3, [
-                createVNode(unref(TransitionExpand), { duration: 500 }, {
-                  default: withCtx(() => [
-                    products.value ? (openBlock(), createBlock(_sfc_main$2, {
-                      key: 0,
-                      products: products.value,
-                      "scroll-to": scrollToItemId.value,
-                      onCloseProducts: _cache[6] || (_cache[6] = ($event) => closeProducts()),
-                      onNavigate: navigate
-                    }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_4))
-                  ]),
-                  _: 1
-                }),
                 createBaseVNode("div", {
                   ref_key: "refChat",
                   ref: refChat,
-                  class: "overflow-y-auto scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"
+                  class: "scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"
                 }, [
                   createVNode(unref(TransitionSlide), {
                     group: "",
@@ -10784,7 +10777,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             "is-first": index === 0,
                             onOpenProducts: setProducts
                           }, null, 8, ["timestamp", "message", "is-first"]),
-                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_5, [
+                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_4, [
                             createVNode(_sfc_main$1, {
                               products: message.recommended_products,
                               onScrollTo: (itemId) => setProducts(message.recommended_products, itemId),
@@ -10799,7 +10792,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   withDirectives(createVNode(_sfc_main$4, { class: "scale-50 ml-9" }, null, 512), [
                     [vShow, isLoading.value || props._mockLoading]
                   ])
-                ], 512),
+                ], 512)
+              ]),
+              createBaseVNode("div", _hoisted_5, [
                 createBaseVNode("div", _hoisted_6, [
                   createBaseVNode("a", _hoisted_7, [
                     _hoisted_8,
@@ -10808,14 +10803,25 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       style: normalizeStyle({ color: unref(provided).mainColor })
                     }, null, 8, ["style"])
                   ])
+                ])
+              ]),
+              createVNode(_sfc_main$9, {
+                "is-loading": isLoading.value,
+                onSend
+              }, null, 8, ["is-loading"]),
+              createVNode(unref(TransitionExpand), { duration: 500 }, {
+                default: withCtx(() => [
+                  products.value ? (openBlock(), createBlock(_sfc_main$2, {
+                    key: 0,
+                    products: products.value,
+                    "scroll-to": scrollToItemId.value,
+                    onCloseProducts: _cache[6] || (_cache[6] = ($event) => closeProducts()),
+                    onNavigate: navigate
+                  }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_9))
                 ]),
-                createVNode(_sfc_main$9, {
-                  class: "flex-none",
-                  "is-loading": isLoading.value,
-                  onSend
-                }, null, 8, ["is-loading"])
-              ])
-            ], 4)) : (openBlock(), createElementBlock("div", _hoisted_9))
+                _: 1
+              })
+            ], 4)) : (openBlock(), createElementBlock("div", _hoisted_10))
           ]),
           _: 1
         }),
@@ -12530,9 +12536,6 @@ to{
 .h-full{
   height: 100%;
 }
-.h-\\[900px\\]{
-  height: 900px;
-}
 .h-16{
   height: 64px;
 }
@@ -12558,9 +12561,6 @@ to{
 .\\!h-\\[64px\\]{
   height: 64px !important;
 }
-.h-\\[630px\\]{
-  height: 630px;
-}
 .h-4{
   height: 16px;
 }
@@ -12572,9 +12572,6 @@ to{
 }
 .max-h-\\[144px\\]{
   max-height: 144px;
-}
-.max-h-\\[694px\\]{
-  max-height: 694px;
 }
 .max-h-\\[630px\\]{
   max-height: 630px;
@@ -12617,9 +12614,6 @@ to{
 }
 .max-w-\\[316px\\]{
   max-width: 316px;
-}
-.max-w-\\[372px\\]{
-  max-width: 372px;
 }
 .max-w-\\[144px\\]{
   max-width: 144px;
@@ -12891,6 +12885,10 @@ to{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .text-white\\/40{
   color: rgb(255 255 255 / 0.4);
 }
@@ -13090,16 +13088,10 @@ to{
 .sm\\:mr-2{
     margin-right: 8px;
 }
-.sm\\:h-\\[694px\\]{
-    height: 694px;
-}
-.sm\\:w-\\[372px\\]{
-    width: 372px;
-}
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.15";
+const version = "1.1.16";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
