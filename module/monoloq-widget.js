@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x5959(_0x3f263b, _0x4142ec) {
-  const _0x445800 = _0x5232();
-  return _0x5959 = function(_0x269d29, _0x5000ba) {
-    _0x269d29 = _0x269d29 - (9691 * 1 + -2692 + -6578);
-    let _0x130006 = _0x445800[_0x269d29];
-    return _0x130006;
-  }, _0x5959(_0x3f263b, _0x4142ec);
-}
-const _0x501a49 = _0x5959;
-function _0x5232() {
-  const _0xfe123 = ["split", "20273RFrbre", "4997196MQTJFB", "599JBzoQh", "2734110IrsAqC", "8NeHuzO", "745644ZDiWPH", "5ptUGnv", "https://ap", "location", "map", "1202RhHMyf", "876421JTtZWl", "includes", "hostname", "www.", "p.monoloq.", "1110ZURjHt", "appearance", "840249ieiLuF"];
-  _0x5232 = function() {
-    return _0xfe123;
+const _0x4565e6 = _0x2eab;
+function _0x541c() {
+  const _0x374082 = ["map", "3686120UHfBGK", "935148ocOtCu", "1110292WSnQkc", "split", "https://ap", "1405280TDWDcZ", "13921376bWVvZa", "includes", "p.monoloq.", "location", "4424961pTrNRQ", "hostname", "www.", "7683108gWLxTu", "appearance"];
+  _0x541c = function() {
+    return _0x374082;
   };
-  return _0x5232();
+  return _0x541c();
 }
-(function(_0x18b638, _0x6d97ac) {
-  const _0x1e7968 = _0x5959, _0x39e660 = _0x18b638();
+(function(_0x5a08b3, _0x2910d8) {
+  const _0x555840 = _0x2eab, _0xb8a358 = _0x5a08b3();
   while (!![]) {
     try {
-      const _0xe7ba36 = parseInt(_0x1e7968(434)) / (-1 + -1466 + 1468) * (-parseInt(_0x1e7968(422)) / (-115 * -25 + -4 * -1569 + -9149)) + -parseInt(_0x1e7968(430)) / (-7330 + 2 * -1169 + 9671) + parseInt(_0x1e7968(437)) / (7083 + -9 * -58 + 1 * -7601) * (parseInt(_0x1e7968(438)) / (-5386 + 4880 + 7 * 73)) + parseInt(_0x1e7968(433)) / (-2701 + 2 * 2396 + 695 * -3) + parseInt(_0x1e7968(423)) / (-4252 + -8986 * 1 + 13245) * (parseInt(_0x1e7968(436)) / (-296 + 41 * -187 + 7971)) + parseInt(_0x1e7968(435)) / (3902 * -1 + -4285 * -2 + 4659 * -1) + -parseInt(_0x1e7968(428)) / (2377 * 4 + 9521 * 1 + -19 * 1001) * (parseInt(_0x1e7968(432)) / (-9569 + -1278 + 10858));
-      if (_0xe7ba36 === _0x6d97ac)
+      const _0x3a7bc2 = parseInt(_0x555840(319)) / (-4578 + 1606 + 2973) + parseInt(_0x555840(322)) / (-6 * -918 + 5098 + -10604) + parseInt(_0x555840(311)) / (-20 * 193 + 2417 + 6 * 241) + parseInt(_0x555840(318)) / (-952 * -2 + 8261 * -1 + 6361) + parseInt(_0x555840(317)) / (-7159 + -5719 + 12883) + -parseInt(_0x555840(314)) / (-4707 + -9483 + 14196) + -parseInt(_0x555840(323)) / (3469 + 8359 + -11821 * 1);
+      if (_0x3a7bc2 === _0x2910d8)
         break;
       else
-        _0x39e660["push"](_0x39e660["shift"]());
-    } catch (_0x294eac) {
-      _0x39e660["push"](_0x39e660["shift"]());
+        _0xb8a358["push"](_0xb8a358["shift"]());
+    } catch (_0x1b4056) {
+      _0xb8a358["push"](_0xb8a358["shift"]());
     }
   }
-})(_0x5232, 353091 * -2 + -220487 * -2 + 1 * 868823);
-function devHost(_0x5000ba, _0x130006) {
-  const _0x4c0966 = _0x5959, _0x454f5b = window[_0x4c0966(440)][_0x4c0966(425)], _0x52fa5c = String(_0x4c0966(439) + _0x4c0966(427) + "ai")[_0x4c0966(431)](",")[_0x4c0966(421)]((_0x27b821) => new URL(_0x27b821)[_0x4c0966(425)]), _0xa648cb = _0x130006 ? _0x4c0966(426) + _0x454f5b : _0x454f5b;
-  if (!_0x5000ba)
-    return _0xa648cb;
-  if (!_0x52fa5c[_0x4c0966(424)](_0x454f5b))
-    return _0xa648cb;
-  return _0x5000ba;
+})(_0x541c, -3547 * 409 + -3 * 25669 + 2517374);
+function _0x2eab(_0x1223ae, _0x329bbc) {
+  const _0x1d2538 = _0x541c();
+  return _0x2eab = function(_0x2d0288, _0x3fb254) {
+    _0x2d0288 = _0x2d0288 - (-1 * 6792 + 218 * 11 + 4702);
+    let _0x499b4f = _0x1d2538[_0x2d0288];
+    return _0x499b4f;
+  }, _0x2eab(_0x1223ae, _0x329bbc);
 }
-function prepareMessage(_0x524a7d) {
-  return "" + _0x524a7d;
+function devHost(_0x2d0288, _0x3fb254) {
+  const _0x7b65e0 = _0x2eab, _0x499b4f = window[_0x7b65e0(310)][_0x7b65e0(312)], _0x3b5ffd = String(_0x7b65e0(321) + _0x7b65e0(309) + "ai")[_0x7b65e0(320)](",")[_0x7b65e0(316)]((_0x147c62) => new URL(_0x147c62)[_0x7b65e0(312)]), _0x309151 = _0x3fb254 ? _0x7b65e0(313) + _0x499b4f : _0x499b4f;
+  if (!_0x2d0288)
+    return _0x309151;
+  if (!_0x3b5ffd[_0x7b65e0(308)](_0x499b4f))
+    return _0x309151;
+  return _0x2d0288;
 }
-const appearance = Symbol(_0x501a49(429));
+function prepareMessage(_0x6de2d) {
+  return "" + _0x6de2d;
+}
+const appearance = Symbol(_0x4565e6(315));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10390,6 +10390,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     style_tags: null,
     margin_side: { default: 20 },
     margin_bottom: { default: 20 },
+    chaty_integration: { type: Boolean, default: false },
     currency_symbol: { default: "$" },
     enable_on_mobile: { type: Boolean, default: false },
     enable_sound: { type: Boolean, default: false },
@@ -10442,10 +10443,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const widgetStyle = computed(() => {
       const styles = {
         maxWidth: "372px",
+        maxHeight: props.chaty_integration ? "600px" : "694px",
         // Calculate width as the percentage of the screen width minus the margin
-        width: `calc(100% - ${2 * props.margin_side}px)`,
-        height: `calc(100% - ${2 * props.margin_bottom}px)`,
-        maxHeight: "694px"
+        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * props.margin_side}px)`,
+        height: props.chaty_integration ? "600px" : `calc(100% - ${2 * props.margin_bottom}px)`
       };
       return {
         ...positionStyle.value,
@@ -13170,7 +13171,8 @@ async function register() {
         fixed: false,
         margin_bottom: 0,
         margin_side: 0,
-        enable_on_mobile: true
+        enable_on_mobile: true,
+        chaty_integration
       });
     }
     customElements.define(false ? "monoloq-widget-test" : "monoloq-widget", ChatWindow);
