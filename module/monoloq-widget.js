@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x30c3a0 = _0x453b;
-function _0x2d23() {
-  const _0x222eb7 = ["1892055GacTSF", "hostname", "2958WMcvYR", "split", "www.", "3tqFaBZ", "3941PuPOHS", "543314XpAKvX", "includes", "map", "685810xNgexd", "appearance", "484MiRgtc", "3398284aFKLoS", "p.monoloq.", "13304592zXSkDh", "3460288qWVwUp", "location", "5ZiOkwh", "https://ap"];
-  _0x2d23 = function() {
-    return _0x222eb7;
+const _0x55a953 = _0x3245;
+function _0x4b6d() {
+  const _0x2d82cf = ["www.", "6063935xGkxqC", "4nDnHnq", "12216584mDqlve", "hostname", "location", "appearance", "3SIxCJO", "1510670mzpDJt", "9qFRLQS", "6924085ItxByY", "https://ap", "p.monoloq.", "includes", "28061410QhwIra", "8315046YweeWV", "1144170KcThaI", "split", "map"];
+  _0x4b6d = function() {
+    return _0x2d82cf;
   };
-  return _0x2d23();
+  return _0x4b6d();
 }
-(function(_0x143d09, _0x447990) {
-  const _0x46d077 = _0x453b, _0x39ea51 = _0x143d09();
+(function(_0x47ef78, _0x4afeca) {
+  const _0x158e80 = _0x3245, _0x13f820 = _0x47ef78();
   while (!![]) {
     try {
-      const _0x1087f5 = -parseInt(_0x46d077(199)) / (1285 * -2 + 67 + 2 * 1252) * (parseInt(_0x46d077(201)) / (2 * -4 + 5736 + -5726)) + -parseInt(_0x46d077(194)) / (9675 + 2 * -4111 + -1450) + parseInt(_0x46d077(207)) / (-1246 + 8019 + 1 * -6769) * (parseInt(_0x46d077(212)) / (-7999 + -215 * 24 + 13164)) + parseInt(_0x46d077(196)) / (8 * -317 + 6722 + -4180 * 1) * (parseInt(_0x46d077(200)) / (-2754 * -2 + -5460 + 41 * -1)) + -parseInt(_0x46d077(210)) / (-4 * -67 + -4851 + 4591) + -parseInt(_0x46d077(209)) / (5079 + -9947 + 1 * 4877) + -parseInt(_0x46d077(204)) / (519 + 3298 + 141 * -27) * (-parseInt(_0x46d077(206)) / (101 * 94 + 31 * 215 + -16148));
-      if (_0x1087f5 === _0x447990)
+      const _0x4564d4 = -parseInt(_0x158e80(259)) / (-2 * -790 + -5114 + 505 * 7) + parseInt(_0x158e80(267)) / (-3517 + 804 * -4 + 6735) * (-parseInt(_0x158e80(258)) / (7773 + -5015 + -2755)) + parseInt(_0x158e80(253)) / (4362 + 9982 + 7170 * -2) * (parseInt(_0x158e80(252)) / (249 * -1 + -5364 + 5618)) + parseInt(_0x158e80(266)) / (1183 + 339 * -1 + 1 * -838) + -parseInt(_0x158e80(261)) / (-4 * 66 + -5 * 1291 + 6 * 1121) + -parseInt(_0x158e80(254)) / (-8156 + -5073 + -7 * -1891) * (parseInt(_0x158e80(260)) / (6187 + -9932 + 3754)) + parseInt(_0x158e80(265)) / (1 * 9209 + -2 * 1413 + -6373);
+      if (_0x4564d4 === _0x4afeca)
         break;
       else
-        _0x39ea51["push"](_0x39ea51["shift"]());
-    } catch (_0x69c7dd) {
-      _0x39ea51["push"](_0x39ea51["shift"]());
+        _0x13f820["push"](_0x13f820["shift"]());
+    } catch (_0x3ba1cb) {
+      _0x13f820["push"](_0x13f820["shift"]());
     }
   }
-})(_0x2d23, 67225 * 1 + -444428 + -1999 * -583);
-function devHost(_0x4a1270, _0x1fcce2) {
-  const _0x25a821 = _0x453b, _0x122bdd = window[_0x25a821(211)][_0x25a821(195)], _0xa31671 = String(_0x25a821(213) + _0x25a821(208) + "ai")[_0x25a821(197)](",")[_0x25a821(203)]((_0x5c84a4) => new URL(_0x5c84a4)[_0x25a821(195)]), _0xac38ca = _0x1fcce2 ? _0x25a821(198) + _0x122bdd : _0x122bdd;
-  if (!_0x4a1270)
-    return _0xac38ca;
-  if (!_0xa31671[_0x25a821(202)](_0x122bdd))
-    return _0xac38ca;
-  return _0x4a1270;
+})(_0x4b6d, 39587 * 31 + 3 * 372038 + 1537525 * -1);
+function devHost(_0x4a4e23, _0x125120) {
+  const _0x546e12 = _0x3245, _0x27a8be = window[_0x546e12(256)][_0x546e12(255)], _0x52de42 = String(_0x546e12(262) + _0x546e12(263) + "ai")[_0x546e12(268)](",")[_0x546e12(250)]((_0x591f4b) => new URL(_0x591f4b)[_0x546e12(255)]), _0x53036d = _0x125120 ? _0x546e12(251) + _0x27a8be : _0x27a8be;
+  if (!_0x4a4e23)
+    return _0x53036d;
+  if (!_0x52de42[_0x546e12(264)](_0x27a8be))
+    return _0x53036d;
+  return _0x4a4e23;
 }
-function prepareMessage(_0x41730e) {
-  return "" + _0x41730e;
+function prepareMessage(_0x3b0d64) {
+  return "" + _0x3b0d64;
 }
-function _0x453b(_0x26bbb9, _0x129272) {
-  const _0x291154 = _0x2d23();
-  return _0x453b = function(_0x3bb82d, _0x4a1270) {
-    _0x3bb82d = _0x3bb82d - (-2093 + -7124 * -1 + -4837);
-    let _0x1fcce2 = _0x291154[_0x3bb82d];
-    return _0x1fcce2;
-  }, _0x453b(_0x26bbb9, _0x129272);
+function _0x3245(_0x20e4b9, _0x1c18c8) {
+  const _0x1b0a7a = _0x4b6d();
+  return _0x3245 = function(_0x5ccd30, _0x4a4e23) {
+    _0x5ccd30 = _0x5ccd30 - (1 * 4072 + -3995 + 173);
+    let _0x125120 = _0x1b0a7a[_0x5ccd30];
+    return _0x125120;
+  }, _0x3245(_0x20e4b9, _0x1c18c8);
 }
-const appearance = Symbol(_0x30c3a0(205));
+const appearance = Symbol(_0x55a953(257));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -8189,7 +8189,7 @@ const validateSlideOffset = (value) => validateEnterLeave(value, (val) => {
     return true;
   });
 });
-const _sfc_main$b = {
+const _sfc_main$c = {
   name: "transition-slide",
   mixins: [
     baseTransition
@@ -8257,7 +8257,7 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     _: 3
   }, 16);
 }
-const TransitionSlide = /* @__PURE__ */ _export_sfc$1(_sfc_main$b, [["render", _sfc_render$4]]);
+const TransitionSlide = /* @__PURE__ */ _export_sfc$1(_sfc_main$c, [["render", _sfc_render$4]]);
 const components = {
   [TransitionExpand.name]: TransitionExpand,
   [TransitionFade.name]: TransitionFade,
@@ -9276,7 +9276,7 @@ const _TransitionPresets = {
 __spreadValues({
   linear: identity
 }, _TransitionPresets);
-const _hoisted_1$a = { class: "flex items-center" };
+const _hoisted_1$b = { class: "flex items-center" };
 const _hoisted_2$9 = /* @__PURE__ */ createBaseVNode("path", {
   fill: "currentColor",
   d: "M9.5 13a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0z"
@@ -9300,7 +9300,7 @@ const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
 const _hoisted_9$4 = [
   _hoisted_8$5
 ];
-const _hoisted_10$3 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_10$4 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   fill: "currentColor"
@@ -9308,9 +9308,9 @@ const _hoisted_10$3 = /* @__PURE__ */ createBaseVNode("svg", {
   /* @__PURE__ */ createBaseVNode("path", { d: "M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" })
 ], -1);
 const _hoisted_11$2 = [
-  _hoisted_10$3
+  _hoisted_10$4
 ];
-const _sfc_main$a = /* @__PURE__ */ defineComponent({
+const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "ChatHeader",
   emits: ["clear", "close", "openSetting"],
   setup(__props, { emit: emit2 }) {
@@ -9320,7 +9320,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
         class: "flex justify-between rounded-t-2xl items-center px-3 h-16 min-h-16 z-40",
         style: normalizeStyle(unref(provided).style)
       }, [
-        createBaseVNode("div", _hoisted_1$a, [
+        createBaseVNode("div", _hoisted_1$b, [
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
             "aria-label": "open settings",
@@ -9368,7 +9368,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$9 = {
+const _hoisted_1$a = {
   key: 0,
   class: "chat chat-start !py-1 !gap-x-[12px]"
 };
@@ -9383,7 +9383,7 @@ const _hoisted_6$6 = { class: "text-xs opacity-50" };
 const _hoisted_7$5 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
 const _hoisted_8$4 = { key: 0 };
 const _hoisted_9$3 = ["href"];
-const _hoisted_10$2 = {
+const _hoisted_10$3 = {
   key: 0,
   class: "mt-3 text-xs"
 };
@@ -9392,9 +9392,9 @@ const _hoisted_12$1 = {
   key: 1,
   class: "chat chat-end !py-1 !gap-x-[12px]"
 };
-const _hoisted_13 = { key: 0 };
+const _hoisted_13$1 = { key: 0 };
 const _hoisted_14 = { class: "text-xs opacity-50" };
-const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __name: "ChatBubble",
   props: {
     message: null,
@@ -9456,7 +9456,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        unref(parsedMessage) && "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
+        unref(parsedMessage) && "sender" in props.message ? (openBlock(), createElementBlock("div", _hoisted_1$a, [
           createBaseVNode("div", _hoisted_2$8, [
             createBaseVNode("div", _hoisted_3$7, [
               createBaseVNode("img", {
@@ -9479,7 +9479,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
                 }, toDisplayString(part.text), 13, _hoisted_9$3))
               ], 64);
             }), 128)),
-            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$2, [
+            props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$3, [
               createTextVNode(" See "),
               createBaseVNode("a", {
                 href: props.message.source_links[0],
@@ -9491,7 +9491,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           ])
         ])) : createCommentVNode("", true),
         "text" in props.message ? (openBlock(), createElementBlock("div", _hoisted_12$1, [
-          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_13, [
+          unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_13$1, [
             createBaseVNode("time", _hoisted_14, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
           createBaseVNode("p", {
@@ -9503,7 +9503,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$8 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
+const _hoisted_1$9 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
 const _hoisted_2$7 = ["placeholder"];
 const _hoisted_3$6 = ["disabled"];
 const _hoisted_4$5 = { class: "w-6 h-6" };
@@ -9512,7 +9512,7 @@ const _hoisted_6$5 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l
 const _hoisted_7$4 = [
   _hoisted_6$5
 ];
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatInput",
   props: {
     isLoading: { type: Boolean }
@@ -9533,7 +9533,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
       });
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$8, [
+      return openBlock(), createElementBlock("div", _hoisted_1$9, [
         createBaseVNode("form", {
           class: "flex items-center",
           onSubmit: _cache[2] || (_cache[2] = withModifiers(($event) => maybeSend(), ["prevent"]))
@@ -9567,7 +9567,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$7 = { class: "overlay h-full text-white rounded-t-md" };
+const _hoisted_1$8 = { class: "overlay h-full text-white rounded-t-md" };
 const _hoisted_2$6 = { class: "my-auto w-full flex items-center border-b h-16" };
 const _hoisted_3$5 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
@@ -9584,14 +9584,14 @@ const _hoisted_4$4 = [
 ];
 const _hoisted_5$4 = { class: "flex flex-col p-4" };
 const _hoisted_6$4 = ["onClick"];
-const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "ChatLanguage",
   emits: ["setLanguage", "close"],
   setup(__props, { emit: emit2 }) {
     const provided = inject(appearance);
     return (_ctx, _cache) => {
       var _a2;
-      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+      return openBlock(), createElementBlock("div", _hoisted_1$8, [
         createBaseVNode("div", _hoisted_2$6, [
           createBaseVNode("button", {
             class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
@@ -9612,7 +9612,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$6 = { class: "overlay h-max text-white rounded-t-md" };
+const _hoisted_1$7 = { class: "overlay h-max text-white rounded-t-md" };
 const _hoisted_2$5 = { class: "my-auto w-full flex items-center border-b text-center h-16 relative" };
 const _hoisted_3$4 = { class: "absolute left-0 bottom-0 h-full flex flex-col" };
 const _hoisted_4$3 = /* @__PURE__ */ createBaseVNode("svg", {
@@ -9642,13 +9642,13 @@ const _hoisted_8$3 = /* @__PURE__ */ createBaseVNode("span", null, [
     })
   ])
 ], -1);
-const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "ChatSettings",
   emits: ["openLanguage", "toggleSound", "close"],
   setup(__props, { emit: emit2 }) {
     const provided = inject(appearance);
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
         createBaseVNode("div", _hoisted_2$5, [
           createBaseVNode("div", _hoisted_3$4, [
             createBaseVNode("button", {
@@ -9673,7 +9673,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$5 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_1$6 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "w-8 h-8 mx-auto my-auto",
   viewBox: "0 0 24 24"
@@ -9684,9 +9684,9 @@ const _hoisted_1$5 = /* @__PURE__ */ createBaseVNode("svg", {
   })
 ], -1);
 const _hoisted_2$4 = [
-  _hoisted_1$5
+  _hoisted_1$6
 ];
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "WidgetButton.ce",
   props: {
     isOpen: { type: Boolean, default: true }
@@ -9718,8 +9718,8 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$4 = {};
-const _hoisted_1$4 = {
+const _sfc_main$5 = {};
+const _hoisted_1$5 = {
   id: "Layer_2",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 107.37 28.44"
@@ -9729,11 +9729,11 @@ const _hoisted_3$3 = [
   _hoisted_2$3
 ];
 function _sfc_render(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$4, _hoisted_3$3);
+  return openBlock(), createElementBlock("svg", _hoisted_1$5, _hoisted_3$3);
 }
-const MonoloqLogo = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render]]);
-const _hoisted_1$3 = { class: "lds-ellipsis" };
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const MonoloqLogo = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render]]);
+const _hoisted_1$4 = { class: "lds-ellipsis" };
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "Loader",
   setup(__props) {
     const provided = inject(appearance);
@@ -9741,7 +9741,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       backgroundColor: provided.value.mainColor
     }));
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+      return openBlock(), createElementBlock("div", _hoisted_1$4, [
         createBaseVNode("div", {
           style: normalizeStyle(unref(style))
         }, null, 4),
@@ -9758,9 +9758,38 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _hoisted_1$3 = ["id", "onClick"];
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+  __name: "NavigationBullets",
+  props: {
+    products: null,
+    currentProduct: null
+  },
+  emits: ["scrollTo"],
+  setup(__props, { emit: emit2 }) {
+    const props = __props;
+    const provided = inject(appearance);
+    return (_ctx, _cache) => {
+      return openBlock(true), createElementBlock(Fragment, null, renderList(props.products, (product) => {
+        return openBlock(), createElementBlock("button", {
+          id: `monoloq-${product.item_id}-btn`,
+          key: product.item_id,
+          class: "btn btn-circle btn-ghost btn-xs flex items-center",
+          onClick: ($event) => emit2("scrollTo", product.item_id)
+        }, [
+          createBaseVNode("span", {
+            class: "",
+            style: normalizeStyle({ color: __props.currentProduct === product.item_id ? unref(provided).mainColor : "" })
+          }, "•", 4)
+        ], 8, _hoisted_1$3);
+      }), 128);
+    };
+  }
+});
+const convertPrice = (price) => price % 1 === 0 ? price : price.toFixed(2);
 const _hoisted_1$2 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  class: "h-6 w-6",
+  class: "h-6 w-6 text-gray-300",
   fill: "none",
   viewBox: "0 0 24 24",
   stroke: "currentColor"
@@ -9782,9 +9811,10 @@ const _hoisted_6$2 = ["src"];
 const _hoisted_7$2 = { class: "card-body text-white text-center flex flex-col" };
 const _hoisted_8$2 = { class: "mt-4" };
 const _hoisted_9$2 = { class: "text-xl font-bold text-opacity-60 group-hover:text-opacity-100 transition-all duration-200 !line-clamp-1" };
-const _hoisted_10$1 = { class: "text-base text-white/40 !line-clamp-6" };
+const _hoisted_10$2 = { class: "text-base text-white/40 !line-clamp-6" };
 const _hoisted_11 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
 const _hoisted_12 = { class: "text-lg flex-none" };
+const _hoisted_13 = { class: "absolute bottom-6 right-0 w-full flex justify-center" };
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "ChatProducts",
   props: {
@@ -9796,16 +9826,21 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     const props = __props;
     const provided = inject(appearance);
     const chatProducts = ref();
+    const currentProduct = ref();
     onMounted(async () => {
-      var _a2;
       if (!props.scrollTo)
         return;
-      const el = (_a2 = chatProducts.value) == null ? void 0 : _a2.querySelector(`#monoloq-${props.scrollTo}`);
+      await scrollTo(props.scrollTo);
+    });
+    async function scrollTo(product, timeout = 310) {
+      var _a2;
+      currentProduct.value = product;
+      const el = (_a2 = chatProducts.value) == null ? void 0 : _a2.querySelector(`#monoloq-${product}`);
       if (!el)
         return;
-      await new Promise((resolve2) => setTimeout(resolve2, 310));
+      await new Promise((resolve2) => setTimeout(resolve2, timeout));
       el.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
+    }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
         id: "chatProducts",
@@ -9838,29 +9873,36 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                     createBaseVNode("p", _hoisted_9$2, toDisplayString(`${product.title}`), 1)
                   ]),
                   createBaseVNode("div", null, [
-                    createBaseVNode("p", _hoisted_10$1, toDisplayString(product.description), 1)
+                    createBaseVNode("p", _hoisted_10$2, toDisplayString(product.description), 1)
                   ]),
                   _hoisted_11,
-                  createBaseVNode("p", _hoisted_12, toDisplayString(`${unref(provided).currency_symbol}${product.price}`), 1)
+                  createBaseVNode("p", _hoisted_12, toDisplayString(`${unref(provided).currency_symbol}${unref(convertPrice)(product.price)}`), 1)
                 ])
               ])
             ], 8, _hoisted_4$2);
           }), 128))
+        ]),
+        createBaseVNode("div", _hoisted_13, [
+          createVNode(_sfc_main$3, {
+            products: props.products,
+            "current-product": currentProduct.value,
+            onScrollTo: _cache[1] || (_cache[1] = ($event) => scrollTo($event, 120))
+          }, null, 8, ["products", "current-product"])
         ])
       ], 512);
     };
   }
 });
-const _hoisted_1$1 = { class: "w-full h-max carousel carousel-center px-4 pt-0 pb-3 space-x-4 my-auto relative pl-5" };
-const _hoisted_2$1 = ["onClick"];
-const _hoisted_3$1 = { class: "flex flex-col text-left flex-1 mt-3" };
-const _hoisted_4$1 = { class: "text-sm font-bold line-clamp-3 mr-2" };
-const _hoisted_5$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
-const _hoisted_6$1 = { class: "text-md text-neutral/70 mb-4" };
-const _hoisted_7$1 = { class: "flex justify-start" };
-const _hoisted_8$1 = ["onClick"];
-const _hoisted_9$1 = { class: "grid place-items-center" };
-const _hoisted_10 = ["src"];
+const _hoisted_1$1 = ["id", "onClick"];
+const _hoisted_2$1 = { class: "flex flex-col text-left flex-1 mt-3" };
+const _hoisted_3$1 = { class: "text-sm font-bold line-clamp-3 mr-2" };
+const _hoisted_4$1 = /* @__PURE__ */ createBaseVNode("div", { class: "flex-1" }, null, -1);
+const _hoisted_5$1 = { class: "text-md text-neutral/70 mb-4" };
+const _hoisted_6$1 = { class: "flex justify-start" };
+const _hoisted_7$1 = ["onClick"];
+const _hoisted_8$1 = { class: "grid place-items-center" };
+const _hoisted_9$1 = ["src"];
+const _hoisted_10$1 = { class: "w-full flex justify-center" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "MiniPreview",
   props: {
@@ -9871,42 +9913,73 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     const props = __props;
     const provided = inject(appearance);
     const hideShadow = ref(false);
+    const currentProduct = ref();
+    const preview = ref();
+    async function scrollTo(product, timeout = 120) {
+      var _a2;
+      currentProduct.value = product;
+      const el = (_a2 = preview.value) == null ? void 0 : _a2.querySelector(`#monoloq-${product}-preview`);
+      if (!el)
+        return;
+      await new Promise((resolve2) => setTimeout(resolve2, timeout));
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    watchEffect(() => {
+      var _a2;
+      if (!props.products)
+        return;
+      currentProduct.value = (_a2 = props.products[0]) == null ? void 0 : _a2.item_id;
+    });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$1, [
-        (openBlock(true), createElementBlock(Fragment, null, renderList(props.products, (product) => {
-          var _a2, _b;
-          return openBlock(), createElementBlock("div", {
-            key: product.item_id,
-            class: "carousel-item w-[284px] cursor-pointer min-h-[160px]",
-            onClick: ($event) => emit2("navigate", product.url, product.item_id)
-          }, [
-            createBaseVNode("div", {
-              class: normalizeClass(["w-full h-full flex rounded-lg px-3 py-2 text-center duration-200 bg-[#DDE2EB] transition-all", { recommendation: !hideShadow.value }])
+      return openBlock(), createElementBlock(Fragment, null, [
+        createBaseVNode("div", {
+          ref_key: "preview",
+          ref: preview,
+          class: "w-full h-max carousel carousel-center px-4 pt-0 pb-3 space-x-4 my-auto relative pl-5"
+        }, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList(props.products, (product) => {
+            var _a2, _b;
+            return openBlock(), createElementBlock("div", {
+              id: `monoloq-${product.item_id}-preview`,
+              key: product.item_id,
+              class: "carousel-item w-[284px] cursor-pointer min-h-[160px]",
+              onClick: ($event) => emit2("navigate", product.url, product.item_id)
             }, [
-              createBaseVNode("div", _hoisted_3$1, [
-                createBaseVNode("h2", _hoisted_4$1, toDisplayString(`${product.title}`), 1),
-                _hoisted_5$1,
-                createBaseVNode("p", _hoisted_6$1, toDisplayString(`${unref(provided).currency_symbol}${product.price}`), 1),
-                createBaseVNode("div", _hoisted_7$1, [
-                  createBaseVNode("button", {
-                    class: normalizeClass(["btn btn-xs hover:opacity-80 text-[12px] px-[8px] h-[24px] capitalize border-none btn-primary", unref(provided).textClass]),
-                    style: normalizeStyle({ backgroundColor: unref(provided).mainColor }),
-                    onClick: withModifiers(($event) => emit2("scrollTo", product.item_id), ["stop"]),
-                    onMouseenter: _cache[0] || (_cache[0] = ($event) => hideShadow.value = true),
-                    onMouseleave: _cache[1] || (_cache[1] = ($event) => hideShadow.value = false)
-                  }, " Preview ", 46, _hoisted_8$1)
+              createBaseVNode("div", {
+                class: normalizeClass(["w-full h-full flex rounded-lg px-3 py-2 text-center duration-200 bg-[#DDE2EB] transition-all", { recommendation: !hideShadow.value }])
+              }, [
+                createBaseVNode("div", _hoisted_2$1, [
+                  createBaseVNode("h2", _hoisted_3$1, toDisplayString(`${product.title}`), 1),
+                  _hoisted_4$1,
+                  createBaseVNode("p", _hoisted_5$1, toDisplayString(`${unref(provided).currency_symbol}${unref(convertPrice)(product.price)}`), 1),
+                  createBaseVNode("div", _hoisted_6$1, [
+                    createBaseVNode("button", {
+                      class: normalizeClass(["btn btn-xs hover:opacity-80 text-[12px] px-[8px] h-[24px] capitalize border-none btn-primary", unref(provided).textClass]),
+                      style: normalizeStyle({ backgroundColor: unref(provided).mainColor }),
+                      onClick: withModifiers(($event) => emit2("scrollTo", product.item_id), ["stop"]),
+                      onMouseenter: _cache[0] || (_cache[0] = ($event) => hideShadow.value = true),
+                      onMouseleave: _cache[1] || (_cache[1] = ($event) => hideShadow.value = false)
+                    }, " Preview ", 46, _hoisted_7$1)
+                  ])
+                ]),
+                createBaseVNode("figure", _hoisted_8$1, [
+                  createBaseVNode("img", {
+                    src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
+                    class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
+                  }, null, 8, _hoisted_9$1)
                 ])
-              ]),
-              createBaseVNode("figure", _hoisted_9$1, [
-                createBaseVNode("img", {
-                  src: (_b = (_a2 = product.images) == null ? void 0 : _a2[product.match_image_idx || 0]) == null ? void 0 : _b.url,
-                  class: "max-w-[144px] max-h-[144px] my-auto rounded-md"
-                }, null, 8, _hoisted_10)
-              ])
-            ], 2)
-          ], 8, _hoisted_2$1);
-        }), 128))
-      ]);
+              ], 2)
+            ], 8, _hoisted_1$1);
+          }), 128))
+        ], 512),
+        createBaseVNode("div", _hoisted_10$1, [
+          createVNode(_sfc_main$3, {
+            products: props.products,
+            "current-product": currentProduct.value,
+            onScrollTo: scrollTo
+          }, null, 8, ["products", "current-product"])
+        ])
+      ], 64);
     };
   }
 });
@@ -10277,15 +10350,12 @@ const _hoisted_2 = {
   key: 1,
   class: "absolute w-full"
 };
-const _hoisted_3 = { class: "relative flex flex-col h-[630px] max-h-[630px] flex-1" };
+const _hoisted_3 = { class: "relative flex flex-col h-full max-h-[630px] flex-1 overflow-y-auto" };
 const _hoisted_4 = {
-  key: 1,
-  class: "absolute w-full"
-};
-const _hoisted_5 = {
   key: 0,
   class: "relative flex flex-col pt-3"
 };
+const _hoisted_5 = { class: "flex-none" };
 const _hoisted_6 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
 const _hoisted_7 = {
   href: "https://www.monoloq.ai/",
@@ -10294,6 +10364,10 @@ const _hoisted_7 = {
 };
 const _hoisted_8 = /* @__PURE__ */ createBaseVNode("div", { class: "mr-2" }, " Powered by ", -1);
 const _hoisted_9 = {
+  key: 1,
+  class: "absolute w-full"
+};
+const _hoisted_10 = {
   key: 1,
   class: "bottom-0 right-0 w-[372px]"
 };
@@ -10356,13 +10430,25 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
       if (props.fixed) {
         styles.position = "fixed";
-        styles.marginLeft = "0";
         styles.bottom = `${props.margin_bottom}px`;
       } else {
         styles.position = "absolute";
       }
       styles.display = "flex";
       return {
+        ...styles
+      };
+    });
+    const widgetStyle = computed(() => {
+      const styles = {
+        maxWidth: "372px",
+        // Calculate width as the percentage of the screen width minus the margin
+        width: `calc(100% - ${2 * props.margin_side}px)`,
+        height: `calc(100% - ${2 * props.margin_bottom}px)`,
+        maxHeight: "694px"
+      };
+      return {
+        ...positionStyle.value,
         ...styles
       };
     });
@@ -10643,15 +10729,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           default: withCtx(() => [
             unref(isChatOpen) && showWidget.value ? (openBlock(), createElementBlock("div", {
               key: 0,
-              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 h-full w-full max-h-[694px] max-w-[372px] sm:h-[694px] sm:w-[372px] drop-shadow-2xl overflow-hidden",
-              style: normalizeStyle(unref(positionStyle))
+              class: "!font-sans !text-base text-black flex flex-col m-2 sm:m-0 bg-white rounded-2xl my-auto sm:mr-2 drop-shadow-2xl overflow-hidden",
+              style: normalizeStyle(unref(widgetStyle))
             }, [
               createVNode(unref(TransitionExpand), {
                 duration: 500,
                 delay: 100
               }, {
                 default: withCtx(() => [
-                  unref(isLanguageSettingsOpen) ? (openBlock(), createBlock(_sfc_main$7, {
+                  unref(isLanguageSettingsOpen) ? (openBlock(), createBlock(_sfc_main$8, {
                     key: 0,
                     onClose: _cache[0] || (_cache[0] = ($event) => isLanguageSettingsOpen.value = false),
                     onSetLanguage: setLanguageAndInitiate
@@ -10664,7 +10750,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 delay: 100
               }, {
                 default: withCtx(() => [
-                  unref(isSettingOpen) ? (openBlock(), createBlock(_sfc_main$6, {
+                  unref(isSettingOpen) ? (openBlock(), createBlock(_sfc_main$7, {
                     key: 0,
                     onClose: _cache[1] || (_cache[1] = ($event) => isSettingOpen.value = false),
                     onOpenLanguage: _cache[2] || (_cache[2] = ($event) => openSettings("language"))
@@ -10672,29 +10758,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 ]),
                 _: 1
               }),
-              createVNode(_sfc_main$a, {
+              createVNode(_sfc_main$b, {
                 class: "!h-[64px] flex-none",
                 onClear: _cache[3] || (_cache[3] = ($event) => onClear()),
                 onClose: _cache[4] || (_cache[4] = ($event) => onClose()),
                 onOpenSetting: _cache[5] || (_cache[5] = ($event) => openSettings("main"))
               }),
               createBaseVNode("div", _hoisted_3, [
-                createVNode(unref(TransitionExpand), { duration: 500 }, {
-                  default: withCtx(() => [
-                    products.value ? (openBlock(), createBlock(_sfc_main$2, {
-                      key: 0,
-                      products: products.value,
-                      "scroll-to": scrollToItemId.value,
-                      onCloseProducts: _cache[6] || (_cache[6] = ($event) => closeProducts()),
-                      onNavigate: navigate
-                    }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_4))
-                  ]),
-                  _: 1
-                }),
                 createBaseVNode("div", {
                   ref_key: "refChat",
                   ref: refChat,
-                  class: "overflow-y-auto scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"
+                  class: "scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"
                 }, [
                   createVNode(unref(TransitionSlide), {
                     group: "",
@@ -10705,13 +10779,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         return openBlock(), createElementBlock(Fragment, {
                           key: message.timestamp
                         }, [
-                          createVNode(_sfc_main$9, {
+                          createVNode(_sfc_main$a, {
                             timestamp: message.timestamp,
                             message,
                             "is-first": index === 0,
                             onOpenProducts: setProducts
                           }, null, 8, ["timestamp", "message", "is-first"]),
-                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_5, [
+                          "sender" in message && message.recommended_products ? (openBlock(), createElementBlock("div", _hoisted_4, [
                             createVNode(_sfc_main$1, {
                               products: message.recommended_products,
                               onScrollTo: (itemId) => setProducts(message.recommended_products, itemId),
@@ -10723,10 +10797,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   }),
-                  withDirectives(createVNode(_sfc_main$3, { class: "scale-50 ml-9" }, null, 512), [
+                  withDirectives(createVNode(_sfc_main$4, { class: "scale-50 ml-9" }, null, 512), [
                     [vShow, isLoading.value || props._mockLoading]
                   ])
-                ], 512),
+                ], 512)
+              ]),
+              createBaseVNode("div", _hoisted_5, [
                 createBaseVNode("div", _hoisted_6, [
                   createBaseVNode("a", _hoisted_7, [
                     _hoisted_8,
@@ -10735,19 +10811,30 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       style: normalizeStyle({ color: unref(provided).mainColor })
                     }, null, 8, ["style"])
                   ])
+                ])
+              ]),
+              createVNode(_sfc_main$9, {
+                "is-loading": isLoading.value,
+                onSend
+              }, null, 8, ["is-loading"]),
+              createVNode(unref(TransitionExpand), { duration: 500 }, {
+                default: withCtx(() => [
+                  products.value ? (openBlock(), createBlock(_sfc_main$2, {
+                    key: 0,
+                    products: products.value,
+                    "scroll-to": scrollToItemId.value,
+                    onCloseProducts: _cache[6] || (_cache[6] = ($event) => closeProducts()),
+                    onNavigate: navigate
+                  }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_9))
                 ]),
-                createVNode(_sfc_main$8, {
-                  class: "flex-none",
-                  "is-loading": isLoading.value,
-                  onSend
-                }, null, 8, ["is-loading"])
-              ])
-            ], 4)) : (openBlock(), createElementBlock("div", _hoisted_9))
+                _: 1
+              })
+            ], 4)) : (openBlock(), createElementBlock("div", _hoisted_10))
           ]),
           _: 1
         }),
         renderSlot(_ctx.$slots, "widgetButton", { toggle: onToggle }, () => [
-          props.show_button_widget && showWidget.value ? (openBlock(), createBlock(_sfc_main$5, {
+          props.show_button_widget && showWidget.value ? (openBlock(), createBlock(_sfc_main$6, {
             key: 0,
             style: normalizeStyle(unref(positionStyle)),
             chat_button_position: props.chat_button_position,
@@ -12379,14 +12466,17 @@ to{
 .right-3{
   right: 12px;
 }
+.bottom-6{
+  bottom: 24px;
+}
+.right-0{
+  right: 0px;
+}
 .left-0{
   left: 0px;
 }
 .bottom-0{
   bottom: 0px;
-}
-.right-0{
-  right: 0px;
 }
 .z-40{
   z-index: 40;
@@ -12454,9 +12544,6 @@ to{
 .h-full{
   height: 100%;
 }
-.h-\\[900px\\]{
-  height: 900px;
-}
 .h-16{
   height: 64px;
 }
@@ -12482,9 +12569,6 @@ to{
 .\\!h-\\[64px\\]{
   height: 64px !important;
 }
-.h-\\[630px\\]{
-  height: 630px;
-}
 .h-4{
   height: 16px;
 }
@@ -12496,9 +12580,6 @@ to{
 }
 .max-h-\\[144px\\]{
   max-height: 144px;
-}
-.max-h-\\[694px\\]{
-  max-height: 694px;
 }
 .max-h-\\[630px\\]{
   max-height: 630px;
@@ -12541,9 +12622,6 @@ to{
 }
 .max-w-\\[316px\\]{
   max-width: 316px;
-}
-.max-w-\\[372px\\]{
-  max-width: 372px;
 }
 .max-w-\\[144px\\]{
   max-width: 144px;
@@ -12815,6 +12893,10 @@ to{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .text-white\\/40{
   color: rgb(255 255 255 / 0.4);
 }
@@ -13014,16 +13096,10 @@ to{
 .sm\\:mr-2{
     margin-right: 8px;
 }
-.sm\\:h-\\[694px\\]{
-    height: 694px;
-}
-.sm\\:w-\\[372px\\]{
-    width: 372px;
-}
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.12";
+const version = "1.1.17";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
