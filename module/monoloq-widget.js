@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x4565e6 = _0x2eab;
-function _0x541c() {
-  const _0x374082 = ["map", "3686120UHfBGK", "935148ocOtCu", "1110292WSnQkc", "split", "https://ap", "1405280TDWDcZ", "13921376bWVvZa", "includes", "p.monoloq.", "location", "4424961pTrNRQ", "hostname", "www.", "7683108gWLxTu", "appearance"];
-  _0x541c = function() {
-    return _0x374082;
-  };
-  return _0x541c();
-}
-(function(_0x5a08b3, _0x2910d8) {
-  const _0x555840 = _0x2eab, _0xb8a358 = _0x5a08b3();
+const _0x3fb3ae = _0x225d;
+(function(_0x14ff1, _0x7dc87e) {
+  const _0x463075 = _0x225d, _0x4714b8 = _0x14ff1();
   while (!![]) {
     try {
-      const _0x3a7bc2 = parseInt(_0x555840(319)) / (-4578 + 1606 + 2973) + parseInt(_0x555840(322)) / (-6 * -918 + 5098 + -10604) + parseInt(_0x555840(311)) / (-20 * 193 + 2417 + 6 * 241) + parseInt(_0x555840(318)) / (-952 * -2 + 8261 * -1 + 6361) + parseInt(_0x555840(317)) / (-7159 + -5719 + 12883) + -parseInt(_0x555840(314)) / (-4707 + -9483 + 14196) + -parseInt(_0x555840(323)) / (3469 + 8359 + -11821 * 1);
-      if (_0x3a7bc2 === _0x2910d8)
+      const _0x2fb888 = parseInt(_0x463075(145)) / (3 * 1601 + -2229 + -2573) + -parseInt(_0x463075(134)) / (3499 + -6881 + 3384) + parseInt(_0x463075(131)) / (-9625 + 4921 + 4707) * (parseInt(_0x463075(138)) / (1605 + 2 * 4625 + -10851)) + -parseInt(_0x463075(143)) / (-4130 * 2 + 820 + 7445 * 1) + parseInt(_0x463075(140)) / (-28 * -134 + -1 * 2361 + 277 * -5) * (parseInt(_0x463075(132)) / (8 * 691 + -3341 * -1 + -8862)) + -parseInt(_0x463075(136)) / (7987 + 1 * -6365 + -1614) + parseInt(_0x463075(142)) / (-7577 + 442 + -188 * -38) * (parseInt(_0x463075(144)) / (-1 * -2273 + -1 * 6223 + -18 * -220));
+      if (_0x2fb888 === _0x7dc87e)
         break;
       else
-        _0xb8a358["push"](_0xb8a358["shift"]());
-    } catch (_0x1b4056) {
-      _0xb8a358["push"](_0xb8a358["shift"]());
+        _0x4714b8["push"](_0x4714b8["shift"]());
+    } catch (_0x124772) {
+      _0x4714b8["push"](_0x4714b8["shift"]());
     }
   }
-})(_0x541c, -3547 * 409 + -3 * 25669 + 2517374);
-function _0x2eab(_0x1223ae, _0x329bbc) {
-  const _0x1d2538 = _0x541c();
-  return _0x2eab = function(_0x2d0288, _0x3fb254) {
-    _0x2d0288 = _0x2d0288 - (-1 * 6792 + 218 * 11 + 4702);
-    let _0x499b4f = _0x1d2538[_0x2d0288];
-    return _0x499b4f;
-  }, _0x2eab(_0x1223ae, _0x329bbc);
+})(_0x3f31, -432763 + -451152 + 4 * 294978);
+function _0x225d(_0x3e412f, _0x5e0ee6) {
+  const _0x4c1d4d = _0x3f31();
+  return _0x225d = function(_0x18811c, _0x214983) {
+    _0x18811c = _0x18811c - (-1757 * 1 + -404 * -2 + -5 * -216);
+    let _0x2a3bcd = _0x4c1d4d[_0x18811c];
+    return _0x2a3bcd;
+  }, _0x225d(_0x3e412f, _0x5e0ee6);
 }
-function devHost(_0x2d0288, _0x3fb254) {
-  const _0x7b65e0 = _0x2eab, _0x499b4f = window[_0x7b65e0(310)][_0x7b65e0(312)], _0x3b5ffd = String(_0x7b65e0(321) + _0x7b65e0(309) + "ai")[_0x7b65e0(320)](",")[_0x7b65e0(316)]((_0x147c62) => new URL(_0x147c62)[_0x7b65e0(312)]), _0x309151 = _0x3fb254 ? _0x7b65e0(313) + _0x499b4f : _0x499b4f;
-  if (!_0x2d0288)
-    return _0x309151;
-  if (!_0x3b5ffd[_0x7b65e0(308)](_0x499b4f))
-    return _0x309151;
-  return _0x2d0288;
+function devHost(_0x4c1d4d, _0x18811c) {
+  const _0x283f65 = _0x225d, _0x214983 = window[_0x283f65(133)][_0x283f65(141)], _0x2a3bcd = String(_0x283f65(139) + _0x283f65(147) + "ai")[_0x283f65(137)](",")[_0x283f65(149)]((_0x421e7a) => new URL(_0x421e7a)[_0x283f65(141)]), _0x116f0e = _0x18811c ? _0x283f65(148) + _0x214983 : _0x214983;
+  if (!_0x4c1d4d)
+    return _0x116f0e;
+  if (!_0x2a3bcd[_0x283f65(135)](_0x214983))
+    return _0x116f0e;
+  return _0x4c1d4d;
 }
-function prepareMessage(_0x6de2d) {
-  return "" + _0x6de2d;
+function prepareMessage(_0x43b382) {
+  return "" + _0x43b382;
 }
-const appearance = Symbol(_0x4565e6(315));
+function _0x3f31() {
+  const _0x135498 = ["appearance", "p.monoloq.", "www.", "map", "762603rOTYqP", "121478hiEnSr", "location", "1179448KURMsz", "includes", "3521184kABzbn", "split", "8KBuYqU", "https://ap", "198LtRRBn", "hostname", "80982KZISNa", "1604475fsynrv", "70EjLYgi", "502694BceUKw"];
+  _0x3f31 = function() {
+    return _0x135498;
+  };
+  return _0x3f31();
+}
+const appearance = Symbol(_0x3fb3ae(146));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10350,7 +10350,7 @@ const _hoisted_2 = {
   key: 1,
   class: "absolute w-full"
 };
-const _hoisted_3 = { class: "relative flex flex-col h-full max-h-[630px] flex-1 overflow-y-auto" };
+const _hoisted_3 = { class: "px-3 py-3 bg-transparent relative flex-1" };
 const _hoisted_4 = {
   key: 0,
   class: "relative flex flex-col pt-3"
@@ -10390,6 +10390,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     style_tags: null,
     margin_side: { default: 20 },
     margin_bottom: { default: 20 },
+    margin_bottom_mobile: { default: 5 },
+    margin_side_mobile: { default: 5 },
     chaty_integration: { type: Boolean, default: false },
     currency_symbol: { default: "$" },
     enable_on_mobile: { type: Boolean, default: false },
@@ -10417,21 +10419,21 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       };
     });
     provide(appearance, provided);
-    const positionStyle = computed(() => {
+    function getPositionStyle(marginBottom, marginSide) {
       const styles = {
-        bottom: `${props.margin_bottom}px`,
+        bottom: `${marginBottom}px`,
         zIndex: 2147483647
       };
       if (props.chat_button_position === "bottom_right") {
-        styles.right = `${props.margin_side}px`;
+        styles.right = `${marginSide}px`;
         styles.left = "auto";
       } else {
-        styles.left = `${props.margin_side}px`;
+        styles.left = `${marginSide}px`;
         styles.right = "auto";
       }
       if (props.fixed) {
         styles.position = "fixed";
-        styles.bottom = `${props.margin_bottom}px`;
+        styles.bottom = `${marginBottom}px`;
       } else {
         styles.position = "absolute";
       }
@@ -10439,7 +10441,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return {
         ...styles
       };
-    });
+    }
+    const positionStyle = computed(
+      () => window.matchMedia("only screen and (max-width: 480px)").matches ? getPositionStyle(props.margin_bottom_mobile, props.margin_side_mobile) : getPositionStyle(props.margin_bottom, props.margin_side)
+    );
     const widgetStyle = computed(() => {
       const styles = {
         maxWidth: "372px",
@@ -10534,7 +10539,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       isLoading.value = true;
       await new Promise((resolve2) => setTimeout(resolve2, 1e3));
       isLoading.value = false;
-      setProducts(maybeRecommendedProduct);
+      setProducts(maybeRecommendedProduct, maybeRecommendedProduct[0].item_id);
     }
     const comesFromDomain = computed(() => {
       if (!document.referrer)
@@ -10765,12 +10770,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 onClose: _cache[4] || (_cache[4] = ($event) => onClose()),
                 onOpenSetting: _cache[5] || (_cache[5] = ($event) => openSettings("main"))
               }),
-              createBaseVNode("div", _hoisted_3, [
-                createBaseVNode("div", {
-                  ref_key: "refChat",
-                  ref: refChat,
-                  class: "scroll-behavior-smooth px-3 py-3 bg-transparent relative flex-1"
-                }, [
+              createBaseVNode("div", {
+                ref_key: "refChat",
+                ref: refChat,
+                class: "relative flex flex-col h-full max-h-[630px] flex-1 overflow-y-auto scroll-behavior-smooth"
+              }, [
+                createBaseVNode("div", _hoisted_3, [
                   createVNode(unref(TransitionSlide), {
                     group: "",
                     offset: [0, 16]
@@ -10801,8 +10806,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   withDirectives(createVNode(_sfc_main$4, { class: "scale-50 ml-9" }, null, 512), [
                     [vShow, isLoading.value || props._mockLoading]
                   ])
-                ], 512)
-              ]),
+                ])
+              ], 512),
               createBaseVNode("div", _hoisted_5, [
                 createBaseVNode("div", _hoisted_6, [
                   createBaseVNode("a", _hoisted_7, [
@@ -13100,7 +13105,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.17";
+const version = "1.1.20";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
