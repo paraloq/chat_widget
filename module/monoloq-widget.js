@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x47b4ee = _0xe56b;
-(function(_0x1bb38d, _0xfdf03a) {
-  const _0xdf1998 = _0xe56b, _0x12ea46 = _0x1bb38d();
+const _0xca810b = _0xcc2a;
+function _0x5107() {
+  const _0x26a8f1 = ["1926sonqzz", "1542056aLfCBI", ",http://lo", "640mynQrH", "6vAWyaY", "https://de", "3436874PEJXXU", "calhost:33", "map", "v.d8g529d2", "location", "ifyapp.com", "988264BFnXfb", "9bezdcb", "owgcy.ampl", "507210IjrNSk", "6526360NnVcGF", "33/", "split", "hostname", "includes", "www.", "3546512eboquF", "appearance"];
+  _0x5107 = function() {
+    return _0x26a8f1;
+  };
+  return _0x5107();
+}
+(function(_0x5f95ed, _0x5ecf41) {
+  const _0x3ab716 = _0xcc2a, _0x337469 = _0x5f95ed();
   while (!![]) {
     try {
-      const _0x312b3b = -parseInt(_0xdf1998(417)) / (5437 + -2 * -3723 + 19 * -678) * (-parseInt(_0xdf1998(431)) / (-7526 + -6749 + -4759 * -3)) + -parseInt(_0xdf1998(424)) / (-1 * 4697 + 245 * -11 + 7395) * (-parseInt(_0xdf1998(410)) / (-1 * 7331 + 489 * -7 + -6 * -1793)) + -parseInt(_0xdf1998(409)) / (1185 + 4975 + -6155 * 1) + -parseInt(_0xdf1998(430)) / (16 * 311 + -1429 * -2 + -7828) * (-parseInt(_0xdf1998(408)) / (-685 * 2 + -5 * 1343 + 17 * 476)) + parseInt(_0xdf1998(412)) / (2 * -557 + -4 * -2010 + -6918) * (parseInt(_0xdf1998(411)) / (-1246 * 8 + 3950 + -6027 * -1)) + parseInt(_0xdf1998(413)) / (5951 * 1 + -3830 + -1 * 2111) + -parseInt(_0xdf1998(427)) / (3 * 2791 + 77 * 89 + -85 * 179);
-      if (_0x312b3b === _0xfdf03a)
+      const _0x7bcc60 = -parseInt(_0x3ab716(329)) / (-11 * 659 + 1 * -5913 + -13163 * -1) + parseInt(_0x3ab716(326)) / (7877 + 2 * -3 + -7869) + parseInt(_0x3ab716(318)) / (-3 * -2389 + -5213 + -1951) * (parseInt(_0x3ab716(315)) / (-4759 + -4103 + 8866)) + -parseInt(_0x3ab716(317)) / (-27 * 133 + -15 * 259 + -7481 * -1) * (parseInt(_0x3ab716(314)) / (-509 * -6 + -9933 * 1 + 6885)) + -parseInt(_0x3ab716(320)) / (-6719 + -5398 * 1 + -7 * -1732) + parseInt(_0x3ab716(336)) / (-81 * -77 + 1 * -8067 + -1838 * -1) * (-parseInt(_0x3ab716(327)) / (3275 + 9767 + -1 * 13033)) + parseInt(_0x3ab716(330)) / (3342 + -1 * -6614 + -9946);
+      if (_0x7bcc60 === _0x5ecf41)
         break;
       else
-        _0x12ea46["push"](_0x12ea46["shift"]());
-    } catch (_0x3f8aa8) {
-      _0x12ea46["push"](_0x12ea46["shift"]());
+        _0x337469["push"](_0x337469["shift"]());
+    } catch (_0x8b6878) {
+      _0x337469["push"](_0x337469["shift"]());
     }
   }
-})(_0x34b7, -741211 + -870095 * -1 + -433255 * -1);
-function _0xe56b(_0x1437c3, _0x400f57) {
-  const _0x1e26cc = _0x34b7();
-  return _0xe56b = function(_0xbaffc0, _0xf48ede) {
-    _0xbaffc0 = _0xbaffc0 - (-758 * 3 + -1 * -9355 + 94 * -71);
-    let _0x36bffb = _0x1e26cc[_0xbaffc0];
-    return _0x36bffb;
-  }, _0xe56b(_0x1437c3, _0x400f57);
+})(_0x5107, -12548 + 72380 * 4 + 158230);
+function _0xcc2a(_0x1d1562, _0x3eef1f) {
+  const _0x2b78a1 = _0x5107();
+  return _0xcc2a = function(_0x5e1241, _0x40fe13) {
+    _0x5e1241 = _0x5e1241 - (-289 * 10 + 1200 + -2003 * -1);
+    let _0x42e732 = _0x2b78a1[_0x5e1241];
+    return _0x42e732;
+  }, _0xcc2a(_0x1d1562, _0x3eef1f);
 }
-function _0x34b7() {
-  const _0x2ebcdc = ["split", "1561KCuQkM", "1504820kyXeYS", "4GkszLh", "9KocslL", "4376696OwnKuv", "5066150FXNfSr", "v.d8g529d2", "owgcy.ampl", "location", "377015ZmxXGS", "www.", "https://de", "map", "calhost:33", "hostname", "ifyapp.com", "334797HdxoLy", "includes", ",http://lo", "18236702GKFdEQ", "33/", "appearance", "16188nCcDJF", "4bkvFzI"];
-  _0x34b7 = function() {
-    return _0x2ebcdc;
-  };
-  return _0x34b7();
+function devHost(_0x5e1241, _0x40fe13) {
+  const _0x539cb1 = _0xcc2a, _0x42e732 = window[_0x539cb1(324)][_0x539cb1(333)], _0x462360 = String(_0x539cb1(319) + _0x539cb1(323) + _0x539cb1(328) + _0x539cb1(325) + _0x539cb1(316) + _0x539cb1(321) + _0x539cb1(331))[_0x539cb1(332)](",")[_0x539cb1(322)]((_0x4224d1) => new URL(_0x4224d1)[_0x539cb1(333)]), _0x25c10d = _0x40fe13 ? _0x539cb1(335) + _0x42e732 : _0x42e732;
+  if (!_0x5e1241)
+    return _0x25c10d;
+  if (!_0x462360[_0x539cb1(334)](_0x42e732))
+    return _0x25c10d;
+  return _0x5e1241;
 }
-function devHost(_0x1e26cc, _0xbaffc0) {
-  const _0x5014a6 = _0xe56b, _0xf48ede = window[_0x5014a6(416)][_0x5014a6(422)], _0x36bffb = String(_0x5014a6(419) + _0x5014a6(414) + _0x5014a6(415) + _0x5014a6(423) + _0x5014a6(426) + _0x5014a6(421) + _0x5014a6(428))[_0x5014a6(407)](",")[_0x5014a6(420)]((_0x4f3c51) => new URL(_0x4f3c51)[_0x5014a6(422)]), _0x180938 = _0xbaffc0 ? _0x5014a6(418) + _0xf48ede : _0xf48ede;
-  if (!_0x1e26cc)
-    return _0x180938;
-  if (!_0x36bffb[_0x5014a6(425)](_0xf48ede))
-    return _0x180938;
-  return _0x1e26cc;
+function prepareMessage(_0x5ec6df) {
+  return "" + _0x5ec6df;
 }
-function prepareMessage(_0x4d0323) {
-  return "" + _0x4d0323;
-}
-const appearance = Symbol(_0x47b4ee(429));
+const appearance = Symbol(_0xca810b(313));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10442,17 +10442,26 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         ...styles
       };
     }
+    const isMobile = computed(() => window.matchMedia("only screen and (max-width: 480px)").matches);
     const positionStyle = computed(
-      () => window.matchMedia("only screen and (max-width: 480px)").matches ? getPositionStyle(props.margin_bottom_mobile, props.margin_side_mobile) : getPositionStyle(props.margin_bottom, props.margin_side)
+      () => isMobile.value ? getPositionStyle(props.margin_bottom_mobile, props.margin_side_mobile) : getPositionStyle(props.margin_bottom, props.margin_side)
     );
     const widgetStyle = computed(() => {
-      const styles = {
+      const webStyles = {
         maxWidth: "372px",
         maxHeight: props.chaty_integration ? "600px" : "694px",
         // Calculate width as the percentage of the screen width minus the margin
-        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * props.margin_side}px)`,
-        height: props.chaty_integration ? "600px" : `calc(100% - ${2 * props.margin_bottom}px)`
+        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * props.margin_side + 16}px)`,
+        height: props.chaty_integration ? "600px" : `calc(100% - ${1 * props.margin_bottom + 20}px)`
       };
+      const mobileStyles = {
+        maxWidth: "372px",
+        maxHeight: "694px",
+        // Calculate width as the percentage of the screen width minus the margin
+        width: `calc(100% - ${2 * props.margin_side_mobile + 16}px)`,
+        height: `calc(100% - ${props.margin_bottom_mobile + 20}px)`
+      };
+      const styles = isMobile.value ? mobileStyles : webStyles;
       return {
         ...positionStyle.value,
         ...styles
@@ -10637,7 +10646,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     watchEffect(() => {
       if (props.enable_on_mobile)
         return;
-      if (window.matchMedia("only screen and (max-width: 480px)").matches)
+      if (isMobile.value)
         showWidget.value = false;
     });
     async function setLanguage(language) {
@@ -13106,7 +13115,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.20";
+const version = "1.1.21";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
