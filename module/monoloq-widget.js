@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x389b() {
-  const _0x34e77c = ["12810VZbWrZ", "389260VmJOGZ", "742872Vaidnv", "36CRYjdP", "split", "636360HTObiN", "location", "4782288htDFSo", "232413eNXxmD", "www.", "9qHLSXz", "hostname", "https://ap", "9703288IKGtgc", "map", "p.monoloq.", "appearance", "includes"];
-  _0x389b = function() {
-    return _0x34e77c;
-  };
-  return _0x389b();
-}
-const _0x53757b = _0x2ee3;
-(function(_0x15ec5a, _0x2d6626) {
-  const _0x35b4c0 = _0x2ee3, _0x3dafe1 = _0x15ec5a();
+const _0x37bc4f = _0x38b2;
+(function(_0x1bbbf3, _0x305781) {
+  const _0x270ce4 = _0x38b2, _0x4aa5d7 = _0x1bbbf3();
   while (!![]) {
     try {
-      const _0x142bf9 = -parseInt(_0x35b4c0(271)) / (-2440 + 23 * 7 + 2280) + parseInt(_0x35b4c0(266)) / (-409 * 23 + -7679 + 17088) + parseInt(_0x35b4c0(274)) / (4945 + 166 * -58 + -22 * -213) * (parseInt(_0x35b4c0(269)) / (596 * -3 + 6772 * 1 + -1660 * 3)) + parseInt(_0x35b4c0(267)) / (-3595 + 3 * 3103 + -5709) + -parseInt(_0x35b4c0(268)) / (-3862 * -1 + -9837 + 5981) + -parseInt(_0x35b4c0(273)) / (-7 * 1117 + 9198 + -1372) + parseInt(_0x35b4c0(261)) / (-1 * 9091 + 4922 * -1 + -14021 * -1) * (parseInt(_0x35b4c0(276)) / (524 + -1864 * 4 + -1 * -6941));
-      if (_0x142bf9 === _0x2d6626)
+      const _0x929702 = parseInt(_0x270ce4(472)) / (-9465 * -1 + -2 * 458 + 2137 * -4) * (-parseInt(_0x270ce4(478)) / (-943 * -4 + 560 * -9 + 1270)) + parseInt(_0x270ce4(485)) / (-1405 + -5407 + 6815) * (-parseInt(_0x270ce4(477)) / (1 * -7702 + -415 * -10 + 3556 * 1)) + parseInt(_0x270ce4(473)) / (-447 * 3 + -3557 + 4903) + -parseInt(_0x270ce4(480)) / (-1824 + 1916 + -86 * 1) + parseInt(_0x270ce4(471)) / (3567 * -1 + 5522 + -974 * 2) + -parseInt(_0x270ce4(474)) / (-7924 + -663 + 955 * 9) * (-parseInt(_0x270ce4(479)) / (2266 + 5 * -1061 + -2 * -1524)) + parseInt(_0x270ce4(476)) / (-5859 + -9383 + 15252) * (parseInt(_0x270ce4(469)) / (-4267 * -1 + -1989 + 1 * -2267));
+      if (_0x929702 === _0x305781)
         break;
       else
-        _0x3dafe1["push"](_0x3dafe1["shift"]());
-    } catch (_0x457d3a) {
-      _0x3dafe1["push"](_0x3dafe1["shift"]());
+        _0x4aa5d7["push"](_0x4aa5d7["shift"]());
+    } catch (_0x29b8e9) {
+      _0x4aa5d7["push"](_0x4aa5d7["shift"]());
     }
   }
-})(_0x389b, 1 * -142157 + -527500 + 305177 * 4);
-function devHost(_0x16e480, _0x487a3f) {
-  const _0x8f36f4 = _0x2ee3, _0x525a3f = window[_0x8f36f4(272)][_0x8f36f4(277)], _0x52c1e4 = String(_0x8f36f4(278) + _0x8f36f4(263) + "ai")[_0x8f36f4(270)](",")[_0x8f36f4(262)]((_0x54d035) => new URL(_0x54d035)[_0x8f36f4(277)]), _0x161825 = _0x487a3f ? _0x8f36f4(275) + _0x525a3f : _0x525a3f;
-  if (!_0x16e480)
-    return _0x161825;
-  if (!_0x52c1e4[_0x8f36f4(265)](_0x525a3f))
-    return _0x161825;
-  return _0x16e480;
+})(_0x6854, 9 * -22519 + 1 * 372605 + -4 * -26037);
+function devHost(_0x54aabd, _0x9dee05) {
+  const _0x4e16a8 = _0x38b2, _0x2ca367 = window[_0x4e16a8(487)][_0x4e16a8(484)], _0x46c20c = String(_0x4e16a8(482) + _0x4e16a8(488) + "ai")[_0x4e16a8(470)](",")[_0x4e16a8(483)]((_0x451c81) => new URL(_0x451c81)[_0x4e16a8(484)]), _0x3c4091 = _0x9dee05 ? _0x4e16a8(486) + _0x2ca367 : _0x2ca367;
+  if (!_0x54aabd)
+    return _0x3c4091;
+  if (!_0x46c20c[_0x4e16a8(475)](_0x2ca367))
+    return _0x3c4091;
+  return _0x54aabd;
 }
-function prepareMessage(_0x3b98a3) {
-  return "" + _0x3b98a3;
+function prepareMessage(_0x24f1f4) {
+  return "" + _0x24f1f4;
 }
-function _0x2ee3(_0x57361f, _0x103b57) {
-  const _0x327902 = _0x389b();
-  return _0x2ee3 = function(_0x16e480, _0x487a3f) {
-    _0x16e480 = _0x16e480 - (-1 * 9220 + 56 * 2 + 9369);
-    let _0x525a3f = _0x327902[_0x16e480];
-    return _0x525a3f;
-  }, _0x2ee3(_0x57361f, _0x103b57);
+function _0x6854() {
+  const _0x1f36e6 = ["split", "1499694DdMWzH", "103338WHXyqx", "1691310oRyHAn", "1249328aFhbIl", "includes", "10kRRZDu", "123108XlyNpM", "6yywVoQ", "9XIQMss", "2646042bJGdBd", "appearance", "https://ap", "map", "hostname", "12UyDGsn", "www.", "location", "p.monoloq.", "4834951VvvABS"];
+  _0x6854 = function() {
+    return _0x1f36e6;
+  };
+  return _0x6854();
 }
-const appearance = Symbol(_0x53757b(264));
+function _0x38b2(_0x3a3e6a, _0x2aef5c) {
+  const _0xa21728 = _0x6854();
+  return _0x38b2 = function(_0x54aabd, _0x9dee05) {
+    _0x54aabd = _0x54aabd - (-6773 + 2891 * -1 + 1 * 10133);
+    let _0x2ca367 = _0xa21728[_0x54aabd];
+    return _0x2ca367;
+  }, _0x38b2(_0x3a3e6a, _0x2aef5c);
+}
+const appearance = Symbol(_0x37bc4f(481));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9288,7 +9288,7 @@ const _hoisted_4$7 = { class: "avatar" };
 const _hoisted_5$7 = { class: "w-8 rounded" };
 const _hoisted_6$7 = ["src"];
 const _hoisted_7$6 = { class: "flex items-center" };
-const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_8$6 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 }, [
@@ -9297,8 +9297,8 @@ const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
     d: "m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95l-4.95 4.95Z"
   })
 ], -1);
-const _hoisted_9$4 = [
-  _hoisted_8$5
+const _hoisted_9$5 = [
+  _hoisted_8$6
 ];
 const _hoisted_10$4 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
@@ -9352,7 +9352,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-6 h-6", unref(provided).textClass])
-            }, _hoisted_9$4, 2)
+            }, _hoisted_9$5, 2)
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
@@ -9381,8 +9381,8 @@ const _hoisted_5$6 = {
 };
 const _hoisted_6$6 = { class: "text-xs opacity-50" };
 const _hoisted_7$5 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
-const _hoisted_8$4 = { key: 0 };
-const _hoisted_9$3 = ["href"];
+const _hoisted_8$5 = { key: 0 };
+const _hoisted_9$4 = ["href"];
 const _hoisted_10$3 = {
   key: 0,
   class: "mt-3 text-xs"
@@ -9472,11 +9472,11 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
               return openBlock(), createElementBlock(Fragment, {
                 key: part.text
               }, [
-                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$4, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
+                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$5, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
                   key: 1,
                   href: part.href,
                   style: normalizeStyle({ color: unref(provided).mainColor })
-                }, toDisplayString(part.text), 13, _hoisted_9$3))
+                }, toDisplayString(part.text), 13, _hoisted_9$4))
               ], 64);
             }), 128)),
             props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$3, [
@@ -9503,14 +9503,19 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$9 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
-const _hoisted_2$7 = ["placeholder"];
-const _hoisted_3$6 = ["disabled"];
-const _hoisted_4$5 = { class: "w-6 h-6" };
-const _hoisted_5$5 = ["fill"];
-const _hoisted_6$5 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
-const _hoisted_7$4 = [
-  _hoisted_6$5
+const _hoisted_1$9 = { class: "h-max bg-transparent w-full py-2 pr-4 relative" };
+const _hoisted_2$7 = {
+  key: 0,
+  class: "w-full flex justify-between items-center h-full absolute top-0 right-0 z-40 bg-opacity-10"
+};
+const _hoisted_3$6 = /* @__PURE__ */ createBaseVNode("span", { class: "ml-5 text-black/50" }, "Start chatting with AI", -1);
+const _hoisted_4$5 = ["placeholder"];
+const _hoisted_5$5 = ["disabled"];
+const _hoisted_6$5 = { class: "w-6 h-6" };
+const _hoisted_7$4 = ["fill"];
+const _hoisted_8$4 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
+const _hoisted_9$3 = [
+  _hoisted_8$4
 ];
 const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatInput",
@@ -9522,7 +9527,13 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     const props = __props;
     const messageInput = ref("");
     const provided = inject(appearance);
+    const hasConfirmedAi = useStorage("monoloqAiConfirmation", false);
     const { textarea } = useTextareaAutosize({ input: messageInput });
+    function confirmAi() {
+      var _a2;
+      hasConfirmedAi.value = true;
+      (_a2 = textarea.value) == null ? void 0 : _a2.focus();
+    }
     function maybeSend() {
       if (!messageInput.value || messageInput.value.trim() === "" || props.isLoading)
         return;
@@ -9534,19 +9545,31 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$9, [
+        !unref(hasConfirmedAi) ? (openBlock(), createElementBlock("div", _hoisted_2$7, [
+          _hoisted_3$6,
+          createBaseVNode("button", {
+            class: "btn btn-ghost btn-xs mr-4",
+            style: normalizeStyle({ background: unref(provided).mainColor }),
+            onClick: _cache[0] || (_cache[0] = ($event) => confirmAi())
+          }, [
+            createBaseVNode("span", {
+              class: normalizeClass(unref(provided).textClass)
+            }, "Start", 2)
+          ], 4)
+        ])) : createCommentVNode("", true),
         createBaseVNode("form", {
           class: "flex items-center",
-          onSubmit: _cache[2] || (_cache[2] = withModifiers(($event) => maybeSend(), ["prevent"]))
+          onSubmit: _cache[3] || (_cache[3] = withModifiers(($event) => maybeSend(), ["prevent"]))
         }, [
           withDirectives(createBaseVNode("textarea", {
             ref_key: "textarea",
             ref: textarea,
-            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => messageInput.value = $event),
+            "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => messageInput.value = $event),
             class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle !px-[16px] !py-[8px] min-h-[48px]",
             type: "text",
             placeholder: unref(provided).message_placeholder,
-            onKeydown: _cache[1] || (_cache[1] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
-          }, null, 40, _hoisted_2$7), [
+            onKeydown: _cache[2] || (_cache[2] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
+          }, null, 40, _hoisted_4$5), [
             [vModelText, messageInput.value]
           ]),
           createBaseVNode("button", {
@@ -9554,14 +9577,14 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
             type: "submit",
             disabled: __props.isLoading
           }, [
-            createBaseVNode("div", _hoisted_4$5, [
+            createBaseVNode("div", _hoisted_6$5, [
               (openBlock(), createElementBlock("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: unref(provided).mainColor,
                 viewBox: "0 0 32 32"
-              }, _hoisted_7$4, 8, _hoisted_5$5))
+              }, _hoisted_9$3, 8, _hoisted_7$4))
             ])
-          ], 8, _hoisted_3$6)
+          ], 8, _hoisted_5$5)
         ], 32)
       ]);
     };
@@ -10447,21 +10470,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       () => isMobile.value ? getPositionStyle(props.margin_bottom_mobile, props.margin_side_mobile) : getPositionStyle(props.margin_bottom, props.margin_side)
     );
     const widgetStyle = computed(() => {
-      const webStyles = {
+      const marginSide = isMobile.value ? props.margin_side_mobile : props.margin_side;
+      const marginBottom = isMobile.value ? props.margin_bottom_mobile : props.margin_bottom;
+      const styles = {
         maxWidth: "372px",
         maxHeight: props.chaty_integration ? "600px" : "694px",
         // Calculate width as the percentage of the screen width minus the margin
-        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * props.margin_side + 16}px)`,
-        height: props.chaty_integration ? "600px" : `calc(100% - ${1 * props.margin_bottom + 20}px)`
+        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * marginSide + 16}px)`,
+        height: props.chaty_integration ? "600px" : `calc(100% - ${1 * marginBottom + 20}px)`
       };
-      const mobileStyles = {
-        maxWidth: "372px",
-        maxHeight: "694px",
-        // Calculate width as the percentage of the screen width minus the margin
-        width: `calc(100% - ${2 * props.margin_side_mobile + 16}px)`,
-        height: `calc(100% - ${props.margin_bottom_mobile + 20}px)`
-      };
-      const styles = isMobile.value ? mobileStyles : webStyles;
       return {
         ...positionStyle.value,
         ...styles
@@ -12475,6 +12492,12 @@ to{
 .relative{
   position: relative;
 }
+.top-0{
+  top: 0px;
+}
+.right-0{
+  right: 0px;
+}
 .top-3{
   top: 12px;
 }
@@ -12483,9 +12506,6 @@ to{
 }
 .bottom-6{
   bottom: 24px;
-}
-.right-0{
-  right: 0px;
 }
 .left-0{
   left: 0px;
@@ -12526,6 +12546,9 @@ to{
 .ml-5{
   margin-left: 20px;
 }
+.mr-4{
+  margin-right: 16px;
+}
 .ml-3{
   margin-left: 12px;
 }
@@ -12534,9 +12557,6 @@ to{
 }
 .mb-3{
   margin-bottom: 12px;
-}
-.mr-4{
-  margin-right: 16px;
 }
 .ml-9{
   margin-left: 36px;
@@ -12776,6 +12796,9 @@ to{
 .\\!bg-black\\/60{
   background-color: rgb(0 0 0 / 0.6) !important;
 }
+.bg-opacity-10{
+  --tw-bg-opacity: 0.1;
+}
 .p-4{
   padding: 16px;
 }
@@ -12907,6 +12930,9 @@ to{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-black\\/50{
+  color: rgb(0 0 0 / 0.5);
 }
 .text-gray-300{
   --tw-text-opacity: 1;
@@ -13114,7 +13140,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.21";
+const version = "1.1.23";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
