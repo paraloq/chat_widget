@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x5c2ab2 = _0x580c;
-(function(_0x1a3166, _0x2c51d1) {
-  const _0x52eca5 = _0x580c, _0x138ac4 = _0x1a3166();
+const _0xda6761 = _0x39cd;
+(function(_0x6b8833, _0x5f2de4) {
+  const _0x3c2b13 = _0x39cd, _0x597db6 = _0x6b8833();
   while (!![]) {
     try {
-      const _0x280ef2 = -parseInt(_0x52eca5(215)) / (8119 + -13 * -229 + -7 * 1585) + -parseInt(_0x52eca5(213)) / (-7025 + -5304 + 12331) + -parseInt(_0x52eca5(217)) / (-1 * 7742 + -3608 + 1 * 11353) + -parseInt(_0x52eca5(226)) / (-4944 + -1013 * -1 + -5 * -787) * (parseInt(_0x52eca5(212)) / (-9269 + 9075 + 199)) + parseInt(_0x52eca5(222)) / (-298 * 19 + -8374 + 14042) * (-parseInt(_0x52eca5(224)) / (6151 + -8390 + 2246)) + parseInt(_0x52eca5(214)) / (364 + -8 * 506 + 13 * 284) + -parseInt(_0x52eca5(219)) / (-8055 + -1525 + 9589 * 1) * (-parseInt(_0x52eca5(223)) / (-3805 * -1 + 6237 + 66 * -152));
-      if (_0x280ef2 === _0x2c51d1)
+      const _0x45ce30 = -parseInt(_0x3c2b13(354)) / (9331 + 2321 + -11651) * (parseInt(_0x3c2b13(362)) / (-7805 + -2 * 3617 + 169 * 89)) + parseInt(_0x3c2b13(351)) / (1 * -6819 + 3 * 1783 + -491 * -3) + -parseInt(_0x3c2b13(361)) / (-8571 + 1085 * 5 + -630 * -5) + -parseInt(_0x3c2b13(352)) / (57 * -133 + 205 * -43 + 16401) * (-parseInt(_0x3c2b13(356)) / (4791 * 1 + 7155 + 597 * -20)) + parseInt(_0x3c2b13(365)) / (-25 + -1 * 9748 + 9780) * (-parseInt(_0x3c2b13(367)) / (-7 * 410 + 2 * 3391 + -3904)) + -parseInt(_0x3c2b13(357)) / (-1 * 1349 + 138 * 41 + -4300) + parseInt(_0x3c2b13(350)) / (-9927 + 34 * -159 + 15343);
+      if (_0x45ce30 === _0x5f2de4)
         break;
       else
-        _0x138ac4["push"](_0x138ac4["shift"]());
-    } catch (_0x53a16a) {
-      _0x138ac4["push"](_0x138ac4["shift"]());
+        _0x597db6["push"](_0x597db6["shift"]());
+    } catch (_0x2603fa) {
+      _0x597db6["push"](_0x597db6["shift"]());
     }
   }
-})(_0x5ce6, -2651 * -401 + -688317 + 9 * 39077);
-function devHost(_0x1387db, _0x37fbbe) {
-  const _0x1b0ffd = _0x580c, _0x4deb7e = window[_0x1b0ffd(221)][_0x1b0ffd(228)], _0x385383 = String(_0x1b0ffd(227) + _0x1b0ffd(225) + "ai")[_0x1b0ffd(218)](",")[_0x1b0ffd(220)]((_0x5f4991) => new URL(_0x5f4991)[_0x1b0ffd(228)]), _0x47330c = _0x37fbbe ? _0x1b0ffd(211) + _0x4deb7e : _0x4deb7e;
-  if (!_0x1387db)
-    return _0x47330c;
-  if (!_0x385383[_0x1b0ffd(216)](_0x4deb7e))
-    return _0x47330c;
-  return _0x1387db;
+})(_0x1815, 5606 + -285269 + 847950);
+function devHost(_0x29ca2c, _0x3fb7ff) {
+  const _0x5cd7b4 = _0x39cd, _0x2aaf8c = window[_0x5cd7b4(364)][_0x5cd7b4(360)], _0x13b726 = String(_0x5cd7b4(366) + _0x5cd7b4(353) + "ai")[_0x5cd7b4(363)](",")[_0x5cd7b4(359)]((_0x16b368) => new URL(_0x16b368)[_0x5cd7b4(360)]), _0x28d317 = _0x3fb7ff ? _0x5cd7b4(358) + _0x2aaf8c : _0x2aaf8c;
+  if (!_0x29ca2c)
+    return _0x28d317;
+  if (!_0x13b726[_0x5cd7b4(355)](_0x2aaf8c))
+    return _0x28d317;
+  return _0x29ca2c;
 }
-function _0x580c(_0x57f9d8, _0x49e490) {
-  const _0x3fe372 = _0x5ce6();
-  return _0x580c = function(_0x1387db, _0x37fbbe) {
-    _0x1387db = _0x1387db - (95 * -3 + 1 * 9186 + -8691);
-    let _0x4deb7e = _0x3fe372[_0x1387db];
-    return _0x4deb7e;
-  }, _0x580c(_0x57f9d8, _0x49e490);
+function prepareMessage(_0x467311) {
+  return "" + _0x467311;
 }
-function prepareMessage(_0x35b46b) {
-  return "" + _0x35b46b;
-}
-const appearance = Symbol(_0x5c2ab2(210));
-function _0x5ce6() {
-  const _0x48a781 = ["32zyZdHo", "https://ap", "hostname", "appearance", "www.", "408015cglOZU", "438866LebMJd", "7436552RLXKom", "876636dTqowI", "includes", "2962332gkjIJb", "split", "9FOiVxw", "map", "location", "2796WmSPRU", "38011810mNnJMt", "19047hAdKvH", "p.monoloq."];
-  _0x5ce6 = function() {
-    return _0x48a781;
+function _0x1815() {
+  const _0x5a6145 = ["location", "3573983YSEZcF", "https://ap", "8lkFGxj", "appearance", "7534300LZvjOi", "2146113dmKIsu", "65XXzPFQ", "p.monoloq.", "539XATpBJ", "includes", "190224vfBqbp", "178956KAUipw", "www.", "map", "hostname", "1013816wswKAR", "1962wpMTde", "split"];
+  _0x1815 = function() {
+    return _0x5a6145;
   };
-  return _0x5ce6();
+  return _0x1815();
 }
+function _0x39cd(_0x14cf63, _0x57afa7) {
+  const _0x3d6113 = _0x1815();
+  return _0x39cd = function(_0x5ddd11, _0x29ca2c) {
+    _0x5ddd11 = _0x5ddd11 - (3969 + -4 * -1223 + -8512);
+    let _0x3fb7ff = _0x3d6113[_0x5ddd11];
+    return _0x3fb7ff;
+  }, _0x39cd(_0x14cf63, _0x57afa7);
+}
+const appearance = Symbol(_0xda6761(349));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9506,7 +9506,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
 const _hoisted_1$9 = { class: "h-max bg-transparent w-full py-2 pr-4 relative" };
 const _hoisted_2$7 = {
   key: 0,
-  class: "w-full flex justify-between items-center h-full absolute top-0 right-0 z-40"
+  class: "w-full flex justify-between items-center h-full absolute top-0 right-0 z-40 bg-base-100"
 };
 const _hoisted_3$6 = /* @__PURE__ */ createBaseVNode("span", { class: "ml-5 text-black/50" }, "Start chatting with AI", -1);
 const _hoisted_4$5 = ["placeholder"];
@@ -13137,7 +13137,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.24";
+const version = "1.1.25";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
