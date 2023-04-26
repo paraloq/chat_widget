@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-const _0xca810b = _0xcc2a;
-function _0x5107() {
-  const _0x26a8f1 = ["1926sonqzz", "1542056aLfCBI", ",http://lo", "640mynQrH", "6vAWyaY", "https://de", "3436874PEJXXU", "calhost:33", "map", "v.d8g529d2", "location", "ifyapp.com", "988264BFnXfb", "9bezdcb", "owgcy.ampl", "507210IjrNSk", "6526360NnVcGF", "33/", "split", "hostname", "includes", "www.", "3546512eboquF", "appearance"];
-  _0x5107 = function() {
-    return _0x26a8f1;
-  };
-  return _0x5107();
+function _0x41e0(_0x1b3400, _0x340656) {
+  const _0x1eed7c = _0x4f45();
+  return _0x41e0 = function(_0x209c00, _0xcf23ad) {
+    _0x209c00 = _0x209c00 - (79 * -121 + 1 * -5747 + 56 * 280);
+    let _0xa0979 = _0x1eed7c[_0x209c00];
+    return _0xa0979;
+  }, _0x41e0(_0x1b3400, _0x340656);
 }
-(function(_0x5f95ed, _0x5ecf41) {
-  const _0x3ab716 = _0xcc2a, _0x337469 = _0x5f95ed();
+const _0x42c651 = _0x41e0;
+(function(_0x19c231, _0x1407f1) {
+  const _0x31f4f7 = _0x41e0, _0x1ddd3e = _0x19c231();
   while (!![]) {
     try {
-      const _0x7bcc60 = -parseInt(_0x3ab716(329)) / (-11 * 659 + 1 * -5913 + -13163 * -1) + parseInt(_0x3ab716(326)) / (7877 + 2 * -3 + -7869) + parseInt(_0x3ab716(318)) / (-3 * -2389 + -5213 + -1951) * (parseInt(_0x3ab716(315)) / (-4759 + -4103 + 8866)) + -parseInt(_0x3ab716(317)) / (-27 * 133 + -15 * 259 + -7481 * -1) * (parseInt(_0x3ab716(314)) / (-509 * -6 + -9933 * 1 + 6885)) + -parseInt(_0x3ab716(320)) / (-6719 + -5398 * 1 + -7 * -1732) + parseInt(_0x3ab716(336)) / (-81 * -77 + 1 * -8067 + -1838 * -1) * (-parseInt(_0x3ab716(327)) / (3275 + 9767 + -1 * 13033)) + parseInt(_0x3ab716(330)) / (3342 + -1 * -6614 + -9946);
-      if (_0x7bcc60 === _0x5ecf41)
+      const _0x46943f = -parseInt(_0x31f4f7(386)) / (-2201 + 1306 * -5 + 4366 * 2) * (-parseInt(_0x31f4f7(377)) / (1080 + 1229 + -2307)) + -parseInt(_0x31f4f7(390)) / (-928 * -1 + 4685 + -51 * 110) + parseInt(_0x31f4f7(375)) / (-42 * -167 + -1407 + -5603) + parseInt(_0x31f4f7(387)) / (-64 * -44 + -8012 + 5201) + -parseInt(_0x31f4f7(396)) / (-2173 * 1 + -7479 + 9658) * (parseInt(_0x31f4f7(388)) / (3899 + 3 * -123 + -13 * 271)) + -parseInt(_0x31f4f7(381)) / (32 * -199 + 1 * 4057 + 2319) * (parseInt(_0x31f4f7(384)) / (-3185 + 7219 * -1 + 10413)) + -parseInt(_0x31f4f7(394)) / (-6855 + -5 * -1261 + 560 * 1) * (-parseInt(_0x31f4f7(385)) / (6329 + -1443 + 13 * -375));
+      if (_0x46943f === _0x1407f1)
         break;
       else
-        _0x337469["push"](_0x337469["shift"]());
-    } catch (_0x8b6878) {
-      _0x337469["push"](_0x337469["shift"]());
+        _0x1ddd3e["push"](_0x1ddd3e["shift"]());
+    } catch (_0x24cbc9) {
+      _0x1ddd3e["push"](_0x1ddd3e["shift"]());
     }
   }
-})(_0x5107, -12548 + 72380 * 4 + 158230);
-function _0xcc2a(_0x1d1562, _0x3eef1f) {
-  const _0x2b78a1 = _0x5107();
-  return _0xcc2a = function(_0x5e1241, _0x40fe13) {
-    _0x5e1241 = _0x5e1241 - (-289 * 10 + 1200 + -2003 * -1);
-    let _0x42e732 = _0x2b78a1[_0x5e1241];
-    return _0x42e732;
-  }, _0xcc2a(_0x1d1562, _0x3eef1f);
+})(_0x4f45, 1519568 + 1541556 * 1 + -2277901);
+function devHost(_0x1eed7c, _0x209c00) {
+  const _0x54f12f = _0x41e0, _0xcf23ad = window[_0x54f12f(393)][_0x54f12f(380)], _0xa0979 = String(_0x54f12f(383) + _0x54f12f(398) + _0x54f12f(397) + _0x54f12f(392) + _0x54f12f(376) + _0x54f12f(382) + _0x54f12f(379))[_0x54f12f(374)](",")[_0x54f12f(378)]((_0x5828af) => new URL(_0x5828af)[_0x54f12f(380)]), _0x167641 = _0x209c00 ? _0x54f12f(395) + _0xcf23ad : _0xcf23ad;
+  if (!_0x1eed7c)
+    return _0x167641;
+  if (!_0xa0979[_0x54f12f(389)](_0xcf23ad))
+    return _0x167641;
+  return _0x1eed7c;
 }
-function devHost(_0x5e1241, _0x40fe13) {
-  const _0x539cb1 = _0xcc2a, _0x42e732 = window[_0x539cb1(324)][_0x539cb1(333)], _0x462360 = String(_0x539cb1(319) + _0x539cb1(323) + _0x539cb1(328) + _0x539cb1(325) + _0x539cb1(316) + _0x539cb1(321) + _0x539cb1(331))[_0x539cb1(332)](",")[_0x539cb1(322)]((_0x4224d1) => new URL(_0x4224d1)[_0x539cb1(333)]), _0x25c10d = _0x40fe13 ? _0x539cb1(335) + _0x42e732 : _0x42e732;
-  if (!_0x5e1241)
-    return _0x25c10d;
-  if (!_0x462360[_0x539cb1(334)](_0x42e732))
-    return _0x25c10d;
-  return _0x5e1241;
+function _0x4f45() {
+  const _0x32cc88 = ["map", "33/", "hostname", "8040LfBgjd", "calhost:33", "https://de", "1143fujmOn", "66UfWhvY", "79wbPmve", "3916585hGLFHG", "819KZLfsI", "includes", "3905976dTINTq", "appearance", "ifyapp.com", "location", "506720gVoChN", "www.", "25446UTuaID", "owgcy.ampl", "v.d8g529d2", "split", "5711328vnqItr", ",http://lo", "4908BmVqeO"];
+  _0x4f45 = function() {
+    return _0x32cc88;
+  };
+  return _0x4f45();
 }
-function prepareMessage(_0x5ec6df) {
-  return "" + _0x5ec6df;
+function prepareMessage(_0x171c25) {
+  return "" + _0x171c25;
 }
-const appearance = Symbol(_0xca810b(313));
+const appearance = Symbol(_0x42c651(391));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -10447,21 +10447,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       () => isMobile.value ? getPositionStyle(props.margin_bottom_mobile, props.margin_side_mobile) : getPositionStyle(props.margin_bottom, props.margin_side)
     );
     const widgetStyle = computed(() => {
-      const webStyles = {
+      const marginSide = isMobile.value ? props.margin_side_mobile : props.margin_side;
+      const marginBottom = isMobile.value ? props.margin_bottom_mobile : props.margin_bottom;
+      const styles = {
         maxWidth: "372px",
         maxHeight: props.chaty_integration ? "600px" : "694px",
         // Calculate width as the percentage of the screen width minus the margin
-        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * props.margin_side + 16}px)`,
-        height: props.chaty_integration ? "600px" : `calc(100% - ${1 * props.margin_bottom + 20}px)`
+        width: props.chaty_integration ? "372px" : `calc(100% - ${2 * marginSide + 16}px)`,
+        height: props.chaty_integration ? "600px" : `calc(100% - ${1 * marginBottom + 20}px)`
       };
-      const mobileStyles = {
-        maxWidth: "372px",
-        maxHeight: "694px",
-        // Calculate width as the percentage of the screen width minus the margin
-        width: `calc(100% - ${2 * props.margin_side_mobile + 16}px)`,
-        height: `calc(100% - ${props.margin_bottom_mobile + 20}px)`
-      };
-      const styles = isMobile.value ? mobileStyles : webStyles;
       return {
         ...positionStyle.value,
         ...styles
@@ -13115,7 +13109,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.21";
+const version = "1.1.22";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
