@@ -7347,48 +7347,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x41e0(_0x1b3400, _0x340656) {
-  const _0x1eed7c = _0x4f45();
-  return _0x41e0 = function(_0x209c00, _0xcf23ad) {
-    _0x209c00 = _0x209c00 - (79 * -121 + 1 * -5747 + 56 * 280);
-    let _0xa0979 = _0x1eed7c[_0x209c00];
-    return _0xa0979;
-  }, _0x41e0(_0x1b3400, _0x340656);
+function _0x26cb(_0x45ebae, _0x2dbc60) {
+  const _0x3773b5 = _0x4a6c();
+  return _0x26cb = function(_0x314cca, _0x1b5c0e) {
+    _0x314cca = _0x314cca - (-2 * 1528 + -413 * 5 + 5360);
+    let _0x554df6 = _0x3773b5[_0x314cca];
+    return _0x554df6;
+  }, _0x26cb(_0x45ebae, _0x2dbc60);
 }
-const _0x42c651 = _0x41e0;
-(function(_0x19c231, _0x1407f1) {
-  const _0x31f4f7 = _0x41e0, _0x1ddd3e = _0x19c231();
+function _0x4a6c() {
+  const _0x1e8b1a = ["1071Mdtife", "11766390vNohzB", "owgcy.ampl", "153318JUHmGc", "v.d8g529d2", "https://de", "1042950gyULZB", "split", "1967354jlPBfw", "33/", "4WROGWO", "includes", "ifyapp.com", "hostname", "www.", "appearance", "658WMBGJH", "map", "22926YjrnpD", "3403825lWGkHF", ",http://lo", "39904dzmMvP", "location", "calhost:33"];
+  _0x4a6c = function() {
+    return _0x1e8b1a;
+  };
+  return _0x4a6c();
+}
+const _0x5b339c = _0x26cb;
+(function(_0x2b5171, _0x45d277) {
+  const _0x3a6fca = _0x26cb, _0x898cb7 = _0x2b5171();
   while (!![]) {
     try {
-      const _0x46943f = -parseInt(_0x31f4f7(386)) / (-2201 + 1306 * -5 + 4366 * 2) * (-parseInt(_0x31f4f7(377)) / (1080 + 1229 + -2307)) + -parseInt(_0x31f4f7(390)) / (-928 * -1 + 4685 + -51 * 110) + parseInt(_0x31f4f7(375)) / (-42 * -167 + -1407 + -5603) + parseInt(_0x31f4f7(387)) / (-64 * -44 + -8012 + 5201) + -parseInt(_0x31f4f7(396)) / (-2173 * 1 + -7479 + 9658) * (parseInt(_0x31f4f7(388)) / (3899 + 3 * -123 + -13 * 271)) + -parseInt(_0x31f4f7(381)) / (32 * -199 + 1 * 4057 + 2319) * (parseInt(_0x31f4f7(384)) / (-3185 + 7219 * -1 + 10413)) + -parseInt(_0x31f4f7(394)) / (-6855 + -5 * -1261 + 560 * 1) * (-parseInt(_0x31f4f7(385)) / (6329 + -1443 + 13 * -375));
-      if (_0x46943f === _0x1407f1)
+      const _0x3b2162 = parseInt(_0x3a6fca(260)) / (4626 + -347 * -6 + 6707 * -1) + -parseInt(_0x3a6fca(262)) / (-1 * -7460 + -8104 + -17 * -38) + -parseInt(_0x3a6fca(257)) / (422 * -16 + 134 * -62 + -3 * -5021) * (-parseInt(_0x3a6fca(240)) / (-4692 + 5530 + -834)) + parseInt(_0x3a6fca(249)) / (6863 + 1370 * 1 + 11 * -748) + -parseInt(_0x3a6fca(248)) / (-3625 + 2 * 1115 + -1 * -1401) * (-parseInt(_0x3a6fca(246)) / (-9817 + -1 * 7957 + 17781)) + parseInt(_0x3a6fca(251)) / (-4436 + 8764 + -864 * 5) * (parseInt(_0x3a6fca(254)) / (4767 + 1 * -3091 + -1667)) + -parseInt(_0x3a6fca(255)) / (21 * -295 + 2558 * 1 + 3647 * 1);
+      if (_0x3b2162 === _0x45d277)
         break;
       else
-        _0x1ddd3e["push"](_0x1ddd3e["shift"]());
-    } catch (_0x24cbc9) {
-      _0x1ddd3e["push"](_0x1ddd3e["shift"]());
+        _0x898cb7["push"](_0x898cb7["shift"]());
+    } catch (_0x421f50) {
+      _0x898cb7["push"](_0x898cb7["shift"]());
     }
   }
-})(_0x4f45, 1519568 + 1541556 * 1 + -2277901);
-function devHost(_0x1eed7c, _0x209c00) {
-  const _0x54f12f = _0x41e0, _0xcf23ad = window[_0x54f12f(393)][_0x54f12f(380)], _0xa0979 = String(_0x54f12f(383) + _0x54f12f(398) + _0x54f12f(397) + _0x54f12f(392) + _0x54f12f(376) + _0x54f12f(382) + _0x54f12f(379))[_0x54f12f(374)](",")[_0x54f12f(378)]((_0x5828af) => new URL(_0x5828af)[_0x54f12f(380)]), _0x167641 = _0x209c00 ? _0x54f12f(395) + _0xcf23ad : _0xcf23ad;
-  if (!_0x1eed7c)
-    return _0x167641;
-  if (!_0xa0979[_0x54f12f(389)](_0xcf23ad))
-    return _0x167641;
-  return _0x1eed7c;
+})(_0x4a6c, 1050642 + -796337 * -1 + 639864 * -2);
+function devHost(_0x314cca, _0x1b5c0e) {
+  const _0x327c4c = _0x26cb, _0x554df6 = window[_0x327c4c(252)][_0x327c4c(243)], _0x52a1c6 = String(_0x327c4c(259) + _0x327c4c(258) + _0x327c4c(256) + _0x327c4c(242) + _0x327c4c(250) + _0x327c4c(253) + _0x327c4c(239))[_0x327c4c(261)](",")[_0x327c4c(247)]((_0x3eba4f) => new URL(_0x3eba4f)[_0x327c4c(243)]), _0x2ac9da = _0x1b5c0e ? _0x327c4c(244) + _0x554df6 : _0x554df6;
+  if (!_0x314cca)
+    return _0x2ac9da;
+  if (!_0x52a1c6[_0x327c4c(241)](_0x554df6))
+    return _0x2ac9da;
+  return _0x314cca;
 }
-function _0x4f45() {
-  const _0x32cc88 = ["map", "33/", "hostname", "8040LfBgjd", "calhost:33", "https://de", "1143fujmOn", "66UfWhvY", "79wbPmve", "3916585hGLFHG", "819KZLfsI", "includes", "3905976dTINTq", "appearance", "ifyapp.com", "location", "506720gVoChN", "www.", "25446UTuaID", "owgcy.ampl", "v.d8g529d2", "split", "5711328vnqItr", ",http://lo", "4908BmVqeO"];
-  _0x4f45 = function() {
-    return _0x32cc88;
-  };
-  return _0x4f45();
+function prepareMessage(_0x1e4cf2) {
+  return "" + _0x1e4cf2;
 }
-function prepareMessage(_0x171c25) {
-  return "" + _0x171c25;
-}
-const appearance = Symbol(_0x42c651(391));
+const appearance = Symbol(_0x5b339c(245));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9288,7 +9288,7 @@ const _hoisted_4$7 = { class: "avatar" };
 const _hoisted_5$7 = { class: "w-8 rounded" };
 const _hoisted_6$7 = ["src"];
 const _hoisted_7$6 = { class: "flex items-center" };
-const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_8$6 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 }, [
@@ -9297,8 +9297,8 @@ const _hoisted_8$5 = /* @__PURE__ */ createBaseVNode("svg", {
     d: "m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95l-4.95 4.95Z"
   })
 ], -1);
-const _hoisted_9$4 = [
-  _hoisted_8$5
+const _hoisted_9$5 = [
+  _hoisted_8$6
 ];
 const _hoisted_10$4 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
@@ -9352,7 +9352,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
           }, [
             createBaseVNode("div", {
               class: normalizeClass(["w-6 h-6", unref(provided).textClass])
-            }, _hoisted_9$4, 2)
+            }, _hoisted_9$5, 2)
           ]),
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
@@ -9381,8 +9381,8 @@ const _hoisted_5$6 = {
 };
 const _hoisted_6$6 = { class: "text-xs opacity-50" };
 const _hoisted_7$5 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
-const _hoisted_8$4 = { key: 0 };
-const _hoisted_9$3 = ["href"];
+const _hoisted_8$5 = { key: 0 };
+const _hoisted_9$4 = ["href"];
 const _hoisted_10$3 = {
   key: 0,
   class: "mt-3 text-xs"
@@ -9472,11 +9472,11 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
               return openBlock(), createElementBlock(Fragment, {
                 key: part.text
               }, [
-                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$4, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
+                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$5, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
                   key: 1,
                   href: part.href,
                   style: normalizeStyle({ color: unref(provided).mainColor })
-                }, toDisplayString(part.text), 13, _hoisted_9$3))
+                }, toDisplayString(part.text), 13, _hoisted_9$4))
               ], 64);
             }), 128)),
             props.message.source_links && props.message.source_links.length > 0 ? (openBlock(), createElementBlock("p", _hoisted_10$3, [
@@ -9503,14 +9503,19 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$9 = { class: "h-full bg-transparent w-full h-max py-2 pr-4" };
-const _hoisted_2$7 = ["placeholder"];
-const _hoisted_3$6 = ["disabled"];
-const _hoisted_4$5 = { class: "w-6 h-6" };
-const _hoisted_5$5 = ["fill"];
-const _hoisted_6$5 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
-const _hoisted_7$4 = [
-  _hoisted_6$5
+const _hoisted_1$9 = { class: "h-max bg-transparent w-full py-2 pr-4 relative" };
+const _hoisted_2$7 = {
+  key: 0,
+  class: "w-full flex justify-between items-center h-full absolute top-0 right-0 z-40 bg-opacity-10"
+};
+const _hoisted_3$6 = /* @__PURE__ */ createBaseVNode("span", { class: "ml-5 text-black/50" }, "Start chatting with AI", -1);
+const _hoisted_4$5 = ["placeholder"];
+const _hoisted_5$5 = ["disabled"];
+const _hoisted_6$5 = { class: "w-6 h-6" };
+const _hoisted_7$4 = ["fill"];
+const _hoisted_8$4 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
+const _hoisted_9$3 = [
+  _hoisted_8$4
 ];
 const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "ChatInput",
@@ -9522,7 +9527,13 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     const props = __props;
     const messageInput = ref("");
     const provided = inject(appearance);
+    const hasConfirmedAi = useStorage("monoloqAiConfirmation", false);
     const { textarea } = useTextareaAutosize({ input: messageInput });
+    function confirmAi() {
+      var _a2;
+      hasConfirmedAi.value = true;
+      (_a2 = textarea.value) == null ? void 0 : _a2.focus();
+    }
     function maybeSend() {
       if (!messageInput.value || messageInput.value.trim() === "" || props.isLoading)
         return;
@@ -9534,19 +9545,31 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$9, [
+        !unref(hasConfirmedAi) ? (openBlock(), createElementBlock("div", _hoisted_2$7, [
+          _hoisted_3$6,
+          createBaseVNode("button", {
+            class: "btn btn-ghost btn-xs mr-4",
+            style: normalizeStyle({ background: unref(provided).mainColor }),
+            onClick: _cache[0] || (_cache[0] = ($event) => confirmAi())
+          }, [
+            createBaseVNode("span", {
+              class: normalizeClass(unref(provided).textClass)
+            }, "Start", 2)
+          ], 4)
+        ])) : createCommentVNode("", true),
         createBaseVNode("form", {
           class: "flex items-center",
-          onSubmit: _cache[2] || (_cache[2] = withModifiers(($event) => maybeSend(), ["prevent"]))
+          onSubmit: _cache[3] || (_cache[3] = withModifiers(($event) => maybeSend(), ["prevent"]))
         }, [
           withDirectives(createBaseVNode("textarea", {
             ref_key: "textarea",
             ref: textarea,
-            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => messageInput.value = $event),
+            "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => messageInput.value = $event),
             class: "textarea w-full resize-none focus:outline-none focus:shadow-outline line-3 border-none bg-transparent text-[16px] !leading-[24px] max-h-[144px] align-middle !px-[16px] !py-[8px] min-h-[48px]",
             type: "text",
             placeholder: unref(provided).message_placeholder,
-            onKeydown: _cache[1] || (_cache[1] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
-          }, null, 40, _hoisted_2$7), [
+            onKeydown: _cache[2] || (_cache[2] = withKeys(withModifiers(($event) => maybeSend(), ["prevent"]), ["enter"]))
+          }, null, 40, _hoisted_4$5), [
             [vModelText, messageInput.value]
           ]),
           createBaseVNode("button", {
@@ -9554,14 +9577,14 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
             type: "submit",
             disabled: __props.isLoading
           }, [
-            createBaseVNode("div", _hoisted_4$5, [
+            createBaseVNode("div", _hoisted_6$5, [
               (openBlock(), createElementBlock("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: unref(provided).mainColor,
                 viewBox: "0 0 32 32"
-              }, _hoisted_7$4, 8, _hoisted_5$5))
+              }, _hoisted_9$3, 8, _hoisted_7$4))
             ])
-          ], 8, _hoisted_3$6)
+          ], 8, _hoisted_5$5)
         ], 32)
       ]);
     };
@@ -12470,6 +12493,12 @@ to{
 .relative{
   position: relative;
 }
+.top-0{
+  top: 0px;
+}
+.right-0{
+  right: 0px;
+}
 .top-3{
   top: 12px;
 }
@@ -12478,9 +12507,6 @@ to{
 }
 .bottom-6{
   bottom: 24px;
-}
-.right-0{
-  right: 0px;
 }
 .left-0{
   left: 0px;
@@ -12521,6 +12547,9 @@ to{
 .ml-5{
   margin-left: 20px;
 }
+.mr-4{
+  margin-right: 16px;
+}
 .ml-3{
   margin-left: 12px;
 }
@@ -12529,9 +12558,6 @@ to{
 }
 .mb-3{
   margin-bottom: 12px;
-}
-.mr-4{
-  margin-right: 16px;
 }
 .ml-9{
   margin-left: 36px;
@@ -12771,6 +12797,9 @@ to{
 .\\!bg-black\\/60{
   background-color: rgb(0 0 0 / 0.6) !important;
 }
+.bg-opacity-10{
+  --tw-bg-opacity: 0.1;
+}
 .p-4{
   padding: 16px;
 }
@@ -12902,6 +12931,9 @@ to{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-black\\/50{
+  color: rgb(0 0 0 / 0.5);
 }
 .text-gray-300{
   --tw-text-opacity: 1;
@@ -13109,7 +13141,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.22";
+const version = "1.1.23";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
