@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createStaticVNode } from "./module-1acc9151.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createStaticVNode } from "./module-e80de3d0.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 39 39",
@@ -16,4 +16,4 @@ const Mail = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
 export {
   Mail as default
 };
-//# sourceMappingURL=Mail-8f4a9152.js.map
+//# sourceMappingURL=Mail-ac7f2f01.js.map
