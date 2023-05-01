@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0xf80db5 = _0x3773;
-(function(_0x1a1d93, _0x324e50) {
-  const _0x3d0e5e = _0x3773, _0x15fc24 = _0x1a1d93();
+const _0x3917a9 = _0x1e4c;
+(function(_0x8cc564, _0x373947) {
+  const _0x2424d5 = _0x1e4c, _0x594642 = _0x8cc564();
   while (!![]) {
     try {
-      const _0x1b8760 = parseInt(_0x3d0e5e(220)) / (6547 + 7 * 1142 + -14540) * (parseInt(_0x3d0e5e(207)) / (-1789 * 5 + -341 * -1 + 331 * 26)) + parseInt(_0x3d0e5e(208)) / (-2226 + 2644 + -415) * (-parseInt(_0x3d0e5e(214)) / (2092 + 5883 + 3 * -2657)) + -parseInt(_0x3d0e5e(228)) / (8914 + 1 * 7151 + -16060) + -parseInt(_0x3d0e5e(219)) / (5915 + -29 * 16 + 45 * -121) * (-parseInt(_0x3d0e5e(213)) / (-1 * 8199 + -5369 + 13575)) + parseInt(_0x3d0e5e(222)) / (-7149 * 1 + -7871 + 15028) + -parseInt(_0x3d0e5e(210)) / (5770 + -4117 * -2 + 3 * -4665) + parseInt(_0x3d0e5e(209)) / (-1 * 39 + 792 * -2 + 23 * 71) * (parseInt(_0x3d0e5e(218)) / (9887 * -1 + -8090 + -4497 * -4));
-      if (_0x1b8760 === _0x324e50)
+      const _0xe927bd = parseInt(_0x2424d5(252)) / (-5085 + 827 * 1 + -4259 * -1) * (-parseInt(_0x2424d5(248)) / (-1 * -3425 + -9446 + 6023)) + -parseInt(_0x2424d5(249)) / (-4766 + -8460 + -13229 * -1) * (-parseInt(_0x2424d5(259)) / (-9017 + -6480 + 15501)) + -parseInt(_0x2424d5(270)) / (-6622 + -382 * 23 + 15413) * (-parseInt(_0x2424d5(267)) / (6 * 1603 + -34 * 5 + -9442)) + -parseInt(_0x2424d5(263)) / (-6 * 695 + -3275 * 1 + 92 * 81) * (-parseInt(_0x2424d5(262)) / (3107 + -2036 + 1063 * -1)) + -parseInt(_0x2424d5(264)) / (289 * -30 + 1918 + -1 * -6761) + parseInt(_0x2424d5(250)) / (-603 * -6 + -8312 * -1 + -11920) + -parseInt(_0x2424d5(260)) / (4485 + -1462 * 1 + 2 * -1506);
+      if (_0xe927bd === _0x373947)
         break;
       else
-        _0x15fc24["push"](_0x15fc24["shift"]());
-    } catch (_0x4d74a2) {
-      _0x15fc24["push"](_0x15fc24["shift"]());
+        _0x594642["push"](_0x594642["shift"]());
+    } catch (_0x4cd87c) {
+      _0x594642["push"](_0x594642["shift"]());
     }
   }
-})(_0x2142, -3580 * -40 + -385 * -2897 + -692142);
-function _0x3773(_0x5b0960, _0x548a2a) {
-  const _0x63dda1 = _0x2142();
-  return _0x3773 = function(_0x25ccce, _0x305061) {
-    _0x25ccce = _0x25ccce - (-3001 + -2 * 193 + 3592);
-    let _0x2a8145 = _0x63dda1[_0x25ccce];
-    return _0x2a8145;
-  }, _0x3773(_0x5b0960, _0x548a2a);
-}
-function devHost(_0x305061, _0x2a8145) {
-  const _0x1a7c3e = _0x3773, _0x3e99c4 = window[_0x1a7c3e(217)][_0x1a7c3e(206)], _0xb825ae = String(_0x1a7c3e(229) + _0x1a7c3e(221) + _0x1a7c3e(205) + _0x1a7c3e(226) + _0x1a7c3e(215) + _0x1a7c3e(212) + _0x1a7c3e(225))[_0x1a7c3e(224)](",")[_0x1a7c3e(211)]((_0x2546bd) => new URL(_0x2546bd)[_0x1a7c3e(206)]), _0x29f4bd = _0x2a8145 ? _0x1a7c3e(227) + _0x3e99c4 : _0x3e99c4;
-  if (!_0x305061)
-    return _0x29f4bd;
-  if (!_0xb825ae[_0x1a7c3e(223)](_0x3e99c4))
-    return _0x29f4bd;
-  return _0x305061;
-}
-function prepareMessage(_0x265245) {
-  return "" + _0x265245;
-}
-const appearance = Symbol(_0xf80db5(216));
-function _0x2142() {
-  const _0x721819 = ["3808468iwDIqk", ",http://lo", "appearance", "location", "11zUXQKm", "2230962tbKuWI", "66XYBtHl", "v.d8g529d2", "4183456ksZjoh", "includes", "split", "33/", "ifyapp.com", "www.", "164925dRbNMb", "https://de", "owgcy.ampl", "hostname", "1198NIigon", "3EAdFXu", "8424490uWLERW", "8720019dlARTd", "map", "calhost:33", "21OQZDTI"];
-  _0x2142 = function() {
-    return _0x721819;
+})(_0x544c, -470572 + 1 * -664347 + 68730 * 23);
+function _0x544c() {
+  const _0x2958e8 = ["v.d8g529d2", "18pnkFIv", "location", ",http://lo", "1073030GjFllt", "split", "www.", "386bcVhEI", "363Rwxnjh", "7348780LmJOWb", "https://de", "36fzoOFM", "calhost:33", "appearance", "includes", "owgcy.ampl", "hostname", "ifyapp.com", "8248limRCR", "10934187PPoPZZ", "map", "960TDhkQh", "1799PUFzXq", "1909818aMBORb", "33/"];
+  _0x544c = function() {
+    return _0x2958e8;
   };
-  return _0x2142();
+  return _0x544c();
 }
+function devHost(_0x45f2e3, _0x215de4) {
+  const _0x5854c7 = _0x1e4c, _0x328ee4 = window[_0x5854c7(268)][_0x5854c7(257)], _0xb1c71b = String(_0x5854c7(251) + _0x5854c7(266) + _0x5854c7(256) + _0x5854c7(258) + _0x5854c7(269) + _0x5854c7(253) + _0x5854c7(265))[_0x5854c7(271)](",")[_0x5854c7(261)]((_0x34e54e) => new URL(_0x34e54e)[_0x5854c7(257)]), _0x415931 = _0x215de4 ? _0x5854c7(247) + _0x328ee4 : _0x328ee4;
+  if (!_0x45f2e3)
+    return _0x415931;
+  if (!_0xb1c71b[_0x5854c7(255)](_0x328ee4))
+    return _0x415931;
+  return _0x45f2e3;
+}
+function prepareMessage(_0x2a8973) {
+  return "" + _0x2a8973;
+}
+function _0x1e4c(_0x2587c2, _0x16e7af) {
+  const _0x21538a = _0x544c();
+  return _0x1e4c = function(_0x13c70a, _0x45f2e3) {
+    _0x13c70a = _0x13c70a - (-1 * 7477 + 7249 + 475);
+    let _0x215de4 = _0x21538a[_0x13c70a];
+    return _0x215de4;
+  }, _0x1e4c(_0x2587c2, _0x16e7af);
+}
+const appearance = Symbol(_0x3917a9(254));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9430,8 +9430,8 @@ const _hoisted_3$a = [
 const _hoisted_4$9 = { class: "avatar" };
 const _hoisted_5$9 = { class: "w-8 rounded" };
 const _hoisted_6$9 = ["src"];
-const _hoisted_7$8 = { class: "flex items-center" };
-const _hoisted_8$8 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_7$9 = { class: "flex items-center" };
+const _hoisted_8$9 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24"
 }, [
@@ -9441,7 +9441,7 @@ const _hoisted_8$8 = /* @__PURE__ */ createBaseVNode("svg", {
   })
 ], -1);
 const _hoisted_9$7 = [
-  _hoisted_8$8
+  _hoisted_8$9
 ];
 const _hoisted_10$6 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
@@ -9487,7 +9487,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
         createBaseVNode("h1", {
           class: normalizeClass(["text-lg text-center py-3 mx-2 hyphens-auto", unref(provided).textClass])
         }, toDisplayString(unref(provided).header_text), 3),
-        createBaseVNode("div", _hoisted_7$8, [
+        createBaseVNode("div", _hoisted_7$9, [
           createBaseVNode("button", {
             class: "icon btn btn-ghost hover:!border-none focus:!border-none btn-sm btn-square w-[32px] h-[32px]",
             "aria-label": "clear chat",
@@ -9523,8 +9523,8 @@ const _hoisted_5$8 = {
   class: "chat-header"
 };
 const _hoisted_6$8 = { class: "text-xs opacity-50" };
-const _hoisted_7$7 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
-const _hoisted_8$7 = { key: 0 };
+const _hoisted_7$8 = { class: "rounded-r-lg rounded-tl-lg px-5 bg-[#DDE2EB] text-black leading-[24px] py-4 mr-5 break-words" };
+const _hoisted_8$8 = { key: 0 };
 const _hoisted_9$6 = ["href"];
 const _hoisted_10$5 = {
   key: 0,
@@ -9610,12 +9610,12 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
           unref(showTime) ? (openBlock(), createElementBlock("div", _hoisted_5$8, [
             createBaseVNode("time", _hoisted_6$8, toDisplayString(unref(time)), 1)
           ])) : createCommentVNode("", true),
-          createBaseVNode("div", _hoisted_7$7, [
+          createBaseVNode("div", _hoisted_7$8, [
             (openBlock(true), createElementBlock(Fragment, null, renderList(unref(parsedMessage), (part) => {
               return openBlock(), createElementBlock(Fragment, {
                 key: part.text
               }, [
-                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$7, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
+                !part.isLink ? (openBlock(), createElementBlock("span", _hoisted_8$8, toDisplayString(part.text), 1)) : (openBlock(), createElementBlock("a", {
                   key: 1,
                   href: part.href,
                   style: normalizeStyle({ color: unref(provided).mainColor })
@@ -9655,10 +9655,10 @@ const _hoisted_3$8 = /* @__PURE__ */ createBaseVNode("span", { class: "ml-5 text
 const _hoisted_4$7 = ["placeholder"];
 const _hoisted_5$7 = ["disabled"];
 const _hoisted_6$7 = { class: "w-6 h-6" };
-const _hoisted_7$6 = ["fill"];
-const _hoisted_8$6 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
+const _hoisted_7$7 = ["fill"];
+const _hoisted_8$7 = /* @__PURE__ */ createBaseVNode("path", { d: "m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z" }, null, -1);
 const _hoisted_9$5 = [
-  _hoisted_8$6
+  _hoisted_8$7
 ];
 const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "ChatInput",
@@ -9732,7 +9732,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                 xmlns: "http://www.w3.org/2000/svg",
                 fill: unref(provided).mainColor,
                 viewBox: "0 0 32 32"
-              }, _hoisted_9$5, 8, _hoisted_7$6))
+              }, _hoisted_9$5, 8, _hoisted_7$7))
             ])
           ], 8, _hoisted_5$7)
         ], 32)
@@ -9740,9 +9740,10 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$b = { class: "overlay h-full text-white rounded-t-md" };
-const _hoisted_2$9 = { class: "my-auto w-full flex items-center border-b h-16" };
-const _hoisted_3$7 = /* @__PURE__ */ createBaseVNode("svg", {
+const _hoisted_1$b = { class: "overlay h-max text-white rounded-t-md" };
+const _hoisted_2$9 = { class: "my-auto w-full flex items-center border-b text-center h-16 relative" };
+const _hoisted_3$7 = { class: "absolute left-0 bottom-0 h-full flex flex-col" };
+const _hoisted_4$6 = /* @__PURE__ */ createBaseVNode("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   class: "w-6 h-6",
   viewBox: "0 0 24 24"
@@ -9752,11 +9753,12 @@ const _hoisted_3$7 = /* @__PURE__ */ createBaseVNode("svg", {
     d: "M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z"
   })
 ], -1);
-const _hoisted_4$6 = [
-  _hoisted_3$7
+const _hoisted_5$6 = [
+  _hoisted_4$6
 ];
-const _hoisted_5$6 = { class: "flex flex-col p-4" };
-const _hoisted_6$6 = ["onClick"];
+const _hoisted_6$6 = { class: "w-full" };
+const _hoisted_7$6 = { class: "flex flex-col p-4" };
+const _hoisted_8$6 = ["onClick"];
 const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "ChatLanguage",
   emits: ["setLanguage", "close"],
@@ -9766,19 +9768,22 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
       var _a2;
       return openBlock(), createElementBlock("div", _hoisted_1$b, [
         createBaseVNode("div", _hoisted_2$9, [
-          createBaseVNode("button", {
-            class: normalizeClass(["btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
-            "aria-label": "close language settings",
-            onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
-          }, _hoisted_4$6, 2)
+          createBaseVNode("div", _hoisted_3$7, [
+            createBaseVNode("button", {
+              class: normalizeClass(["my-auto btn btn-ghost btn-square btn-sm ml-3", unref(provided).textClass]),
+              "aria-label": "close language settings",
+              onClick: _cache[0] || (_cache[0] = ($event) => emit2("close"))
+            }, _hoisted_5$6, 2)
+          ]),
+          createBaseVNode("p", _hoisted_6$6, toDisplayString(unref(provided).translation.language), 1)
         ]),
-        createBaseVNode("div", _hoisted_5$6, [
+        createBaseVNode("div", _hoisted_7$6, [
           (openBlock(true), createElementBlock(Fragment, null, renderList((_a2 = unref(provided)) == null ? void 0 : _a2.text, ({ language }) => {
             return openBlock(), createElementBlock("button", {
               key: language,
               class: normalizeClass(["btn btn-ghost w-full justify-start capitalize h-[48px] text-[14px]", { "btn-active": language === unref(provided).language }]),
               onClick: ($event) => emit2("setLanguage", language)
-            }, toDisplayString(language), 11, _hoisted_6$6);
+            }, toDisplayString(language), 11, _hoisted_8$6);
           }), 128))
         ])
       ]);
@@ -9912,7 +9917,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-6a7dcb49.js"), "./contact/Mail.vue": () => import("./Mail-9a1874b0.js"), "./contact/Maps.vue": () => import("./Maps-6d2e8547.js"), "./contact/Messenger.vue": () => import("./Messenger-20aea09a.js"), "./contact/MsTeams.vue": () => import("./MsTeams-32f1f65c.js"), "./contact/Phone.vue": () => import("./Phone-57d552f5.js"), "./contact/Skype.vue": () => import("./Skype-7b39743e.js"), "./contact/Sms.vue": () => import("./Sms-f6ee8bb0.js"), "./contact/Viber.vue": () => import("./Viber-14f22343.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-778af810.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-8ae69729.js"), "./contact/Mail.vue": () => import("./Mail-b902c346.js"), "./contact/Maps.vue": () => import("./Maps-5b05dda6.js"), "./contact/Messenger.vue": () => import("./Messenger-ded0f7b0.js"), "./contact/MsTeams.vue": () => import("./MsTeams-3a0e8e5e.js"), "./contact/Phone.vue": () => import("./Phone-8edc11d2.js"), "./contact/Skype.vue": () => import("./Skype-6eb479dc.js"), "./contact/Sms.vue": () => import("./Sms-24c38d72.js"), "./contact/Viber.vue": () => import("./Viber-4e2496f3.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-a22786da.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -9950,7 +9955,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$8 = { class: "overlay flex flex-col h-full text-white" };
+const _hoisted_1$8 = { class: "overlay flex flex-col h-full text-white overflow-y-auto" };
 const _hoisted_2$6 = { class: "my-auto w-full flex items-center border-b text-center min-h-16 relative h-16 flex-none" };
 const _hoisted_3$5 = { class: "absolute left-0 bottom-0 h-full flex flex-col" };
 const _hoisted_4$4 = /* @__PURE__ */ createBaseVNode("svg", {
@@ -9967,25 +9972,34 @@ const _hoisted_5$4 = [
   _hoisted_4$4
 ];
 const _hoisted_6$4 = /* @__PURE__ */ createBaseVNode("p", { class: "w-full" }, " Order tracking ", -1);
-const _hoisted_7$4 = { class: "flex flex-col p-4 mb-3 contact-settings gap-y-5 px-6 justify-center flex-1" };
+const _hoisted_7$4 = { class: "relative flex flex-col p-4 mb-3 contact-settings gap-y-5 px-6 justify-center flex-1" };
 const _hoisted_8$4 = { class: "flex flex-col" };
 const _hoisted_9$3 = /* @__PURE__ */ createBaseVNode("p", null, " Email ", -1);
 const _hoisted_10$3 = {
   key: 0,
   class: "text-red-300"
 };
-const _hoisted_11$2 = { class: "flex flex-col" };
+const _hoisted_11$2 = { class: "flex flex-col relative" };
 const _hoisted_12$2 = /* @__PURE__ */ createBaseVNode("p", null, " Order number ", -1);
 const _hoisted_13$2 = {
   key: 0,
   class: "text-red-300"
 };
-const _hoisted_14$1 = { class: "flex-none flex justify-end p-8" };
-const _hoisted_15$1 = ["disabled"];
+const _hoisted_14$1 = {
+  key: 0,
+  class: "absolute -bottom-15 left-0 mt-6 text-red-300"
+};
+const _hoisted_15$1 = { class: "flex-none flex justify-end p-8" };
+const _hoisted_16 = ["disabled"];
 const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "OrderOverlay",
-  emits: ["close", "checkOrder"],
+  props: {
+    loading: { type: Boolean },
+    showError: { type: Boolean }
+  },
+  emits: ["close", "checkOrder", "update:showError"],
   setup(__props, { emit: emit2 }) {
+    const props = __props;
     const provided = inject(appearance);
     const email = ref("");
     const orderId = ref("");
@@ -9993,10 +10007,11 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     const errorMail = computed(() => !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value));
     const errorOrderId = computed(() => !/^#\d+$/.test(orderId.value));
     const isFilled = computed(() => email.value !== "" && orderId.value !== "");
+    emit2("update:showError", false);
     async function checkOrder() {
       if (errorMail.value || errorOrderId.value)
         return showErrors.value = true;
-      return emit2("checkOrder", { email: email.value, order_number: orderId.value });
+      emit2("checkOrder", { email: email.value, order_number: orderId.value });
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$8, [
@@ -10021,7 +10036,12 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             }, null, 512), [
               [vModelText, email.value]
             ]),
-            showErrors.value && unref(errorMail) ? (openBlock(), createElementBlock("span", _hoisted_10$3, "Please provide a correct mail")) : createCommentVNode("", true)
+            createVNode(unref(TransitionExpand), null, {
+              default: withCtx(() => [
+                showErrors.value && unref(errorMail) ? (openBlock(), createElementBlock("span", _hoisted_10$3, "Please provide a correct mail")) : createCommentVNode("", true)
+              ]),
+              _: 1
+            })
           ]),
           createBaseVNode("div", _hoisted_11$2, [
             _hoisted_12$2,
@@ -10033,19 +10053,30 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             }, null, 512), [
               [vModelText, orderId.value]
             ]),
-            showErrors.value && unref(errorOrderId) ? (openBlock(), createElementBlock("span", _hoisted_13$2, "Please provide a number that starts with #")) : createCommentVNode("", true)
+            createVNode(unref(TransitionExpand), null, {
+              default: withCtx(() => [
+                showErrors.value && unref(errorOrderId) ? (openBlock(), createElementBlock("span", _hoisted_13$2, "Please provide a number that starts with #")) : createCommentVNode("", true)
+              ]),
+              _: 1
+            }),
+            createVNode(unref(TransitionExpand), null, {
+              default: withCtx(() => [
+                props.showError ? (openBlock(), createElementBlock("p", _hoisted_14$1, " Sorry I could not find your order. Please check your mail and your order number! ")) : createCommentVNode("", true)
+              ]),
+              _: 1
+            })
           ])
         ]),
-        createBaseVNode("div", _hoisted_14$1, [
+        createBaseVNode("div", _hoisted_15$1, [
           createBaseVNode("button", {
-            class: "btn btn-sm",
+            class: normalizeClass(["btn btn-sm", { loading: props.loading }]),
             style: normalizeStyle({
               background: unref(provided).mainColor,
               opacity: unref(isFilled) ? 1 : 0.5
             }),
             disabled: !unref(isFilled),
             onClick: _cache[3] || (_cache[3] = ($event) => checkOrder())
-          }, " Track ", 12, _hoisted_15$1)
+          }, " Track ", 14, _hoisted_16)
         ])
       ]);
     };
@@ -10105,7 +10136,7 @@ const _hoisted_4$3 = /* @__PURE__ */ createBaseVNode("svg", {
 const _hoisted_5$3 = [
   _hoisted_4$3
 ];
-const _hoisted_6$3 = /* @__PURE__ */ createBaseVNode("p", { class: "w-full" }, " Contact ", -1);
+const _hoisted_6$3 = /* @__PURE__ */ createBaseVNode("p", { class: "w-full" }, " Contacts ", -1);
 const _hoisted_7$3 = { class: "flex flex-col p-4 mb-3 contact-settings" };
 const _hoisted_8$3 = { class: "text-white" };
 const _sfc_main$6 = /* @__PURE__ */ defineComponent({
@@ -11225,8 +11256,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       isChatOpen.value = true;
     };
     const openSettings = async (setting) => {
-      if (products.value) {
+      if (products.value || isLanguageSettingsOpen.value || isIntegrationsOpen.value || isOrderTrackingOpen.value) {
         products.value = void 0;
+        isLanguageSettingsOpen.value = false;
+        isIntegrationsOpen.value = false;
+        isOrderTrackingOpen.value = false;
         await new Promise((resolve2) => setTimeout(resolve2, 600));
       }
       if (setting === "main")
@@ -11240,15 +11274,21 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       history.pushState({ monoloqItemId: itemId }, "", url);
       window.location.assign(url);
     }
+    const isOrderLoading = ref(false);
+    const hasOrderError = ref(false);
     async function checkOrders(order) {
-      var _a2;
+      var _a2, _b, _c;
       const url = prepareUrl("/order", order);
-      isOrderTrackingOpen.value = false;
-      messages.value.push(clientOrderMsg(order));
-      isLoading.value = true;
+      isOrderLoading.value = true;
+      hasOrderError.value = false;
       const { data: link, response } = await fetch2(url.href, { immediate: true }).json();
-      isLoading.value = false;
-      messages.value.push(serverOrderMsg(link.value, (_a2 = response.value) == null ? void 0 : _a2.ok, conversationId.value, provided.value.showContacts));
+      isOrderLoading.value = false;
+      if (!((_a2 = response.value) == null ? void 0 : _a2.ok))
+        hasOrderError.value = true;
+      messages.value.push(clientOrderMsg(order));
+      messages.value.push(serverOrderMsg(link.value, (_b = response.value) == null ? void 0 : _b.ok, conversationId.value, provided.value.showContacts));
+      if ((_c = response.value) == null ? void 0 : _c.ok)
+        isOrderTrackingOpen.value = false;
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
@@ -11304,17 +11344,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 default: withCtx(() => [
                   unref(isOrderTrackingOpen) ? (openBlock(), createBlock(_sfc_main$8, {
                     key: 0,
-                    onClose: _cache[3] || (_cache[3] = ($event) => isOrderTrackingOpen.value = false),
+                    "show-error": hasOrderError.value,
+                    "onUpdate:show-error": _cache[3] || (_cache[3] = ($event) => hasOrderError.value = $event),
+                    loading: isOrderLoading.value,
+                    onClose: _cache[4] || (_cache[4] = ($event) => isOrderTrackingOpen.value = false),
                     onCheckOrder: checkOrders
-                  })) : (openBlock(), createElementBlock("div", _hoisted_4))
+                  }, null, 8, ["show-error", "loading"])) : (openBlock(), createElementBlock("div", _hoisted_4))
                 ]),
                 _: 1
               }),
               createVNode(_sfc_main$e, {
                 class: "!h-[64px] flex-none",
-                onClear: _cache[4] || (_cache[4] = ($event) => onClear()),
-                onClose: _cache[5] || (_cache[5] = ($event) => onClose()),
-                onOpenSetting: _cache[6] || (_cache[6] = ($event) => openSettings("main"))
+                onClear: _cache[5] || (_cache[5] = ($event) => onClear()),
+                onClose: _cache[6] || (_cache[6] = ($event) => onClose()),
+                onOpenSetting: _cache[7] || (_cache[7] = ($event) => openSettings("main"))
               }),
               createBaseVNode("div", {
                 ref_key: "refChat",
@@ -11390,7 +11433,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     key: 0,
                     products: products.value,
                     "scroll-to": scrollToItemId.value,
-                    onCloseProducts: _cache[7] || (_cache[7] = ($event) => closeProducts()),
+                    onCloseProducts: _cache[8] || (_cache[8] = ($event) => closeProducts()),
                     onNavigate: navigate
                   }, null, 8, ["products", "scroll-to"])) : (openBlock(), createElementBlock("div", _hoisted_14))
                 ]),
@@ -11406,7 +11449,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             style: normalizeStyle(unref(positionStyle)),
             chat_button_position: props.chat_button_position,
             "is-open": unref(isChatOpen),
-            onToggle: _cache[8] || (_cache[8] = ($event) => onToggle())
+            onToggle: _cache[9] || (_cache[9] = ($event) => onToggle())
           }, null, 8, ["style", "chat_button_position", "is-open"])) : createCommentVNode("", true)
         ])
       ], 64);
@@ -13039,6 +13082,12 @@ to{
 .right-0{
   right: 0px;
 }
+.left-0{
+  left: 0px;
+}
+.bottom-0{
+  bottom: 0px;
+}
 .top-3{
   top: 12px;
 }
@@ -13051,11 +13100,8 @@ to{
 .-left-7{
   left: -28px;
 }
-.bottom-0{
-  bottom: 0px;
-}
-.left-0{
-  left: 0px;
+.-bottom-15{
+  bottom: -60px;
 }
 .z-40{
   z-index: 40;
@@ -13110,6 +13156,9 @@ to{
 }
 .mb-4{
   margin-bottom: 16px;
+}
+.mt-6{
+  margin-top: 24px;
 }
 .block{
   display: block;
@@ -14041,7 +14090,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.31";
+const version = "1.1.32";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14149,4 +14198,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-3e2cbd56.js.map
+//# sourceMappingURL=module-105e5183.js.map
