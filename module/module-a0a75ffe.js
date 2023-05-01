@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x10931b = _0x718c;
-(function(_0x22c111, _0x5241da) {
-  const _0x5a9db7 = _0x718c, _0x4a21a6 = _0x22c111();
+function _0x59d5() {
+  const _0x69558d = ["77oClVWb", "140PjOZZb", "176135kECsXG", "location", "232006FKziZQ", "hostname", "includes", "www.", "2066050rDBQZE", "https://ap", "80GALLdN", "appearance", "817334DHytpL", "map", "1718226FwoZeg", "3833457JVlcpN", "split", "2zfWwOq", "p.monoloq.", "4903677sBakiq"];
+  _0x59d5 = function() {
+    return _0x69558d;
+  };
+  return _0x59d5();
+}
+const _0x5128bb = _0x71cb;
+(function(_0x1048e3, _0x136a0a) {
+  const _0x11f081 = _0x71cb, _0x1918c5 = _0x1048e3();
   while (!![]) {
     try {
-      const _0x261319 = -parseInt(_0x5a9db7(341)) / (3 * -1051 + 1 * -1243 + 4397) * (-parseInt(_0x5a9db7(340)) / (-3 * 2513 + 8042 + -501)) + parseInt(_0x5a9db7(336)) / (1252 + -4105 + 14 * 204) + parseInt(_0x5a9db7(330)) / (-1 * -8093 + -4321 * 1 + -3768) + -parseInt(_0x5a9db7(325)) / (-3833 + -1 * 7277 + 1235 * 9) * (-parseInt(_0x5a9db7(323)) / (4982 * 1 + -2965 + 1 * -2011)) + -parseInt(_0x5a9db7(332)) / (-5306 + 321 * -9 + 8202) * (parseInt(_0x5a9db7(335)) / (-19 * 136 + 1704 + 888)) + -parseInt(_0x5a9db7(328)) / (914 + 3097 * 1 + 667 * -6) * (parseInt(_0x5a9db7(339)) / (1 * 829 + 3693 + -32 * 141)) + -parseInt(_0x5a9db7(334)) / (3043 * 1 + 6274 + -9306);
-      if (_0x261319 === _0x5241da)
+      const _0x5aa42c = parseInt(_0x11f081(314)) / (9536 + -7577 + -1958) + -parseInt(_0x11f081(307)) / (-1667 * -3 + 6 * 496 + -7975) * (parseInt(_0x11f081(305)) / (136 * 1 + 6730 * -1 + 6597)) + parseInt(_0x11f081(311)) / (-2953 + -1310 + -17 * -251) * (parseInt(_0x11f081(312)) / (3348 + 4050 + 7393 * -1)) + -parseInt(_0x11f081(304)) / (13 * -445 + -3744 + -9535 * -1) + -parseInt(_0x11f081(302)) / (-8216 + 1898 + 6325) * (parseInt(_0x11f081(320)) / (1 * 8693 + 7822 + -1 * 16507)) + parseInt(_0x11f081(309)) / (6626 + 2764 * -2 + -1089) + -parseInt(_0x11f081(318)) / (-2520 + 6155 + 5 * -725) * (-parseInt(_0x11f081(310)) / (-8015 + -15 * 431 + 1 * 14491));
+      if (_0x5aa42c === _0x136a0a)
         break;
       else
-        _0x4a21a6["push"](_0x4a21a6["shift"]());
-    } catch (_0x4efb7c) {
-      _0x4a21a6["push"](_0x4a21a6["shift"]());
+        _0x1918c5["push"](_0x1918c5["shift"]());
+    } catch (_0x2f4119) {
+      _0x1918c5["push"](_0x1918c5["shift"]());
     }
   }
-})(_0x36c8, 1 * -860014 + 31 * 6067 + 1583311);
-function devHost(_0x18c593, _0x233ea8) {
-  const _0x155bae = _0x718c, _0x170039 = window[_0x155bae(331)][_0x155bae(342)], _0x445f67 = String(_0x155bae(337) + _0x155bae(324) + "ai")[_0x155bae(326)](",")[_0x155bae(329)]((_0x36eaa1) => new URL(_0x36eaa1)[_0x155bae(342)]), _0xf7700a = _0x233ea8 ? _0x155bae(338) + _0x170039 : _0x170039;
-  if (!_0x18c593)
-    return _0xf7700a;
-  if (!_0x445f67[_0x155bae(327)](_0x170039))
-    return _0xf7700a;
-  return _0x18c593;
+})(_0x59d5, -931812 + 1022016 + 126805 * 5);
+function devHost(_0x3e7fa6, _0x31e63e) {
+  const _0x338308 = _0x71cb, _0x1ad2b0 = window[_0x338308(313)][_0x338308(315)], _0x3d2dc8 = String(_0x338308(319) + _0x338308(308) + "ai")[_0x338308(306)](",")[_0x338308(303)]((_0x3608d2) => new URL(_0x3608d2)[_0x338308(315)]), _0x5d7512 = _0x31e63e ? _0x338308(317) + _0x1ad2b0 : _0x1ad2b0;
+  if (!_0x3e7fa6)
+    return _0x5d7512;
+  if (!_0x3d2dc8[_0x338308(316)](_0x1ad2b0))
+    return _0x5d7512;
+  return _0x3e7fa6;
 }
-function prepareMessage(_0x5ddb53) {
-  return "" + _0x5ddb53;
+function _0x71cb(_0x312433, _0x99c6) {
+  const _0x12bd56 = _0x59d5();
+  return _0x71cb = function(_0xb1f9c1, _0x3e7fa6) {
+    _0xb1f9c1 = _0xb1f9c1 - (-9267 * 1 + 7196 + 2373);
+    let _0x31e63e = _0x12bd56[_0xb1f9c1];
+    return _0x31e63e;
+  }, _0x71cb(_0x312433, _0x99c6);
 }
-function _0x718c(_0x230449, _0x162314) {
-  const _0x7c7fd = _0x36c8();
-  return _0x718c = function(_0x3b19f8, _0x4ecdcf) {
-    _0x3b19f8 = _0x3b19f8 - (-4845 + 2498 + 2670);
-    let _0x18c593 = _0x7c7fd[_0x3b19f8];
-    return _0x18c593;
-  }, _0x718c(_0x230449, _0x162314);
+function prepareMessage(_0x1a5d7f) {
+  return "" + _0x1a5d7f;
 }
-function _0x36c8() {
-  const _0x19247f = ["appearance", "5633738vPlKFm", "83920auPkyS", "3159258POMkKD", "https://ap", "www.", "6990ywppuz", "2080114JRHPsX", "1EPmqKX", "hostname", "12042wYxjat", "p.monoloq.", "1595tfyKiF", "split", "includes", "1287QRuelS", "map", "2083852gjFUca", "location", "1155OeETQp"];
-  _0x36c8 = function() {
-    return _0x19247f;
-  };
-  return _0x36c8();
-}
-const appearance = Symbol(_0x10931b(333));
+const appearance = Symbol(_0x5128bb(321));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9912,7 +9912,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-c38a45c1.js"), "./contact/Mail.vue": () => import("./Mail-3861c1f1.js"), "./contact/Maps.vue": () => import("./Maps-e1e98348.js"), "./contact/Messenger.vue": () => import("./Messenger-7d55d842.js"), "./contact/MsTeams.vue": () => import("./MsTeams-814c1d02.js"), "./contact/Phone.vue": () => import("./Phone-4ab9432b.js"), "./contact/Skype.vue": () => import("./Skype-4259a597.js"), "./contact/Sms.vue": () => import("./Sms-59b56fe9.js"), "./contact/Viber.vue": () => import("./Viber-8aa35a5b.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-23ed8760.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-3ef89102.js"), "./contact/Mail.vue": () => import("./Mail-f4bc9728.js"), "./contact/Maps.vue": () => import("./Maps-a45aa5ee.js"), "./contact/Messenger.vue": () => import("./Messenger-f9b272ec.js"), "./contact/MsTeams.vue": () => import("./MsTeams-18ca2229.js"), "./contact/Phone.vue": () => import("./Phone-5a4c78d4.js"), "./contact/Skype.vue": () => import("./Skype-58a9f0ee.js"), "./contact/Sms.vue": () => import("./Sms-5d78c854.js"), "./contact/Viber.vue": () => import("./Viber-1fa6e960.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-5989cd50.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -9945,20 +9945,11 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
         (openBlock(), createBlock(resolveDynamicComponent(unref(is)), { class: "contact-icon" })),
         renderSlot(_ctx.$slots, "default", normalizeProps(guardReactiveProps({ text: props.text })), () => [
           createBaseVNode("div", _hoisted_2$7, toDisplayString(props.text), 1)
-        ], true)
+        ])
       ], 8, _hoisted_1$9);
     };
   }
 });
-const ContactIcon_vue_vue_type_style_index_0_scoped_78e39e0d_lang = "";
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
-const ContactIcon = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-78e39e0d"]]);
 const _hoisted_1$8 = { class: "overlay flex flex-col h-full text-white" };
 const _hoisted_2$6 = { class: "my-auto w-full flex items-center border-b text-center min-h-16 relative h-16 flex-none" };
 const _hoisted_3$5 = { class: "absolute left-0 bottom-0 h-full flex flex-col" };
@@ -10136,7 +10127,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
         ]),
         createBaseVNode("div", _hoisted_7$3, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(provided).contacts, (channel) => {
-            return openBlock(), createBlock(ContactIcon, {
+            return openBlock(), createBlock(_sfc_main$9, {
               id: channel.channel_id,
               key: channel.channel_id,
               href: channel.href,
@@ -10155,6 +10146,13 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
 const _sfc_main$5 = {};
 const _hoisted_1$5 = {
   id: "Layer_2",
@@ -11349,7 +11347,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             _hoisted_8,
                             createBaseVNode("div", _hoisted_9, [
                               (openBlock(true), createElementBlock(Fragment, null, renderList(unref(provided).contacts, (channel) => {
-                                return openBlock(), createBlock(ContactIcon, {
+                                return openBlock(), createBlock(_sfc_main$9, {
                                   id: channel.channel_id,
                                   key: channel.channel_id,
                                   href: channel.href,
@@ -13639,11 +13637,6 @@ to{
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-.backdrop-blur-md{
-  --tw-backdrop-blur: blur(12px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -13994,15 +13987,21 @@ to{
   height: 40px;
   width: 40px;
 }
-.tooltip::before{
-  background-color: rgb(0 0 0 / 0.5) !important;
-  padding: 12px !important;
-  --tw-text-opacity: 1 !important;
-  color: hsl(var(--b1) / var(--tw-text-opacity)) !important;
-  --tw-backdrop-blur: blur(12px) !important;
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia) !important;
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia) !important;
-}
+.tooltips {
+  position: absolute;
+  bottom: -75%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+  background-color: rgb(0 0 0 / 0.7);
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}
 .hover\\:scale-105:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -14041,7 +14040,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.29";
+const version = "1.1.30";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14149,4 +14148,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-5843ace3.js.map
+//# sourceMappingURL=module-a0a75ffe.js.map
