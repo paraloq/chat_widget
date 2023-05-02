@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-e80de3d0.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-2cc636d6.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 39 39",
@@ -29,4 +29,4 @@ const Phone = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
 export {
   Phone as default
 };
-//# sourceMappingURL=Phone-1b84d9c1.js.map
+//# sourceMappingURL=Phone-81be24d5.js.map
