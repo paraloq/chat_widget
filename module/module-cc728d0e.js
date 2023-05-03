@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x599e60 = _0x33ca;
-(function(_0x55d2a0, _0x311b8c) {
-  const _0x2bb2d4 = _0x33ca, _0x13de2b = _0x55d2a0();
+const _0x2550eb = _0x1f5b;
+function _0x1b85() {
+  const _0x3942a3 = ["6132000saHwiO", "location", "4sAgmri", "405620KtyreG", "map", "20HHCMOt", "appearance", "737298TUuoQD", "hostname", "includes", "www.", "https://ap", "80718UUlZki", "4551072sXHbAB", "3486525uyCnex", "252klxHjf", "p.monoloq.", "split", "210441hJgobX"];
+  _0x1b85 = function() {
+    return _0x3942a3;
+  };
+  return _0x1b85();
+}
+(function(_0x7a21fd, _0x548005) {
+  const _0x149876 = _0x1f5b, _0x1cbd5d = _0x7a21fd();
   while (!![]) {
     try {
-      const _0x40c20a = -parseInt(_0x2bb2d4(351)) / (-5658 + 2939 + 2720) * (-parseInt(_0x2bb2d4(368)) / (-14 * -150 + 7417 * 1 + -9515)) + -parseInt(_0x2bb2d4(352)) / (1 * -5831 + 1 * -2542 + -8 * -1047) + -parseInt(_0x2bb2d4(363)) / (-15 * -25 + 1 * -6637 + 3133 * 2) * (parseInt(_0x2bb2d4(354)) / (3 * 572 + -479 + -16 * 77)) + -parseInt(_0x2bb2d4(359)) / (392 * -19 + -7294 * 1 + 14748) + -parseInt(_0x2bb2d4(353)) / (-2747 + 257 + 2497) + -parseInt(_0x2bb2d4(369)) / (25 * -187 + -3478 + 8161) * (-parseInt(_0x2bb2d4(357)) / (-2 * 3443 + 7691 + 199 * -4)) + parseInt(_0x2bb2d4(365)) / (-74 * -5 + 5088 + -5448);
-      if (_0x40c20a === _0x311b8c)
+      const _0x58bd7b = parseInt(_0x149876(165)) / (3589 * -1 + -5468 + 4529 * 2) * (parseInt(_0x149876(164)) / (-67 * -22 + -74 * 119 + 2 * 3667)) + parseInt(_0x149876(161)) / (19 * -85 + -4373 * 1 + -1 * -5991) * (-parseInt(_0x149876(167)) / (-2 * -3995 + -1 * 7993 + -7 * -1)) + parseInt(_0x149876(157)) / (-6249 + -137 * 41 + -3957 * -3) + -parseInt(_0x149876(174)) / (-3727 + 4366 + -633) * (parseInt(_0x149876(158)) / (4 * -193 + -6504 + 1 * 7283)) + parseInt(_0x149876(175)) / (-4422 + -3 * 3166 + 13928) + -parseInt(_0x149876(169)) / (7 * -275 + 18 * -302 + 7370) + -parseInt(_0x149876(162)) / (43 * 58 + -4071 + 1587);
+      if (_0x58bd7b === _0x548005)
         break;
       else
-        _0x13de2b["push"](_0x13de2b["shift"]());
-    } catch (_0x48222d) {
-      _0x13de2b["push"](_0x13de2b["shift"]());
+        _0x1cbd5d["push"](_0x1cbd5d["shift"]());
+    } catch (_0x46bf08) {
+      _0x1cbd5d["push"](_0x1cbd5d["shift"]());
     }
   }
-})(_0x154a, 258143 + 2908 * 54 + 371 * -713);
-function devHost(_0x41cfd5, _0xa16ef4) {
-  const _0xf7f4e8 = _0x33ca, _0x3b4ff9 = window[_0xf7f4e8(366)][_0xf7f4e8(355)], _0x21fd88 = String(_0xf7f4e8(360) + _0xf7f4e8(356) + "ai")[_0xf7f4e8(362)](",")[_0xf7f4e8(358)]((_0xd47481) => new URL(_0xd47481)[_0xf7f4e8(355)]), _0x505393 = _0xa16ef4 ? _0xf7f4e8(367) + _0x3b4ff9 : _0x3b4ff9;
-  if (!_0x41cfd5)
-    return _0x505393;
-  if (!_0x21fd88[_0xf7f4e8(364)](_0x3b4ff9))
-    return _0x505393;
-  return _0x41cfd5;
+})(_0x1b85, 97232 + 256126 * 1 + 193906);
+function devHost(_0x501519, _0x5a97ae) {
+  const _0x445e39 = _0x1f5b, _0x308bcd = window[_0x445e39(163)][_0x445e39(170)], _0x11b824 = String(_0x445e39(173) + _0x445e39(159) + "ai")[_0x445e39(160)](",")[_0x445e39(166)]((_0x17f927) => new URL(_0x17f927)[_0x445e39(170)]), _0x2425af = _0x5a97ae ? _0x445e39(172) + _0x308bcd : _0x308bcd;
+  if (!_0x501519)
+    return _0x2425af;
+  if (!_0x11b824[_0x445e39(171)](_0x308bcd))
+    return _0x2425af;
+  return _0x501519;
 }
-function prepareMessage(_0x654705) {
-  return "" + _0x654705;
+function prepareMessage(_0x1a8dd1) {
+  return "" + _0x1a8dd1;
 }
-const appearance = Symbol(_0x599e60(361));
-function _0x33ca(_0x463414, _0x196b34) {
-  const _0x291361 = _0x154a();
-  return _0x33ca = function(_0x41cfd5, _0xa16ef4) {
-    _0x41cfd5 = _0x41cfd5 - (6377 + -7 * -668 + 2 * -5351);
-    let _0x3b4ff9 = _0x291361[_0x41cfd5];
-    return _0x3b4ff9;
-  }, _0x33ca(_0x463414, _0x196b34);
+function _0x1f5b(_0x5f2156, _0xcc05d4) {
+  const _0x2a275e = _0x1b85();
+  return _0x1f5b = function(_0x33f248, _0x501519) {
+    _0x33f248 = _0x33f248 - (2222 + 8379 + -28 * 373);
+    let _0x5a97ae = _0x2a275e[_0x33f248];
+    return _0x5a97ae;
+  }, _0x1f5b(_0x5f2156, _0xcc05d4);
 }
-function _0x154a() {
-  const _0x1a0735 = ["9228BwMZyn", "includes", "2388360nyEfQv", "location", "www.", "2UYfhWb", "8APRtGH", "156707Rsrpkk", "175650QQHLco", "1359617OLmDKa", "20NhjDnI", "hostname", "p.monoloq.", "1061631miZKmh", "map", "605046bdLvdY", "https://ap", "appearance", "split"];
-  _0x154a = function() {
-    return _0x1a0735;
-  };
-  return _0x154a();
-}
+const appearance = Symbol(_0x2550eb(168));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-30769c12.js"), "./contact/Mail.vue": () => import("./Mail-0fc49510.js"), "./contact/Maps.vue": () => import("./Maps-61931aaa.js"), "./contact/Messenger.vue": () => import("./Messenger-8ab4c8b3.js"), "./contact/MsTeams.vue": () => import("./MsTeams-86938aeb.js"), "./contact/Phone.vue": () => import("./Phone-96dba168.js"), "./contact/Skype.vue": () => import("./Skype-0c62487b.js"), "./contact/Sms.vue": () => import("./Sms-712634a1.js"), "./contact/Viber.vue": () => import("./Viber-daf1fe84.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-68edca7e.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-a6e00cab.js"), "./contact/Mail.vue": () => import("./Mail-79e287ea.js"), "./contact/Maps.vue": () => import("./Maps-e73bdb8d.js"), "./contact/Messenger.vue": () => import("./Messenger-3a412ff6.js"), "./contact/MsTeams.vue": () => import("./MsTeams-1afcfbc6.js"), "./contact/Phone.vue": () => import("./Phone-4486a717.js"), "./contact/Skype.vue": () => import("./Skype-99d97ec1.js"), "./contact/Sms.vue": () => import("./Sms-41a968aa.js"), "./contact/Viber.vue": () => import("./Viber-7f729541.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-625d5547.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -10911,8 +10911,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const currentLanguage = useStorage("monoloqLanguage", "en");
     const provided = computed(() => {
       var _a2, _b, _c, _d, _e, _f;
-      console.log("contact us :>> ", props.features.contact_us);
-      console.log("order_status:>> ", props.features.order_status);
       const textSettings = ((_a2 = props.text) == null ? void 0 : _a2.find((t) => t.language === currentLanguage.value)) || props.text[0];
       const translation = getTranslations(currentLanguage.value);
       const orderedContacts = props.contacts.slice().filter((contact) => isMobile.value ? contact.on_mobile : contact.on_web).sort((a, b) => a.order - b.order);
@@ -14173,7 +14171,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.35";
+const version = "1.1.36";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14224,13 +14222,12 @@ async function register() {
         throw error;
       return {};
     });
-    const { appearance: appearance2 = {}, text = [], general = {}, contacts = { channels: [] } } = settings;
+    const { appearance: appearance2 = {}, text = [], general = {}, contacts = { channels: [] }, features = {} } = settings;
     const {
       enable_on_mobile,
       currency_symbol,
       exclude_bot_paths = [],
-      chaty_integration,
-      features = {}
+      chaty_integration
     } = general;
     const props = {
       ...appearance2,
@@ -14283,4 +14280,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-3ed571a5.js.map
+//# sourceMappingURL=module-cc728d0e.js.map
