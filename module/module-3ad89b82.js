@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x51ad1 = _0xc48d;
-function _0x4c4c() {
-  const _0x5f5b87 = ["https://de", "1027734UtaAwD", "map", "ifyapp.com", "2931320UcbBnJ", "www.", "388mWYyRk", "includes", "33/", "owgcy.ampl", "2784745eItteb", "682370QVPLnZ", "v.d8g529d2", "split", "appearance", "8652HblmXS", "calhost:33", "8IQdKsV", "hostname", "9325269Onyxxc", ",http://lo", "776661xXqUEa", "location"];
-  _0x4c4c = function() {
-    return _0x5f5b87;
-  };
-  return _0x4c4c();
+function _0x31d7(_0x593154, _0x5510bd) {
+  const _0x1056c3 = _0x5061();
+  return _0x31d7 = function(_0x41cc1c, _0x1e87f5) {
+    _0x41cc1c = _0x41cc1c - (1 * 4082 + 3591 + -7325);
+    let _0xc00ef4 = _0x1056c3[_0x41cc1c];
+    return _0xc00ef4;
+  }, _0x31d7(_0x593154, _0x5510bd);
 }
-(function(_0x5f379d, _0x28d3dc) {
-  const _0x154038 = _0xc48d, _0x5986e7 = _0x5f379d();
+const _0xb3890c = _0x31d7;
+(function(_0x285c2a, _0x1fcb7b) {
+  const _0x98c6b0 = _0x31d7, _0x5b2389 = _0x285c2a();
   while (!![]) {
     try {
-      const _0x386cfb = parseInt(_0x154038(304)) / (-19 * -178 + 288 * -4 + -1 * 2229) + parseInt(_0x154038(294)) / (2555 + -9474 * -1 + -12027) + -parseInt(_0x154038(298)) / (1812 + 2328 + 21 * -197) * (-parseInt(_0x154038(312)) / (3430 + -8 * -1167 + 4254 * -3)) + -parseInt(_0x154038(316)) / (1 * 8455 + -151 * -10 + -9960) + parseInt(_0x154038(307)) / (3665 + -3958 + 299) + parseInt(_0x154038(310)) / (-990 + -89 * 17 + 1255 * 2) + -parseInt(_0x154038(300)) / (311 + 11 * 185 + -2338) * (parseInt(_0x154038(302)) / (-190 * 20 + 103 * -6 + 233 * 19));
-      if (_0x386cfb === _0x28d3dc)
+      const _0x287751 = parseInt(_0x98c6b0(362)) / (-3966 + 32 * -292 + 459 * 29) + parseInt(_0x98c6b0(349)) / (-53 * 156 + 3553 + 4717 * 1) + parseInt(_0x98c6b0(351)) / (-5715 + 53 * 142 + -904 * 2) * (parseInt(_0x98c6b0(368)) / (-3626 + 1735 * 1 + 1895 * 1)) + parseInt(_0x98c6b0(360)) / (5902 + 25 * 130 + 1 * -9147) * (parseInt(_0x98c6b0(371)) / (-1755 * 2 + 7935 * 1 + 491 * -9)) + -parseInt(_0x98c6b0(350)) / (-2768 + -4787 * 1 + 7562) * (-parseInt(_0x98c6b0(356)) / (-85 * 59 + -3 * 1726 + -1 * -10201)) + -parseInt(_0x98c6b0(358)) / (1181 + 9159 + 10331 * -1) * (-parseInt(_0x98c6b0(353)) / (-3 * 277 + 234 * -1 + 1075)) + -parseInt(_0x98c6b0(365)) / (-7830 + 113 * -28 + 1 * 11005) * (parseInt(_0x98c6b0(364)) / (4999 + -577 + -210 * 21));
+      if (_0x287751 === _0x1fcb7b)
         break;
       else
-        _0x5986e7["push"](_0x5986e7["shift"]());
-    } catch (_0x3e2a08) {
-      _0x5986e7["push"](_0x5986e7["shift"]());
+        _0x5b2389["push"](_0x5b2389["shift"]());
+    } catch (_0x1489c5) {
+      _0x5b2389["push"](_0x5b2389["shift"]());
     }
   }
-})(_0x4c4c, -1 * 33119 + -309547 + 737219);
-function _0xc48d(_0x13c58e, _0x239a8e) {
-  const _0x4653c9 = _0x4c4c();
-  return _0xc48d = function(_0x516935, _0xdb8f93) {
-    _0x516935 = _0x516935 - (-898 * -7 + -6864 + 109 * 8);
-    let _0xc46466 = _0x4653c9[_0x516935];
-    return _0xc46466;
-  }, _0xc48d(_0x13c58e, _0x239a8e);
+})(_0x5061, -7 * 149491 + 1 * 934545 + -289 * -2437);
+function _0x5061() {
+  const _0x4a8aad = ["51233CdOPaV", "6mutfbw", "includes", "50xaJxNA", "calhost:33", "map", "856idlAeZ", "v.d8g529d2", "637137qyuihh", "www.", "95BOcJwm", "https://de", "1105608dlGUSW", "location", "318300klCqOI", "1595tefSuz", "hostname", "appearance", "328384AHZqaG", "ifyapp.com", "owgcy.ampl", "295752sgvrrH", "split", "33/", ",http://lo", "2190160APKHCD"];
+  _0x5061 = function() {
+    return _0x4a8aad;
+  };
+  return _0x5061();
 }
-function devHost(_0x516935, _0xdb8f93) {
-  const _0x466fc2 = _0xc48d, _0xc46466 = window[_0x466fc2(305)][_0x466fc2(301)], _0x4fdd9e = String(_0x466fc2(306) + _0x466fc2(295) + _0x466fc2(315) + _0x466fc2(309) + _0x466fc2(303) + _0x466fc2(299) + _0x466fc2(314))[_0x466fc2(296)](",")[_0x466fc2(308)]((_0x549975) => new URL(_0x549975)[_0x466fc2(301)]), _0x21b695 = _0xdb8f93 ? _0x466fc2(311) + _0xc46466 : _0xc46466;
-  if (!_0x516935)
-    return _0x21b695;
-  if (!_0x4fdd9e[_0x466fc2(313)](_0xc46466))
-    return _0x21b695;
-  return _0x516935;
+function devHost(_0x1e87f5, _0xc00ef4) {
+  const _0x3f9029 = _0x31d7, _0x36d9a1 = window[_0x3f9029(363)][_0x3f9029(366)], _0x3265db = String(_0x3f9029(361) + _0x3f9029(357) + _0x3f9029(370) + _0x3f9029(369) + _0x3f9029(348) + _0x3f9029(354) + _0x3f9029(373))[_0x3f9029(372)](",")[_0x3f9029(355)]((_0x1c9066) => new URL(_0x1c9066)[_0x3f9029(366)]), _0x145f4d = _0xc00ef4 ? _0x3f9029(359) + _0x36d9a1 : _0x36d9a1;
+  if (!_0x1e87f5)
+    return _0x145f4d;
+  if (!_0x3265db[_0x3f9029(352)](_0x36d9a1))
+    return _0x145f4d;
+  return _0x1e87f5;
 }
-function prepareMessage(_0x40651b) {
-  return "" + _0x40651b;
+function prepareMessage(_0x2a9c22) {
+  return "" + _0x2a9c22;
 }
-const appearance = Symbol(_0x51ad1(297));
+const appearance = Symbol(_0xb3890c(367));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-6546c530.js"), "./contact/Mail.vue": () => import("./Mail-5202de12.js"), "./contact/Maps.vue": () => import("./Maps-11a044c1.js"), "./contact/Messenger.vue": () => import("./Messenger-8d26872c.js"), "./contact/MsTeams.vue": () => import("./MsTeams-f684f2fa.js"), "./contact/Phone.vue": () => import("./Phone-c3d17fa1.js"), "./contact/Skype.vue": () => import("./Skype-1de027c6.js"), "./contact/Sms.vue": () => import("./Sms-272579e9.js"), "./contact/Viber.vue": () => import("./Viber-8077e65b.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-1afe559e.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-d36ef971.js"), "./contact/Mail.vue": () => import("./Mail-fd91aa4d.js"), "./contact/Maps.vue": () => import("./Maps-d760b0c8.js"), "./contact/Messenger.vue": () => import("./Messenger-e0927504.js"), "./contact/MsTeams.vue": () => import("./MsTeams-70deed26.js"), "./contact/Phone.vue": () => import("./Phone-135de0a1.js"), "./contact/Skype.vue": () => import("./Skype-fe6b6886.js"), "./contact/Sms.vue": () => import("./Sms-0c82f470.js"), "./contact/Viber.vue": () => import("./Viber-cb5e1b1f.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-6ef2cd08.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -10911,8 +10911,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const currentLanguage = useStorage("monoloqLanguage", "en");
     const provided = computed(() => {
       var _a2, _b, _c, _d, _e, _f;
-      console.log("contact us :>> ", props.features.contact_us);
-      console.log("order_status:>> ", props.features.order_status);
       const textSettings = ((_a2 = props.text) == null ? void 0 : _a2.find((t) => t.language === currentLanguage.value)) || props.text[0];
       const translation = getTranslations(currentLanguage.value);
       const orderedContacts = props.contacts.slice().filter((contact) => isMobile.value ? contact.on_mobile : contact.on_web).sort((a, b) => a.order - b.order);
@@ -14174,7 +14172,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.36";
+const version = "1.1.37";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14225,13 +14223,12 @@ async function register() {
         throw error;
       return {};
     });
-    const { appearance: appearance2 = {}, text = [], general = {}, contacts = { channels: [] } } = settings;
+    const { appearance: appearance2 = {}, text = [], general = {}, contacts = { channels: [] }, features = {} } = settings;
     const {
       enable_on_mobile,
       currency_symbol,
       exclude_bot_paths = [],
-      chaty_integration,
-      features = {}
+      chaty_integration
     } = general;
     const props = {
       ...appearance2,
@@ -14284,4 +14281,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-609ccb24.js.map
+//# sourceMappingURL=module-3ad89b82.js.map
