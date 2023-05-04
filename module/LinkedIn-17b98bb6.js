@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-254f537e.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-3619c680.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   class: "text-[#0077b5]",
@@ -29,4 +29,4 @@ const LinkedIn = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]
 export {
   LinkedIn as default
 };
-//# sourceMappingURL=LinkedIn-f3cb0560.js.map
+//# sourceMappingURL=LinkedIn-17b98bb6.js.map
