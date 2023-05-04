@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x23b76f = _0x4af2;
-(function(_0x56c504, _0xc7741e) {
-  const _0x1574b1 = _0x4af2, _0x9e6f56 = _0x56c504();
+const _0x94dbb = _0xc784;
+(function(_0x2df3ec, _0x6083b6) {
+  const _0x41b4fa = _0xc784, _0x186f41 = _0x2df3ec();
   while (!![]) {
     try {
-      const _0x58bb62 = -parseInt(_0x1574b1(363)) / (7933 * 1 + -17 * -3 + -7983) + -parseInt(_0x1574b1(369)) / (-4184 * -2 + -5306 + -3060) * (parseInt(_0x1574b1(366)) / (7684 + -3647 + -4034)) + parseInt(_0x1574b1(354)) / (148 + 44 * 194 + -8680) + parseInt(_0x1574b1(358)) / (-8880 + 3599 + 5286) + parseInt(_0x1574b1(367)) / (-5434 + -5424 + 2 * 5432) * (-parseInt(_0x1574b1(368)) / (-1043 * 1 + -2467 * 3 + 8451)) + parseInt(_0x1574b1(349)) / (-3572 + 293 * 17 + -1401) + parseInt(_0x1574b1(356)) / (-6736 + -22 * 271 + 12707 * 1);
-      if (_0x58bb62 === _0xc7741e)
+      const _0xeea47 = parseInt(_0x41b4fa(421)) / (-3365 + -919 * -1 + 2447) + -parseInt(_0x41b4fa(423)) / (-4375 + -5162 + 9539) + parseInt(_0x41b4fa(426)) / (-2845 + -6444 + 9292) * (-parseInt(_0x41b4fa(408)) / (-6656 + -2594 * -1 + 4066)) + -parseInt(_0x41b4fa(411)) / (2309 * -1 + 243 + 2071) * (parseInt(_0x41b4fa(414)) / (-5 * -1751 + 1487 * 5 + -16184)) + parseInt(_0x41b4fa(418)) / (1163 * -6 + 2100 + 1 * 4885) + parseInt(_0x41b4fa(410)) / (-11 * -656 + -3681 + -3527) * (parseInt(_0x41b4fa(412)) / (3235 + 3243 + 1 * -6469)) + -parseInt(_0x41b4fa(422)) / (-3181 + -7783 + -3658 * -3) * (parseInt(_0x41b4fa(405)) / (-684 + -3404 + 4099 * 1));
+      if (_0xeea47 === _0x6083b6)
         break;
       else
-        _0x9e6f56["push"](_0x9e6f56["shift"]());
-    } catch (_0xcaff11) {
-      _0x9e6f56["push"](_0x9e6f56["shift"]());
+        _0x186f41["push"](_0x186f41["shift"]());
+    } catch (_0x3ea25b) {
+      _0x186f41["push"](_0x186f41["shift"]());
     }
   }
-})(_0x39c8, -1399460 + 4 * -280147 + 3316690);
-function _0x4af2(_0xf780d6, _0x3d6124) {
-  const _0x4a2379 = _0x39c8();
-  return _0x4af2 = function(_0x46a70a, _0x37d57f) {
-    _0x46a70a = _0x46a70a - (677 * 7 + 25 * 275 + -3 * 3755);
-    let _0x21114a = _0x4a2379[_0x46a70a];
-    return _0x21114a;
-  }, _0x4af2(_0xf780d6, _0x3d6124);
-}
-function devHost(_0x4a2379, _0x46a70a) {
-  const _0x199b03 = _0x4af2, _0x37d57f = window[_0x199b03(360)][_0x199b03(355)], _0x21114a = String(_0x199b03(361) + _0x199b03(351) + _0x199b03(365) + _0x199b03(359) + _0x199b03(370) + _0x199b03(350) + _0x199b03(357))[_0x199b03(364)](",")[_0x199b03(371)]((_0x5250e6) => new URL(_0x5250e6)[_0x199b03(355)]), _0x3cdd26 = _0x46a70a ? _0x199b03(353) + _0x37d57f : _0x37d57f;
-  if (!_0x4a2379)
-    return _0x3cdd26;
-  if (!_0x21114a[_0x199b03(352)](_0x37d57f))
-    return _0x3cdd26;
-  return _0x4a2379;
-}
-function prepareMessage(_0x96fde5) {
-  return "" + _0x96fde5;
-}
-function _0x39c8() {
-  const _0x29734a = ["includes", "www.", "2810732JuELZv", "hostname", "12193155IEGlIq", "33/", "3300385rQWjPa", "ifyapp.com", "location", "https://de", "appearance", "1108022MXJsVn", "split", "owgcy.ampl", "3aQtsKl", "6CSTnxZ", "7591899NMgJjN", "2225906iUjvhY", ",http://lo", "map", "11076952jLtjMF", "calhost:33", "v.d8g529d2"];
-  _0x39c8 = function() {
-    return _0x29734a;
+})(_0x7129, 237420 + -650425 + 30110 * 29);
+function _0x7129() {
+  const _0x505ff2 = [",http://lo", "1266jANjnv", "appearance", "hostname", "includes", "3183572bYNPgR", "ifyapp.com", "map", "875911WygitY", "10ffYaIb", "1622352ruAOuZ", "split", "calhost:33", "1050xemRTk", "v.d8g529d2", "https://de", "www.", "6684810whwKQD", "33/", "location", "516qvlswe", "owgcy.ampl", "7336jjxTiG", "6905Pwzyje", "8685YfeGzm"];
+  _0x7129 = function() {
+    return _0x505ff2;
   };
-  return _0x39c8();
+  return _0x7129();
 }
-const appearance = Symbol(_0x23b76f(362));
+function devHost(_0x240ac5, _0x61b718) {
+  const _0x5e0a5f = _0xc784, _0x5e292a = window[_0x5e0a5f(407)][_0x5e0a5f(416)], _0x3235e7 = String(_0x5e0a5f(428) + _0x5e0a5f(427) + _0x5e0a5f(409) + _0x5e0a5f(419) + _0x5e0a5f(413) + _0x5e0a5f(425) + _0x5e0a5f(406))[_0x5e0a5f(424)](",")[_0x5e0a5f(420)]((_0x45aa47) => new URL(_0x45aa47)[_0x5e0a5f(416)]), _0x5f2bf2 = _0x61b718 ? _0x5e0a5f(404) + _0x5e292a : _0x5e292a;
+  if (!_0x240ac5)
+    return _0x5f2bf2;
+  if (!_0x3235e7[_0x5e0a5f(417)](_0x5e292a))
+    return _0x5f2bf2;
+  return _0x240ac5;
+}
+function prepareMessage(_0x19c94a) {
+  return "" + _0x19c94a;
+}
+function _0xc784(_0x431313, _0x40bee0) {
+  const _0x398742 = _0x7129();
+  return _0xc784 = function(_0x47aa1d, _0x2f9cd1) {
+    _0x47aa1d = _0x47aa1d - (-2735 + -7830 + 10969);
+    let _0x240ac5 = _0x398742[_0x47aa1d];
+    return _0x240ac5;
+  }, _0xc784(_0x431313, _0x40bee0);
+}
+const appearance = Symbol(_0x94dbb(415));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-e48add81.js"), "./contact/Mail.vue": () => import("./Mail-24168d8d.js"), "./contact/Maps.vue": () => import("./Maps-d4b1693f.js"), "./contact/Messenger.vue": () => import("./Messenger-6e2cc75d.js"), "./contact/MsTeams.vue": () => import("./MsTeams-961d96a6.js"), "./contact/Phone.vue": () => import("./Phone-fd541baf.js"), "./contact/Skype.vue": () => import("./Skype-98c3d561.js"), "./contact/Sms.vue": () => import("./Sms-c38cf24d.js"), "./contact/Viber.vue": () => import("./Viber-a38e302e.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-c9b49f23.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-e47a547d.js"), "./contact/Mail.vue": () => import("./Mail-031fd993.js"), "./contact/Maps.vue": () => import("./Maps-72ecf598.js"), "./contact/Messenger.vue": () => import("./Messenger-0b04c546.js"), "./contact/MsTeams.vue": () => import("./MsTeams-fda4844b.js"), "./contact/Phone.vue": () => import("./Phone-2f0cf899.js"), "./contact/Skype.vue": () => import("./Skype-b3d178dc.js"), "./contact/Sms.vue": () => import("./Sms-98ee8fd5.js"), "./contact/Viber.vue": () => import("./Viber-37b7a1fb.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-01a6bd08.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -10843,16 +10843,16 @@ const _hoisted_6 = {
 };
 const _hoisted_7 = {
   key: 1,
-  class: "mt-3 px-4"
-};
-const _hoisted_8 = /* @__PURE__ */ createBaseVNode("div", { class: "text-center text-sm text-black/30 border-t" }, [
-  /* @__PURE__ */ createBaseVNode("p", { class: "relative inline-flex top-0 -translate-y-[50%] bg-white px-2" }, " Contact us ")
-], -1);
-const _hoisted_9 = { class: "contact-chat grid grid-cols-4 pb-4 pt-2 gap-3 mx-auto max-w-[240px] justify-items-center" };
-const _hoisted_10 = {
-  key: 2,
   class: "flex gap-2 mt-4 w-full flex-wrap justify-center mb-4 items-center"
 };
+const _hoisted_8 = {
+  key: 2,
+  class: "mt-3 px-4"
+};
+const _hoisted_9 = /* @__PURE__ */ createBaseVNode("div", { class: "text-center text-sm text-black/30 border-t" }, [
+  /* @__PURE__ */ createBaseVNode("p", { class: "relative inline-flex top-0 -translate-y-[50%] bg-white px-2" }, " Contact us ")
+], -1);
+const _hoisted_10 = { class: "contact-chat grid grid-cols-4 pb-4 pt-2 gap-3 mx-auto max-w-[240px] justify-items-center" };
 const _hoisted_11 = { class: "flex-none" };
 const _hoisted_12 = { class: "text-center bg-transparent text-xs py-2 flex flex-col justify-center items-center border-b-2 flex-none" };
 const _hoisted_13 = {
@@ -11392,22 +11392,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                               onNavigate: navigate
                             }, null, 8, ["products", "onScrollTo"])
                           ])) : createCommentVNode("", true),
-                          unref(provided).showContacts && "triggers" in message && message.triggers.find((trigger22) => trigger22.type === "contact") ? (openBlock(), createElementBlock("div", _hoisted_7, [
-                            _hoisted_8,
-                            createBaseVNode("div", _hoisted_9, [
-                              (openBlock(true), createElementBlock(Fragment, null, renderList(unref(provided).contacts, (channel) => {
-                                return openBlock(), createBlock(_sfc_main$9, {
-                                  id: channel.channel_id,
-                                  key: channel.channel_id,
-                                  href: channel.href,
-                                  target: channel.target,
-                                  text: channel.text,
-                                  class: "w-12 h-12"
-                                }, null, 8, ["id", "href", "target", "text"]);
-                              }), 128))
-                            ])
-                          ])) : createCommentVNode("", true),
-                          (unref(provided).showContacts || unref(provided).showOrders) && index === 0 ? (openBlock(), createElementBlock("div", _hoisted_10, [
+                          (unref(provided).showContacts || unref(provided).showOrders) && index === 0 ? (openBlock(), createElementBlock("div", _hoisted_7, [
                             unref(provided).showContacts ? (openBlock(), createElementBlock("button", {
                               key: 0,
                               class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
@@ -11420,6 +11405,21 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                               style: { color: "black" },
                               onClick: _cache[11] || (_cache[11] = ($event) => isOrderTrackingOpen.value = true)
                             }, " Track order ", 2)) : createCommentVNode("", true)
+                          ])) : createCommentVNode("", true),
+                          unref(provided).showContacts && "triggers" in message && message.triggers.find((trigger22) => trigger22.type === "contact") ? (openBlock(), createElementBlock("div", _hoisted_8, [
+                            _hoisted_9,
+                            createBaseVNode("div", _hoisted_10, [
+                              (openBlock(true), createElementBlock(Fragment, null, renderList(unref(provided).contacts, (channel) => {
+                                return openBlock(), createBlock(_sfc_main$9, {
+                                  id: channel.channel_id,
+                                  key: channel.channel_id,
+                                  href: channel.href,
+                                  target: channel.target,
+                                  text: channel.text,
+                                  class: "w-12 h-12"
+                                }, null, 8, ["id", "href", "target", "text"]);
+                              }), 128))
+                            ])
                           ])) : createCommentVNode("", true)
                         ], 64);
                       }), 128))
@@ -14172,7 +14172,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.38";
+const version = "1.1.39";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14281,4 +14281,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-7b6fe4b4.js.map
+//# sourceMappingURL=module-29db859f.js.map
