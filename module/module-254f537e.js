@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x2550eb = _0x1f5b;
-function _0x1b85() {
-  const _0x3942a3 = ["6132000saHwiO", "location", "4sAgmri", "405620KtyreG", "map", "20HHCMOt", "appearance", "737298TUuoQD", "hostname", "includes", "www.", "https://ap", "80718UUlZki", "4551072sXHbAB", "3486525uyCnex", "252klxHjf", "p.monoloq.", "split", "210441hJgobX"];
-  _0x1b85 = function() {
-    return _0x3942a3;
+const _0x15b33f = _0x3069;
+function _0x440a() {
+  const _0x235cbe = ["1076373MyzOED", "3296735TwVrQv", "5139552KJFlLH", "appearance", "map", "p.monoloq.", "7XqzJti", "4230008tocKCH", "4YmDVLs", "location", "6UVdhTY", "313807JZVTTi", "hostname", "split", "https://ap", "844752BhYIfE", "www.", "includes", "110rfYnoL", "679854cPMLOm"];
+  _0x440a = function() {
+    return _0x235cbe;
   };
-  return _0x1b85();
+  return _0x440a();
 }
-(function(_0x7a21fd, _0x548005) {
-  const _0x149876 = _0x1f5b, _0x1cbd5d = _0x7a21fd();
+(function(_0x8c21ce, _0x1c0f06) {
+  const _0x497b49 = _0x3069, _0x3b2b0c = _0x8c21ce();
   while (!![]) {
     try {
-      const _0x58bd7b = parseInt(_0x149876(165)) / (3589 * -1 + -5468 + 4529 * 2) * (parseInt(_0x149876(164)) / (-67 * -22 + -74 * 119 + 2 * 3667)) + parseInt(_0x149876(161)) / (19 * -85 + -4373 * 1 + -1 * -5991) * (-parseInt(_0x149876(167)) / (-2 * -3995 + -1 * 7993 + -7 * -1)) + parseInt(_0x149876(157)) / (-6249 + -137 * 41 + -3957 * -3) + -parseInt(_0x149876(174)) / (-3727 + 4366 + -633) * (parseInt(_0x149876(158)) / (4 * -193 + -6504 + 1 * 7283)) + parseInt(_0x149876(175)) / (-4422 + -3 * 3166 + 13928) + -parseInt(_0x149876(169)) / (7 * -275 + 18 * -302 + 7370) + -parseInt(_0x149876(162)) / (43 * 58 + -4071 + 1587);
-      if (_0x58bd7b === _0x548005)
+      const _0xc21980 = parseInt(_0x497b49(467)) / (1744 + 12 * 172 + -1269 * 3) + -parseInt(_0x497b49(455)) / (4604 * 1 + -1801 * -1 + -6403) + -parseInt(_0x497b49(451)) / (-6588 + -4664 + 11255) * (parseInt(_0x497b49(464)) / (-6451 + 6346 + 1 * 109)) + parseInt(_0x497b49(457)) / (6025 + 7872 + -13892) * (parseInt(_0x497b49(466)) / (-1620 + 3914 + -13 * 176)) + -parseInt(_0x497b49(462)) / (-1 * 4289 + -2791 + 373 * 19) * (parseInt(_0x497b49(463)) / (9875 + -638 + -9229)) + -parseInt(_0x497b49(456)) / (2385 + 7765 + -10141) * (-parseInt(_0x497b49(454)) / (4724 + -7115 + 1 * 2401)) + -parseInt(_0x497b49(458)) / (5 * -1141 + 1816 * 4 + -1548);
+      if (_0xc21980 === _0x1c0f06)
         break;
       else
-        _0x1cbd5d["push"](_0x1cbd5d["shift"]());
-    } catch (_0x46bf08) {
-      _0x1cbd5d["push"](_0x1cbd5d["shift"]());
+        _0x3b2b0c["push"](_0x3b2b0c["shift"]());
+    } catch (_0x2b2329) {
+      _0x3b2b0c["push"](_0x3b2b0c["shift"]());
     }
   }
-})(_0x1b85, 97232 + 256126 * 1 + 193906);
-function devHost(_0x501519, _0x5a97ae) {
-  const _0x445e39 = _0x1f5b, _0x308bcd = window[_0x445e39(163)][_0x445e39(170)], _0x11b824 = String(_0x445e39(173) + _0x445e39(159) + "ai")[_0x445e39(160)](",")[_0x445e39(166)]((_0x17f927) => new URL(_0x17f927)[_0x445e39(170)]), _0x2425af = _0x5a97ae ? _0x445e39(172) + _0x308bcd : _0x308bcd;
-  if (!_0x501519)
-    return _0x2425af;
-  if (!_0x11b824[_0x445e39(171)](_0x308bcd))
-    return _0x2425af;
-  return _0x501519;
+})(_0x440a, -1 * -804009 + -25325 * -5 + -1517 * 171);
+function devHost(_0xe7e372, _0x522e07) {
+  const _0x514c7e = _0x3069, _0x285711 = window[_0x514c7e(465)][_0x514c7e(468)], _0x58962b = String(_0x514c7e(450) + _0x514c7e(461) + "ai")[_0x514c7e(449)](",")[_0x514c7e(460)]((_0x5743f9) => new URL(_0x5743f9)[_0x514c7e(468)]), _0x130461 = _0x522e07 ? _0x514c7e(452) + _0x285711 : _0x285711;
+  if (!_0xe7e372)
+    return _0x130461;
+  if (!_0x58962b[_0x514c7e(453)](_0x285711))
+    return _0x130461;
+  return _0xe7e372;
 }
-function prepareMessage(_0x1a8dd1) {
-  return "" + _0x1a8dd1;
+function prepareMessage(_0x3115e1) {
+  return "" + _0x3115e1;
 }
-function _0x1f5b(_0x5f2156, _0xcc05d4) {
-  const _0x2a275e = _0x1b85();
-  return _0x1f5b = function(_0x33f248, _0x501519) {
-    _0x33f248 = _0x33f248 - (2222 + 8379 + -28 * 373);
-    let _0x5a97ae = _0x2a275e[_0x33f248];
-    return _0x5a97ae;
-  }, _0x1f5b(_0x5f2156, _0xcc05d4);
+function _0x3069(_0x1d4828, _0x5e9cdb) {
+  const _0x5701cb = _0x440a();
+  return _0x3069 = function(_0xe7e372, _0x522e07) {
+    _0xe7e372 = _0xe7e372 - (-7723 * -1 + -206 * -29 + -13248);
+    let _0x285711 = _0x5701cb[_0xe7e372];
+    return _0x285711;
+  }, _0x3069(_0x1d4828, _0x5e9cdb);
 }
-const appearance = Symbol(_0x2550eb(168));
+const appearance = Symbol(_0x15b33f(459));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-a6e00cab.js"), "./contact/Mail.vue": () => import("./Mail-79e287ea.js"), "./contact/Maps.vue": () => import("./Maps-e73bdb8d.js"), "./contact/Messenger.vue": () => import("./Messenger-3a412ff6.js"), "./contact/MsTeams.vue": () => import("./MsTeams-1afcfbc6.js"), "./contact/Phone.vue": () => import("./Phone-4486a717.js"), "./contact/Skype.vue": () => import("./Skype-99d97ec1.js"), "./contact/Sms.vue": () => import("./Sms-41a968aa.js"), "./contact/Viber.vue": () => import("./Viber-7f729541.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-625d5547.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-f3cb0560.js"), "./contact/Mail.vue": () => import("./Mail-41797f07.js"), "./contact/Maps.vue": () => import("./Maps-5f4559ab.js"), "./contact/Messenger.vue": () => import("./Messenger-ee5c93de.js"), "./contact/MsTeams.vue": () => import("./MsTeams-1c81eee6.js"), "./contact/Phone.vue": () => import("./Phone-a0430766.js"), "./contact/Skype.vue": () => import("./Skype-0fad9ada.js"), "./contact/Sms.vue": () => import("./Sms-75cce854.js"), "./contact/Viber.vue": () => import("./Viber-286a1d24.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-6426be0c.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -11409,13 +11409,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           (unref(provided).showContacts || unref(provided).showOrders) && index === 0 ? (openBlock(), createElementBlock("div", _hoisted_10, [
                             unref(provided).showContacts ? (openBlock(), createElementBlock("button", {
                               key: 0,
-                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
+                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
                               style: { color: "black" },
                               onClick: _cache[10] || (_cache[10] = ($event) => isIntegrationsOpen.value = true)
                             }, " Contact us ", 2)) : createCommentVNode("", true),
                             unref(provided).showOrders ? (openBlock(), createElementBlock("button", {
                               key: 1,
-                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
+                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
                               style: { color: "black" },
                               onClick: _cache[11] || (_cache[11] = ($event) => isOrderTrackingOpen.value = true)
                             }, " Track order ", 2)) : createCommentVNode("", true)
@@ -14171,7 +14171,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.36";
+const version = "1.1.37";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14280,4 +14280,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-cc728d0e.js.map
+//# sourceMappingURL=module-254f537e.js.map

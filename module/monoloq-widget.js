@@ -1,4 +1,4 @@
-import { C, i, r } from "./module-cc728d0e.js";
+import { C, i, r } from "./module-254f537e.js";
 export {
   C as ChatWindow,
   i as installWidget,
