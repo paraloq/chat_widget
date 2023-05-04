@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x94dbb = _0xc784;
-(function(_0x2df3ec, _0x6083b6) {
-  const _0x41b4fa = _0xc784, _0x186f41 = _0x2df3ec();
+const _0x596d2b = _0x3f21;
+(function(_0xaa6911, _0x1d11fa) {
+  const _0x59c927 = _0x3f21, _0x3d224a = _0xaa6911();
   while (!![]) {
     try {
-      const _0xeea47 = parseInt(_0x41b4fa(421)) / (-3365 + -919 * -1 + 2447) + -parseInt(_0x41b4fa(423)) / (-4375 + -5162 + 9539) + parseInt(_0x41b4fa(426)) / (-2845 + -6444 + 9292) * (-parseInt(_0x41b4fa(408)) / (-6656 + -2594 * -1 + 4066)) + -parseInt(_0x41b4fa(411)) / (2309 * -1 + 243 + 2071) * (parseInt(_0x41b4fa(414)) / (-5 * -1751 + 1487 * 5 + -16184)) + parseInt(_0x41b4fa(418)) / (1163 * -6 + 2100 + 1 * 4885) + parseInt(_0x41b4fa(410)) / (-11 * -656 + -3681 + -3527) * (parseInt(_0x41b4fa(412)) / (3235 + 3243 + 1 * -6469)) + -parseInt(_0x41b4fa(422)) / (-3181 + -7783 + -3658 * -3) * (parseInt(_0x41b4fa(405)) / (-684 + -3404 + 4099 * 1));
-      if (_0xeea47 === _0x6083b6)
+      const _0x326dfb = -parseInt(_0x59c927(505)) / (-518 * -3 + 28 * -69 + 379) * (parseInt(_0x59c927(503)) / (-1963 * -5 + 1 * 7801 + 2 * -8807)) + -parseInt(_0x59c927(500)) / (-1153 * -1 + 8392 + -9542) * (-parseInt(_0x59c927(504)) / (-8629 * 1 + -7625 + 16258)) + parseInt(_0x59c927(491)) / (587 * 15 + 6605 + -15405) * (parseInt(_0x59c927(487)) / (-706 * -2 + -1 * -4015 + -139 * 39)) + -parseInt(_0x59c927(495)) / (-2657 + -259 * 5 + 3959) + -parseInt(_0x59c927(488)) / (23 * 395 + 101 * 92 + -2041 * 9) * (parseInt(_0x59c927(492)) / (9522 + 9263 + -18776)) + parseInt(_0x59c927(502)) / (54 * 18 + 1637 * 1 + -2599) * (parseInt(_0x59c927(507)) / (-189 * -49 + -3645 + -5605)) + -parseInt(_0x59c927(499)) / (-6699 + 1209 * -1 + -36 * -220) * (-parseInt(_0x59c927(496)) / (61 * 129 + -1 * 1717 + -6139));
+      if (_0x326dfb === _0x1d11fa)
         break;
       else
-        _0x186f41["push"](_0x186f41["shift"]());
-    } catch (_0x3ea25b) {
-      _0x186f41["push"](_0x186f41["shift"]());
+        _0x3d224a["push"](_0x3d224a["shift"]());
+    } catch (_0x1bb18f) {
+      _0x3d224a["push"](_0x3d224a["shift"]());
     }
   }
-})(_0x7129, 237420 + -650425 + 30110 * 29);
-function _0x7129() {
-  const _0x505ff2 = [",http://lo", "1266jANjnv", "appearance", "hostname", "includes", "3183572bYNPgR", "ifyapp.com", "map", "875911WygitY", "10ffYaIb", "1622352ruAOuZ", "split", "calhost:33", "1050xemRTk", "v.d8g529d2", "https://de", "www.", "6684810whwKQD", "33/", "location", "516qvlswe", "owgcy.ampl", "7336jjxTiG", "6905Pwzyje", "8685YfeGzm"];
-  _0x7129 = function() {
-    return _0x505ff2;
+})(_0x4856, -1 * 116665 + 108578 + 169 * 697);
+function devHost(_0x2cdfee, _0x5124a8) {
+  const _0x2ba98e = _0x3f21, _0x2b96f2 = window[_0x2ba98e(490)][_0x2ba98e(511)], _0x53f197 = String(_0x2ba98e(489) + _0x2ba98e(494) + _0x2ba98e(510) + _0x2ba98e(493) + _0x2ba98e(506) + _0x2ba98e(508) + _0x2ba98e(512))[_0x2ba98e(509)](",")[_0x2ba98e(501)]((_0x146dd4) => new URL(_0x146dd4)[_0x2ba98e(511)]), _0xcaf75c = _0x5124a8 ? _0x2ba98e(513) + _0x2b96f2 : _0x2b96f2;
+  if (!_0x2cdfee)
+    return _0xcaf75c;
+  if (!_0x53f197[_0x2ba98e(497)](_0x2b96f2))
+    return _0xcaf75c;
+  return _0x2cdfee;
+}
+function prepareMessage(_0x4cdabf) {
+  return "" + _0x4cdabf;
+}
+const appearance = Symbol(_0x596d2b(498));
+function _0x3f21(_0x2596ed, _0x58b2bb) {
+  const _0xde9f20 = _0x4856();
+  return _0x3f21 = function(_0x2cdfee, _0x5124a8) {
+    _0x2cdfee = _0x2cdfee - (5885 + -1207 * -1 + -1 * 6605);
+    let _0x2b96f2 = _0xde9f20[_0x2cdfee];
+    return _0x2b96f2;
+  }, _0x3f21(_0x2596ed, _0x58b2bb);
+}
+function _0x4856() {
+  const _0xb74d0f = ["split", "owgcy.ampl", "hostname", "33/", "www.", "90ZwTZzC", "1735416jcXLiK", "https://de", "location", "8895SIORIs", "9QlPLcd", "ifyapp.com", "v.d8g529d2", "1504741DbtPbg", "26teNIxd", "includes", "appearance", "1608936CvjUNW", "9957fzatzw", "map", "10aeeKBx", "2spWiiu", "252RPQJBl", "114913poKYCh", ",http://lo", "1678281icrOEh", "calhost:33"];
+  _0x4856 = function() {
+    return _0xb74d0f;
   };
-  return _0x7129();
+  return _0x4856();
 }
-function devHost(_0x240ac5, _0x61b718) {
-  const _0x5e0a5f = _0xc784, _0x5e292a = window[_0x5e0a5f(407)][_0x5e0a5f(416)], _0x3235e7 = String(_0x5e0a5f(428) + _0x5e0a5f(427) + _0x5e0a5f(409) + _0x5e0a5f(419) + _0x5e0a5f(413) + _0x5e0a5f(425) + _0x5e0a5f(406))[_0x5e0a5f(424)](",")[_0x5e0a5f(420)]((_0x45aa47) => new URL(_0x45aa47)[_0x5e0a5f(416)]), _0x5f2bf2 = _0x61b718 ? _0x5e0a5f(404) + _0x5e292a : _0x5e292a;
-  if (!_0x240ac5)
-    return _0x5f2bf2;
-  if (!_0x3235e7[_0x5e0a5f(417)](_0x5e292a))
-    return _0x5f2bf2;
-  return _0x240ac5;
-}
-function prepareMessage(_0x19c94a) {
-  return "" + _0x19c94a;
-}
-function _0xc784(_0x431313, _0x40bee0) {
-  const _0x398742 = _0x7129();
-  return _0xc784 = function(_0x47aa1d, _0x2f9cd1) {
-    _0x47aa1d = _0x47aa1d - (-2735 + -7830 + 10969);
-    let _0x240ac5 = _0x398742[_0x47aa1d];
-    return _0x240ac5;
-  }, _0xc784(_0x431313, _0x40bee0);
-}
-const appearance = Symbol(_0x94dbb(415));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-e47a547d.js"), "./contact/Mail.vue": () => import("./Mail-031fd993.js"), "./contact/Maps.vue": () => import("./Maps-72ecf598.js"), "./contact/Messenger.vue": () => import("./Messenger-0b04c546.js"), "./contact/MsTeams.vue": () => import("./MsTeams-fda4844b.js"), "./contact/Phone.vue": () => import("./Phone-2f0cf899.js"), "./contact/Skype.vue": () => import("./Skype-b3d178dc.js"), "./contact/Sms.vue": () => import("./Sms-98ee8fd5.js"), "./contact/Viber.vue": () => import("./Viber-37b7a1fb.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-01a6bd08.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-51e41c4e.js"), "./contact/Mail.vue": () => import("./Mail-85f9f183.js"), "./contact/Maps.vue": () => import("./Maps-fb31c493.js"), "./contact/Messenger.vue": () => import("./Messenger-3df0c4b8.js"), "./contact/MsTeams.vue": () => import("./MsTeams-6fec9890.js"), "./contact/Phone.vue": () => import("./Phone-90b9e8d1.js"), "./contact/Skype.vue": () => import("./Skype-85ecc470.js"), "./contact/Sms.vue": () => import("./Sms-956f19c9.js"), "./contact/Viber.vue": () => import("./Viber-69455b88.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-8f5916e8.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -11395,13 +11395,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           (unref(provided).showContacts || unref(provided).showOrders) && index === 0 ? (openBlock(), createElementBlock("div", _hoisted_7, [
                             unref(provided).showContacts ? (openBlock(), createElementBlock("button", {
                               key: 0,
-                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
+                              class: normalizeClass(["btn btn-sm btn-wide hover:bg-white hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
                               style: { color: "black" },
                               onClick: _cache[10] || (_cache[10] = ($event) => isIntegrationsOpen.value = true)
                             }, " Contact us ", 2)) : createCommentVNode("", true),
                             unref(provided).showOrders ? (openBlock(), createElementBlock("button", {
                               key: 1,
-                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
+                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 hover:bg-white bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
                               style: { color: "black" },
                               onClick: _cache[11] || (_cache[11] = ($event) => isOrderTrackingOpen.value = true)
                             }, " Track order ", 2)) : createCommentVNode("", true)
@@ -14134,6 +14134,10 @@ to{
 .hover\\:\\!border-none:hover{
   border-style: none !important;
 }
+.hover\\:bg-white:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
 .hover\\:text-neutral:hover{
   --tw-text-opacity: 1;
   color: hsl(var(--n) / var(--tw-text-opacity));
@@ -14172,7 +14176,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.39";
+const version = "1.1.40";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14281,4 +14285,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-29db859f.js.map
+//# sourceMappingURL=module-ffc912b7.js.map

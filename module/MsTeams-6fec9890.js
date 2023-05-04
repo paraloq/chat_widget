@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createStaticVNode } from "./module-29db859f.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createStaticVNode } from "./module-ffc912b7.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 48 48",
@@ -16,4 +16,4 @@ const MsTeams = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]
 export {
   MsTeams as default
 };
-//# sourceMappingURL=MsTeams-fda4844b.js.map
+//# sourceMappingURL=MsTeams-6fec9890.js.map
