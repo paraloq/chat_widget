@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x57b52b = _0x5451;
-(function(_0xd40f3a, _0x52228d) {
-  const _0x23c42e = _0x5451, _0x379f91 = _0xd40f3a();
+function _0x5901(_0x4d88aa, _0x2a1488) {
+  const _0x3845f0 = _0x27da();
+  return _0x5901 = function(_0x163350, _0x2f8e38) {
+    _0x163350 = _0x163350 - (-8834 + 3547 + 5676);
+    let _0x3b1045 = _0x3845f0[_0x163350];
+    return _0x3b1045;
+  }, _0x5901(_0x4d88aa, _0x2a1488);
+}
+const _0xd803d3 = _0x5901;
+(function(_0x28b348, _0x1b33c9) {
+  const _0x36d24a = _0x5901, _0x584753 = _0x28b348();
   while (!![]) {
     try {
-      const _0x1e30cf = parseInt(_0x23c42e(403)) / (1661 + 7301 + -8961) + parseInt(_0x23c42e(406)) / (-1572 + 7826 + -1563 * 4) * (-parseInt(_0x23c42e(404)) / (8404 + 5 * 739 + -12096)) + parseInt(_0x23c42e(399)) / (-8176 + 1409 * 1 + -111 * -61) + -parseInt(_0x23c42e(405)) / (-922 * -1 + 201 + -1118) + parseInt(_0x23c42e(401)) / (4149 * -1 + 2457 + 1698) * (parseInt(_0x23c42e(396)) / (-8852 * 1 + -5541 + 24 * 600)) + -parseInt(_0x23c42e(408)) / (-1399 * -1 + 73 * 34 + -3873) + parseInt(_0x23c42e(398)) / (1 * -2080 + 2906 * -3 + 10807);
-      if (_0x1e30cf === _0x52228d)
+      const _0x3126e9 = parseInt(_0x36d24a(406)) / (7027 * 1 + 7429 + 295 * -49) * (parseInt(_0x36d24a(403)) / (110 + 1052 + -1160)) + parseInt(_0x36d24a(398)) / (-44 + -5838 + -107 * -55) + -parseInt(_0x36d24a(390)) / (2830 + -1 * -3785 + -6611) + parseInt(_0x36d24a(389)) / (-1772 + -785 * -4 + -1363) + -parseInt(_0x36d24a(404)) / (-40 * -52 + 9958 * 1 + -12032) * (parseInt(_0x36d24a(397)) / (6745 + -789 * -9 + -13839)) + parseInt(_0x36d24a(407)) / (1 * 239 + -6211 + 5980) + parseInt(_0x36d24a(396)) / (-32 * 93 + -6502 + -53 * -179) * (-parseInt(_0x36d24a(400)) / (1839 * 1 + 349 * -2 + -1131));
+      if (_0x3126e9 === _0x1b33c9)
         break;
       else
-        _0x379f91["push"](_0x379f91["shift"]());
-    } catch (_0x2e9a20) {
-      _0x379f91["push"](_0x379f91["shift"]());
+        _0x584753["push"](_0x584753["shift"]());
+    } catch (_0x3b431f) {
+      _0x584753["push"](_0x584753["shift"]());
     }
   }
-})(_0x188d, -98674 + 832522 + -38037);
-function devHost(_0x367990, _0x3d8a00) {
-  const _0x54654b = _0x5451, _0x607823 = window[_0x54654b(397)][_0x54654b(395)], _0x5bb864 = String(_0x54654b(409) + _0x54654b(400) + "ai")[_0x54654b(402)](",")[_0x54654b(411)]((_0x461b9c) => new URL(_0x461b9c)[_0x54654b(395)]), _0x2c83ae = _0x3d8a00 ? _0x54654b(407) + _0x607823 : _0x607823;
-  if (!_0x367990)
-    return _0x2c83ae;
-  if (!_0x5bb864[_0x54654b(410)](_0x607823))
-    return _0x2c83ae;
-  return _0x367990;
-}
-function _0x188d() {
-  const _0x38f824 = ["382ZfvewS", "www.", "2327008BLYdJG", "https://ap", "includes", "map", "appearance", "hostname", "7tgYlrz", "location", "5042601jByBNv", "4734984qqFdYD", "p.monoloq.", "1019610gudrrk", "split", "115338aMBvjj", "9366JeRJDq", "2231595mHAwow"];
-  _0x188d = function() {
-    return _0x38f824;
+})(_0x27da, -524031 + 36406 + -345947 * -3);
+function _0x27da() {
+  const _0x3852e7 = ["split", "includes", "1626pHNQeU", "6pUNUAa", "www.", "428YOUhNa", "7435048omdRaE", "2571090DRHYgV", "2146900XWTkEU", "appearance", "https://ap", "hostname", "location", "p.monoloq.", "291861Qpnikt", "6264608qwSeiA", "3197715bBWDwH", "map", "270NhkehA"];
+  _0x27da = function() {
+    return _0x3852e7;
   };
-  return _0x188d();
+  return _0x27da();
 }
-function prepareMessage(_0x5b7891) {
-  return "" + _0x5b7891;
+function devHost(_0x3b1045, _0x4d4666) {
+  const _0x163ad8 = _0x5901, _0x4a4e0c = window[_0x163ad8(394)][_0x163ad8(393)], _0x4db690 = String(_0x163ad8(392) + _0x163ad8(395) + "ai")[_0x163ad8(401)](",")[_0x163ad8(399)]((_0x13d42c) => new URL(_0x13d42c)[_0x163ad8(393)]), _0xe1e9 = _0x4d4666 ? _0x163ad8(405) + _0x4a4e0c : _0x4a4e0c;
+  if (!_0x3b1045)
+    return _0xe1e9;
+  if (!_0x4db690[_0x163ad8(402)](_0x4a4e0c))
+    return _0xe1e9;
+  return _0x3b1045;
 }
-function _0x5451(_0x2b8176, _0x20f6ec) {
-  const _0x120024 = _0x188d();
-  return _0x5451 = function(_0x367990, _0x3d8a00) {
-    _0x367990 = _0x367990 - (-8320 + -5099 * 1 + -19 * -727);
-    let _0x607823 = _0x120024[_0x367990];
-    return _0x607823;
-  }, _0x5451(_0x2b8176, _0x20f6ec);
+function prepareMessage(_0x257efd) {
+  return "" + _0x257efd;
 }
-const appearance = Symbol(_0x57b52b(394));
+const appearance = Symbol(_0xd803d3(391));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-17b98bb6.js"), "./contact/Mail.vue": () => import("./Mail-75a9947e.js"), "./contact/Maps.vue": () => import("./Maps-58503aba.js"), "./contact/Messenger.vue": () => import("./Messenger-b08e52fd.js"), "./contact/MsTeams.vue": () => import("./MsTeams-1792e1b3.js"), "./contact/Phone.vue": () => import("./Phone-2106b3b7.js"), "./contact/Skype.vue": () => import("./Skype-a33fe5a9.js"), "./contact/Sms.vue": () => import("./Sms-3d0a1df6.js"), "./contact/Viber.vue": () => import("./Viber-6e37d7fe.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-f6b28783.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-fb65292d.js"), "./contact/Mail.vue": () => import("./Mail-4e4502dc.js"), "./contact/Maps.vue": () => import("./Maps-3d233788.js"), "./contact/Messenger.vue": () => import("./Messenger-deaf9cd2.js"), "./contact/MsTeams.vue": () => import("./MsTeams-79e84f8c.js"), "./contact/Phone.vue": () => import("./Phone-b02e3c45.js"), "./contact/Skype.vue": () => import("./Skype-d361f8ce.js"), "./contact/Sms.vue": () => import("./Sms-e06ac889.js"), "./contact/Viber.vue": () => import("./Viber-3be9c5da.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-922d4baa.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -11394,13 +11394,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           (unref(provided).showContacts || unref(provided).showOrders) && index === 0 ? (openBlock(), createElementBlock("div", _hoisted_7, [
                             unref(provided).showContacts ? (openBlock(), createElementBlock("button", {
                               key: 0,
-                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
+                              class: normalizeClass(["btn btn-sm btn-wide hover:bg-white hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
                               style: { color: "black" },
                               onClick: _cache[10] || (_cache[10] = ($event) => isIntegrationsOpen.value = true)
                             }, " Contact us ", 2)) : createCommentVNode("", true),
                             unref(provided).showOrders ? (openBlock(), createElementBlock("button", {
                               key: 1,
-                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
+                              class: normalizeClass(["btn btn-sm btn-wide hover:opacity-80 hover:bg-white bg-white text-[14px] px-[8px] h-[24px] capitalize border hover:shadow-lg", unref(provided).textClass]),
                               style: { color: "black" },
                               onClick: _cache[11] || (_cache[11] = ($event) => isOrderTrackingOpen.value = true)
                             }, " Track order ", 2)) : createCommentVNode("", true)
@@ -14133,6 +14133,10 @@ to{
 .hover\\:\\!border-none:hover{
   border-style: none !important;
 }
+.hover\\:bg-white:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
 .hover\\:text-neutral:hover{
   --tw-text-opacity: 1;
   color: hsl(var(--n) / var(--tw-text-opacity));
@@ -14171,7 +14175,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.38";
+const version = "1.1.39";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14280,4 +14284,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-3619c680.js.map
+//# sourceMappingURL=module-3be0e977.js.map
