@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-c85a1d80.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-a75f5eba.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 39 39",
@@ -30,4 +30,4 @@ const Messenger = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render
 export {
   Messenger as default
 };
-//# sourceMappingURL=Messenger-421c3714.js.map
+//# sourceMappingURL=Messenger-2bef6590.js.map
