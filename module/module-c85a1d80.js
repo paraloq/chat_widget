@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-function _0x1287() {
-  const _0x25d8ed = ["6FKNhms", ",http://lo", "owgcy.ampl", "9677550cVlJdJ", "1764729YUiYKY", "calhost:33", "6560312VBlYVa", "includes", "ifyapp.com", "www.", "split", "77NYBrOi", "208324QGnWlr", "296466lWwqUH", "v.d8g529d2", "1728710viqFVE", "appearance", "https://de", "map", "hostname", "4uRHmCc", "location", "33/", "3035838JCcEyb"];
-  _0x1287 = function() {
-    return _0x25d8ed;
+function _0x3d92() {
+  const _0x571ac5 = ["11068398YrKyQa", "1677605SRUhrN", "12220avZxQd", "4bGaVrm", "v.d8g529d2", "hostname", "1058982uEFfmu", "location", "calhost:33", "www.", "21FStrHZ", "split", "33/", "includes", "https://de", "map", "30eXhzjW", "19100ZoLqOb", "appearance", "ifyapp.com", ",http://lo", "2268rQwcNA", "1121880uainYN", "owgcy.ampl", "857748imZXMj"];
+  _0x3d92 = function() {
+    return _0x571ac5;
   };
-  return _0x1287();
+  return _0x3d92();
 }
-const _0x3d1733 = _0x10a5;
-(function(_0x1be64a, _0x586433) {
-  const _0x189c38 = _0x10a5, _0x202e85 = _0x1be64a();
+const _0x41f4f2 = _0x1d1d;
+(function(_0x46216e, _0x22803c) {
+  const _0x591519 = _0x1d1d, _0x5e9815 = _0x46216e();
   while (!![]) {
     try {
-      const _0x4a5c41 = parseInt(_0x189c38(350)) / (-2234 + -2126 + 7 * 623) * (-parseInt(_0x189c38(362)) / (5918 + 9638 + 707 * -22)) + parseInt(_0x189c38(349)) / (701 * 3 + -5132 + 3032) * (parseInt(_0x189c38(346)) / (4118 + 1121 * -3 + 751 * -1)) + -parseInt(_0x189c38(341)) / (67 * -141 + 2463 * 3 + 2063) + -parseInt(_0x189c38(363)) / (8195 + 5859 + -2 * 7024) * (-parseInt(_0x189c38(361)) / (4854 + -4769 * -1 + -9616)) + -parseInt(_0x189c38(356)) / (836 + -10 * -368 + -4508) + -parseInt(_0x189c38(354)) / (5181 + 7549 + -12721) + parseInt(_0x189c38(353)) / (2682 + 3342 + -6014);
-      if (_0x4a5c41 === _0x586433)
+      const _0xa6cdae = -parseInt(_0x591519(271)) / (454 * 1 + 7447 + -1975 * 4) * (-parseInt(_0x591519(282)) / (1 * 5899 + -2577 + 2 * -1660)) + parseInt(_0x591519(286)) / (-6044 + 6714 + -667) + parseInt(_0x591519(283)) / (4601 + 65 * -121 + 3268) * (-parseInt(_0x591519(281)) / (1326 + 3813 + -5134)) + parseInt(_0x591519(279)) / (-148 * -28 + -7509 * 1 + 3371) * (parseInt(_0x591519(265)) / (550 * -11 + -3768 + 9825)) + parseInt(_0x591519(277)) / (-70 * -127 + 1 * 3932 + -1 * 12814) + -parseInt(_0x591519(276)) / (9392 + -1 * -1719 + -11102) * (-parseInt(_0x591519(272)) / (-2874 + -453 + 3337)) + -parseInt(_0x591519(280)) / (34 + 4458 + -4481);
+      if (_0xa6cdae === _0x22803c)
         break;
       else
-        _0x202e85["push"](_0x202e85["shift"]());
-    } catch (_0x299267) {
-      _0x202e85["push"](_0x202e85["shift"]());
+        _0x5e9815["push"](_0x5e9815["shift"]());
+    } catch (_0x4e64d4) {
+      _0x5e9815["push"](_0x5e9815["shift"]());
     }
   }
-})(_0x1287, 1 * -768917 + 716529 + 588776);
-function devHost(_0x161793, _0x5733c9) {
-  const _0x3eb75c = _0x10a5, _0x52b804 = window[_0x3eb75c(347)][_0x3eb75c(345)], _0x118a5a = String(_0x3eb75c(343) + _0x3eb75c(340) + _0x3eb75c(352) + _0x3eb75c(358) + _0x3eb75c(351) + _0x3eb75c(355) + _0x3eb75c(348))[_0x3eb75c(360)](",")[_0x3eb75c(344)]((_0x18e72f) => new URL(_0x18e72f)[_0x3eb75c(345)]), _0x12a0bd = _0x5733c9 ? _0x3eb75c(359) + _0x52b804 : _0x52b804;
-  if (!_0x161793)
-    return _0x12a0bd;
-  if (!_0x118a5a[_0x3eb75c(357)](_0x52b804))
-    return _0x12a0bd;
-  return _0x161793;
+})(_0x3d92, -417412 + -3525 + 665921);
+function devHost(_0x53db87, _0x3096dd) {
+  const _0x5c7261 = _0x1d1d, _0x3444f6 = window[_0x5c7261(262)][_0x5c7261(285)], _0x1ea70f = String(_0x5c7261(269) + _0x5c7261(284) + _0x5c7261(278) + _0x5c7261(274) + _0x5c7261(275) + _0x5c7261(263) + _0x5c7261(267))[_0x5c7261(266)](",")[_0x5c7261(270)]((_0x5aaf18) => new URL(_0x5aaf18)[_0x5c7261(285)]), _0x2468da = _0x3096dd ? _0x5c7261(264) + _0x3444f6 : _0x3444f6;
+  if (!_0x53db87)
+    return _0x2468da;
+  if (!_0x1ea70f[_0x5c7261(268)](_0x3444f6))
+    return _0x2468da;
+  return _0x53db87;
 }
-function prepareMessage(_0x4b1a5f) {
-  return "" + _0x4b1a5f;
+function prepareMessage(_0x11bcc8) {
+  return "" + _0x11bcc8;
 }
-function _0x10a5(_0x3fe180, _0x41b90a) {
-  const _0x31d527 = _0x1287();
-  return _0x10a5 = function(_0x2312e6, _0x161793) {
-    _0x2312e6 = _0x2312e6 - (-2481 + -5613 + 4217 * 2);
-    let _0x5733c9 = _0x31d527[_0x2312e6];
-    return _0x5733c9;
-  }, _0x10a5(_0x3fe180, _0x41b90a);
+function _0x1d1d(_0x4f8ce, _0x1f2107) {
+  const _0x307069 = _0x3d92();
+  return _0x1d1d = function(_0x53db87, _0x3096dd) {
+    _0x53db87 = _0x53db87 - (-4 * 1597 + 315 + 7 * 905);
+    let _0x3444f6 = _0x307069[_0x53db87];
+    return _0x3444f6;
+  }, _0x1d1d(_0x4f8ce, _0x1f2107);
 }
-const appearance = Symbol(_0x3d1733(342));
+const appearance = Symbol(_0x41f4f2(273));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-3910a654.js"), "./contact/Mail.vue": () => import("./Mail-e3a08429.js"), "./contact/Maps.vue": () => import("./Maps-a4f5c44c.js"), "./contact/Messenger.vue": () => import("./Messenger-29cb1b2c.js"), "./contact/MsTeams.vue": () => import("./MsTeams-aa6f6050.js"), "./contact/Phone.vue": () => import("./Phone-2f95bac8.js"), "./contact/Skype.vue": () => import("./Skype-c18aad27.js"), "./contact/Sms.vue": () => import("./Sms-2b1b8bea.js"), "./contact/Viber.vue": () => import("./Viber-b05847e8.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-5a84459a.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-29745054.js"), "./contact/Mail.vue": () => import("./Mail-28a097a8.js"), "./contact/Maps.vue": () => import("./Maps-4c6cb226.js"), "./contact/Messenger.vue": () => import("./Messenger-421c3714.js"), "./contact/MsTeams.vue": () => import("./MsTeams-b37bb19b.js"), "./contact/Phone.vue": () => import("./Phone-345cd8f5.js"), "./contact/Skype.vue": () => import("./Skype-f2886716.js"), "./contact/Sms.vue": () => import("./Sms-c19fb03b.js"), "./contact/Viber.vue": () => import("./Viber-7c0f63a5.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-c15cea5c.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -11017,7 +11017,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return isoDate;
     }
     const fetch2 = createFetch({
-      baseUrl: "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod",
+      baseUrl: "https://pdjvgj28se.execute-api.eu-west-1.amazonaws.com/prod",
       fetchOptions: {
         method: "GET"
       },
@@ -11106,7 +11106,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }
     function prepareUrl(url, params) {
       url = `prod${url}`;
-      const baseUrl = new URL(url, "https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod");
+      const baseUrl = new URL(url, "https://pdjvgj28se.execute-api.eu-west-1.amazonaws.com/prod");
       for (const prop in params)
         baseUrl.searchParams.set(prop, String(params[prop]));
       baseUrl.searchParams.set("host_domain", devHost(provided.value.host_domain));
@@ -14178,7 +14178,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.42";
+const version = "1.1.43";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14187,7 +14187,7 @@ const installFont = () => {
 };
 const fetchSettings = async (addWww) => {
   const response = await fetch(
-    `${String("https://9qilmdres7.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost(void 0, addWww)}`
+    `${String("https://pdjvgj28se.execute-api.eu-west-1.amazonaws.com/prod")}/settings?host_domain=${devHost(void 0, addWww)}`
   );
   if (!response.ok) {
     const error = new Error(`Failed to fetch settings: ${response.statusText}`);
@@ -14287,4 +14287,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-0383e365.js.map
+//# sourceMappingURL=module-c85a1d80.js.map

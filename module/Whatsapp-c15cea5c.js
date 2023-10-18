@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-0383e365.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-c85a1d80.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 39 39",
@@ -36,4 +36,4 @@ const Whatsapp = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]
 export {
   Whatsapp as default
 };
-//# sourceMappingURL=Whatsapp-5a84459a.js.map
+//# sourceMappingURL=Whatsapp-c15cea5c.js.map
