@@ -7490,48 +7490,48 @@ function initDev() {
 {
   initDev();
 }
-const _0x4d1583 = _0x1e51;
-(function(_0x3c70d8, _0x4d72d1) {
-  const _0x4ea4c6 = _0x1e51, _0x2a40ef = _0x3c70d8();
+function _0x49a0() {
+  const _0xd8c3a0 = ["appearance", "190YnGDxr", "2074368dqKSzf", "907350AiSjpv", "295452SBwmev", "split", "12xkGrRV", "includes", "hostname", "www.", "724XRHeff", "879760ggfWPs", "location", "p.monoloq.", "4555KfzbDK", "https://ap", "map", "263799iTntFC", "293993aMoior"];
+  _0x49a0 = function() {
+    return _0xd8c3a0;
+  };
+  return _0x49a0();
+}
+const _0x3c610f = _0x2026;
+(function(_0x41cbf4, _0x5ecb1e) {
+  const _0x2c3e21 = _0x2026, _0x4b0c80 = _0x41cbf4();
   while (!![]) {
     try {
-      const _0x4a7978 = parseInt(_0x4ea4c6(339)) / (5277 + -9932 + 4656) * (parseInt(_0x4ea4c6(347)) / (253 * -35 + -1891 * 3 + 2 * 7265)) + -parseInt(_0x4ea4c6(349)) / (-1 * -3398 + -3 * 1898 + -209 * -11) + parseInt(_0x4ea4c6(348)) / (6202 + -1694 + -4504) + parseInt(_0x4ea4c6(334)) / (1 * 9454 + -2622 + 6827 * -1) * (parseInt(_0x4ea4c6(351)) / (224 * -25 + -61 * -82 + 604)) + -parseInt(_0x4ea4c6(338)) / (-5278 + -227 * -6 + 3923 * 1) * (-parseInt(_0x4ea4c6(336)) / (6461 + 5 * 558 + -9243)) + parseInt(_0x4ea4c6(335)) / (8432 + 5216 * 1 + -23 * 593) + parseInt(_0x4ea4c6(346)) / (-13 * -71 + -1252 * -4 + -5921) * (-parseInt(_0x4ea4c6(345)) / (-1 * 5989 + -4 * 2098 + 14392));
-      if (_0x4a7978 === _0x4d72d1)
+      const _0x2b8bc4 = -parseInt(_0x2c3e21(189)) / (-3667 * 1 + 2225 + 1443) + -parseInt(_0x2c3e21(194)) / (7667 + -5800 + 5 * -373) + -parseInt(_0x2c3e21(193)) / (-8496 + 9450 + 1 * -951) + -parseInt(_0x2c3e21(181)) / (-8290 + -8717 + 17011 * 1) * (parseInt(_0x2c3e21(185)) / (-1152 + 2932 + -1775)) + parseInt(_0x2c3e21(196)) / (173 + 4834 + -5001) * (parseInt(_0x2c3e21(182)) / (25 * -177 + -5269 + 9701)) + parseInt(_0x2c3e21(192)) / (-9024 + 2004 * 4 + 2 * 508) + -parseInt(_0x2c3e21(188)) / (13 * -186 + 4857 + -2430) * (-parseInt(_0x2c3e21(191)) / (-10 * 75 + 2 * 3529 + 3149 * -2));
+      if (_0x2b8bc4 === _0x5ecb1e)
         break;
       else
-        _0x2a40ef["push"](_0x2a40ef["shift"]());
-    } catch (_0x2d8b83) {
-      _0x2a40ef["push"](_0x2a40ef["shift"]());
+        _0x4b0c80["push"](_0x4b0c80["shift"]());
+    } catch (_0x27535a) {
+      _0x4b0c80["push"](_0x4b0c80["shift"]());
     }
   }
-})(_0x2167, -1687 * -53 + 696 * 89 + 73 * 4759);
-function devHost(_0x5b39fb, _0x554f21) {
-  const _0x57a082 = _0x1e51, _0x276249 = window[_0x57a082(344)][_0x57a082(340)], _0x13a1dc = String(_0x57a082(342) + _0x57a082(352) + "ai")[_0x57a082(353)](",")[_0x57a082(350)]((_0x2fa36d) => new URL(_0x2fa36d)[_0x57a082(340)]), _0x1aa54a = _0x554f21 ? _0x57a082(337) + _0x276249 : _0x276249;
-  if (!_0x5b39fb)
-    return _0x1aa54a;
-  if (!_0x13a1dc[_0x57a082(343)](_0x276249))
-    return _0x1aa54a;
-  return _0x5b39fb;
+})(_0x49a0, 41968 + -7 * 302 + -9127 * -13);
+function devHost(_0x37bdd2, _0x4ad531) {
+  const _0x3f4978 = _0x2026, _0x5c4bea = window[_0x3f4978(183)][_0x3f4978(179)], _0xc2826 = String(_0x3f4978(186) + _0x3f4978(184) + "ai")[_0x3f4978(195)](",")[_0x3f4978(187)]((_0x509015) => new URL(_0x509015)[_0x3f4978(179)]), _0xba7818 = _0x4ad531 ? _0x3f4978(180) + _0x5c4bea : _0x5c4bea;
+  if (!_0x37bdd2)
+    return _0xba7818;
+  if (!_0xc2826[_0x3f4978(197)](_0x5c4bea))
+    return _0xba7818;
+  return _0x37bdd2;
 }
-function _0x1e51(_0x547b2a, _0x4adf87) {
-  const _0x5e73ec = _0x2167();
-  return _0x1e51 = function(_0x3e81a7, _0x5b39fb) {
-    _0x3e81a7 = _0x3e81a7 - (3375 + 3130 + 187 * -33);
-    let _0x554f21 = _0x5e73ec[_0x3e81a7];
-    return _0x554f21;
-  }, _0x1e51(_0x547b2a, _0x4adf87);
+function _0x2026(_0x11ba69, _0x4affee) {
+  const _0x14f10b = _0x49a0();
+  return _0x2026 = function(_0x37bdd2, _0x4ad531) {
+    _0x37bdd2 = _0x37bdd2 - (-2 * -2207 + -2964 + -1271 * 1);
+    let _0x5c4bea = _0x14f10b[_0x37bdd2];
+    return _0x5c4bea;
+  }, _0x2026(_0x11ba69, _0x4affee);
 }
-function _0x2167() {
-  const _0x45629e = ["p.monoloq.", "split", "510ZgGzKU", "6351192xeApRH", "8KprjeV", "www.", "6519779EpRfAT", "469454TYNNuO", "hostname", "appearance", "https://ap", "includes", "location", "35941939errCJq", "10TVnFTb", "4DWFVvo", "3238580yRbTGA", "1497GITwNA", "map", "22416fOmYMn"];
-  _0x2167 = function() {
-    return _0x45629e;
-  };
-  return _0x2167();
+function prepareMessage(_0x4a713d) {
+  return "" + _0x4a713d;
 }
-function prepareMessage(_0x4dfaeb) {
-  return "" + _0x4dfaeb;
-}
-const appearance = Symbol(_0x4d1583(341));
+const appearance = Symbol(_0x3c610f(190));
 var toStringFunction = Function.prototype.toString;
 var create = Object.create;
 var toStringObject = Object.prototype.toString;
@@ -9910,7 +9910,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-1630fb80.js"), "./contact/Mail.vue": () => import("./Mail-22164d5f.js"), "./contact/Maps.vue": () => import("./Maps-c71d8e36.js"), "./contact/Messenger.vue": () => import("./Messenger-43187676.js"), "./contact/MsTeams.vue": () => import("./MsTeams-628a1d46.js"), "./contact/Phone.vue": () => import("./Phone-9e509081.js"), "./contact/Skype.vue": () => import("./Skype-829c344c.js"), "./contact/Sms.vue": () => import("./Sms-9cca6bb1.js"), "./contact/Viber.vue": () => import("./Viber-8c9bdc65.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-304d7ec3.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
+    const is = computed(() => defineAsyncComponent(() => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./contact/LinkedIn.vue": () => import("./LinkedIn-9ae84208.js"), "./contact/Mail.vue": () => import("./Mail-7e42184e.js"), "./contact/Maps.vue": () => import("./Maps-5a6f95aa.js"), "./contact/Messenger.vue": () => import("./Messenger-f91df2ee.js"), "./contact/MsTeams.vue": () => import("./MsTeams-f1f3a960.js"), "./contact/Phone.vue": () => import("./Phone-9c5fd7c1.js"), "./contact/Skype.vue": () => import("./Skype-79def624.js"), "./contact/Sms.vue": () => import("./Sms-94fe1cdb.js"), "./contact/Viber.vue": () => import("./Viber-53f7d053.js"), "./contact/Whatsapp.vue": () => import("./Whatsapp-b409e24a.js") }), `./contact/${props.id.charAt(0).toUpperCase() + props.id.slice(1)}.vue`)));
     const prependedHref = computed(() => {
       const href = props.href;
       switch (props.id) {
@@ -10064,7 +10064,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         ]),
         createBaseVNode("div", _hoisted_15$1, [
           createBaseVNode("button", {
-            class: normalizeClass(["btn btn-sm", { loading: props.loading }]),
+            class: normalizeClass(["btn btn-sm border-none", { loading: props.loading, [unref(provided).textClass]: true }]),
             style: normalizeStyle({
               background: unref(provided).mainColor,
               opacity: unref(isFilled) ? 1 : 0.5
@@ -10875,8 +10875,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "ChatWidget.ce",
   props: {
     base_color: { default: "#4fafe4" },
-    avatar_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/stock-avatar.jpeg" },
-    logo_asset_url: { default: "https://d1xecltoymgutn.cloudfront.net/monoloq-assets/Asset%2014@4x.png" },
+    avatar_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/avatar.png" },
+    logo_asset_url: { default: "https://cdn.jsdelivr.net/gh/paraloq/chat_widget/umd/avatar.png" },
     text: { default: () => [{
       message_placeholder: "Type your message here...",
       language: "en"
@@ -14177,7 +14177,7 @@ to{
 }
 `;
 const VueChatWidget = /* @__PURE__ */ _export_sfc(_sfc_main, [["styles", [_style_0]]]);
-const version = "1.1.41";
+const version = "1.1.44";
 const installFont = () => {
   const font = document.createElement("link");
   font.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
@@ -14286,4 +14286,4 @@ export {
   openBlock as o,
   register as r
 };
-//# sourceMappingURL=module-fd53f281.js.map
+//# sourceMappingURL=module-c0f9d3ac.js.map
