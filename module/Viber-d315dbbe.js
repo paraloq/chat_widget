@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, d as createTextVNode, a as createBaseVNode } from "./module-c0f9d3ac.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, d as createTextVNode, a as createBaseVNode } from "./module-f4421e6b.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 39 39",
@@ -64,4 +64,4 @@ const Viber = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
 export {
   Viber as default
 };
-//# sourceMappingURL=Viber-53f7d053.js.map
+//# sourceMappingURL=Viber-d315dbbe.js.map
