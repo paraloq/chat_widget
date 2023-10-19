@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-069fb4a9.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, a as createBaseVNode } from "./module-be6ad0c9.js";
 const _sfc_main = {};
 const _hoisted_1 = {
   viewBox: "0 0 39 39",
@@ -30,4 +30,4 @@ const Skype = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
 export {
   Skype as default
 };
-//# sourceMappingURL=Skype-30940c6c.js.map
+//# sourceMappingURL=Skype-474662f9.js.map
